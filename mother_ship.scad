@@ -12,22 +12,28 @@ disk_height = 10;
 body_length = disk_outer_bottom;
 side_length = body_length/2;
 
+nacelle_front_radius = 6;
+nacelle_rear_radius = 3;
+
 PI = 3.14159265;
-disk_segments = 12;
+disk_segments = 16;
 disk_segment_angle = 360/disk_segments;
 disk_segment_outer = (PI * disk_outer_bottom)/disk_segments;
 disk_degment_inner = (PI * disk_inner_bottom)/disk_segments;
 
-module ms_disk_subtract_rounded() {
-    difference() {
-        translate([-disk_outer_bottom,0, -(disk_outer_bottom/2)])
-            cube([disk_outer_bottom*2,disk_outer_bottom,disk_outer_bottom]);
+module ms_corner_bar() {
+    translate([0,0,(disk_height /2)])
+		rotate([90,0,(disk_segment_angle /2)])
+			cylinder(disk_outer_bottom, 0.5, 0.5, $fn = 4);
+}
 
-        scale([1,1,0.5])
-            translate([0,disk_outer_bottom,0])
-                rotate([90,22.5,0])
-                    cylinder(disk_outer_bottom,(disk_segment_outer*1.5),(disk_degment_inner*1.8), $fn=8);
-    }
+module ms_snip_corners() {
+	rotate([0,0,180]) {
+		ms_corner_bar(); 
+		mirror([1,0,0]) ms_corner_bar();
+		mirror([0,0,1]) ms_corner_bar();
+		mirror([0,0,1]) mirror([1,0,0]) ms_corner_bar();
+	}
 }
 
 module ms_disk_subtract() {
@@ -45,16 +51,16 @@ module ms_disk_subtract() {
             cube([disk_outer_bottom*2,disk_outer_bottom,disk_outer_bottom]);
     }
     
-    ms_disk_subtract_rounded();
 }
 
 
 module ms_disk_hangar() {
     difference() {
-        translate([0,0,-5])
+        translate([0,0,-(disk_height/2)])
             cylinder(disk_height,disk_outer_bottom,disk_outer_top);
 
         ms_disk_subtract();
+		ms_snip_corners();
     }
 }
 
@@ -69,10 +75,13 @@ module ms_ball() {
 }
 
 module ms_body_triangle() {
-    scale([1,1,0.3])
-        translate([9,-35,5])
+	cyl_length = (2*PI*disk_outer_top)/disk_segments;
+	cyl_radius = rear_radius * 1.8;
+	cyl_ratio = (disk_height/2) / (cyl_radius * 1.33);
+    scale([1,1,cyl_ratio])
+        translate([cyl_length/2,-(body_length-side_radius),(disk_height/2)])
             rotate([0,-90,0])
-                cylinder(18,12,12,$fn=3);
+                cylinder(cyl_length,cyl_radius,cyl_radius,$fn=3);
 }
 
 module ms_body_side() {
@@ -113,7 +122,7 @@ module ms_body_hull() {
 
 module ms_pylon() {
     rotate([45,0,0])
-        cylinder(16,side_radius,pylon_radius);
+        cylinder((disk_height * 1.6),side_radius,pylon_radius);
     sphere(5);
 }
 
@@ -121,24 +130,24 @@ module ms_nacelle() {
     scale([1.2,1,.6]) difference() {
         union() {
             rotate([90,45,0])
-                cylinder(75,6,3, $fn=4);
+                cylinder((body_length *2) - 5,nacelle_front_radius,nacelle_rear_radius, $fn=4);
 
             rotate([0,90,0])
-                sphere(6, $fn=4);
+                sphere(nacelle_front_radius, $fn=4);
         }
 
-        translate([-40,-160,-20])
+        translate([-body_length,-(body_length*4),-(body_length/2)])
             rotate([-45,0,0])
-                cube(80);
+                cube(body_length * 2);
     }
 }
 
 module ms_nacelle_assembly() {
-    translate([20,-40,0])
+    translate([side_length,-body_length,0])
         rotate([0,22.5,0])
             ms_pylon();
 
-    translate([24,-40,11])
+    translate([(side_length*1.2),-body_length,disk_height + 1])
         ms_nacelle();
 }
 
