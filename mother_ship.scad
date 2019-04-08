@@ -12,6 +12,9 @@ disk_height = 10;
 body_length = disk_outer_bottom;
 side_length = body_length/2;
 
+nacelle_front_radius = 6;
+nacelle_rear_radius = 3;
+
 PI = 3.14159265;
 disk_segments = 12;
 disk_segment_angle = 360/disk_segments;
@@ -116,7 +119,7 @@ module ms_body_hull() {
 
 module ms_pylon() {
     rotate([45,0,0])
-        cylinder(16,side_radius,pylon_radius);
+        cylinder((disk_height * 1.6),side_radius,pylon_radius);
     sphere(5);
 }
 
@@ -124,24 +127,24 @@ module ms_nacelle() {
     scale([1.2,1,.6]) difference() {
         union() {
             rotate([90,45,0])
-                cylinder(75,6,3, $fn=4);
+                cylinder((body_length *2) - 5,nacelle_front_radius,nacelle_rear_radius, $fn=4);
 
             rotate([0,90,0])
-                sphere(6, $fn=4);
+                sphere(nacelle_front_radius, $fn=4);
         }
 
-        translate([-40,-160,-20])
+        translate([-body_length,-(body_length*4),-(body_length/2)])
             rotate([-45,0,0])
-                cube(80);
+                cube(body_length * 2);
     }
 }
 
 module ms_nacelle_assembly() {
-    translate([20,-40,0])
+    translate([side_length,-body_length,0])
         rotate([0,22.5,0])
             ms_pylon();
 
-    translate([24,-40,11])
+    translate([(side_length*1.2),-body_length,disk_height + 1])
         ms_nacelle();
 }
 
