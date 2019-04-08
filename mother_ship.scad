@@ -16,7 +16,7 @@ nacelle_front_radius = 6;
 nacelle_rear_radius = 3;
 
 PI = 3.14159265;
-disk_segments = 12;
+disk_segments = 16;
 disk_segment_angle = 360/disk_segments;
 disk_segment_outer = (PI * disk_outer_bottom)/disk_segments;
 disk_degment_inner = (PI * disk_inner_bottom)/disk_segments;
