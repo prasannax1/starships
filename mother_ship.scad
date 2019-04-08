@@ -18,16 +18,19 @@ disk_segment_angle = 360/disk_segments;
 disk_segment_outer = (PI * disk_outer_bottom)/disk_segments;
 disk_degment_inner = (PI * disk_inner_bottom)/disk_segments;
 
-module ms_disk_subtract_rounded() {
-    difference() {
-        translate([-disk_outer_bottom,0, -(disk_outer_bottom/2)])
-            cube([disk_outer_bottom*2,disk_outer_bottom,disk_outer_bottom]);
+module ms_corner_bar() {
+    translate([0,0,(disk_height /2)])
+		rotate([90,0,(disk_segment_angle /2)])
+			cylinder(disk_outer_bottom, 0.5, 0.5, $fn = 4);
+}
 
-        scale([1,1,0.5])
-            translate([0,disk_outer_bottom,0])
-                rotate([90,22.5,0])
-                    cylinder(disk_outer_bottom,(disk_segment_outer*1.5),(disk_degment_inner*1.8), $fn=8);
-    }
+module ms_snip_corners() {
+	rotate([0,0,180]) {
+		ms_corner_bar(); 
+		mirror([1,0,0]) ms_corner_bar();
+		mirror([0,0,1]) ms_corner_bar();
+		mirror([0,0,1]) mirror([1,0,0]) ms_corner_bar();
+	}
 }
 
 module ms_disk_subtract() {
@@ -45,7 +48,6 @@ module ms_disk_subtract() {
             cube([disk_outer_bottom*2,disk_outer_bottom,disk_outer_bottom]);
     }
     
-    ms_disk_subtract_rounded();
 }
 
 
@@ -55,6 +57,7 @@ module ms_disk_hangar() {
             cylinder(disk_height,disk_outer_bottom,disk_outer_top);
 
         ms_disk_subtract();
+		ms_snip_corners();
     }
 }
 
