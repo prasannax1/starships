@@ -123,7 +123,7 @@ module ms_body_hull() {
 module ms_pylon() {
     rotate([45,0,0])
         cylinder((disk_height * 1.6),side_radius,pylon_radius);
-    sphere(5);
+    sphere(side_radius);
 }
 
 module ms_nacelle() {
