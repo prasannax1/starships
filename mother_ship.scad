@@ -12,8 +12,8 @@ disk_height = 10;
 body_length = disk_outer_bottom;
 side_length = body_length/2.5;
 
-nacelle_front_radius = 6;
-nacelle_rear_radius = 3;
+nacelle_front_radius = disk_height * 0.6;
+nacelle_rear_radius = nacelle_front_radius / 2;
 
 PI = 3.14159265;
 disk_segments = 16;
