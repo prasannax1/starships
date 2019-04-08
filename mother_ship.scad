@@ -1,12 +1,12 @@
-sphere_radius = 10;
+sphere_radius = 7.5;
 rear_radius = 7.5;
 side_radius = 5;
 pylon_radius = 2.5;
 
 disk_outer_bottom = 40;
 disk_outer_top = 35;
-disk_inner_bottom = 15;
-disk_inner_top = 15;
+disk_inner_bottom = 10;
+disk_inner_top = 10;
 disk_height = 10;
 
 body_length = disk_outer_bottom;
