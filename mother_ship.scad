@@ -10,7 +10,7 @@ disk_inner_top = 15;
 disk_height = 10;
 
 body_length = disk_outer_bottom;
-side_length = body_length/2;
+side_length = body_length/2.5;
 
 nacelle_front_radius = 6;
 nacelle_rear_radius = 3;
