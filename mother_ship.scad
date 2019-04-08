@@ -56,7 +56,7 @@ module ms_disk_subtract() {
 
 module ms_disk_hangar() {
     difference() {
-        translate([0,0,-5])
+        translate([0,0,-(disk_height/2)])
             cylinder(disk_height,disk_outer_bottom,disk_outer_top);
 
         ms_disk_subtract();
@@ -75,10 +75,13 @@ module ms_ball() {
 }
 
 module ms_body_triangle() {
-    scale([1,1,0.3])
-        translate([9,-35,5])
+	cyl_length = (2*PI*disk_outer_top)/disk_segments;
+	cyl_radius = rear_radius * 1.8;
+	cyl_ratio = (disk_height/2) / (cyl_radius * 1.33);
+    scale([1,1,cyl_ratio])
+        translate([cyl_length/2,-(body_length-side_radius),(disk_height/2)])
             rotate([0,-90,0])
-                cylinder(18,12,12,$fn=3);
+                cylinder(cyl_length,cyl_radius,cyl_radius,$fn=3);
 }
 
 module ms_body_side() {
