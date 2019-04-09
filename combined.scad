@@ -1,6 +1,6 @@
 use <mother_ship.scad>;
 use <attack_ship.scad>;
-use <explorer.scad>;
+use <explorer_ship.scad>;
 
 translate([0,-400,100])
     mothership();
