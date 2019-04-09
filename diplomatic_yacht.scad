@@ -32,6 +32,7 @@ module dip_main() {
 }
 
 module dip_body() {
+    scale([1,1,0.75])
     translate([-10,0,0]) difference() {
         translate([0,0,-8])
             scale([2,.6,.6])
