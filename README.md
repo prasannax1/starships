@@ -6,6 +6,8 @@ Star Trek type starships
 
 ![Mother Ship](mothership.png)
 
+Exodus Class Super Heavy Cruiser/Carrier
+
  * Length: 1500m
  * Width: 800m
  * Height: 220m
@@ -13,6 +15,10 @@ Star Trek type starships
    * Saucer Section: 8 decks (+ 60m tall hangar)
    * Sphere Section: 30 decks
    * Engine Section: 22 decks
+ * Auxillary Craft:
+   * 8 *Pioneer Class* Light Explorer/Scout vessels
+   * 24 *Vulture Class* Light Escort vessels
+   * 1 *Spock Class* Diplomatic Yacht
 
 At almost a kilometer and a half long, the *Exodus Class* is an incredible 
 behemoth. Equipped with transwarp engines, The *Exodus* is meant to 
@@ -35,11 +41,16 @@ matter any races at warp - but it does a job no other ship can do.
 
 ![Explorer Ship](explorer.png)
 
+Pioneer Class Light Eplorer/Scout
+
  * Length: 195m
  * Width: 66m
  * Height: 31m
  * Decks: 7
    * Saucer Section: 3 decks
    * Engine Section: 4 decks
+ * Auxillary Craft:
+   * 2 Small Shuttles
+   * 2 Work Bees
 
-The *??*
+The *Pioneer Class* is the workhorse of the *Exodus* mini-fleet. 
