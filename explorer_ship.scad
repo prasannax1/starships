@@ -39,11 +39,12 @@ module exp_pylons() {
 	translate([0,0,25]) difference() {
 		rotate([0,90,0])
 			cylinder(10,25,25);
-		rotate([0,90,0])
-			cylinder(10,24,24);
+        translate([-5,0,0])
+            rotate([0,90,0])
+                cylinder(20,24,24);
 
-		translate([0,-25,-15])
-			cube([10,50,50]);
+		translate([-10,-25,-15])
+			cube([50,50,50]);
 	}
 }
 
