@@ -22,7 +22,10 @@ module dip_disk() {
 }
 
 module dip_main() {
-    dip_disk();
+    difference() {
+        dip_disk();
+        dip_front_view();
+    }
     dip_body();
     dip_pylon_assembly();
     mirror([0,1,0]) dip_pylon_assembly();
@@ -71,4 +74,10 @@ module dip_pylon_assembly() {
         translate([5,-14,14])
             dip_nacelle();
     }
+}
+
+module dip_front_view() {
+    translate([23,0,0])
+        rotate([0,-30,0])
+            cube([10,5,10],center=true);
 }
