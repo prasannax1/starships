@@ -34,6 +34,10 @@ The *Exodus Class* cruises at a sedate warp 6, and can move at warp 7
 when the engine is at maximum warp; which it never will be since the 
 primary mode of propulsion for this juggernaut is transwarp.
 
+The *Exodus Class* is built to work without access to a starbase for up to 
+twenty years - in fact, with industrial replicators on board this ship 
+serves as starbase to itself and the ships contained in it.
+
 The *Exodus Class* isn't going to win any beauty contest - nor for that
 matter any races at warp - but it does a job no other ship can do.
 
@@ -51,6 +55,21 @@ Pioneer Class Light Eplorer/Scout
    * Engine Section: 4 decks
  * Auxillary Craft:
    * 2 Small Shuttles
-   * 2 Work Bees
+   * 1 Work Bee
 
-The *Pioneer Class* is the workhorse of the *Exodus* mini-fleet. 
+The *Pioneer Class* is the workhorse of the *Exodus* mini-fleet. Fast, agile
+and reasonable powerful, this ship is supposed to do the bulk of the exploring
+on any mission.
+
+The *Poineer Class* is built for speed and it shows in the smooth ergonimic
+design of the starships. It cruises comfortably at warp 9, and can do 9.99 
+when you put your foot down.
+
+The *Poineer Class* has comfortable labs and bridge, but no holodecks and
+everyone has to double up for the bunk beds - even the captain. The shuttle
+bay on this ship is one of the smallest on any starship but it can hold two
+small shuttles, and a workbee for any external repair work.
+
+The *Pioneer Class* typically rendezvous with the *Exodus* mothership after 
+every mission or so, but it follows the *Voyager Protocol* and can work without
+access to a starbase for up to three years.
