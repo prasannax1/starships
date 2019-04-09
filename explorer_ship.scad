@@ -50,12 +50,12 @@ module exp_pylons() {
 
 module exp_nacelle() {
 	rotate([0,0,180])
-		scale([2.5,0.5,0.25])
+		scale([2.5,0.4,0.15])
 			egg();
 }
 
 module exp_nacelle_assembly() {
-	scale([1,1,1.1]) {
+	scale([1,1.5,2]) {
 		exp_pylons();
 		translate([10,18,10])
 			exp_nacelle();
@@ -65,9 +65,9 @@ module exp_nacelle_assembly() {
 }
 
 module exp_main() {
-	exp_saucer();
+	exp_saucer_2();
 	exp_body();
-	translate([40,0,-2])
+	translate([75,0,-8])
 		exp_nacelle_assembly();
 }
 
@@ -76,3 +76,22 @@ module explorer() {
 }
 
 explorer();
+
+module exp_saucer_2() {
+    scale([6,3,1]) union () {
+        rotate([0,90,0])
+            half_sphere();
+
+        difference() {
+            translate([0,0,17.34])
+                sphere(20);
+            translate([-20,-20,0])
+                cube([40,40,40]);
+        }
+    }
+    
+    translate([15,0,0])
+        scale([1.5,1.5,1])
+            translate([0,0,5])
+                sphere(7.5);
+}
