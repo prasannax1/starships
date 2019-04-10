@@ -86,8 +86,8 @@ Vulture Class Light Escort
  * Length: 47m
  * Width: 26m
  * Height: 9.8m
- * Decks: 3 (2 decks + 1 "attic" cargo hold)
- * Auxillary Craft: 1 Small Shuttle *OR* 1 Workbee
+ * Decks: 2.5 (2 decks + 1 "attic" cargo hold)
+ * Auxillary Craft: None
 
 The *Vulture Class* is not just named after a bird of prey - for all practical purposes
 it is a Bird of Prey built to Star Fleet specifications.
