@@ -30,7 +30,7 @@ itself, and is split into 16 sectors, each sector containing a massive
 hangar in the lower section and livable area in the upper section. All in 
 all it's big enough to be a city by itself.
 
-The *Exodus Class* cruises at a sedate warp 6, and can move at warp 7 
+The *Exodus Class* cruises at a sedate warp 4, and can move at warp 5 
 when the engine is at maximum warp; which it never will be since the 
 primary mode of propulsion for this juggernaut is transwarp.
 
@@ -110,3 +110,9 @@ to the *Exodus* line-up.
 In *Exodus* missions, the *Vulture* will typically be deployed in case a *Pioneer* runs into 
 trouble it can't run out of. The *Vulture* is the cavalry, using it's top speed of warp 9.95 to
 arrive at the right moment to rescue.
+
+## Spock Class
+
+![Diplomatic Yacht](diplomat.png)
+
+Spock Class Diplomatic Yacht
