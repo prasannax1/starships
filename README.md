@@ -13,14 +13,16 @@ Exodus Class Super Heavy Cruiser/Carrier
  * Length: 1500m
  * Width: 800m
  * Height: 220m
- * Decks: 30
+ * Decks: 36
    * Saucer Section: 8 decks (+ 60m tall hangar)
    * Sphere Section: 30 decks
    * Engine Section: 22 decks
+   * Warp Pylons: 24 decks
+   * Warp Nacelles: 6 decks
  * Auxillary Craft:
    * 8 *Pioneer Class* Light Explorer/Scout vessels
    * 24 *Vulture Class* Light Escort vessels
-   * 1 *Spock Class* Diplomatic Yacht
+   * 1 *Spock Class* Diplomatic Heavy Yacht
 
 ### Description
 
