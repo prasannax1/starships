@@ -17,8 +17,8 @@ Exodus Class Super Heavy Cruiser/Carrier
    * Saucer Section: 20 decks (8 decks + 12 decks hangar)
    * Sphere Section: 30 decks
    * Engine Section: 22 decks
-   * Warp Pylons: 24 decks
-   * Warp Nacelles: 6 decks
+   * Warp Pylons: 24 decks (maintenance only)
+   * Warp Nacelles: 6 decks (maintenance only)
  * Auxillary Craft:
    * 8 *Pioneer Class* Light Explorer/Scout vessels
    * 24 *Vulture Class* Light Escort vessels
