@@ -20,7 +20,7 @@ Exodus Class Super Heavy Cruiser/Carrier
    * Warp Pylons: 24 decks (maintenance only)
    * Warp Nacelles: 6 decks (maintenance only)
  * Auxillary Craft - Large:
-   * 8 *Pioneer Class* Light Explorer/Scout vessels
+   * 8 *Photon Class* Light Explorer/Scout vessels
    * 24 *Vulture Class* Light Escort vessels
    * 1 *Spock Class* Diplomatic Heavy Yacht
 
@@ -77,11 +77,11 @@ The upper four decks of the sphere section contains the command crew, phaser arr
 When separated this becomes a sort of super-*Vulture Class* to face any threat while the rest of the *Exodus* retreats to
 safety.
 
-## Pioneer Class
+## Photon Class
 
 ![Explorer Ship](explorer.png)
 
-Pioneer Class Light Explorer/Scout
+Photon Class Light Explorer/Scout
 
 ### Stats
 
@@ -97,24 +97,24 @@ Pioneer Class Light Explorer/Scout
 
 ### Description
 
-The *Pioneer Class* is the workhorse of the *Exodus* mini-fleet. Fast, agile
+The *Photon Class* is the workhorse of the *Exodus* mini-fleet. Fast, agile
 and reasonable powerful, this ship is supposed to do the bulk of the exploring
 on any mission.
 
-The *Pioneer Class* is built for speed and it shows in the smooth ergonomic
+The *Photon Class* is built for speed and it shows in the smooth ergonomic
 design of the starships. It cruises comfortably at warp 9, and can do 9.99 
 when you put your foot down.
 
-The *Poineer Class* has comfortable labs and bridge, but no holodecks and
+The *Photon Class* has comfortable labs and bridge, but no holodecks and
 everyone has to double up for the bunk beds - even the captain. The shuttle
 bay on this ship is one of the smallest on any starship but it can hold two
 small shuttles, and a workbee for any external repair work.
 
-The *Pioneer Class* typically rendezvous with the *Exodus* mothership after 
+The *Photon Class* typically rendezvous with the *Exodus* mothership after 
 every mission or so, but it follows the *Voyager Protocol* and can work without
 access to a starbase for up to three years.
 
-The *Pioneer Class* is designed to be everything you would expect in a starship
+The *Photon Class* is designed to be everything you would expect in a starship
 and to also fit in the hangar of an *Exodus Class*.
 
 ## Vulture Class
@@ -151,7 +151,7 @@ Unlike the other ships of the *Exodus*, the *Vulture Class* wasn't designed spec
 The *Vulture* has seen several notable battles, and was added as a tried and tested veteran
 to the *Exodus* line-up.
 
-In *Exodus* missions, the *Vulture* will typically be deployed in case a *Pioneer* runs into 
+In *Exodus* missions, the *Vulture* will typically be deployed in case a *Photon* runs into 
 trouble it can't run out of. The *Vulture* is the cavalry, using it's top speed of warp 9.95 to
 arrive at the right moment to rescue.
 
