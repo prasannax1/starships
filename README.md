@@ -47,6 +47,36 @@ serves as starbase to itself and the ships contained in it.
 The *Exodus Class* isn't going to win any beauty contest - nor for that
 matter any races at warp - but it does a job no other ship can do.
 
+### Saucer Separation
+
+Because of the highly unique nature of the *Exodus* the designers had to rethink the
+concept of saucer separation completely. When deciding if saucer separation was
+needed at all, the design committee looked into when the separation was actually needed in
+practice
+
+#### When the ship needs to be in two places at once
+
+This was trivially rejected since with all the auxillary ships, the *Exodus* could be in as
+many as 22 different places if needed.
+
+#### To evacuate the civilians in case of threat
+
+Here the committe looked at conventional saucer separations and found a bunch of things 
+backwards
+
+ * The part which needs to run away from danger, is not the part which has warp.
+ * The crew which needs to command the part which fights the threat, are placed smack in the middle of the part which runs away. They have to spend precious minutes getting to another part of the ship under times of threat.
+ 
+Considering all that, the committee turned around the convention - the saucer is the part
+which separates to fight the threat, and the rest of the ship - the part with warp and transwarp - runs away
+with the civilians.
+
+![Mother Ship Saucer](mothership-saucer-separation.png)
+
+The upper four decks of the sphere section contains the command crew, phaser arrays, photon torpedoes and a warp core.
+When separated this becomes a sort of super-*Vulture Class* to face any threat while the rest of the *Exodus* retreats to
+safety.
+
 ## Pioneer Class
 
 ![Explorer Ship](explorer.png)
