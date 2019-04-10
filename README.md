@@ -2,7 +2,7 @@
 
 Star Trek type starships
 
-## Mothership
+## Exodus Class
 
 ![Mother Ship](mothership.png)
 
@@ -41,7 +41,7 @@ serves as starbase to itself and the ships contained in it.
 The *Exodus Class* isn't going to win any beauty contest - nor for that
 matter any races at warp - but it does a job no other ship can do.
 
-## Explorer
+## Pioneer Class
 
 ![Explorer Ship](explorer.png)
 
@@ -73,3 +73,18 @@ small shuttles, and a workbee for any external repair work.
 The *Pioneer Class* typically rendezvous with the *Exodus* mothership after 
 every mission or so, but it follows the *Voyager Protocol* and can work without
 access to a starbase for up to three years.
+
+The *Pioneer Class* is designed to be everything you would expect in a starship
+and to also fit in the hangar of an *Exodus Class*.
+
+## Vulture Class
+
+![Attack Ship](attack.png)
+
+Vulture Class Light Escort
+
+ * Length: 46m
+ * Width: 26m
+ * Height: 9.8m
+ * Decks: 3
+ * Auxillary Craft: None
