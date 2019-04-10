@@ -8,6 +8,8 @@ Star Trek type starships
 
 Exodus Class Super Heavy Cruiser/Carrier
 
+### Stats
+
  * Length: 1500m
  * Width: 800m
  * Height: 220m
@@ -19,6 +21,8 @@ Exodus Class Super Heavy Cruiser/Carrier
    * 8 *Pioneer Class* Light Explorer/Scout vessels
    * 24 *Vulture Class* Light Escort vessels
    * 1 *Spock Class* Diplomatic Yacht
+
+### Description
 
 At almost a kilometer and a half long, the *Exodus Class* is an incredible 
 behemoth. Equipped with transwarp engines, The *Exodus* is meant to 
@@ -47,6 +51,8 @@ matter any races at warp - but it does a job no other ship can do.
 
 Pioneer Class Light Explorer/Scout
 
+### Stats
+
  * Length: 195m
  * Width: 66m
  * Height: 31m
@@ -56,6 +62,8 @@ Pioneer Class Light Explorer/Scout
  * Auxillary Craft:
    * 2 Small Shuttles
    * 1 Work Bee
+
+### Description
 
 The *Pioneer Class* is the workhorse of the *Exodus* mini-fleet. Fast, agile
 and reasonable powerful, this ship is supposed to do the bulk of the exploring
@@ -83,11 +91,15 @@ and to also fit in the hangar of an *Exodus Class*.
 
 Vulture Class Light Escort
 
+### Stats
+
  * Length: 47m
  * Width: 26m
  * Height: 9.8m
  * Decks: 2.5 (2 decks + 1 "attic" cargo hold)
  * Auxillary Craft: None
+
+### Description
 
 The *Vulture Class* is not just named after a bird of prey - for all practical purposes
 it is a Bird of Prey built to Star Fleet specifications.
@@ -117,6 +129,8 @@ arrive at the right moment to rescue.
 
 Spock Class Diplomatic Heavy Yacht
 
+### Stats
+
  * Length: 73.5m
  * Width: 40m
  * Height: 18.5m
@@ -124,6 +138,8 @@ Spock Class Diplomatic Heavy Yacht
    * Saucer Section: 2 decks
    * Engine Section: 2 decks
  * Auxillary Craft: None
+
+### Description
 
 Other ships have Captain's Yachts for special diplomatic missions. The *Exodus*, with hangars to spare, didn't see
 the need to hide a ship in the body contours of the ship.
