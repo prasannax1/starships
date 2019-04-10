@@ -45,7 +45,7 @@ matter any races at warp - but it does a job no other ship can do.
 
 ![Explorer Ship](explorer.png)
 
-Pioneer Class Light Eplorer/Scout
+Pioneer Class Light Explorer/Scout
 
  * Length: 195m
  * Width: 66m
@@ -61,7 +61,7 @@ The *Pioneer Class* is the workhorse of the *Exodus* mini-fleet. Fast, agile
 and reasonable powerful, this ship is supposed to do the bulk of the exploring
 on any mission.
 
-The *Poineer Class* is built for speed and it shows in the smooth ergonimic
+The *Pioneer Class* is built for speed and it shows in the smooth ergonomic
 design of the starships. It cruises comfortably at warp 9, and can do 9.99 
 when you put your foot down.
 
@@ -100,7 +100,7 @@ escorting a larger vessel through troubled space. And coming back alone.
 The *Vulture Class* might be small compared to most of the ships it will face, but it packs 
 a mean punch in it's complement of phasers and torpedoes - and as if that were not enough, 
 like the pack bird it's named after, the *Vulture Class* typically operates in teams of 
-two or three. The multi vector attack patterns more than makes up for any disadvantage 
+two or three. The multi vector attack patterns more than make up for any disadvantage 
 the *Vulture Class* might have in battle.
 
 Unlike the other ships of the *Exodus*, the *Vulture Class* wasn't designed specifically for it.
