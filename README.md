@@ -87,4 +87,26 @@ Vulture Class Light Escort
  * Width: 26m
  * Height: 9.8m
  * Decks: 3
- * Auxillary Craft: None
+ * Auxillary Craft: 1 Small Shuttle *OR* 1 Workbee
+
+The *Vulture Class* is not just named after a bird of prey - for all practical purposes
+it is a Bird of Prey built to Star Fleet specifications.
+
+The *Vulture Class* occupies a unique niche in starship where a runabout or a fighter craft
+just doesn't cut it, but a *Defiant Class* or equivalent isn't really readily available.
+Typical deployment of these vessels is aboard a starbase, and typical missions involve 
+escorting a larger vessel through troubled space. And coming back alone.
+
+The *Vulture Class* might be small compared to most of the ships it will face, but it packs 
+a mean punch in it's complement of phasers and torpedoes - and as if that were not enough, 
+like the pack bird it's named after, the *Vulture Class* typically operates in teams of 
+two or three. The multi vector attack patterns more than makes up for any disadvantage 
+the *Vulture Class* might have in battle.
+
+Unlike the other ships of the *Exodus*, the *Vulture Class* wasn't designed specifically for it.
+The *Vulture* has seen several notable battles, and was added as a tried and tested veteran
+to the *Exodus* line-up.
+
+In *Exodus* missions, the *Vulture* will typically be deployed in case a *Pioneer* runs into 
+trouble it can't run out of. The *Vulture* is the cavalry, using it's top speed of warp 9.95 to
+arrive at the right moment to rescue.
