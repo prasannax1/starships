@@ -14,7 +14,7 @@ Exodus Class Super Heavy Cruiser/Carrier
  * Width: 800m
  * Height: 220m
  * Decks: 36
-   * Saucer Section: 8 decks (+ 60m tall hangar)
+   * Saucer Section: 20 decks (8 decks + 12 decks hangar)
    * Sphere Section: 30 decks
    * Engine Section: 22 decks
    * Warp Pylons: 24 decks
