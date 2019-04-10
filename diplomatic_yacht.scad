@@ -21,11 +21,16 @@ module dip_disk() {
     }
 }
 
-module dip_main() {
+module dip_saucer() {
     difference() {
         dip_disk();
         dip_front_view();
+        dip_body();
     }
+}
+
+module dip_main() {
+    dip_saucer();
     dip_body();
     dip_pylon_assembly();
     mirror([0,1,0]) dip_pylon_assembly();
