@@ -57,7 +57,7 @@ practice
 #### When the ship needs to be in two places at once
 
 This was trivially rejected since with all the auxillary ships, the *Exodus* could be in as
-many as 22 different places if needed.
+many as 38 different places if needed.
 
 #### To evacuate the civilians in case of threat
 
