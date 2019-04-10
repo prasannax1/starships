@@ -83,7 +83,7 @@ and to also fit in the hangar of an *Exodus Class*.
 
 Vulture Class Light Escort
 
- * Length: 46m
+ * Length: 47m
  * Width: 26m
  * Height: 9.8m
  * Decks: 3 (2 decks + 1 "attic" cargo hold)
