@@ -19,7 +19,7 @@ Exodus Class Super Heavy Cruiser/Carrier
    * Engine Section: 22 decks
    * Warp Pylons: 24 decks (maintenance only)
    * Warp Nacelles: 6 decks (maintenance only)
- * Auxillary Craft:
+ * Auxillary Craft - Large:
    * 8 *Pioneer Class* Light Explorer/Scout vessels
    * 24 *Vulture Class* Light Escort vessels
    * 1 *Spock Class* Diplomatic Heavy Yacht
