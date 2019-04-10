@@ -113,6 +113,6 @@ arrive at the right moment to rescue.
 
 ## Spock Class
 
-![Diplomatic Yacht](diplomat.png)
+![Diplomatic Yacht](diplomatic.png)
 
 Spock Class Diplomatic Yacht
