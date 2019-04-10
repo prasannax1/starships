@@ -153,3 +153,9 @@ same to new civilizations wherever the *Exodus* is deployed.
 Cruising at a respectable warp 7.5, and capable of maxing it out to warp 9.1, the *Spock* is fast despite not really
 being built for speed. The *Spock* was defintely designed for luxury, and unlike the *Exodus* itself, it *was* designed
 to win beauty contests - and the *Spock* does a great job of giving a first impression.
+
+### Saucer Separation
+
+![Saucer Separation](diplomat-saucer-separation.png)
+
+The *Spock* is the only auxillary vessel on the *Exodus* which has a saucer separation feature. Since the *Spock* doesn't have any auxillary vehicles of itself, the impulse capable saucer section separates and can land on a planet - or a hangar of another ship. And the engineering section remains behind, in case a bailout is needed.
