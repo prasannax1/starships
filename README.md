@@ -115,4 +115,25 @@ arrive at the right moment to rescue.
 
 ![Diplomatic Yacht](diplomatic.png)
 
-Spock Class Diplomatic Yacht
+Spock Class Diplomatic Heavy Yacht
+
+ * Length: 73.5m
+ * Width: 40m
+ * Height: 18.5m
+ * Decks: 3
+   * Saucer Section: 2 decks
+   * Engine Section: 2 decks
+ * Auxillary Craft: None
+
+Other ships have Captain's Yachts for special diplomatic missions. The *Exodus*, with hangars to spare, didn't see
+the need to hide a ship in the body contours of the ship.
+
+The *Spock* takes diplomatic crafts to a whole new level. Named after a famous ambassador, the *Spock* is also
+designed to resemble the ship he was most famous for being in - the *Constitution Class* of the 23rd century. The
+*Constitution Class*, which still holds the record for maximum first contacts by any class of ships, was the first
+sight of starfleet and the federation for several species in the Alpha Quadrant. The *Spock Class* hopes to be the
+same to new civilizations wherever the *Exodus* is deployed.
+
+Cruising at a respectable warp 7.5, and capable of maxing it out to warp 9.1, the *Spock* is fast despite not really
+being built for speed. The *Spock* was defintely designed for luxury, and unlike the *Exodus* itself, it *was* designed
+to win beauty contests - and the *Spock* does a great job of giving a first impression.
