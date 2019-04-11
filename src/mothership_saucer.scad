@@ -16,8 +16,8 @@ module mss_minus() {
     cube([20,7,20], center=true);
 }
 
-module ms_saucer_main() {
-  scale(10) ms_saucer();
+module mss_saucer_main() {
+  scale(10) mss_saucer();
 }
 
-ms_saucer_main();
+mss_saucer_main();
