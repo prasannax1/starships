@@ -2,7 +2,9 @@ use <mother_ship.scad>;
 use <attack_ship.scad>;
 use <explorer_ship.scad>;
 use <diplomatic_yacht.scad>;
+use <hospital.scad>;
 
+color("grey")
 translate([0,-0,0])
     mothership();
         
@@ -19,3 +21,7 @@ translate([90,-400,20])
 translate([0,250, 80])
     rotate([0,0,90])
         diplomat();
+        
+rotate([0,0,360/16])
+    translate([0, 200, 80])
+        hospital();
