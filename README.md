@@ -4,7 +4,7 @@ Star Trek type starships
 
 ## Exodus Class
 
-![Mother Ship](mothership.png)
+![Mother Ship](images/mothership.png)
 
 Exodus Class Super Heavy Cruiser/Carrier
 
@@ -71,7 +71,7 @@ Considering all that, the committee turned around the convention - the saucer is
 which separates to fight the threat, and the rest of the ship - the part with warp and transwarp - runs away
 with the civilians.
 
-![Mother Ship Saucer](mothership-saucer-separation.png)
+![Mother Ship Saucer](images/mothership-saucer-separation.png)
 
 The upper four decks of the sphere section contains the command crew, phaser arrays, photon torpedoes and a warp core.
 When separated this becomes a sort of super-*Vulture Class* to face any threat while the rest of the *Exodus* retreats to
@@ -79,7 +79,7 @@ safety.
 
 ## Photon Class
 
-![Explorer Ship](explorer.png)
+![Explorer Ship](images/explorer.png)
 
 Photon Class Light Explorer/Scout
 
@@ -119,7 +119,7 @@ and to also fit in the hangar of an *Exodus Class*.
 
 ## Vulture Class
 
-![Attack Ship](attack.png)
+![Attack Ship](images/attack.png)
 
 Vulture Class Light Escort
 
@@ -157,7 +157,7 @@ arrive at the right moment to rescue.
 
 ## Spock Class
 
-![Diplomatic Yacht](diplomatic.png)
+![Diplomatic Yacht](images/diplomatic.png)
 
 Spock Class Diplomatic Heavy Yacht
 
@@ -190,4 +190,4 @@ to win beauty contests - and the *Spock* does a great job of giving a first impr
 
 The *Spock* is the only auxillary vessel on the *Exodus* which has a saucer separation feature. Since the *Spock* doesn't have any auxillary vehicles of itself, the impulse capable saucer section separates and can land on a planet - or a hangar of another ship. And the engineering section remains behind, in case a bailout is needed.
 
-![Saucer Separation](diplomat-saucer-separation.png)
+![Saucer Separation](images/diplomat-saucer-separation.png)
