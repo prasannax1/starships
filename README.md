@@ -204,9 +204,9 @@ Guppy Class Hospital Ship
  * Length: 120m
  * Width: 58m
  * Height: 40m
- * Decks: 8
-   * Sphere section: 8 decks
-   * Engineering section: 4 decks
+ * Decks: 10
+   * Sphere section: 10 decks
+   * Engineering section: 5 decks
  * Auxillary Craft:
    * 2 Medical Runabouts
    * 2 Medium Shuttles
