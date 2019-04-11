@@ -29,11 +29,15 @@ module dip_saucer() {
     }
 }
 
-module dip_main() {
-    dip_saucer();
+module dip_engineering() {
     dip_body();
     dip_pylon_assembly();
     mirror([0,1,0]) dip_pylon_assembly();
+}
+
+module dip_main() {
+    dip_saucer();
+    dip_engineering();
 }
 
 module dip_body() {
