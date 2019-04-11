@@ -23,6 +23,7 @@ Exodus Class Super Heavy Cruiser/Carrier
    * 8 *Photon Class* Light Explorer/Scout vessels
    * 24 *Vulture Class* Light Escort vessels
    * 1 *Spock Class* Diplomatic Heavy Yacht
+   * 1 *Guppy Class* Hospital Ship
 
 ### Description
 
@@ -191,3 +192,23 @@ to win beauty contests - and the *Spock* does a great job of giving a first impr
 The *Spock* is the only auxillary vessel on the *Exodus* which has a saucer separation feature. Since the *Spock* doesn't have any auxillary vehicles of itself, the impulse capable saucer section separates and can land on a planet - or a hangar of another ship. And the engineering section remains behind, in case a bailout is needed.
 
 ![Saucer Separation](images/diplomat-saucer-separation.png)
+
+## Guppy Class
+
+![Hospital Ship](images/hospital.png)
+
+Guppy Class Hospital Ship
+
+### Stats
+
+ * Length: 120m
+ * Width: 58m
+ * Height: 40m
+ * Decks: 8
+   * Sphere section: 8 decks
+   * Engineering section: 4 decks
+ * Auxillary Craft:
+   * 2 Medical Runabouts
+   * 2 Small Shuttles
+   
+### Description
