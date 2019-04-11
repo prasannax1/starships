@@ -23,6 +23,7 @@ Exodus Class Super Heavy Cruiser/Carrier
    * 8 *Photon Class* Light Explorer/Scout vessels
    * 24 *Vulture Class* Light Escort vessels
    * 1 *Spock Class* Diplomatic Heavy Yacht
+   * 1 *Guppy Class* Hospital Ship
 
 ### Description
 
@@ -191,3 +192,43 @@ to win beauty contests - and the *Spock* does a great job of giving a first impr
 The *Spock* is the only auxillary vessel on the *Exodus* which has a saucer separation feature. Since the *Spock* doesn't have any auxillary vehicles of itself, the impulse capable saucer section separates and can land on a planet - or a hangar of another ship. And the engineering section remains behind, in case a bailout is needed.
 
 ![Saucer Separation](images/diplomat-saucer-separation.png)
+
+## Guppy Class
+
+![Hospital Ship](images/hospital.png)
+
+Guppy Class Hospital Ship
+
+### Stats
+
+ * Length: 120m
+ * Width: 58m
+ * Height: 40m
+ * Decks: 8
+   * Sphere section: 8 decks
+   * Engineering section: 4 decks
+ * Auxillary Craft:
+   * 2 Medical Runabouts
+   * 2 Medium Shuttles
+   
+### Description
+
+On the *Exodus* an entire sector is dedicated to sickbays, hospitals and clinics for the health and wellness of the crew
+within. But quite often, Starfleet is asked to extend a hand of help to other species who do not have the medical facilities to deal with it.
+
+Enter the *Guppy*. Named after the missionary, not the fish (which is also named after the missionary). As big as a general
+hospital itself, it is equipped with some highly specialized medical equipment.
+  * Medical transporters with highly sensitive biofilters
+  * 4 separate bio-shielded quarantine areas
+  * The latest of scanners
+  * Gallons of biomemetic gel
+  * 20 EMH and 45 EMAH (emergency medical assistant hologram)
+  * 1 ECH in case the captain of the ship (nominally, the CMO of the *Exodus*) is incapacitated on mission.
+  * Mobile holo-emitter kits to send EMH on missions where humanoids cannot go on.
+
+The *Guppy* has a cruising speed of warp 7, and can speed up to a warp 9 to get to a medical emergency. It has two medical
+runabouts, each of which can be used to evacuate 62 upright passengers or 24 patients in beds in a hurry. It also has two 
+shuttles equipped with bio-suits, isolation areas to investigate highly contaminated areas.
+
+The *Vulture* bails out starfleet personnel when trouble is imminent; but when trouble has already stuck, it is the *Guppy*
+which delivers mercy and salvation.
