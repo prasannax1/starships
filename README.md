@@ -29,7 +29,7 @@ Exodus Class Super Heavy Cruiser/Carrier
 
 At a kilometer and a half long, the *Exodus Class* is an incredible 
 behemoth. Equipped with transwarp engines, The *Exodus* is meant to 
-transport daughter ships to another quadrant - or even beyong the Galaxy
+transport daughter ships to another quadrant - or even beyond the Galaxy
 and act as a starship, starbase and fleet HQ all in one.
 
 The 800m wide saucer section is bigger than the biggest ships so far by
