@@ -24,6 +24,10 @@ Exodus Class Super Heavy Cruiser/Carrier
    * 24 *Vulture Class* Light Escort vessels
    * 1 *Spock Class* Diplomatic Heavy Yacht
    * 1 *Guppy Class* Hospital Ship
+ * Warp speed:
+   * Cruising: Warp 4
+   * Maximum: Warp 5
+   * Transwarp: ??
 
 ### Description
 
@@ -78,6 +82,19 @@ The upper four decks of the sphere section contains the command crew, phaser arr
 When separated this becomes a sort of super-*Vulture Class* to face any threat while the rest of the *Exodus* retreats to
 safety.
 
+### Saucer stats
+
+ * Length: 89m
+ * Width: 110m
+ * Height: 24m
+ * Decks: 4
+ * Auxillary Craft:
+   * 6 Medium Shuttles
+ * Warp Speed:
+   * Cruising: Warp 7
+   * Maximum: Warp 9.5
+
+
 ## Photon Class
 
 ![Explorer Ship](images/explorer.png)
@@ -95,6 +112,9 @@ Photon Class Light Explorer/Scout
  * Auxillary Craft:
    * 2 Small Shuttles
    * 1 Work Bee
+ * Warp Speed:
+   * Cruising: Warp 9
+   * Maximum: Warp 9.99
 
 ### Description
 
@@ -131,6 +151,9 @@ Vulture Class Light Escort
  * Height: 9.8m
  * Decks: 2.5 (2 decks + 1 "attic" cargo hold)
  * Auxillary Craft: None
+ * Warp Speed:
+   * Cruising: Warp 7
+   * Maximum: Warp 9.95
 
 ### Description
 
@@ -171,6 +194,9 @@ Spock Class Diplomatic Heavy Yacht
    * Saucer Section: 2 decks
    * Engine Section: 2 decks
  * Auxillary Craft: None
+ * Warp Speed:
+   * Cruising: Warp 7.5
+   * Maximum: Warp 9.1
 
 ### Description
 
@@ -193,6 +219,15 @@ The *Spock* is the only auxillary vessel on the *Exodus* which has a saucer sepa
 
 ![Saucer Separation](images/diplomat-saucer-separation.png)
 
+### Saucer Stats
+
+ * Length: 40m
+ * Width: 40m
+ * height: 8m
+ * Decks: 2
+ * Auxillary Craft: None
+ * Warp Speed: None
+
 ## Guppy Class
 
 ![Hospital Ship](images/hospital.png)
@@ -210,6 +245,9 @@ Guppy Class Hospital Ship
  * Auxillary Craft:
    * 2 Medical Runabouts
    * 2 Medium Shuttles
+ * Warp Speed:
+   * Cruising: Warp 7
+   * Maximum: Warp 9
    
 ### Description
 
