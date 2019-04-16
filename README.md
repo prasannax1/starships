@@ -201,7 +201,7 @@ Guppy Class Hospital Ship
 
 ### Stats
 
- * Length: 120m
+ * Length: 122m
  * Width: 58m
  * Height: 40m
  * Decks: 10
@@ -229,6 +229,12 @@ hospital itself, it is equipped with some highly specialized medical equipment.
 The *Guppy* has a cruising speed of warp 7, and can speed up to a warp 9 to get to a medical emergency. It has two medical
 runabouts, each of which can be used to evacuate 62 upright passengers or 24 patients in beds in a hurry. It also has two 
 shuttles equipped with bio-suits, isolation areas to investigate highly contaminated areas.
+
+The *Guppy* was supposed to the original explorer model to be associated
+with the *Exodus* class before the *Photon* class was fast tracked into
+release. Several might have heaved silent sighs of relief at not having to
+face strange new civilizations at the helm of the *Guppy*, but for the
+medical crew the *Guppy* is irreplaceable.
 
 The *Vulture* bails out starfleet personnel when trouble is imminent; but when trouble has already stuck, it is the *Guppy*
 which delivers mercy and salvation.
