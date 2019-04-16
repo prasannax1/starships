@@ -6,7 +6,7 @@ Star Trek type starships
 
 ![Mother Ship](images/mothership.png)
 
-Exodus Class Super Heavy Cruiser/Carrier
+Exodus Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Stats
 
@@ -20,9 +20,9 @@ Exodus Class Super Heavy Cruiser/Carrier
    * Warp Pylons: 24 decks (maintenance only)
    * Warp Nacelles: 6 decks (maintenance only)
  * Auxillary Craft - Large:
-   * 8 *Photon Class* Light Explorer/Scout vessels
-   * 24 *Vulture Class* Light Escort vessels
-   * 1 *Spock Class* Diplomatic Heavy Yacht
+   * 8 *Photon Class* Light Science/Scout vessels
+   * 24 *Vulture Class* Light Escort/Tactical Scout vessels
+   * 1 *Spock Class* Diplomatic Heavy Yacht/Courier
    * 1 *Guppy Class* Hospital Ship
  * Warp speed:
    * Cruising: Warp 4
@@ -99,7 +99,7 @@ safety.
 
 ![Explorer Ship](images/explorer.png)
 
-Photon Class Light Explorer/Scout
+Photon Class Light Science/Scout
 
 ### Stats
 
@@ -142,7 +142,7 @@ and to also fit in the hangar of an *Exodus Class*.
 
 ![Attack Ship](images/attack.png)
 
-Vulture Class Light Escort
+Vulture Class Light Escort/Tactical Scout
 
 ### Stats
 
@@ -183,7 +183,7 @@ arrive at the right moment to rescue.
 
 ![Diplomatic Yacht](images/diplomatic.png)
 
-Spock Class Diplomatic Heavy Yacht
+Spock Class Diplomatic Heavy Yacht/Courier
 
 ### Stats
 
