@@ -2,7 +2,7 @@ module hos_ball() {
     sphere(20);
 }
 
-module hos_body() {
+module hos_body_old() {
     difference() {
         union() {
             rotate([-90,0,0])
@@ -27,8 +27,27 @@ module hos_body() {
     }
 }
 
-//hos_body();
-//hos_ball();
+module hos_body() {
+    difference() {
+        translate([0,42,-10])
+            scale([1,3,.5])
+                sphere(20);
+        
+        hos_body_minus();
+    }
+}
+
+module hos_body_minus() {
+        translate([-30,60,-30])
+        rotate([0,90,0])
+            cylinder(60,20,20);
+    
+    translate([0,90,-40])
+        cube(60, center=true);
+    
+    translate([-0,-20,0])
+        cube(40, center=true);
+}
 
 module hos_engineering() {
     hos_body();
@@ -48,8 +67,8 @@ module hos_pylon() {
 }
 
 module hos_pylon_assembly() {
-    translate([10,30,0]) hos_pylon();
-    translate([25,30,15]) hos_nacelle();
+    translate([10,30,-3]) hos_pylon();
+    translate([25,30,12]) hos_nacelle();
 }
 
 module hos_nacelle() {
