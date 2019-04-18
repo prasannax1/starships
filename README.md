@@ -10,9 +10,9 @@ Exodus Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Stats
 
- * Length: 1500m
- * Width: 800m
- * Height: 220m
+ * Length: 1580m
+ * Width: 796m
+ * Height: 270m
  * Decks: 36
    * Saucer Section: 20 decks (8 decks + 12 decks hangar)
    * Sphere Section: 30 decks
@@ -31,7 +31,7 @@ Exodus Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Description
 
-At a kilometer and a half long, the *Exodus Class* is an incredible 
+At more than a kilometer and a half long, the *Exodus Class* is an incredible 
 behemoth. Equipped with transwarp engines, The *Exodus* is meant to 
 transport daughter ships to another quadrant - or even beyond the Galaxy
 and act as a starship, starbase and fleet HQ all in one.

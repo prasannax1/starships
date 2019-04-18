@@ -1,5 +1,5 @@
 sphere_radius = 7.5;
-rear_radius = 7.5;
+rear_radius = 10;
 side_radius = 5;
 pylon_radius = 2.5;
 
@@ -10,7 +10,7 @@ disk_inner_top = 10;
 disk_height = 10;
 
 body_length = disk_outer_bottom;
-side_length = body_length/2.5;
+side_length = 0; //body_length/2.5;
 
 nacelle_front_radius = disk_height * 0.6;
 nacelle_rear_radius = nacelle_front_radius / 2;
@@ -74,24 +74,7 @@ module ms_ball() {
     sphere(sphere_radius);
 }
 
-module ms_body_triangle() {
-	cyl_length = (2*PI*disk_outer_top)/disk_segments;
-	cyl_radius = rear_radius * 1.8;
-	cyl_ratio = (disk_height/2) / (cyl_radius * 1.33);
-    scale([1,1,cyl_ratio])
-        translate([cyl_length/2,-(body_length-side_radius),(disk_height/2)])
-            rotate([0,-90,0])
-                cylinder(cyl_length,cyl_radius,cyl_radius,$fn=3);
-}
 
-module ms_body_side() {
-    translate([0,-body_length,0])
-        rotate([0,90,0])
-            cylinder(side_length,rear_radius,side_radius);
-
-    translate([side_length,-body_length,0])
-        sphere(side_radius);
-}
 
 module ms_body_double() {
     rotate([90,0,0])
@@ -99,58 +82,23 @@ module ms_body_double() {
 
     translate([0,-body_length,0])
         sphere(rear_radius);
-
-    ms_body_side();
-
-    mirror([1,0,0]) 
-        ms_body_side();
 }
 
 module ms_body() {
     difference() {
         ms_body_double();
 
-        translate([-body_length,-(body_length + side_length),0])
+              translate([-body_length,-(body_length + rear_radius+ 1),0])
             cube(body_length * 2);
     }
-    ms_body_triangle();
+    
+    translate([0,-body_length,0])
+        sphere(sphere_radius);
 }
 
 module ms_body_hull() {
     hull() ms_body();
 }
-
-module ms_pylon() {
-    rotate([45,0,0])
-        cylinder((disk_height * 1.6),side_radius,pylon_radius);
-    sphere(side_radius);
-}
-
-module ms_nacelle() {
-    scale([1.2,1,.6]) difference() {
-        union() {
-            rotate([90,45,0])
-                cylinder((body_length *2) - 5,nacelle_front_radius,nacelle_rear_radius, $fn=4);
-
-            rotate([0,90,0])
-                sphere(nacelle_front_radius, $fn=4);
-        }
-
-        translate([-body_length,-(body_length*4),-(body_length/2)])
-            rotate([-45,0,0])
-                cube(body_length * 2);
-    }
-}
-
-module ms_nacelle_assembly() {
-    translate([side_length,-body_length,0])
-        rotate([0,22.5,0])
-            ms_pylon();
-
-    translate([(side_length*1.2),-body_length,disk_height + 1])
-        ms_nacelle();
-}
-
 
 
 module ms_main() {
@@ -158,10 +106,10 @@ module ms_main() {
     ms_ball();
     ms_body();
 
-    ms_nacelle_assembly();
+    ms_nacelle_assembly_2();
 
     mirror([1,0,0]) 
-        ms_nacelle_assembly();
+        ms_nacelle_assembly_2();
 }
 
 module mothership() {
@@ -170,3 +118,51 @@ module mothership() {
 
 //rotate([0,0,180])
 mothership();
+
+module ms_nacelle_assembly_2() {
+    ms_pylon_2();
+
+    translate([body_length*.6, -body_length*1.5, body_length*.3])
+        ms_nacelle_2();
+}
+
+module ms_nacelle_2() {
+    scale([0.45,1.5,0.8]) difference() {
+        union() {
+            rotate([90,0,0])
+                cylinder(body_length, nacelle_front_radius, nacelle_rear_radius, $fn=6);
+
+            translate([0,0,nacelle_front_radius*0.1])
+                sphere(nacelle_front_radius * 1.1, $fn=6);
+        }
+
+        translate([0,-body_length*1.4,-nacelle_front_radius*1.4])
+            rotate([45,0,0])
+                cube(body_length, center=true);
+    }
+}
+
+module ms_pylon_2() {
+    scale([0.8,1,0.4])
+        rotate([0,45,0])
+            translate([side_radius,-body_length + side_radius, -1])
+                rotate([0,0,-180])
+                    ms_slant_bar();
+}
+
+
+
+module ms_slant_bar() {
+    difference() {
+        translate([-1,0,0])
+            cube([2,disk_outer_bottom,disk_outer_bottom]);
+
+        translate([-disk_outer_bottom,-1,-1])
+            rotate([50,0,0])
+                cube(disk_outer_bottom*2);
+
+        translate([-disk_outer_bottom,disk_outer_bottom*1.5,-disk_outer_bottom*1.5])
+            rotate([50,0,0])
+                cube(disk_outer_bottom*2);
+    }
+}
