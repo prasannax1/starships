@@ -1,20 +1,20 @@
 module at_main_unscaled() {
     difference() {
         sphere(10);
-        translate([-10,-10,-10])
-            cube([20,20,10]);
+        translate([-20,-20,-20])
+            cube([40,40,20]);
     }
 
     difference() {
         intersection() {
-            translate([0,10,0])
+            translate([0,20,0])
                 rotate([90,0,0])
-                    cylinder(20,5,5);
-            translate([0,0,-10])
-                cylinder(20,10,10);
+                    cylinder(40,5,5);
+            translate([0,0,-20])
+                cylinder(40,10,10);
         }
-        translate([-10,-10,0])
-            cube([20,20,10]);
+        translate([-20,-20,0.01])
+            cube([40,40,20]);
     }
 }
 
