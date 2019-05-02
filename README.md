@@ -173,9 +173,9 @@ the *Vulture Class* might have in battle.
 
 Unlike the other ships of the *Aviary*, the *Vulture Class* wasn't designed specifically for it.
 The *Vulture* has seen several notable battles, and was added as a tried and tested veteran
-to the *Exodus* line-up.
+to the *Aviary* line-up.
 
-In *Exodus* missions, the *Vulture* will typically be deployed in case a *Magpie* runs into 
+In *Aviary* missions, the *Vulture* will typically be deployed in case a *Magpie* runs into 
 trouble it can't run out of. The *Vulture* is the cavalry, using it's top speed of warp 9.95 to
 arrive at the right moment to rescue.
 
