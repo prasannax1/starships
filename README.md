@@ -205,7 +205,7 @@ the need to hide a ship in the body contours of the ship.
 
 The *Dove* takes diplomatic crafts to a whole new level. It is designed to resemble the *Constitution Class* of the 23rd century, which still holds the record for maximum first contacts by any class of ships. It was the first
 sight of starfleet and the federation for several species in the Alpha Quadrant, and the *Dove Class* hopes to be the
-same to new civilizations wherever the *Exodus* is deployed.
+same to new civilizations wherever the *Aviary* is deployed.
 
 Cruising at a respectable warp 7.5, and capable of maxing it out to warp 9.1, the *Dove* is fast despite not really
 being built for speed. The *Dove* was defintely designed for luxury, and unlike the *Aviary* itself, it *was* designed
