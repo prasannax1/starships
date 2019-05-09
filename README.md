@@ -149,7 +149,7 @@ Vulture Class Light Escort/Tactical Scout
  * Length: 53m
  * Width: 30m
  * Height: 11m
- * Decks: 2.5 (2 decks + 1 "attic" cargo hold)
+ * Decks: 3
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
