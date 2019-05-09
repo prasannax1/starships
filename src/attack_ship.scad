@@ -45,7 +45,7 @@ module at_main() {
 }
 
 module attack() {
-    scale(.66) at_main();
+    scale(.75) at_main();
 }
 
 attack();
