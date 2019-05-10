@@ -80,23 +80,11 @@ module ms_ball(h,r,n) {
 
 module ms_engg(h,r,n) {
     ms_disk_core(h,r,n);
-    ms_wing(h,r,n);
-    mirror([1,0,0]) ms_wing(h,r,n);
+    ms_pylon(h,r,n);
     ms_nac_assembly(h,r,n);
     mirror([1,0,0]) ms_nac_assembly(h,r,n);
 }
 
-module ms_wing(h,r,n) {
-    translate([r/2,r,r/4-h/1.2])
-        rotate([-9,-30,0])
-            difference() {
-                cube([r*.75,r,r/50], center=true);
-                
-                rotate(-75)
-                    translate([-r/4,-1.1*r,-r/2])
-                        cube(2*r);
-            }
-}
 
 module ms_nac_assembly(h,r,n) {
     translate([r*.8,r*1.25,h*.6])
@@ -110,7 +98,7 @@ module ms_nacelle(h,r,n) {
                 rotate([-90,0,0])
                     cylinder(2*r,h,h*.6, $fn=6);
 
-                sphere(h+2, $fn=6);
+                sphere(h*1.05, $fn=6);
             }
 
             translate([-2*r,-2*r,-4*r])
@@ -127,3 +115,25 @@ module mothership() {
 }
 
 mothership();
+
+module ms_pylon(h, r, n) {
+    rad1 = h/2 + r*r/(8*h);
+
+    translate([0,r*1.5,.25*h]) rotate([-10,0,0]) scale([1.6,1,1.8]) difference() {
+        translate([0,0,rad1-.8*h])
+            rotate([90,0,0])
+                cylinder(2*h, rad1, rad1, $fn=10);
+
+        translate([0,h/10,rad1-.75*h])
+            rotate([90,0,0])
+                cylinder(2.2*h, rad1, rad1, $fn=10);
+            
+        translate([-r,-2.75*r,-2*h])
+            rotate([-27,0,0])
+                cube(2*r);
+
+        translate([-r,-r,h*.3])
+            cube(2*r);
+    }
+}
+
