@@ -110,7 +110,7 @@ module ms_nacelle(h,r,n) {
                 rotate([-90,0,0])
                     cylinder(2*r,h,h*.6, $fn=6);
 
-                sphere(h+2, $fn=6);
+                sphere(h*1.05, $fn=6);
             }
 
             translate([-2*r,-2*r,-4*r])
