@@ -50,6 +50,10 @@ module ms_disk_hangar(h,r,n) {
     }
 }
 
+module ms_disk_hangar_scale(h,r,n) {
+    scale([1.02,1,1]) ms_disk_hangar(h,r,n);
+}
+
 module ms_disk_core(h,r,n) {
     difference() {
         translate([0,0,-1.5*h])
@@ -63,7 +67,7 @@ module ms_disk(h,r,n) {
     disk_segment_angle = 360/n;
     for(angle=[disk_segment_angle:disk_segment_angle:360-disk_segment_angle])
         rotate(angle)
-            ms_disk_hangar(h,r,n);
+            ms_disk_hangar_scale(h,r,n);
 }
 
 
