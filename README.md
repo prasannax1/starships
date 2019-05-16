@@ -275,6 +275,6 @@ medical crew the *Nightingale* is irreplaceable.
 The *Vulture* bails out starfleet personnel when trouble is imminent; but when trouble has already stuck, it is the *Nightingale*
 which delivers mercy and salvation.
 
-## Overall scale of ships
+## Relative scale of ships
 
 ![scale](images/scale.jpg)
