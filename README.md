@@ -277,4 +277,4 @@ which delivers mercy and salvation.
 
 ## Relative scale of ships
 
-![scale](images/scale.jpg)
+![scale](images/scale.png)
