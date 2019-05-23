@@ -65,9 +65,11 @@ module ms_disk_core(h,r,n) {
 
 module ms_disk(h,r,n) {
     disk_segment_angle = 360/n;
-    for(angle=[disk_segment_angle:disk_segment_angle:360-disk_segment_angle])
-        rotate(angle)
-            ms_disk_hangar_scale(h,r,n);
+    union() {
+        for(angle=[disk_segment_angle:disk_segment_angle:360-disk_segment_angle])
+            rotate(angle)
+                ms_disk_hangar_scale(h,r,n);
+    }
 }
 
 
