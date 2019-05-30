@@ -5,11 +5,11 @@ use <mothership_saucer.scad>;
 difference() {
     mothership();
     translate([0,0,10])
-    rotate([0,0,90])
+    rotate([0,0,-90])
     mss_saucer_main();
 }
 
 
 translate([0,0,100])
-rotate([0,0,90])
+rotate([0,0,-90])
 mss_saucer_main();
