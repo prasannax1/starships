@@ -65,7 +65,8 @@ module exp_nacelle_assembly() {
 }
 
 module exp_main() {
-	exp_saucer_2();
+	translate([0,0,-1.5])
+		exp_saucer_2();
 	exp_body();
 	translate([75,0,-8])
 		exp_nacelle_assembly();
