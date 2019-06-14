@@ -1,4 +1,4 @@
-# OpenSCAD designs
+# Starship Designs
 
 Star Trek type starships
 
