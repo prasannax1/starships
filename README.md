@@ -80,6 +80,8 @@ with the civilians.
 
 ![Mother Ship Saucer](images/mothership-saucer-separation.png)
 
+[View 3d](stl/ms_saucer.stl)
+
 The upper four decks of the sphere section contains the command crew, phaser arrays, photon torpedoes and a warp core.
 When separated this becomes a sort of super-*Vulture Class* to face any threat while the rest of the *Aviary* retreats to
 safety.
@@ -100,6 +102,8 @@ safety.
 ## Magpie Class
 
 ![Explorer Ship](images/explorer.png)
+
+[View 3d](stl/explorer.stl)
 
 Magpie Class Light Science/Scout
 
@@ -144,6 +148,8 @@ and to also fit in the hangar of an *Aviary Class*.
 
 ![Attack Ship](images/attack.png)
 
+[View 3d](stl/attack.stl)
+
 Vulture Class Light Escort/Tactical Scout
 
 ### Stats
@@ -185,6 +191,8 @@ arrive at the right moment to rescue.
 
 ![Diplomatic Yacht](images/diplomatic.png)
 
+[View 3d](stl/diplomat.stl)
+
 Dove Class Diplomatic Heavy Yacht/Courier
 
 ### Stats
@@ -219,6 +227,8 @@ The *Dove* is the only auxillary vessel on the *Aviary* which has a saucer separ
 
 ![Saucer Separation](images/diplomat-saucer-separation.png)
 
+[View 3d](stl/dip_separate.stl)
+
 ### Saucer Stats
 
  * Length: 40m
@@ -231,6 +241,8 @@ The *Dove* is the only auxillary vessel on the *Aviary* which has a saucer separ
 ## Nightingale Class
 
 ![Hospital Ship](images/hospital.png)
+
+[View 3d](stl/hospital.stl)
 
 Nightingale Class Hospital Ship
 
@@ -280,4 +292,9 @@ which delivers mercy and salvation.
 ## Relative scale of ships
 
 ![scale](images/scale.png)
+
+[View 3d](stl/scale.stl)
+
 ![sectors](images/sector.png)
+
+[View 3d](stl/combined.stl)
