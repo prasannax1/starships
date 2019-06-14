@@ -6,6 +6,8 @@ Star Trek type starships
 
 ![Mother Ship](images/mothership.png)
 
+[View 3d](stl/mother.stl)
+
 Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Stats
