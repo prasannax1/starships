@@ -6,7 +6,7 @@ Star Trek type starships
 
 ![Mother Ship](images/mothership.png)
 
-[View 3d](stl/mother.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/mother.stl)
 
 Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
@@ -80,7 +80,7 @@ with the civilians.
 
 ![Mother Ship Saucer](images/mothership-saucer-separation.png)
 
-[View 3d](stl/ms_saucer.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/ms_saucer.stl)
 
 The upper four decks of the sphere section contains the command crew, phaser arrays, photon torpedoes and a warp core.
 When separated this becomes a sort of super-*Vulture Class* to face any threat while the rest of the *Aviary* retreats to
@@ -103,7 +103,7 @@ safety.
 
 ![Explorer Ship](images/explorer.png)
 
-[View 3d](stl/explorer.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/explorer.stl)
 
 Magpie Class Light Science/Scout
 
@@ -148,7 +148,7 @@ and to also fit in the hangar of an *Aviary Class*.
 
 ![Attack Ship](images/attack.png)
 
-[View 3d](stl/attack.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/attack.stl)
 
 Vulture Class Light Escort/Tactical Scout
 
@@ -191,7 +191,7 @@ arrive at the right moment to rescue.
 
 ![Diplomatic Yacht](images/diplomatic.png)
 
-[View 3d](stl/diplomat.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/diplomat.stl)
 
 Dove Class Diplomatic Heavy Yacht/Courier
 
@@ -227,7 +227,7 @@ The *Dove* is the only auxillary vessel on the *Aviary* which has a saucer separ
 
 ![Saucer Separation](images/diplomat-saucer-separation.png)
 
-[View 3d](stl/dip_separate.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/dip_separate.stl)
 
 ### Saucer Stats
 
@@ -242,7 +242,7 @@ The *Dove* is the only auxillary vessel on the *Aviary* which has a saucer separ
 
 ![Hospital Ship](images/hospital.png)
 
-[View 3d](stl/hospital.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/hospital.stl)
 
 Nightingale Class Hospital Ship
 
@@ -293,8 +293,8 @@ which delivers mercy and salvation.
 
 ![scale](images/scale.png)
 
-[View 3d](stl/scale.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/scale.stl)
 
 ![sectors](images/sector.png)
 
-[View 3d](stl/combined.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/combined.stl)
