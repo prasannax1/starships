@@ -80,7 +80,7 @@ module util_nacelle(length, width, height, curved=false, up=true, front_bulge=fa
     }
 }
 
-module mirrored(v) {
+module util_mirrored(v) {
     children();
     mirror(v) children();
 }
