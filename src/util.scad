@@ -42,3 +42,40 @@ module util_body(length, width, height, upper_height) {
         util_half_cylinder(2*rad, height);
 }
 
+module util_graded_cylinder(height, radius_start, radius_end, grades=1, fn=fn1) {
+    height_grade = height / grades;
+    radius_grade = (radius_start - radius_end) / (grades * grades);
+    for (i = [0 : 1 : grades]) {
+        translate([0,0,i*height_grade])
+            cylinder(height_grade, 
+                     radius_start - i*radius_grade * i,
+                     radius_start - (i+1) * radius_grade * (i+1),
+                     $fn = fn);
+    }
+}
+
+module util_nacelle(length, width, height, curved=false, up=true, front_bulge=false) {
+    rad = min(width, height/2);
+    grads = curved ? 6 : 1;
+    scale_factor = front_bulge ? 1.1 : 1;
+    direction = up ? -1 : 1;
+    difference() {
+        scale([1, width/ (2*rad), height/rad])
+            difference() {
+                union() {
+                    rotate([0,-90,0])
+                        rotate(30)
+                            util_graded_cylinder(length-rad, rad, rad/2, grads, 6);
+                    scale(scale_factor) 
+                        sphere(rad, $fn=6);
+                }
+                
+                translate([-length/2, 0, direction * (height/2 + height/19)])
+                    cube([length+length, width+width, height+height/10], center=true);
+            }
+        
+        translate([-length-(curved?length/3:0), 0, -length/3])
+            rotate([0,-45,0])
+                cube(length, center=true);
+    }
+}
