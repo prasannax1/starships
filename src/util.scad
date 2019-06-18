@@ -79,3 +79,8 @@ module util_nacelle(length, width, height, curved=false, up=true, front_bulge=fa
                 cube(length, center=true);
     }
 }
+
+module mirrored(v) {
+    children();
+    mirror(v) children();
+}
