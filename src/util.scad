@@ -84,3 +84,12 @@ module util_mirrored(v) {
     children();
     mirror(v) children();
 }
+
+module util_ring(outer, inner, height) {
+    difference() {
+        translate([0,0,-height/2])
+            cylinder(height, outer, outer);
+        translate([0,0,-(height/2 + height/19)])
+            cylinder(height+height/10, inner, inner);
+    }
+}
