@@ -93,3 +93,13 @@ module util_ring(outer, inner, height) {
             cylinder(height+height/10, inner, inner);
     }
 }
+
+module util_star(radius, thick, num, half=false) {
+    angle = 360/num;
+    offset = half? angle/2 : 0;
+    for (i = [0: 1: num]) {
+        rotate(i* angle + offset)
+            translate([radius/2,0,0])
+                cube([radius, thick, thick], center=true);
+    }
+}
