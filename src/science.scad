@@ -13,11 +13,12 @@ module sci_body() {
 }
 
 module sci_nacelles() {
-    translate([7.5,-22, -2.5])
-        cube([10,44,.5]);
+    translate([12,0,0])
+        mirror([0,0,1])
+            util_nacelle_bar(44,5,7.5,1);
     util_mirrored([0,1,0])
-        translate([18,20,-1.5])
-            util_nacelle(60,5,5,curved=false, up=false);
+        translate([18,20,-4.5])
+            util_nacelle(65,5,5,curved=false, up=false);
 }
 
 module sci_bridge() {
@@ -33,6 +34,10 @@ module sci_bridge() {
     translate([-20,0,4])
         scale([1,1.5,1])
             sphere(5);
+    
+    translate([-20,0,0])
+        scale([1,1.5,1])
+            cylinder(5,5,5);
 }
 
 module sci_body_minus_1() {
