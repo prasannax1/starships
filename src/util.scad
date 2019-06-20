@@ -35,11 +35,11 @@ module util_half_cylinder(length, radius, inner_fn=fn2, outer_fn=fn1) {
     }
 }
 
-module util_body(length, width, height, upper_height) {
+module util_body(length, width, height, upper_height, fn=fn1) {
     rad = gcd(length, gcd(width, upper_height));
     
     scale(.995) scale([length/(2*rad), width/(2*rad), 1])
-        util_half_cylinder(2*rad, height);
+        util_half_cylinder(2*rad, height, outer_fn=fn);
 }
 
 module util_graded_cylinder(height, radius_start, radius_end, grades=1, fn=fn1) {
