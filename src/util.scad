@@ -115,3 +115,17 @@ module util_hangar_disk(height, lower_rad, upper_rad, num, fn=fn1) {
         
     }
 }
+
+module util_nacelle_bar(span, height, width, thickness) {
+    rad = (span*span/(8*height) + height/2);
+    outer = rad + thickness/2;
+    inner = rad - thickness/2;
+    difference(){
+        translate([0,0,outer])
+            rotate([0,90,0])
+                util_ring(outer, inner, width);
+    
+        translate([0,0,1.1*outer+height])
+            cube(2.2*outer, center=true);
+    }
+}
