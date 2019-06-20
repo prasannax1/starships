@@ -1,23 +1,8 @@
-module at_main_unscaled() {
-    difference() {
-        sphere(10);
-        translate([-20,-20,-20])
-            cube([40,40,20]);
-    }
-
-    difference() {
-        intersection() {
-            translate([0,20,0])
-                rotate([90,0,0])
-                    cylinder(40,5,5);
-            translate([0,0,-20])
-                cylinder(40,10,10);
-        }
-        translate([-20,-20,0.01])
-            cube([40,40,20]);
-    }
+use <util.scad>;
+module at_main_body() {
+    util_saucer(80,40,10);
+    util_body(80,40,5,10);
 }
-
 
 module at_main_minus() {
     translate([-14,-90,-10])
@@ -77,8 +62,8 @@ module at_nacelle_2() {
 module at_main() {
     union() {
         difference() {
-            scale([2,4,1]) 
-                at_main_unscaled();
+            rotate(90) 
+                at_main_body();
             at_main_minus();
         }
         at_nacelle_assembly();
