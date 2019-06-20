@@ -5,9 +5,9 @@ module at_main_body() {
 }
 
 module at_main_minus() {
-    translate([-14,-90,-10])
+    translate([-14.5,-90,-10])
         rotate([-15,0,0])
-            cube([28,80,80]);
+            cube([29,80,80]);
 
     translate([0,40.5,-2.5])
         sphere(1.5, $fn=16);
@@ -32,30 +32,8 @@ module at_nacelle_assembly() {
 }
 
 module at_nacelle_2() {
-    scale([.75,1.2,2.4]) difference() {
-        union() {
-            rotate([90,0,0])
-            union() {
-                cylinder(16,5,4,$fn=6);
-                translate([0,0,16])
-                    cylinder(10,4,3,$fn=6);
-                translate([0,0,26])
-                    cylinder(8,3,2,$fn=6);
-                translate([0,0,34])
-                    cylinder(6,2,1,$fn=6);
-            }
-
-            rotate([90,0,0])
-                sphere(5,$fn=6);
-        }
-
-        translate([-30,-50,0])
-            cube(60);
-
-        translate([-30,-24,-65])
-            rotate([75,0,0])
-                cube(60);
-    }
+    rotate(90)
+        util_nacelle(45,7.5,12,curved=true,up=false);
 }
 
 

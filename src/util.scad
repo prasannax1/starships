@@ -67,7 +67,7 @@ module util_nacelle(length, width, height, curved=false, up=true, front_bulge=fa
                         rotate(30)
                             util_graded_cylinder(length-rad, rad, rad/2, grads, 6);
                     scale(scale_factor) 
-                        sphere(rad, $fn=6);
+                        rotate([0,90,0]) rotate(90) sphere(rad, $fn=6);
                 }
                 
                 translate([-length/2, 0, direction * (height/2 + height/19)])
