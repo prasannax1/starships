@@ -11,11 +11,11 @@ module util_half_sphere(radius, fn=fn1) {
 
 function gcd(a,b) = a == b ? a : a > b ? gcd(a-b, b) : gcd(a, b-a);
 
-module util_saucer(length, width, height) {
+module util_saucer(length, width, height, fn=fn1) {
     rad = gcd(length,gcd(width,height));
     //rad = 10;
     scale([length/(2*rad), width/(2*rad), height/rad])
-        util_half_sphere(rad);
+        util_half_sphere(rad, fn);
 }
 
 module util_half_cylinder(length, radius, inner_fn=fn2, outer_fn=fn1) {
