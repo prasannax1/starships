@@ -37,7 +37,7 @@ module at_nacelle_assembly() {
 
 module at_nacelle_2() {
     rotate(90)
-        util_nacelle(40,7.5,12,curved=true, up=false,front_bulge=true);
+        util_nacelle(44,7.5,12,curved=true, up=false,front_bulge=true);
 }
 
 
