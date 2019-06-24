@@ -197,12 +197,12 @@ Dove Class Diplomatic Heavy Yacht/Courier
 
 ### Stats
 
- * Length: 73.5m
- * Width: 40m
- * Height: 18.5m
- * Decks: 3
-   * Saucer Section: 2 decks
-   * Engine Section: 2 decks
+ * Length: 44m
+ * Width: 27m
+ * Height: 10m
+ * Decks: 2
+   * Saucer Section: 1 decks
+   * Engine Section: 1 decks
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7.5
