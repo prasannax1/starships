@@ -104,15 +104,15 @@ module util_star(radius, thick, num, half=false) {
     }
 }
 
-module util_hangar_disk(height, lower_rad, upper_rad, num, fn=fn1) {
+module util_hangar_disk(height, lower, upper, num, fn=fn1) {
     difference() {
-        translate([0,0,-height/2])
-            cylinder(height, lower_rad, upper_rad, $fn=fn);        
-        translate([0,0,height/2])
-            util_star(upper_rad, height/20, num, half=true);
-        translate([0,0,-height/2])
-            util_star(lower_rad, height/20, num, half=true);
-        
+            cylinder(height, lower, upper, $fn=fn, center=true);
+        difference() {
+            scale([1,1,22])
+                util_star(1.1*upper, height/20, num, half=true);
+            scale(.95)
+                cylinder(height, lower, upper, $fn=fn, center=true);
+        }
     }
 }
 
