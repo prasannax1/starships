@@ -197,7 +197,7 @@ Dove Class Diplomatic Heavy Yacht/Courier
 
 ### Stats
 
- * Length: 44m
+ * Length: 46m
  * Width: 27m
  * Height: 10m
  * Decks: 2
