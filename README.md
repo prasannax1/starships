@@ -16,7 +16,7 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
  * Width: 580m
  * Height: 239m
  * Decks: 40
-   * Saucer Section: 20 decks (8 decks + 12 decks hangar)
+   * Saucer Section: 20 decks
    * Engine Section: 20 decks
  * Auxillary Craft - Large:
    * 8 *Magpie Class* Light Science/Scout vessels
@@ -30,12 +30,12 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Description
 
-At more than a kilometer and a half long, the *Aviary Class* is an incredible 
+At more than a kilometer long, the *Aviary Class* is an incredible 
 behemoth. Equipped with transwarp engines, The *Aviary* is meant to 
 transport daughter ships to another quadrant - or even beyond the Galaxy
 and act as a starship, starbase and fleet HQ all in one.
 
-The 800m wide saucer section is bigger than the biggest ships so far by
+The saucer section is almost as big as a *Galaxy Class* by
 itself, and is split into 16 sectors, each sector containing a massive
 hangar in the lower section and livable area in the upper section. All in 
 all it's big enough to be a city by itself.
@@ -79,9 +79,9 @@ with the civilians.
 
 [View 3d](https://github.com/prasannax1/openscad/blob/master/stl/ms_saucer.stl)
 
-The upper four decks of the sphere section contains the command crew, phaser arrays, photon torpedoes and a warp core.
-When separated this becomes a sort of super-*Vulture Class* to face any threat while the rest of the *Aviary* retreats to
-safety.
+The battle bridge module, situated at the bottom of the saucer, separates if needed
+and becomes a starship by itself. It's about as big as a *Defiant Class* and is as
+powerful as the *Defiant* would be if it was made today.
 
 ### Saucer stats
 
