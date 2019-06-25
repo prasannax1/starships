@@ -1,12 +1,19 @@
 use <util.scad>;
 
 module m_saucer() {
-    union() {
-        translate([0,0,20])
-            util_saucer(600,500,40);
+    difference() {
+        union() {
+            translate([0,0,20])
+                util_saucer(600,500,40);
+            
+            scale([1.2,1,1])
+                util_hangar_disk(40,225,250,16);
+            
+            translate([0,0,50])
+                m_upper_bridge();
+        }
         
-        scale([1.2,1,1])
-            util_hangar_disk(40,225,250,16);
+        m_lower_bridge_assembly();
     }
 }
 
@@ -15,9 +22,7 @@ module m_body() {
         difference() {
             translate([-250,0,20]) {
                 mirror([0,0,1])
-                    util_saucer(450,80,80);
-                //util_saucer(200,50,20);
-                
+                    util_saucer(450,80,80);                
             }
             
             translate([-540,0,0])
@@ -37,6 +42,8 @@ module m_body() {
         }
     }
 }
+
+
 
 module m_bar() {
     difference() {
@@ -85,6 +92,56 @@ module m_nacelle_assembly() {
             m_nacelle();
 }
 
+module m_upper_bridge() {
+    difference() {
+        util_saucer(180,150,20);
+        translate([75,0,10])
+            scale([1.2,1,1])
+                rotate(30)
+                    cylinder(60,50,50,center=true, $fn=6);
+    }
+}
+
+module m_lower_bridge() {
+    difference() {
+        union(){
+            mirror([0,0,1])
+                util_saucer(180,150,15);
+            util_saucer(180,150,5);
+            
+ 
+        }
+        
+        union(){
+            translate([90,0,0])
+                rotate([0,-15,0])
+                    cube([25,16,25],center=true);
+            
+            translate([-(90+45),0,0])
+                cube(150, center=true);
+        }
+    
+
+    }
+
+    translate([-55,0,-10])
+    util_nacelle_bar(150,10,5,1);
+        
+    
+    util_mirrored([0,1,0])
+        translate([-45,70,0])
+            rotate([180,0,0])
+                util_nacelle(120,15,10,curved=true,up=false);
+}
+
+module m_lower_bridge_assembly() {
+    difference() {
+        translate([0,0,-20])
+            m_lower_bridge();
+        m_body();
+    }
+}
+
 module m_main() {
     m_saucer();
     m_body();
@@ -92,7 +149,19 @@ module m_main() {
 }
 
 module mother() {
-    scale(1) m_main();
+    scale(1)  {
+        m_main();
+        m_lower_bridge_assembly();
+    }
 }
+
+module mother_sep() {
+    scale(1)  {
+        m_main();
+        translate([0,0,-25])
+            m_lower_bridge_assembly();
+    }
+}
+
 
 mother();
