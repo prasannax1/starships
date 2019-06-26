@@ -9,8 +9,8 @@ module m_saucer() {
             scale([1.2,1,1])
                 util_hangar_disk(40,225,250,16);
             
-            translate([0,0,50])
-                m_upper_bridge();
+            //translate([0,0,50])
+                //m_upper_bridge();
         }
         
         m_lower_bridge_assembly();
@@ -135,11 +135,11 @@ module m_lower_bridge() {
 }
 
 module m_lower_bridge_assembly() {
-    difference() {
+    //difference() {
         translate([0,0,-20])
             m_lower_bridge();
-        m_body();
-    }
+        //m_body();
+    //}
 }
 
 module m_main() {
@@ -157,6 +157,7 @@ module mother() {
 
 module mother_sep() {
     scale(1)  {
+        //TODO
         m_main();
         translate([0,0,-25])
             m_lower_bridge_assembly();
