@@ -198,8 +198,8 @@ Dove Class Diplomatic Heavy Yacht/Courier
  * Width: 27m
  * Height: 10m
  * Decks: 2
-   * Saucer Section: 1 decks
-   * Engine Section: 1 decks
+   * Saucer Section: 1 deck
+   * Engine Section: 1 deck
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7.5
@@ -217,23 +217,6 @@ same to new civilizations wherever the *Aviary* is deployed.
 Cruising at a respectable warp 7.5, and capable of maxing it out to warp 9.1, the *Dove* is fast despite not really
 being built for speed. The *Dove* was defintely designed for luxury, and unlike the *Aviary* itself, it *was* designed
 to win beauty contests - and the *Dove* does a great job of giving a first impression.
-
-### Saucer Separation
-
-The *Dove* is the only auxillary vessel on the *Aviary* which has a saucer separation feature. Since the *Dove* doesn't have any auxillary vehicles of itself, the impulse capable saucer section separates and can land on a planet - or a hangar of another ship. And the engineering section remains behind, in case a bailout is needed.
-
-![Saucer Separation](images/diplomat-saucer-separation.png)
-
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/dip_separate.stl)
-
-### Saucer Stats
-
- * Length: 40m
- * Width: 40m
- * height: 8m
- * Decks: 2
- * Auxillary Craft: None
- * Warp Speed: None
 
 ## Nightingale Class
 
