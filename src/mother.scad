@@ -84,7 +84,7 @@ module m_nacelle_assembly() {
     translate([-400,0,-80])
         m_bar();
     util_mirrored([0,1,0])
-        translate([-500,250,75])
+        translate([-400,250,75])
             m_nacelle();
 }
 
