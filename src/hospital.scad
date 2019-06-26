@@ -1,87 +1,65 @@
-module hos_ball() {
-    sphere(20);
+use <util.scad>;
+
+module hos_saucer() {
+    util_hangar_disk(3,20,20,4);
+    translate([0,0,2])
+        util_hangar_disk(1,20,18,4);
+    translate([0,0,-2])
+        util_hangar_disk(1,18,20,4);
+    cylinder(5.5,10,10,center=true);
+    cylinder(6,7.5,7.5,center=true);
 }
 
-module hos_body_old() {
-    difference() {
-        union() {
-            rotate([-90,0,0])
-                cylinder(40,20,20);
-
-            translate([0,40,0])
-                scale([1,3,1])
-                    sphere(20);
-        }
-        translate([-25,0,0])
-            cube([50,180,30]);
-        
-    }
+module hos_body_1() {
+    translate([-30,0,-1.5])union() { 
+        difference() {
+            mirror([0,0,1])
+                util_saucer(60,24,18);
     
-    scale([1,1,.2]) union() {
-        rotate([-90,0,0])
-            cylinder(40,20,20);
+            translate([-20,0,-7.5])
+                cube(40,center=true);
+        }
+    
+    
+        difference() {
+            scale([1,1,6])
+                util_body(60,24,3,15);
+    
+            translate([20,0,-7.5])
+                cube(40,center=true);
+        }
 
-        translate([0,40,0])
-            scale([1,3,1])
-                sphere(20);
+        scale([1,1,.1])
+            util_saucer(60,24,18);
     }
+}
+
+module hos_nacelle_assembly() {
+    translate([-15,0,-5])
+        mirror([0,0,1])
+            util_nacelle_bar(40,5,5,1);
+}
+
+module hos_body_minus() {
+    translate([-2,0,-7.5])
+        sphere(2.5, $fn=16);
+
+    translate([-65,0,-25])
+        rotate([0,45,0])
+            cube(30, center=true);
 }
 
 module hos_body() {
     difference() {
-        translate([0,42,-10])
-            scale([1,3,.5])
-                sphere(20);
-        
+        hos_body_1();
         hos_body_minus();
     }
 }
 
-module hos_body_minus() {
-        translate([-30,60,-30])
-        rotate([0,90,0])
-            cylinder(60,20,20);
-    
-    translate([0,90,-40])
-        cube(60, center=true);
-    
-    translate([-0,-20,0])
-        cube(40, center=true);
-}
-
-module hos_engineering() {
-    hos_body();
-    hos_pylon_assembly();
-    mirror([1,0,0]) hos_pylon_assembly();
-}
-
 module hos_main() {
-    hos_ball();
-    hos_engineering();
-}
-
-module hos_pylon() {
-    scale([1,2,1])
-        rotate([-20,45,0])
-            cube([2,2,25]);
-}
-
-module hos_pylon_assembly() {
-    translate([10,30,-3]) hos_pylon();
-    translate([25,30,12]) hos_nacelle();
-}
-
-module hos_nacelle() {
-    length = 60;
-    scale([1.5,1,.75]) {
-        rotate([-90,0,0])
-            cylinder(length,2.5,2.5, $fn=16);
-
-        sphere(2.5, $fn=16);
-
-        translate([0,length,0])
-            sphere(2.5, $fn=16);
-    }
+    hos_saucer();
+    hos_body();
+    hos_nacelle_assembly();
 }
 
 module hospital() {
