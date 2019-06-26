@@ -1,20 +1,16 @@
 use <util.scad>;
 
 module m_saucer() {
-    difference() {
-        union() {
-            translate([0,0,20])
-                util_saucer(600,500,40);
-            
-            scale([1.2,1,1])
-                util_hangar_disk(40,225,250,16);
-            
-            //translate([0,0,50])
-                //m_upper_bridge();
-        }
+    union() {
+        translate([0,0,20])
+            util_saucer(600,500,40);
         
-        m_lower_bridge_assembly();
-    }
+        scale([1.2,1,1])
+            util_hangar_disk(40,225,250,16);
+        
+        translate([0,0,50])
+            m_upper_bridge();
+    }        
 }
 
 module m_body() {
@@ -135,11 +131,8 @@ module m_lower_bridge() {
 }
 
 module m_lower_bridge_assembly() {
-    //difference() {
-        translate([0,0,-20])
-            m_lower_bridge();
-        //m_body();
-    //}
+    translate([0,0,-20])
+        m_lower_bridge();
 }
 
 module m_main() {
