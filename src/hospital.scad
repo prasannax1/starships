@@ -12,22 +12,8 @@ module hos_saucer() {
 
 module hos_body_1() {
     translate([-30,0,-1.5])union() { 
-        difference() {
-            mirror([0,0,1])
-                util_saucer(60,24,18);
-    
-            translate([-20,0,-7.5])
-                cube(40,center=true);
-        }
-    
-    
-        difference() {
-            scale([1,1,6])
-                util_body(60,24,3,15);
-    
-            translate([20,0,-7.5])
-                cube(40,center=true);
-        }
+        mirror([0,0,1])
+            util_saucer(60,24,18);
 
         scale([1,1,.1])
             util_saucer(60,24,18);
@@ -38,14 +24,18 @@ module hos_nacelle_assembly() {
     translate([-15,0,-5])
         mirror([0,0,1])
             util_nacelle_bar(40,5,5,1);
+    
+    util_mirrored([0,1,0])
+        translate([-10,18,-9])
+            util_nacelle(40,6,6,curved=true,up=false);
 }
 
 module hos_body_minus() {
     translate([-2,0,-7.5])
         sphere(2.5, $fn=16);
 
-    translate([-65,0,-25])
-        rotate([0,45,0])
+    translate([-50,0,-30])
+        rotate([0,20,0])
             cube(30, center=true);
 }
 

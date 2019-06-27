@@ -228,15 +228,13 @@ Nightingale Class Hospital Ship
 
 ### Stats
 
- * Length: 122m
- * Width: 58m
- * Height: 40m
- * Decks: 10
-   * Sphere section: 10 decks
-   * Engineering section: 5 decks
- * Auxillary Craft:
-   * 2 Medical Runabouts
-   * 2 Medium Shuttles
+ * Length: 80m
+ * Width: 42m
+ * Height: 22m
+ * Decks: 4
+   * Saucer section: 1 decks
+   * Engineering section: 4 decks
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9
@@ -256,15 +254,7 @@ hospital itself, it is equipped with some highly specialized medical equipment.
   * 1 ECH in case the captain of the ship (nominally, the CMO of the *Aviary*) is incapacitated on mission.
   * Mobile holo-emitter kits to send EMH on missions where humanoids cannot go on.
 
-The *Nightingale* has a cruising speed of warp 7, and can speed up to a warp 9 to get to a medical emergency. It has two medical
-runabouts, each of which can be used to evacuate 62 upright passengers or 24 patients in beds in a hurry. It also has two 
-shuttles equipped with bio-suits, isolation areas to investigate highly contaminated areas.
-
-The *Nightingale* was supposed to the original explorer model to be associated
-with the *Aviary* class before the *Magpie* class was fast tracked into
-release. Several might have heaved silent sighs of relief at not having to
-face strange new civilizations at the helm of the *Nightingale*, but for the
-medical crew the *Nightingale* is irreplaceable.
+The *Nightingale* has a cruising speed of warp 7, and can speed up to a warp 9 to get to a medical emergency. 
 
 The *Vulture* bails out starfleet personnel when trouble is imminent; but when trouble has already stuck, it is the *Nightingale*
 which delivers mercy and salvation.
