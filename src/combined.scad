@@ -19,7 +19,7 @@ module attack_a() {
 }
 
 module hospital_a() {
-    translate([0,225,64]) rotate(90) hospital();
+    translate([0,225,75]) rotate(90) hospital();
 }
 
 module diplomat_a() {
@@ -27,7 +27,7 @@ module diplomat_a() {
 }
 
 module scout_a() {
-    translate([0,200,64]) rotate(-90) scout();
+    translate([0,200,75]) rotate(-90) scout();
 }
 
 module sector(num) {
