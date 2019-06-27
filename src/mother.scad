@@ -148,14 +148,22 @@ module mother() {
     }
 }
 
-module mother_sep() {
-    scale(1)  {
-        //TODO
-        m_main();
-        translate([0,0,-25])
-            m_lower_bridge_assembly();
+module m_main_sep() {
+    difference() {
+        m_saucer();
+        m_lower_bridge_assembly();
+    }
+    
+    m_body();
+    m_nacelle_assembly();
+    
+    translate([0,0,-50])
+    difference() {
+        m_lower_bridge_assembly();
+        m_body();
     }
 }
 
 
 mother();
+//m_main_sep();
