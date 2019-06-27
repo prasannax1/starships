@@ -36,7 +36,7 @@ module scout_nacelle_assembly() {
   
     util_mirrored([0,1,0])
         translate([-25,20,5])
-            util_nacelle(75,10,7.5);
+            util_nacelle(48,9,7.5, curved=true);
 }
 
 module scout_main() {
