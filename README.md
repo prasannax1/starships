@@ -146,7 +146,7 @@ arrive at the right moment to rescue.
 
 ![Scout Ship](images/scout.png)
 
-[View 3d]((https://github.com/prasannax1/openscad/blob/master/stl/diplomat.stl)
+[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/scout.stl)
 
 White Owl Class Light Scout
 
