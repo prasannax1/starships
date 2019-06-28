@@ -10,8 +10,8 @@ module mother_a() {
 }
 
 module science_a() {
-    translate([0,200,64]) rotate(90) science();
-    translate([0,175,80]) rotate(90) science();
+    translate([0,220,64]) rotate(90) science();
+    translate([0,180,80]) rotate(90) science();
 }
 
 module attack_a() {

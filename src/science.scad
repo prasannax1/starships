@@ -43,7 +43,7 @@ module sci_nacelle_assembly() {
         mirror([0,0,1])
             util_nacelle_bar(48,9,5,1.5);
 
-    util_mirrored([0,1,0]) translate([12,22,-5]) {
+    util_mirrored([0,1,0]) translate([-7.5,22,-5]) {
         util_nacelle(50,7.5,5,up=false,curved=true);
         util_nacelle(50,7.5,.75,up=true, curved=true);
     }
