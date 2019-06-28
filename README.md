@@ -19,10 +19,12 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
    * Saucer Section: 20 decks
    * Engine Section: 20 decks
  * Auxillary Craft - Large:
-   * 8 *Magpie Class* Light Science/Scout vessels
-   * 24 *Vulture Class* Light Escort/Tactical Scout vessels
-   * 1 *Dove Class* Diplomatic Heavy Yacht/Courier
-   * 1 *Nightingale Class* Hospital Ship
+   * 14 *Magpie Class* Light Science vessels
+   * 12 *Vulture Class* Light Corvette/Patrol vessels
+   * 2 *White Owl Class* Light Scout vessels
+   * 1 *Dove Class* Diplomatic Yacht/Light Courier
+   * 1 *Nightingale Class* Light Hospital Ship
+   * 1 Escort Vessel
  * Warp speed:
    * Cruising: Warp 5
    * Maximum: Warp 8
@@ -105,7 +107,7 @@ TODO
 
 [View 3d](https://github.com/prasannax1/openscad/blob/master/stl/attack.stl)
 
-Vulture Class Light Escort/Tactical Scout
+Vulture Class Light Corvette/Patrol Vessel
 
 ### Stats
 
@@ -173,7 +175,7 @@ TODO
 
 [View 3d](https://github.com/prasannax1/openscad/blob/master/stl/diplomat.stl)
 
-Dove Class Diplomatic Heavy Yacht/Courier
+Dove Class Diplomatic Yacht/Light Courier
 
 ### Stats
 
@@ -201,7 +203,7 @@ TODO
 
 [View 3d](https://github.com/prasannax1/openscad/blob/master/stl/hospital.stl)
 
-Nightingale Class Hospital Ship
+Nightingale Class Light Hospital Ship
 
 ### Stats
 
