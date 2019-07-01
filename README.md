@@ -210,9 +210,9 @@ Nightingale Class Light Hospital Ship
  * Length: 80m
  * Width: 42m
  * Height: 22m
- * Decks: 5
+ * Decks: 6
    * Saucer section: 1 decks
-   * Engineering section: 4 decks
+   * Engineering section: 5 decks
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
