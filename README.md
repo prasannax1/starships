@@ -66,7 +66,7 @@ powerful as the *Defiant* would be if it was made today.
  * Length: 249m
  * Width: 155m
  * Height: 24m
- * Decks: 4
+ * Decks: 5
  * Auxillary Craft:
    * 2 Medium Shuttles
  * Warp Speed:
@@ -88,7 +88,7 @@ Magpie Class Light Science Vessel
  * Width: 52m
  * Height: 17m
  * Decks: 2
- * Auxillary Craft: None
+ * Auxillary Craft: 1 Shuttlepod
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -157,10 +157,10 @@ White Owl Class Light Scout
  * Length: 113m
  * Width: 49m
  * Height: 21m
- * Decks: 4
-   * Saucer Section: 2 decks
+ * Decks: 5
+   * Saucer Section: 3 decks
    * Engine Section: 2 decks
- * Auxillary Craft: None
+ * Auxillary Craft: 2 Shuttlepods
  * Warp Speed:
    * Cruising: Warp 7.5
    * Maximum: Warp 9.5
