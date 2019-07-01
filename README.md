@@ -15,9 +15,9 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
  * Length: 1154m
  * Width: 580m
  * Height: 239m
- * Decks: 40
-   * Saucer Section: 20 decks
-   * Engine Section: 20 decks
+ * Decks: 56
+   * Saucer Section: 28 decks
+   * Engine Section: 28 decks
  * Auxillary Craft - Large:
    * 14 *Magpie Class* Light Science vessels
    * 12 *Vulture Class* Light Corvette/Patrol vessels
@@ -27,7 +27,7 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
    * 1 Escort Vessel
  * Warp speed:
    * Cruising: Warp 5
-   * Maximum: Warp 8
+   * Maximum: Warp 7.3
    * Transwarp: ??
 
 ### Description
@@ -42,7 +42,7 @@ itself, and is split into 16 sectors, each sector containing a massive
 hangar in the lower section and livable area in the upper section. All in 
 all it's big enough to be a city by itself.
 
-The *Aviary Class* cruises at a sedate warp 5, and can move at warp 8 
+The *Aviary Class* cruises at a sedate warp 5, and can move at warp 7.3 
 when the engine is at maximum warp; which it never will be since the 
 primary mode of propulsion for this juggernaut is transwarp.
 
