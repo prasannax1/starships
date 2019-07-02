@@ -133,7 +133,15 @@ Magpie Class Light Science Vessel
 
 The *Magpie Class* is the workhorse of the *Aviary* mini-fleet. Fast, agile and reasonable powerful, this ship is supposed to do the bulk of the exploring on any mission.
 
-TODO
+### Structure
+
+The upper deck is essentially a very long runabout, with the cockpit in front followed by the main transporter, computer core and engineering. The warp core of the ship is laid out horizontally in the last third of the upper deck. In the middle, the upper deck also contains an elevator to the lower deck.
+
+Approximately above the engine, the *Magpie* also contains a disc containing a sensor array, that can be reconfigured with mission specific sensors.
+
+The lower deck contains up to 14 big modular lab rooms which can be removed and reconfigured as per missions. It also contains residential rooms for crew and scientists, a pantry and a sickbay. Since the ship may or may not have a medical officer on a mission, each ship has an EMH manning the sickbay.
+
+The aft end of the lower deck contains a small shuttlebay which houses a small shuttlepod for planetary landings.
 
 ## Vulture Class
 
@@ -160,11 +168,21 @@ The *Vulture Class* is not just named after a bird of prey - for all practical p
 
 The *Vulture Class* occupies a unique niche in starship where a runabout or a fighter craft just doesn't cut it, but a *Defiant Class* or equivalent isn't really readily available.  Typical deployment of these vessels is aboard a starbase, and typical missions involve escorting a larger vessel through troubled space. And coming back alone.
 
-The *Vulture Class* might be small compared to most of the ships it will face, but it packs a mean punch in it's complement of phasers and torpedoes - and as if that were not enough, like the pack bird it's named after, the *Vulture Class* typically operates in teams of two or three. The multi vector attack patterns more than make up for any disadvantage the *Vulture Class* might have in battle.
+### Structure
 
-Unlike the other ships of the *Aviary*, the *Vulture Class* wasn't designed specifically for it.  The *Vulture* has seen several notable battles, and was added as a tried and tested veteran to the *Aviary* line-up.
+Despite its compact appearance, the *Vulture* is built on a rather conservative pattern. It contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
 
-In *Aviary* missions, the *Vulture* will typically be deployed in case a *Magpie* runs into trouble it can't run out of. The *Vulture* is the cavalry, using it's top speed of warp 9.95 to arrive at the right moment to rescue.
+The upper deck is essentially a runabout, with the cockpit in front followed by main transporter, dormitory, sickbay and gym. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1.
+
+Deck 2 consists of engineering, with the deflector in front, the warp core and antimatter reserve extending almost the entire length of deck 2The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
+
+The upper deck is essentially a runabout, with the cockpit in front followed by main transporter, dormitory, sickbay and gym. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1.
+
+Deck 2 consists of engineering, with the deflector in front, the warp core and antimatter reserve extending almost the entire length of deck 2.
+
+The saucer section is bigger than the interiors would indicate - and the extra space is occupied by a massive phaser array and auxillary antimatter reserve.
+
+The warp core of the *Vulture* is much more powerful than a ship of this size would indicate, and even at it's top speed of Warp 9.95 it consumes only 25% of the power output. The overpowered warp core is mainly used to power the phaser array, which is what enables the *Vulture* to take out ships several times its size without breaking a sweat.
 
 ## White Owl Class
 
