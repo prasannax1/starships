@@ -1,12 +1,14 @@
-use <attack_ship.scad>;
-use <diplomatic_yacht.scad>;
-use <explorer_ship.scad>;
+use <attack.scad>;
+use <diplomatic.scad>;
+use <scout.scad>;
+use <science.scad>;
 use <hospital.scad>;
-use <mother_ship.scad>;
+use <mother.scad>;
 
-mothership();
+m_main_sep();
 
-translate([0,0,120]) rotate(90) explorer();
-translate([0,0,180]) hospital();
-translate([0,0,240]) rotate(-90) diplomat();
-translate([0,0,300]) rotate(180) attack();
+translate([0,0,90]) rotate(0) scout();
+translate([0,0,150]) hospital();
+translate([0,0,180]) science();
+translate([0,0,210]) rotate(-90) attack();
+translate([0,0,240]) rotate(0) diplomat();

@@ -1,27 +1,33 @@
-use <mother_ship.scad>;
-use <attack_ship.scad>;
-use <explorer_ship.scad>;
-use <diplomatic_yacht.scad>;
+use <mother.scad>;
+use <attack.scad>;
+use <science.scad>;
+use <scout.scad>;
+use <diplomatic.scad>;
 use <hospital.scad>;
         
 module mother_a() {
-    rotate(180) mothership();
+    rotate(90) mother();
 }
 
-module explorer_a() {
-    translate([0,200,80]) rotate(90) explorer();
+module science_a() {
+    translate([0,220,64]) rotate(90) science();
+    translate([0,180,80]) rotate(90) science();
 }
 
 module attack_a() {
-    translate([0,250,80]) attack();
+    translate([0,220,64]) attack();
 }
 
 module hospital_a() {
-    translate([0,200,80]) hospital();
+    translate([0,225,75]) rotate(90) hospital();
 }
 
 module diplomat_a() {
-    translate([0,250,80]) rotate(90) diplomat();
+    translate([0,250,64]) rotate(90) diplomat();
+}
+
+module scout_a() {
+    translate([0,200,75]) rotate(-90) scout();
 }
 
 module sector(num) {
@@ -32,14 +38,15 @@ module sector(num) {
 
 mother_a();
 sector(0) diplomat_a();
-sector(1) hospital_a();
-sector(2) explorer_a();
-sector(3) explorer_a();
-sector(5) explorer_a();
-sector(6) explorer_a();
+sector(1) scout_a();
+sector(2) hospital_a();
+sector(3) science_a();
+sector(5) science_a();
+sector(6) science_a();
 sector(7) attack_a();
 sector(9) attack_a();
-sector(10) explorer_a();
-sector(11) explorer_a();
-sector(13) explorer_a();
-sector(14) explorer_a();
+sector(10) science_a();
+sector(11) science_a();
+sector(13) science_a();
+sector(14) science_a();
+sector(15) scout_a();
