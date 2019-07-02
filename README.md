@@ -32,15 +32,61 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Description
 
-At more than a kilometer long, the *Aviary Class* is an incredible behemoth.  Equipped with transwarp engines, The *Aviary* is meant to transport daughter ships to another quadrant - or even beyond the Galaxy and act as a starship, starbase and fleet HQ all in one.
+The *Aviary Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
 
-The saucer section is almost as big as a *Galaxy Class* by itself, and is split into 16 sectors, each sector containing a massive hangar in the lower section and livable area in the upper section. All in all it's big enough to be a city by itself.
+### Structure
 
-The *Aviary Class* cruises at a sedate warp 5, and can move at warp 7.3 when the engine is at maximum warp; which it never will be since the primary mode of propulsion for this juggernaut is transwarp.
+The *Aviary* follows a pretty tradtional design, saucer, secondary hull and nacelles. The saucer is shaped to present a lower profile from the fore direction. It is fatter than you expect it, even on a ship this size, because most of the lower half of the saucer section consists of mobile hangars for small starship.
 
-The *Aviary Class* is built to work without access to a starbase for up to twenty years - in fact, with industrial replicators on board this ship serves as starbase to itself and the ships contained in it.
+#### Saucer Section
 
-### Captain's Yacht
+The saucer section is almost as big as a *Galaxy Class* by itself. It is split into 4 main parts.
+
+The top 5 decks of the saucer section consists of the upper bridge module. It consists of main bridge, main computer core, an auxillary sickbay. It also contains offices for the civilian government and administration for the civilian and starfleet residents of the *Aviary*. It also contains a cafeteria and dormitory for bridge and admin staff.
+
+The next 9 decks of the saucer section contains the main inhabitable area of the *Aviary*. It is split up into 16 sections and a central core. The central core consists of main power coupling, turbolift routing and an auxillary computer core.
+
+Each section contains an auxillary sickbay, a brig, and a replimat. They contain residences for the crew for all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
+
+In addition, each section also contains areas which specialize. 
+
+ * Section 0 is the diplomatic office. It also contains residence for diplomatic guests, residences for admiralty, a food court and a holo conference auditorium.
+
+ * Sections 1, 3, 5, 6, 10, 11, 13, 14 and 15 are various science labs. The labs are reconfigurable per ship. These sections also contain 2 holodecks each, and a medium food court.
+
+ * Section 2 is the main hospital. It also contains a quarantine area.
+
+ * Section 4 is auxillary engineering. It has engineering labs and a light industrial replicator.
+
+ * Section 7 is internal security. It contains weapons locker, and barracks for security personnel all over the ship, and main brig complex.
+
+ * Section 8 is main engineering. Section 8 is mainly concerned with the running of the massive warp and transwarp engines that the *Aviary* sports.
+
+ * Section 9 is external security. Section 8 is responsible for the defense and tactical operations of *Aviary* as well as providing security for away missions.
+
+ * Section 12 is auxillary guest quarters for civilian passengers. It also contains a large food court and a large holo-complex.
+
+The next 10 decks of the saucer section contains 16 hangars, each measuring 150m long and 100m wide on the borad side, and 40m tall. In addition to the hangars, it also contains the central core which is the main cargo store.
+
+Like the section above it, each hangar contains ships specialized to the offices they handle.
+
+ * Section 0 contains diplomatic yachts (*Dove Class*).
+
+ * Section 1 and 15 contain the advanced light scout *White Owl Class* vessels.
+
+ * Section 2 contains the *Nightingale Class* light hospital ship and medevac runabouts.
+
+ * Sections 3, 5, 6, 10, 11, 13 and 14 contain two light *Magpie Class* science vessels each.
+
+ * Section 4 hangar is actually a repair shop. It contains a standard Federation Warp Tug, and empty space to take apart and repair any ship of the *Aviaru* line-up.
+
+ * Section 7 & Section 9 - internal security doesn't need ships, so both of these are used to store the 12 *Vulture Class* corvettes of the external security department.
+
+ * Section 8 hangar is not a hangar at all - it contains the upper third of the massive warp core of the *Aviary* as well as main antimatter storage.
+
+ * Section 12 is used to store security cleared and approved personal vehicles.
+
+#### Captain's Yacht
 
 In the space under the saucer traditionally used by Captain's yachts, the *Aviary* has a dedicated Escort vessel. Nicknamed the *Bat Class* (because it hangs upside down), is about as big as a *Defiant Class* and is as powerful as the *Defiant* would be if it was made today.
 
@@ -60,6 +106,9 @@ In the space under the saucer traditionally used by Captain's yachts, the *Aviar
    * Cruising: Warp 7
    * Maximum: Warp 9.5
 
+#### Engineering section
+
+The engineering section contains 26 decks. The front half is used to house the warp and transwarp cores of the ship. The aft section is used as storage. There is no shuttlebay since the *Aviary* has hangars to spare.
 
 ## Magpie Class
 
