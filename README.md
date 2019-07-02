@@ -176,7 +176,7 @@ The upper deck is essentially a runabout, with the cockpit in front followed by 
 
 Deck 2 consists of engineering, with the deflector in front, the warp core and antimatter reserve extending almost the entire length of deck 2The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
 
-The upper deck is essentially a runabout, with the cockpit in front followed by main transporter, dormitory, sickbay and gym. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1.
+The upper deck is essentially a runabout, with the cockpit in front followed by main transporter, dormitory, pantry, sickbay and gym. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1. This cargo section is directly connected to the torpedo launchers and can be used to hold extra torpedoes, or can be configured with a sensor array if required.
 
 Deck 2 consists of engineering, with the deflector in front, the warp core and antimatter reserve extending almost the entire length of deck 2.
 
@@ -207,7 +207,23 @@ White Owl Class Light Scout
    
 ### Description
 
-TODO
+The *White Owl* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*. The *White Owl* is deployed as an advanced scout in places where trouble is expected but discoveries are hoped.
+
+### Structure
+
+This ship follows a standard federation structure - saucer section, secondary hull, and warp nacelles on pylons. 
+
+The saucer section consists of 3 decks. 
+
+ * Deck 1 - bridge. 
+ * Deck 2 - crew quarters
+ * Deck 3 - modular labs, cafeteria, sickbay and cargo bays.
+ * Deck 4 - main engineering, shuttle bay
+ * Deck 5 - main engineering, shuttle bay
+
+The aft-most part of deck 2 & 3 contains the upper half of the warp core. Both of the engineering decks contain the lower half of the warp core in the foremost part, with the aft part of both decks joined to form the shuttlebay containing two shuttlepods.
+
+Unlike the *Magpie* and *Vulture* classes which can be mass produced cheaply, the *White Owl* is much more expensive to manufacture. That's why the *Aviary* contains at most two of these.
 
 ## Dove Class
 
@@ -232,9 +248,15 @@ Dove Class Diplomatic Yacht/Light Courier
 
 ### Description
 
-With the underside of the *Aviary* taken up by a dedicated escort vessel, that still leaves the niche of a diplomatic vessel unfulfilled.
+With the underside of the *Aviary* taken up by a dedicated escort vessel, that still leaves the niche of a diplomatic vessel unfulfilled. The *Dove* class, which was initially designed to transport VIPs in federation territory, fits into this niche naturally.
 
-TODO
+### Structure
+
+Even though it resembles a starship with its structure of saucer - secondary hull - warp nacelle design, the *Dove* is actually a very large yacht.
+
+The Saucer section contains the cockpit and main deflector at the front, followed by a circular corridor surrounding a pantry area to exit into the engineering room aft. The outer side of the corridor has 4 luxury rooms, two on either side.
+
+The engineering section conatins the main warp core and transporters.
 
 ## Nightingale Class
 
@@ -273,9 +295,9 @@ Enter the *Nightingale*. Named after Florence Nightingale, it is as big as a gen
   * Mobile holo-emitter kits to send EMH on missions where humanoids cannot go
     on.
 
-The *Nightingale* has a cruising speed of warp 7, and can speed up to a warp 9 to get to a medical emergency. 
+### Structure
 
-The *Vulture* bails out starfleet personnel when trouble is imminent; but when trouble has already stuck, it is the *Nightingale* which delivers mercy and salvation.
+The *Nightingale* looks pregnant with it's oversized aft section. The main saucer contains the bridge module, with crew dormitory instead of captain's rooms. The engineering section extends seamlessly into what looks like an oversized cargo bay, but is actually 5 decks of mobile hospital.
 
 ## Relative scale of ships
 
