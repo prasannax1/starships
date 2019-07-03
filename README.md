@@ -78,7 +78,7 @@ Like the section above it, each hangar contains ships specialized to the offices
 
  * Sections 3, 5, 6, 10, 11, 13 and 14 contain two light *Magpie Class* science vessels each.
 
- * Section 4 hangar is actually a repair shop. It contains a standard Federation Warp Tug, and empty space to take apart and repair any ship of the *Aviaru* line-up.
+ * Section 4 hangar is actually a repair shop. It contains a standard Federation Warp Tug, and empty space to take apart and repair any ship of the *Aviary* line-up.
 
  * Section 7 & Section 9 - internal security doesn't need ships, so both of these are used to store the 12 *Vulture Class* corvettes of the external security department.
 
@@ -171,10 +171,6 @@ The *Vulture Class* occupies a unique niche in starship where a runabout or a fi
 ### Structure
 
 Despite its compact appearance, the *Vulture* is built on a rather conservative pattern. It contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
-
-The upper deck is essentially a runabout, with the cockpit in front followed by main transporter, dormitory, sickbay and gym. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1.
-
-Deck 2 consists of engineering, with the deflector in front, the warp core and antimatter reserve extending almost the entire length of deck 2The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
 
 The upper deck is essentially a runabout, with the cockpit in front followed by main transporter, dormitory, pantry, sickbay and gym. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1. This cargo section is directly connected to the torpedo launchers and can be used to hold extra torpedoes, or can be configured with a sensor array if required.
 
@@ -285,19 +281,18 @@ On the *Aviary* an entire sector is dedicated to sickbays, hospitals and clinics
 
 Enter the *Nightingale*. Named after Florence Nightingale, it is as big as a general hospital itself, it is equipped with some highly specialized medical equipment.
 
-  * Medical transporters with highly sensitive biofilters
-  * 4 separate bio-shielded quarantine areas
-  * The latest of scanners
-  * Gallons of biomemetic gel
-  * 20 EMH and 45 EMAH (emergency medical assistant hologram)
-  * 1 ECH in case the captain of the ship (nominally, the CMO of the *Aviary*)
-    is incapacitated on mission.
-  * Mobile holo-emitter kits to send EMH on missions where humanoids cannot go
-    on.
 
 ### Structure
 
 The *Nightingale* looks pregnant with it's oversized aft section. The main saucer contains the bridge module, with crew dormitory instead of captain's rooms. The engineering section extends seamlessly into what looks like an oversized cargo bay, but is actually 5 decks of mobile hospital.
+
+  * Medical transporters with highly sensitive biofilters
+  * 2 separate bio-shielded quarantine areas
+  * The latest of scanners
+  * Gallons of biomemetic gel
+  * 6 EMH and 12 EMAH (emergency medical assistant hologram)
+  * 1 ECH in case the captain of the ship (nominally, the CMO of the *Aviary*) is incapacitated on mission.
+  * Mobile holo-emitter kits to send EMH on missions where humanoids cannot go on.
 
 ## Relative scale of ships
 
