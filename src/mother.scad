@@ -120,14 +120,12 @@ module m_lower_bridge() {
 
     }
 
-    translate([-55,0,-10])
-    util_nacelle_bar(150,10,5,1);
         
     
     util_mirrored([0,1,0])
-        translate([-45,70,0])
-            rotate([180,0,0])
-                util_nacelle(120,15,10,curved=true,up=false);
+        translate([-12,54,-7.5])
+            rotate([90,0,0])
+                util_nacelle(150,18,36,curved=true,up=false);
 }
 
 module m_lower_bridge_assembly() {
@@ -167,3 +165,5 @@ module m_main_sep() {
 
 mother();
 //m_main_sep();
+
+//m_lower_bridge_assembly();
