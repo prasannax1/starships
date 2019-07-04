@@ -96,9 +96,9 @@ In the space under the saucer traditionally used by Captain's yachts, the *Aviar
 
 ### "*Bat Class*" stats
 
- * Length: 249m
- * Width: 155m
- * Height: 24m
+ * Length: 245m
+ * Width: 170m
+ * Height: 21m
  * Decks: 5
  * Auxillary Craft:
    * 2 Medium Shuttles
