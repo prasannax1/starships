@@ -120,7 +120,7 @@ Magpie Class Light Science Vessel
 
 ### Stats
 
- * Length: 81m
+ * Length: 69m
  * Width: 52m
  * Height: 17m
  * Decks: 2
@@ -139,7 +139,7 @@ The upper deck is essentially a very long runabout, with the cockpit in front fo
 
 Approximately above the engine, the *Magpie* also contains a disc containing a sensor array, that can be reconfigured with mission specific sensors.
 
-The lower deck contains up to 14 big modular lab rooms which can be removed and reconfigured as per missions. It also contains residential rooms for crew and scientists, a pantry and a sickbay. Since the ship may or may not have a medical officer on a mission, each ship has an EMH manning the sickbay.
+The lower deck contains up to 8 big modular lab rooms which can be removed and reconfigured as per missions. It also contains residential rooms for crew and scientists, a mess hall and a sickbay. Since the ship may or may not have a medical officer on a mission, each ship has an EMH manning the sickbay.
 
 The aft end of the lower deck contains a small shuttlebay which houses a small shuttlepod for planetary landings.
 

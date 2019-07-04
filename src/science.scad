@@ -2,10 +2,10 @@ use <util.scad>;
 
 module sci_saucer() {
     translate([0,0,2])
-        util_hangar_disk(1,25,24,4);
-    util_hangar_disk(3,25,25,4);
+        util_hangar_disk(1,20,19,4);
+    util_hangar_disk(3,20,20,4);
     translate([0,0,-2])
-        util_hangar_disk(1,24,25,4);
+        util_hangar_disk(1,19,20,4);
     
     translate([0,0,-.5])
     cylinder(5,10,10,center=true);
@@ -14,7 +14,7 @@ module sci_saucer() {
 module sci_body() {
     difference() {
         union() {
-            translate([-12,0,2]) intersection() {
+            translate([-16,0,2]) intersection() {
                 translate([-65,0,0])
                     util_saucer(200,30,10);
 
@@ -43,9 +43,9 @@ module sci_nacelle_assembly() {
         mirror([0,0,1])
             util_nacelle_bar(48,9,5,1.5);
 
-    util_mirrored([0,1,0]) translate([-7.5,22,-5]) {
-        util_nacelle(50,7.5,5,up=false,curved=true);
-        util_nacelle(50,7.5,.75,up=true, curved=true);
+    util_mirrored([0,1,0]) translate([-10,22,-5]) {
+        util_nacelle(40,7.5,5,up=false,curved=true);
+        util_nacelle(40,7.5,.75,up=true, curved=true);
     }
 }
 
