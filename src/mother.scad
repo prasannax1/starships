@@ -43,7 +43,7 @@ module m_body() {
 
 module m_bar() {
     difference() {
-        util_nacelle_bar(500,150,300,15);
+        util_nacelle_bar(400,125,300,15);
     
         translate([-555,0,0])
             rotate([0,-30,0])
@@ -84,7 +84,7 @@ module m_nacelle_assembly() {
     translate([-400,0,-80])
         m_bar();
     util_mirrored([0,1,0])
-        translate([-400,250,75])
+        translate([-400,200,50])
             m_nacelle();
 }
 
