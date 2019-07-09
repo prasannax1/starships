@@ -6,7 +6,7 @@ Star Trek type starships
 
 ![Mother Ship](images/mothership.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/mother.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother.stl)
 
 Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
@@ -92,7 +92,7 @@ In the space under the saucer traditionally used by Captain's yachts, the *Aviar
 
 ![Mother Ship Saucer](images/mothership-saucer-separation.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/ms_saucer.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/ms_saucer.stl)
 
 ### "*Bat Class*" stats
 
@@ -114,7 +114,7 @@ The engineering section contains 26 decks. The front half is used to house the w
 
 ![Science Ship](images/science.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/science.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/science.stl)
 
 Magpie Class Light Science Vessel
 
@@ -147,7 +147,7 @@ The aft end of the lower deck contains a small shuttlebay which houses a small s
 
 ![Attack Ship](images/attack.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/attack.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/attack.stl)
 
 Vulture Class Light Corvette/Patrol Vessel
 
@@ -184,7 +184,7 @@ The warp core of the *Vulture* is much more powerful than a ship of this size wo
 
 ![Scout Ship](images/scout.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/scout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/scout.stl)
 
 White Owl Class Light Scout
 
@@ -225,7 +225,7 @@ Unlike the *Magpie* and *Vulture* classes which can be mass produced cheaply, th
 
 ![Diplomatic Yacht](images/diplomatic.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/diplomat.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/diplomat.stl)
 
 Dove Class Diplomatic Yacht/Light Courier
 
@@ -258,7 +258,7 @@ The engineering section conatins the main warp core and transporters.
 
 ![Hospital Ship](images/hospital.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/hospital.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/hospital.stl)
 
 Nightingale Class Light Hospital Ship
 
@@ -298,8 +298,8 @@ The *Nightingale* looks pregnant with it's oversized aft section. The main sauce
 
 ![scale](images/scale.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/scale.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/scale.stl)
 
 ![sectors](images/sector.png)
 
-[View 3d](https://github.com/prasannax1/openscad/blob/master/stl/combined.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined.stl)
