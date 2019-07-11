@@ -14,7 +14,7 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
  * Length: 1154m
  * Width: 500m
- * Height: 214m
+ * Height: 200m
  * Decks: 56
    * Saucer Section: 28 decks
    * Engine Section: 28 decks
