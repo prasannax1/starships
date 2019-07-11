@@ -21,16 +21,17 @@ module m_body() {
                     util_saucer(450,80,80);                
             }
             
-            translate([-580,0,20])
-                rotate([0,45,0])
-                    cube(400,center=true);
+            translate([-420,0,25])
+                scale([2.5,1,1])
+                    rotate([90,0,0])
+                        cylinder(550,50,50,center=true);
         }
         
         difference() {
             translate([-320,0,-50]) {
                 mirror([0,0,1])
-                    util_saucer(400,200,60);
-                util_saucer(400,200,40);
+                    util_saucer(400,200,65);
+                util_saucer(400,200,35);
             }
             
             translate([-140,0,-80])
@@ -46,7 +47,6 @@ module m_body() {
         }
     }
 }
-
 
 
 module m_bar() {
