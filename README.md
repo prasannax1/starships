@@ -42,17 +42,17 @@ The *Aviary* follows a pretty tradtional design, saucer, secondary hull and nace
 
 The saucer section is almost as big as a *Galaxy Class* by itself. It is split into 4 main parts.
 
-The top 5 decks of the saucer section consists of the upper bridge module. It consists of main bridge, main computer core, an auxillary sickbay. It also contains offices for the civilian government and administration for the civilian and starfleet residents of the *Aviary*. It also contains a cafeteria and dormitory for bridge and admin staff.
+The top 5 decks of the saucer section consists of the upper bridge module. It consists of main bridge, main computer core, an auxillary sickbay. It also contains offices for the civilian government and administration for the civilian and starfleet residents of the *Aviary*. It also contains a mess hall and dormitory for bridge and admin staff.
 
 The next 9 decks of the saucer section contains the main inhabitable area of the *Aviary*. It is split up into 16 sections and a central core. The central core consists of main power coupling, turbolift routing and an auxillary computer core.
 
-Each section contains an auxillary sickbay, a brig, and a replimat. They contain residences for the crew for all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
+Each section contains an auxillary sickbay, a brig, and a mess hall. They contain residences for the crew for all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
 
 In addition, each section also contains areas which specialize. 
 
- * Section 0 is the diplomatic office. It also contains residence for diplomatic guests, residences for admiralty, a food court and a holo conference auditorium.
+ * Section 0 is the diplomatic office. It also contains residence for diplomatic guests, residences for admiralty, a dining hall and a holo conference auditorium.
 
- * Sections 1, 3, 5, 6, 10, 11, 13, 14 and 15 are various science labs. The labs are reconfigurable per ship. These sections also contain 2 holodecks each, and a medium food court.
+ * Sections 1, 3, 5, 6, 10, 11, 13, 14 and 15 are various science labs. The labs are reconfigurable per ship. These sections also contain 2 holodecks each, and a medium mess hall.
 
  * Section 2 is the main hospital. It also contains a quarantine area.
 
@@ -64,7 +64,7 @@ In addition, each section also contains areas which specialize.
 
  * Section 9 is external security. Section 8 is responsible for the defense and tactical operations of *Aviary* as well as providing security for away missions.
 
- * Section 12 is auxillary guest quarters for civilian passengers. It also contains a large food court and a large holo-complex.
+ * Section 12 is auxillary guest quarters for civilian passengers. It also contains a large mess hall and a large holo-complex.
 
 The next 10 decks of the saucer section contains 16 hangars, each measuring 150m long and 100m wide on the borad side, and 40m tall. In addition to the hangars, it also contains the central core which is the main cargo store.
 
@@ -172,7 +172,7 @@ The *Vulture Class* occupies a unique niche in starship where a runabout or a fi
 
 Despite its compact appearance, the *Vulture* is built on a rather conservative pattern. It contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
 
-The upper deck is essentially a runabout, with the cockpit in front followed by main transporter, dormitory, pantry, sickbay and gym. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1. This cargo section is directly connected to the torpedo launchers and can be used to hold extra torpedoes, or can be configured with a sensor array if required.
+The upper deck is essentially a runabout, with the cockpit in front followed by main transporter and replicator, dormitory, sickbay, gym and brig. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1. This cargo section is directly connected to the torpedo launchers and can be used to hold extra torpedoes, or can be configured with a sensor array if required.
 
 Deck 2 consists of engineering, with the deflector in front, the warp core and antimatter reserve extending almost the entire length of deck 2.
 
@@ -213,7 +213,7 @@ The saucer section consists of 3 decks.
 
  * Deck 1 - bridge. 
  * Deck 2 - crew quarters
- * Deck 3 - modular labs, cafeteria, sickbay and cargo bays.
+ * Deck 3 - modular labs, mess hall, sickbay and cargo bays.
  * Deck 4 - main engineering, shuttle bay
  * Deck 5 - main engineering, shuttle bay
 
