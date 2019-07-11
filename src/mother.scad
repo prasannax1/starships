@@ -21,20 +21,28 @@ module m_body() {
                     util_saucer(450,80,80);                
             }
             
-            translate([-540,0,0])
-                rotate([0,30,0])
+            translate([-580,0,20])
+                rotate([0,45,0])
                     cube(400,center=true);
         }
         
         difference() {
-            translate([-300,0,-50]) {
+            translate([-320,0,-50]) {
                 mirror([0,0,1])
-                    util_saucer(360,180,70);
-                util_saucer(360,180,30);
+                    util_saucer(400,200,60);
+                util_saucer(400,200,40);
             }
             
-            translate([-135,0,-75])
+            translate([-140,0,-80])
                 sphere(18);
+            
+            translate([-450,0,-120]) scale([2,1,1]) {
+                rotate([90,0,0])
+                    cylinder(300,60,60,center=true);
+
+                translate([-200,0,0])
+                    cube([400,400,120],center=true);
+            }
         }
     }
 }
@@ -43,7 +51,7 @@ module m_body() {
 
 module m_bar() {
     difference() {
-        util_nacelle_bar(400,125,300,15);
+        util_nacelle_bar(450,100,300,7.5);
     
         translate([-555,0,0])
             rotate([0,-30,0])
@@ -58,9 +66,9 @@ module m_bar() {
 module m_nacelle() {
     difference() {
         union() {
-            util_saucer(1000,80,45);
+            util_saucer(1000,64,40);
             mirror([0,0,1])
-                util_saucer(1000,80,15);
+                util_saucer(1000,64,10);
         }
         
         union() {
@@ -74,17 +82,17 @@ module m_nacelle() {
     }
     
     union() {
-        util_saucer(240,80,45);
+        util_saucer(240,64,40);
         mirror([0,0,1]) 
-            util_saucer(240,80,15);
+            util_saucer(240,64,10);
     }
 }
 
 module m_nacelle_assembly() {
-    translate([-400,0,-80])
+    translate([-450,0,-50])
         m_bar();
     util_mirrored([0,1,0])
-        translate([-400,200,50])
+        translate([-400,210,50])
             m_nacelle();
 }
 
