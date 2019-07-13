@@ -4,7 +4,7 @@ Star Trek type starships
 
 ## Aviary Class
 
-![Mother Ship](images/mothership.png)
+![Mother Ship](images/mothership/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother.stl)
 
@@ -90,7 +90,7 @@ Like the section above it, each hangar contains ships specialized to the offices
 
 In the space under the saucer traditionally used by Captain's yachts, the *Aviary* has a dedicated Escort vessel. Nicknamed the *Bat Class* (because it hangs upside down), is about as big as a *Defiant Class* and is as powerful as the *Defiant* would be if it was made today.
 
-![Mother Ship Saucer](images/mothership-saucer-separation.png)
+![Mother Ship Saucer](images/mothership/separation.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/ms_saucer.stl)
 
@@ -112,7 +112,7 @@ The engineering section contains 26 decks. The front half is used to house the w
 
 ## Magpie Class
 
-![Science Ship](images/science.png)
+![Science Ship](images/science/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/science.stl)
 
@@ -145,7 +145,7 @@ The aft end of the lower deck contains a small shuttlebay which houses a small s
 
 ## Vulture Class
 
-![Attack Ship](images/attack.png)
+![Attack Ship](images/attack/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/attack.stl)
 
@@ -182,7 +182,7 @@ The warp core of the *Vulture* is much more powerful than a ship of this size wo
 
 ## White Owl Class
 
-![Scout Ship](images/scout.png)
+![Scout Ship](images/scout/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/scout.stl)
 
@@ -223,7 +223,7 @@ Unlike the *Magpie* and *Vulture* classes which can be mass produced cheaply, th
 
 ## Dove Class
 
-![Diplomatic Yacht](images/diplomatic.png)
+![Diplomatic Yacht](images/diplomatic/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/diplomat.stl)
 
@@ -256,7 +256,7 @@ The engineering section conatins the main warp core and transporters.
 
 ## Nightingale Class
 
-![Hospital Ship](images/hospital.png)
+![Hospital Ship](images/hospital/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/hospital.stl)
 
@@ -296,10 +296,10 @@ The *Nightingale* looks pregnant with it's oversized aft section. The main sauce
 
 ## Relative scale of ships
 
-![scale](images/scale.png)
+![scale](images/combined/scale.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/scale.stl)
 
-![sectors](images/sector.png)
+![sectors](images/combined/sector.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined.stl)
