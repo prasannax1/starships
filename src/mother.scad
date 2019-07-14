@@ -173,5 +173,16 @@ module m_main_sep() {
 
 mother();
 //m_main_sep();
-
+//m_msd();
 //m_lower_bridge_assembly();
+
+module m_msd() {
+    projection(cut=true)
+    rotate([-90,0,0])
+    union() {
+        m_saucer();
+        m_body();
+        m_lower_bridge_assembly();
+        translate([-400,0,50]) m_nacelle();
+    }
+}
