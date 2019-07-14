@@ -53,3 +53,13 @@ module diplomat() {
 }
 
 diplomat();
+
+module dip_msd() {
+    projection(cut=true) rotate([90,0,0]) union() {
+        dip_body();
+        dip_saucer();
+        translate([-15,0,4]) util_nacelle(18,5,3,curved=true);
+    }
+}
+
+//rotate(180) dip_msd();
