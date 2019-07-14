@@ -49,4 +49,16 @@ module scout() {
     scale(1) scout_main();
 }
 
+module scout_msd() {
+    projection(cut=true)
+    rotate([-90,0,0])
+    union() {
+        scout_dish();
+        scout_body();
+        translate([-30,0,5]) util_nacelle(48,9,7.5, curved=true);
+    }
+}
+
 scout();
+
+//scout_msd();
