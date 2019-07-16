@@ -48,8 +48,20 @@ module at_main() {
     }
 }
 
+module at_msd() {
+    projection(cut = true)
+        rotate([-90,0,0])
+            rotate(-90) union() {
+                at_main();
+                translate([0,5,-6])
+                    at_nacelle_2();
+            }
+}
+
 module attack() {
     scale(.75) at_main();
 }
 
 attack();
+
+//at_msd();
