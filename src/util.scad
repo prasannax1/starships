@@ -104,6 +104,18 @@ module util_star(radius, thick, num, half=false) {
     }
 }
 
+module util_ring_star(radius, thick, num, inner, half=false) {
+    outer=inner+thick;
+    avg = (inner + outer)/2;
+    union() {
+        difference() {
+            util_star(radius, thick, num, half);
+            cylinder(2*thick, outer, outer, $fn=num, center=true);
+        }
+        util_ring(outer, inner, thick);
+    }
+}
+
 module util_hangar_disk(height, lower, upper, num, fn=fn1) {
     difference() {
             cylinder(height, lower, upper, $fn=fn, center=true);
@@ -114,6 +126,19 @@ module util_hangar_disk(height, lower, upper, num, fn=fn1) {
                 cylinder(height, lower, upper, $fn=fn, center=true);
         }
     }
+}
+
+module util_hangar_form(length, width, height, num, inner=0) {
+    l = 0.6* max(length, width);
+    h = 2.5* height;
+    thick = h/20;
+    inner = inner == 0 ? l/3 : inner;
+    difference() {
+        children();
+        scale([1,1,h/thick]) 
+            util_ring_star(l, thick, num, inner, half=true);
+    }
+    scale(.95) children();
 }
 
 module util_nacelle_bar(span, height, width, thickness) {
