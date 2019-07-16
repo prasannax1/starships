@@ -1,9 +1,4 @@
-use <attack.scad>;
-use <diplomatic.scad>;
-use <scout.scad>;
-use <science.scad>;
-use <hospital.scad>;
-use <mother.scad>;
+use <performance.scad>;
 
 m_main_sep();
 
