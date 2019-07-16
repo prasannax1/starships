@@ -15,7 +15,7 @@ module science_a() {
 }
 
 module attack_a() {
-    translate([0,220,64]) attack();
+    translate([0,220,64]) rotate(90) attack();
 }
 
 module hospital_a() {
