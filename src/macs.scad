@@ -32,10 +32,7 @@ module macs_pod_wing() {
 
 module macs_small_warp() {
     difference() {
-        scale([1,1,.9])
-            rotate([0,-90,0])
-                rotate(90)
-                    cylinder(4,2,2,$fn=6, center=true);
+        macs_corridor(4);
 
         translate([0,0,-(6+.5)])
             cube(12, center=true);
@@ -44,12 +41,20 @@ module macs_small_warp() {
     translate([0,0,1.5])
         mirror([0,0,1])
             scale([1,1.2,0.8])
-                util_nacelle_bar(6,2,2,.15);
+                util_nacelle_bar(7.5,2,2,.15);
 
     util_mirrored([0,1,0])
-        translate([2.75,3.4,0])
-            util_nacelle(6,1,1,curved=true, up=false);
+        translate([3,4.2,0])
+            util_nacelle(7.5,1,1,curved=true, up=false);
+    
+    translate([0,0,1.5])
+        rotate([0,90,0]) {
+            translate([0,0,1.5]) sphere(.5, $fn=8);
+            cylinder(3,.5,.5, center=true, $fn=8);
+            translate([0,0,-1.5]) sphere(.5, $fn=8);
+        }
 }
+
 
 module macs_small_shuttle() {
     union() {
@@ -58,4 +63,33 @@ module macs_small_shuttle() {
     }
 }
 
-macs_small_shuttle();
+macs_large_shuttle();
+
+module macs_extra_room() {
+    difference() {
+        union() {
+            macs_corridor(8);
+
+            scale([1,1,.5])
+                sphere(4, $fn=6);
+        }
+
+        translate([0,0,-(6+.5)])
+            cube(12, center=true);
+    }
+}
+
+module macs_large_shuttle() {
+    union() {
+        translate([1.25 + 4, 0, 0]) macs_pod();
+        macs_extra_room();
+        translate([-2 - 4, 0, 0]) macs_small_warp();
+    }
+}
+
+module macs_corridor(length) {
+   scale([1,1,.9])
+        rotate([0,-90,0])
+            rotate(90)
+                cylinder(length,2,2,$fn=6, center=true);
+}
