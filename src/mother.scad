@@ -2,16 +2,22 @@ use <util.scad>;
 
 module m_saucer() {
     union() {
-        translate([0,0,20])
-            util_saucer(600,500,40);
-        
-        scale([1.2,1,1])
-            util_hangar_disk(40,225,250,16);
+        translate([0,0,2])
+            scale([1.2,1,.88])
+                util_hangar_form(500,500,100,16,75)
+                    difference() {
+                        util_mirrored([0,0,1])
+                            util_saucer(500,500,66);
+                        translate([0,0,-525])
+                            cube(1000, center=true);
+                    }
         
         translate([0,0,50])
             m_upper_bridge();
     }        
 }
+
+
 
 module m_body() {
     union() {
