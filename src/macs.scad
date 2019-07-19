@@ -90,14 +90,29 @@ module macs_corridor(length) {
     }
 }
 
-module macs_large_warp() {
+module macs_large_warp(up=false) {
     macs_corridor(16);
     scale(1.5) macs_corridor(4);
-    translate([0,0,.5]) mirror([0,0,1]) util_nacelle_bar(25,2.5,2,.5);
-    util_mirrored([0,1,0]) 
-        translate([4,11,-1.75]) 
-            rotate([75,0,0])
-            util_nacelle(20,2.5,2.5,.5,curved=true,up=false);
+    translate([0,0,.5]) {
+        if(up) {
+            util_nacelle_bar(25,2.5,2,.5);
+        }
+        else {
+            mirror([0,0,1]) util_nacelle_bar(25,2.5,2,.5);
+        };
+    };
+    
+    if (up) {
+        util_mirrored([0,1,0]) 
+            translate([4,11,2.5]) 
+                rotate([105,0,0])
+                util_nacelle(23,2.5,2.5,.5,curved=true,up=false);
+    } else {
+        util_mirrored([0,1,0]) 
+            translate([4,11,-2]) 
+                rotate([75,0,0])
+                util_nacelle(23,2.5,2.5,.5,curved=true,up=false);
+    };
 }
 
 module macs_fast_shuttle() {
@@ -107,5 +122,57 @@ module macs_fast_shuttle() {
     }
 }
 
-macs_fast_shuttle();
+
+module macs_box() {
+    scale([1,1.5,.5]) {
+        rotate([0,90,0])
+            rotate(180/8)
+                cylinder(8,4,4, $fn=8, center=true);
+
+        util_mirrored([1,0,0])
+            translate([4,0,0])
+                rotate([0,90,0])
+                    rotate(180/8)
+                        sphere(4, $fn=8);
+    }
+}
+
+
+
+module macs_double_box() {
+    union() {
+        translate([-7,0,0]) macs_box();
+        translate([7,0,0]) macs_box();
+    }
+}
+
+module macs_heavy_runabout() {
+    union () {
+        translate([-8,0,.5]) macs_large_warp();
+        translate([4,0,.5]) macs_extra_room();
+        translate([8+1.25,0,.5]) macs_pod();
+        translate([-7.4+4,0,-1.8]) macs_double_box();
+        //translate([-16-1.25,0,.5]) mirror([1,0,0]) macs_pod();
+    }
+}
+
+module macs_disk(radius) {
+    util_hangar_form(radius*2,radius*2,2,4,6) union () {
+        translate([0,0,2]) cylinder(0.25, radius, radius-.5, center=true);
+        cylinder(3.5, radius, radius, center=true);
+        translate([0,0,-2]) cylinder(0.25, radius-.5, radius, center=true);
+    }
+}
+
+module macs_science_vessel() {
+    translate([4,0,0]) union() {
+        translate([0,0,.5]) macs_extra_room();
+        translate([0,0,-1.95]) macs_disk(16);        
+        translate([4+1.25, 0, .5]) macs_pod();
+        translate([-12,0,.5]) macs_large_warp(up=true);
+        translate([-21.25,0,.5]) mirror([1,0,0]) macs_pod();
+    }
+}
+
+macs_science_vessel();
 
