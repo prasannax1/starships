@@ -1,4 +1,9 @@
-use <performance.scad>;
+use <mother.scad>;
+use <attack.scad>;
+use <science.scad>;
+use <scout.scad>;
+use <diplomatic.scad>;
+use <hospital.scad>;
         
 module mother_a() {
     rotate(90) mother();
