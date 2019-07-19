@@ -13,7 +13,7 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 ### Stats
 
  * Length: 1151m
- * Width: 498m
+ * Width: 398m
  * Height: 204m
  * Decks: 56
    * Saucer Section: 28 decks
@@ -153,10 +153,10 @@ Vulture Class Light Corvette/Patrol Vessel
 
 ### Stats
 
- * Length: 59m
- * Width: 31m
- * Height: 11m
- * Decks: 2.5 (2 + "attic" cargo deck)
+ * Length: 78m
+ * Width: 41m
+ * Height: 15m
+ * Decks: 4
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
@@ -169,6 +169,8 @@ The *Vulture Class* is not just named after a bird of prey - for all practical p
 The *Vulture Class* occupies a unique niche in starship where a runabout or a fighter craft just doesn't cut it, but a *Defiant Class* or equivalent isn't really readily available.  Typical deployment of these vessels is aboard a starbase, and typical missions involve escorting a larger vessel through troubled space. And coming back alone.
 
 ### Structure
+
+TODO
 
 Despite its compact appearance, the *Vulture* is built on a rather conservative pattern. It contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
 
