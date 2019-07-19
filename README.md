@@ -120,9 +120,9 @@ Magpie Class Light Science Vessel
 
 ### Stats
 
- * Length: 69m
- * Width: 52m
- * Height: 17m
+ * Length: 46m
+ * Width: 32m
+ * Height: 8m
  * Decks: 2
  * Auxillary Craft: 1 Shuttlepod
  * Warp Speed:
