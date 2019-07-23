@@ -65,7 +65,7 @@ module at_msd() {
 }
 
 module attack() {
-    scale(1) at_main();
+    scale(.8) at_main();
 }
 
 attack();
