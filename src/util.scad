@@ -131,7 +131,7 @@ module util_hangar_disk(height, lower, upper, num, fn=fn1) {
 module util_hangar_form(length, width, height, num, inner=0) {
     l = 0.6* max(length, width);
     h = 2.5* height;
-    thick = height/20;
+    thick = min(height/20,1);
     inner = inner == 0 ? l/3 : inner;
     difference() {
         children();
