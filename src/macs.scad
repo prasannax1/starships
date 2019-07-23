@@ -21,6 +21,9 @@ module macs_pod() {
     //macs_pod_wing();
 }
 
+module macs_small_nacelle() {
+    util_nacelle(7.5,1,1,curved=true, up=false);
+}
 
 
 module macs_pod_wing() {
@@ -40,7 +43,7 @@ module macs_small_warp() {
 
     util_mirrored([0,1,0])
         translate([3,4.2,0])
-            util_nacelle(7.5,1,1,curved=true, up=false);
+            macs_small_nacelle();
     
     translate([0,0,1.5])
         rotate([0,90,0]) {
@@ -90,6 +93,10 @@ module macs_corridor(length) {
     }
 }
 
+module macs_large_nacelle() {
+    util_nacelle(23,2.5,2.5,.5,curved=true,up=false);
+}
+
 module macs_large_warp(up=false) {
     macs_corridor(16);
     scale(1.5) macs_corridor(4);
@@ -106,12 +113,12 @@ module macs_large_warp(up=false) {
         util_mirrored([0,1,0]) 
             translate([4,11,2.5]) 
                 rotate([105,0,0])
-                util_nacelle(23,2.5,2.5,.5,curved=true,up=false);
+                    macs_large_nacelle();
     } else {
         util_mirrored([0,1,0]) 
             translate([4,11,-2]) 
                 rotate([75,0,0])
-                util_nacelle(23,2.5,2.5,.5,curved=true,up=false);
+                    macs_large_nacelle();
     };
 }
 
@@ -157,11 +164,12 @@ module macs_heavy_runabout() {
 }
 
 module macs_disk(radius) {
-    util_hangar_form(radius*2,radius*2,2,4,6) union () {
+    util_hangar_form(radius*2,radius*2,2,4,3) union () {
         translate([0,0,2]) cylinder(0.25, radius, radius-.5, center=true);
         cylinder(3.5, radius, radius, center=true);
         translate([0,0,-2]) cylinder(0.25, radius-.5, radius, center=true);
     }
+    cylinder(4.5, 3,3, center=true);
 }
 
 module macs_science_vessel() {
@@ -173,6 +181,4 @@ module macs_science_vessel() {
         translate([-21.25,0,.5]) mirror([1,0,0]) macs_pod();
     }
 }
-
-macs_science_vessel();
 
