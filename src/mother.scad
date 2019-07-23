@@ -3,8 +3,8 @@ use <util.scad>;
 module m_saucer() {
     union() {
         render(3) difference() {
-        translate([0,0,2])
-            scale([1.2,.8,.88])
+        translate([0,0,0])
+            scale([1.2,.8,.9])
                 util_hangar_form(500,500,100,16,75) union () {
                     difference() {
                         util_mirrored([0,0,1])
@@ -77,25 +77,25 @@ module m_bar() {
 module m_nacelle() {
     difference() {
         union() {
-            util_saucer(1000,64,40);
+            util_saucer(1000,80,40);
             mirror([0,0,1])
-                util_saucer(1000,64,10);
+                util_saucer(1000,80,10);
         }
         
         union() {
             translate([300,0,0])
                 cube(600, center=true);
             
-            translate([-660,0,-200])
+            translate([-650,0,-200])
                 rotate([0,45,0])
                     cube(600,center=true);
         }
     }
     
     union() {
-        util_saucer(240,64,40);
+        util_saucer(225,64,48);
         mirror([0,0,1]) 
-            util_saucer(240,64,10);
+            util_saucer(225,64,12);
     }
 }
 
@@ -103,7 +103,7 @@ module m_nacelle_assembly() {
     translate([-450,0,-50])
         m_bar();
     util_mirrored([0,1,0])
-        translate([-400,160,50])
+        translate([-350,160,50])
             m_nacelle();
 }
 

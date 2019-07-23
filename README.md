@@ -12,12 +12,12 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Stats
 
- * Length: 1151m
- * Width: 398m
- * Height: 204m
- * Decks: 56
-   * Saucer Section: 28 decks
-   * Engine Section: 28 decks
+ * Length: 1093m
+ * Width: 400m
+ * Height: 212m
+ * Decks: 60
+   * Saucer Section: 30 decks
+   * Engine Section: 30 decks
  * Auxillary Craft - Large:
    * 14 *Magpie Class* Light Science vessels
    * 12 *Vulture Class* Light Corvette/Patrol vessels
