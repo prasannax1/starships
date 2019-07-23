@@ -153,10 +153,10 @@ Vulture Class Light Corvette/Patrol Vessel
 
 ### Stats
 
- * Length: 78m
- * Width: 41m
- * Height: 15m
- * Decks: 4
+ * Length: 59m
+ * Width: 31m
+ * Height: 11m
+ * Decks: 3
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
