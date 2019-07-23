@@ -1,45 +1,38 @@
 use <util.scad>;
-
-module at_lower_body() {
-    difference() {
-        util_body(80,40,5,10);
-        translate([-18,0,0])
-            cube (44, center=true);
-    }
-}
-
 module at_main_body() {
     util_saucer(80,40,10);
-    
-    at_lower_body();    
-    translate([35,0,0])
-        mirror([1,0,0])  
-            at_lower_body();
+    util_body(80,40,5,10);
 }
 
 module at_main_minus() {
+    translate([-14.5,-90,-10])
+        rotate([-15,0,0])
+            cube([29,80,80]);
 
-    translate([-45,0,10])
-        rotate([-0,30,0])
-            cube([80,29,80], center=true);
-
-    translate([40,0,-2.5])
+    translate([0,40.5,-2.5])
         sphere(1.5, $fn=16);
 
-    translate([37.75,0,4.75])
-        rotate([0,-57.5,0])
-            cube([5,7.5,5], center=true);
+    translate([-2.5,39,1])
+        rotate([60,0,0])
+            cube([5,5,10]);
+
+    translate([0,-35,0])
+        rotate([45,0,0])
+            cube([40,10,40], center=true);
 }
 
 module at_nacelle_assembly() {
-    util_mirrored([0,1,0])
-        translate([5,12,4])
-            rotate([45,-0,0])
+    translate([12,5,4])
+        rotate([0,-45,0])
+            at_nacelle_2();
+    mirror([1,0,0])
+        translate([12,5,4])
+            rotate([0,-45,0])
                 at_nacelle_2();
 }
 
 module at_nacelle_2() {
-    
+    rotate(90)
         util_nacelle(45,7.5,12,curved=true,up=false);
 }
 
@@ -47,7 +40,8 @@ module at_nacelle_2() {
 module at_main() {
     union() {
         difference() {
-            at_main_body();
+            rotate(90) 
+                at_main_body();
             at_main_minus();
         }
         at_nacelle_assembly();
@@ -65,11 +59,9 @@ module at_msd() {
 }
 
 module attack() {
-    scale(1) at_main();
+    scale(.75) rotate(-90) at_main();
 }
 
 attack();
-
-//at_main_minus();
 
 //at_msd();
