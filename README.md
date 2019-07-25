@@ -192,8 +192,8 @@ White Owl Class Light Scout
 
 ### Stats
 
- * Length: 48m 
- * Width: 37m
+ * Length: 56m 
+ * Width: 40m
  * Height: 10m
  * Decks: 2
  * Auxillary Craft: 2 Shuttlepods
