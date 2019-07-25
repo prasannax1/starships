@@ -77,9 +77,9 @@ module m_bar() {
 module m_nacelle() {
     difference() {
         union() {
-            util_saucer(1000,80,40);
+            util_saucer(1000,72,40);
             mirror([0,0,1])
-                util_saucer(1000,80,10);
+                util_saucer(1000,72,10);
         }
         
         union() {
@@ -93,7 +93,7 @@ module m_nacelle() {
     }
     
     union() {
-        util_saucer(225,64,48);
+        util_saucer(225,64,45);
         mirror([0,0,1]) 
             util_saucer(225,64,12);
     }
