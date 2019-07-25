@@ -13,8 +13,8 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 ### Stats
 
  * Length: 1093m
- * Width: 400m
- * Height: 212m
+ * Width: 398m
+ * Height: 209m
  * Decks: 60
    * Saucer Section: 30 decks
    * Engine Section: 30 decks
@@ -192,12 +192,10 @@ White Owl Class Light Scout
 
 ### Stats
 
- * Length: 113m
- * Width: 49m
- * Height: 21m
- * Decks: 5
-   * Saucer Section: 3 decks
-   * Engine Section: 2 decks
+ * Length: 48m 
+ * Width: 37m
+ * Height: 10m
+ * Decks: 2
  * Auxillary Craft: 2 Shuttlepods
  * Warp Speed:
    * Cruising: Warp 7.5
@@ -266,12 +264,10 @@ Nightingale Class Light Hospital Ship
 
 ### Stats
 
- * Length: 80m
- * Width: 42m
- * Height: 22m
- * Decks: 6
-   * Saucer section: 1 decks
-   * Engineering section: 5 decks
+ * Length: 65m
+ * Width: 27m
+ * Height: 15m
+ * Decks: 4
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
