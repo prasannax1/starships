@@ -4,12 +4,12 @@ module scout_dish() {
     difference() {
         union() {
             difference() {
-                util_saucer(64,36,7);
-                translate([30,0,0])
+                util_saucer(80,40,7.5);
+                translate([40,0,0])
                     rotate([0,-60,0])
                         cube([5,5,60],center=true);
             }
-            translate([0,0,.25]) scale(.95) util_saucer(64,36,7);
+            translate([0,0,.25]) scale(.95) util_saucer(80,40,7.5);
         }
         
         translate([-50,0,0])
@@ -17,9 +17,9 @@ module scout_dish() {
                 cube([60,60,60], center=true);
         
         util_mirrored([0,1,0])
-            translate([0,18,-1])
+            translate([0,20,-1])
                 rotate([-45,0,0])
-                    cube([60,10,10],center=true);   
+                    cube([80,10,10],center=true);   
         
         
     }
@@ -29,9 +29,9 @@ module scout_dish() {
 
 module scout_nacelle_assembly() {
     util_mirrored([0,1,0])
-        translate([12,13.6,1.6])
+        translate([16.5,14.5,2.5])
             rotate([45,0,0])
-                util_nacelle(30,3,7.5,curved=true,up=false);
+                mirror([0,0,1]) util_nacelle(32,3.2,8,curved=true,up=true);
 }
 
 
