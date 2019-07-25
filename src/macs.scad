@@ -182,3 +182,31 @@ module macs_science_vessel() {
     }
 }
 
+module macs_cargo_element() {
+    rotate([0,90,0]) scale([1,1,2]) macs_disk(6);
+}
+
+module macs_large_cargo() {
+    translate([28,0,0]) macs_cargo_element();
+    translate([20,0,0]) macs_cargo_element();
+    translate([12,0,0]) macs_cargo_element();
+    translate([4,0,0]) macs_cargo_element();
+    translate([-4,0,0]) macs_cargo_element();
+    translate([-12,0,0]) macs_cargo_element();
+    translate([-20,0,0]) macs_cargo_element();
+    translate([-28,0,0]) macs_cargo_element();
+
+    translate([20,0,0]) cylinder(6.6,3,3);
+    translate([-20,0,0]) cylinder(6.6,3,3);
+}
+
+module macs_hospital_ship() {
+    translate([0,0,-2]) macs_large_cargo();
+    translate([20,0,5]) macs_extra_room();
+    translate([-4,0,5]) macs_extra_room();
+    translate([-12,0,5]) macs_extra_room();
+    translate([-20,0,5]) macs_extra_room();
+    translate([8,0,5]) macs_large_warp();
+    translate([25.25,0,5]) macs_pod();
+}
+
