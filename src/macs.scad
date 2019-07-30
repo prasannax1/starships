@@ -172,7 +172,7 @@ module macs_disk(radius) {
     cylinder(4.5, 3,3, center=true);
 }
 
-module macs_science_vessel() {
+module macs_medevac() {
     translate([4,0,0]) union() {
         translate([0,0,.5]) macs_extra_room();
         translate([0,0,-1.95]) macs_disk(16);        
@@ -200,7 +200,7 @@ module macs_large_cargo() {
     translate([-20,0,0]) cylinder(6.6,3,3);
 }
 
-module macs_hospital_ship() {
+module macs_freighter() {
     translate([0,0,-2]) macs_large_cargo();
     translate([20,0,5]) macs_extra_room();
     translate([-4,0,5]) macs_extra_room();

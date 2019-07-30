@@ -1,35 +1,41 @@
 use <util.scad>;
-use <macs.scad>;
 
-module sci_sensors() {
-    translate([-8,0,2.4])
-    util_saucer(10,10,1);
-}
-
-
-module sci_main() {
-    macs_science_vessel();
-    sci_sensors();
-}
-
-module science() {
-    scale(1) sci_main();
-}
-
-module sci_msd() {
-    projection(cut=true)
-    rotate([-90,0,0])
-    union() {
-        sci_saucer();
-        sci_body();
-        sci_sensors();
-        translate([-10,0,-5]) {
-            util_nacelle(40,7.5,5,up=false,curved=true);
-            util_nacelle(40,7.5,.75,up=true, curved=true);
-        }
+module y_body() {
+    difference() {
+        util_saucer(40,40,5);
+        y_minus();
     }
 }
 
-science();
+module y_minus() {
+    translate([-35,0,5])
+        rotate([0,30,0])
+            cube(40, center=true);
 
-//sci_msd();
+    util_mirrored([0,1,0])
+        translate([0,20,5])
+            rotate([45,0,0])
+                cube([40,20,20], center=true);
+    
+    translate([15,0,5])
+        rotate([0,-75,0])
+            cube([5,5,10], center=true);
+}
+
+module y_nacelle_assembly() {
+    util_mirrored([0,1,0])
+        translate([7.5,8,2])
+            rotate([-45,0,0])
+                util_nacelle(22,5,3,curved=true);
+}
+
+module y_main() {
+    y_body();
+    y_nacelle_assembly();
+}
+
+module science() {
+    scale(1) y_main();
+}
+
+science();

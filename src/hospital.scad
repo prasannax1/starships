@@ -1,22 +1,35 @@
 use <util.scad>;
 use <macs.scad>;
 
-module hos_main() {
-    macs_hospital_ship();
+module med_sensors() {
+    translate([-8,0,2.4])
+    util_saucer(10,10,1);
 }
 
-module hospital() {
-    scale(1) hos_main();
+
+module med_main() {
+    macs_medevac();
+    med_sensors();
 }
 
-module hos_msd() {
-    projection(cut=true) rotate([-90,0,0]) union() {
-        hos_saucer();
-        hos_body();
-        translate([-10,0,-22]) util_nacelle(40,6,6,curved=true,up=false);
+module medevac() {
+    scale(1) med_main();
+}
+
+module med_msd() {
+    projection(cut=true)
+    rotate([-90,0,0])
+    union() {
+        sci_saucer();
+        sci_body();
+        med_sensors();
+        translate([-10,0,-5]) {
+            util_nacelle(40,7.5,5,up=false,curved=true);
+            util_nacelle(40,7.5,.75,up=true, curved=true);
+        }
     }
 }
 
-hospital();
+medevac();
 
-//hos_msd();
+//sci_msd();
