@@ -18,13 +18,6 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
  * Decks: 60
    * Saucer Section: 30 decks
    * Engine Section: 30 decks
- * Auxillary Craft - Large:
-   * 14 *Magpie Class* Light Science vessels
-   * 12 *Vulture Class* Light Corvette/Patrol vessels
-   * 2 *White Owl Class* Light Scout vessels
-   * 1 *Dove Class* Diplomatic Yacht/Light Courier
-   * 1 *Nightingale Class* Light Hospital Ship
-   * 1 Escort Vessel
  * Warp speed:
    * Cruising: Warp 5
    * Maximum: Warp 7.3
@@ -109,6 +102,20 @@ In the space under the saucer traditionally used by Captain's yachts, the *Aviar
 #### Engineering section
 
 The engineering section contains 26 decks. The front half is used to house the warp and transwarp cores of the ship. The aft section is used as storage. There is no shuttlebay since the *Aviary* has hangars to spare.
+
+## Auxillary craft
+
+The *Aviary* is home to two separate families of auxillary craft.
+
+# MACS
+
+The Modular Auxillary Craft System (MACS) was conceived as a result of starships losing entirely too many shuttlecraft on away missions. The aims for the MACS program were two fold:
+ 1. Shuttlecraft should be harder to destroy
+ 2. Shuttlecraft should be easier to replace
+ 
+With these dual aims in mind, the MACS system was conceived as a set of extremely durable shuttle craft components that could nevertheless be easily replicated and assembled as per mission requirements.
+
+## 
 
 ## Magpie Class
 
