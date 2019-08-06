@@ -32,4 +32,8 @@ module med_msd() {
 
 medevac();
 
+module hospital() {
+    medevac();
+}
+
 //sci_msd();
