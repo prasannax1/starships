@@ -10,8 +10,8 @@ module mother_a() {
 }
 
 module science_a() {
-    translate([0,240,64]) rotate(90) science();
-    translate([0,188,64]) rotate(90) science();
+    translate([0,180,64]) rotate(90) science();
+    translate([0,120,64]) rotate(90) science();
 }
 
 module attack_a() {
@@ -27,7 +27,7 @@ module diplomat_a() {
 }
 
 module scout_a() {
-    translate([0,200,75]) rotate(-90) scout();
+    translate([0,200,75]) rotate(90) scout();
 }
 
 module sector(num) {
