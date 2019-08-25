@@ -4,8 +4,8 @@ module m_saucer() {
     union() {
         render(3) difference() {
         translate([0,0,0])
-            scale([1.2,.8,.9])
-                util_hangar_form(500,500,100,16,75) union () {
+            scale([1.2,1.2,.9])
+                util_hangar_form(500,500,100,16,60) union () {
                     difference() {
                         util_mirrored([0,0,1])
                             util_saucer(500,500,66);
@@ -29,7 +29,7 @@ module m_body() {
         difference() {
             translate([-250,0,20]) {
                 mirror([0,0,1])
-                    util_saucer(450,75,80);                
+                    util_saucer(450,100,80);                
             }
             
             translate([-420,0,25])
@@ -41,8 +41,8 @@ module m_body() {
         difference() {
             translate([-320,0,-50]) {
                 mirror([0,0,1])
-                    util_saucer(400,160,65);
-                util_saucer(400,160,35);
+                    util_saucer(400,240,65);
+                util_saucer(400,240,35);
             }
             
             translate([-140,0,-80])
@@ -62,7 +62,7 @@ module m_body() {
 
 module m_bar() {
     difference() {
-        util_nacelle_bar(350,100,300,7.5);
+        util_nacelle_bar(540,100,300,7.5);
     
         translate([-555,0,0])
             rotate([0,-30,0])
@@ -103,13 +103,13 @@ module m_nacelle_assembly() {
     translate([-450,0,-50])
         m_bar();
     util_mirrored([0,1,0])
-        translate([-350,160,50])
+        translate([-457,260,50])
             m_nacelle();
 }
 
 module m_upper_bridge() {
     difference() {
-        util_saucer(180,120,20);
+        util_saucer(150,150,20);
         translate([75,0,10])
             scale([1.2,1,1])
                 rotate(30)
@@ -121,14 +121,14 @@ module m_lower_bridge() {
     difference() {
         union(){
             mirror([0,0,1])
-                util_saucer(180,120,15);
-            util_saucer(180,120,5);
+                util_saucer(150,150,15);
+            util_saucer(150,150,5);
             
  
         }
         
         union(){
-            translate([90,0,0])
+            translate([75,0,0])
                 rotate([0,-15,0])
                     cube([25,16,25],center=true);
             
@@ -177,7 +177,7 @@ module m_main_sep() {
     translate([0,0,-50])
     difference() {
         m_lower_bridge_assembly();
-        m_body();
+        //m_body();
     }
 }
 
