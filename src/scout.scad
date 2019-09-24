@@ -13,7 +13,7 @@ module scout_dish() {
         }
         
         translate([-50,0,0])
-            rotate([0,30,0])
+            rotate([0,-45,0])
                 cube([60,60,60], center=true);
         
 //        util_mirrored([0,1,0])
