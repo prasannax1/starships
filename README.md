@@ -115,7 +115,34 @@ The Modular Auxillary Craft System (MACS) was conceived as a result of starships
  
 With these dual aims in mind, the MACS system was conceived as a set of extremely durable shuttle craft components that could nevertheless be easily replicated and assembled as per mission requirements.
 
-## 
+## Bumblebee Class
+
+![Shuttlepod](images/macs/pod.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/shuttlepod.stl)
+
+Bumblebee class small shuttle
+
+### Stats
+
+ * Length: 6.4m
+ * Width: 4.8m
+ * Height: 2.3m
+ * Warp Speed:
+   * Cruising: Warp 1.2
+   * Maximum: Warp 2
+
+### Description
+
+The Bumblebee class shuttle is the foundation of the MACS program. Not only is it a stand alone shuttle, but it also acts as the cockpit/command module for every vehicle built on the MACS program.
+
+### Structure
+
+The Bumblebee is approximately the size of a Type 6 shuttlecraft and is used as replacement for the Type 6 on various ships (but not on the *Aviary*; we'll come to that later). Keeping in with the stated aims of the MACS program, it has much better armor and can take enough punishment to destroy the Type 6 ten times over. 
+
+Also in keeping with the modularity aim of MACS, apart from the two seats for pilot and co-pilot, all parts of the Bumblebee's interior can be swapped out. Right behind the cockpit area are two alcoves to the side which can be configured as replicators, weapons lockers, lavatories or just plain exits - the last one being particularly useful when the standard exit of the shuttle (at the rear) is blocked by additional modules.
+
+The rear half of the shuttle can be configured as seating/bunks (as in the Type 6), dense passenger seating, or additional consoles.
 
 ## Magpie Class
 
