@@ -1,6 +1,6 @@
 use <util.scad>;
 
-module corvette() {
+module tactical() {
     difference() {
         translate([5,0,0]) {
             util_nacelle(20,16,3.2,curved=true);
@@ -23,5 +23,5 @@ module corvette() {
 }
 
 
-corvette();
+tactical();
 
