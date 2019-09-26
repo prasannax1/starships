@@ -157,7 +157,7 @@ The *Wasp* class is a medium shuttle and standard inventory for light and medium
 
 The *Wasp* class adds a MACS small warp harness to the *Bumblebee*
 
-[!Small Warp Harness](images/macs/small-warp-harness.png)
+![Small Warp Harness](images/macs/small-warp-harness.png)
 
 The warp harness adds a bigger warp engine, and additonal components like extra phasers and a micro torpedo launcher.
 
@@ -192,7 +192,7 @@ The *Hornet* class is a heavy shuttle more than 20m long, and is used as heavy s
 
 The *Hornet* class extends the *Wasp* by adding a MACS standard connector section in between.
 
-[!Habitat](images/macs/extension.png)
+![Extension](images/macs/extension.png)
 
 The connector section contains 4 bunk beds, a replicator, and a lavatory. It also contains an extra computer core.
 
@@ -231,7 +231,7 @@ But the most common use is to attach it to one of the MACS cargo section and use
 
 The *Dragonfly* attaches a MACS large warp harness to the *Bumblebee*
 
-[!Large Warp Harness](images/macs/large-warp-harness.png)
+![Large Warp Harness](images/macs/large-warp-harness.png)
 
 The large warp harness delivers a warp core powerful enough for a large yacht or a small starship. 
 
@@ -243,7 +243,7 @@ On the *Aviary*, section 4 (auxillary engineering) maintains 4 *Dragonflies* use
 
 ## Beetle Class
 
-[!Heavy Runabout](images/macs/heavy-runabout.png)
+![Heavy Runabout](images/macs/heavy-runabout.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/heavy-runabout.stl)
 
@@ -260,7 +260,7 @@ Beetle class heavy cargo shuttle/runabout
 
 ### Description
 
-The *Beetle* class is one of the ships that really demonstrate the power and viability of the MACS program.
+The *Beetle* class is one of the ships that really demonstrate the power and viability of the MACS program. It's built out of the same conponents which are standard in the MACS program but it's a craft big enough to be a small starship.
    
 ## Magpie Class
 
