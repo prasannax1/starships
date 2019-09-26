@@ -19,8 +19,8 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
    * Saucer Section: 30 decks
    * Engine Section: 30 decks
  * Warp speed:
-   * Cruising: Warp 8
-   * Maximum: Warp 9.6
+   * Cruising: Warp 6
+   * Maximum: Warp 8
    * Transwarp: ??
 
 ### Description
@@ -128,6 +128,140 @@ Also in keeping with the modularity aim of MACS, apart from the two seats for pi
 
 The rear half of the shuttle can be configured as seating/bunks (as in the Type 6), dense passenger seating, or additional consoles.
 
+### Deployment
+
+On the *Aviary* the *Bumblebee* is not used as a shuttle, but is kept on inventory for other MACS spacecraft, and as auxillary vehicles for smaller craft.
+
+## Wasp Class
+
+![Shuttle](images/macs/shuttle.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/shuttle.stl)
+
+Wasp class medium shuttle
+
+### Stats
+
+ * Length: 12.6m
+ * Width: 9.4m
+ * Height: 2.9m
+ * Warp Speed:
+   * Cruising: Warp 3
+   * Maximum: Warp 5
+   
+### Description
+
+The *Wasp* class is a medium shuttle and standard inventory for light and medium cruisers in starfleet.
+
+### Structure
+
+The *Wasp* class adds a MACS small warp harness to the *Bumblebee*
+
+[!Small Warp Harness](images/macs/small-warp-harness.png)
+
+The warp harness adds a bigger warp engine, and additonal components like extra phasers and a micro torpedo launcher.
+
+From the interiors, the warp harness adds another replicator and a transporter alcove. There's a console to access the second warp core as well.
+
+### Deployment
+
+The *Wasp* class is not used as a standard auxillary vehicle on the *Aviary*, nor is it maintained as inventory. However, since the components are in inventory, as *Wasp* class can be assembled if needed within minutes.
+
+## Hornet class
+
+![Small Runabout](images/macs/small-runabout.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small-runabout.stl)
+
+Hornet class heavy shuttle
+
+### Stats
+
+ * Length: 20.6m
+ * Width: 9.4m
+ * Height: 2.9m
+ * Warp Speed:
+   * Cruising: Warp 2.1
+   * Maximum: Warp 3.5
+
+### Description
+
+The *Hornet* class is a heavy shuttle more than 20m long, and is used as heavy shuttle on heavy and medium cruisers, and as a runabout on light cruisers.
+
+### Structure
+
+The *Hornet* class extends the *Wasp* by adding a MACS standard connector section in between.
+
+[!Habitat](images/macs/extension.png)
+
+The connector section contains 4 bunk beds, a replicator, and a lavatory. It also contains an extra computer core.
+
+However the most important function of the connector section is that it connects the MACS components to its front and its back - and also any component that might be fixed below, by means of collapsible stairs.
+
+In case the *Hornet* is used as a runabout, the bunk beds can be swapped out for science stations as required.
+
+### Deployment
+
+The *Aviary* maintains an inventory of 20 *Hornet* shuttles, and uses them to transfer cargo and personnel between stations. The *Hornet* is not used for planetary or space missions except in extreme circumstances.
+
+## Dragonfly Class
+
+![Cutter](images/macs/cutter.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/cutter.stl)
+
+Dragonfly class heavy shuttle/cutter
+
+### Stats
+
+ * Length: 32.5m
+ * Width: 26.5m
+ * Height: 5.5m
+ * Warp Speed:
+   * Cruising: Warp 5
+   * Maximum: Warp 9
+
+### Description
+
+The *Dragonfly* is a small ship with a large engine. It is used as a fast courier/cutter to gain the speed of the large warp core, and is used as a tug to utilize its powerful engine.
+
+But the most common use is to attach it to one of the MACS cargo section and use it to haul cargo.
+
+### Structure
+
+The *Dragonfly* attaches a MACS large warp harness to the *Bumblebee*
+
+[!Large Warp Harness](images/macs/large-warp-harness.png)
+
+The large warp harness delivers a warp core powerful enough for a large yacht or a small starship. 
+
+From the interiors it adds a lavatory, replicator, transporter alcove, a computer core and an engineering console.
+
+### Deployment
+
+On the *Aviary*, section 4 (auxillary engineering) maintains 4 *Dragonflies* used as tug vessels.
+
+## Beetle Class
+
+[!Heavy Runabout](images/macs/heavy-runabout.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/heavy-runabout.stl)
+
+Beetle class heavy cargo shuttle/runabout
+
+### Stats
+
+ * Length: 40.5m
+ * Width: 26.5m
+ * Height: 6.5m
+ * Warp Speed:
+   * Cruising: Warp 3.5
+   * Maximum: Warp 6.2
+
+### Description
+
+The *Beetle* class is one of the ships that really demonstrate the power and viability of the MACS program.
+   
 ## Magpie Class
 
 ![Science Ship](images/science/main.png)
