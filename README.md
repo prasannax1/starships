@@ -45,9 +45,9 @@ In addition, each section also contains areas which specialize.
 
  * Section 0 is the diplomatic office. It contains residence for diplomatic guests, residences for admiralty, a dining hall and a holo conference auditorium. The upper shuttlebay has been converted into a large party hall + dining area with gardens for diplomatic functions. The lower hangar contains 3 *Dove* class yachts for diplomatic missions.
 
- * Sections 1, 3, 5, 6, 10, 11, 13, 14 and 15 are various science labs. The labs are reconfigurable per ship. These sections also contain 2 holodecks each, and a medium mess hall. The upper shuttlebays of each contain 8 *Magpie* class heavy runabouts, which are the primary mission craft of the *Aviary*. The lower hangars contain *White Owl* class ships in 4 of these sections. The lower hangars of the other sections are converted into additional labs, holodecks, residence areas, cargo holds, and in the case of the exo-botany department, a mini-forest.
+ * Section 1 is the main hospital. It also contains a quarantine area. The upper shuttle-bay is converted into additional wards and a physical therapy ground. The lower hangar contains two *Nightingale* class medevac vehicles.
 
- * Section 2 is the main hospital. It also contains a quarantine area. The upper shuttle-bay is converted into additional wards and a physical therapy ground. The lower hangar contains two *Nightingale* class medevac vehicles.
+ * Sections 2, 3, 5, 6, 10, 11, 13, and 14 are various science labs. The labs are reconfigurable per ship. These sections also contain 2 holodecks each, and a medium mess hall. The upper shuttlebays of each contain 10 *Magpie* class heavy runabouts, which are the primary mission craft of the *Aviary*. The lower hangars contain *White Owl* class ships in 4 of these sections (3,5,11 & 13). The lower hangars of the other sections are converted into additional labs, holodecks, residence areas, cargo holds, and in the case of the exo-botany department, a mini-forest.
 
  * Section 4 is auxillary engineering. It has engineering labs and a light industrial replicator. The upper shuttlebay contains 4 *Dragonfly* class shuttles modified to be tugs. The lower hangar is converted to a forge to build large scale projects and repair any damaged ships.
 
@@ -55,6 +55,13 @@ In addition, each section also contains areas which specialize.
 
  * Section 12 is auxillary guest quarters for civilian passengers. It also contains a large mess hall and a large holo-complex. Both the lower and upper bays are used to hold miscellanous security cleared and approved personal vehicles.
 
+ * Section 15 deals with transfers. The upper shuttle bay conatins 20 *Hornet* class heavy shuttles to deal with transfer of personnel and cargo between missions. The lower hangar is coverted to a large cargo bay.
+
+The various types of auxillary vehicles carried by the *Aviary* is shown below.
+
+![sectors](images/combined/sector.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined.stl)
 
 #### Captain's Yacht
 
@@ -309,6 +316,3 @@ The *Nightingale* looks pregnant with it's oversized aft section. The main sauce
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/scale.stl)
 
-![sectors](images/combined/sector.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined.stl)
