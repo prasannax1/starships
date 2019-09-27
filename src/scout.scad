@@ -2,41 +2,46 @@ use <util.scad>;
 
 module scout_dish() {
     difference() {
-        util_saucer(80,40,10);
-        translate([-60,0,0])
-            rotate([0,30,0])
-            cube([60,60,60], center=true);
-    }
-}
-
-module scout_body() {
-    difference() {
-        scale([1,1,2])
-            util_body(80,40,5,10);
         union() {
-            translate([20,0,-10])
-                scale([3,1,1])
-                    rotate([90,0,0])
-                        translate([0,0,-25])
-                            cylinder(50,10,10);
-
-            translate([45,0,-15])
-                cube(60, center=true);
-
-
+            difference() {
+                util_saucer(80,40,7.5);
+                translate([40,0,0])
+                    rotate([0,-60,0])
+                        cube([5,5,60],center=true);
+            }
+            translate([0,0,.25]) scale(.95) util_saucer(80,40,7.5);
         }
-    }    
-
-
+        
+        translate([-50,0,0])
+            rotate([0,-45,0])
+                cube([60,60,60], center=true);
+        
+//        util_mirrored([0,1,0])
+//            translate([0,20,-1])
+//                rotate([-45,0,0])
+//                    cube([80,10,10],center=true);   
+        
+        
+    }
+    
+    
 }
 
 module scout_nacelle_assembly() {
-    translate([-30,0,-5])
-        util_nacelle_bar(45,12,7.5,1);
-  
     util_mirrored([0,1,0])
-        translate([-25,20,5])
-            util_nacelle(48,9,7.5, curved=true);
+        translate([-18,12.5,6])
+            rotate([90,0,0])
+                util_nacelle(24,3.2,6,curved=true,up=false);
+    
+    translate([-23,0,0])
+        util_nacelle_bar(30,7,5,1);
+}
+
+module scout_body() {
+    translate([-5,0,2]) {
+        util_nacelle(24,36,5,curved=true,up=true);
+        util_nacelle(24,36,5,curved=true,up=false);
+    }
 }
 
 module scout_main() {

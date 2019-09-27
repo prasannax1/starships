@@ -1,48 +1,60 @@
 use <util.scad>;
 
 module m_saucer() {
+    translate([0,0,-25])
     union() {
-        translate([0,0,20])
-            util_saucer(600,500,40);
+        render(3) difference() {
+        translate([0,0,5])
+            scale([1.2,1.2,1])
+                util_hangar_form(650,650,100,16,60) union () {
+                    difference() {
+                        util_mirrored([0,0,1])
+                            util_saucer(625,625,66);
+                        translate([0,0,-525])
+                            cube(1000, center=true);
+
+                    }
+                }
+                m_lower_bridge_assembly();
+            }
         
-        scale([1.2,1,1])
-            util_hangar_disk(40,225,250,16);
-        
-        translate([0,0,50])
+        translate([0,0,60])
             m_upper_bridge();
     }        
 }
 
+
+
 module m_body() {
     union() {
-        difference() {
-            translate([-250,0,20]) {
-                mirror([0,0,1])
-                    util_saucer(450,80,80);                
-            }
-            
-            translate([-420,0,25])
-                scale([2.5,1,1])
-                    rotate([90,0,0])
-                        cylinder(550,50,50,center=true);
-        }
+//        difference() {
+//            translate([-250,0,20]) {
+//                mirror([0,0,1])
+//                    util_saucer(450,100,80);                
+//            }
+//            
+//            translate([-420,0,25])
+//                scale([2.5,1,1])
+//                    rotate([90,0,0])
+//                        cylinder(550,50,50,center=true);
+//        }
         
         difference() {
-            translate([-320,0,-50]) {
+            translate([-360,0,-50]) {
                 mirror([0,0,1])
-                    util_saucer(400,200,65);
-                util_saucer(400,200,35);
+                    util_saucer(450,240,75);
+                util_saucer(450,240,50);
             }
             
-            translate([-140,0,-80])
+            translate([-175,0,-80])
                 sphere(18);
             
-            translate([-450,0,-120]) scale([2,1,1]) {
+            translate([-520,0,-140]) scale([2,1,1]) {
                 rotate([90,0,0])
-                    cylinder(300,60,60,center=true);
+                    cylinder(300,80,80,center=true);
 
                 translate([-200,0,0])
-                    cube([400,400,120],center=true);
+                    cube([400,400,160],center=true);
             }
         }
     }
@@ -51,7 +63,7 @@ module m_body() {
 
 module m_bar() {
     difference() {
-        util_nacelle_bar(450,100,300,7.5);
+        util_nacelle_bar(700,90,300,7.5);
     
         translate([-555,0,0])
             rotate([0,-30,0])
@@ -66,39 +78,39 @@ module m_bar() {
 module m_nacelle() {
     difference() {
         union() {
-            util_saucer(1000,64,40);
+            util_saucer(1240,80,40);
             mirror([0,0,1])
-                util_saucer(1000,64,10);
+                util_saucer(1240,80,15);
         }
         
         union() {
-            translate([300,0,0])
-                cube(600, center=true);
+            translate([450,0,0])
+                cube(900, center=true);
             
-            translate([-660,0,-200])
+            translate([-790,0,-200])
                 rotate([0,45,0])
                     cube(600,center=true);
         }
     }
     
     union() {
-        util_saucer(240,64,40);
+        util_saucer(225,75,45);
         mirror([0,0,1]) 
-            util_saucer(240,64,10);
+            util_saucer(225,75,18);
     }
 }
 
 module m_nacelle_assembly() {
-    translate([-450,0,-50])
+    translate([-525,0,-50])
         m_bar();
     util_mirrored([0,1,0])
-        translate([-400,210,50])
+        translate([-480,325,35])
             m_nacelle();
 }
 
 module m_upper_bridge() {
     difference() {
-        util_saucer(180,150,20);
+        util_saucer(150,150,20);
         translate([75,0,10])
             scale([1.2,1,1])
                 rotate(30)
@@ -110,14 +122,14 @@ module m_lower_bridge() {
     difference() {
         union(){
             mirror([0,0,1])
-                util_saucer(180,150,15);
-            util_saucer(180,150,5);
+                util_saucer(150,150,15);
+            util_saucer(150,150,5);
             
  
         }
         
         union(){
-            translate([90,0,0])
+            translate([75,0,0])
                 rotate([0,-15,0])
                     cube([25,16,25],center=true);
             
@@ -131,13 +143,13 @@ module m_lower_bridge() {
         
     
     util_mirrored([0,1,0])
-        translate([-12,54,-7.5])
+        translate([-12,44,-7.5])
             rotate([90,0,0])
-                util_nacelle(150,18,36,curved=true,up=false);
+                util_nacelle(120,16,32,curved=true,up=false);
 }
 
 module m_lower_bridge_assembly() {
-    translate([0,0,-20])
+    translate([0,0,-45])
         m_lower_bridge();
 }
 
@@ -166,7 +178,7 @@ module m_main_sep() {
     translate([0,0,-50])
     difference() {
         m_lower_bridge_assembly();
-        m_body();
+        //m_body();
     }
 }
 

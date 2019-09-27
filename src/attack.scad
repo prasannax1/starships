@@ -5,34 +5,27 @@ module at_main_body() {
 }
 
 module at_main_minus() {
-    translate([-14.5,-90,-10])
-        rotate([-15,0,0])
-            cube([29,80,80]);
+    translate([-54,0,-10])
+        rotate([0,15,0])
+            cube([80,29,80], center=true);
 
-    translate([0,40.5,-2.5])
+    translate([40.5,0,-2.5])
         sphere(1.5, $fn=16);
 
-    translate([-2.5,39,1])
-        rotate([60,0,0])
-            cube([5,5,10]);
+    translate([35.5,0,6])
+        rotate([0,-62.5,0])
+            cube([5,5,10], center=true);
 
-    translate([0,-35,0])
-        rotate([45,0,0])
-            cube([40,10,40], center=true);
 }
 
 module at_nacelle_assembly() {
-    translate([12,5,4])
-        rotate([0,-45,0])
-            at_nacelle_2();
-    mirror([1,0,0])
-        translate([12,5,4])
-            rotate([0,-45,0])
+    util_mirrored([0,1,0])
+        translate([5,12,4])
+            rotate([45,0,0])
                 at_nacelle_2();
 }
 
 module at_nacelle_2() {
-    rotate(90)
         util_nacelle(45,7.5,12,curved=true,up=false);
 }
 
@@ -40,8 +33,7 @@ module at_nacelle_2() {
 module at_main() {
     union() {
         difference() {
-            rotate(90) 
-                at_main_body();
+            at_main_body();
             at_main_minus();
         }
         at_nacelle_assembly();
@@ -51,9 +43,9 @@ module at_main() {
 module at_msd() {
     projection(cut = true)
         rotate([-90,0,0])
-            rotate(-90) union() {
+            union() {
                 at_main();
-                translate([0,5,-6])
+                translate([5,0,-6])
                     at_nacelle_2();
             }
 }
