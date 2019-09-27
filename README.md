@@ -533,8 +533,11 @@ Even though it resembles a starship with its structure of saucer - secondary hul
 
 The Saucer section contains the cockpit and main deflector at the front, followed by a circular corridor surrounding a pantry area to exit into the engineering room aft. The outer side of the corridor has 4 luxury rooms, two on either side.
 
-The engineering section conatins the main warp core and transporters.
+The engineering section contains the main warp core and transporters.
 
+### Deployment
+
+The *Aviary* holds 3 *Dove* class yachts in the lower hangar of section 0.
 
 ## Relative scale of ships
 
