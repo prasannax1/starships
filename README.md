@@ -85,7 +85,7 @@ In the space under the saucer traditionally used by Captain's yachts, the *Aviar
 
 #### Engineering section
 
-The engineering section contains 26 decks. The front half is used to house the warp and transwarp cores of the ship. The aft section is used as storage. There is no shuttlebay since the *Aviary* has hangars to spare.
+The engineering section contains 30 decks. The front half is used to house the warp and transwarp cores of the ship. The aft section is used as storage. There is no shuttlebay since the *Aviary* has hangars to spare, but the cargo bay has a runway to land shuttles and unload cargo.
 
 ## Auxillary craft
 
@@ -261,7 +261,78 @@ Beetle class heavy cargo shuttle/runabout
 ### Description
 
 The *Beetle* class is one of the ships that really demonstrate the power and viability of the MACS program. It's built out of the same conponents which are standard in the MACS program but it's a craft big enough to be a small starship.
+
+### Structure
+
+The *Beetle* class adds the MACS heavy cargo containers to what is essentially a *Dragonfly* with a MACS connector module.
+
+![Box](images/macs/habitat.png)
+
+The cargo containers have independent gravity and environment systems, and can be configured to be habitable if needed. This makes the *Beetle* class not only a heavy cargo hauler, but also a heavy people hauler.
+
+The Cargo containers can even be configured as scientific labs, and the *Beetle* class can be used as a heavy runabout, or a light science vessel.
+
+The *Beetle* class is notorious for being used as a fast and cheap general purpose starship in remote Federation colonies.
+
+### Deployment
+
+The *Aviary* does not maintain an inventory of the *Beetle* class, although it can be assembled on demand to haul cargo. 
+
+## Nightingale Class
+
+![Hospital Ship](images/hospital/main.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/hospital.stl)
+
+Nightingale Class Heavy Medevac Runabout
+
+### Stats
+
+ * Length: 46m
+ * Width: 32m
+ * Height: 8.4
+ * Decks: 2
+ * Auxillary Craft: 1 *Bumblebee* class light shuttle
+ * Warp Speed:
+   * Cruising: Warp 2.3
+   * Maximum: Warp 5
    
+### Description
+
+The *Nightingale* is not a true member of the MACS family, although it is built from the standard MACS components. It was built specifically as a medevac vehicle for the *Aviary*, although it has since found use in a variety of ships and stations.
+
+### Structure
+
+The *Nightingale* complements what is the shuttle part of a *Beetle* class with a custom medical habitat:
+
+![Disk](images/macs/disk.png)
+
+Apart from containing independent gravity and environment controls, the disk also contains
+
+  * The latest of medical equipment and scanners
+  * Up to 20 isolated patient beds
+  * Medical transporters with highly sensitive biofilters
+  * Holo-emitters spanning the entire breadth of the disk capable of projecting 6 independent EMH
+
+Even though the *Nightingale* is supposed to just carry patients from affected areas to the main hospital decks of the *Aviary*, the *Nightingale* by itself acts as a fully capable small hospital.
+
+Regarding the ship itself, there's a second MACS *Bumblebee* module attached to the rear of the large warp harness. This can be used as a secondary command module, and given that it has been configured to detach and re-attach to the harness without requiring an engineering team, can also be used as an auxillary vehicle for the *Nightingale* itself.
+
+### Deployment
+
+The *Aviary* carries 2 *Nightingale* vessels in the lower hangars of section 1.
+
+# ICP
+
+The Intermediate Craft Program (ICP) began with the following observations:
+
+ * Starships are getting larger and larger. Starships exceeding a kilometer in length are becoming the norm.
+ * As a consequence of this, the capacity of starships to carry auxillary vehicles is also increasing.
+ * Consequently, auxillary vehicles are becoming larger
+ * Due to miniaturization and march of technology, any ship is more powerful than a previous generation's ship of comparable size.
+
+The ICP was started to come up with craft in the 25m to 100m range, which is too large to be a shuttle but too small to be a starship. The ICP designed vehicles should be able to be used as standalone starships or as auxillary vehicles aboard starbases and large starships.
+ 
 ## Magpie Class
 
 ![Science Ship](images/science/main.png)
@@ -406,43 +477,6 @@ The Saucer section contains the cockpit and main deflector at the front, followe
 
 The engineering section conatins the main warp core and transporters.
 
-## Nightingale Class
-
-![Hospital Ship](images/hospital/main.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/hospital.stl)
-
-Nightingale Class Light Hospital Ship
-
-### Stats
-
- * Length: 65m
- * Width: 27m
- * Height: 15m
- * Decks: 4
- * Auxillary Craft: None
- * Warp Speed:
-   * Cruising: Warp 7
-   * Maximum: Warp 9
-   
-### Description
-
-On the *Aviary* an entire sector is dedicated to sickbays, hospitals and clinics for the health and wellness of the crew within. But quite often, Starfleet is asked to extend a hand of help to other species who do not have the medical facilities to deal with it.
-
-Enter the *Nightingale*. Named after Florence Nightingale, it is as big as a general hospital itself, it is equipped with some highly specialized medical equipment.
-
-
-### Structure
-
-The *Nightingale* looks pregnant with it's oversized aft section. The main saucer contains the bridge module, with crew dormitory instead of captain's rooms. The engineering section extends seamlessly into what looks like an oversized cargo bay, but is actually 5 decks of mobile hospital.
-
-  * Medical transporters with highly sensitive biofilters
-  * 2 separate bio-shielded quarantine areas
-  * The latest of scanners
-  * Gallons of biomemetic gel
-  * 6 EMH and 12 EMAH (emergency medical assistant hologram)
-  * 1 ECH in case the captain of the ship (nominally, the CMO of the *Aviary*) is incapacitated on mission.
-  * Mobile holo-emitter kits to send EMH on missions where humanoids cannot go on.
 
 ## Relative scale of ships
 
