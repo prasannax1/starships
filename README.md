@@ -36,7 +36,7 @@ The *Aviary Class* is meant to act as both a deep space explorer, and as a mobil
 
 ### Structure
 
-The *Aviary* follows a pretty tradtional design, saucer, secondary hull and nacelles. The saucer is shaped to present a lower profile from the fore direction. It is fatter than you expect it, even on a ship this size, because most of the lower half of the saucer section consists of mobile hangars for small starship.
+The *Aviary* follows a pretty traditional design, saucer, secondary hull and nacelles. The saucer is shaped to present a lower profile from the fore direction. It is fatter than you expect it, even on a ship this size, because most of the lower half of the saucer section consists of mobile hangars for small starship.
 
 #### Saucer Section
 
