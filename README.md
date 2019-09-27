@@ -18,6 +18,12 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
  * Decks: 60
    * Saucer Section: 30 decks
    * Engine Section: 30 decks
+ * Crew Capacity:
+   * Minimum (skeleton): 10
+   * Minimum (sustainable): 113
+   * Typical: 1200
+   * Maximum (all stations filled): 7500
+   * Maximum (evacuation limit): 50000
  * Auxillary Craft
    * 80 *Magpie* class heavy runabouts
    * 30 *Hawk* class tactical runabouts
@@ -88,6 +94,10 @@ In the space under the saucer traditionally used by Captain's yachts, the *Aviar
  * Width: 149m
  * Height: 20m
  * Decks: 5
+ * Crew Capacity:
+   * Minimum: 5
+   * Typical: 20
+   * Maximum: 150
  * Auxillary Craft:
    * 4 *Bumblebee* class light shuttles
  * Warp Speed:
@@ -123,6 +133,9 @@ Bumblebee class small shuttle
  * Length: 6.4m
  * Width: 4.8m
  * Height: 2.3m
+ * Crew Capacity:
+   * Minimum: 1
+   * Maximum: 6
  * Warp Speed:
    * Cruising: Warp 1.2
    * Maximum: Warp 2
@@ -156,6 +169,9 @@ Wasp class medium shuttle
  * Length: 12.6m
  * Width: 9.4m
  * Height: 2.9m
+ * Crew Capacity:
+   * Minimum: 1
+   * Maximum: 6
  * Warp Speed:
    * Cruising: Warp 3
    * Maximum: Warp 5
@@ -191,6 +207,9 @@ Hornet class heavy shuttle
  * Length: 20.6m
  * Width: 9.4m
  * Height: 2.9m
+ * Crew Capacity:
+   * Minimum: 1
+   * Maximum: 14
  * Warp Speed:
    * Cruising: Warp 2.1
    * Maximum: Warp 3.5
@@ -228,6 +247,9 @@ Dragonfly class heavy shuttle/cutter
  * Length: 32.5m
  * Width: 26.5m
  * Height: 5.5m
+ * Crew Capacity:
+   * Minimum: 2
+   * Maximum: 8
  * Warp Speed:
    * Cruising: Warp 5
    * Maximum: Warp 9
@@ -265,6 +287,10 @@ Beetle class heavy cargo shuttle/runabout
  * Length: 40.5m
  * Width: 26.5m
  * Height: 6.5m
+ * Crew Capacity:
+   * Minimum: 2
+   * typical: 5
+   * Maximum: 35
  * Warp Speed:
    * Cruising: Warp 3.5
    * Maximum: Warp 6.2
@@ -303,6 +329,10 @@ Nightingale Class Heavy Medevac Runabout
  * Width: 32m
  * Height: 8.4
  * Decks: 2
+ * Crew Capacity:
+   * Minimum: 4
+   * Typical: 10
+   * Maximum: 75
  * Auxillary Craft: 1 *Bumblebee* class light shuttle
  * Warp Speed:
    * Cruising: Warp 2.3
@@ -358,6 +388,10 @@ Hawk Class tactical runabout
  * Width: 21.8m
  * Height: 4.6m
  * Decks: 1
+ * Crew Capacity:
+   * Minimum: 1
+   * Typical: 2
+   * Maximum: 24
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 5.2
@@ -391,6 +425,10 @@ Magpie Class Scientific Heavy Runabout
  * Width: 22m
  * Height: 5.6m
  * Decks: 1
+ * Crew Capacity:
+   * Minimum: 1
+   * Typical: 10
+   * Maximum: 56
  * Auxillary Craft: *See below note in Structure section*
  * Warp Speed:
    * Cruising: Warp 4
@@ -428,6 +466,10 @@ Vulture Class Light Corvette/Patrol Vessel
  * Width: 31m
  * Height: 11m
  * Decks: 3
+ * Crew Capacity:
+   * Minimum: 4
+   * Typical: 12
+   * Maximum: 56
  * Auxillary Craft: *See note*
  * Warp Speed:
    * Cruising: Warp 7
@@ -477,6 +519,10 @@ White Owl Class Light Scout
  * Width: 40m
  * Height: 10m
  * Decks: 3
+ * Crew Capacity:
+   * Minimum: 4
+   * Typical: 30
+   * Maximum: 120
  * Auxillary Craft: 2 *Bumblebee* class small shuttles
  * Warp Speed:
    * Cruising: Warp 7.5
@@ -518,6 +564,10 @@ Dove Class Diplomatic Yacht/Light Courier
  * Decks: 2
    * Saucer Section: 1 deck
    * Engine Section: 1 deck
+ * Crew Capacity:
+   * Minimum: 1
+   * Typical: 3
+   * Maximum: 40
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 5
