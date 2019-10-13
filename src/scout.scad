@@ -29,19 +29,23 @@ module scout_dish() {
 
 module scout_nacelle_assembly() {
     util_mirrored([0,1,0])
-        translate([-18,12.5,6])
-            rotate([90,0,0])
-                util_nacelle(24,3.2,6,curved=true,up=false);
+        translate([-28,12.5,-1.5])
+            rotate([75,0,0])
+                mirror([1,0,0])
+                    util_nacelle(32,3.2,6,curved=true,up=false);
     
-    translate([-23,0,0])
-        util_nacelle_bar(30,7,5,1);
+           
+    translate([-23,0,2])
+        mirror([0,0,1])
+            util_nacelle_bar(30,3.5,5,1);
 }
 
 module scout_body() {
-    translate([-5,0,2]) {
-        util_nacelle(24,36,5,curved=true,up=true);
-        util_nacelle(24,36,5,curved=true,up=false);
-    }
+    translate([-5,0,2])
+        util_nacelle(24,32,5,curved=true,up=true);
+        
+    translate([10.5,0,2])
+        util_nacelle(40,36,5,curved=true,up=false);
 }
 
 module scout_main() {
