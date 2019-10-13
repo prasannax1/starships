@@ -46,8 +46,10 @@ module m_body() {
                 util_saucer(450,240,50);
             }
             
-            translate([-175,0,-80])
-                sphere(18);
+            translate([-150,0,-68])
+                rotate([0,90,0])
+                    cylinder(48,6,18,center=true);
+
             
             translate([-520,0,-140]) scale([2,1,1]) {
                 rotate([90,0,0])
@@ -59,6 +61,7 @@ module m_body() {
         }
     }
 }
+
 
 
 module m_bar() {
