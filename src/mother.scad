@@ -72,11 +72,13 @@ module m_bar() {
             rotate([0,-30,0])
                 cube(900,center=true);
     
-        translate([450,0,270])
-            rotate([0,45,0])
-                cube(900,center=true);
+        translate([200,0,300])
+            rotate([90,0,0])
+                cylinder(1000,300,300,center=true);
     }
 }
+
+
 
 module m_nacelle() {
     difference() {
