@@ -66,17 +66,25 @@ module m_body() {
 
 module m_bar() {
     difference() {
-        util_nacelle_bar(700,90,300,7.5);
+        util_nacelle_bar(700,90,900,7.5);
     
         translate([-555,0,0])
-            rotate([0,-30,0])
-                cube(900,center=true);
+            cylinder(900,500,500,center=true, $fn=100);
+
+        translate([700,0,0])
+            cube(900, center=true);
+
+        util_mirrored([0,1,0])
+            translate([300,400,0])
+                cylinder(900,350,350,center=true, $fn=100);
     
-        translate([200,0,300])
-            rotate([90,0,0])
-                cylinder(1000,300,300,center=true);
+
     }
 }
+
+
+
+
 
 
 
@@ -189,6 +197,7 @@ module m_main_sep() {
 
 
 mother();
+//m_bar();
 //m_main_sep();
 //m_msd();
 //m_lower_bridge_assembly();
