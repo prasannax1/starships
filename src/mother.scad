@@ -46,8 +46,10 @@ module m_body() {
                 util_saucer(450,240,50);
             }
             
-            translate([-175,0,-80])
-                sphere(18);
+            translate([-150,0,-68])
+                rotate([0,90,0])
+                    cylinder(48,6,18,center=true);
+
             
             translate([-520,0,-140]) scale([2,1,1]) {
                 rotate([90,0,0])
@@ -61,19 +63,30 @@ module m_body() {
 }
 
 
+
 module m_bar() {
     difference() {
-        util_nacelle_bar(700,90,300,7.5);
+        util_nacelle_bar(700,90,900,7.5);
     
         translate([-555,0,0])
-            rotate([0,-30,0])
-                cube(900,center=true);
+            cylinder(900,500,500,center=true, $fn=100);
+
+        translate([700,0,0])
+            cube(900, center=true);
+
+        util_mirrored([0,1,0])
+            translate([300,400,0])
+                cylinder(900,350,350,center=true, $fn=100);
     
-        translate([450,0,270])
-            rotate([0,45,0])
-                cube(900,center=true);
+
     }
 }
+
+
+
+
+
+
 
 module m_nacelle() {
     difference() {
@@ -184,6 +197,7 @@ module m_main_sep() {
 
 
 mother();
+//m_bar();
 //m_main_sep();
 //m_msd();
 //m_lower_bridge_assembly();
