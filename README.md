@@ -517,7 +517,7 @@ White Owl Class Light Scout
 
  * Length: 80m 
  * Width: 40m
- * Height: 10m
+ * Height: 12m
  * Decks: 3
  * Crew Capacity:
    * Minimum: 4
