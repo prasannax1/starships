@@ -17,7 +17,7 @@ module tactical_shuttle() {
     util_mirrored([0,1,0])
         translate([-4,1.5,1])
             rotate([90,0,0])
-                util_nacelle(8,2.25,3,curved=true,up=false);
+                util_nacelle(7.5,1,4,curved=true,up=false);
 };
 
 
@@ -198,10 +198,6 @@ module scout() {
 
     translate([0,0,.1])
     util_nacelle(42,32,6.7,curved=true);
-    
-    translate([0,0,.1])
-    mirror([0,0,1])
-        tactical_shuttle();
 }
 
-scout();
+tactical_shuttle();
