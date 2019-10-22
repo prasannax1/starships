@@ -124,7 +124,7 @@ With these dual aims in mind, the MACS system was conceived as a set of extremel
 
 ![Shuttlepod](images/macs/pod.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/shuttlepod.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/shuttlepod.stl)
 
 Bumblebee class small shuttle
 
@@ -160,7 +160,7 @@ On the *Aviary* the *Bumblebee* is not used as a shuttle, but is kept on invento
 
 ![Shuttle](images/macs/shuttle.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/shuttle.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/shuttle.stl)
 
 Wasp class medium shuttle
 
@@ -198,7 +198,7 @@ The *Wasp* class is not used as a standard auxillary vehicle on the *Aviary*, no
 
 ![Small Runabout](images/macs/small-runabout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/small-runabout.stl)
 
 Hornet class heavy shuttle
 
@@ -238,7 +238,7 @@ The *Aviary* maintains an inventory of 20 *Hornet* shuttles, and uses them to tr
 
 ![Cutter](images/macs/cutter.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/cutter.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/cutter.stl)
 
 Dragonfly class heavy shuttle/cutter
 
@@ -278,7 +278,7 @@ On the *Aviary*, section 4 (auxillary engineering) maintains 4 *Dragonflies* use
 
 ![Heavy Runabout](images/macs/heavy-runabout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/heavy-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/heavy-runabout.stl)
 
 Beetle class heavy cargo shuttle/runabout
 
@@ -319,7 +319,7 @@ The *Aviary* does not maintain an inventory of the *Beetle* class, although it c
 
 ![Hospital Ship](images/hospital/main.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/hospital.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/hospital.stl)
 
 Nightingale Class Heavy Medevac Runabout
 
