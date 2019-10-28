@@ -129,7 +129,7 @@ module science_runabout() {
 
 module attack() {
     difference() {
-        util_saucer(45,45,5);
+        util_saucer(45,45,6);
 
         translate([20,0,3])
             rotate([0,-70,0])
@@ -138,8 +138,8 @@ module attack() {
     }
 
     difference() {
-        scale([1,1,2])
-            util_body(45,45,1.5,5);
+        scale([1,1,2.5])
+            util_body(45,45,1.5,6);
     
         translate([22.5,0,-1.2])
             sphere(1,$fn=16);
@@ -200,4 +200,4 @@ module scout() {
     util_nacelle(42,32,6.7,curved=true);
 }
 
-tactical_shuttle();
+attack();
