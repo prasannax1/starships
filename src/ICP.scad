@@ -129,7 +129,7 @@ module science_runabout() {
 
 module attack() {
     difference() {
-        util_saucer(45,45,6);
+        util_saucer(45,45,5);
 
         translate([20,0,3])
             rotate([0,-70,0])
