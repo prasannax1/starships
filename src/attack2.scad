@@ -66,4 +66,8 @@ module model2() {
 
 }
 
-model2();
+module attack() {
+    model2();
+}
+
+attack();
