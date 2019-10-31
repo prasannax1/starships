@@ -192,12 +192,12 @@ module scout() {
     }
 
     util_mirrored([0,1,0])
-        translate([-27,24,1.5])
+        translate([-24,24,1.5])
             rotate([-110,0,0])
-                util_nacelle(48,4,8,curved=true);
+                util_nacelle(45,4,8,curved=true);
 
     translate([0,0,.1])
     util_nacelle(42,32,6.7,curved=true);
 }
 
-attack();
+scout();
