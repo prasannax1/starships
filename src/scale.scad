@@ -8,6 +8,8 @@ use <ICP.scad>;
 use <attack2.scad>;
 use <tactical-runabout.scad>;
 
+use <perf.scad>;
+
 translate([0,0,0]) {
 m_main_sep();
 translate([0,0,90]) rotate(0) scout();
