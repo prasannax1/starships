@@ -374,6 +374,41 @@ The Intermediate Craft Program (ICP) began with the following observations:
 
 The ICP was started to come up with craft in the 25m to 100m range, which is too large to be a shuttle but too small to be a starship. The ICP designed vehicles should be able to be used as standalone starships or as auxillary vehicles aboard starbases and large starships.
 
+## Magpie Class
+
+![Science Ship](images/icp/runabout.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/runabout.stl)
+
+Magpie Class Scientific Heavy Runabout
+
+### Stats
+
+ * Length: 20m
+ * Width: 18m
+ * Height: 6m
+ * Decks: 1
+ * Crew Capacity:
+   * Minimum: 1
+   * Typical: 10
+   * Maximum: 56
+ * Auxillary Craft: None
+ * Warp Speed:
+   * Cruising: Warp 4
+   * Maximum: Warp 8.5
+
+### Description
+
+The *Magpie* is the first vessel created by the ICP which successfully acts as an independent ship as well as an auxillary vehicle. It is feature par with any science vessel from the pioneering age of warp travel, from the late 2100s to the early 2200s.
+
+### Structure
+
+The *Magpie* shows it's inspiration from the *Argo* class cargo shuttle of the late 2300s, with its boxy structure and embedded warp nacelles. The cockpit is in the front, and a main walkway extends all the way back with rooms arranged leaflike to the sides. The *Magpie* carries three times as many modules as a standard *Danube* class runabout. The walkway terminates in the aft cargo area. The warp core is contained on top, just like a standard runabout. The warp core has Jeffries tube access from the cargo area.
+
+### Deployment
+
+The *Magpie* is the standard auxillary vehicle of the *Aviary*. It is used for planetary and deep space away missions, and used as transport vehicle for personnel and cargo. The *Aviary* maintains 80 *Magpie* vessels, distributed across all science sections.
+
 ## Hawk Class
 
 ![Tactical Runabout](images/tactical/main.png)
@@ -411,13 +446,13 @@ Typical deployments for the *Hawk* class are aboard starbases and large starship
 
 The *Aviary* maintains an inventory of 30 *Hawk* class vessels in the upper shuttlebays of sections 7, 8 and 9. They are used as first response ship defence fighters, and as escort vessels for planetary missions.
  
-## Magpie Class
+## Raven Class
 
 ![Science Ship](images/science/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/science.stl)
 
-Magpie Class Scientific Heavy Runabout
+Raven Class Scientific Heavy Runabout
 
 ### Stats
 
@@ -436,21 +471,21 @@ Magpie Class Scientific Heavy Runabout
 
 ### Description
 
-The *Magpie* is the first vessel created by the ICP which successfully acts as an independent ship as well as an auxillary vehicle. It is feature par with any science vessel from the pioneering age of warp travel, from the late 2100s to the early 2200s.
+The *Raven* is the first vessel created by the ICP which successfully acts as an independent ship as well as an auxillary vehicle. It is feature par with any science vessel from the pioneering age of warp travel, from the late 2100s to the early 2200s.
 
 ### Structure
 
-The *Magpie* shows it's inspiration from the *Argo* class cargo shuttle of the late 2300s, with its boxy structure and embedded warp nacelles. The cockpit is in the front, and a main walkway extends all the way back with rooms arranged leaflike to the sides. The *Magpie* carries three times as many modules as a standard *Danube* class runabout. The walkway terminates in the aft cargo area. The warp core is contained on top, just like a standard runabout. The warp core has Jeffries tube access from the cargo area.
+The *Raven* shows it's inspiration from the *Argo* class cargo shuttle of the late 2300s, with its boxy structure and embedded warp nacelles. The cockpit is in the front, and a main walkway extends all the way back with rooms arranged leaflike to the sides. The *Raven* carries three times as many modules as a standard *Danube* class runabout. The walkway terminates in the aft cargo area. The warp core is contained on top, just like a standard runabout. The warp core has Jeffries tube access from the cargo area.
 
 #### Auxillary vehicles.
 
-Like the *Argo*, the *Magpie* can also hold auxillary vehicles in the aft cargo area. Typically these are land vehicles, although the cargo hold is large enough to hold a *Bumblebee* (or smaller) shuttle. The *Magpie* is not configured for launching auxillary vehicles in space, although it can be achieved by sealing the cargo area and opening the aft bay doors to vent atmosphere. 
+Like the *Argo*, the *Raven* can also hold auxillary vehicles in the aft cargo area. Typically these are land vehicles, although the cargo hold is large enough to hold a *Bumblebee* (or smaller) shuttle. The *Raven* is not configured for launching auxillary vehicles in space, although it can be achieved by sealing the cargo area and opening the aft bay doors to vent atmosphere. 
 
 This manoeuvre is not recommended if you have cargo in the hold which you don't want to lose.
 
 ### Deployment
 
-The *Magpie* is the standard auxillary vehicle of the *Aviary*. It is used for planetary and deep space away missions, and used as transport vehicle for personnel and cargo. The *Aviary* maintains 80 *Magpie* vessels, distributed across all science sections.
+The *Raven* is the standard auxillary vehicle of the *Aviary*. It is used for planetary and deep space away missions, and used as transport vehicle for personnel and cargo. The *Aviary* maintains 80 *Raven* vessels, distributed across all science sections.
 
 ## Vulture Class
 
@@ -507,17 +542,17 @@ The *Vulture*s are used to escort the *Aviary* in flight through troubled space,
 
 ## White Owl Class
 
-![Scout Ship](images/scout/main.png)
+![Scout Ship](images/icp/scout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/scout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/scout.stl)
 
 White Owl Class Light Scout
 
 ### Stats
 
- * Length: 80m 
- * Width: 40m
- * Height: 12m
+ * Length: 97m 
+ * Width: 62m
+ * Height: 10m
  * Decks: 3
  * Crew Capacity:
    * Minimum: 4
@@ -530,23 +565,23 @@ White Owl Class Light Scout
    
 ### Description
 
-The *White Owl* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*. The *White Owl* is deployed as an advanced scout in places where trouble is expected but discoveries are hoped.
+The *White Owl* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*.
+
+Unlike the other ships on this page, the *White Owl* is not used as a member of the *Aviary* "fleet". The *White Owl* is meant to carry out independent missions, and only uses the *Aviary* for its transwarp engine.
 
 ### Structure
 
-Up until the penultimate iteration of the design, the *White Owl* was designed similar to the *Magpie*, with a single hull and embedded warp engine and nacelles, only being as long as a *Vulture* class. Heating problems forced the engineers to move the engine into a secondary hull, which give the *White Owl* a classic "starship" look.
+The *White Owl* has a classic "starship" structure, with saucer shaped primary hull, secondary hull and warp nacelles.
 
-Unlike all the other craft of the ICP, the *White Owl* contains a true bridge, which occupies the entirety of Deck 1 in the primary hull.
+Deck 1 contains various labs, dormitories, sickbay and messhall. The front of the primary hull contains the primary deflector, and an observation lounge behind it.
 
-Deck 2 contains various labs, dormitories, sickbay and messhall. The front of the primary hull contains the primary deflector, and an observation lounge behind it.
-
-The secondary hull contains the warp core spanning all three decks. The rear of the secondary hull contains a shuttlebay which holds two small shuttles.
-
-Rather unconventionally, the shuttle bay of the *White Owl* opens topside rather than aftside. This does not represent any significant operational challenges.
+The secondary hull contains the warp core spanning three decks. The rear of the secondary hull contains a shuttlebay which holds two small shuttles.
 
 ### Deployment
 
-The *Aviary* carries 4 *White Owl* vessels in the lower hangars of sections 3, 5, 11 and 13. These are deployed for special missions spanning multiple locations or long durations.
+The *Aviary* can carry upto 4 *White Owl* vessels in the lower hangars of sections 3, 5, 11 and 13. These ships will have independent survey or exploration missions and will use the *Aviary* for its transwarp engine.
+
+If these hangars are empty, they're used to store the *Vulture* class ships, which can get awfully crowded in hangars 7 & 9.
 
 ## Dove Class
 
