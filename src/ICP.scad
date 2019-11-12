@@ -23,24 +23,24 @@ module tactical_shuttle() {
 
 module runabout() {
     difference() {
-        util_saucer(18,18,3);
+        util_saucer(18,15,3);
 
-        translate([6,0,3])
-            rotate([0,-75,0])
+        translate([6,0,3.3])
+            rotate([0,-72,0])
                 cube([3,3,5],center=true);
     }
 
     translate([-7.5,0,0])
         scale([1,1,.4])
             rotate([90,0,0])
-                cylinder(10,4,4,$fn=6,center=true);
+                cylinder(9,4,4,$fn=6,center=true);
 
     translate([-7.5,0,1])
         mirror([0,0,1])
-            util_nacelle_bar(16,2.5,3,.5);
+            util_nacelle_bar(15,2.5,2.5,.5);
 
     util_mirrored([0,1,0])
-        translate([-3,7.5,-2])
+        translate([-3,6.5,-2])
             scale([1,1,.5])
                 union() {
                     rotate([0,90,0])
@@ -200,4 +200,4 @@ module scout() {
     util_nacelle(42,32,6.7,curved=true);
 }
 
-scout();
+runabout();
