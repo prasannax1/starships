@@ -25,9 +25,10 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
    * Maximum (all stations filled): 7500
    * Maximum (evacuation limit): 50000
  * Auxillary Craft
-   * 80 *Magpie* class heavy runabouts
+   * 80 *Magpie* class runabouts
    * 30 *Hawk* class tactical runabouts
    * 20 *Hornet* class heavy shuttles
+   * 16 *Raven* class heavy runabouts
    * 6 *Vulture* class patrol vessels
    * 4 *White Owl* class light scouts
    * 4 *Dragonfly* class warp tugs
