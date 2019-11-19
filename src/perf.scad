@@ -22,7 +22,7 @@ module attack() {
 
 module science() {
     color("darkkhaki")
-    import("../stl/science.stl", convexity=3);
+    import("../stl/icp/science.stl", convexity=3);
 }
 
 module hospital() {

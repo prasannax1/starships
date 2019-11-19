@@ -448,18 +448,18 @@ The *Aviary* maintains an inventory of 30 *Hawk* class vessels in the upper shut
  
 ## Raven Class
 
-![Science Ship](images/science/main.png)
+![Science Ship](images/icp/science.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/science.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/science.stl)
 
 Raven Class Scientific Heavy Runabout
 
 ### Stats
 
- * Length: 33m
- * Width: 22m
- * Height: 5.6m
- * Decks: 1
+ * Length: 39m
+ * Width: 24m
+ * Height: 7m
+ * Decks: 2
  * Crew Capacity:
    * Minimum: 1
    * Typical: 10
