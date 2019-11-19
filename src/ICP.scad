@@ -21,7 +21,7 @@ module tactical_shuttle() {
 };
 
 
-module runabout() {
+module runabout_old() {
     difference() {
         util_saucer(18,15,3);
 
@@ -231,7 +231,7 @@ module science() {
     }
 }
 
-module runabout2() {
+module runabout() {
     rotate([0,180,0]) {
         scale([1,1,.33])
             util_nacelle(20,12,9, curved=true);
@@ -243,4 +243,4 @@ module runabout2() {
     }
 }
 
-runabout2();
+runabout();
