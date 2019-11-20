@@ -471,7 +471,7 @@ Raven Class Scientific Heavy Runabout
    * Minimum: 2
    * Typical: 10
    * Maximum: 200
- * Auxillary Craft: *See below note in Structure section*
+ * Auxillary Craft: 1 *Bumblebee* class shuttle
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -482,17 +482,19 @@ The *Raven* is the first vessel created by the ICP which successfully acts as an
 
 ### Structure
 
-The *Raven* shows it's inspiration from the *Argo* class cargo shuttle of the late 2300s, with its boxy structure and embedded warp nacelles. The cockpit is in the front, and a main walkway extends all the way back with rooms arranged leaflike to the sides. The *Raven* carries three times as many modules as a standard *Danube* class runabout. The walkway terminates in the aft cargo area. The warp core is contained on top, just like a standard runabout. The warp core has Jeffries tube access from the cargo area.
+The *Raven* has a very simple structure of single saucer shaped hull with warp coils at the bottom - somewhat like the ubiquitious *Miranda* class but much smaller.
+
+Like all ships of the ICP like, the *Raven* lacks a true bridge, which is replaced by the large cockpit at the front of deck 2. This is followed by runabout like modular labs and living area - messhall, sickbay, etc. This is followed by the engine room which houses the vertical warp core which occupies both decks. This is followed by the cargo/shuttle bay, which also houses the ship's transporters. The cargo bay also spans both decks.
+
+The front part of deck 1 has additional labs which require specialized instrumentation.
 
 #### Auxillary vehicles.
 
-Like the *Argo*, the *Raven* can also hold auxillary vehicles in the aft cargo area. Typically these are land vehicles, although the cargo hold is large enough to hold a *Bumblebee* (or smaller) shuttle. The *Raven* is not configured for launching auxillary vehicles in space, although it can be achieved by sealing the cargo area and opening the aft bay doors to vent atmosphere. 
-
-This manoeuvre is not recommended if you have cargo in the hold which you don't want to lose.
+The large aft cargo bay of the *Raven* is large enough to hold small to medium shuttles and frequently carries 1 *Bumblebee* class shuttle.
 
 ### Deployment
 
-The *Raven* is the standard auxillary vehicle of the *Aviary*. It is used for planetary and deep space away missions, and used as transport vehicle for personnel and cargo. The *Aviary* maintains 80 *Raven* vessels, distributed across all science sections.
+The *Raven* is used by the *Aviary* like any other ship would use runabouts - stand alone missions, long missions, missions spanning multiple sites, etc. The *Aviary* maintains 16 *Raven* vessels, 2 in each science sections.
 
 ## Vulture Class
 
@@ -523,11 +525,13 @@ The *Vulture Class* is not just named after a bird of prey - for all practical p
 
 The *Vulture* is arguably the most successful space craft built by the ICP. With a destructive power comparable to the *Constitution* class of about two centuries ago, the *Vulture* is deployed in a variety of patrol and escort roles. Within Federation space, the *Vulture* forms the first response to any threat. 
 
-And it is fast developing a reputation of being the last response required as well.
+The *Vulture* can limp back from damage that would destroy much larger ships and with that it is fast developing a reputation of being the last response required as well.
 
 ### Structure
 
-Despite its compact appearance, the *Vulture* is built on a rather conservative pattern. It contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
+Like the *Hawk* is a *Magpie* with teeth, so is the *Vulture* a much better armed *Raven* class.
+
+The *Vulture* contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
 
 The upper deck is essentially a runabout, with the cockpit in front followed by main transporter and replicator, dormitory, sickbay, gym and brig. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1. This cargo section is directly connected to the torpedo launchers and can be used to hold extra torpedoes, or can be configured with a sensor array if required.
 
@@ -539,7 +543,7 @@ The warp core of the *Vulture* is much more powerful than a ship of this size wo
 
 #### Note
 
-Like the *Magpie* the cargo hold of the *Vulture* can also hold a *Bumblebee* class shuttle. Unlike the *Magpie*, the shuttle can be launched and retrieved without venting the atmosphere, thanks to the *Vultures* shields.
+The cargo hold of the *Vulture* can also hold a *Bumblebee* class shuttle. However it rarely carries one due to mission profiles never needing (relatively) delicate shuttles.
 
 ### Deployment
 
