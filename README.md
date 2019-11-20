@@ -385,26 +385,32 @@ Magpie Class Scientific Heavy Runabout
 
 ### Stats
 
- * Length: 20m
- * Width: 18m
- * Height: 6m
- * Decks: 1
+ * Length: 22m
+ * Width: 13.9m
+ * Height: 5.1m
+ * Decks: 1.5
  * Crew Capacity:
    * Minimum: 1
-   * Typical: 10
-   * Maximum: 56
- * Auxillary Craft: None
+   * Typical: 5
+   * Maximum: 100
+ * Auxillary Craft: *See note below*
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
 
 ### Description
 
-The *Magpie* is the first vessel created by the ICP which successfully acts as an independent ship as well as an auxillary vehicle. It is feature par with any science vessel from the pioneering age of warp travel, from the late 2100s to the early 2200s.
+The *Magpie* is nominally the size of a regular runabout, but because of its boxy build manages to fit twice as much capacity as a regular runabout of its size. 
 
 ### Structure
 
-The *Magpie* shows it's inspiration from the *Argo* class cargo shuttle of the late 2300s, with its boxy structure and embedded warp nacelles. The cockpit is in the front, and a main walkway extends all the way back with rooms arranged leaflike to the sides. The *Magpie* carries three times as many modules as a standard *Danube* class runabout. The walkway terminates in the aft cargo area. The warp core is contained on top, just like a standard runabout. The warp core has Jeffries tube access from the cargo area.
+The cockpit is in the front which contains the main consoles, transporter and replicator. The cockpit ends in a stair ascending half a deck to the rest of the ship. This contains the modular units of a runabout towards the sides, and towards the center there's an open area containing a messhall and an assembly area. Aft of that, is the cargo hold, which spans the height of two decks. 
+
+Descending down into the cargo hold, we see the doors connecting to the half second deck underneath the main deck. The center of this is occupied by a horizontal warp core, with additional modular units on the sides. 
+
+#### Note on auxillary vehicles
+
+The cargo hold of the *Magpie* is big enough to hold land vehicle - or even a small shuttle although it would be a tight fit. To facilitate this, the cargo bay of the *Magpie* is equipped with semi-permeable shields.
 
 ### Deployment
 
@@ -427,7 +433,7 @@ Hawk Class tactical runabout
  * Crew Capacity:
    * Minimum: 1
    * Typical: 2
-   * Maximum: 24
+   * Maximum: 50
  * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 5.2
@@ -435,7 +441,7 @@ Hawk Class tactical runabout
 
 ### Description
 
-The *Hawk* class started as a program to add a tactical harness to the MACS *Hornet* class heavy shuttle. Although that design was ultimately rejected, the ICP came up with a lot of improvement ideas, which they ultimately put together into a separate design. Thus the *Hawk* class was born.
+The *Hawk* class is basically a *Magpie* with a bigger warp core, bigger warp coils, and more weapons. This reduces the capacity of the *Hawk* class to something slightly less than a standard runabout, but that doesn't really matter in practice since this class of vessels is generally used for tactical missions rather than scientific. 
 
 ### Structure
 
@@ -462,9 +468,9 @@ Raven Class Scientific Heavy Runabout
  * Height: 7m
  * Decks: 2
  * Crew Capacity:
-   * Minimum: 1
+   * Minimum: 2
    * Typical: 10
-   * Maximum: 56
+   * Maximum: 200
  * Auxillary Craft: *See below note in Structure section*
  * Warp Speed:
    * Cruising: Warp 4
