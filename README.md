@@ -484,7 +484,7 @@ The *Raven* is the first vessel created by the ICP which successfully acts as an
 
 The *Raven* has a very simple structure of single saucer shaped hull with warp coils at the bottom - somewhat like the ubiquitious *Miranda* class but much smaller.
 
-Like all ships of the ICP like, the *Raven* lacks a true bridge, which is replaced by the large cockpit at the front of deck 2. This is followed by runabout like modular labs and living area - messhall, sickbay, etc. This is followed by the engine room which houses the vertical warp core which occupies both decks. This is followed by the cargo/shuttle bay, which also houses the ship's transporters. The cargo bay also spans both decks.
+Like all ships of the ICP, the *Raven* lacks a true bridge, which is replaced by the large cockpit at the front of deck 2. This is followed by runabout like modular labs and living area - messhall, sickbay, etc. This is followed by the engine room which houses the vertical warp core which occupies both decks. This is followed by the cargo/shuttle bay, which also houses the ship's transporters. The cargo bay also spans both decks.
 
 The front part of deck 1 has additional labs which require specialized instrumentation.
 
@@ -640,4 +640,3 @@ The *Aviary* holds 3 *Dove* class yachts in the lower hangar of section 0.
 ![scale](images/combined/scale.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/scale.stl)
-
