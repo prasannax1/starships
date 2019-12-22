@@ -163,7 +163,7 @@ module attack() {
     }
 }
 
-module scout() {
+module scout_old() {
     difference() {
         util_saucer(54,54,5);
 
@@ -243,7 +243,7 @@ module runabout() {
     }
 }
 
-module scout2() {
+module scout() {
     difference() {
         util_mirrored([0,0,1]) 
             util_saucer(64,54,6);
@@ -263,8 +263,10 @@ module scout2() {
 
     
     translate([0,0,-2.95])
-        mirror([0,0,1])
+        mirror([0,0,1]) {
             util_nacelle(48,45,11,curved=true,up=false);
+            
+        }
     
     difference() {
         translate([-32,0,-2])
@@ -280,8 +282,8 @@ module scout2() {
     
     util_mirrored([0,1,0])
         translate([-30,22,3])
-            rotate([-75,0,0])
+            rotate([-60,0,0])
                 util_nacelle(48,6,8,curved=true);
 }
 
-scout2();
+scout();
