@@ -1,12 +1,16 @@
 use <mother.scad>;
-use <attack.scad>;
+//use <attack.scad>;
 use <science.scad>;
-use <scout.scad>;
+//use <scout.scad>;
 use <diplomatic.scad>;
 use <hospital.scad>;
 use <macs.scad>;
 use <tactical-runabout.scad>;
 use <util.scad>;
+use <ICP.scad>;
+use <attack2.scad>;
+
+use <perf.scad>;
         
 module mother_a() {
     rotate(90) mother();
@@ -83,7 +87,7 @@ module xfer_r() {
 module science_r() {
     util_mirrored([0,1,0])    
         translate([-37.5,-30,0]) rotate(-360/32)
-            repeat(4, [25,0,0]) rotate(90) science();
+            repeat(5, [20,0,0]) rotate(90) runabout();
     
     translate([-75,-12.5,0])
     repeat(2, [0,25,0]) science();
@@ -105,7 +109,7 @@ module hospital_r() {
 module attack_r() {
     rotate(90) attack();
         util_mirrored([1,0,0])
-        translate([35,75,0])
+        translate([30,75,0])
             rotate(90) attack();
 }
 
