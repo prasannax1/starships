@@ -49,6 +49,8 @@ module mvm_main_disk_assembly() {
     
     translate([333,0,-45])
         mvm_main_disk_deflector();
+    
+    mvm_main_disk_impulse();
 }
 
 module mvm_main_disk_deflector() {
@@ -75,7 +77,20 @@ module mvm_main_disk_deflector() {
 
 mvm_main_disk_assembly();
 
-translate([0,0,35])
-util_saucer(360,360,35);
 
 
+module mvm_main_disk_impulse() {
+    difference() {
+        union() {
+            scale([1,2,1])
+                translate([0,0,35])
+                    rotate([0,-90,0])
+                        translate([0,0,750/4])
+                            cylinder(750/2,30,30,center=true);
+
+            translate([-750/2+50,0,2.5])
+                cube([100,120,65],center=true);
+        }
+        cylinder(800,266,266,center=true);
+    }
+}
