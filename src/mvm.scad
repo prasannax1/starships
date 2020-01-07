@@ -3,12 +3,12 @@ use <util.scad>;
 
 module mvm_main_disk() {
     difference() {
-        translate([0,0,-35]) difference() {
-            util_saucer(750,750,100);
-            translate([0,0,500+70])
-            cube(1000, center=true);
+        translate([0,0,-30]) difference() {
+            util_saucer(750,750,75);
+            translate([0,0,500+60])
+                cube(1000, center=true);
         }
-        translate([0,0,-20]) difference() {
+        translate([0,0,-15]) difference() {
             cylinder(20,800/2, 800/2, center=true);
 
             scale([1,1,5])
@@ -16,8 +16,8 @@ module mvm_main_disk() {
         }
     }
     
-    translate([0,0,-20])
-       cylinder(34, 740/2, 685/2, center=true);
+    translate([0,0,-14])
+       cylinder(24, 740/2, 680/2, center=true);
 
 }
 
@@ -44,10 +44,10 @@ module mvm_main_disk_assembly() {
     mvm_main_disk();
     
     util_mirrored([0,1,0])
-        translate([0,330,-50])
+        translate([0,330,-40])
             mvm_main_disk_nacelle();
     
-    translate([330,0,-40])
+    translate([330,0,-30])
         mvm_main_disk_deflector();
     
     mvm_main_disk_impulse();
@@ -86,7 +86,7 @@ module mvm_main_disk_deflector() {
 
 module mvm_command() {
     difference() {
-        util_saucer(400,400,50);
+        util_saucer(400,400,40);
         translate([200,0,10])
             cube(40,center=true);
     }
@@ -118,7 +118,7 @@ module mvm_main_disk_impulse() {
     difference() {
         union() {
             scale([1,2,1])
-                translate([0,0,35])
+                translate([0,0,20])
                     rotate([0,-90,0])
                         translate([0,0,750/4])
                             cylinder(750/2,30,30,center=true);
@@ -129,7 +129,7 @@ module mvm_main_disk_impulse() {
         cylinder(800,266,266,center=true);
         
         scale([1.2,1.6,.8])
-            translate([-300,0,35])
+            translate([-300,0,30])
                 rotate([0,-90,0])
                     translate([0,0,750/4])
                         cylinder(750/2,30,30,center=true);
@@ -138,9 +138,9 @@ module mvm_main_disk_impulse() {
 
 module mvm_total_assembly_combined() {
     mvm_main_disk_assembly();
-    translate([0,0,35-.01]) mvm_command();
-    translate([0,0,-35+.01]) mvm_transwarp();
-    translate([-750/2,0,-35+.01]) mvm_back_hangar();
+    translate([0,0,27-.01]) mvm_command();
+    translate([0,0,-30+.01]) mvm_transwarp();
+    translate([-750/2,0,-30+.01]) mvm_back_hangar();
 }
 
 module mvm_transwarp() {
@@ -153,11 +153,11 @@ module mvm_transwarp() {
     difference() {
         translate([-750/2,0,0])
             mirror([0,0,1])
-                util_saucer(750,270,150);
+                util_saucer(750,270,120);
 
-        translate([-75,0,-75])
+        translate([-70,0,-75])
             rotate([0,90,0])
-                cylinder(175,35,80,center=true);
+                cylinder(175,20,80,center=true);
         
         translate([-700,0,-175])
             scale([1.8,1,1])
@@ -172,7 +172,7 @@ module mvm_transwarp() {
         mvm_transwarp_nacelle_bar();
     
     util_mirrored([0,1,0])
-        translate([-750,750/2-50,120]) 
+        translate([-750,750/2-50,90]) 
             mvm_transwarp_nacelle();
 }
 
@@ -180,7 +180,7 @@ module mvm_transwarp() {
 module mvm_transwarp_nacelle_bar() {
     difference() {
         translate([-700,0,-30])
-        util_nacelle_bar(700,150,700,16);
+        util_nacelle_bar(700,110,700,16);
         
         translate([-700,0,-175])
             scale([1.8,1,1])
@@ -193,16 +193,16 @@ module mvm_transwarp_nacelle_bar() {
         translate([-750/2,0,0])
             util_saucer(750,270,150);
 
-        translate([-1200,0,0])
-            cylinder(900,450,450,center=true);
+        translate([-1300,0,0])
+            cylinder(900,600,600,center=true);
 
         util_mirrored([0,1,0])
-            translate([-750/2,630,0])
-                cylinder(900,500,500,center=true);
+            translate([-750/2+75,550,0])
+                cylinder(900,450,450,center=true);
         
-        translate([-750/2,0,690])
+        translate([-750/2,0,490])
             rotate([90,0,0])
-                cylinder(900,700,700,center=true);
+                cylinder(900,400,400,center=true);
     }
 }
 
@@ -210,7 +210,7 @@ module mvm_transwarp_nacelle() {
     translate([125,0,0]) {
         difference() {
             union() {
-                util_saucer(1000,100,45);
+                util_saucer(1000,100,60);
                 mirror([0,0,1])
                     util_saucer(1000,100,15);
             }
@@ -219,7 +219,7 @@ module mvm_transwarp_nacelle() {
                 cube(1000,center=true);
         }
 
-        util_saucer(500,100,45);
+        util_saucer(500,100,60);
         mirror([0,0,1])
             util_saucer(500,100,15);
     }
@@ -227,34 +227,34 @@ module mvm_transwarp_nacelle() {
 
 module mvm_back_hangar() {
     difference() {
-        util_saucer(750,270,100);
+        util_saucer(750,270,75);
 
         translate([750/2,0,0])
             cylinder(500,750/2,750/2,center=true);
 
-        translate([0,0,500+70])
+        translate([0,0,500+60])
             cube(1000, center=true);
 
         translate([50,0,40])
             cube([100,120,100],center=true);
     }
 
-    translate([-180,0,70-.1])
+    translate([-180,0,55-.1])
         util_saucer(120,120,30);
 
-    translate([-90-.1,0,70-.1])
+    translate([-90-.1,0,55-.1])
        scale([1,2,1])
             rotate([0,-90,0])
                 translate([0,0,0])
                     cylinder(180,30,30,center=true);
     
     util_mirrored([0,1,0])
-        translate([-30,60,90])
+        translate([-30,60,85])
             mirror([1,0,0])
                 rotate([-90,0,0])
                     util_nacelle(180,25,50,curved=true);
 
-    translate([-20,0,72])
+    translate([-20,0,67])
         util_nacelle_bar(160,20,20,7.5);
 }
 
