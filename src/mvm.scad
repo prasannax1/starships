@@ -140,14 +140,15 @@ module mvm_total_assembly_combined() {
     mvm_main_disk_assembly();
     translate([0,0,35-.01]) mvm_command();
     translate([0,0,-35+.01]) mvm_transwarp();
+    translate([-750/2,0,-35+.01]) mvm_back_hangar();
 }
 
 module mvm_transwarp() {
     translate([0,0,-25/2+.1])
-        cylinder(25,170,180,center=true);
+        cylinder(25,220,240,center=true);
 
     translate([0,0,-25/2-5])
-        cylinder(25,120,120, center=true);
+        cylinder(25,150,150, center=true);
 
     difference() {
         translate([-750/2,0,0])
@@ -166,9 +167,86 @@ module mvm_transwarp() {
         translate([-700+-250,0,-250-25])
             cube(500,center=true);
     }
+    
+    scale([1,1,1])
+    mvm_transwarp_nacelle_bar();
+    util_mirrored([0,1,0])
+        translate([-750,750/2-45,120]) 
+            mvm_transwarp_nacelle();
+}
+
+
+module mvm_transwarp_nacelle_bar() {
+    difference() {
+        translate([-700,0,-30])
+        util_nacelle_bar(700,150,700,16);
+        
+        translate([-700,0,-175])
+            scale([1.8,1,1])
+                rotate([90,0,0])
+                    cylinder(500,150,150,center=true);
+
+        translate([-700+-250,0,-250-25])
+            cube(500,center=true);
+
+        translate([-750/2,0,0])
+            util_saucer(750,270,150);
+
+        translate([-1200,0,0])
+            cylinder(900,450,450,center=true);
+
+        util_mirrored([0,1,0])
+            translate([-750/2,630,0])
+                cylinder(900,500,500,center=true);
+        
+        translate([-750/2,0,690])
+            rotate([90,0,0])
+                cylinder(900,700,700,center=true);
+    }
+}
+
+module mvm_transwarp_nacelle() {
+    translate([125,0,0]) {
+        difference() {
+            union() {
+                util_saucer(1000,100,45);
+                mirror([0,0,1])
+                    util_saucer(1000,100,15);
+            }
+            
+            translate([500,0,0])
+                cube(1000,center=true);
+        }
+
+        util_saucer(500,100,45);
+        mirror([0,0,1])
+            util_saucer(500,100,15);
+    }
+}
+
+module mvm_back_hangar() {
+    difference() {
+        util_saucer(750,270,100);
+
+        translate([750/2,0,0])
+            cylinder(500,750/2,750/2,center=true);
+
+        translate([0,0,500+70])
+            cube(1000, center=true);
+
+        translate([50,0,40])
+            cube([100,120,100],center=true);
+    }
+
+    translate([-180,0,70-.1])
+        util_saucer(120,120,30);
+
+    translate([-90-.1,0,70-.1])
+       scale([1,2,1])
+            rotate([0,-90,0])
+                translate([0,0,0])
+                    cylinder(180,30,30,center=true);
 }
 
 mvm_total_assembly_combined();
-
-
 
