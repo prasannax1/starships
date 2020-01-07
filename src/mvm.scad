@@ -104,14 +104,14 @@ module mvm_command() {
         cylinder(800,266,266,center=true);
     }
     
-    translate([-220,0,0])
-        util_nacelle_bar(120,40,30,12.5);
+    translate([-240,0,0])
+        mirror([1,0,0])
+            util_nacelle(100,20,50,curved=true);
 
-    util_mirrored([0,1,0])
-        translate([-175,55,32])
-            rotate([-30,0,0])
-                util_nacelle(200,50,15,curved=true);
+    translate([-180,0,32])
+        util_nacelle(270,96,25,curved=true);
 }
+
 
 
 module mvm_main_disk_impulse() {
@@ -246,7 +246,18 @@ module mvm_back_hangar() {
             rotate([0,-90,0])
                 translate([0,0,0])
                     cylinder(180,30,30,center=true);
+    
+    util_mirrored([0,1,0])
+        translate([-30,60,90])
+            mirror([1,0,0])
+                rotate([-90,0,0])
+                    util_nacelle(180,25,50,curved=true);
+
+    translate([-20,0,72])
+        util_nacelle_bar(160,20,20,7.5);
 }
 
 mvm_total_assembly_combined();
+
+
 
