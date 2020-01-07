@@ -169,9 +169,10 @@ module mvm_transwarp() {
     }
     
     scale([1,1,1])
-    mvm_transwarp_nacelle_bar();
+        mvm_transwarp_nacelle_bar();
+    
     util_mirrored([0,1,0])
-        translate([-750,750/2-45,120]) 
+        translate([-750,750/2-50,120]) 
             mvm_transwarp_nacelle();
 }
 
@@ -258,6 +259,5 @@ module mvm_back_hangar() {
 }
 
 mvm_total_assembly_combined();
-
 
 
