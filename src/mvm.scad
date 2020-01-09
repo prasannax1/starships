@@ -137,7 +137,7 @@ module mvm_transwarp() {
             mirror([0,0,1])
                 util_saucer(750,270,120);
 
-        translate([-70,0,-75])
+        translate([-70,0,-64])
             rotate([0,90,0])
                 cylinder(175,20,80,center=true);
         
