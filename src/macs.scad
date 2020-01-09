@@ -94,7 +94,7 @@ module macs_corridor(length) {
 }
 
 module macs_large_nacelle() {
-    util_nacelle(23,2.5,2.5,.5,curved=true,up=false);
+    util_nacelle(23,2.5,2.5,curved=true,up=false);
 }
 
 module macs_large_warp(up=false) {

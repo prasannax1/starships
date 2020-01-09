@@ -1,59 +1,73 @@
 use <util.scad>;
-module at_main_body() {
-    util_saucer(80,40,10);
-    util_body(80,40,5,10);
-}
 
-module at_main_minus() {
-    translate([-54,0,-10])
-        rotate([0,15,0])
-            cube([80,29,80], center=true);
+module model1() {
+    cylinder(2,20,15);
+    mirror([0,0,1])
+        cylinder(2,20,19);
 
-    translate([40.5,0,-2.5])
-        sphere(1.5, $fn=16);
-
-    translate([35.5,0,6])
-        rotate([0,-62.5,0])
-            cube([5,5,10], center=true);
-
-}
-
-module at_nacelle_assembly() {
-    util_mirrored([0,1,0])
-        translate([5,12,4])
-            rotate([45,0,0])
-                at_nacelle_2();
-}
-
-module at_nacelle_2() {
-        util_nacelle(45,7.5,12,curved=true,up=false);
-}
-
-
-module at_main() {
-    union() {
-        difference() {
-            at_main_body();
-            at_main_minus();
-        }
-        at_nacelle_assembly();
+    difference() {
+        translate([-20,0,0])
+            mirror([0,0,1])
+                util_saucer(80,20,6);
+        
+        translate([-65,0,0])
+            cube(100,center=true);
+        
+        translate([68,0,0])
+            cube(100,center=true);
     }
+
+    translate([-15,0,0]) {
+        mirror([0,0,1])
+            util_saucer(20,20,6);
+
+
+        util_saucer(20,20,2);
+    }
+
+    translate([5,0,0])
+        util_nacelle(25,20,3,curved=true);
+
+    util_mirrored([0,1,0])
+        translate([-15,10,-5])
+            rotate([60,0,0])
+                util_nacelle(35,5,12,curved=true,up=false);
 }
 
-module at_msd() {
-    projection(cut = true)
-        rotate([-90,0,0])
-            union() {
-                at_main();
-                translate([5,0,-6])
-                    at_nacelle_2();
-            }
+
+module model2() {
+    difference() {
+        util_saucer(80,40,10);
+
+        translate([-50,0,0])
+            rotate([0,15,0])
+                cube(80,center=true);
+
+        util_mirrored([0,1,0])
+            translate([-40,55,-1])
+                rotate([-30,0,0])
+                    cube(80,center=true);
+            
+        translate([40,0,0])
+            rotate([0,30,0])
+                cube(10,center=true);
+
+        translate([35,0,6.4])
+            rotate([0,-65,0])
+                cube([5,5,7.5],center=true);
+
+    }
+
+
+    util_mirrored([0,1,0]) 
+        translate([-0,11,4])
+            rotate([60,0,0])
+                util_nacelle(40,8,14,curved=true,up=false);
+
 }
 
 module attack() {
-    scale(.75) at_main();
+    model2();
 }
 
 attack();
-
-//at_msd();

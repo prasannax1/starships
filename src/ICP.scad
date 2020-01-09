@@ -159,7 +159,7 @@ module attack() {
             translate([2,18,0])
                 cylinder(15,15,15,center=true);
         
-        translate([-38,0,0]) cylinder(15,22.5,22,5,center=true);
+        translate([-38,0,0]) cylinder(15,22.5,22.5,center=true);
     }
 }
 
