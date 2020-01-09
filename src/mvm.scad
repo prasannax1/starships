@@ -117,12 +117,7 @@ module mvm_main_disk_impulse() {
 }
 }
 
-module mvm_total_assembly_combined() {
-    mvm_main_disk_assembly();
-    translate([0,0,30-.01]) mvm_command();
-    translate([0,0,-30+.01]) mvm_transwarp();
-    translate([-750/2,0,-30+.01]) mvm_back_hangar();
-}
+
 
 module mvm_transwarp() {
     difference() {
@@ -234,7 +229,46 @@ module mvm_back_hangar() {
 
 }
 
-mvm_transwarp();
-mvm_command();
+module mvm_total_assembly_combined() {
+    mvm_main_disk_assembly();
+    translate([0,0,30-.01]) mvm_command();
+    translate([0,0,-30+.01]) mvm_transwarp();
+    translate([-750/2,0,-30+.01]) mvm_back_hangar();
+}
+
+module mvm_total_assembly_transwarp() {
+    mvm_transwarp();
+    mvm_command();
+}
+
+module mvm_total_assembly_separate() {
+    mvm_main_disk_assembly();
+    translate([250,0,100]) mvm_command();
+    translate([-100,0,-100]) mvm_transwarp();
+    translate([-750/2-250,0,50]) mvm_back_hangar();
+}
+
+module mvm_total_assembly_starbase() {
+    mvm_main_disk_assembly();
+    translate([-750/2,0,-30+.01])
+        mvm_back_hangar();
+}
 
 
+module mvm_assembly(type="combined") {
+    if (type == "combined") 
+        mvm_total_assembly_combined();
+    else if (type == "separate")
+        mvm_total_assembly_separate();
+    else if (type == "transwarp")
+        mvm_total_assembly_transwarp();
+    else if (type == "starbase")
+        mvm_total_assembly_starbase();
+    else if (type == "scout")
+        mvm_command();
+    else
+        mvm_transwarp();
+    
+}
+
+mvm_assembly();
