@@ -47,7 +47,7 @@ module mvm_main_disk_assembly() {
         translate([0,330,-40])
             mvm_main_disk_nacelle();
     
-    translate([330,0,-30])
+    translate([315,0,-30])
         mvm_main_disk_deflector();
     
     mvm_main_disk_impulse();
@@ -91,64 +91,48 @@ module mvm_command() {
             cube(40,center=true);
     }
 
-    intersection() {
-        difference() {
-            scale([1,2,1])
-                rotate([0,-90,0])
-                    translate([0,0,750/4])
-                        cylinder(750/2,30,30,center=true);
-            
-            translate([0,0,-400])
-                cube(800,center=true);
-        }
-        cylinder(800,266,266,center=true);
-    }
-    
-    translate([-240,0,0])
-        mirror([1,0,0])
-            util_nacelle(100,20,50,curved=true);
 
-    translate([-180,0,32])
-        util_nacelle(270,96,25,curved=true);
+    
+
+
+    translate([-120,0,0])
+        mirror([0,0,1])
+        util_nacelle(400,120,40,curved=true,up=false);
 }
 
 
 
 module mvm_main_disk_impulse() {
     difference() {
-        union() {
-            scale([1,2,1])
-                translate([0,0,20])
-                    rotate([0,-90,0])
-                        translate([0,0,750/4])
-                            cylinder(750/2,30,30,center=true);
-
-            translate([-750/2+50,0,2.5])
-                cube([100,120,65],center=true);
-        }
-        cylinder(800,266,266,center=true);
+    intersection() {
+    translate([-750/2+100,0,0])
+        cube([200,150,60], center=true);
         
-        scale([1.2,1.6,.8])
-            translate([-300,0,30])
-                rotate([0,-90,0])
-                    translate([0,0,750/4])
-                        cylinder(750/2,30,30,center=true);
+        translate([0,0,-30])
+        util_saucer(750,750,750/2);
     }
+    
+    translate([-750/2+7,0,10])
+    cube([16,100,20-.1], center=true);
+}
 }
 
 module mvm_total_assembly_combined() {
     mvm_main_disk_assembly();
-    translate([0,0,27-.01]) mvm_command();
+    translate([0,0,30-.01]) mvm_command();
     translate([0,0,-30+.01]) mvm_transwarp();
     translate([-750/2,0,-30+.01]) mvm_back_hangar();
 }
 
 module mvm_transwarp() {
-    translate([0,0,-25/2+.1])
-        cylinder(25,220,240,center=true);
+    difference() {
+    mirror([0,0,1])
+    util_saucer(400,400,50);
+        
+        translate([0,0,-200-25])
+        cube(400,center=true);
+    }
 
-    translate([0,0,-25/2-5])
-        cylinder(25,150,150, center=true);
 
     difference() {
         translate([-750/2,0,0])
@@ -172,7 +156,7 @@ module mvm_transwarp() {
         mvm_transwarp_nacelle_bar();
     
     util_mirrored([0,1,0])
-        translate([-750,750/2-50,90]) 
+        translate([-750,750/2-50,55]) 
             mvm_transwarp_nacelle();
 }
 
@@ -180,7 +164,7 @@ module mvm_transwarp() {
 module mvm_transwarp_nacelle_bar() {
     difference() {
         translate([-700,0,-30])
-        util_nacelle_bar(700,110,700,16);
+        util_nacelle_bar(700,60,700,16);
         
         translate([-700,0,-175])
             scale([1.8,1,1])
@@ -235,29 +219,22 @@ module mvm_back_hangar() {
         translate([0,0,500+60])
             cube(1000, center=true);
 
-        translate([50,0,40])
-            cube([100,120,100],center=true);
+//        translate([50,0,40])
+//            cube([100,120,100],center=true);
     }
 
-    translate([-180,0,55-.1])
-        util_saucer(120,120,30);
-
-    translate([-90-.1,0,55-.1])
-       scale([1,2,1])
-            rotate([0,-90,0])
-                translate([0,0,0])
-                    cylinder(180,30,30,center=true);
+    translate([-180,0,60])
+    util_saucer(64,64,10);
     
     util_mirrored([0,1,0])
-        translate([-30,60,85])
+        translate([-90,60,60])
             mirror([1,0,0])
-                rotate([-90,0,0])
-                    util_nacelle(180,25,50,curved=true);
+                    util_nacelle(200,30,30,curved=true);
 
-    translate([-20,0,67])
-        util_nacelle_bar(160,20,20,7.5);
+
 }
 
-mvm_total_assembly_combined();
+mvm_transwarp();
+mvm_command();
 
 
