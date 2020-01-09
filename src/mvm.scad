@@ -221,7 +221,7 @@ module mvm_back_hangar() {
 //            cube([100,120,100],center=true);
     }
 
-    translate([-180,0,60])
+    translate([-180,0,59])
     util_saucer(64,64,10);
     
     util_mirrored([0,1,0])
