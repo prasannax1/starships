@@ -97,7 +97,10 @@ module mvm_command() {
 
     translate([-120,0,0])
         mirror([0,0,1])
-        util_nacelle(400,120,40,curved=true,up=false);
+        util_nacelle(200,120,45,curved=true,up=false);
+    
+        translate([-120,0,0])
+        util_nacelle(400,120,24,curved=true,up=true);
 }
 
 
@@ -138,12 +141,12 @@ module mvm_transwarp() {
             rotate([0,90,0])
                 cylinder(175,20,80,center=true);
         
-        translate([-700,0,-175])
+        translate([-600,0,-175])
             scale([1.8,1,1])
                 rotate([90,0,0])
                     cylinder(500,150,150,center=true);
 
-        translate([-700+-250,0,-250-25])
+        translate([-600+-250,0,-250-25])
             cube(500,center=true);
     }
     
@@ -161,12 +164,12 @@ module mvm_transwarp_nacelle_bar() {
         translate([-700,0,-30])
         util_nacelle_bar(700,75,700,16);
         
-        translate([-700,0,-175])
+        translate([-600,0,-175])
             scale([1.8,1,1])
                 rotate([90,0,0])
                     cylinder(500,150,150,center=true);
 
-        translate([-700+-250,0,-250-25])
+        translate([-600+-250,0,-250-25])
             cube(500,center=true);
 
         translate([-750/2,0,0])
@@ -179,7 +182,7 @@ module mvm_transwarp_nacelle_bar() {
         cube(750,center=true);
 
         util_mirrored([0,1,0])
-            translate([-750/2+420,550,0])
+            translate([-750/2+440,550,0])
                 cylinder(900,750,750,center=true);
         
         translate([-750/2,0,490])
@@ -227,7 +230,7 @@ module mvm_back_hangar() {
     util_mirrored([0,1,0])
         translate([-90,60,60])
             mirror([1,0,0])
-                    util_nacelle(200,30,30,curved=true);
+                    util_nacelle(200,30,12.5,curved=true);
 
 
 }
