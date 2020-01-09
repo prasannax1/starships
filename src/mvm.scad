@@ -240,6 +240,7 @@ module mvm_total_assembly_combined() {
     translate([0,0,30-.01]) mvm_command();
     translate([0,0,-30+.01]) mvm_transwarp();
     translate([-750/2,0,-30+.01]) mvm_back_hangar();
+    translate([0,0,-30-25+.01]) mvm_escort();
 }
 
 module mvm_total_assembly_transwarp() {
@@ -252,6 +253,7 @@ module mvm_total_assembly_separate() {
     translate([250,0,100]) mvm_command();
     translate([-100,0,-100]) mvm_transwarp();
     translate([-750/2-250,0,50]) mvm_back_hangar();
+    translate([0,0,-175]) mvm_escort();
 }
 
 module mvm_total_assembly_starbase() {
@@ -266,15 +268,54 @@ module mvm_assembly(type="combined") {
         mvm_total_assembly_combined();
     else if (type == "separate")
         mvm_total_assembly_separate();
-    else if (type == "transwarp")
+    else if (type == "starship")
         mvm_total_assembly_transwarp();
     else if (type == "starbase")
         mvm_total_assembly_starbase();
     else if (type == "scout")
         mvm_command();
-    else
+    else if (type == "escort")
+        mvm_escort();
+    else if (type == "cargo")
+        rotate(180) mvm_back_hangar();
+    else if (type == "saucer")
+        mvm_main_disk_assembly();
+    else if (type == "transwarp")
         mvm_transwarp();
     
+}
+
+
+module mvm_escort() {
+    difference() {
+        mirror([0,0,1])
+            util_saucer(200,200,25);
+
+        util_mirrored([0,1,0]) {
+            translate([0,66,25/2-3])
+                cube([200,5,25],center=true);
+
+            translate([0,66,-27])
+                cube([200,5,25],center=true);
+
+            translate([75,66,0])
+                cube([100,5,100],center=true);
+
+            translate([-66,66,0])
+                cube([100,5,100],center=true);
+
+            translate([100,66+50,-20])
+                rotate([0,45,0])
+                    cube(100, center=true);
+        }
+
+        translate([100,0,0])
+            rotate([0,-15,0])
+                cube([25,25,100],center=true);
+
+        translate([-100,0,0])
+            cube(132, center=true);
+    }
 }
 
 mvm_assembly();
