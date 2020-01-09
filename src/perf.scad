@@ -2,12 +2,12 @@ use <util.scad>;
 
 module mother() {
     color("grey")
-    import("../stl/mother.stl", convexity=3);
+    import("../stl/mother/main.stl", convexity=3);
 }
 
 module m_main_sep() {
     color("grey")
-    import("../stl/ms_saucer_separate.stl", convexity=9);
+    import("../stl/main/separate.stl", convexity=9);
 }
 
 module scout() {
