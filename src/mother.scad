@@ -332,12 +332,12 @@ module mvm_escort() {
     }
 }
 
-mvm_assembly();
+mvm_assembly(type="combined");
 
 module mother() {
     mvm_assembly(type="combined");
 }
 
 module m_main_sep() {
-    mvm_assembly(type="separated");
+    mvm_assembly(type="separate");
 }
