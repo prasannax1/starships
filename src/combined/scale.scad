@@ -14,7 +14,7 @@ use <../icp/attack.scad>;
 use <../icp/tactical-runabout.scad>;
 use <../macs/hospital.scad>;
 
-use <perf.scad>;
+//use <perf.scad>;
 
 
 m_main_sep();
@@ -23,7 +23,7 @@ translate([50,0,240]) hospital();
 translate([-30,0,150]) science();
 translate([30,0,150]) runabout();
 translate([-30,0,180]) attack();
-translate([30,0,180]) tactical();
+translate([50,0,180]) tactical();
 translate([0,0,210]) diplomat();
 translate([0,0,240]) macs_heavy_runabout();
 translate([0,0,260]) macs_fast_shuttle();
