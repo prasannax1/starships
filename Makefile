@@ -1,4 +1,4 @@
-all: icpstls macstls motherstls
+all: icpstls macstls motherstls combinestls
 
 icpstls: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
@@ -154,4 +154,26 @@ stl/mother/starship.stl: src/lib/util.scad src src/mother/starship.scad \
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
 	    -o stl/mother/starship.stl \
 	    src/mother/starship.scad
+
+combinestls: stl/combined/scale.stl
+
+stl/combined/scale.stl: src/lib/util.scad \
+    src/mother/main.scad \
+    src/mother/separation.scad \
+    src/macs/macs.scad \
+    src/macs/shuttle.scad \
+    src/macs/runabout.scad \
+    src/macs/cutter.scad \
+    src/macs/heavy.scad \
+    src/icp/runabout.scad \
+    src/icp/science.scad \
+    src/icp/scout.scad \
+    src/icp/diplomatic.scad \
+    src/icp/attack.scad \
+    src/icp/tactical-runabout.scad \
+    src/macs/hospital.scad \
+    src/combined/scale.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/combined/scale.stl \
+	    src/combined/scale.scad
 
