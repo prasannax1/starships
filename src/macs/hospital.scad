@@ -1,5 +1,16 @@
-use <util.scad>;
+use <../lib/util.scad>;
 use <macs.scad>;
+
+module macs_medevac() {
+    translate([4,0,0]) union() {
+        translate([0,0,.5]) macs_extra_room();
+        translate([0,0,-1.95]) macs_disk(16);        
+        translate([4+1.25, 0, .5]) macs_pod();
+        translate([-12,0,.5]) macs_large_warp(up=true);
+        translate([-21.25,0,.5]) mirror([1,0,0]) macs_pod();
+    }
+}
+
 
 module med_sensors() {
     translate([-8,0,2.4])

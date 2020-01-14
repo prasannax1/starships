@@ -1,4 +1,4 @@
-use <util.scad>;
+use <../lib/util.scad>;
 
 
 
@@ -54,12 +54,7 @@ module macs_small_warp() {
 }
 
 
-module macs_small_shuttle() {
-    union() {
-        translate([1.25,0,0]) macs_pod();
-        translate([-2,0,0]) macs_small_warp();
-    }
-}
+
 
 module macs_extra_room() {
      macs_corridor(8);
@@ -74,13 +69,6 @@ module macs_extra_room() {
     }
 }
 
-module macs_large_shuttle() {
-    union() {
-        translate([1.25 + 4, 0, 0]) macs_pod();
-        macs_extra_room();
-        translate([-2 - 4, 0, 0]) macs_small_warp();
-    }
-}
 
 module macs_corridor(length) {
     difference() {
@@ -122,12 +110,6 @@ module macs_large_warp(up=false) {
     };
 }
 
-module macs_fast_shuttle() {
-    union() {
-        translate([1.25 + 8, 0, 0]) macs_pod();
-        macs_large_warp();
-    }
-}
 
 
 module macs_box() {
@@ -153,15 +135,6 @@ module macs_double_box() {
     }
 }
 
-module macs_heavy_runabout() {
-    union () {
-        translate([-8,0,.5]) macs_large_warp();
-        translate([4,0,.5]) macs_extra_room();
-        translate([8+1.25,0,.5]) macs_pod();
-        translate([-7.4+4,0,-1.8]) macs_double_box();
-        //translate([-16-1.25,0,.5]) mirror([1,0,0]) macs_pod();
-    }
-}
 
 module macs_disk(radius) {
     util_hangar_form(radius*2,radius*2,2,4,3) union () {
@@ -172,15 +145,6 @@ module macs_disk(radius) {
     cylinder(4.5, 3,3, center=true);
 }
 
-module macs_medevac() {
-    translate([4,0,0]) union() {
-        translate([0,0,.5]) macs_extra_room();
-        translate([0,0,-1.95]) macs_disk(16);        
-        translate([4+1.25, 0, .5]) macs_pod();
-        translate([-12,0,.5]) macs_large_warp(up=true);
-        translate([-21.25,0,.5]) mirror([1,0,0]) macs_pod();
-    }
-}
 
 module macs_cargo_element() {
     rotate([0,90,0]) scale([1,1,2]) macs_disk(6);
@@ -200,13 +164,5 @@ module macs_large_cargo() {
     translate([-20,0,0]) cylinder(6.6,3,3);
 }
 
-module macs_freighter() {
-    translate([0,0,-2]) macs_large_cargo();
-    translate([20,0,5]) macs_extra_room();
-    translate([-4,0,5]) macs_extra_room();
-    translate([-12,0,5]) macs_extra_room();
-    translate([-20,0,5]) macs_extra_room();
-    translate([8,0,5]) macs_large_warp();
-    translate([25.25,0,5]) macs_pod();
-}
+    
 
