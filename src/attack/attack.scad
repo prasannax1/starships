@@ -1,4 +1,4 @@
-use <util.scad>;
+use <../lib/util.scad>;
 
 module model1() {
     cylinder(2,20,15);
