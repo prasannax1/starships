@@ -13,4 +13,3 @@ use <../icp/diplomatic.scad>;
 use <../icp/attack.scad>;
 use <../icp/tactical-runabout.scad>;
 use <../macs/hospital.scad>;
-

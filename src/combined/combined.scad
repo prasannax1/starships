@@ -1,31 +1,35 @@
-use <mother.scad>;
-//use <attack.scad>;
-use <science.scad>;
-//use <scout.scad>;
-use <diplomatic.scad>;
-use <hospital.scad>;
-use <macs.scad>;
-use <tactical-runabout.scad>;
-use <util.scad>;
-use <ICP.scad>;
-use <attack2.scad>;
+use <../lib/util.scad>;
+use <../mother/main.scad>;
+use <../mother/separation.scad>;
+use <../macs/macs.scad>;
+use <../macs/shuttle.scad>;
+use <../macs/runabout.scad>;
+use <../macs/cutter.scad>;
+use <../macs/heavy.scad>;
+use <../icp/runabout.scad>;
+use <../icp/science.scad>;
+use <../icp/scout.scad>;
+use <../icp/diplomatic.scad>;
+use <../icp/attack.scad>;
+use <../icp/tactical-runabout.scad>;
+use <../macs/hospital.scad>;
 
 use <perf.scad>;
         
 module mother_a() {
-    rotate(90) mother();
+    mother();
 }
 
 module science_a() {
-    translate([0,270,64]) rotate(90) science_r();
+    translate([0,270,64]) science_r();
 }
 
 module tactical_a() {
-    translate([0,270,64]) rotate(90) tactical_r();
+    translate([0,270,64]) tactical_r();
 }
 
 module xfer_a() {
-    translate([0,250,64]) rotate(90) xfer_r();
+    translate([0,250,64]) xfer_r();
 }
 
 
@@ -46,7 +50,7 @@ module diplomat_a() {
 }
 
 module scout_a() {
-    translate([0,450,-75]) rotate(90) scout();
+    translate([0,450,-75]) scout();
 }
 
 module sector(num) {
