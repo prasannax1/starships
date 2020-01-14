@@ -70,3 +70,40 @@ module macs_pod() {
     import("../../stl/macs/shuttlepod.stl", convexity=3);
 }
 
+module mvm_scout() {
+    color("grey")
+    import("../../stl/mother/scout.stl", convexity=3);
+}
+
+module mvm_saucer() {
+    color("grey")
+    import("../../stl/mother/saucer.stl", convexity=3);
+}
+
+module mvm_hangar() {
+    color("grey")
+    import("../../stl/mother/hangar.stl", convexity=3);
+}
+
+module mvm_transwarp() {
+    color("grey")
+    import("../../stl/mother/transwarp.stl", convexity=3);
+}
+
+module mvm_escort() {
+    color("grey")
+    import("../../stl/mother/escort.stl", convexity=3);
+}
+
+module mvm_starship() {
+    color("grey")
+    import("../../stl/mother/starship.stl", convexity=3);
+}
+
+module mvm_starbase() {
+    color("grey")
+    import("../../stl/mother/starbase.stl", convexity=3);
+}
+
+
+
