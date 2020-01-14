@@ -1,4 +1,4 @@
-all: icpstls macstls
+all: icpstls macstls motherstls
 
 icpstls: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
@@ -89,4 +89,69 @@ stl/macs/freighter.stl: src/macs/macs.scad src/lib/util.scad \
 	    src/macs/freighter.scad
 
 
+motherstls: stl/mother/scout.stl \
+    stl/mother/saucer.stl \
+    stl/mother/transwarp.stl \
+    stl/mother/hangar.stl \
+    stl/mother/escort.stl \
+    stl/mother/main.stl \
+    stl/mother/separation.stl \
+    stl/mother/starbase.stl \
+    stl/mother/starship.stl
+
+stl/mother/scout.stl: src/lib/util.scad src src/mother/scout.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/scout.stl \
+	    src/mother/scout.scad
+
+
+stl/mother/transwarp.stl: src/lib/util.scad src src/mother/transwarp.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/transwarp.stl \
+	    src/mother/transwarp.scad
+
+stl/mother/hangar.stl: src/lib/util.scad src src/mother/hangar.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/hangar.stl \
+	    src/mother/hangar.scad
+
+stl/mother/saucer.stl: src/lib/util.scad src src/mother/saucer.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/saucer.stl \
+	    src/mother/saucer.scad
+
+stl/mother/escort.stl: src/lib/util.scad src src/mother/escort.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/escort.stl \
+	    src/mother/escort.scad
+
+stl/mother/main.stl: src/lib/util.scad src src/mother/main.scad\
+    src/mother/scout.scad src/mother/saucer.scad \
+    src/mother/hangar.scad src/mother/transwarp.scad \
+    src/mother/escort.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/main.stl \
+	    src/mother/main.scad
+
+stl/mother/separation.stl: src/lib/util.scad src \
+    src/mother/separation.scad \
+    src/mother/scout.scad src/mother/saucer.scad \
+    src/mother/hangar.scad src/mother/transwarp.scad \
+    src/mother/escort.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/separation.stl \
+	    src/mother/separation.scad
+
+stl/mother/starbase.stl: src/lib/util.scad src src/mother/starbase.scad \
+    src/mother/saucer.scad src/mother/hangar.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/starbase.stl \
+	    src/mother/starbase.scad
+
+stl/mother/starship.stl: src/lib/util.scad src src/mother/starship.scad \
+    src/mother/scout.scad src/mother/transwarp.scad \
+    src/mother/escort.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/starship.stl \
+	    src/mother/starship.scad
 
