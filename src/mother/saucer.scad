@@ -100,3 +100,7 @@ module mvm_main_disk_assembly() {
 
 
 mvm_main_disk_assembly();
+
+module mvm_saucer() {
+    mvm_main_disk_assembly();
+}

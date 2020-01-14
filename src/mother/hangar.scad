@@ -26,3 +26,7 @@ module mvm_back_hangar() {
 }
 
 rotate(180) mvm_back_hangar();
+
+module mvm_hangar() {
+        rotate(180) mvm_back_hangar();
+}

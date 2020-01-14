@@ -38,3 +38,7 @@ module mvm_command() {
 
 mvm_command();
 
+module mvm_scout() {
+    mvm_command();
+}
+
