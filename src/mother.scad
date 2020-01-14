@@ -114,7 +114,7 @@ module mvm_command() {
     
     util_mirrored([0,1,0])
     translate([-120,120,0])
-    util_nacelle(200,48,32,curved=true);
+    util_nacelle(200,48,16,curved=true);
     
 
 }
@@ -319,7 +319,7 @@ module mvm_assembly(type="combined") {
 module mvm_escort() {
     difference() {
         mirror([0,0,1])
-            util_saucer(300,300,20);
+            util_saucer(240,240,25);
 
         util_mirrored([0,1,0]) {
             translate([0,75,25/2-3])
@@ -334,19 +334,21 @@ module mvm_escort() {
             translate([-75,75,0])
                 cube([100,2,100],center=true);
 
-            translate([150,75+50,-20])
+            translate([120,75+50,-20])
                 rotate([0,45,0])
                     cube(100, center=true);
         }
 
-        translate([150,0,0])
+        translate([120,0,0])
             rotate([0,-15,0])
-                cube([25,25,100],center=true);
+                cube([25,40,100],center=true);
 
         translate([-120,0,0])
             cube(150, center=true);
     }
 }
+
+
 
 mvm_assembly(type="combined");
 
