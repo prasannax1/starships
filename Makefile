@@ -1,16 +1,42 @@
 all: icpstls macstls
 
-icpstls: stl/attack.stl stl/diplomat.stl
+icpstls: stl/icp/attack.stl \
+    stl/icp/diplomat.stl \
+    stl/icp/runabout.stl \
+    stl/icp/tactical-shuttle.stl \
+    stl/icp/science.stl \
+    stl/icp/scout.stl 
 
-stl/attack.stl: src/attack/attack.scad src/lib/util.scad
+stl/icp/attack.stl: src/icp/attack.scad src/lib/util.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o stl/attack.stl \
-	    src/attack/attack.scad
+	    -o stl/icp/attack.stl \
+	    src/icp/attack.scad
 
-stl/diplomat.stl: src/diplomat/diplomatic.scad src/lib/util.scad
+stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o stl/diplomat.stl \
-	    src/diplomat/diplomatic.scad
+	    -o stl/icp/diplomat.stl \
+	    src/icp/diplomatic.scad
+
+stl/icp/runabout.stl: src/icp/runabout.scad src/lib/util.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/icp/runabout.stl \
+	    src/icp/runabout.scad
+
+stl/icp/tactical-shuttle.stl: src/icp/tactical-runabout.scad \
+    src/lib/util.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/icp/tactical-shuttle.stl \
+	    src/icp/tactical-runabout.scad
+
+stl/icp/science.stl: src/icp/science.scad src/lib/util.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/icp/science.stl \
+	    src/icp/science.scad
+
+stl/icp/scout.stl: src/icp/scout.scad src/lib/util.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/icp/scout.stl \
+	    src/icp/scout.scad
 
 macstls: stl/macs/shuttlepod.stl \
     stl/macs/shuttle.stl \
