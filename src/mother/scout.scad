@@ -23,15 +23,15 @@ module mvm_command() {
     rotate([-90,0,0])
     mirror([1,0,0])
         scale([1,1,5])
-    util_nacelle(80,36,30,curved=true);
+    util_nacelle(80,36,15,curved=true);
         
         translate([-100,0,-200])
         cube(400,center=true);
     }
     
     util_mirrored([0,1,0])
-    translate([-120,120,0])
-    util_nacelle(200,48,16,curved=true);
+    translate([-120,60,0])
+    util_nacelle(200,48,48,curved=true);
     
 
 }

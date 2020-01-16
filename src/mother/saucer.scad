@@ -4,8 +4,8 @@ use <../lib/util.scad>;
 module mvm_main_disk() {
     difference() {
         translate([0,0,-30]) difference() {
-            util_saucer(750,750,75);
-            translate([0,0,500+60])
+            util_saucer(750,750,100);
+            translate([0,0,500+80])
                 cube(1000, center=true);
         }
         translate([0,0,-15]) difference() {
@@ -17,7 +17,7 @@ module mvm_main_disk() {
     }
     
     translate([0,0,-14])
-       cylinder(24, 740/2, 680/2, center=true);
+       cylinder(24, 740/2, 700/2, center=true);
 
 }
 
@@ -42,14 +42,15 @@ module mvm_main_disk_nacelle() {
 module mvm_main_disk_impulse() {
     difference() {
         intersection() {
-            translate([-750/2+100,0,0])
-            cube([200,150,60], center=true);
+            translate([-750/2+100,0,10])
+            cube([200,150,80], center=true);
             
             translate([0,0,-30])
-            util_saucer(750,750,750/2);
+            //util_saucer(750,750,750/2);
+            cylinder(1000,750/2,750/2,center=true);
         }
         
-        translate([-750/2+7,0,10])
+        translate([-750/2+7,0,25])
         cube([16,100,20-.1], center=true);
     }
 }
