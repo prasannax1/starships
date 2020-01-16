@@ -46,7 +46,7 @@ module mvm_transwarp() {
         mvm_transwarp_nacelle_bar();
     
     util_mirrored([0,1,0])
-        translate([-700,750/2-50,55]) 
+        translate([-700,750/2-50,75]) 
             mvm_transwarp_nacelle();
 }
 
@@ -55,7 +55,7 @@ module mvm_transwarp() {
 module mvm_transwarp_nacelle_bar() {
     difference() {
         translate([-700,0,-30])
-        util_nacelle_bar(700,75,700,16);
+        util_nacelle_bar(700,100,700,16);
         
         translate([-600,0,-175])
             scale([1.8,1,1])

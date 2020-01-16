@@ -159,7 +159,9 @@ combinestls: stl/combined/scale.stl
 
 stl/combined/scale.stl: src/lib/util.scad \
     src/mother/main.scad \
+    stl/mother/main.stl \
     src/mother/separation.scad \
+    stl/mother/separation.stl \
     src/macs/macs.scad \
     src/macs/shuttle.scad \
     src/macs/runabout.scad \
