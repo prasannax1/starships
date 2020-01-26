@@ -1,4 +1,6 @@
-all: icpstls macstls motherstls combinestls
+all: icpstls macstls motherstls combinestls imgs
+
+imgs: images/icp/attack.png
 
 icpstls: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
@@ -10,6 +12,17 @@ icpstls: stl/icp/attack.stl \
 stl/icp/attack.stl: src/icp/attack.scad src/lib/util.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
 	    -o stl/icp/attack.stl \
+	    src/icp/attack.scad
+
+images/icp/attack.png: stl/icp/attack.stl
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o images/icp/attack.png \
+	    --autocenter \
+	    --viewall \
+	    --imgsize 3840,2160 \
+	    --render \
+	    --projection p \
+	    --colorscheme Sunset \
 	    src/icp/attack.scad
 
 stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad
