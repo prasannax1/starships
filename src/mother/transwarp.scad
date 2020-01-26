@@ -3,11 +3,15 @@ use <../lib/util.scad>;
 
 module mvm_transwarp() {
     difference() {
-    mirror([0,0,1])
-    util_saucer(400,400,40);
+        union() {
+            mirror([0,0,1])
+            util_saucer(280,280,40);
+            translate([-25,0,-2])
+            util_nacelle(500,200,200,curved=true,up=false);
+        }
         
-        translate([0,0,-200-20])
-        cube(400,center=true);
+        translate([0,0,-500-20])
+        cube(1000,center=true);
     }
 
 
