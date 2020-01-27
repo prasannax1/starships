@@ -22,12 +22,12 @@ module mvm_transwarp() {
         union() {
     
             difference() {
-                util_saucer(640,270,100);
+                util_saucer(640,240,100);
                 translate([250+.01,0,0])
                 cube(500,center=true);
             }
             difference() {
-                util_saucer(540,270,100);
+                util_saucer(540,240,100);
                 translate([-250-.01,0,0])
                 cube(500, center=true);
             }

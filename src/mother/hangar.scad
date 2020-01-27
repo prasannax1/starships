@@ -3,7 +3,7 @@ use <../lib/util.scad>;
 module mvm_back_hangar() {
     difference() {
         union () {
-            util_saucer(640,270,80);
+            util_saucer(640,240,80);
             translate([-25,0,75]) util_saucer(48,48,10);
         }
 
@@ -23,7 +23,7 @@ module mvm_back_hangar() {
             mvm_hangar_nacelle();
     
     translate([-50,0,60])
-    util_nacelle_bar(210,10,25,5);
+    util_nacelle_bar(210,12.5,25,10);
 
 }
 
