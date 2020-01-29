@@ -4,7 +4,7 @@ use <../lib/util.scad>;
 module mvm_escort() {
     difference() {
         mirror([0,0,1])
-            util_saucer(240,240,25);
+            util_saucer(240,240,20);
 
         util_mirrored([0,1,0]) {
             translate([0,75,25/2-3])

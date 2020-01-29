@@ -42,13 +42,19 @@ module mvm_main_disk_nacelle() {
 module mvm_main_disk_impulse() {
     difference() {
         intersection() {
-            translate([-750/2+100,0,10])
-            cube([200,150,80], center=true);
+            translate([-750/4,0,-30])
+            scale([1,1,80/120])
+            rotate([0,90,0])
+            cylinder(750/2,120,120,center=true);
+
             
             translate([0,0,-30])
             //util_saucer(750,750,750/2);
             cylinder(1000,750/2,750/2,center=true);
         }
+        
+        translate([0,0,-530])
+        cube(1000, center=true);
         
         translate([-750/2+7,0,25])
         cube([16,100,20-.1], center=true);

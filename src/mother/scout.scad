@@ -18,21 +18,11 @@ module mvm_command() {
         util_nacelle(180,120,120,curved=true,up=false);
     
     util_mirrored([0,1,0])
-    difference() {
-    translate([-180,0,0])
-    rotate([-90,0,0])
-    mirror([1,0,0])
-        scale([1,1,5])
-    util_nacelle(80,36,20,curved=true);
-        
-        translate([-100,0,-200])
-        cube(400,center=true);
-    }
+    translate([-90,95,0])
+    util_nacelle(144,24,24,curved=true);
     
-    util_mirrored([0,1,0])
-    translate([-120,80,0])
-    util_nacelle(180,24,24,curved=true);
-    
+    translate([-120,0,5])
+    cube([24,200,10],center=true);
 
 }
 
