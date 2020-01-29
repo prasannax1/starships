@@ -109,6 +109,7 @@ motherstls: stl/mother/scout.stl \
     stl/mother/escort.stl \
     stl/mother/main.stl \
     stl/mother/separation.stl \
+    stl/mother/normal-separation.stl \
     stl/mother/starbase.stl \
     stl/mother/starship.stl
 
@@ -154,6 +155,15 @@ stl/mother/separation.stl: src/lib/util.scad src \
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
 	    -o stl/mother/separation.stl \
 	    src/mother/separation.scad
+
+stl/mother/normal-separation.stl: src/lib/util.scad src \
+    src/mother/normal-separation.scad \
+    src/mother/scout.scad src/mother/saucer.scad \
+    src/mother/hangar.scad src/mother/transwarp.scad \
+    src/mother/escort.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/mother/normal-separation.stl \
+	    src/mother/normal-separation.scad
 
 stl/mother/starbase.stl: src/lib/util.scad src src/mother/starbase.scad \
     src/mother/saucer.scad src/mother/hangar.scad
