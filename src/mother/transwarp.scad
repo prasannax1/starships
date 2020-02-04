@@ -59,7 +59,7 @@ module mvm_transwarp() {
         mvm_transwarp_nacelle_bar();
     
     util_mirrored([0,1,0])
-        translate([-700,750/2-50,75]) 
+        translate([-700,750/2-50,100]) 
             mvm_transwarp_nacelle();
 }
 
@@ -68,7 +68,7 @@ module mvm_transwarp() {
 module mvm_transwarp_nacelle_bar() {
     difference() {
         translate([-700,0,-30])
-        util_nacelle_bar(700,100,700,16);
+        util_nacelle_bar(700,125,700,16);
         
         translate([-600,0,-175])
             scale([1.8,1,1])
@@ -101,18 +101,18 @@ module mvm_transwarp_nacelle() {
     translate([125,0,0]) {
         difference() {
             union() {
-                util_saucer(1100,100,60);
+                util_saucer(1100,120,60);
                 mirror([0,0,1])
-                    util_saucer(1100,100,15);
+                    util_saucer(1100,120,20);
             }
             
             translate([600,0,0])
                 cube(1200,center=true);
         }
 
-        util_saucer(500,100,60);
+        util_saucer(500,120,60);
         mirror([0,0,1])
-            util_saucer(500,100,15);
+            util_saucer(500,120,20);
     }
 }
 
