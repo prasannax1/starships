@@ -4,8 +4,8 @@ use <../lib/util.scad>;
 module mvm_main_disk() {
     difference() {
         translate([0,0,-30]) difference() {
-            util_saucer(750,750,100);
-            translate([0,0,500+80])
+            util_saucer(750,750,120);
+            translate([0,0,500+100])
                 cube(1000, center=true);
         }
         translate([0,0,-15]) difference() {
@@ -45,13 +45,18 @@ module mvm_main_disk_impulse() {
             translate([-750/4,0,-30])
             scale([1,1,80/120])
             rotate([0,90,0])
-            cylinder(750/2,120,120,center=true);
+            cylinder(750/2,120,185,center=true);
 
             
             translate([0,0,-30])
             //util_saucer(750,750,750/2);
             cylinder(1000,750/2,750/2,center=true);
+            
+            
         }
+        
+        translate([0,0,500+100-30])
+        cube(1000, center=true);
         
         translate([0,0,-530])
         cube(1000, center=true);
