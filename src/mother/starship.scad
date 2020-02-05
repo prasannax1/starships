@@ -6,9 +6,9 @@ use <escort.scad>;
 
 module mvm_total_assembly_transwarp() {
     mvm_transwarp();
-    translate([50,0,0])
+    translate([0,0,0])
     mvm_command();
-    translate([50,0,-20+.01])
+    translate([0,0,-20+.01])
     mvm_escort();
 }
 

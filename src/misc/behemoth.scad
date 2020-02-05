@@ -1,4 +1,4 @@
-use <lib/util.scad>;
+use <../lib/util.scad>;
 
 module b_saucer() {
     difference() {
