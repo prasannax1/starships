@@ -9,7 +9,9 @@ icpstls: stl/icp/attack.stl \
     stl/icp/science.stl \
     stl/icp/scout.stl 
 
-stl/icp/attack.stl: src/icp/attack.scad src/lib/util.scad
+stl/icp/attack.stl: src/icp/attack.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
 	    -o stl/icp/attack.stl \
 	    src/icp/attack.scad
@@ -41,12 +43,16 @@ stl/icp/tactical-shuttle.stl: src/icp/tactical-runabout.scad \
 	    -o stl/icp/tactical-shuttle.stl \
 	    src/icp/tactical-runabout.scad
 
-stl/icp/science.stl: src/icp/science.scad src/lib/util.scad
+stl/icp/science.stl: src/icp/science.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
 	    -o stl/icp/science.stl \
 	    src/icp/science.scad
 
-stl/icp/scout.stl: src/icp/scout.scad src/lib/util.scad
+stl/icp/scout.stl: src/icp/scout.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
 	    -o stl/icp/scout.stl \
 	    src/icp/scout.scad
