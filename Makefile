@@ -1,6 +1,8 @@
 all: icpstls macstls motherstls combinestls imgs miscstls
 
-imgs: images/icp/attack.png
+imgs: images/icp/attack.png \
+    images/icp/science.png \
+    images/icp/scout.png
 
 icpstls: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
@@ -26,6 +28,28 @@ images/icp/attack.png: stl/icp/attack.stl
 	    --projection p \
 	    --colorscheme Sunset \
 	    src/icp/attack.scad
+
+images/icp/science.png: stl/icp/science.stl
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o images/icp/science.png \
+	    --autocenter \
+	    --viewall \
+	    --imgsize 3840,2160 \
+	    --render \
+	    --projection p \
+	    --colorscheme Metallic \
+	    src/icp/science.scad
+
+images/icp/scout.png: stl/icp/scout.stl
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o images/icp/scout.png \
+	    --autocenter \
+	    --viewall \
+	    --imgsize 3840,2160 \
+	    --render \
+	    --projection p \
+	    --colorscheme "Tomorrow Night" \
+	    src/icp/scout.scad
 
 stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
