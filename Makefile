@@ -131,12 +131,18 @@ stl/macs/freighter.stl: src/macs/macs.scad src/lib/util.scad \
 	    -o stl/macs/freighter.stl \
 	    src/macs/freighter.scad
 
-miscstls: stl/misc/cruiser.stl
+miscstls: stl/misc/cruiser.stl \
+    stl/misc/cruiser2.stl
 
 stl/misc/cruiser.stl: src/lib/util.scad src/misc/cruiser.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
 	    -o stl/misc/cruiser.stl \
 	    src/misc/cruiser.scad
+
+stl/misc/cruiser2.stl: src/lib/util.scad src/misc/cruiser2.scad
+	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
+	    -o stl/misc/cruiser2.stl \
+	    src/misc/cruiser2.scad
 
 
 motherstls: stl/mother/scout.stl \
