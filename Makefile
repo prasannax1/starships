@@ -26,15 +26,10 @@ stl/icp/attack.stl: src/icp/attack.scad \
 	    src/icp/attack.scad
 
 images/icp/attack.png: stl/icp/attack.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/icp/attack.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme Sunset \
-	    src/icp/attack.scad
+	images/mkimage.sh \
+	    src/icp/attack.scad \
+	    images/icp/attack.png \
+	    Sunset
 
 stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
@@ -42,15 +37,11 @@ stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad
 	    src/icp/diplomatic.scad
 
 images/icp/diplomat.png: stl/icp/diplomat.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/icp/diplomat.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/icp/diplomatic.scad
+	images/mkimage.sh \
+	    src/icp/diplomatic.scad \
+	    images/icp/diplomat.png \
+	    Tomorrow
+
 
 stl/icp/runabout.stl: src/icp/runabout.scad src/lib/util.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
@@ -58,15 +49,10 @@ stl/icp/runabout.stl: src/icp/runabout.scad src/lib/util.scad
 	    src/icp/runabout.scad
 
 images/icp/runabout.png: stl/icp/runabout.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/icp/runabout.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Cornfield" \
-	    src/icp/runabout.scad
+	images/mkimage.sh \
+	    src/icp/runabout.scad \
+	    images/icp/runabout.png \
+	    Cornfield
 
 stl/icp/tactical-shuttle.stl: src/icp/tactical-runabout.scad \
     src/lib/util.scad
@@ -75,15 +61,10 @@ stl/icp/tactical-shuttle.stl: src/icp/tactical-runabout.scad \
 	    src/icp/tactical-runabout.scad
 
 images/icp/tactical-shuttle.png: stl/icp/tactical-shuttle.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/icp/tactical-shuttle.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Solarized" \
-	    src/icp/tactical-runabout.scad
+	images/mkimage.sh \
+	    src/icp/tactical-runabout.scad \
+	    images/icp/tactical-shuttle.png \
+	    Solarized
 
 stl/icp/science.stl: src/icp/science.scad \
     src/lib/util.scad \
@@ -93,15 +74,10 @@ stl/icp/science.stl: src/icp/science.scad \
 	    src/icp/science.scad
 
 images/icp/science.png: stl/icp/science.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/icp/science.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme Metallic \
-	    src/icp/science.scad
+	images/mkimage.sh \
+	    src/icp/science.scad \
+	    images/icp/science.png \
+	    Metallic
 
 stl/icp/scout.stl: src/icp/scout.scad \
     src/lib/util.scad \
@@ -111,15 +87,10 @@ stl/icp/scout.stl: src/icp/scout.scad \
 	    src/icp/scout.scad
 
 images/icp/scout.png: stl/icp/scout.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/icp/scout.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow Night" \
-	    src/icp/scout.scad
+	images/mkimage.sh \
+	    src/icp/scout.scad \
+	    images/icp/scout.png \
+	    "Tomorrow Night"
 
 macstls: stl/macs/shuttlepod.stl \
     stl/macs/shuttle.stl \
@@ -144,15 +115,10 @@ stl/macs/shuttlepod.stl: src/macs/macs.scad src/macs/shuttlepod.scad \
 	    src/macs/shuttlepod.scad
 
 images/macs/pod.png: stl/macs/shuttlepod.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/macs/pod.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "BeforeDawn" \
-	    src/macs/shuttlepod.scad
+	images/mkimage.sh \
+	    src/macs/shuttlepod.scad \
+	    images/macs/pod.png \
+	    "BeforeDawn"
 
 stl/macs/shuttle.stl: src/macs/macs.scad src/lib/util.scad \
     src/macs/shuttle.scad
@@ -161,15 +127,10 @@ stl/macs/shuttle.stl: src/macs/macs.scad src/lib/util.scad \
 	    src/macs/shuttle.scad
 
 images/macs/shuttle.png: stl/macs/shuttle.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/macs/shuttle.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "BeforeDawn" \
-	    src/macs/shuttle.scad
+	images/mkimage.sh \
+	    src/macs/shuttle.scad \
+	    images/macs/shuttle.png \
+	    "BeforeDawn"
 
 stl/macs/small-runabout.stl: src/macs/macs.scad src/lib/util.scad \
     src/macs/runabout.scad
@@ -178,15 +139,10 @@ stl/macs/small-runabout.stl: src/macs/macs.scad src/lib/util.scad \
 	    src/macs/runabout.scad
 
 images/macs/small-runabout.png: stl/macs/small-runabout.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/macs/small-runabout.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "BeforeDawn" \
-	    src/macs/runabout.scad
+	images/mkimage.sh \
+	    src/macs/runabout.scad \
+	    images/macs/small-runabout.png \
+	    "BeforeDawn"
 
 stl/macs/cutter.stl: src/macs/macs.scad src/lib/util.scad \
     src/macs/cutter.scad
@@ -195,15 +151,10 @@ stl/macs/cutter.stl: src/macs/macs.scad src/lib/util.scad \
 	    src/macs/cutter.scad
 
 images/macs/cutter.png: stl/macs/cutter.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/macs/cutter.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "BeforeDawn" \
-	    src/macs/cutter.scad
+	images/mkimage.sh \
+	    src/macs/cutter.scad \
+	    images/macs/cutter.png \
+	    "BeforeDawn"
 
 stl/macs/heavy-runabout.stl: src/macs/macs.scad src/lib/util.scad \
     src/macs/heavy.scad
@@ -212,15 +163,10 @@ stl/macs/heavy-runabout.stl: src/macs/macs.scad src/lib/util.scad \
 	    src/macs/heavy.scad
 
 images/macs/heavy-runabout.png: stl/macs/heavy-runabout.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/macs/heavy-runabout.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "BeforeDawn" \
-	    src/macs/heavy.scad
+	images/mkimage.sh \
+	    src/macs/heavy.scad \
+	    images/macs/heavy-runabout.png \
+	    "BeforeDawn"
 
 stl/macs/hospital.stl: src/macs/macs.scad src/lib/util.scad \
     src/macs/hospital.scad
@@ -229,15 +175,10 @@ stl/macs/hospital.stl: src/macs/macs.scad src/lib/util.scad \
 	    src/macs/hospital.scad
 
 images/macs/hospital.png: stl/macs/hospital.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/macs/hospital.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Metallic" \
-	    src/macs/hospital.scad
+	images/mkimage.sh \
+	    src/macs/hospital.scad \
+	    images/macs/hospital.png \
+	    Metallic
 
 stl/macs/freighter.stl: src/macs/macs.scad src/lib/util.scad \
     src/macs/freighter.scad
@@ -246,15 +187,10 @@ stl/macs/freighter.stl: src/macs/macs.scad src/lib/util.scad \
 	    src/macs/freighter.scad
 
 images/macs/freighter.png: stl/macs/freighter.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/macs/freighter.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Nature" \
-	    src/macs/freighter.scad
+	images/mkimage.sh \
+	    src/macs/freighter.scad \
+	    images/macs/freighter.png \
+	    Nature
 
 miscstls: stl/misc/cruiser.stl \
     stl/misc/cruiser2.stl
@@ -268,15 +204,10 @@ stl/misc/cruiser.stl: src/lib/util.scad src/misc/cruiser.scad
 	    src/misc/cruiser.scad
 
 images/misc/cruiser.png: stl/misc/cruiser.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/misc/cruiser.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "DeepOcean" \
-	    src/misc/cruiser.scad
+	images/mkimage.sh \
+	    src/misc/cruiser.scad \
+	    images/misc/cruiser.png \
+	    DeepOcean
 
 stl/misc/cruiser2.stl: src/lib/util.scad src/misc/cruiser2.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
@@ -284,15 +215,10 @@ stl/misc/cruiser2.stl: src/lib/util.scad src/misc/cruiser2.scad
 	    src/misc/cruiser2.scad
 
 images/misc/cruiser2.png: stl/misc/cruiser2.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/misc/cruiser2.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Cornfield" \
-	    src/misc/cruiser2.scad
+	images/mkimage.sh \
+	    src/misc/cruiser2.scad \
+	    images/misc/cruiser2.png \
+	    Cornfield
 
 
 motherstls: stl/mother/scout.stl \
@@ -323,15 +249,10 @@ stl/mother/scout.stl: src/lib/util.scad src src/mother/scout.scad
 	    src/mother/scout.scad
 
 images/mothership/scout.png: stl/mother/scout.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/scout.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/scout.scad
+	images/mkimage.sh \
+	    src/mother/scout.scad \
+	    images/mothership/scout.png \
+	    Tomorrow
 
 
 stl/mother/transwarp.stl: src/lib/util.scad src src/mother/transwarp.scad
@@ -340,15 +261,10 @@ stl/mother/transwarp.stl: src/lib/util.scad src src/mother/transwarp.scad
 	    src/mother/transwarp.scad
 
 images/mothership/transwarp.png: stl/mother/transwarp.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/transwarp.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/transwarp.scad
+	images/mkimage.sh \
+	    src/mother/transwarp.scad \
+	    images/mothership/transwarp.png \
+	    Tomorrow
 
 stl/mother/hangar.stl: src/lib/util.scad src src/mother/hangar.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
@@ -356,15 +272,10 @@ stl/mother/hangar.stl: src/lib/util.scad src src/mother/hangar.scad
 	    src/mother/hangar.scad
 
 images/mothership/hangar.png: stl/mother/hangar.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/hangar.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/hangar.scad
+	images/mkimage.sh \
+	    src/mother/hangar.scad \
+	    images/mothership/hangar.png \
+	    Tomorrow
 
 stl/mother/saucer.stl: src/lib/util.scad src src/mother/saucer.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
@@ -372,15 +283,10 @@ stl/mother/saucer.stl: src/lib/util.scad src src/mother/saucer.scad
 	    src/mother/saucer.scad
 
 images/mothership/saucer.png: stl/mother/saucer.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/saucer.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/saucer.scad
+	images/mkimage.sh \
+	    src/mother/saucer.scad \
+	    images/mothership/saucer.png \
+	    Tomorrow
 
 stl/mother/escort.stl: src/lib/util.scad src src/mother/escort.scad
 	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
@@ -388,15 +294,10 @@ stl/mother/escort.stl: src/lib/util.scad src src/mother/escort.scad
 	    src/mother/escort.scad
 
 images/mothership/escort.png: stl/mother/escort.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/escort.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/escort.scad
+	images/mkimage.sh \
+	    src/mother/escort.scad \
+	    images/mothership/escort.png \
+	    Tomorrow
 
 stl/mother/main.stl: src/lib/util.scad src src/mother/main.scad\
     src/mother/scout.scad src/mother/saucer.scad \
@@ -407,15 +308,10 @@ stl/mother/main.stl: src/lib/util.scad src src/mother/main.scad\
 	    src/mother/main.scad
 
 images/mothership/main.png: stl/mother/main.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/main.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/main.scad
+	images/mkimage.sh \
+	    src/mother/main.scad \
+	    images/mothership/main.png \
+	    Tomorrow
 
 stl/mother/separation.stl: src/lib/util.scad src \
     src/mother/separation.scad \
@@ -427,15 +323,10 @@ stl/mother/separation.stl: src/lib/util.scad src \
 	    src/mother/separation.scad
 
 images/mothership/separation.png: stl/mother/separation.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/separation.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/separation.scad
+	images/mkimage.sh \
+	    src/mother/separation.scad \
+	    images/mothership/separation.png \
+	    Tomorrow
 
 stl/mother/normal-separation.stl: src/lib/util.scad src \
     src/mother/normal-separation.scad \
@@ -447,15 +338,10 @@ stl/mother/normal-separation.stl: src/lib/util.scad src \
 	    src/mother/normal-separation.scad
 
 images/mothership/normal-separation.png: stl/mother/normal-separation.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/normal-separation.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/normal-separation.scad
+	images/mkimage.sh \
+	    src/mother/normal-separation.scad \
+	    images/mothership/normal-separation.png \
+	    Tomorrow
 
 stl/mother/starbase.stl: src/lib/util.scad src src/mother/starbase.scad \
     src/mother/saucer.scad src/mother/hangar.scad
@@ -464,15 +350,10 @@ stl/mother/starbase.stl: src/lib/util.scad src src/mother/starbase.scad \
 	    src/mother/starbase.scad
 
 images/mothership/starbase.png: stl/mother/starbase.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/starbase.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/starbase.scad
+	images/mkimage.sh \
+	    src/mother/starbase.scad \
+	    images/mothership/starbase.png \
+	    Tomorrow
 
 stl/mother/starship.stl: src/lib/util.scad src src/mother/starship.scad \
     src/mother/scout.scad src/mother/transwarp.scad \
@@ -482,15 +363,10 @@ stl/mother/starship.stl: src/lib/util.scad src src/mother/starship.scad \
 	    src/mother/starship.scad
 
 images/mothership/starship.png: stl/mother/starship.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/mothership/starship.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/mother/starship.scad
+	images/mkimage.sh \
+	    src/mother/starship.scad \
+	    images/mothership/starship.png \
+	    Tomorrow
 
 combinestls: stl/combined/scale.stl
 
@@ -519,13 +395,8 @@ stl/combined/scale.stl: src/lib/util.scad \
 	    src/combined/scale.scad
 
 images/combined/scale.png: stl/combined/scale.stl
-	/usr/bin/flatpak run org.openscad.OpenSCAD/x86_64/stable \
-	    -o images/combined/scale.png \
-	    --autocenter \
-	    --viewall \
-	    --imgsize 3840,2160 \
-	    --render \
-	    --projection p \
-	    --colorscheme "Tomorrow" \
-	    src/combined/scale.scad
+	images/mkimage.sh \
+	    src/combined/scale.scad \
+	    images/combined/scale.png \
+	    BeforeDawn
 
