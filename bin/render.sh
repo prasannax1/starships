@@ -1,20 +1,26 @@
 # Generate image from .scad file
 # author - prasanna
 
-# First get command line args
-INFILE="$1"
-OUTFILE="$2"
-if [ $# -eq 3 ]; then
-    THEME="$3"
-else
-    THEME="Tomorrow"
-fi
-
 # Set up some variables
 RENDERCMD='flatpak run org.openscad.OpenSCAD/x86_64/stable'
 
 # Util functions
-render() {
+usage() {
+    echo "Usage: $0i"\
+        " -i <input_file>"\
+        " -o <stl_file>"\
+        " -p <image_file>"\
+        " [-t <theme>]"
+}
+
+render_stl() {
+    local INFILE="$1"
+    local OUTFILE="$2"
+
+    ${RENDERCMD} -o "${OUTFILE}" "${INFILE}"
+}
+
+render_image() {
     local FILE="$1"
     local OUT="$2"
     local THEME="$3"
@@ -47,5 +53,44 @@ blacken() {
 }
 
 # main part
-render "${INFILE}" "${OUTFILE}" "${THEME}"
+main() {
+    local OPTIND SRCFILE STLFILE PICFILE THEME o
+    while getopts ":i:o:p:t:" o; do
+        case "${o}" in
+            i)
+                SRCFILE="${OPTARG}"
+                ;;
+            o)
+                STLFILE="${OPTARG}"
+                ;;
+            p)
+                PICFILE="${OPTARG}"
+                ;;
+            t)
+                THEME="${OPTARG}"
+                ;;
+            *)
+                usage
+                ;;
+        esac
+    done
+
+    if [ -z "${SRCFILE}" ] || [ -z "${STLFILE}" ] || [ -z "${PICFILE}" ]
+    then
+        usage
+        exit 1
+    fi
+
+    if [ -z "${THEME}" ]; then
+        THEME=Tomorrow
+    fi
+
+    # first render stl
+    render_stl "${SRCFILE}" "${STLFILE}"
+
+    # Then render image
+    render_image "${SRCFILE}" "${PICFILE}" "${THEME}"
+}
+
+main "$@"
 

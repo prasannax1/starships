@@ -418,7 +418,7 @@ The *Magpie* is the standard auxillary vehicle of the *Aviary*. It is used for p
 
 ## Hawk Class
 
-![Tactical Runabout](images/tactical/main.png)
+![Tactical Runabout](images/icp/tactical-shuttle.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/tactical-runabout.stl)
 
@@ -498,7 +498,7 @@ The *Raven* is used by the *Aviary* like any other ship would use runabouts - st
 
 ## Vulture Class
 
-![Attack Ship](images/attack/main.png)
+![Attack Ship](images/icp/attack.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/attack.stl)
 
