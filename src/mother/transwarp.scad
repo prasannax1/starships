@@ -60,7 +60,7 @@ module mvm_transwarp() {
         mvm_transwarp_nacelle_bar();
     
     util_mirrored([0,1,0])
-        translate([-705,750/2-50,100]) 
+        translate([-705,750/2-60,100]) 
             mvm_transwarp_nacelle();
 }
 

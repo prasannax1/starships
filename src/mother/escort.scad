@@ -4,7 +4,7 @@ use <../lib/util.scad>;
 module mvm_escort() {
     
     difference() {
-        mirror([0,0,1]) util_saucer(150,150,25);
+        mirror([0,0,1]) util_saucer(150,150,20);
             
         translate([-90-50,0,0])
         cube(180,center=true);
@@ -17,7 +17,7 @@ module mvm_escort() {
         util_mirrored([0,1,0])
         translate([-7.5,36,0])
         rotate([90,0,0])
-        util_nacelle(120,50,45,curved=true, up=false);
+        util_nacelle(120,40,45,curved=true, up=false);
         
         translate([0,0,250])
         cube(500,center=true);
