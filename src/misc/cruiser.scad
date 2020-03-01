@@ -29,11 +29,20 @@ difference() {
     cube(40,center=true);
 }
 
-util_mirrored([0,1,0])
-translate([-90,0,0])
-rotate([-70,0,0])
-translate([0,0,27.5])
-cube([12.5,2,55],center=true);
+difference() {
+    util_mirrored([0,1,0])
+    translate([-90,0,0])
+    rotate([-70,0,0])
+    translate([0,0,27.5])
+    cube([55,2,55],center=true);
+
+    util_mirrored([0,1,0])
+    translate([-48,60,0])
+    cylinder(50,50,50, center=true);
+
+    translate([-150,0,0])
+    cylinder(50,50,50, center=true);
+}
 
 util_mirrored([0,1,0])
 translate([-75,45,12.5])
