@@ -6,7 +6,7 @@ module mvm_transwarp() {
         union() {
             mirror([0,0,1])
             translate([-(640-450)/2,0,0])
-            util_saucer(480,300,40);
+            util_saucer(480,480,40);
             
             translate([-200,0,0])
             scale([1,1,40/120])

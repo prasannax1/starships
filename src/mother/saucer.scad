@@ -4,7 +4,7 @@ use <../lib/util.scad>;
 module mvm_main_disk() {
     difference() {
         translate([0,0,-30]) difference() {
-            util_saucer(750,750,120);
+            util_saucer(750,750,115);
             translate([0,0,500+100])
                 cube(1000, center=true);
         }
