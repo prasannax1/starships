@@ -318,7 +318,7 @@ The *Aviary* does not maintain an inventory of the *Beetle* class, although it c
 
 ## Nightingale Class
 
-![Hospital Ship](images/hospital/main.png)
+![Hospital Ship](images/macs/hospital.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/hospital.stl)
 
@@ -596,7 +596,7 @@ If these hangars are empty, they're used to store the *Vulture* class ships, whi
 
 ## Dove Class
 
-![Diplomatic Yacht](images/diplomatic/main.png)
+![Diplomatic Yacht](images/icp/diplomat.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/diplomat.stl)
 
