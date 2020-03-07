@@ -11,18 +11,25 @@ module mvm_command() {
         cube(500,center=true);
     }
 
-    util_saucer(50,50,25);
+    util_saucer(64,64,25);
     
-    util_nacelle(96,45,28,curved=true);
+    util_nacelle(96,64,28,curved=true);
 
 
     
     difference() {
         util_mirrored([0,1,0]) {
-            translate([-100,0,0])
-            rotate([-90,0,0])
-            mirror([1,0,0])
-            util_nacelle(64,15,82,curved=true);
+            difference() {
+                translate([-100,0,0])
+                rotate([-90,0,0])
+                mirror([1,0,0])
+                util_nacelle(64,24,82,curved=true);
+                
+                translate([-175,0,0])
+                cube(150,center=true);
+            }
+            
+                            
         
             translate([-75,59,0])
             rotate([-90,0,0])
