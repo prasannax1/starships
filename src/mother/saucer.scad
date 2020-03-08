@@ -110,7 +110,7 @@ module mvm_main_disk_assembly() {
     mvm_main_disk_impulse();
     
     translate([-120,0,0])
-    util_nacelle(200,120,90,curved=true);
+    util_nacelle(240,120,90,curved=true);
 }
 
 
