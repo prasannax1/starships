@@ -14,7 +14,7 @@ module mvm_saucer_plus() {
                     cylinder(20,400,400,center=true);
 
                     scale([1,1,1.5])
-                    util_star(410,25,16,half=false);
+                    util_star(410,25,16,half=true);
                 }
                 
 
@@ -29,7 +29,7 @@ module mvm_saucer_plus() {
 //            }
 
             intersection() {
-                util_nacelle(500,450,95,curved=true);
+                util_nacelle(500,575,95,curved=true);
                 cylinder(400,750/2,750/2,center=true);
             }
         }
@@ -47,6 +47,8 @@ module mvm_saucer_plus() {
     util_mirrored([0,1,0])
     translate([-320,55,54])
     util_nacelle(150,54,15,curved=true);
+    
+    cylinder(7,120,120,center=true);
 }
 
 module mvm_saucer_minus() {
