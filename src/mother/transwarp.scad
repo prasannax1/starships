@@ -3,118 +3,96 @@ use <../lib/util.scad>;
 
 module mvm_transwarp() {
     difference() {
-        union() {
-            mirror([0,0,1])
-            translate([-(640-450)/2,0,0])
-            util_saucer(420,420,40);
-            
-            translate([-200,0,0])
-            scale([1,1,40/120])
-            difference() {
-            rotate([0,90,0])
-            cylinder(200+270, 120,120, center=true);
-                
-                translate([0,0,500])
-                cube(1000, center=true);
-            }
+        translate([0,0,-0.01])
+        util_saucer(500,360,50);
 
+        translate([750/2,0,0])
+        cylinder(200,750/2, 750/2, center=true);
+    }
+
+    translate([0,0,-0.01])
+    util_saucer(500,200,50);
+
+
+    difference() {
+        mirror([0,0,1])
+        util_saucer(500,360,100);
+
+    //    translate([0,0,-250-100])
+    //    cube(500, center=true);
+
+        translate([-250,0,-100-10])
+        scale([2,1,1])
+        rotate([90,0,0])
+        cylinder(500,100,100,center=true);
+
+        translate([280,0,-50])
+        rotate([0,-90,0])
+        cylinder(200,40,12.4,center=true);
+    }
+
+    difference() {
+        translate([-250/2,0,-5])
+        cube([250,500,10], center=true);
+        
+        util_mirrored([0,1,0])
+        translate([0,250,0])
+        scale([1.4,1,1])
+        cylinder(100,70,70,center=true);
+    }
+
+    util_mirrored([0,1,0]) {
+        difference() {
+            translate([-250+150/2,250,50-10])
+            rotate([0,90,0])
+            cylinder(150,50,50,center=true);
+
+            translate([-250+150/2,250,50-10])
+            rotate([0,90,0])
+            cylinder(200,50-10,50-10,center=true);
+
+            translate([0,0,500+40])
+            cube(1000,center=true);
+            
+            translate([0,0,50])
+            cube([600,500,100],center=true);
+        }
+
+        translate([-250+150/2, 250+50-10/2,50-10+20-0.01])
+        cube([150,10,40],center=true);
+
+        translate([-250+150/2, 250+50-10/2, 40+10/2+50/2])
+        scale([1,1,.75]) {
+            rotate([0,90,0])
+            cylinder(200,15,15,center=true);
+            
+            util_mirrored([1,0,0])
+            translate([100,0,0])
+            sphere(15);
+        }
+    }
+    
+    util_mirrored([0,1,0])
+    translate([-250,250+50-10/2, 88])
+    mvm_tw_nacelle();
+}
+
+module mvm_tw_nacelle() {
+    difference() {
+        
+        union() {
+            util_saucer(1000,100,50);
+            mirror([0,0,1])
+            util_saucer(1000,100,25);
         }
         
-        translate([0,0,-500-20])
+        translate([500+.01,0,0])
         cube(1000,center=true);
     }
 
-
-    difference() {
-        translate([-750/2,0,0])
-            mirror([0,0,1])
- //               util_saucer(750,270,120);
-        union() {
-    
-            difference() {
-                util_saucer(640,240,125);
-                translate([250+.01,0,0])
-                cube(500,center=true);
-            }
-            difference() {
-                util_saucer(540,240,125);
-                translate([-250-.01,0,0])
-                cube(500, center=true);
-            }
-        }
-
-        translate([-120,0,-64])
-            rotate([0,90,0])
-                cylinder(175,15,80,center=true);
-        
-        translate([-600,0,-175])
-            scale([1.8,1,1])
-                rotate([90,0,0])
-                    cylinder(500,150,150,center=true);
-
-        translate([-600+-250,0,-250-25])
-            cube(500,center=true);
-    }
-    
-    scale([1,1,1])
-        mvm_transwarp_nacelle_bar();
-    
-    util_mirrored([0,1,0])
-        translate([-800,750/2-60,115]) 
-            mvm_transwarp_nacelle();
-}
-
-
-
-module mvm_transwarp_nacelle_bar() {
-    difference() {
-        translate([-700,0,-30])
-        util_nacelle_bar(700,140,700,16);
-        
-        translate([-600,0,-175])
-            scale([1.8,1,1])
-                rotate([90,0,0])
-                    cylinder(500,150,150,center=true);
-
-        translate([-600+-250,0,-250-25])
-            cube(500,center=true);
-
-        translate([-750/2,0,0])
-            util_saucer(750,270,150);
-
-        translate([-1450,0,0])
-            cylinder(900,750,750,center=true);
-        
-//        translate([-1124,0,0])
-//        cube(750,center=true);
-
-        util_mirrored([0,1,0])
-            translate([-750/2+175,550,0])
-                cylinder(900,500,500,center=true);
-        
-        translate([-750/2,0,490])
-            rotate([90,0,0])
-                cylinder(900,400,400,center=true);
-    }
-}
-
-module mvm_transwarp_nacelle() {
-    translate([125,0,0]) {
-        difference() {
-            union() {
-                util_saucer(1100,100,60);
-                mirror([0,0,1])
-                    util_saucer(1100,100,25);
-            }
-            
-            translate([600,0,0])
-                cube(1200,center=true);
-        }
-
-        util_saucer(500,100,60);
-        mirror([0,0,1])
-            util_saucer(500,100,25);
-    }
+    util_saucer(500,100,50);
+    mirror([0,0,1])
+    util_saucer(500,100,25);
 }
 
 mvm_transwarp();
