@@ -40,8 +40,8 @@ module mvm_saucer_plus() {
     
     intersection() {
         cylinder(400,750/2,750/2,center=true);
-        translate([-120,0,0])
-        util_nacelle(350,100,105,curved=true);
+        translate([-110,0,0])
+        util_nacelle(350,100,100,curved=true);
     }
     
     util_mirrored([0,1,0])
@@ -51,12 +51,8 @@ module mvm_saucer_plus() {
     cylinder(7,120,120,center=true);
 }
 
-
-
 module mvm_saucer_minus() {
-    translate([-50,0,80+.01])
-    mirror([0,0,1])
-    util_saucer(100,50,20);
+
     
     translate([-750/2,0,0])
     util_mirrored([0,0,1])
