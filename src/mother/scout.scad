@@ -2,48 +2,38 @@ use <../lib/util.scad>;
 
 
 module mvm_command() {
-    difference() {
-        util_saucer(150,150,20.5);
-        translate([75,0,10])
-            cube(25,center=true);
-        
-        translate([0,0,250+20])
-        cube(500,center=true);
-    }
-
+    util_saucer(150,150,20);
     util_saucer(64,64,25);
     
-    util_nacelle(96,64,28,curved=true);
-
-
-    
-    difference() {
-        util_mirrored([0,1,0]) {
-            difference() {
-                translate([-100,0,0])
-                rotate([-90,0,0])
-                mirror([1,0,0])
-                util_nacelle(64,32,82,curved=true);
-                
-                translate([-175,0,0])
-                cube(150,center=true);
-                
-                translate([0,0,200+12])
-                cube(400,center=true);
-            }
+    translate([-50,0,.01]) {
+        util_saucer(100,50,5);
+        
+        difference() {
+            mirror([0,0,1])
+            util_saucer(100,50,20);
             
-                            
-        
-            translate([-75,59,0])
-            rotate([-90,0,0])
-            util_nacelle(96,24,24,curved=true);
+            translate([42,0,-10])
+            sphere(5);
         }
-        
-        translate([0,0,-250])
-        cube(500, center=true);
     }
     
-
+    
+    difference() {
+        translate([0,0,-5.5])
+        util_nacelle(90,60,35,curved=true);
+        
+        translate([0,0,-150/2])
+        cube(150,center=true);
+    }
+    
+    util_mirrored([0,1,0])
+    translate([-75-35+24,0,0])
+    rotate(-75)
+    util_nacelle(80,24,7.5,curved=true);
+    
+    util_mirrored([0,1,0])
+    translate([-75-35+24,70,0])
+    util_nacelle(120,32,18,curved=true);
 }
 
 mvm_command();
