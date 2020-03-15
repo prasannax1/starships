@@ -7,7 +7,7 @@ module mvm_command() {
     
     difference() {
         translate([-150/2,0,15/2])
-        scale([1,2,1])
+        scale([.5,2,1])
         cylinder(15,60,75,center=true,$fn=3);
         
         util_mirrored([0,1,0])
@@ -17,7 +17,7 @@ module mvm_command() {
     }
     
     translate([0,0,10])
-    util_nacelle(100,64,20,curved=true);
+    util_nacelle(90,64,20,curved=true);
     
     util_mirrored([0,1,0])
     difference() {
