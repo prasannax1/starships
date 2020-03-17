@@ -45,9 +45,9 @@ module mvm_saucer_plus() {
     }
     
     util_mirrored([0,1,0])
-    translate([-320,150,25])
+    translate([-320,144,36])
     rotate([-25,0,0])
-    util_nacelle(150,54,15,curved=true);
+    util_nacelle(180,80,15,curved=true);
     
     cylinder(7,120,120,center=true);
     
