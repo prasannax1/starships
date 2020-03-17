@@ -18,16 +18,18 @@ use <../macs/hospital.scad>;
 
 
 m_main_sep();
-translate([100,0,210]) scout();
-translate([50,0,240]) hospital();
-translate([-30,0,150]) science();
-translate([30,0,150]) runabout();
-translate([-30,0,180]) attack();
-translate([50,0,180]) tactical();
-translate([0,0,210]) diplomat();
-translate([0,0,240]) macs_heavy_runabout();
-translate([0,0,260]) macs_fast_shuttle();
-translate([30,0,280]) macs_large_shuttle();
-translate([0,0,280]) macs_small_shuttle();
-translate([-30,0,280]) macs_pod();
 
+translate([0,0,20]) {
+    translate([100,0,210]) scout();
+    translate([50,0,240]) hospital();
+    translate([-30,0,150]) science();
+    translate([30,0,150]) runabout();
+    translate([-30,0,180]) attack();
+    translate([50,0,180]) tactical();
+    translate([0,0,210]) diplomat();
+    translate([0,0,240]) macs_heavy_runabout();
+    translate([0,0,260]) macs_fast_shuttle();
+    translate([30,0,280]) macs_large_shuttle();
+    translate([0,0,280]) macs_small_shuttle();
+    translate([-30,0,280]) macs_pod();
+}
