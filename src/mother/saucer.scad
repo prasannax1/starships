@@ -56,8 +56,12 @@ module mvm_saucer_plus() {
         cylinder(10.02,84,72,center=true);
         
         translate([-150/2+.01,0,0])
-        scale([.5,2,1])
+        scale([.66,2,1])
         cylinder(15,60,75,center=true,$fn=3);
+        
+        translate([-65,0,16.5])
+        rotate([90,0,0])
+        cylinder(200,25,25,center=true, $fn=6);
     }
 }
 

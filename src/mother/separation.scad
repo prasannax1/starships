@@ -7,9 +7,9 @@ use <transwarp.scad>;
 
 module mvm_total_assembly_separate() {
     mvm_saucer();
-    translate([250,0,100]) mvm_command();
-    translate([-350,0,-100]) mvm_transwarp();
-    translate([250,0,-100]) mvm_escort();
+    translate([50,0,100]) mvm_command();
+    translate([-500,0,-50]) mvm_transwarp();
+    translate([50,0,-50]) mvm_escort();
 }
 
 mvm_total_assembly_separate();
