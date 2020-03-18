@@ -1,4 +1,5 @@
 use <../lib/util.scad>;
+use <common.scad>;
 
 module mvm_saucer_plus() {
     difference() {
@@ -66,11 +67,9 @@ module mvm_saucer_plus() {
 }
 
 module mvm_saucer_minus() {
-
-    
-    translate([-750/2,0,0])
-    util_mirrored([0,0,1])
-    util_saucer(500,200,50);
+   
+    translate([0,0,-0.01])
+    mvm_secondary_saucer(); 
 }
 
 module mvm_saucer() {
