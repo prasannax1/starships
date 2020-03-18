@@ -1,5 +1,5 @@
 use <../lib/util.scad>;
-use <common.scad>;
+
 
 module mvm_transwarp() {
     difference() {
@@ -10,8 +10,8 @@ module mvm_transwarp() {
         cylinder(200,750/2, 750/2, center=true);
     }
 
-    translate([750/2,0,-0.005])
-    mvm_secondary_saucer();
+    translate([0,0,-0.01])
+    util_saucer(500,200,50);
 
 
     difference() {
