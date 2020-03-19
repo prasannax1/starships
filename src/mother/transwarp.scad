@@ -5,18 +5,24 @@ module mvm_transwarp() {
     difference() {
         translate([0,0,-0.01])
         util_saucer(500,360,50);
+        
+
 
         translate([750/2,0,0])
         cylinder(200,750/2, 750/2, center=true);
     }
 
-    translate([0,0,-0.01])
-    util_saucer(500,200,50);
+    translate([0,0,-0.01]) {
+        util_saucer(500,180,50);
+        util_saucer(500,360,15);
+    }
 
 
     difference() {
-        mirror([0,0,1])
-        util_saucer(500,360,100);
+        mirror([0,0,1]) {
+            util_saucer(500,360,35);
+            util_saucer(500,210,100);
+        }
 
     //    translate([0,0,-250-100])
     //    cube(500, center=true);

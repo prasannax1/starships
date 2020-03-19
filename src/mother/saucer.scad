@@ -69,8 +69,10 @@ module mvm_saucer_minus() {
 
     
     translate([-750/2,0,0])
-    util_mirrored([0,0,1])
-    util_saucer(500,200,50);
+    util_mirrored([0,0,1]) {
+        util_saucer(500,180,50);
+        util_saucer(500,360,15);
+    }
 }
 
 module mvm_saucer() {
