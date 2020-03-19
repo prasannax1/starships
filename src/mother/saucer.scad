@@ -1,4 +1,5 @@
 use <../lib/util.scad>;
+use <common.scad>;
 
 module mvm_saucer_plus() {
     difference() {
@@ -45,7 +46,7 @@ module mvm_saucer_plus() {
     }
     
     util_mirrored([0,1,0])
-    translate([-320,144,36])
+    translate([-320,144,30])
     rotate([-25,0,0])
     util_nacelle(180,80,15,curved=true);
     
@@ -63,16 +64,27 @@ module mvm_saucer_plus() {
         rotate([90,0,0])
         cylinder(200,25,25,center=true, $fn=6);
     }
+    
+    difference() {
+        mirror([0,0,1])
+        util_saucer(750,750,10);
+        
+        hull() {
+            translate([-750/2,0,0])
+            scale([250/180,1,1])
+            cylinder(100,185,185,center=true);
+            
+            cylinder(100,125,125,center=true);
+        }
+    }
 }
 
 module mvm_saucer_minus() {
 
     
-    translate([-750/2,0,0])
-    util_mirrored([0,0,1]) {
-        util_saucer(500,180,50);
-        util_saucer(500,360,15);
-    }
+    translate([-750/2,0,-0.01])
+    util_mirrored([0,0,1])
+    mvm_secondary_saucer();
 }
 
 module mvm_saucer() {
