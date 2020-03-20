@@ -50,7 +50,6 @@ module mvm_saucer_plus() {
     rotate([-25,0,0])
     util_nacelle(180,80,15,curved=true);
     
-    cylinder(7,120,120,center=true);
     
     translate([0,0,80+5-.01])
     difference() {
@@ -72,9 +71,9 @@ module mvm_saucer_plus() {
         hull() {
             translate([-750/2,0,0])
             scale([250/180,1,1])
-            cylinder(100,185,185,center=true);
+            cylinder(100,190,180,center=true);
             
-            cylinder(100,125,125,center=true);
+            cylinder(100,90,80,center=true);
         }
     }
 }
