@@ -86,7 +86,7 @@ module mvm_tw_nacelle() {
     difference() {
         
         union() {
-            util_saucer(1000,120,60);
+            util_saucer(1000,120,55);
             mirror([0,0,1])
             util_saucer(1000,120,15);
         }
@@ -95,7 +95,7 @@ module mvm_tw_nacelle() {
         cube(1000,center=true);
     }
 
-    util_saucer(500,120,60);
+    util_saucer(500,120,55);
     mirror([0,0,1])
     util_saucer(500,120,15);
 }
