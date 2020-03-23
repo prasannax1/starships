@@ -1,35 +1,20 @@
-use <../lib/util.scad>;
-use <../mother/main.scad>;
-use <../mother/separation.scad>;
-use <../macs/macs.scad>;
-use <../macs/shuttle.scad>;
-use <../macs/runabout.scad>;
-use <../macs/cutter.scad>;
-use <../macs/heavy.scad>;
-use <../icp/runabout.scad>;
-use <../icp/science.scad>;
-use <../icp/scout.scad>;
-use <../icp/diplomatic.scad>;
-use <../icp/attack.scad>;
-use <../icp/tactical-runabout.scad>;
-use <../macs/hospital.scad>;
-
 //use <perf.scad>;
+use <color.scad>;
 
 
-m_main_sep();
+c_m_main_sep();
 
 translate([0,0,20]) {
-    translate([100,0,210]) scout();
-    translate([50,0,240]) hospital();
-    translate([-30,0,150]) science();
-    translate([30,0,150]) runabout();
-    translate([-30,0,180]) attack();
-    translate([50,0,180]) tactical();
-    translate([0,0,210]) diplomat();
-    translate([0,0,240]) macs_heavy_runabout();
-    translate([0,0,260]) macs_fast_shuttle();
-    translate([30,0,280]) macs_large_shuttle();
-    translate([0,0,280]) macs_small_shuttle();
-    translate([-30,0,280]) macs_pod();
+    translate([100,0,210]) c_scout();
+    translate([50,0,240]) c_hospital();
+    translate([-30,0,150]) c_science();
+    translate([30,0,150]) c_runabout();
+    translate([-30,0,180]) c_attack();
+    translate([50,0,180]) c_tactical();
+    translate([0,0,210]) c_diplomat();
+    translate([0,0,240]) c_macs_heavy_runabout();
+    translate([0,0,260]) c_macs_fast_shuttle();
+    translate([30,0,280]) c_macs_large_shuttle();
+    translate([0,0,280]) c_macs_small_shuttle();
+    translate([-30,0,280]) c_macs_pod();
 }

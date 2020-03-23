@@ -226,6 +226,7 @@ stl/combined/scale.stl: src/lib/util.scad \
     src/icp/attack.scad \
     src/icp/tactical-runabout.scad \
     src/macs/hospital.scad \
+    src/combined/color.scad \
     src/combined/scale.scad
 	bin/render.sh \
 	    -i src/combined/scale.scad \
