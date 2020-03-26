@@ -33,7 +33,7 @@ module mvm_transwarp() {
 
         translate([280,0,-50+25/2])
         rotate([0,-90,0])
-        cylinder(200,40,10,center=true);
+        cylinder(144,75,10,center=true);
     }
 
     difference() {
