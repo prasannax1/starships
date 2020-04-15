@@ -20,7 +20,7 @@ module mvm_transwarp() {
     difference() {
         mirror([0,0,1]) {
             util_saucer(500,360,35);
-            util_saucer(500,210,100);
+            util_saucer(500,210,110);
         }
 
     //    translate([0,0,-250-100])
