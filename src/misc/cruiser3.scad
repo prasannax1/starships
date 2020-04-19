@@ -31,8 +31,8 @@ module cruiser3_saucer() {
     mirror([0,0,1])
     util_saucer(32,32,10);
 
-    translate([-30,0,-3])
-    scale([5,1,1])
+    translate([-31,0,-3])
+    scale([2.3,1,1])
     rotate(45)
     cylinder(6,8,18,center=true, $fn=4);
 }
