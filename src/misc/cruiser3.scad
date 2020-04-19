@@ -29,12 +29,17 @@ module cruiser3_saucer() {
     util_nacelle(100, 25,10, curved=true);
 
     mirror([0,0,1])
-    util_saucer(32,32,10);
+    util_saucer(24,24,10);
 
+    difference() {
     translate([-31,0,-3])
-    scale([2.3,1,1])
+    scale([5,1,1])
     rotate(45)
-    cylinder(6,8,18,center=true, $fn=4);
+    cylinder(6,5,15,center=true, $fn=4);
+        
+        translate([-51-20,0,0])
+        cube(40,center=true);
+    }
 }
 
 module cruiser3_eng() {
@@ -122,7 +127,7 @@ cruiser3_eng();
     cruiser3_manifold();
     
     util_mirrored([0,1,0])
-    translate([-140,54,12])
+    translate([-140,50,9])
     cruiser3_nacelle();
 }
 
