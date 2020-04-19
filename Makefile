@@ -123,7 +123,8 @@ stl/macs/freighter.stl: src/macs/macs.scad src/lib/util.scad \
 	    -t Nature
 
 miscstls: stl/misc/cruiser.stl \
-    stl/misc/cruiser2.stl
+    stl/misc/cruiser2.stl \
+    stl/misc/cruiser3.stl
 
 
 stl/misc/cruiser.stl: src/lib/util.scad src/misc/cruiser.scad
@@ -139,6 +140,13 @@ stl/misc/cruiser2.stl: src/lib/util.scad src/misc/cruiser2.scad
 	    -o stl/misc/cruiser2.stl \
 	    -p images/misc/cruiser2.png \
 	    -t Cornfield
+
+stl/misc/cruiser3.stl: src/lib/util.scad src/misc/cruiser3.scad
+	bin/render.sh \
+	    -i src/misc/cruiser3.scad \
+	    -o stl/misc/cruiser3.stl \
+	    -p images/misc/cruiser3.png \
+	    -t Solarized
 
 
 motherstls: stl/mother/scout.stl \
