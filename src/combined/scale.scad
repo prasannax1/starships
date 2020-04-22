@@ -4,7 +4,7 @@ use <color.scad>;
 
 c_m_main_sep();
 
-translate([0,0,20]) {
+translate([-120,0,60]) {
     translate([100,0,210]) c_scout();
     translate([50,0,240]) c_hospital();
     translate([-30,0,150]) c_science();
