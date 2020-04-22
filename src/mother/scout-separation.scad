@@ -5,9 +5,9 @@ use <transwarp_lib.scad>;
 
 
 module mvm_total_assembly_combined() {
-    translate([500,0,0]) mvm_saucer();
-    translate([-400,0,-0+.01]) mvm_transwarp_full();
-    translate([500,0,0+.01]) mvm_escort();
+    translate([-11,0,0-.01]) mvm_saucer();
+    translate([-750/2+.01,0,+.015]) mvm_transwarp_separate();    
+    translate([-11,0,+.01]) mvm_escort();
 }
 
 mvm_total_assembly_combined();
