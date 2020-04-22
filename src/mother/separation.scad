@@ -1,15 +1,13 @@
 use <../lib/util.scad>;
 use <saucer.scad>;
 use <escort.scad>;
-use <scout.scad>;
 use <transwarp.scad>;
 
 
 module mvm_total_assembly_separate() {
-    mvm_saucer();
-    translate([50,0,120]) mvm_command();
-    translate([-500,0,-50]) mvm_transwarp();
-    translate([50,0,-50]) mvm_escort();
+    translate([300-11,0,-20]) mvm_saucer();
+    translate([-400,0,-0]) mvm_transwarp();
+    translate([0,0,-100]) mvm_escort();
 }
 
 mvm_total_assembly_separate();
