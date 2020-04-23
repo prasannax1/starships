@@ -138,8 +138,8 @@ module mvm_sc_body() {
             cylinder(120,150,50,center=true);
         }
         
-        translate([200,0,0])
-        cube([400,400,50], center=true);
+//        translate([200,0,0])
+//        cube([400,400,50], center=true);
         
         translate([297,0,45])
         rotate([90,0,0])
