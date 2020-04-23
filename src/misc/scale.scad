@@ -1,6 +1,6 @@
 use <../lib/util.scad>;
 
-use <../mother/main.scad>;
+use <../mother/mlib.scad>;
 
 use <cruiser3.scad>;
 
