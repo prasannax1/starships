@@ -24,17 +24,29 @@ render_image() {
     local FILE="$1"
     local OUT="$2"
     local THEME="$3"
+    local IMGSIZE="$4"
+    local CAMERA="$5"
 
     local TMP="$(dirname $OUT)/$(basename $OUT .png)_tmp.png"
 
-    ${RENDERCMD} -o "${TMP}" \
-        --autocenter \
-        --viewall \
-        --imgsize 3840,2160 \
-        --render \
-        --projection p \
-        --colorscheme "${THEME}" \
-        "${FILE}"
+    if [ -z "${CAMERA}" ]; then
+        ${RENDERCMD} -o "${TMP}" \
+            --autocenter \
+            --viewall \
+            --imgsize "${IMGSIZE}" \
+            --render \
+            --projection p \
+            --colorscheme "${THEME}" \
+            "${FILE}"
+    else
+        ${RENDERCMD} -o "${TMP}" \
+            --camera="${CAMERA}" \
+            --imgsize "${IMGSIZE}" \
+            --render \
+            --projection p \
+            --colorscheme "${THEME}" \
+            "${FILE}"
+    fi
 
     blacken "${TMP}" "${OUT}"
     rm "${TMP}"
@@ -54,8 +66,8 @@ blacken() {
 
 # main part
 main() {
-    local OPTIND SRCFILE STLFILE PICFILE THEME o
-    while getopts ":i:o:p:t:" o; do
+    local OPTIND SRCFILE STLFILE PICFILE THEME CAMERA IMGSIZE o
+    while getopts ":i:o:p:t:c:s:" o; do
         case "${o}" in
             i)
                 SRCFILE="${OPTARG}"
@@ -68,6 +80,12 @@ main() {
                 ;;
             t)
                 THEME="${OPTARG}"
+                ;;
+            c)
+                CAMERA="${OPTARG}"
+                ;;
+            s)
+                IMGSIZE="${OPTARG}"
                 ;;
             *)
                 usage
@@ -85,11 +103,16 @@ main() {
         THEME=Tomorrow
     fi
 
+    if [ -z "${IMGSIZE}" ]; then
+        IMGSIZE="3840,2160"
+    fi
+
     # first render stl
     render_stl "${SRCFILE}" "${STLFILE}"
 
     # Then render image
-    render_image "${SRCFILE}" "${PICFILE}" "${THEME}"
+    render_image "${SRCFILE}" "${PICFILE}" \
+        "${THEME}" "${IMGSIZE}" "${CAMERA}"
 }
 
 main "$@"

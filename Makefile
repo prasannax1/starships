@@ -139,6 +139,7 @@ stl/misc/cruiser2.stl: src/lib/util.scad src/misc/cruiser2.scad
 	    -i src/misc/cruiser2.scad \
 	    -o stl/misc/cruiser2.stl \
 	    -p images/misc/cruiser2.png \
+	    -c "20.53,42.62,5.09,88.6,0,132.4,343" \
 	    -t Cornfield
 
 stl/misc/cruiser3.stl: src/lib/util.scad src/misc/cruiser3.scad
@@ -146,6 +147,7 @@ stl/misc/cruiser3.stl: src/lib/util.scad src/misc/cruiser3.scad
 	    -i src/misc/cruiser3.scad \
 	    -o stl/misc/cruiser3.stl \
 	    -p images/misc/cruiser3.png \
+	    -c "-62.29,0.15,-2.5,98.4,0,221,564" \
 	    -t Solarized
 
 
@@ -177,6 +179,7 @@ stl/mother/escort-separation.stl: src/lib/util.scad \
 	    -i src/mother/escort-separation.scad \
 	    -o stl/mother/escort-separation.stl \
 	    -p images/mothership/escort-separation.png \
+	    -c "62.28,-25.90,17.10,92.10,0,230.8,3000" \
 	    -t Tomorrow
 
 stl/mother/transwarp-full.stl: src/lib/util.scad \
@@ -204,6 +207,7 @@ stl/mother/battle-separation.stl: src/lib/util.scad \
 	    -i src/mother/battle-separation.scad \
 	    -o stl/mother/battle-separation.stl \
 	    -p images/mothership/battle-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
 	    -t Tomorrow
 
 stl/mother/scout-separation.stl: src/lib/util.scad \
@@ -213,6 +217,7 @@ stl/mother/scout-separation.stl: src/lib/util.scad \
 	    -i src/mother/scout-separation.scad \
 	    -o stl/mother/scout-separation.stl \
 	    -p images/mothership/scout-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
 	    -t Tomorrow
 
 stl/mother/saucer.stl: src/lib/util.scad \
@@ -231,6 +236,7 @@ stl/mother/escort.stl: src/lib/util.scad \
 	    -i src/mother/escort.scad \
 	    -o stl/mother/escort.stl \
 	    -p images/mothership/escort.png \
+	    -c "-9.95,30.52,-1.32,127.8,0,52.3,500"
 	    -t Tomorrow
 
 stl/mother/main.stl: src/lib/util.scad \
@@ -249,6 +255,7 @@ stl/mother/full-separation.stl: src/lib/util.scad \
 	    -i src/mother/full-separation.scad \
 	    -o stl/mother/full-separation.stl \
 	    -p images/mothership/full-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
 	    -t Tomorrow
 
 stl/mother/normal-separation.stl: src/lib/util.scad \
@@ -258,6 +265,7 @@ stl/mother/normal-separation.stl: src/lib/util.scad \
 	    -i src/mother/normal-separation.scad \
 	    -o stl/mother/normal-separation.stl \
 	    -p images/mothership/normal-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
 	    -t Tomorrow
 
 combinestls: stl/combined/scale.stl
@@ -282,5 +290,8 @@ stl/combined/scale.stl: src/lib/util.scad \
 	    -i src/combined/scale.scad \
 	    -o stl/combined/scale.stl \
 	    -p images/combined/scale.png \
+	    -s 5760,2160 \
+	    -c "26.20,0,235.23,90,0,0,2500" \
 	    -t BeforeDawn
+
 
