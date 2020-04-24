@@ -6,7 +6,7 @@ Star Trek type starships
 
 ![Mother Ship](images/mothership/main.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
 Exodus Class Deep Space Explorer/Heavy Cruiser/Carrier
 
@@ -76,10 +76,6 @@ In addition, each section also contains areas which specialize.
  * Section 15 deals with transfers. The upper shuttle bay contains 20 *Hornet* class heavy shuttles to deal with transfer of personnel and cargo between missions. The lower hangar is coverted to a large cargo bay.
 
 The various types of auxillary vehicles carried by the *Exodus* is shown below.
-
-![sectors](images/combined/sector.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined.stl)
 
 #### Captain's Yacht/Dedicated Escort Vessel
 
@@ -420,7 +416,7 @@ The *Magpie* is the standard auxillary vehicle of the *Exodus*. It is used for p
 
 ![Tactical Runabout](images/icp/tactical-shuttle.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/tactical-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/tactical-runabout.stl)
 
 Hawk Class tactical runabout
 
@@ -500,7 +496,7 @@ The *Raven* is used by the *Exodus* like any other ship would use runabouts - st
 
 ![Attack Ship](images/icp/attack.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/attack.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/attack.stl)
 
 Vulture Class Light Corvette/Patrol Vessel
 
@@ -598,7 +594,7 @@ If these hangars are empty, they're used to store the *Vulture* class ships, whi
 
 ![Diplomatic Yacht](images/icp/diplomat.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/diplomat.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/diplomat.stl)
 
 Dove Class Diplomatic Yacht/Light Courier
 
@@ -639,4 +635,4 @@ The *Exodus* holds 3 *Dove* class yachts in the lower hangar of section 0.
 
 ![scale](images/combined/scale.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/scale.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined/scale.stl)
