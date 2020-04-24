@@ -8,16 +8,14 @@ Star Trek type starships
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
-Exodus Class Deep Space Explorer/Heavy Cruiser/Carrier
+Exodus Class Multimission Deep Space Explorer/Heavy Carrier
 
 ### Stats
 
- * Length: 1433m
+ * Length: 1496m
  * Width: 746m
- * Height: 204m
- * Decks: 60
-   * Saucer Section: 30 decks
-   * Engine Section: 30 decks
+ * Height: 229m
+ * Decks: 57
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
