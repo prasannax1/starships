@@ -179,7 +179,7 @@ stl/mother/escort-separation.stl: src/lib/util.scad \
 	    -i src/mother/escort-separation.scad \
 	    -o stl/mother/escort-separation.stl \
 	    -p images/mothership/escort-separation.png \
-	    -c "62.28,-25.90,17.10,92.10,0,230.8,3000" \
+	    -c "49.20,-27.35,15.38,97.70,0,185.3,3086" \
 	    -t Tomorrow
 
 stl/mother/transwarp-full.stl: src/lib/util.scad \
