@@ -2,7 +2,15 @@
 # author - prasanna
 
 # Set up some variables
-RENDERCMD='flatpak run org.openscad.OpenSCAD/x86_64/stable'
+# Arch independent
+if flatpak list | grep -q openscad; then
+    RENDERCMD='flatpak run org.openscad.OpenSCAD/x86_64/stable'
+elif snap list | grep -q openscad; then
+    RENDERCMD='snap run openscad-nightly'
+else
+    RENDERCMD="$(which openscad)"
+fi
+
 
 # Util functions
 usage() {

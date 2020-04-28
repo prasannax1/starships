@@ -1,7 +1,7 @@
 use <../lib/util.scad>;
 mvm_tw_nacelle_height=80;
 
-module mvm_tw_main_body() {
+module mvm_tw_main_body(standalone=false) {
     difference() {
         union() {
             util_ovoid(250,300,180,1,100);
@@ -40,15 +40,15 @@ module mvm_tw_main_body() {
     util_ovoid(250,300,360,15,15);
 }
 
-module mvm_tw_pos() {
-    mvm_tw_main_body();
-    mvm_tw_nacelle_bar();
+module mvm_tw_pos(standalone=false) {
+    mvm_tw_main_body(standalone);
+    mvm_tw_nacelle_bar(standalone);
     util_mirrored([0,1,0])
-    mvm_tw_nacelles();
-    mvm_tw_neck();
+    mvm_tw_nacelles(standalone);
+    mvm_tw_neck(standalone);
 }
 
-module mvm_tw_nacelle_bar() {
+module mvm_tw_nacelle_bar(standalone=false) {
     rear_radius=750;
     side_radius=320;
     height=mvm_tw_nacelle_height;
@@ -83,7 +83,7 @@ module mvm_tw_nacelle_bar() {
     }
 }
 
-module mvm_tw_nacelles() {
+module mvm_tw_nacelles(standalone=false) {
     translate([-300,275,mvm_tw_nacelle_height])
     util_ovoid(100,100,50,1,24);
 
@@ -91,7 +91,7 @@ module mvm_tw_nacelles() {
     util_ovoid(250,500,100,50,15);
 }
 
-module mvm_tw_neck_common() {
+module mvm_tw_neck_common(standalone=false) {
     difference() {
         translate([0,0,60])
         mirror([0,0,1])
@@ -107,27 +107,27 @@ module mvm_tw_neck_common() {
     }
 }
 
-module mvm_tw_neck_uncommon() {
+module mvm_tw_neck_uncommon(standalone=false) {
     scale([250/80,1,.8])
     rotate([90,0,0])
     cylinder(r=80, h=500, center=true);
 }
 
-module mvm_tw_neck() {
+module mvm_tw_neck(standalone=false) {
     intersection() {
-        mvm_tw_neck_common();
-        mvm_tw_neck_uncommon();
+        mvm_tw_neck_common(standalone);
+        mvm_tw_neck_uncommon(standalone);
     }
 }
 
-module mvm_sc_body() {
+module mvm_sc_body(standalone=false) {
     
     difference() {
         intersection() {
             union() {
                 difference() {
-                    mvm_tw_neck_common();
-                    scale(.99) mvm_tw_neck_uncommon();
+                    mvm_tw_neck_common(false);
+                    scale(.99) mvm_tw_neck_uncommon(false);
                 }
                 
                 translate([750/2,0,60-.01])
@@ -140,14 +140,15 @@ module mvm_sc_body() {
         
 //        translate([200,0,0])
 //        cube([400,400,50], center=true);
-        
-        translate([297,0,45])
-        rotate([90,0,0])
-        cylinder(100, 4.5, 4.5, center=true, $fn=8);
+        if (standalone == true) {
+            translate([297,0,45])
+            rotate([90,0,0])
+            cylinder(100, 4.5, 4.5, center=true, $fn=8);
+        }
     }
 }
 
-module mvm_sc_saucer() {
+module mvm_sc_saucer(standalone=false) {
     translate([750/2,0,60-.01])
     util_saucer(250,250,25);
     
@@ -158,35 +159,35 @@ module mvm_sc_saucer() {
     util_ovoid(20,40,40,5,3);
 }
 
-module mvm_sc_pos() {
-    mvm_sc_body();
-    mvm_sc_saucer();
+module mvm_sc_pos(standalone=false) {
+    mvm_sc_body(standalone);
+    mvm_sc_saucer(standalone);
     util_mirrored([0,1,0])
-    mvm_sc_nacelles();
+    mvm_sc_nacelles(standalone);
 }
 
 module mvm_scout() {
-    translate([-250, 0, -60]) mvm_sc_pos();
+    translate([-250, 0, -60]) mvm_sc_pos(true);
 }
 
-module mvm_sc_nacelles() {
+module mvm_sc_nacelles(standalone=false) {
     translate([220,26,71])
     rotate([-40,0,0])
     util_nacelle(180,35,36,curved=true);
 }
 
 module mvm_transwarp() {
-    translate([0,0,0]) mvm_tw_pos();
+    translate([0,0,0]) mvm_tw_pos(true);
 }
 
 module mvm_transwarp_full() {
     translate([0,0,0]) {
-        mvm_tw_pos();
-        mvm_sc_pos();
+        mvm_tw_pos(true);
+        mvm_sc_pos(true);
     }
 }
 
-module mvm_disk_plus() {
+module mvm_disk_plus(standalone=false) {
     intersection() {
         translate([750/2,0,0]) {
             difference() {
@@ -222,15 +223,18 @@ module mvm_disk_plus() {
         }
     }
     
-    translate([750/2+200,0,57])
+    translate([750/2+160,0,60])
     util_ovoid(20,20,40,4,4);
 }
 
 
 
-module mvm_disk_minus() {
-    mvm_tw_neck_common();
-    util_ovoid(250,300,360,15,400);
+module mvm_disk_minus(standalone=false) {
+    mvm_tw_neck_common(false);
+    
+    if (standalone==true) {
+        util_ovoid(250,300,360,15,400);
+    }
     
     hull() {
         translate([750/2, 0, -20-.01])
@@ -243,80 +247,93 @@ module mvm_disk_minus() {
 }
 
 module mother() {
-    mvm_disk_pos();
-    mvm_esc_pos();
-    mvm_tw_pos();
-    mvm_sc_pos();
+    mvm_disk_pos(false);
+    mvm_esc_pos(false);
+    mvm_tw_pos(false);
+    mvm_sc_pos(false);
 }
 
-module mvm_disk_pos() {
+module mvm_disk_pos(standalone=false) {
     //render() 
     difference() {
-        mvm_disk_plus();
-        mvm_disk_minus();
+        mvm_disk_plus(standalone);
+        mvm_disk_minus(standalone);
     }
 }
 
 module mvm_saucer() {
-    translate([-750/2,0,0]) mvm_disk_pos();
+    translate([-750/2,0,0]) mvm_disk_pos(true);
 }
 
 module mvm_escort() {    
-    difference() {
-        mirror([0,0,1]) util_saucer(150,150,20);
-            
-        translate([-90-50,0,0])
-        cube(180,center=true);
-    
-        translate([75,0,0])
-        cube([25,25,60], center=true);
-    }
-
-    difference() {
-        util_mirrored([0,1,0])
-        translate([-7.5,36,0])
-        rotate([90,0,0])
-        util_nacelle(120,40,45,curved=true, up=false);
-        
-        translate([0,0,250])
-        cube(500,center=true);
-    }
+    translate([-750/2, 0, +5]) mvm_esc_pos(true);
 }
 
-module mvm_esc_pos() {
-    translate([750/2, 0, -5+.01]) mvm_escort();
+module mvm_esc_pos(standalone=false) {
+    translate([750/2, 0, -5+.01]) {
+        difference() {
+            mirror([0,0,1]) util_saucer(150,150,20);
+                
+            translate([-90-50,0,0])
+            cube(180,center=true);
+        
+            translate([75,0,0])
+            cube([25,25,60], center=true);
+            
+            if (standalone==true) {
+                difference() {
+                    util_ring(20,18,6);
+                    
+                    translate([-9.5-8,0,0])
+                    cube(16,center=true);
+                }
+
+                cylinder(r=12,h=1,center=true);
+            }
+        }
+
+        difference() {
+            util_mirrored([0,1,0])
+            translate([-7.5,36,0])
+            rotate([90,0,0])
+            util_nacelle(120,40,45,curved=true, up=false);
+            
+            translate([0,0,250])
+            cube(500,center=true);
+        }
+    }
 }
 
 module mvm_normal_separate() {
-    translate([-150,0,0]) mvm_tw_pos();
+    translate([-240,0,0]) mvm_tw_pos(true);
 
-    translate([150,0,50]) {
-        mvm_sc_pos();
-        mvm_disk_pos();
-        mvm_esc_pos();
+    translate([240,0,75]) {
+        mvm_sc_pos(false);
+        mvm_disk_pos(true);
+        mvm_esc_pos(false);
     }
 }
 
 module mvm_escort_separate() {
     translate([-0,0,50]) {
-        mvm_sc_pos();
-        mvm_disk_pos();
-        mvm_tw_pos();
+        mvm_sc_pos(false);
+        mvm_disk_pos(false);
+        mvm_tw_pos(false);
     }
 
     translate([0,0,-50]) {
-        mvm_esc_pos();
+        mvm_esc_pos(true);
     }
 }
 
 module mvm_full_separate() {
-    translate([-150,0,0]) mvm_tw_pos();
+    translate([-240,0,0]) mvm_tw_pos(true);
 
-    translate([150,0,50]) mvm_disk_pos();
+    translate([240,0,50]) mvm_disk_pos(true);
 
-    translate([-50,0, 100]) mvm_sc_pos();
+    translate([-25,0, 150]) mvm_sc_pos(true);
 
-    translate([0,0,-50]) mvm_esc_pos();
+    translate([-75,0,-50]) mvm_esc_pos(true);
 }
 
 module m_main_sep() {
@@ -324,26 +341,26 @@ module m_main_sep() {
 }
 
 module mvm_battle_separate() {
-    translate([-180,0,0]) {
-        mvm_tw_pos();
-        mvm_sc_pos();
+    translate([-240,0,0]) {
+        mvm_tw_pos(true);
+        mvm_sc_pos(true);
     }
 
-    translate([180,0,-50]) {
-        mvm_disk_pos();
-        mvm_esc_pos();
+    translate([240,0,-75]) {
+        mvm_disk_pos(true);
+        mvm_esc_pos(false);
     }
 }
 
 
 module mvm_scout_separate() {
-    translate([-0,0,50]) {
-        mvm_sc_pos();
+    translate([-0,0,75]) {
+        mvm_sc_pos(true);
     }
 
-    translate([0,0,-50]) {
-        mvm_disk_pos();
-        mvm_esc_pos();
-        mvm_tw_pos();
+    translate([0,0,-75]) {
+        mvm_disk_pos(false);
+        mvm_esc_pos(false);
+        mvm_tw_pos(false);
     }
 }
