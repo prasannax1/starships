@@ -199,6 +199,7 @@ stl/mother/transwarp-escort.stl: src/lib/util.scad \
 	    -i src/mother/transwarp-escort.scad \
 	    -o stl/mother/transwarp-escort.stl \
 	    -p images/mothership/transwarp-escort.png \
+	    -c "-144.39,0.28,27.82,139.7,0,43.2,2198" \
 	    -t Tomorrow
 
 stl/mother/scout.stl: src/lib/util.scad \
