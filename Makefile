@@ -139,6 +139,7 @@ stl/misc/cruiser2.stl: src/lib/util.scad src/misc/cruiser2.scad
 	    -i src/misc/cruiser2.scad \
 	    -o stl/misc/cruiser2.stl \
 	    -p images/misc/cruiser2.png \
+	    -c "20.53,42.62,5.09,88.6,0,132.4,343" \
 	    -t Cornfield
 
 stl/misc/cruiser3.stl: src/lib/util.scad src/misc/cruiser3.scad
@@ -146,82 +147,142 @@ stl/misc/cruiser3.stl: src/lib/util.scad src/misc/cruiser3.scad
 	    -i src/misc/cruiser3.scad \
 	    -o stl/misc/cruiser3.stl \
 	    -p images/misc/cruiser3.png \
+	    -c "-62.29,0.15,-2.5,98.4,0,221,564" \
 	    -t Solarized
 
 
-motherstls: stl/mother/scout.stl \
-    stl/mother/saucer.stl \
+motherstls: stl/mother/saucer.stl \
     stl/mother/transwarp.stl \
     stl/mother/escort.stl \
+    stl/mother/scout.stl \
     stl/mother/main.stl \
-    stl/mother/separation.stl \
+    stl/mother/transwarp-full.stl \
+    stl/mother/transwarp-escort.stl \
+    stl/mother/battle-separation.stl \
+    stl/mother/scout-separation.stl \
+    stl/mother/escort-separation.stl \
+    stl/mother/full-separation.stl \
     stl/mother/normal-separation.stl 
 
-stl/mother/scout.stl: src/lib/util.scad src src/mother/scout.scad
-	bin/render.sh \
-	    -i src/mother/scout.scad \
-	    -o stl/mother/scout.stl \
-	    -p images/mothership/scout.png \
-	    -t Tomorrow
-
-
-stl/mother/transwarp.stl: src/lib/util.scad src src/mother/transwarp.scad
+stl/mother/transwarp.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/transwarp.scad
 	bin/render.sh \
 	    -i src/mother/transwarp.scad \
 	    -o stl/mother/transwarp.stl \
 	    -p images/mothership/transwarp.png \
 	    -t Tomorrow
 
-stl/mother/saucer.stl: src/lib/util.scad src src/mother/saucer.scad
+stl/mother/escort-separation.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/escort-separation.scad
+	bin/render.sh \
+	    -i src/mother/escort-separation.scad \
+	    -o stl/mother/escort-separation.stl \
+	    -p images/mothership/escort-separation.png \
+	    -c "49.20,-27.35,15.38,97.70,0,185.3,3086" \
+	    -t Tomorrow
+
+stl/mother/transwarp-full.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/transwarp-full.scad
+	bin/render.sh \
+	    -i src/mother/transwarp-full.scad \
+	    -o stl/mother/transwarp-full.stl \
+	    -p images/mothership/transwarp-full.png \
+	    -t Tomorrow
+
+stl/mother/transwarp-escort.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/transwarp-escort.scad
+	bin/render.sh \
+	    -i src/mother/transwarp-escort.scad \
+	    -o stl/mother/transwarp-escort.stl \
+	    -p images/mothership/transwarp-escort.png \
+	    -t Tomorrow
+
+stl/mother/scout.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/scout.scad
+	bin/render.sh \
+	    -i src/mother/scout.scad \
+	    -o stl/mother/scout.stl \
+	    -p images/mothership/scout.png \
+	    -t Tomorrow
+
+stl/mother/battle-separation.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/battle-separation.scad
+	bin/render.sh \
+	    -i src/mother/battle-separation.scad \
+	    -o stl/mother/battle-separation.stl \
+	    -p images/mothership/battle-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
+	    -t Tomorrow
+
+stl/mother/scout-separation.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/scout-separation.scad
+	bin/render.sh \
+	    -i src/mother/scout-separation.scad \
+	    -o stl/mother/scout-separation.stl \
+	    -p images/mothership/scout-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
+	    -t Tomorrow
+
+stl/mother/saucer.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/saucer.scad
 	bin/render.sh \
 	    -i src/mother/saucer.scad \
 	    -o stl/mother/saucer.stl \
 	    -p images/mothership/saucer.png \
 	    -t Tomorrow
 
-stl/mother/escort.stl: src/lib/util.scad src src/mother/escort.scad
+stl/mother/escort.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/escort.scad
 	bin/render.sh \
 	    -i src/mother/escort.scad \
 	    -o stl/mother/escort.stl \
 	    -p images/mothership/escort.png \
+	    -c "-9.95,30.52,-1.32,127.8,0,52.3,500"
 	    -t Tomorrow
 
-stl/mother/main.stl: src/lib/util.scad src src/mother/main.scad\
-    src/mother/scout.scad src/mother/saucer.scad \
-    src/mother/transwarp.scad src/mother/escort.scad
+stl/mother/main.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/main.scad
 	bin/render.sh \
 	    -i src/mother/main.scad \
 	    -o stl/mother/main.stl \
 	    -p images/mothership/main.png \
 	    -t Tomorrow
 
-stl/mother/separation.stl: src/lib/util.scad src \
-    src/mother/separation.scad \
-    src/mother/scout.scad src/mother/saucer.scad \
-    src/mother/transwarp.scad src/mother/escort.scad
+stl/mother/full-separation.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/full-separation.scad
 	bin/render.sh \
-	    -i src/mother/separation.scad \
-	    -o stl/mother/separation.stl \
-	    -p images/mothership/separation.png \
+	    -i src/mother/full-separation.scad \
+	    -o stl/mother/full-separation.stl \
+	    -p images/mothership/full-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
 	    -t Tomorrow
 
-stl/mother/normal-separation.stl: src/lib/util.scad src \
-    src/mother/normal-separation.scad \
-    src/mother/scout.scad src/mother/saucer.scad \
-    src/mother/transwarp.scad src/mother/escort.scad
+stl/mother/normal-separation.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/normal-separation.scad 
 	bin/render.sh \
 	    -i src/mother/normal-separation.scad \
 	    -o stl/mother/normal-separation.stl \
 	    -p images/mothership/normal-separation.png \
+	    -c "-35.83,29.84,58.27,90,0,0,3787" \
 	    -t Tomorrow
 
 combinestls: stl/combined/scale.stl
 
 stl/combined/scale.stl: src/lib/util.scad \
-    src/mother/main.scad \
-    stl/mother/main.stl \
-    src/mother/separation.scad \
-    stl/mother/separation.stl \
+    src/mother/mlib.scad \
+    stl/mother/full-separation.stl \
     src/macs/macs.scad \
     src/macs/shuttle.scad \
     src/macs/runabout.scad \
@@ -229,7 +290,6 @@ stl/combined/scale.stl: src/lib/util.scad \
     src/macs/heavy.scad \
     src/icp/runabout.scad \
     src/icp/science.scad \
-    src/icp/scout.scad \
     src/icp/diplomatic.scad \
     src/icp/attack.scad \
     src/icp/tactical-runabout.scad \
@@ -240,5 +300,8 @@ stl/combined/scale.stl: src/lib/util.scad \
 	    -i src/combined/scale.scad \
 	    -o stl/combined/scale.stl \
 	    -p images/combined/scale.png \
+	    -s 5760,2160 \
+	    -c "26.20,0,235.23,90,0,0,2500" \
 	    -t BeforeDawn
+
 

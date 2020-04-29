@@ -1,6 +1,5 @@
 use <../lib/util.scad>;
-use <../mother/main.scad>;
-use <../mother/separation.scad>;
+use <../mother/mlib.scad>;
 use <../macs/macs.scad>;
 use <../macs/shuttle.scad>;
 use <../macs/runabout.scad>;

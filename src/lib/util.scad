@@ -154,3 +154,44 @@ module util_nacelle_bar(span, height, width, thickness) {
             cube(2.2*outer, center=true);
     }
 }
+
+module util_q_sphere(rad, quadrant) {
+    x_sign = quadrant == 1 ? 1 :
+             quadrant == 2 ? -1 :
+             quadrant == 3 ? -1 :
+             quadrant == 4 ? 1 : 0;
+    z_sign = quadrant == 1 ? 1 :
+             quadrant == 2 ? 1 :
+             quadrant == 3 ? -1 :
+             quadrant == 4 ? -1 : 0;
+    
+    difference() {
+        sphere(rad, $fn=32);
+
+        translate([x_sign*-1.1*rad + .01,0,0])
+        cube(2.2*rad, center=true);
+
+        translate([0,0,z_sign*-1.1*rad + .01])
+        cube(2.2*rad, center=true);
+    }
+}
+
+module util_ovoid(front_rad, back_rad, width, upper_rad, lower_rad) {
+    half_width = width/2;
+    largest=max(front_rad, back_rad, half_width, upper_rad, lower_rad);
+    smallest=min(front_rad, back_rad, half_width, upper_rad, lower_rad);
+    
+    union() {
+        scale([front_rad/smallest, half_width/smallest, upper_rad/smallest])
+        util_q_sphere(smallest, 1);
+        
+        scale([front_rad/smallest, half_width/smallest, lower_rad/smallest])
+        util_q_sphere(smallest, 4);
+        
+        scale([back_rad/smallest, half_width/smallest, lower_rad/smallest])
+        util_q_sphere(smallest, 3);
+        
+        scale([back_rad/smallest, half_width/smallest, upper_rad/smallest])
+        util_q_sphere(smallest, 2);
+    }
+}
