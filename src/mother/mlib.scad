@@ -37,8 +37,21 @@ module mvm_tw_main_body(standalone=false) {
         cylinder(120,7.5,50,center=true);
     }
 
-    util_ovoid(250,300,360,15,15);
+    difference() {
+        util_ovoid(250,300,360,15,15);
+        mvm_tw_rear_dock(standalone);
+    }
 }
+
+
+module mvm_tw_rear_dock(standalone=false) {
+    translate([-175,0,-57])
+    cylinder(100,80,80,center=true);
+
+    translate([-175-80,0,-87])
+    cube(160,center=true);
+}
+
 
 module mvm_tw_pos(standalone=false) {
     mvm_tw_main_body(standalone);
@@ -80,6 +93,8 @@ module mvm_tw_nacelle_bar(standalone=false) {
         
         translate([-300,0,175/2])
         cube(175,center=true);
+        
+        mvm_tw_rear_dock(standalone);
     }
 }
 
@@ -185,6 +200,12 @@ module mvm_transwarp_full() {
         mvm_tw_pos(true);
         mvm_sc_pos(true);
     }
+}
+
+module mvm_transwarp_escort() {
+    mvm_tw_pos(true);
+    translate([-750/2-175,0,-2.5+.01])
+    mvm_esc_pos(false);
 }
 
 module mvm_disk_plus(standalone=false) {

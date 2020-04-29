@@ -157,6 +157,7 @@ motherstls: stl/mother/saucer.stl \
     stl/mother/scout.stl \
     stl/mother/main.stl \
     stl/mother/transwarp-full.stl \
+    stl/mother/transwarp-escort.stl \
     stl/mother/battle-separation.stl \
     stl/mother/scout-separation.stl \
     stl/mother/escort-separation.stl \
@@ -189,6 +190,15 @@ stl/mother/transwarp-full.stl: src/lib/util.scad \
 	    -i src/mother/transwarp-full.scad \
 	    -o stl/mother/transwarp-full.stl \
 	    -p images/mothership/transwarp-full.png \
+	    -t Tomorrow
+
+stl/mother/transwarp-escort.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/transwarp-escort.scad
+	bin/render.sh \
+	    -i src/mother/transwarp-escort.scad \
+	    -o stl/mother/transwarp-escort.stl \
+	    -p images/mothership/transwarp-escort.png \
 	    -t Tomorrow
 
 stl/mother/scout.stl: src/lib/util.scad \
