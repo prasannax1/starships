@@ -4,7 +4,7 @@ mvm_tw_nacelle_height=80;
 module mvm_tw_main_body(standalone=false) {
     difference() {
         union() {
-            util_ovoid(250,300,180,1,100);
+            util_ovoid(250,300,180,1,90);
             util_ovoid(250,300,300,60,1);
         }
 
@@ -43,7 +43,6 @@ module mvm_tw_main_body(standalone=false) {
     }
 }
 
-
 module mvm_tw_rear_dock(standalone=false) {
     translate([-175,0,-57])
     cylinder(100,80,80,center=true);
@@ -51,7 +50,6 @@ module mvm_tw_rear_dock(standalone=false) {
     translate([-175-80,0,-87])
     cube(160,center=true);
 }
-
 
 module mvm_tw_pos(standalone=false) {
     mvm_tw_main_body(standalone);
@@ -104,6 +102,9 @@ module mvm_tw_nacelles(standalone=false) {
 
     translate([-250,275,mvm_tw_nacelle_height])
     util_ovoid(250,500,100,50,15);
+    
+    translate([-155,275,mvm_tw_nacelle_height])
+    util_ovoid(150,180,90,60,10);
 }
 
 module mvm_tw_neck_common(standalone=false) {
@@ -160,12 +161,22 @@ module mvm_sc_body(standalone=false) {
             rotate([90,0,0])
             cylinder(100, 4.5, 4.5, center=true, $fn=8);
         }
+        
+        translate([220,0,75+50])
+        cube([120,24,100],center=true);
+        
+        translate([110,0,62])
+        cube([100,36,16],center=true);
     }
 }
 
 module mvm_sc_saucer(standalone=false) {
-    translate([750/2,0,60-.01])
-    util_saucer(250,250,25);
+    difference() {
+        translate([750/2,0,60-.01])
+        util_saucer(250,250,25);
+        translate([220,0,75+50])
+        cube([120,24,100],center=true);
+    }
     
     translate([750/2, 0, 60+27/2])
     cylinder(24,120,64,center=true);
