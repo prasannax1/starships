@@ -15,7 +15,7 @@ Exodus Class Multimission Deep Space Explorer/Heavy Carrier
  * Length: 1496m
  * Width: 746m
  * Height: 229m
- * Decks: 57
+ * Decks: 54
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
@@ -23,17 +23,16 @@ Exodus Class Multimission Deep Space Explorer/Heavy Carrier
    * Maximum (all stations filled): 7500
    * Maximum (evacuation limit): 50000
  * Auxillary Craft
-   * 80 *Magpie* class runabouts
-   * 30 *Hawk* class tactical runabouts
-   * 20 *Hornet* class heavy shuttles
-   * 16 *Raven* class heavy runabouts
-   * 6 *Vulture* class patrol vessels
-   * 4 *White Owl* class light scouts
-   * 4 *Dragonfly* class warp tugs
-   * 3 *Dove* class diplomatic yachts
-   * 2 *Nightingale* class heavy medevac vehicles
-   * 1 "*Bat*" class escort vessel
-   * ~50 *Bumblebee* class light shuttles
+   * *Magpie* class runabouts
+   * *Hawk* class tactical runabouts
+   * *Hornet* class heavy shuttles
+   * *Raven* class heavy runabouts
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dragonfly* class warp tugs
+   * *Dove* class diplomatic yachts
+   * *Nightingale* class heavy medevac vehicles
+   * *Bumblebee* class light shuttles
  * Warp speed:
    * Cruising: Warp 6
    * Maximum: Warp 8
