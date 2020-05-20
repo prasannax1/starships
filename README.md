@@ -8,7 +8,7 @@ Star Trek type starships
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
-Exodus Class Multimission Deep Space Explorer/Heavy Carrier
+Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
 ### Stats
 
@@ -19,9 +19,9 @@ Exodus Class Multimission Deep Space Explorer/Heavy Carrier
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
-   * Typical: 1200
-   * Maximum (all stations filled): 7500
-   * Maximum (evacuation limit): 50000
+   * Typical: 3000
+   * Maximum (all stations filled): 12000
+   * Maximum (evacuation limit): 90000
  * Auxillary Craft
    * *Magpie* class runabouts
    * *Hawk* class tactical runabouts
@@ -44,35 +44,118 @@ The *Exodus Class* is meant to act as both a deep space explorer, and as a mobil
 
 ### Structure
 
-The *Exodus* follows a pretty tradtional design, saucer, secondary hull and nacelles. The saucer is shaped to present a lower profile from the fore direction. It is fatter than you expect it, even on a ship this size, because most of the lower half of the saucer section consists of mobile hangars for small starship.
+The *Exodus* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Exodus. Multi-vector mode is a nice idea for smaller ships - but for a ship that's 1.5 km long it's impossible to build without.
 
-#### Saucer Section
+#### Aviary Class
 
-The saucer section is as big as a *Galaxy* or a *Sovereign* class by itself. It is split into 4 main parts.
+![Saucer Section](images/mothership/saucer.png)
 
-The top 5 decks of the saucer section consists of the upper bridge complex. It consists of main bridge, main computer core, an auxillary sickbay. It also contains offices for the civilian government and administration for the civilian and starfleet residents of the *Exodus*. It also contains a mess hall and dormitory for bridge and admin staff.
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
-The next 20 decks of the saucer section are split up into 16 sections and a central core. The central core consists of main power coupling, turbolift routing and an auxillary computer core.
+*Aviary Class* Mobile starbase/Heavy Carrier
 
-Each section contains a shuttlebay 3 decks tall in the upper half, and a hangar 5 decks tall in the lower half. Each section contains an auxillary sickbay, a brig, and a mess hall. They contain residences for the crew of all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
+##### Stats
 
-In addition, each section also contains areas which specialize. 
+ * Length: 808m
+ * Width: 746m
+ * Height: 83m
+ * Decks: 25
+ * Crew Capacity:
+   * Minimum (skeleton): 5
+   * Minimum (sustainable): 50
+   * Typical: 2500
+   * Maximum (all stations filled): 10000
+   * Maximum (evacuation limit): 75000
+ * Auxillary Craft
+   * *Magpie* class runabouts
+   * *Hawk* class tactical runabouts
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dove* class diplomatic yachts
+   * *Bumblebee* class light shuttles
+ * Warp speed:
+   * Cruising: Warp 1.2
+   * Maximum: Warp 1.6
 
- * Section 0 is the diplomatic office. It contains residence for diplomatic guests, residences for admiralty, a dining hall and a holo conference auditorium. The upper shuttlebay has been converted into a large party hall + dining area with gardens for diplomatic functions. The lower hangar contains 3 *Dove* class yachts for diplomatic missions.
+   
+At 800 m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body.
 
- * Section 1 is the main hospital. It also contains a quarantine area. The upper shuttle-bay is converted into additional wards and a physical therapy ground. The lower hangar contains two *Nightingale* class medevac vehicles.
+The saucer is divided into 16 sections, with the aft 3 sections fused together to form the main engineering part of the *Aviary* class. Each of the remaining sections is split up into the upper 12 decks consisting of various labs, residential areas and special purpose rooms, the next 6 decks containing a large hangar, and the bottom 6 decks consist of security barracks, firing range, brigs etc.
 
- * Sections 2, 3, 5, 6, 10, 11, 13, and 14 are various science labs. The labs are reconfigurable per ship. These sections also contain 2 holodecks each, and a medium mess hall. The upper shuttlebays of each contain 10 *Magpie* class runabouts, and two *Raven* class heavy runabouts, which are the primary mission craft of the *Exodus*. The lower hangars can contain *White Owl* class ships in 4 of these sections (3,5,11 & 13). The lower hangars of the other sections are converted into additional labs, holodecks, residence areas, and in the case of the exo-botany department, a mini-forest.
+The front-most section, section 0, contains an additional deck which forms the main bridge of the Aviary class - but under normal conditions the Aviary is slaved to the command module of the *Exodus class*.
 
- * Section 4 is auxillary engineering. It has engineering labs and a light industrial replicator. The upper shuttlebay contains 4 *Dragonfly* class shuttles modified to be tugs. The lower hangar is converted to a forge to build large scale projects and repair any damaged ships.
+Each section contains an auxillary sickbay, a brig, and a mess hall. They contain residences for the crew of all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
 
- * Sections 7, 8 & 9 are Operations. This comprises of internal security, external security (tactical & defense), security of away missions and misc operations. They contains weapons locker, and barracks for ops and security personnel all over the ship, and brig complexes. The upper shuttlebays of each contain 10 *Hawk* class tactical runabouts for ship defense and escorting away missions. The lower hangars of sections 7 & 9 each contain 3 *Vulture* class patrol vessels, to run escort for the *Exodus* itself and for tactical and wartime operations. Section 8 doesn't actually have a lower hangar, that's where the saucer section connects to the secondary hull.
+#### Mjolnir Class
 
- * Section 12 is auxillary guest quarters for civilian passengers. It also contains a large mess hall and a large holo-complex. Both the lower and upper bays are used to hold miscellanous security cleared and approved personal vehicles.
+![Transwarp](images/mothership/transwarp.png)
 
- * Section 15 deals with transfers. The upper shuttle bay contains 20 *Hornet* class heavy shuttles to deal with transfer of personnel and cargo between missions. The lower hangar is coverted to a large cargo bay.
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
 
-The various types of auxillary vehicles carried by the *Exodus* is shown below.
+*Mjolnir class* Multimission Deep Space Explorer/ Heavy Experimental vessel/ Carrier
+
+##### Stats
+
+ * Length: 998m
+ * Width: 650m
+ * Height: 229m
+ * Decks: 45
+ * Crew Capacity:
+   * Minimum (skeleton): 5
+   * Minimum (sustainable): 100
+   * Typical: 400
+   * Maximum (all stations filled): 900
+   * Maximum (evacuation limit): 10000
+ * Auxillary Craft
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dove* class diplomatic yachts
+   * *Defiant* Class escort vessels
+   * *Nova* Class science vessels
+   * Small starship under 200m long and under 40m high
+ * Warp speed:
+   * Cruising: Warp 8
+   * Maximum: Warp 9
+   * Transwarp
+
+At almost a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
+
+In contrast with the *Aviary* class, the *Mjolnir* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar 200mx200mx40m which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
+
+The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Mjolnir* is meant to the the testbed of experimental propulsion.
+
+#### Photon Class
+
+![Command](images/mothership/scout.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
+
+*Photon Class* heavy cruiser/ multimission explorer
+
+#### Stats
+
+ * Length: 463m
+ * Width: 250m
+ * Height: 100m
+ * Decks: 27
+ * Crew Capacity:
+   * Minimum (skeleton): 10
+   * Minimum (sustainable): 10
+   * Typical: 200
+   * Maximum (all stations filled): 500
+   * Maximum (evacuation limit): 5000
+ * Auxillary Craft
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dove* class diplomatic yachts
+   * *Defiant* Class escort vessels
+   * *Nova* Class science vessels
+   * Small starship under 200m long and under 40m high
+ * Warp speed:
+   * Cruising: Warp 8
+   * Maximum: Warp 9
+   * Transwarp
+
 
 #### Captain's Yacht/Dedicated Escort Vessel
 
