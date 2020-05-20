@@ -2,40 +2,37 @@
 
 Star Trek type starships
 
-## Aviary Class
+## Exodus Class
 
 ![Mother Ship](images/mothership/main.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
-Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
+Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
 ### Stats
 
- * Length: 1433m
+ * Length: 1496m
  * Width: 746m
- * Height: 204m
- * Decks: 60
-   * Saucer Section: 30 decks
-   * Engine Section: 30 decks
+ * Height: 229m
+ * Decks: 54
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
-   * Typical: 1200
-   * Maximum (all stations filled): 7500
-   * Maximum (evacuation limit): 50000
+   * Typical: 3000
+   * Maximum (all stations filled): 12000
+   * Maximum (evacuation limit): 90000
  * Auxillary Craft
-   * 80 *Magpie* class runabouts
-   * 30 *Hawk* class tactical runabouts
-   * 20 *Hornet* class heavy shuttles
-   * 16 *Raven* class heavy runabouts
-   * 6 *Vulture* class patrol vessels
-   * 4 *White Owl* class light scouts
-   * 4 *Dragonfly* class warp tugs
-   * 3 *Dove* class diplomatic yachts
-   * 2 *Nightingale* class heavy medevac vehicles
-   * 1 "*Bat*" class escort vessel
-   * ~50 *Bumblebee* class light shuttles
+   * *Magpie* class runabouts
+   * *Hawk* class tactical runabouts
+   * *Hornet* class heavy shuttles
+   * *Raven* class heavy runabouts
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dragonfly* class warp tugs
+   * *Dove* class diplomatic yachts
+   * *Nightingale* class heavy medevac vehicles
+   * *Bumblebee* class light shuttles
  * Warp speed:
    * Cruising: Warp 6
    * Maximum: Warp 8
@@ -43,75 +40,209 @@ Aviary Class Deep Space Explorer/Heavy Cruiser/Carrier
 
 ### Description
 
-The *Aviary Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
+The *Exodus Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
 
 ### Structure
 
-The *Aviary* follows a pretty tradtional design, saucer, secondary hull and nacelles. The saucer is shaped to present a lower profile from the fore direction. It is fatter than you expect it, even on a ship this size, because most of the lower half of the saucer section consists of mobile hangars for small starship.
+The *Exodus* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Exodus. Multi-vector mode is a nice idea for smaller ships - but for a ship that's 1.5 km long it's impossible to build without.
 
-#### Saucer Section
+#### Aviary Class
 
-The saucer section is as big as a *Galaxy* or a *Sovereign* class by itself. It is split into 4 main parts.
+![Saucer Section](images/mothership/saucer.png)
 
-The top 5 decks of the saucer section consists of the upper bridge complex. It consists of main bridge, main computer core, an auxillary sickbay. It also contains offices for the civilian government and administration for the civilian and starfleet residents of the *Aviary*. It also contains a mess hall and dormitory for bridge and admin staff.
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
-The next 20 decks of the saucer section are split up into 16 sections and a central core. The central core consists of main power coupling, turbolift routing and an auxillary computer core.
+*Aviary Class* Mobile starbase/Heavy Carrier
 
-Each section contains a shuttlebay 3 decks tall in the upper half, and a hangar 5 decks tall in the lower half. Each section contains an auxillary sickbay, a brig, and a mess hall. They contain residences for the crew of all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
+##### Stats
 
-In addition, each section also contains areas which specialize. 
+ * Length: 808m
+ * Width: 746m
+ * Height: 83m
+ * Decks: 25
+ * Crew Capacity:
+   * Minimum (skeleton): 5
+   * Minimum (sustainable): 50
+   * Typical: 2500
+   * Maximum (all stations filled): 10000
+   * Maximum (evacuation limit): 75000
+ * Auxillary Craft
+   * *Magpie* class runabouts
+   * *Hawk* class tactical runabouts
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dove* class diplomatic yachts
+   * *Bumblebee* class light shuttles
+ * Warp speed:
+   * Cruising: Warp 1.2
+   * Maximum: Warp 1.6
 
- * Section 0 is the diplomatic office. It contains residence for diplomatic guests, residences for admiralty, a dining hall and a holo conference auditorium. The upper shuttlebay has been converted into a large party hall + dining area with gardens for diplomatic functions. The lower hangar contains 3 *Dove* class yachts for diplomatic missions.
+   
+At 800 m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body.
 
- * Section 1 is the main hospital. It also contains a quarantine area. The upper shuttle-bay is converted into additional wards and a physical therapy ground. The lower hangar contains two *Nightingale* class medevac vehicles.
+The saucer is divided into 16 sections, with the aft 3 sections fused together to form the main engineering part of the *Aviary* class. Each of the remaining sections is split up into the upper 12 decks consisting of various labs, residential areas and special purpose rooms, the next 6 decks containing a large hangar, and the bottom 6 decks consist of security barracks, firing range, brigs etc.
 
- * Sections 2, 3, 5, 6, 10, 11, 13, and 14 are various science labs. The labs are reconfigurable per ship. These sections also contain 2 holodecks each, and a medium mess hall. The upper shuttlebays of each contain 10 *Magpie* class runabouts, and two *Raven* class heavy runabouts, which are the primary mission craft of the *Aviary*. The lower hangars can contain *White Owl* class ships in 4 of these sections (3,5,11 & 13). The lower hangars of the other sections are converted into additional labs, holodecks, residence areas, and in the case of the exo-botany department, a mini-forest.
+The front-most section, section 0, contains an additional deck which forms the main bridge of the Aviary class - but under normal conditions the Aviary is slaved to the command module of the *Exodus class*.
 
- * Section 4 is auxillary engineering. It has engineering labs and a light industrial replicator. The upper shuttlebay contains 4 *Dragonfly* class shuttles modified to be tugs. The lower hangar is converted to a forge to build large scale projects and repair any damaged ships.
+Each section contains an auxillary sickbay, a brig, and a mess hall. They contain residences for the crew of all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
 
- * Sections 7, 8 & 9 are Operations. This comprises of internal security, external security (tactical & defense), security of away missions and misc operations. They contains weapons locker, and barracks for ops and security personnel all over the ship, and brig complexes. The upper shuttlebays of each contain 10 *Hawk* class tactical runabouts for ship defense and escorting away missions. The lower hangars of sections 7 & 9 each contain 3 *Vulture* class patrol vessels, to run escort for the *Aviary* itself and for tactical and wartime operations. Section 8 doesn't actually have a lower hangar, that's where the saucer section connects to the secondary hull.
+#### Mjolnir Class
 
- * Section 12 is auxillary guest quarters for civilian passengers. It also contains a large mess hall and a large holo-complex. Both the lower and upper bays are used to hold miscellanous security cleared and approved personal vehicles.
+![Transwarp](images/mothership/transwarp.png)
 
- * Section 15 deals with transfers. The upper shuttle bay contains 20 *Hornet* class heavy shuttles to deal with transfer of personnel and cargo between missions. The lower hangar is coverted to a large cargo bay.
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
 
-The various types of auxillary vehicles carried by the *Aviary* is shown below.
+*Mjolnir class* Multimission Deep Space Explorer/ Heavy Experimental vessel/ Carrier
 
-![sectors](images/combined/sector.png)
+##### Stats
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined.stl)
+ * Length: 998m
+ * Width: 650m
+ * Height: 229m
+ * Decks: 45
+ * Crew Capacity:
+   * Minimum (skeleton): 5
+   * Minimum (sustainable): 100
+   * Typical: 400
+   * Maximum (all stations filled): 900
+   * Maximum (evacuation limit): 10000
+ * Auxillary Craft
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dove* class diplomatic yachts
+   * *Defiant* Class escort vessels
+   * *Nova* Class science vessels
+   * Small starship under 200m long and under 40m high
+ * Warp speed:
+   * Cruising: Warp 8
+   * Maximum: Warp 9
+   * Transwarp
 
-#### Captain's Yacht/Dedicated Escort Vessel
+At almost a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
 
-In the space under the saucer traditionally used by Captain's yachts, the *Aviary* has a dedicated Escort vessel. It doesn't have a class of its own as it's part of the *Aviary*, but it is nicknamed the *Bat Class* (because it hangs upside down). It is about as big as a *Defiant Class* and is as powerful as the *Defiant* would be if it was made today.
+In contrast with the *Aviary* class, the *Mjolnir* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar 200mx200mx40m which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
 
-![Mother Ship Saucer](images/mothership/separation.png)
+The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Mjolnir* is meant to the the testbed of experimental propulsion.
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/ms_saucer.stl)
+#### Photon Class
 
-### "*Bat Class*" stats
+![Command](images/mothership/scout.png)
 
- * Length: 201m
- * Width: 149m
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
+
+*Photon Class* heavy cruiser/ multimission explorer
+
+#### Stats
+
+ * Length: 463m
+ * Width: 250m
+ * Height: 100m
+ * Decks: 27
+ * Crew Capacity:
+   * Minimum (skeleton): 10
+   * Minimum (sustainable): 10
+   * Typical: 200
+   * Maximum (all stations filled): 500
+   * Maximum (evacuation limit): 5000
+ * Auxillary Craft
+   * *Magpie* class runabouts
+   * *Hawk* class tactical runabouts
+   * *Hornet* class heavy shuttles
+   * *Dragonfly* class warp tugs
+   * *Dove* class diplomatic yachts
+   * *Bumblebee* class light shuttles
+ * Warp speed:
+   * Cruising: Warp 6
+   * Maximum: Warp 9.7
+
+Ostensibly the *Photon* class is just the command section of the *Exodus* assembly. But The *Photon* class is a heavy cruiser comparable to the Excelsior in size and function.
+
+Like the Excelsior, the *Photon* class is used in mainly two ways:
+ * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the two shuttlebays which can hold several fighter craft
+ * As a flagship - the bridge of the Photon Class is also the main bridge of the Exodus class when fully assembled. When disassembled, the Photon class is the flagship of the Exodus mini-fleet.
+ 
+##### Image showing launch of Photon class from Exodus
+
+![Scout separation](images/mothership/scout-separation.png)
+ 
+#### Bat Class
+
+![Escort](images/mothership/escort.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
+
+*Bat* class dedicated escort vessel
+
+#### stats
+
+ * Length: 195m
+ * Width: 150m
  * Height: 20m
- * Decks: 5
+ * Decks: 6
  * Crew Capacity:
    * Minimum: 5
    * Typical: 20
    * Maximum: 150
  * Auxillary Craft:
-   * 4 *Bumblebee* class light shuttles
+   * *Bumblebee* class light shuttles
+   * *Hornet* class heavy shuttles
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9.5
 
-#### Engineering section
+In the space under the saucer traditionally used by Captain's yachts, the *Exodus* has a dedicated Escort vessel. It is about as big as a *Defiant Class* and is as powerful as the *Defiant* would be if it was made today.
 
-The engineering section contains 30 decks. The front half is used to house the warp and transwarp cores of the ship. The aft section is used as storage. There is no shuttlebay since the *Aviary* has hangars to spare, but the cargo bay has a runway to land shuttles and unload cargo.
+##### Image showing launch of Bat class from Exodus
+
+![Escort Separation](images/mothership/escort-separation.png)
+
+### Saucer separation
+
+The *Exodus* class has two modes of saucer separation
+
+#### Normal mode
+
+![Normal Separation](images/mothership/normal-separation.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/normal-separation.stl)
+
+This is similar to the saucer separation of other large starship. The ship separates into two sections
+ - The Saucer section with the *Aviary*, *Photon* and *Bat* parts
+ - The engineering section which is just the *Mjolnir* class
+ 
+#### Battle Mode
+
+![Battle Separation](images/mothership/battle-separation.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/battle-separation.stl)
+
+Here the *Photon* class remains with the secondary hull, making the two sections as
+ - The saucer section with the *Aviary* and *Bat* parts
+ - The Battle section with the *Mjolnir* and the *Photon* classes
+ 
+Even if both the *Mjolnir* and *Photon* classes are classified as general purpose explorers, the combination of the two makes for a formidable battle cruiser:
+
+![Battle Cruiser](images/mothership/transwarp-full.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp-full.stl)
+
+### Multi vector mode
+
+![Full Separation](images/mothership/full-separation.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/full-separation.stl)
+
+The *Exodus* class also has the multivector mode where all the component ships separate. This is generally the default mode in battle.
+
+One of the drawbacks of early multivector ships was that if one of the middle vectors is destroyed or disabled, the whole ship is disabled because the extreme vectors cannot attach to each other. The *Exodus* doesn't have this problem as the *Photon* class can attach to both the *Aviary* and the *Mjolnir* classes.
+
+Even the *Bat* class attaches to the *Mjolnir* class:
+
+![Transwarp Escort](images/mothership/transwarp-escort.png)
 
 ## Auxillary craft
 
-The *Aviary* is home to two separate families of auxillary craft.
+The *Exodus* is home to two separate families of auxillary craft.
 
 # MACS
 
@@ -147,7 +278,7 @@ The Bumblebee class shuttle is the foundation of the MACS program. Not only is i
 
 ### Structure
 
-The Bumblebee is approximately the size of a Type 6 shuttlecraft and is used as replacement for the Type 6 on various ships (but not on the *Aviary*; we'll come to that later). Keeping in with the stated aims of the MACS program, it has much better armor and can take enough punishment to destroy the Type 6 ten times over. 
+The Bumblebee is approximately the size of a Type 6 shuttlecraft and is used as replacement for the Type 6 on various ships (but not on the *Exodus*; we'll come to that later). Keeping in with the stated aims of the MACS program, it has much better armor and can take enough punishment to destroy the Type 6 ten times over. 
 
 Also in keeping with the modularity aim of MACS, apart from the two seats for pilot and co-pilot, all parts of the Bumblebee's interior can be swapped out. Right behind the cockpit area are two alcoves to the side which can be configured as replicators, weapons lockers, lavatories or just plain exits - the last one being particularly useful when the standard exit of the shuttle (at the rear) is blocked by additional modules.
 
@@ -155,7 +286,7 @@ The rear half of the shuttle can be configured as seating/bunks (as in the Type 
 
 ### Deployment
 
-On the *Aviary* the *Bumblebee* is not used as a shuttle, but is kept on inventory for other MACS spacecraft, and as auxillary vehicles for smaller craft.
+On the *Exodus* the *Bumblebee* is not used as a shuttle, but is kept on inventory for other MACS spacecraft, and as auxillary vehicles for smaller craft.
 
 ## Wasp Class
 
@@ -193,7 +324,7 @@ From the interiors, the warp harness adds another replicator and a transporter a
 
 ### Deployment
 
-The *Wasp* class is not used as a standard auxillary vehicle on the *Aviary*, nor is it maintained as inventory. However, since the components are in inventory, as *Wasp* class can be assembled if needed within minutes.
+The *Wasp* class is not used as a standard auxillary vehicle on the *Exodus*, nor is it maintained as inventory. However, since the components are in inventory, as *Wasp* class can be assembled if needed within minutes.
 
 ## Hornet class
 
@@ -233,7 +364,7 @@ In case the *Hornet* is used as a runabout, the bunk beds can be swapped out for
 
 ### Deployment
 
-The *Aviary* maintains an inventory of 20 *Hornet* shuttles, and uses them to transfer cargo and personnel between stations. The *Hornet* is not used for planetary or space missions except in extreme circumstances.
+The *Exodus* maintains an inventory of 20 *Hornet* shuttles, and uses them to transfer cargo and personnel between stations. The *Hornet* is not used for planetary or space missions except in extreme circumstances.
 
 ## Dragonfly Class
 
@@ -273,7 +404,7 @@ From the interiors it adds a lavatory, replicator, transporter alcove, a compute
 
 ### Deployment
 
-On the *Aviary*, section 4 (auxillary engineering) maintains 4 *Dragonflies* used as tug vessels.
+On the *Exodus*, section 4 (auxillary engineering) maintains 4 *Dragonflies* used as tug vessels.
 
 ## Beetle Class
 
@@ -314,11 +445,11 @@ The *Beetle* class is notorious for being used as a fast and cheap general purpo
 
 ### Deployment
 
-The *Aviary* does not maintain an inventory of the *Beetle* class, although it can be assembled on demand to haul cargo. 
+The *Exodus* does not maintain an inventory of the *Beetle* class, although it can be assembled on demand to haul cargo. 
 
 ## Nightingale Class
 
-![Hospital Ship](images/hospital/main.png)
+![Hospital Ship](images/macs/hospital.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/hospital.stl)
 
@@ -341,7 +472,7 @@ Nightingale Class Heavy Medevac Runabout
    
 ### Description
 
-The *Nightingale* is not a true member of the MACS family, although it is built from the standard MACS components. It was built specifically as a medevac vehicle for the *Aviary*, although it has since found use in a variety of ships and stations.
+The *Nightingale* is not a true member of the MACS family, although it is built from the standard MACS components. It was built specifically as a medevac vehicle for the *Exodus*, although it has since found use in a variety of ships and stations.
 
 ### Structure
 
@@ -356,13 +487,13 @@ Apart from containing independent gravity and environment controls, the disk als
   * Medical transporters with highly sensitive biofilters
   * Holo-emitters spanning the entire breadth of the disk capable of projecting 6 independent EMH
 
-Even though the *Nightingale* is supposed to just carry patients from affected areas to the main hospital decks of the *Aviary*, the *Nightingale* by itself acts as a fully capable small hospital.
+Even though the *Nightingale* is supposed to just carry patients from affected areas to the main hospital decks of the *Exodus*, the *Nightingale* by itself acts as a fully capable small hospital.
 
 Regarding the ship itself, there's a second MACS *Bumblebee* module attached to the rear of the large warp harness. This can be used as a secondary command module, and given that it has been configured to detach and re-attach to the harness without requiring an engineering team, can also be used as an auxillary vehicle for the *Nightingale* itself.
 
 ### Deployment
 
-The *Aviary* carries 2 *Nightingale* vessels in the lower hangars of section 1.
+The *Exodus* carries 2 *Nightingale* vessels in the lower hangars of section 1.
 
 # ICP
 
@@ -414,13 +545,13 @@ The cargo hold of the *Magpie* is big enough to hold land vehicle - or even a sm
 
 ### Deployment
 
-The *Magpie* is the standard auxillary vehicle of the *Aviary*. It is used for planetary and deep space away missions, and used as transport vehicle for personnel and cargo. The *Aviary* maintains 80 *Magpie* vessels, distributed across all science sections.
+The *Magpie* is the standard auxillary vehicle of the *Exodus*. It is used for planetary and deep space away missions, and used as transport vehicle for personnel and cargo. The *Exodus* maintains 80 *Magpie* vessels, distributed across all science sections.
 
 ## Hawk Class
 
-![Tactical Runabout](images/tactical/main.png)
+![Tactical Runabout](images/icp/tactical-shuttle.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/tactical-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/tactical-runabout.stl)
 
 Hawk Class tactical runabout
 
@@ -451,7 +582,7 @@ The combat capabilities of the *Hawk* class is comparable to dedicated fighters 
 
 Typical deployments for the *Hawk* class are aboard starbases and large starships, where they supplement or replace dedicated fighter craft. Unlike warp fighters, which have a typical range of a few hundred million KM, *Hawk* class vessels can escort craft over several star systems.
 
-The *Aviary* maintains an inventory of 30 *Hawk* class vessels in the upper shuttlebays of sections 7, 8 and 9. They are used as first response ship defence fighters, and as escort vessels for planetary missions.
+The *Exodus* maintains an inventory of 30 *Hawk* class vessels in the upper shuttlebays of sections 7, 8 and 9. They are used as first response ship defence fighters, and as escort vessels for planetary missions.
  
 ## Raven Class
 
@@ -463,15 +594,15 @@ Raven Class Scientific Heavy Runabout
 
 ### Stats
 
- * Length: 39m
- * Width: 24m
- * Height: 7m
- * Decks: 2
+ * Length:47m 
+ * Width: 40m
+ * Height: 10m
+ * Decks: 3
  * Crew Capacity:
    * Minimum: 2
    * Typical: 10
    * Maximum: 200
- * Auxillary Craft: 1 *Bumblebee* class shuttle
+ * Auxillary Craft: *Bumblebee* class shuttle
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -494,13 +625,13 @@ The large aft cargo bay of the *Raven* is large enough to hold small to medium s
 
 ### Deployment
 
-The *Raven* is used by the *Aviary* like any other ship would use runabouts - stand alone missions, long missions, missions spanning multiple sites, etc. The *Aviary* maintains 16 *Raven* vessels, 2 in each science sections.
+The *Raven* is used by the *Exodus* like any other ship would use runabouts - stand alone missions, long missions, missions spanning multiple sites, etc. The *Exodus* maintains 16 *Raven* vessels, 2 in each science sections.
 
 ## Vulture Class
 
-![Attack Ship](images/attack/main.png)
+![Attack Ship](images/icp/attack.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/attack.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/attack.stl)
 
 Vulture Class Light Corvette/Patrol Vessel
 
@@ -514,7 +645,7 @@ Vulture Class Light Corvette/Patrol Vessel
    * Minimum: 4
    * Typical: 12
    * Maximum: 56
- * Auxillary Craft: *See note*
+ * Auxillary Craft: *Bumblebee* class shuttle
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9.95
@@ -547,42 +678,42 @@ The cargo hold of the *Vulture* can also hold a *Bumblebee* class shuttle. Howev
 
 ### Deployment
 
-The *Aviary* contains two squadrons of 3 *Vulture* ships each. These are contained in the lower hangars of sections 8 and 9.
+The *Exodus* contains two squadrons of 3 *Vulture* ships each. These are contained in the lower hangars of sections 8 and 9.
 
-The *Vulture*s are used to escort the *Aviary* in flight through troubled space, and patrol the ship from a few AUs away when the ship drops to impulse. The *Vulture* is not used as a first response ship, since the massive warp core of the *Vulture* takes too long to power up from rest. 
+The *Vulture*s are used to escort the *Exodus* in flight through troubled space, and patrol the ship from a few AUs away when the ship drops to impulse. The *Vulture* is not used as a first response ship, since the massive warp core of the *Vulture* takes too long to power up from rest. 
 
-## White Owl Class
+## Eagle Class
 
 ![Scout Ship](images/icp/scout.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/scout.stl)
 
-White Owl Class Light Scout
+Eagle Class Light Scout
 
 ### Stats
 
- * Length: 109m 
- * Width: 58m
- * Height: 11m
- * Decks: 3
+ * Length:94m 
+ * Width: 44m
+ * Height: 16m
+ * Decks: 4
  * Crew Capacity:
    * Minimum: 4
    * Typical: 30
    * Maximum: 120
- * Auxillary Craft: 2 *Bumblebee* class small shuttles
+ * Auxillary Craft: *Bumblebee* class small shuttles
  * Warp Speed:
    * Cruising: Warp 7.5
    * Maximum: Warp 9.5
    
 ### Description
 
-The *White Owl* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*.
+The *Eagle* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*.
 
-Unlike the other ships on this page, the *White Owl* is not used as a member of the *Aviary* "fleet". The *White Owl* is meant to carry out independent missions, and only uses the *Aviary* for its transwarp engine.
+Unlike the other ships on this page, the *Eagle* is not used as a member of the *Exodus* "fleet". The *Eagle* is meant to carry out independent missions, and only uses the *Exodus* for its transwarp engine.
 
 ### Structure
 
-The *White Owl* has a classic "starship" structure, with saucer shaped primary hull, secondary hull and warp nacelles.
+The *Eagle* has a classic "starship" structure, with saucer shaped primary hull, secondary hull and warp nacelles.
 
 Deck 1 contains various labs, dormitories, sickbay and messhall. The front of the primary hull contains the primary deflector, and an observation lounge behind it.
 
@@ -590,15 +721,15 @@ The secondary hull contains the warp core spanning three decks. The rear of the 
 
 ### Deployment
 
-The *Aviary* can carry upto 4 *White Owl* vessels in the lower hangars of sections 3, 5, 11 and 13. These ships will have independent survey or exploration missions and will use the *Aviary* for its transwarp engine.
+The *Exodus* can carry upto 4 *Eagle* vessels in the lower hangars of sections 3, 5, 11 and 13. These ships will have independent survey or exploration missions and will use the *Exodus* for its transwarp engine.
 
 If these hangars are empty, they're used to store the *Vulture* class ships, which can get awfully crowded in hangars 7 & 9.
 
 ## Dove Class
 
-![Diplomatic Yacht](images/diplomatic/main.png)
+![Diplomatic Yacht](images/icp/diplomat.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/diplomat.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/diplomat.stl)
 
 Dove Class Diplomatic Yacht/Light Courier
 
@@ -621,7 +752,7 @@ Dove Class Diplomatic Yacht/Light Courier
 
 ### Description
 
-With the underside of the *Aviary* taken up by a dedicated escort vessel, that still leaves the niche of a diplomatic vessel unfulfilled. The *Dove* class, which was initially designed to transport VIPs in federation territory, fits into this niche naturally.
+With the underside of the *Exodus* taken up by a dedicated escort vessel, that still leaves the niche of a diplomatic vessel unfulfilled. The *Dove* class, which was initially designed to transport VIPs in federation territory, fits into this niche naturally.
 
 ### Structure
 
@@ -633,10 +764,10 @@ The engineering section contains the main warp core and transporters.
 
 ### Deployment
 
-The *Aviary* holds 3 *Dove* class yachts in the lower hangar of section 0.
+The *Exodus* holds 3 *Dove* class yachts in the lower hangar of section 0.
 
 ## Relative scale of ships
 
 ![scale](images/combined/scale.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/scale.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined/scale.stl)
