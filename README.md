@@ -145,45 +145,100 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
    * Maximum (all stations filled): 500
    * Maximum (evacuation limit): 5000
  * Auxillary Craft
-   * *Vulture* class patrol vessels
-   * *Eagle* class light scouts
+   * *Magpie* class runabouts
+   * *Hawk* class tactical runabouts
+   * *Hornet* class heavy shuttles
+   * *Dragonfly* class warp tugs
    * *Dove* class diplomatic yachts
-   * *Defiant* Class escort vessels
-   * *Nova* Class science vessels
-   * Small starship under 200m long and under 40m high
+   * *Bumblebee* class light shuttles
  * Warp speed:
-   * Cruising: Warp 8
-   * Maximum: Warp 9
-   * Transwarp
+   * Cruising: Warp 6
+   * Maximum: Warp 9.7
 
+Ostensibly the *Photon* class is just the command section of the *Exodus* assembly. But The *Photon* class is a heavy cruiser comparable to the Excelsior in size and function.
 
-#### Captain's Yacht/Dedicated Escort Vessel
+Like the Excelsior, the *Photon* class is used in mainly two ways:
+ * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the two shuttlebays which can hold several fighter craft
+ * As a flagship - the bridge of the Photon Class is also the main bridge of the Exodus class when fully assembled. When disassembled, the Photon class is the flagship of the Exodus mini-fleet.
+ 
+##### Image showing launch of Photon class from Exodus
 
-In the space under the saucer traditionally used by Captain's yachts, the *Exodus* has a dedicated Escort vessel. It doesn't have a class of its own as it's part of the *Exodus*, but it is nicknamed the *Bat Class* (because it hangs upside down). It is about as big as a *Defiant Class* and is as powerful as the *Defiant* would be if it was made today.
+![Scout separation](images/mothership/scout-separation.png)
+ 
+#### Bat Class
 
-![Mother Ship Saucer](images/mothership/separation.png)
+![Escort](images/mothership/escort.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/ms_saucer.stl)
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
 
-### "*Bat Class*" stats
+*Bat* class dedicated escort vessel
 
- * Length: 201m
- * Width: 149m
+#### stats
+
+ * Length: 195m
+ * Width: 150m
  * Height: 20m
- * Decks: 5
+ * Decks: 6
  * Crew Capacity:
    * Minimum: 5
    * Typical: 20
    * Maximum: 150
  * Auxillary Craft:
-   * 4 *Bumblebee* class light shuttles
+   * *Bumblebee* class light shuttles
+   * *Hornet* class heavy shuttles
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9.5
 
-#### Engineering section
+In the space under the saucer traditionally used by Captain's yachts, the *Exodus* has a dedicated Escort vessel. It is about as big as a *Defiant Class* and is as powerful as the *Defiant* would be if it was made today.
 
-The engineering section contains 30 decks. The front half is used to house the warp and transwarp cores of the ship. The aft section is used as storage. There is no shuttlebay since the *Exodus* has hangars to spare, but the cargo bay has a runway to land shuttles and unload cargo.
+##### Image showing launch of Bat class from Exodus
+
+![Escort Separation](images/mothership/escort-separation.png)
+
+### Saucer separation
+
+The *Exodus* class has two modes of saucer separation
+
+#### Normal mode
+
+![Normal Separation](images/mothership/normal-separation.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/normal-separation.stl)
+
+This is similar to the saucer separation of other large starship. The ship separates into two sections
+ - The Saucer section with the *Aviary*, *Photon* and *Bat* parts
+ - The engineering section which is just the *Mjolnir* class
+ 
+#### Battle Mode
+
+![Battle Separation](images/mothership/battle-separation.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/battle-separation.stl)
+
+Here the *Photon* class remains with the secondary hull, making the two sections as
+ - The saucer section with the *Aviary* and *Bat* parts
+ - The Battle section with the *Mjolnir* and the *Photon* classes
+ 
+Even if both the *Mjolnir* and *Photon* classes are classified as general purpose explorers, the combination of the two makes for a formidable battle cruiser:
+
+![Battle Cruiser](images/mothership/transwarp-full.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp-full.stl)
+
+### Multi vector mode
+
+![Full Separation](images/mothership/full-separation.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/full-separation.stl)
+
+The *Exodus* class also has the multivector mode where all the component ships separate. This is generally the default mode in battle.
+
+One of the drawbacks of early multivector ships was that if one of the middle vectors is destroyed or disabled, the whole ship is disabled because the extreme vectors cannot attach to each other. The *Exodus* doesn't have this problem as the *Photon* class can attach to both the *Aviary* and the *Mjolnir* classes.
+
+Even the *Bat* class attaches to the *Mjolnir* class:
+
+![Transwarp Escort](images/mothership/transwarp-escort.png)
 
 ## Auxillary craft
 
