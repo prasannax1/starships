@@ -594,15 +594,15 @@ Raven Class Scientific Heavy Runabout
 
 ### Stats
 
- * Length: 39m
- * Width: 24m
- * Height: 7m
- * Decks: 2
+ * Length:47m 
+ * Width: 40m
+ * Height: 10m
+ * Decks: 3
  * Crew Capacity:
    * Minimum: 2
    * Typical: 10
    * Maximum: 200
- * Auxillary Craft: 1 *Bumblebee* class shuttle
+ * Auxillary Craft: *Bumblebee* class shuttle
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -645,7 +645,7 @@ Vulture Class Light Corvette/Patrol Vessel
    * Minimum: 4
    * Typical: 12
    * Maximum: 56
- * Auxillary Craft: *See note*
+ * Auxillary Craft: *Bumblebee* class shuttle
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9.95
