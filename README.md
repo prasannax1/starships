@@ -682,38 +682,38 @@ The *Exodus* contains two squadrons of 3 *Vulture* ships each. These are contain
 
 The *Vulture*s are used to escort the *Exodus* in flight through troubled space, and patrol the ship from a few AUs away when the ship drops to impulse. The *Vulture* is not used as a first response ship, since the massive warp core of the *Vulture* takes too long to power up from rest. 
 
-## White Owl Class
+## Eagle Class
 
 ![Scout Ship](images/icp/scout.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/scout.stl)
 
-White Owl Class Light Scout
+Eagle Class Light Scout
 
 ### Stats
 
- * Length: 109m 
- * Width: 58m
- * Height: 11m
- * Decks: 3
+ * Length:94m 
+ * Width: 44m
+ * Height: 16m
+ * Decks: 4
  * Crew Capacity:
    * Minimum: 4
    * Typical: 30
    * Maximum: 120
- * Auxillary Craft: 2 *Bumblebee* class small shuttles
+ * Auxillary Craft: *Bumblebee* class small shuttles
  * Warp Speed:
    * Cruising: Warp 7.5
    * Maximum: Warp 9.5
    
 ### Description
 
-The *White Owl* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*.
+The *Eagle* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*.
 
-Unlike the other ships on this page, the *White Owl* is not used as a member of the *Exodus* "fleet". The *White Owl* is meant to carry out independent missions, and only uses the *Exodus* for its transwarp engine.
+Unlike the other ships on this page, the *Eagle* is not used as a member of the *Exodus* "fleet". The *Eagle* is meant to carry out independent missions, and only uses the *Exodus* for its transwarp engine.
 
 ### Structure
 
-The *White Owl* has a classic "starship" structure, with saucer shaped primary hull, secondary hull and warp nacelles.
+The *Eagle* has a classic "starship" structure, with saucer shaped primary hull, secondary hull and warp nacelles.
 
 Deck 1 contains various labs, dormitories, sickbay and messhall. The front of the primary hull contains the primary deflector, and an observation lounge behind it.
 
@@ -721,7 +721,7 @@ The secondary hull contains the warp core spanning three decks. The rear of the 
 
 ### Deployment
 
-The *Exodus* can carry upto 4 *White Owl* vessels in the lower hangars of sections 3, 5, 11 and 13. These ships will have independent survey or exploration missions and will use the *Exodus* for its transwarp engine.
+The *Exodus* can carry upto 4 *Eagle* vessels in the lower hangars of sections 3, 5, 11 and 13. These ships will have independent survey or exploration missions and will use the *Exodus* for its transwarp engine.
 
 If these hangars are empty, they're used to store the *Vulture* class ships, which can get awfully crowded in hangars 7 & 9.
 
