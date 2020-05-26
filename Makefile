@@ -247,7 +247,7 @@ stl/mother/escort.stl: src/lib/util.scad \
 	    -i src/mother/escort.scad \
 	    -o stl/mother/escort.stl \
 	    -p images/mothership/escort.png \
-	    -c "-9.95,30.52,-1.32,127.8,0,52.3,500"
+	    -c "-9.95,30.52,-1.32,127.8,0,52.3,500" \
 	    -t Tomorrow
 
 stl/mother/main.stl: src/lib/util.scad \

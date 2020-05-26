@@ -197,9 +197,9 @@ module mvm_scout() {
 }
 
 module mvm_sc_nacelles(standalone=false) {
-    translate([220,26,71])
+    translate([250,26,71])
     rotate([-40,0,0])
-    util_nacelle(180,35,36,curved=true);
+    util_nacelle(245,35,36,curved=true);
 }
 
 module mvm_transwarp() {
