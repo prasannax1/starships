@@ -1,30 +1,65 @@
 use <../lib/util.scad>;
 mvm_tw_nacelle_height=80;
+mvm_tw_body_front_r=250;
+mvm_tw_body_rear_r=300;
+mvm_tw_body_lower_width=180;
+mvm_tw_body_upper_width=300;
+mvm_tw_body_upper_r=60;
+mvm_tw_body_lower_r=90;
+mvm_tw_body_disk_width=360;
+mvm_tw_body_disk_upper_r=15;
+mvm_tw_body_disk_lower_r=15;
+mvm_tw_nacelle_rear_radius=750;
+mvm_tw_nacelle_side_radius=320;
+mvm_tw_nacelle_width=500;
 
 module mvm_tw_main_body(standalone=false) {
     difference() {
         union() {
-            util_ovoid(250,300,180,1,90);
-            util_ovoid(250,300,300,60,1);
+            util_ovoid(
+                mvm_tw_body_front_r,
+                mvm_tw_body_rear_r,
+                mvm_tw_body_lower_width,1,
+                mvm_tw_body_lower_r
+            );
+            util_ovoid(
+                mvm_tw_body_front_r,
+                mvm_tw_body_rear_r,
+                mvm_tw_body_upper_width,
+                mvm_tw_body_upper_r,1
+            );
         }
 
         union() {
-            translate([0,0,60])
+            translate([0,0,mvm_tw_body_upper_r])
             rotate([90,0,0])
-            cylinder(500,60,60, center=true);
+            cylinder(
+                mvm_tw_body_disk_width*1.5,
+                mvm_tw_body_upper_r,
+                mvm_tw_body_upper_r, center=true);
 
-            translate([250,0,250])
-            cube(500, center=true);
+            translate([
+                mvm_tw_body_front_r,0,
+                mvm_tw_body_front_r])
+            cube(2*mvm_tw_body_front_r, center=true);
         }
 
         union() {
-            translate([-150,0,-100])
+            translate([
+                -mvm_tw_body_rear_r/2,0,
+                -mvm_tw_body_lower_r])
             scale([1.2,1,1])
             rotate([90,0,0])
-            cylinder(500, 100, 100, center=true);
+            cylinder(
+                mvm_tw_body_disk_width*1.5, 
+                mvm_tw_body_lower_r, 
+                mvm_tw_body_lower_r, center=true);
 
-            translate([-250-150,0,-250])
-            cube(500, center=true);
+            translate([
+                -mvm_tw_body_rear_r-mvm_tw_body_rear_r/2,
+                0,
+                -mvm_tw_body_rear_r])
+            cube(mvm_tw_body_rear_r*2, center=true);
         }
         
         translate([-250-285,0,0])
@@ -38,10 +73,16 @@ module mvm_tw_main_body(standalone=false) {
     }
 
     difference() {
-        util_ovoid(250,300,360,15,15);
+        util_ovoid(
+            mvm_tw_body_front_r,
+            mvm_tw_body_rear_r,
+            mvm_tw_body_disk_width,
+            mvm_tw_body_disk_upper_r,
+            mvm_tw_body_disk_lower_r);
         mvm_tw_rear_dock(standalone);
     }
 }
+
 
 module mvm_tw_rear_dock(standalone=false) {
     translate([-175,0,-57])
@@ -82,15 +123,29 @@ module mvm_tw_nacelle_bar(standalone=false) {
         translate([500,0,0])
         cube(1000,center=true);
         
-        translate([-rear_radius-300,0,0])
-        cylinder(600,rear_radius, rear_radius, center=true);
+        translate([
+            -mvm_tw_nacelle_rear_radius-300,
+            0,0])
+        cylinder(600,
+            mvm_tw_nacelle_rear_radius,     
+            mvm_tw_nacelle_rear_radius, 
+            center=true);
 
         util_mirrored([0,1,0])
-        translate([0,side_radius+180, 0])
-        cylinder(600,side_radius/2,3*side_radius/2, center=true);
+        translate([
+            0,
+            mvm_tw_nacelle_side_radius+180, 
+            0])
+        cylinder(
+            600,
+            mvm_tw_nacelle_side_radius/2,
+            3*mvm_tw_nacelle_side_radius/2, center=true);
         
-        translate([-300,0,175/2])
-        cube(175,center=true);
+        translate([
+            -mvm_tw_body_rear_r,
+            0,
+            mvm_tw_body_lower_width/2])
+        cube(mvm_tw_body_lower_width,center=true);
         
         mvm_tw_rear_dock(standalone);
     }
