@@ -1,5 +1,5 @@
 use <../lib/util.scad>;
-mvm_tw_nacelle_height=80;
+mvm_tw_nacelle_height=60;
 
 module mvm_tw_main_body(standalone=false) {
     difference() {
@@ -60,7 +60,7 @@ module mvm_tw_pos(standalone=false) {
 }
 
 module mvm_tw_nacelle_bar(standalone=false) {
-    rear_radius=750;
+    rear_radius=640;
     side_radius=320;
     height=mvm_tw_nacelle_height;
     width=600;
@@ -82,11 +82,11 @@ module mvm_tw_nacelle_bar(standalone=false) {
         translate([500,0,0])
         cube(1000,center=true);
         
-        translate([-rear_radius-300,0,0])
+        translate([-rear_radius-300+10,0,0])
         cylinder(600,rear_radius, rear_radius, center=true);
 
         util_mirrored([0,1,0])
-        translate([0,side_radius+180, 0])
+        translate([0,side_radius+180-15, 0])
         cylinder(600,side_radius/2,3*side_radius/2, center=true);
         
         translate([-300,0,175/2])
@@ -97,13 +97,13 @@ module mvm_tw_nacelle_bar(standalone=false) {
 }
 
 module mvm_tw_nacelles(standalone=false) {
-    translate([-300,275,mvm_tw_nacelle_height])
+    translate([-300,265,mvm_tw_nacelle_height])
     util_ovoid(100,100,50,1,24);
 
-    translate([-250,275,mvm_tw_nacelle_height])
+    translate([-250,265,mvm_tw_nacelle_height])
     util_ovoid(250,500,100,50,15);
     
-    translate([-155,275,mvm_tw_nacelle_height])
+    translate([-155,265,mvm_tw_nacelle_height])
     util_ovoid(150,180,90,60,10);
 }
 
@@ -111,7 +111,7 @@ module mvm_tw_neck_common(standalone=false) {
     difference() {
         translate([0,0,60])
         mirror([0,0,1])
-        util_saucer(600, 64, 120);
+        util_saucer(640, 64, 100);
 
         translate([-350,0,-100])
         rotate([0,-30,0])
@@ -157,7 +157,7 @@ module mvm_sc_body(standalone=false) {
 //        translate([200,0,0])
 //        cube([400,400,50], center=true);
         if (standalone == true) {
-            translate([297,0,45])
+            translate([314,0,45])
             rotate([90,0,0])
             cylinder(100, 4.5, 4.5, center=true, $fn=8);
         }
@@ -173,16 +173,16 @@ module mvm_sc_body(standalone=false) {
 module mvm_sc_saucer(standalone=false) {
     difference() {
         translate([750/2,0,60-.01])
-        util_saucer(250,250,25);
+        util_saucer(250,250,22);
         translate([220,0,75+50])
         cube([120,24,100],center=true);
     }
     
     translate([750/2, 0, 60+27/2])
-    cylinder(24,120,64,center=true);
+    cylinder(24,100,60,center=true);
     
     translate([750/2,0,60+25])
-    util_ovoid(20,40,40,5,3);
+    util_ovoid(40,20,40,5,3);
 }
 
 module mvm_sc_pos(standalone=false) {
@@ -199,7 +199,7 @@ module mvm_scout() {
 module mvm_sc_nacelles(standalone=false) {
     translate([250,26,71])
     rotate([-40,0,0])
-    util_nacelle(245,35,36,curved=true);
+    util_nacelle(245,35,32,curved=true);
 }
 
 module mvm_transwarp() {
