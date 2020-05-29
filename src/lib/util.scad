@@ -155,7 +155,7 @@ module util_nacelle_bar(span, height, width, thickness) {
     }
 }
 
-module util_q_sphere(rad, quadrant) {
+module util_q_sphere(rad, quadrant, faces) {
     x_sign = quadrant == 1 ? 1 :
              quadrant == 2 ? -1 :
              quadrant == 3 ? -1 :
@@ -166,7 +166,7 @@ module util_q_sphere(rad, quadrant) {
              quadrant == 4 ? -1 : 0;
     
     difference() {
-        sphere(rad, $fn=32);
+        sphere(rad, $fn=faces);
 
         translate([x_sign*-1.1*rad + .01,0,0])
         cube(2.2*rad, center=true);
@@ -176,22 +176,22 @@ module util_q_sphere(rad, quadrant) {
     }
 }
 
-module util_ovoid(front_rad, back_rad, width, upper_rad, lower_rad) {
+module util_ovoid(front_rad, back_rad, width, upper_rad, lower_rad, faces=32) {
     half_width = width/2;
     largest=max(front_rad, back_rad, half_width, upper_rad, lower_rad);
     smallest=min(front_rad, back_rad, half_width, upper_rad, lower_rad);
     
     union() {
         scale([front_rad/smallest, half_width/smallest, upper_rad/smallest])
-        util_q_sphere(smallest, 1);
+        util_q_sphere(smallest, 1, faces);
         
         scale([front_rad/smallest, half_width/smallest, lower_rad/smallest])
-        util_q_sphere(smallest, 4);
+        util_q_sphere(smallest, 4, faces);
         
         scale([back_rad/smallest, half_width/smallest, lower_rad/smallest])
-        util_q_sphere(smallest, 3);
+        util_q_sphere(smallest, 3, faces);
         
         scale([back_rad/smallest, half_width/smallest, upper_rad/smallest])
-        util_q_sphere(smallest, 2);
+        util_q_sphere(smallest, 2, faces);
     }
 }
