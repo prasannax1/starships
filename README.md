@@ -14,7 +14,7 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
  * Length: 1496m
  * Width: 746m
- * Height: 229m
+ * Height: 209m
  * Decks: 54
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -97,8 +97,8 @@ Each section contains an auxillary sickbay, a brig, and a mess hall. They contai
 ##### Stats
 
  * Length: 998m
- * Width: 650m
- * Height: 229m
+ * Width: 630m
+ * Height: 209m
  * Decks: 45
  * Crew Capacity:
    * Minimum (skeleton): 5
@@ -134,9 +134,9 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
 #### Stats
 
- * Length: 497m
- * Width: 250m
- * Height: 100m
+ * Length: 496m
+ * Width: 249m
+ * Height: 98m 
  * Decks: 27
  * Crew Capacity:
    * Minimum (skeleton): 10
