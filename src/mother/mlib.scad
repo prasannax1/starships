@@ -1,7 +1,5 @@
 use <../lib/util.scad>;
 
-modules=["saucer","engine","command","escort"];
-
 engine_front=250;
 engine_back=320;
 engine_up=50;
