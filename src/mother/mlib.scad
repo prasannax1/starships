@@ -3,9 +3,9 @@ use <../lib/util.scad>;
 modules=["saucer","engine","command","escort"];
 
 engine_front=250;
-engine_back=300;
+engine_back=320;
 engine_up=50;
-engine_down=100;
+engine_down=90;
 engine_width=180;
 engine_disk_up=15;
 engine_disk_down=5;
@@ -22,17 +22,17 @@ nacelle_front=250;
 nacelle_back=500;
 nacelle_width=90;
 nacelle_up=50;
-nacelle_down=10;
+nacelle_down=20;
 nacelle_brussard_h=60;
 
 saucer_width=750;
 saucer_up=60;
 saucer_up_ext=5;
-saucer_down=20;
+saucer_down=15;
 saucer_hangar_height=20;
-saucer_hangar_width=120;
 saucer_hangar_in=55;
 saucer_segments=16;
+saucer_hangar_width=2.56*saucer_width/saucer_segments;
 
 command_width=250;
 command_height=17;
@@ -53,15 +53,21 @@ command_nacelle_width=24;
 escort_width=150;
 escort_down=20;
 escort_up=1;
-escort_nacelle_length=110;
+escort_nacelle_length=125;
 escort_nacelle_height=36;
 escort_nacelle_width=48;
 escort_minus_length=25;
 
 separate_length=500;
-separate_height=50;
+separate_height=100;
 
-module engine_body() {
+module engine_body_minus() {
+    translate([-engine_back,0,-saucer_down/2-1.01])
+    cylinder(h=saucer_down+2, d2=escort_width+10, 
+    d1=escort_width+20,center=true);
+}
+
+module engine_body_plus() {
     util_ovoid(
         engine_front,
         engine_back,
@@ -100,7 +106,7 @@ module engine_body() {
             engine_up+0,
             5);
         
-        translate([-engine_back-0.5*engine_width+50,0,20])
+        translate([-engine_back-0.5*engine_width+engine_up,0,20])
         rotate([0,30,0])
         cube(engine_width, center=true);
         
@@ -121,6 +127,13 @@ module engine_body() {
             0,-engine_down/2])
         rotate([0,-90,0])
         cylinder(h=engine_defl_x2, d1=80, d2=15, center=true);
+    }
+}
+
+module engine_body() {
+    difference() {
+        engine_body_plus();
+        engine_body_minus();
     }
 }
 
@@ -347,7 +360,7 @@ module mvm_saucer_basic(engine_attached=true, command_attached=true) {
 }
 
 module mvm_saucer_minus_always() {
-    translate([-saucer_width/4-command_width/2,0,saucer_up])
+    translate([-saucer_width/4-command_width/2-.01,0,saucer_up+.01])
     scale([1,1,command_engine_down*2/command_engine_width])
     rotate([0,90,0])
     cylinder(h=saucer_width/2, d=command_engine_width, 
@@ -377,7 +390,7 @@ module mvm_saucer_minus_command() {
 }
 
 module mother() {
-    translate([-saucer_width/2,0,0]) mvm_transwarp();
+    translate([-saucer_width/2+.01,0,0]) mvm_transwarp();
     translate([0,0,saucer_up-.01]) mvm_command_basic();
     translate([0,0,0]) mvm_saucer_basic();
     translate([0,0,.01]) mvm_escort();
@@ -436,9 +449,9 @@ module mvm_escort_separate() {
 
 module mvm_full_separate() {
     translate([-saucer_width/2-separate_length/2,0,20-separate_height]) mvm_transwarp();
-    translate([0-separate_length/2,0,saucer_up-.01+20+2*separate_height]) mvm_command_basic(saucer_attached=false, engine_attached=false);
+    translate([0+separate_length/2,0,saucer_up-.01+20+separate_height]) mvm_command_basic(saucer_attached=false, engine_attached=false);
     translate([0+separate_length/2,0,0]) mvm_saucer_basic(engine_attached=false, command_attached=false);
-    translate([0/2,0,.01-2*separate_height]) mvm_escort();
+    translate([0/2,0,.01-separate_height]) mvm_escort();
 }
 
 module m_main_sep() {
@@ -454,7 +467,7 @@ module mvm_normal_separate() {
 
 module mvm_scout_separate() {
     translate([-saucer_width/2,0,0]) mvm_transwarp();
-    translate([0,0,saucer_up-.01+2*separate_height]) mvm_command_basic(saucer_attached=false, engine_attached=false);
+    translate([0,0,saucer_up-.01+separate_height]) mvm_command_basic(saucer_attached=false, engine_attached=false);
     translate([0,0,0]) mvm_saucer_basic(command_attached=false);
     translate([0,0,.01]) mvm_escort();
 }
@@ -462,4 +475,9 @@ module mvm_scout_separate() {
 module mvm_transwarp_full() {
     translate([-saucer_width/2,0,0]) mvm_transwarp();
     translate([0,0,saucer_up-.01]) mvm_command_basic(saucer_attached=false);
+}
+
+module mvm_transwarp_escort() {
+        translate([-saucer_width/2,0,0]) mvm_transwarp();
+            translate([-saucer_width/2-engine_back,0,.01]) mvm_escort();
 }

@@ -14,8 +14,8 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
  * Length: 1496m
  * Width: 746m
- * Height: 209m
- * Decks: 54
+ * Height: 199m
+ * Decks: 52
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
@@ -56,10 +56,10 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
 
 ##### Stats
 
- * Length: 808m
+ * Length: 771m
  * Width: 746m
- * Height: 83m
- * Decks: 25
+ * Height: 75m
+ * Decks: 22
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 50
@@ -96,9 +96,9 @@ Each section contains an auxillary sickbay, a brig, and a mess hall. They contai
 
 ##### Stats
 
- * Length: 998m
- * Width: 630m
- * Height: 209m
+ * Length: 996m
+ * Width: 497m
+ * Height: 199m
  * Decks: 45
  * Crew Capacity:
    * Minimum (skeleton): 5
@@ -134,10 +134,10 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
 #### Stats
 
- * Length: 498m
+ * Length: 487m
  * Width: 249m
- * Height: 94m 
- * Decks: 27
+ * Height: 85m 
+ * Decks: 25
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 10
@@ -175,9 +175,9 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
 
 #### stats
 
- * Length: 195m
+ * Length: 239m
  * Width: 150m
- * Height: 20m
+ * Height: 22m
  * Decks: 6
  * Crew Capacity:
    * Minimum: 5
