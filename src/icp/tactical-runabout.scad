@@ -1,6 +1,6 @@
 use <../lib/util.scad>;
 
-module tactical() {
+module tactical_old() {
     rotate(180) {
         difference() {
             translate([5,0,0]) {
@@ -23,6 +23,17 @@ module tactical() {
     
 
 }
+
+module tactical() {
+    util_ovoid(16,7,10,3,1, faces=10);
+
+    util_mirrored([0,1,0])
+    translate([-2,-3,.5])
+    rotate([110,0,0])
+    util_ovoid(5,14,2,6,0.5, faces=8);
+}
+
+
 
 
 tactical();

@@ -358,11 +358,15 @@ module mvm_saucer_basic(engine_attached=true, command_attached=true) {
 }
 
 module mvm_saucer_minus_always() {
-    translate([-saucer_width/4-command_width/2-.01,0,saucer_up+.01])
-    scale([1,1,command_engine_down*2/command_engine_width])
-    rotate([0,90,0])
-    cylinder(h=saucer_width/2, d=command_engine_width, 
-        center=true);
+    translate([-saucer_width/4-command_width/2-1,0,saucer_up+.05])
+    scale([1,1,(command_engine_down-1)*2/command_engine_width]) {
+        rotate([0,90,0])
+        cylinder(h=saucer_width/2, d=command_engine_width, 
+            center=true);
+        
+        translate([saucer_width/4,0,0])
+        sphere(d=command_engine_width);
+    }
     
     hull() {
         translate([0,0,-saucer_down/2-1.01])
@@ -383,8 +387,8 @@ module mvm_saucer_minus_engine() {
 
 module mvm_saucer_minus_command() {
     translate([-command_width/2,0,saucer_up])
-    util_ovoid(command_engine_length_f, command_engine_length_b,
-        command_engine_width, command_engine_up, command_engine_down);
+    util_ovoid(command_engine_length_f, 10*command_engine_length_b,
+        command_engine_width, command_engine_up, command_engine_down-1);
 }
 
 module mother() {

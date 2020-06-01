@@ -37,7 +37,7 @@ stl/icp/tactical-shuttle.stl: src/icp/tactical-runabout.scad \
 	bin/render.sh \
 	    -i src/icp/tactical-runabout.scad \
 	    -o stl/icp/tactical-shuttle.stl \
-	    -p images/icp/tactical-shutle.png \
+	    -p images/icp/tactical-shuttle.png \
 	    -t Solarized
 
 stl/icp/science.stl: src/icp/science.scad \
