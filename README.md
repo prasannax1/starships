@@ -136,7 +136,7 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
  * Length: 487m
  * Width: 249m
- * Height: 85m 
+ * Height: 92m 
  * Decks: 25
  * Crew Capacity:
    * Minimum (skeleton): 10

@@ -38,7 +38,7 @@ command_shuttlebay_width=120;
 command_engine_width=50;
 command_engine_length_f=75;
 command_engine_length_b=125;
-command_engine_up=5;
+command_engine_up=3;
 command_engine_down=60;
 command_hangar_height=20;
 command_bridge_width=40;
@@ -297,7 +297,11 @@ module mvm_command_plus() {
     
     util_mirrored([0,1,0])
     translate([-command_width/2-command_nacelle_length_f, command_engine_width/2-2, 2])
-    rotate([-45,0,0])
+    rotate([-45,0,0]) {
+        util_ovoid(
+        40,20,12,35,20);
+        
+        translate([0,0,12])
     util_ovoid(
         command_nacelle_length_f,
         command_nacelle_length_b,
@@ -305,7 +309,7 @@ module mvm_command_plus() {
         command_nacelle_height,
         3,
         faces=9);
-    
+    }
 }
 
 module mvm_saucer() {
