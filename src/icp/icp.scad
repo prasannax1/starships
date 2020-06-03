@@ -223,3 +223,32 @@ module scout_old() {
     translate([0,0,.1])
     util_nacelle(42,32,6.7,curved=true);
 }
+
+module icp_large_saucer_common() {
+    difference() {
+        util_ovoid(45,45,90,5,2);
+        translate([45,0,0])
+        cube(16,center=true);
+    }
+
+    translate([-55,0,0]) {
+
+        difference() {
+            util_ovoid(75,25,20,8,10);
+            translate([20,0,-10])
+            scale([2,1,1])
+            rotate([90,0,0])
+            cylinder(h=45,r=10,center=true);
+
+            translate([35+20,0,-35])
+            cube(70,center=true);
+        }
+    }
+
+    util_ovoid(
+        9,60,18,8,1);
+
+    util_ovoid(
+        18,18,36,8,1);
+
+}

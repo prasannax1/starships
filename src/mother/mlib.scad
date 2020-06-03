@@ -25,22 +25,24 @@ nacelle_brussard_h=60;
 
 saucer_width=750;
 saucer_up=60;
-saucer_up_ext=5;
+saucer_up_ext=10;
 saucer_down=15;
 saucer_hangar_height=20;
 saucer_hangar_in=55;
 saucer_segments=16;
 saucer_hangar_width=2.56*saucer_width/saucer_segments;
 
-command_width=250;
-command_height=17;
+command_width=240;
+command_height=20;
+command_height_ext=5;
 command_shuttlebay_width=120;
 command_engine_width=50;
 command_engine_length_f=75;
 command_engine_length_b=125;
 command_engine_up=3;
-command_engine_down=60;
-command_hangar_height=20;
+command_engine_down=50;
+command_hangar_height=25;
+command_hangar_r_iota=15;
 command_bridge_width=40;
 command_bridge_height=5;
 command_nacelle_length_f=50;
@@ -235,7 +237,11 @@ module mvm_saucer_plus() {
 }
 
 module mvm_command_plus() {
-    util_saucer(command_width, command_width, command_height);
+    difference() {
+        util_saucer(command_width, command_width, command_height+command_height_ext);
+        translate([0,0,command_width/2+command_height])
+        cube(command_width, center=true);
+    }
     
     translate([-command_width/2,0,0]) {
     util_ovoid(
@@ -275,7 +281,10 @@ module mvm_command_plus() {
     }
     
     translate([0,0,command_hangar_height/2])
-    cylinder(h=command_hangar_height, d=command_shuttlebay_width, center=true);
+    cylinder(h=command_hangar_height, 
+    d1=command_shuttlebay_width+command_hangar_r_iota, 
+    d2=command_shuttlebay_width-command_hangar_r_iota,
+    center=true);
     
     intersection() {
         util_nacelle(command_width, command_shuttlebay_width,
