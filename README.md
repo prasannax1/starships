@@ -56,7 +56,7 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
 
 ##### Stats
 
- * Length: 771m
+ * Length: 769m
  * Width: 746m
  * Height: 75m
  * Decks: 22
@@ -134,9 +134,9 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
 #### Stats
 
- * Length: 487m
- * Width: 249m
- * Height: 92m 
+ * Length: 477m
+ * Width: 239m
+ * Height: 82m 
  * Decks: 25
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -594,9 +594,9 @@ Raven Class Scientific Heavy Runabout
 
 ### Stats
 
- * Length:47m 
+ * Length:51m 
  * Width: 40m
- * Height: 10m
+ * Height: 14m
  * Decks: 3
  * Crew Capacity:
    * Minimum: 2
@@ -637,9 +637,9 @@ Vulture Class Light Corvette/Patrol Vessel
 
 ### Stats
 
- * Length: 77m
+ * Length: 82m
  * Width: 45m
- * Height: 13.75m
+ * Height: 15m
  * Decks: 3
  * Crew Capacity:
    * Minimum: 4
