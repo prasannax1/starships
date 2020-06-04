@@ -294,6 +294,17 @@ module mvm_command_plus() {
             -1.3*command_shuttlebay_width/2+command_hangar_height])
         cube(1.3*command_shuttlebay_width, center=true);
     }
+
+    intersection() {
+        mirror([1,0,0])
+        util_nacelle(command_width, 0.75*command_shuttlebay_width,
+            1.5*command_hangar_height);
+        
+        translate([0,0,
+            -1.1*command_shuttlebay_width/2+command_hangar_height])
+        cube(1.1*command_shuttlebay_width, center=true);
+    }
+
     
     translate([0,0,command_hangar_height])
     util_ovoid(

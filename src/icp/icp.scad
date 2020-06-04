@@ -24,6 +24,34 @@ module icp_saucer_large() {
     }
 }
 
+
+module icp_saucer_large_2(faces=32) {
+    difference() {
+        util_ovoid(40,40,40,10,10,faces=faces);
+        
+        translate([0,0,-50])
+        cube(100,center=true);
+
+        translate([-50,0,0])
+            rotate([0,15,0])
+                cube(80,center=true);
+
+        util_mirrored([0,1,0])
+            translate([-40,55,-1])
+                rotate([-30,0,0])
+                    cube(80,center=true);
+            
+        translate([40,0,0])
+            rotate([0,30,0])
+                cube(10,center=true);
+
+        translate([35,0,6.4])
+            rotate([0,-65,0])
+                cube([5,5,7.5],center=true);
+
+    }
+}
+
 module tactical_shuttle() {
     difference() {
         util_saucer(9,9,2.25);

@@ -7,6 +7,8 @@ icpstls: stl/icp/attack.stl \
     stl/icp/runabout.stl \
     stl/icp/tactical-shuttle.stl \
     stl/icp/science.stl \
+    stl/icp/explorer.stl \
+    stl/icp/destroyer.stl \
     stl/icp/scout.stl 
 
 stl/icp/attack.stl: src/icp/attack.scad \
@@ -16,6 +18,24 @@ stl/icp/attack.stl: src/icp/attack.scad \
 	    -i src/icp/attack.scad \
 	    -o stl/icp/attack.stl \
 	    -p images/icp/attack.png \
+	    -t Sunset
+
+stl/icp/explorer.stl: src/icp/explorer.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
+	bin/render.sh \
+	    -i src/icp/explorer.scad \
+	    -o stl/icp/explorer.stl \
+	    -p images/icp/explorer.png \
+	    -t Metallic
+
+stl/icp/destroyer.stl: src/icp/destroyer.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
+	bin/render.sh \
+	    -i src/icp/destroyer.scad \
+	    -o stl/icp/destroyer.stl \
+	    -p images/icp/destroyer.png \
 	    -t Sunset
 
 stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad

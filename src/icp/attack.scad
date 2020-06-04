@@ -6,9 +6,9 @@ module model2() {
 
     icp_saucer_large();
     util_mirrored([0,1,0]) 
-        translate([-0,11,4])
+        translate([-0,10,4])
             rotate([60,0,0])
-                util_nacelle(40,8,14,curved=true,up=false);
+                util_nacelle(45,10,15,curved=true,up=false);
 
 }
 
