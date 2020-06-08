@@ -25,7 +25,10 @@ module tactical_old() {
 }
 
 module tactical() {
-    util_ovoid(16,7,10,3,1, faces=10);
+    hull()
+    util_mirrored([0,1,0])
+    translate([0,2,0])
+    util_ovoid(16,7,6,3,1, faces=10);
 
     util_mirrored([0,1,0])
     translate([-2,-3,.5])
