@@ -1,12 +1,14 @@
 use <../lib/util.scad>;
 
-module icp_saucer_large() {
+module icp_saucer_large(extend=false) {
     difference() {
         util_saucer(80,40,10);
 
-        translate([-50,0,0])
-            rotate([0,15,0])
-                cube(80,center=true);
+        if (extend == false) {
+            translate([-50,0,0])
+                rotate([0,15,0])
+                    cube(80,center=true);
+        }
 
         util_mirrored([0,1,0])
             translate([-40,55,-1])
@@ -23,7 +25,6 @@ module icp_saucer_large() {
 
     }
 }
-
 
 module icp_saucer_large_2(faces=32) {
     difference() {

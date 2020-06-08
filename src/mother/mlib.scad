@@ -25,7 +25,7 @@ nacelle_brussard_h=60;
 
 saucer_width=750;
 saucer_up=60;
-saucer_up_ext=10;
+saucer_up_ext=5;
 saucer_down=15;
 saucer_hangar_height=20;
 saucer_hangar_in=55;
@@ -301,8 +301,8 @@ module mvm_command_plus() {
             1.5*command_hangar_height);
         
         translate([0,0,
-            -1.1*command_shuttlebay_width/2+command_hangar_height])
-        cube(1.1*command_shuttlebay_width, center=true);
+            -1*command_shuttlebay_width/2+command_hangar_height])
+        cube(1*command_shuttlebay_width, center=true);
     }
 
     
