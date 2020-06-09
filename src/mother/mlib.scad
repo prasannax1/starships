@@ -47,8 +47,8 @@ command_bridge_width=40;
 command_bridge_height=5;
 command_nacelle_length_f=50;
 command_nacelle_length_b=200;
-command_nacelle_height=28;
-command_nacelle_width=24;
+command_nacelle_height=25;
+command_nacelle_width=25;
 
 escort_width=150;
 escort_down=20;
