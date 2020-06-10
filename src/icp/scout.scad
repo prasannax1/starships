@@ -3,6 +3,7 @@ use <icp.scad>;
 
 module scout() {
     icp_saucer_large();
+    util_saucer(18,40,10);
     
     difference() {
         translate([0,0,5]) {
