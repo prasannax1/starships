@@ -4,7 +4,7 @@ engine_front=250;
 engine_back=320;
 engine_up=50;
 engine_down=90;
-engine_width=180;
+engine_width=200;
 engine_disk_up=15;
 engine_disk_down=5;
 engine_faces=32;
@@ -25,7 +25,7 @@ nacelle_brussard_h=60;
 
 saucer_width=750;
 saucer_up=60;
-saucer_up_ext=5;
+saucer_up_ext=4;
 saucer_down=15;
 saucer_hangar_height=20;
 saucer_hangar_in=55;
