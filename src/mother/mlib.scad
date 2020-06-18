@@ -422,7 +422,7 @@ module mother() {
     translate([0,0,.01]) mvm_escort();
 }
 
-module mvm_escort() {
+module mvm_escort(saucer_attached=true) {
     difference() {
         union() {
             difference() {
@@ -449,9 +449,11 @@ module mvm_escort() {
                 faces=8);
 
         }
-
-        translate([0,0,saucer_width/2])
-        cube(saucer_width, center=true);
+        
+        if (saucer_attached == false) {
+            translate([0,0,saucer_width/2])
+            cube(saucer_width, center=true);
+        }
         
         translate([escort_width/2,0,0])
         cube(25, center=true);
@@ -470,14 +472,14 @@ module mvm_escort_separate() {
     translate([-saucer_width/2,0,0]) mvm_transwarp();
     translate([0,0,saucer_up-.01]) mvm_command_basic();
     translate([0,0,0]) mvm_saucer_basic();
-    translate([0,0,.01-separate_height]) mvm_escort();
+    translate([0,0,.01-separate_height]) mvm_escort(saucer_attached=false);
 }
 
 module mvm_full_separate() {
     translate([-saucer_width/2-separate_length/2,0,20-separate_height]) mvm_transwarp();
     translate([0+separate_length/2,0,saucer_up-.01+20+separate_height]) mvm_command_basic(saucer_attached=false, engine_attached=false);
     translate([0+separate_length/2,0,0]) mvm_saucer_basic(engine_attached=false, command_attached=false);
-    translate([0/2,0,.01-separate_height]) mvm_escort();
+    translate([0/2,0,.01-separate_height]) mvm_escort(saucer_attached=false);
 }
 
 module m_main_sep() {
@@ -505,5 +507,5 @@ module mvm_transwarp_full() {
 
 module mvm_transwarp_escort() {
         translate([-saucer_width/2,0,0]) mvm_transwarp();
-            translate([-saucer_width/2-engine_back,0,.01]) mvm_escort();
+            translate([-saucer_width/2-engine_back,0,.01]) mvm_escort(saucer_attached=false);
 }

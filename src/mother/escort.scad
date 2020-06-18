@@ -1,3 +1,3 @@
 use <mlib.scad>;
 
-mvm_escort();
+mvm_escort(saucer_attached=false);
