@@ -3,7 +3,7 @@ use <../lib/util.scad>;
 engine_front=250;
 engine_back=320;
 engine_up=50;
-engine_down=90;
+engine_down=75;
 engine_width=200;
 engine_disk_up=15;
 engine_disk_down=5;
@@ -13,7 +13,7 @@ engine_inv_ratio=1.6;
 engine_defl_x2=80;
 
 nacelle_place_width=472;
-nacelle_place_height_diff=0;
+nacelle_place_height_diff=15;
 nacelle_place_height=engine_up+nacelle_place_height_diff;
 
 nacelle_front=250;
