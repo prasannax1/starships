@@ -9,7 +9,7 @@ icpstls: stl/icp/attack.stl \
     stl/icp/science.stl \
     stl/icp/explorer.stl \
     stl/icp/destroyer.stl \
-    stl/icp/scout.stl 
+    stl/icp/diplomat.stl 
 
 stl/icp/attack.stl: src/icp/attack.scad \
     src/lib/util.scad \
@@ -38,11 +38,11 @@ stl/icp/destroyer.stl: src/icp/destroyer.scad \
 	    -p images/icp/destroyer.png \
 	    -t Sunset
 
-stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad
+stl/icp/yacht.stl: src/icp/yacht.scad src/lib/util.scad
 	bin/render.sh \
-	    -i src/icp/diplomatic.scad \
-	    -o stl/icp/diplomat.stl \
-	    -p images/icp/diplomat.png \
+	    -i src/icp/yacht.scad \
+	    -o stl/icp/yacht.stl \
+	    -p images/icp/yacht.png \
 	    -t Tomorrow
 
 stl/icp/runabout.stl: src/icp/runabout.scad src/lib/util.scad
@@ -69,13 +69,13 @@ stl/icp/science.stl: src/icp/science.scad \
 	    -p images/icp/science.png \
 	    -t Metallic
 
-stl/icp/scout.stl: src/icp/scout.scad \
+stl/icp/diplomat.stl: src/icp/diplomat.scad \
     src/lib/util.scad \
     src/icp/icp.scad
 	bin/render.sh \
-	    -i src/icp/scout.scad \
-	    -o stl/icp/scout.stl \
-	    -p images/icp/scout.png \
+	    -i src/icp/diplomat.scad \
+	    -o stl/icp/diplomat.stl \
+	    -p images/icp/diplomat.png \
 	    -t "Tomorrow Night"
 
 macstls: stl/macs/shuttlepod.stl \
@@ -311,7 +311,7 @@ stl/combined/scale.stl: src/lib/util.scad \
     src/macs/heavy.scad \
     src/icp/runabout.scad \
     src/icp/science.scad \
-    src/icp/diplomatic.scad \
+    src/icp/yacht.scad \
     src/icp/attack.scad \
     src/icp/tactical-runabout.scad \
     src/macs/hospital.scad \

@@ -684,9 +684,9 @@ The *Vulture*s are used to escort the *Exodus* in flight through troubled space,
 
 ## Eagle Class
 
-![Scout Ship](images/icp/scout.png)
+![Scout Ship](images/icp/explorer.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/scout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/explorer.stl)
 
 Eagle Class Light Scout
 
