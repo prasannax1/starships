@@ -27,7 +27,7 @@ stl/icp/explorer.stl: src/icp/explorer.scad \
 	    -i src/icp/explorer.scad \
 	    -o stl/icp/explorer.stl \
 	    -p images/icp/explorer.png \
-	    -t Metallic
+	    -t Tomorrow
 
 stl/icp/destroyer.stl: src/icp/destroyer.scad \
     src/lib/util.scad \
@@ -67,7 +67,7 @@ stl/icp/science.stl: src/icp/science.scad \
 	    -i src/icp/science.scad \
 	    -o stl/icp/science.stl \
 	    -p images/icp/science.png \
-	    -t Metallic
+	    -t Nature
 
 stl/icp/diplomat.stl: src/icp/diplomat.scad \
     src/lib/util.scad \
@@ -76,7 +76,7 @@ stl/icp/diplomat.stl: src/icp/diplomat.scad \
 	    -i src/icp/diplomat.scad \
 	    -o stl/icp/diplomat.stl \
 	    -p images/icp/diplomat.png \
-	    -t "Tomorrow Night"
+	    -t Metallic
 
 macstls: stl/macs/shuttlepod.stl \
     stl/macs/shuttle.stl \
