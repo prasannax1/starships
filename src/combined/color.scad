@@ -8,8 +8,8 @@ use <../macs/heavy.scad>;
 use <../icp/runabout.scad>;
 use <../icp/science.scad>;
 use <../icp/scout.scad>;
-use <../icp/diplomatic.scad>;
-use <../icp/attack.scad>;
+use <../icp/diplomat.scad>;
+use <../icp/explorer.scad>;
 use <../icp/tactical-runabout.scad>;
 use <../macs/hospital.scad>;
 
