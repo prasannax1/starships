@@ -15,7 +15,7 @@ engine_inv_ratio=1.6;
 engine_defl_x2=80;
 
 nacelle_place_back=engine_back-50;
-nacelle_place_width=620;
+nacelle_place_width=550;
 nacelle_place_height_diff=16;
 nacelle_place_height=engine_up+nacelle_place_height_diff;
 
@@ -181,7 +181,7 @@ cube([engine_front-engine_up_2,command_engine_width,engine_up_2],center=true);
 }
 
 
-module engine(escort_attached=true, saucer_attached=true) {
+module engine(escort_attached=true, saucer_attached=true, command_attached=true) {
     engine_main(escort_attached=escort_attached, saucer_attached=saucer_attached);
     util_mirrored([0,1,0]) engine_nacelle_assembly();
 }
@@ -194,7 +194,7 @@ module saucer(command_attached=true, engine_attached=true, secondary_command_att
 }
 
 
-module secondary_command() {
+module secondary_command(saucer_attached=true) {
     util_ovoid(secondary_command_width/2, secondary_command_width/2,
         secondary_command_width, secondary_command_up,secondary_command_down);
 
@@ -459,4 +459,90 @@ module mother() {
 
 
 
+module mvm_escort() {
+    escort(engine_attached=false);
+}
+
+module mvm_saucer() {
+    saucer(command_attached=false,engine_attached=false,secondary_command_attached=false);
+}
+
+module mvm_scout() {
+    secondary_command(saucer_attached=false);
+}
+
+module mvm_command() {
+    command(saucer_attached=false, engine_attached=false);
+}
+
+module mvm_transwarp() {
+    engine(saucer_attached=false, escort_attached=false, command_attached=false);
+}
+
+module mvm_transwarp_escort() {
+    engine(saucer_attached=false, escort_attached=true, command_attached=false);
+    translate([0,0,-(engine_down-engine_down_diff)+.01]) 
+    escort();
+}
+
+module mvm_transwarp_full() {
+    engine(saucer_attached=false, escort_attached=true, command_attached=true);
+    translate([0,0,-(engine_down-engine_down_diff)+.01]) 
+    escort();
+    translate([saucer_back-.01,0,saucer_up-.01])
+    command(engine_attached=true, saucer_attached=false);
+}
+
+
+module mvm_scout_separate() {
+    saucer(secondary_command_attached=false);
+    translate([0,0,saucer_up-.01]) command();
+    translate([0,0,-saucer_down-separate_height]) secondary_command(saucer_attached=false);
+    translate([-saucer_back+.01,0,0]) engine();
+    translate([-saucer_back+.01,0,-(engine_down-engine_down_diff)+.01]) escort();
+}
+
+module mvm_command_separate() {
+    saucer(command_attached=false);
+    translate([0,0,saucer_up+separate_height]) command(saucer_attached=false, engine_attached=false);
+    translate([0,0,-saucer_down+.01]) secondary_command();
+    translate([-saucer_back+.01,0,0]) engine(command_attached=false);
+    translate([-saucer_back+.01,0,-(engine_down-engine_down_diff)+.01]) escort();
+}
+
+module mvm_escort_separate() {
+    saucer();
+    translate([0,0,saucer_up-.01]) command();
+    translate([0,0,-saucer_down+.01]) secondary_command();
+    translate([-saucer_back+.01,0,0]) engine(escort_attached=false);
+    translate([-saucer_back+.01,0,-(engine_down-engine_down_diff)-separate_height]) escort(engine_attached=false);
+}
+
+module mvm_battle_separate() {
+    translate([separate_length/2,0,0]) saucer(engine_attached=false, command_attached=false);
+    translate([-separate_length/2,0,saucer_up-.01]) command(saucer_attached=false);
+    translate([separate_length/2,0,-saucer_down+.01]) secondary_command();
+    translate([-separate_length/2-saucer_back+.01,0,0]) engine(saucer_attached=false);
+    translate([-separate_length/2-saucer_back+.01,0,-(engine_down-engine_down_diff)+.01]) escort();
+}
+
+module mvm_normal_separate() {
+    translate([separate_length/2,0,0]) saucer(engine_attached=false, command_attached=true);
+    translate([separate_length/2,0,saucer_up-.01]) command(saucer_attached=true, engine_attached=false);
+    translate([separate_length/2,0,-saucer_down+.01]) secondary_command();
+    translate([-separate_length/2-saucer_back+.01,0,0]) engine(saucer_attached=false);
+    translate([-separate_length/2-saucer_back+.01,0,-(engine_down-engine_down_diff)+.01]) escort();
+}
+
+module mvm_full_separate() {
+    translate([separate_length/2,0,0]) saucer(engine_attached=false, command_attached=false, secondary_command_attached=false);
+    translate([separate_length/2,0,saucer_up+separate_height]) command(saucer_attached=false, engine_attached=false);
+    translate([separate_length/2,0,-saucer_down-separate_height]) secondary_command();
+    translate([-separate_length/2-saucer_back+.01,0,0]) engine(saucer_attached=false, command_attached=false, escort_attached=false);
+    translate([-separate_length/2-saucer_back+.01,0,-(engine_down-engine_down_diff)-separate_height]) escort(engine_attached=false);
+}
+
+module m_main_sep() {
+    mvm_full_separate();
+}
 
