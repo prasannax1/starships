@@ -15,7 +15,7 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
  * Length: 1496m
  * Width: 746m
  * Height: 199m
- * Decks: 52
+ * Decks: 57
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
@@ -56,10 +56,10 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
 
 ##### Stats
 
- * Length: 769m
+ * Length: 746m
  * Width: 746m
- * Height: 75m
- * Decks: 22
+ * Height: 90m
+ * Decks: 27
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 50
@@ -96,10 +96,10 @@ Each section contains an auxillary sickbay, a brig, and a mess hall. They contai
 
 ##### Stats
 
- * Length: 996m
- * Width: 497m
- * Height: 199m
- * Decks: 45
+ * Length: 1147m
+ * Width: 669m
+ * Height: 205m
+ * Decks: 40
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 100
@@ -126,18 +126,18 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
 #### Photon Class
 
-![Command](images/mothership/scout.png)
+![Command](images/mothership/command.png)
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
 
 *Photon Class* heavy cruiser/ multimission explorer
 
 #### Stats
 
- * Length: 477m
- * Width: 239m
- * Height: 82m 
- * Decks: 25
+ * Length: 445m
+ * Width: 179m
+ * Height: 65m 
+ * Decks: 20
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 10
@@ -163,22 +163,55 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
  
 ##### Image showing launch of Photon class from Exodus
 
-![Scout separation](images/mothership/scout-separation.png)
+![Scout separation](images/mothership/command-separation.png)
+
+#### Eager Class
+
+![Scout](images/mothership/scout.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
+
+*Eager* Class Light cruiser
  
+#### Stats
+
+ * Length: 190m
+ * Width: 119m
+ * Height: 36m 
+ * Decks: 9
+ * Crew Capacity:
+   * Minimum (skeleton): 10
+   * Minimum (sustainable): 10
+   * Typical: 80
+   * Maximum (all stations filled): 100
+   * Maximum (evacuation limit): 500
+ * Auxillary Craft
+   * *Bumblebee* class light shuttles
+ * Warp speed:
+   * Cruising: Warp 6
+   * Maximum: Warp 9.7
+
+The *Eager* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Exodus* but it's a full fledged general purpose light cruiser.
+
+##### Image showing launch of Eager class from Exodus
+
+![Scout separation](images/mothership/scout-separation.png)
+
+
 #### Bat Class
 
 ![Escort](images/mothership/escort.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
 
-*Bat* class dedicated escort vessel
+*Bat* class destroyer
 
 #### stats
 
- * Length: 239m
- * Width: 150m
- * Height: 22m
- * Decks: 6
+ * Length: 400m
+ * Width: 167m
+ * Height: 30m
+ * Decks: 9
  * Crew Capacity:
    * Minimum: 5
    * Typical: 20
@@ -190,7 +223,9 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
    * Cruising: Warp 7
    * Maximum: Warp 9.5
 
-In the space under the saucer traditionally used by Captain's yachts, the *Exodus* has a dedicated Escort vessel. It is about as big as a *Defiant Class* and is as powerful as the *Defiant* would be if it was made today.
+Under the secondary hull/*Mjolnir* class lies the Bat class which is a dedicated escort vessel for the *Exodus*.
+
+But at 400m long, it's a full size destroyer comparable to the *Prometheus* class
 
 ##### Image showing launch of Bat class from Exodus
 
@@ -236,9 +271,6 @@ The *Exodus* class also has the multivector mode where all the component ships s
 
 One of the drawbacks of early multivector ships was that if one of the middle vectors is destroyed or disabled, the whole ship is disabled because the extreme vectors cannot attach to each other. The *Exodus* doesn't have this problem as the *Photon* class can attach to both the *Aviary* and the *Mjolnir* classes.
 
-Even the *Bat* class attaches to the *Mjolnir* class:
-
-![Transwarp Escort](images/mothership/transwarp-escort.png)
 
 ## Auxillary craft
 
