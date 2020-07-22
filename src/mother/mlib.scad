@@ -127,6 +127,7 @@ module engine_main(saucer_attached=true, escort_attached=true) {
             center=true);
         
         translate([-engine_back,0,-engine_down])
+        scale([(engine_back-escort_nacelle_length)*1.2/engine_down,1,1])
         rotate([90,0,0])
         cylinder(r=engine_down, h=engine_width, center=true);
         
