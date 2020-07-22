@@ -7,7 +7,7 @@ use <../macs/cutter.scad>;
 use <../macs/heavy.scad>;
 use <../icp/runabout.scad>;
 use <../icp/science.scad>;
-use <../icp/scout.scad>;
+use <../icp/attack.scad>;
 use <../icp/diplomat.scad>;
 use <../icp/explorer.scad>;
 use <../icp/tactical-runabout.scad>;
@@ -25,7 +25,7 @@ module c_m_main_sep() {
 
 module c_scout() {
     color("lightsteelblue")
-    scout();
+    explorer();
 }
 
 module c_attack() {
@@ -45,7 +45,7 @@ module c_hospital() {
 
 module c_diplomat() {
     color("thistle")
-    diplomat();
+    scout();
 }
 
 module c_tactical() {
