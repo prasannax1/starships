@@ -12,9 +12,9 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
 ### Stats
 
- * Length: 1496m
+ * Length: 1595m
  * Width: 746m
- * Height: 199m
+ * Height: 245m
  * Decks: 57
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -44,7 +44,7 @@ The *Exodus Class* is meant to act as both a deep space explorer, and as a mobil
 
 ### Structure
 
-The *Exodus* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Exodus. Multi-vector mode is a nice idea for smaller ships - but for a ship that's 1.5 km long it's impossible to build without.
+The *Exodus* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Exodus. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
 
 #### Aviary Class
 
@@ -118,7 +118,7 @@ Each section contains an auxillary sickbay, a brig, and a mess hall. They contai
    * Maximum: Warp 9
    * Transwarp
 
-At almost a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
+At more than a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
 
 In contrast with the *Aviary* class, the *Mjolnir* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar 200mx200mx40m which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
 
