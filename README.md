@@ -136,8 +136,8 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
  * Length: 445m
  * Width: 179m
- * Height: 65m 
- * Decks: 20
+ * Height: 65m / 85m
+ * Decks: 20 / 26
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 10
@@ -156,6 +156,8 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
    * Maximum: Warp 9.7
 
 Ostensibly the *Photon* class is just the command section of the *Exodus* assembly. But The *Photon* class is a heavy cruiser comparable to the Excelsior in size and function.
+
+The *Photon* class has a variable geometry structure - The saucer section lowers down by about 20m to fit snugly into the main saucer of the *Exodus*. This lowering is also used to protect the vulnerable "neck" during tactical engagements at impulse.
 
 Like the Excelsior, the *Photon* class is used in mainly two ways:
  * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the two shuttlebays which can hold several fighter craft

@@ -379,30 +379,53 @@ module escort( engine_attached=true) {
 }
 
 
+module command_disk() {
+        
+        util_ovoid(command_front,command_front,command_width,saucer_up_ext,saucer_up_ext);
+    
+            translate([0,0,-command_height/4])
+            cylinder(h=command_height/2,d1=command_width-10,d2=command_width, center=true);
+        
 
+        translate([0,0,saucer_up_ext])
+        cylinder(r1=command_bridge_width, r2=command_bridge_width-5, h=command_bridge_height*2, center=true);
+        
+        intersection() {
+            translate([0,0,-command_height/2])
+            util_nacelle(command_width,command_bridge_width*2,command_bridge_height+command_height*.9, curved=true);
+            
+            translate([0,0,command_width/2-.05])
+            cylinder(d=command_width,h=command_width,center=true);
+        }
+        
+            translate([0,0,saucer_up_ext+command_bridge_height])
+        util_ovoid(command_bridge_width/2, command_bridge_width/2, command_bridge_width, command_bridge_height, command_bridge_height, faces=7);
+}
 
 
 module command(saucer_attached=true, engine_attached=true) {
-    util_ovoid(command_front,command_front,command_width,saucer_up_ext,saucer_up_ext);
     
     if (saucer_attached == false) {
-        translate([0,0,-command_height/4])
-        cylinder(h=command_height/2,d1=command_width-10,d2=command_width, center=true);
+            translate([-command_width/2-command_engine_width+command_engine_length_b/2,0,command_height/4-.01])
+        scale([2,1,1])
+        difference() {
+            cylinder(d=command_engine_width*.9,h=command_height*2.1,center=true);
+            
+            translate([-command_width/2+5,0,0])
+            rotate([0,10,0])
+            cube(command_width,center=true);
+                
+                
+        }
+    
+        translate([0,0,command_height]) command_disk();
+    } else {
+        command_disk();
     }
+    
 
-    translate([0,0,saucer_up_ext])
-    cylinder(r1=command_bridge_width, r2=command_bridge_width-5, h=command_bridge_height*2, center=true);
     
-    intersection() {
-        translate([0,0,-command_height/2])
-        util_nacelle(command_width,command_bridge_width*2,command_bridge_height+command_height*.9, curved=true);
-        
-        translate([0,0,command_width/2-.05])
-        cylinder(d=command_width,h=command_width,center=true);
-    }
-    
-    translate([0,0,saucer_up_ext+command_bridge_height])
-    util_ovoid(command_bridge_width/2, command_bridge_width/2, command_bridge_width, command_bridge_height, command_bridge_height, faces=7);
+
 
     difference() {
 
@@ -421,16 +444,22 @@ module command(saucer_attached=true, engine_attached=true) {
         }
 
         translate([0,0,command_width]) cube(command_width*2,center=true);
+        
+        if (saucer_attached==false) {
+            translate([command_width/2+command_engine_width,0,-command_height/4])
+            scale([1,1,1.2])
+            cylinder(h=command_height/2,d1=command_width-10,d2=command_width, center=true);
+        }
     }
     
     if (engine_attached==false) {
         translate([-saucer_back+engine_front-engine_up_2,0,-saucer_up])
-    rotate([90,0,0])
-    cylinder(h=command_engine_width, r=engine_up_2, center=true);
+        rotate([90,0,0])
+        cylinder(h=command_engine_width, r=engine_up_2, center=true);
 
 
-    translate([-engine_front+engine_up_2,0,-saucer_up+engine_up_2/2])
-    cube([engine_front-engine_up_2,command_engine_width,engine_up_2],center=true);
+        translate([-engine_front+engine_up_2,0,-saucer_up+engine_up_2/2])
+        cube([engine_front-engine_up_2,command_engine_width,engine_up_2],center=true);
         }
     }
     
@@ -451,6 +480,13 @@ module command(saucer_attached=true, engine_attached=true) {
         util_mirrored([0,1,0])
         translate([-command_width, command_width/2.7, 0])
         util_ovoid(command_width/2.5, command_width, command_bridge_width/1.5, command_bridge_height*3, 1, faces=13);
+    }
+    
+    translate([-command_engine_width*2.4,0,-.01])
+    scale([2,1,.2])
+    rotate([0,-90,0]) {
+
+    cylinder(d=command_engine_width,h=command_engine_length_b/4,center=true);
     }
 }
 
