@@ -57,6 +57,7 @@ command_nacelle_length_f=50;
 command_nacelle_length_b=200;
 command_nacelle_height=25;
 command_nacelle_width=25;
+command_neck_width=16;
 
 escort_width=150;
 escort_front=180;
@@ -69,7 +70,7 @@ escort_nacelle_height=36;
 escort_nacelle_width=48;
 escort_minus_length=25;
 
-scout_width=120;
+scout_width=100;
 scout_up=15;
 scout_down=3;
 scout_body_up=12;
@@ -407,21 +408,15 @@ module command_disk() {
 }
 
 
-module command(saucer_attached=true, engine_attached=true) {
+module command(saucer_attached=true, saucer_raised=false,engine_attached=true) {
     
-    if (saucer_attached == false) {
-            translate([-command_width/2-command_engine_width+command_engine_length_b/2,0,command_height/4-.01])
-        scale([2,1,1])
-        difference() {
-            cylinder(d=command_engine_width*.9,h=command_height*2.1,center=true);
-            
-            translate([-command_width/2+5,0,0])
-            rotate([0,10,0])
-            cube(command_width,center=true);
-                
-                
-        }
+    if (saucer_raised == true) {
+            translate([-command_width/2-command_engine_width+command_engine_length_b/2+command_neck_width/2,0,command_height/4-.01])
+        cylinder(d=command_neck_width,h=command_height*2,center=true);
     
+                    translate([-command_width/2-command_engine_width+command_engine_length_b/2+2.2*command_neck_width,0,command_height/4-.01])
+        cylinder(d=command_neck_width,h=command_height*2,center=true);
+        
         translate([0,0,command_height]) command_disk();
     } else {
         command_disk();
@@ -565,7 +560,7 @@ module mvm_escort_separate() {
 
 module mvm_battle_separate() {
     translate([separate_length/2,0,0]) saucer(engine_attached=false, command_attached=false);
-    translate([-separate_length/2,0,saucer_up-.01]) command(saucer_attached=false);
+    translate([-separate_length/2,0,saucer_up-.01]) command(saucer_attached=false, saucer_raised=true);
     translate([separate_length/2,0,-saucer_down+.01]) scout();
     translate([-separate_length/2-saucer_back+.01,0,0]) engine(saucer_attached=false);
     translate([-separate_length/2-saucer_back+.01,0,-(engine_down-engine_down_diff)+.01]) escort();
