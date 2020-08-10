@@ -18,7 +18,7 @@ engine_defl_x2=80;
 
 nacelle_place_back=engine_back-50;
 nacelle_place_width=550;
-nacelle_place_height_diff=16;
+nacelle_place_height_diff=20;
 nacelle_place_height=engine_up+nacelle_place_height_diff;
 
 nacelle_front=200;
