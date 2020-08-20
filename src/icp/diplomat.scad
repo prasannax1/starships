@@ -1,7 +1,7 @@
 use <../lib/util.scad>;
 use <icp.scad>;
 
-module scout() {
+module diplomat() {
     icp_saucer_large();
     util_saucer(18,40,10);
     
@@ -37,4 +37,4 @@ module scout() {
     
 }
 
-scout();
+diplomat();

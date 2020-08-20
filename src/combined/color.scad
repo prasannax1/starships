@@ -23,7 +23,7 @@ module c_m_main_sep() {
     m_main_sep();
 }
 
-module c_scout() {
+module c_explorer() {
     color("lightsteelblue")
     explorer();
 }
@@ -45,7 +45,7 @@ module c_hospital() {
 
 module c_diplomat() {
     color("thistle")
-    scout();
+    diplomat();
 }
 
 module c_tactical() {
