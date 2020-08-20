@@ -84,7 +84,42 @@ macstls: stl/macs/shuttlepod.stl \
     stl/macs/cutter.stl \
     stl/macs/heavy-runabout.stl \
     stl/macs/hospital.stl \
+    images/macs/large-warp-harness.png \
+    images/macs/disk.png \
+    images/macs/extension.png \
+    images/macs/habitat.png \
+    images/macs/small-warp-harness.png \
     stl/macs/freighter.stl
+
+images/macs/large-warp-harness.png: src/macs/large-warp-harness.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/large-warp-harness.scad \
+	    -p images/macs/large-warp-harness.png
+
+images/macs/disk.png: src/macs/disk.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/disk.scad \
+	    -p images/macs/disk.png
+
+images/macs/extension.png: src/macs/extension.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/extension.scad \
+	    -p images/macs/extension.png
+
+images/macs/habitat.png: src/macs/habitat.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/habitat.scad \
+	    -p images/macs/habitat.png
+
+images/macs/small-warp-harness.png: src/macs/small-warp-harness.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/small-warp-harness.scad \
+	    -p images/macs/small-warp-harness.png
 
 stl/macs/shuttlepod.stl: src/macs/macs.scad src/macs/shuttlepod.scad \
     src/lib/util.scad
