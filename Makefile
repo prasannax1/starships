@@ -177,7 +177,7 @@ motherstls: stl/mother/saucer.stl \
     stl/mother/scout.stl \
     stl/mother/command.stl \
     stl/mother/main.stl \
-    images/mothership/transwarp-full.png \
+    stl/mother/transwarp-full.stl \
     images/mothership/battle-separation.png \
     images/mothership/scout-separation.png \
     stl/mother/aux-separation.stl \
@@ -204,10 +204,11 @@ images/mothership/escort-separation.png: src/lib/util.scad \
 	    -c "-423.55,0,18.72,90,0,0,3064" \
 	    -t Tomorrow
 
-images/mothership/transwarp-full.png: src/lib/util.scad \
+stl/mother/transwarp-full.stl: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/transwarp-full.scad
 	bin/render.sh \
+	    -o stl/mother/transwarp-full.stl \
 	    -i src/mother/transwarp-full.scad \
 	    -p images/mothership/transwarp-full.png \
 	    -t Tomorrow

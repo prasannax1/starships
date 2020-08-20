@@ -241,7 +241,6 @@ The *Exodus* class has two modes of saucer separation
 
 ![Normal Separation](images/mothership/normal-separation.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/normal-separation.stl)
 
 This is similar to the saucer separation of other large starship. The ship separates into two sections
  - The Saucer section with the *Aviary*, *Photon* and *Bat* parts
@@ -251,7 +250,6 @@ This is similar to the saucer separation of other large starship. The ship separ
 
 ![Battle Separation](images/mothership/battle-separation.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/battle-separation.stl)
 
 Here the *Photon* class remains with the secondary hull, making the two sections as
  - The saucer section with the *Aviary* and *Bat* parts
@@ -267,7 +265,6 @@ Even if both the *Mjolnir* and *Photon* classes are classified as general purpos
 
 ![Full Separation](images/mothership/full-separation.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/full-separation.stl)
 
 The *Exodus* class also has the multivector mode where all the component ships separate. This is generally the default mode in battle.
 
