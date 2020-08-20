@@ -101,7 +101,13 @@ main() {
         esac
     done
 
-    if [ -z "${SRCFILE}" ] || [ -z "${STLFILE}" ] || [ -z "${PICFILE}" ]
+    if [ -z "${SRCFILE}" ] 
+    then
+        usage
+        exit 1
+    fi
+
+    if [ -z "${STLFILE}" ] && [ -z "${PICFILE}" ]
     then
         usage
         exit 1
@@ -116,11 +122,17 @@ main() {
     fi
 
     # first render stl
-    render_stl "${SRCFILE}" "${STLFILE}"
+    if [ ! -z "${STLFILE}" ]
+    then
+        render_stl "${SRCFILE}" "${STLFILE}"
+    fi
 
     # Then render image
-    render_image "${SRCFILE}" "${PICFILE}" \
-        "${THEME}" "${IMGSIZE}" "${CAMERA}"
+    if [ ! -z "${PICFILE}" ]
+    then
+        render_image "${SRCFILE}" "${PICFILE}" \
+            "${THEME}" "${IMGSIZE}" "${CAMERA}"
+    fi
 }
 
 main "$@"
