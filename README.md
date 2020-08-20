@@ -78,11 +78,9 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
    * Maximum: Warp 1.6
 
    
-At 800 m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body.
+At 750m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body.
 
 The saucer is divided into 16 sections, with the aft 3 sections fused together to form the main engineering part of the *Aviary* class. Each of the remaining sections is split up into the upper 12 decks consisting of various labs, residential areas and special purpose rooms, the next 6 decks containing a large hangar, and the bottom 6 decks consist of security barracks, firing range, brigs etc.
-
-The front-most section, section 0, contains an additional deck which forms the main bridge of the Aviary class - but under normal conditions the Aviary is slaved to the command module of the *Exodus class*.
 
 Each section contains an auxillary sickbay, a brig, and a mess hall. They contain residences for the crew of all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
 
@@ -120,7 +118,7 @@ Each section contains an auxillary sickbay, a brig, and a mess hall. They contai
 
 At more than a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
 
-In contrast with the *Aviary* class, the *Mjolnir* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar 200mx200mx40m which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
+In contrast with the *Aviary* class, the *Mjolnir* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
 
 The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Mjolnir* is meant to the the testbed of experimental propulsion.
 
@@ -136,8 +134,8 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
  * Length: 445m
  * Width: 179m
- * Height: 65m / 85m
- * Decks: 20 / 26
+ * Height: 65m 
+ * Decks: 20 
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 10
@@ -157,7 +155,7 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
 Ostensibly the *Photon* class is just the command section of the *Exodus* assembly. But The *Photon* class is a heavy cruiser comparable to the Excelsior in size and function.
 
-The *Photon* class has a variable geometry structure - The saucer section lowers down by about 20m to fit snugly into the main saucer of the *Exodus*. This lowering is also used to protect the vulnerable "neck" during tactical engagements at impulse.
+The *Photon* class has a variable geometry structure - The saucer section rises up by about 20m to allow the Photon to slide back from it's snug harness on top of the Aviary.
 
 Like the Excelsior, the *Photon* class is used in mainly two ways:
  * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the two shuttlebays which can hold several fighter craft
@@ -177,8 +175,8 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
  
 #### Stats
 
- * Length: 190m
- * Width: 119m
+ * Length: 180m
+ * Width: 100m
  * Height: 36m 
  * Decks: 9
  * Crew Capacity:
@@ -243,8 +241,8 @@ The *Exodus* class has two modes of saucer separation
 
 
 This is similar to the saucer separation of other large starship. The ship separates into two sections
- - The Saucer section with the *Aviary*, *Photon* and *Bat* parts
- - The engineering section which is just the *Mjolnir* class
+ - The Saucer section with the *Aviary*, *Photon* and *Eager* parts
+ - The engineering section which is just the *Mjolnir* and *Bat* class
  
 #### Battle Mode
 
@@ -252,8 +250,8 @@ This is similar to the saucer separation of other large starship. The ship separ
 
 
 Here the *Photon* class remains with the secondary hull, making the two sections as
- - The saucer section with the *Aviary* and *Bat* parts
- - The Battle section with the *Mjolnir* and the *Photon* classes
+ - The saucer section with the *Aviary* and *Eager* classes
+ - The Battle section with the *Mjolnir*, *Bat* and the *Photon* classes
  
 Even if both the *Mjolnir* and *Photon* classes are classified as general purpose explorers, the combination of the two makes for a formidable battle cruiser:
 
@@ -723,9 +721,9 @@ Eagle Class Light Scout
 
 ### Stats
 
- * Length:94m 
- * Width: 44m
- * Height: 16m
+ * Length:117m 
+ * Width: 46m
+ * Height: 17m
  * Decks: 4
  * Crew Capacity:
    * Minimum: 4
@@ -766,24 +764,22 @@ Dove Class Diplomatic Yacht/Light Courier
 
 ### Stats
 
- * Length: 46m
- * Width: 27m
- * Height: 10m
- * Decks: 2
-   * Saucer Section: 1 deck
-   * Engine Section: 1 deck
+ * Length: 94m
+ * Width: 44m
+ * Height: 16m
+ * Decks: 4
  * Crew Capacity:
-   * Minimum: 1
-   * Typical: 3
-   * Maximum: 40
- * Auxillary Craft: None
+   * Minimum: 4
+   * Typical: 10
+   * Maximum: 90
+ * Auxillary Craft: *Bumblebee* class small shuttles
  * Warp Speed:
    * Cruising: Warp 5
    * Maximum: Warp 7.5
 
 ### Description
 
-With the underside of the *Exodus* taken up by a dedicated escort vessel, that still leaves the niche of a diplomatic vessel unfulfilled. The *Dove* class, which was initially designed to transport VIPs in federation territory, fits into this niche naturally.
+Sometimes the *Eager* class is too overpowered for missions that require a Captain's yacht or a diplomatic vessel. For these occasions, we have the *dove* class
 
 ### Structure
 
@@ -801,4 +797,3 @@ The *Exodus* holds 3 *Dove* class yachts in the lower hangar of section 0.
 
 ![scale](images/combined/scale.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/combined/scale.stl)
