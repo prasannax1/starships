@@ -569,8 +569,8 @@ Hawk Class tactical runabout
 
 ### Stats
 
- * Length: 30m
- * Width: 24m
+ * Length: 31m
+ * Width: 21m
  * Height: 5m
  * Decks: 1
  * Crew Capacity:
