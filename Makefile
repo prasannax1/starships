@@ -10,9 +10,7 @@ icpstls: stl/icp/attack.stl \
     stl/icp/explorer.stl \
     stl/icp/destroyer.stl \
     stl/icp/diplomat.stl \
-    stl/icp/yacht.stl \
-    stl/icp/yacht-runabout.stl \
-    stl/icp/yacht-fighter.stl 
+    stl/icp/yacht.stl 
 
 stl/icp/attack.stl: src/icp/attack.scad \
     src/lib/util.scad \
@@ -47,23 +45,7 @@ stl/icp/yacht.stl: src/icp/yacht.scad src/lib/util.scad \
 	    -i src/icp/yacht.scad \
 	    -o stl/icp/yacht.stl \
 	    -p images/icp/yacht.png \
-	    -t Tomorrow
-
-stl/icp/yacht-runabout.stl: src/icp/yacht-runabout.scad src/lib/util.scad \
-    src/icp/yacht-common.scad
-	bin/render.sh \
-	    -i src/icp/yacht-runabout.scad \
-	    -o stl/icp/yacht-runabout.stl \
-	    -p images/icp/yacht-runabout.png \
-	    -t Tomorrow
-
-stl/icp/yacht-fighter.stl: src/icp/yacht-fighter.scad src/lib/util.scad \
-    src/icp/yacht-common.scad
-	bin/render.sh \
-	    -i src/icp/yacht-fighter.scad \
-	    -o stl/icp/yacht-fighter.stl \
-	    -p images/icp/yacht-fighter.png \
-	    -t Tomorrow
+	    -t Starnight
 
 stl/icp/runabout.stl: src/icp/runabout.scad src/lib/util.scad
 	bin/render.sh \

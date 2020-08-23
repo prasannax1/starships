@@ -78,11 +78,11 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
    * Maximum: Warp 1.6
 
    
-At 750m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body.
+At 750m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the primary hull of the *Photon* class fits snugly.
 
-The saucer is divided into 16 sections, with the aft 3 sections fused together to form the main engineering part of the *Aviary* class. Each of the remaining sections is split up into the upper 12 decks consisting of various labs, residential areas and special purpose rooms, the next 6 decks containing a large hangar, and the bottom 6 decks consist of security barracks, firing range, brigs etc.
+6 decks in the widest part of the saucer form the primary hangar of the *Aviary* class which runs all the way through from fore to aft. There are 3 exits to the hangar, one in the front and two in the back, each 20m tall and 120m wide.
 
-Each section contains an auxillary sickbay, a brig, and a mess hall. They contain residences for the crew of all the ships in the hangar underneath, as well as residences for everyone who works in that sections. 8 of the sections contain secondary computer cores.
+Apart from the standard shuttlecraft and runabouts, the primary function of the *aviary* class is to carry a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
 
 #### Mjolnir Class
 
@@ -192,6 +192,8 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
    * Maximum: Warp 9.7
 
 The *Eager* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Exodus* but it's a full fledged general purpose light cruiser.
+
+At roughly the same size as a *Nova* class, the *Eager* class can be used as an exploratory vessel, advanced scout, or as a Captain's yacht for diplomatic fucntions.
 
 ##### Image showing launch of Eager class from Exodus
 
@@ -313,9 +315,6 @@ Also in keeping with the modularity aim of MACS, apart from the two seats for pi
 
 The rear half of the shuttle can be configured as seating/bunks (as in the Type 6), dense passenger seating, or additional consoles.
 
-### Deployment
-
-On the *Exodus* the *Bumblebee* is not used as a shuttle, but is kept on inventory for other MACS spacecraft, and as auxillary vehicles for smaller craft.
 
 ## Wasp Class
 
@@ -351,9 +350,6 @@ The warp harness adds a bigger warp engine, and additonal components like extra 
 
 From the interiors, the warp harness adds another replicator and a transporter alcove. There's a console to access the second warp core as well.
 
-### Deployment
-
-The *Wasp* class is not used as a standard auxillary vehicle on the *Exodus*, nor is it maintained as inventory. However, since the components are in inventory, as *Wasp* class can be assembled if needed within minutes.
 
 ## Hornet class
 
@@ -391,9 +387,6 @@ However the most important function of the connector section is that it connects
 
 In case the *Hornet* is used as a runabout, the bunk beds can be swapped out for science stations as required.
 
-### Deployment
-
-The *Exodus* maintains an inventory of 20 *Hornet* shuttles, and uses them to transfer cargo and personnel between stations. The *Hornet* is not used for planetary or space missions except in extreme circumstances.
 
 ## Dragonfly Class
 
@@ -431,9 +424,6 @@ The large warp harness delivers a warp core powerful enough for a large yacht or
 
 From the interiors it adds a lavatory, replicator, transporter alcove, a computer core and an engineering console.
 
-### Deployment
-
-On the *Exodus*, section 4 (auxillary engineering) maintains 4 *Dragonflies* used as tug vessels.
 
 ## Beetle Class
 
@@ -472,9 +462,6 @@ The Cargo containers can even be configured as scientific labs, and the *Beetle*
 
 The *Beetle* class is notorious for being used as a fast and cheap general purpose starship in remote Federation colonies.
 
-### Deployment
-
-The *Exodus* does not maintain an inventory of the *Beetle* class, although it can be assembled on demand to haul cargo. 
 
 ## Nightingale Class
 
@@ -520,9 +507,6 @@ Even though the *Nightingale* is supposed to just carry patients from affected a
 
 Regarding the ship itself, there's a second MACS *Bumblebee* module attached to the rear of the large warp harness. This can be used as a secondary command module, and given that it has been configured to detach and re-attach to the harness without requiring an engineering team, can also be used as an auxillary vehicle for the *Nightingale* itself.
 
-### Deployment
-
-The *Exodus* carries 2 *Nightingale* vessels in the lower hangars of section 1.
 
 # ICP
 
@@ -534,6 +518,8 @@ The Intermediate Craft Program (ICP) began with the following observations:
  * Due to miniaturization and march of technology, any ship is more powerful than a previous generation's ship of comparable size.
 
 The ICP was started to come up with craft in the 25m to 100m range, which is too large to be a shuttle but too small to be a starship. The ICP designed vehicles should be able to be used as standalone starships or as auxillary vehicles aboard starbases and large starships.
+
+Each design had to come up with a scientific version and a tactical version. The designs were rated primarily on ruggedness, then ease of manufacture.
 
 ## Magpie Class
 
@@ -572,9 +558,6 @@ Descending down into the cargo hold, we see the doors connecting to the half sec
 
 The cargo hold of the *Magpie* is big enough to hold land vehicle - or even a small shuttle although it would be a tight fit. To facilitate this, the cargo bay of the *Magpie* is equipped with semi-permeable shields.
 
-### Deployment
-
-The *Magpie* is the standard auxillary vehicle of the *Exodus*. It is used for planetary and deep space away missions, and used as transport vehicle for personnel and cargo. The *Exodus* maintains 80 *Magpie* vessels, distributed across all science sections.
 
 ## Hawk Class
 
@@ -586,9 +569,9 @@ Hawk Class tactical runabout
 
 ### Stats
 
- * Length: 34.5m
- * Width: 21.8m
- * Height: 4.6m
+ * Length: 30m
+ * Width: 24m
+ * Height: 5m
  * Decks: 1
  * Crew Capacity:
    * Minimum: 1
@@ -601,17 +584,48 @@ Hawk Class tactical runabout
 
 ### Description
 
-The *Hawk* class is basically a *Magpie* with a bigger warp core, bigger warp coils, and more weapons. This reduces the capacity of the *Hawk* class to something slightly less than a standard runabout, but that doesn't really matter in practice since this class of vessels is generally used for tactical missions rather than scientific. 
+The *Hawk* class is the tactical version of the *Magpie*. The external changes are a differentiated warp assembly. Internally, more of the modular labs of the *Magpie* are replaced by phaser banks and torpedo stores.
 
 ### Structure
 
 The combat capabilities of the *Hawk* class is comparable to dedicated fighters like the *Peregrine* and the *Valkyirie*, but unlike those, the *Hawk* class is a true runabout from the inside; apart from the command section and cockpit, the *Hawk* class also contains 4 rooms and a rear cargo hold like a standard runabout.
 
-### Deployment
-
 Typical deployments for the *Hawk* class are aboard starbases and large starships, where they supplement or replace dedicated fighter craft. Unlike warp fighters, which have a typical range of a few hundred million KM, *Hawk* class vessels can escort craft over several star systems.
 
-The *Exodus* maintains an inventory of 30 *Hawk* class vessels in the upper shuttlebays of sections 7, 8 and 9. They are used as first response ship defence fighters, and as escort vessels for planetary missions.
+Both the *Magpie* and the *Hawk* are also called as ICP small chassis (scientific/tactical) runabouts.
+
+## Snow Owl Class
+
+![Yacht](images/icp/yacht.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/yacht.stl)
+
+Snow Owl Class Yacht
+
+### Stats
+
+ * Length: 46m
+ * Width: 27m
+ * Height: 11m
+ * Decks: 2
+ * Crew Capacity:
+   * Minimum: 2
+   * Typical: 4
+   * Maximum: 50
+ * Auxillary Craft: None
+ * Warp Speed:
+   * Cruising: Warp 5.2
+   * Maximum: Warp 8.7
+
+### Description
+
+The *Snow Owl* is the one entry which uses the same chassis for both the scientific and tactical versions, with the internals swapped out.
+
+The ship is built like a conventional starship, but with the dimensions of a yacht or a runabout.
+
+The primary hull contains the cockpit, bunk beds, and modular observation labs. The secondary hull contains the engine and transporters.
+
+The *Snow Owl* class is also called as ICP Medium Chassis.
  
 ## Raven Class
 
@@ -652,9 +666,6 @@ The front part of deck 1 has additional labs which require specialized instrumen
 
 The large aft cargo bay of the *Raven* is large enough to hold small to medium shuttles and frequently carries 1 *Bumblebee* class shuttle.
 
-### Deployment
-
-The *Raven* is used by the *Exodus* like any other ship would use runabouts - stand alone missions, long missions, missions spanning multiple sites, etc. The *Exodus* maintains 16 *Raven* vessels, 2 in each science sections.
 
 ## Vulture Class
 
@@ -681,6 +692,8 @@ Vulture Class Light Corvette/Patrol Vessel
 
 ### Description
 
+The *Vulture* is the tactical version of the *Raven*.
+
 The *Vulture Class* is not just named after a bird of prey - for all practical purposes it is a Bird of Prey built to Star Fleet specifications.
 
 The *Vulture* is arguably the most successful space craft built by the ICP. With a destructive power comparable to the *Constitution* class of about two centuries ago, the *Vulture* is deployed in a variety of patrol and escort roles. Within Federation space, the *Vulture* forms the first response to any threat. 
@@ -689,7 +702,7 @@ The *Vulture* can limp back from damage that would destroy much larger ships and
 
 ### Structure
 
-Like the *Hawk* is a *Magpie* with teeth, so is the *Vulture* a much better armed *Raven* class.
+The *Vulture* uses the same primary hull as the *Raven*, with the internals largely replaced by phaser banks, larger warp drive, and larger warp coils.
 
 The *Vulture* contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
 
@@ -705,11 +718,7 @@ The warp core of the *Vulture* is much more powerful than a ship of this size wo
 
 The cargo hold of the *Vulture* can also hold a *Bumblebee* class shuttle. However it rarely carries one due to mission profiles never needing (relatively) delicate shuttles.
 
-### Deployment
-
-The *Exodus* contains two squadrons of 3 *Vulture* ships each. These are contained in the lower hangars of sections 8 and 9.
-
-The *Vulture*s are used to escort the *Exodus* in flight through troubled space, and patrol the ship from a few AUs away when the ship drops to impulse. The *Vulture* is not used as a first response ship, since the massive warp core of the *Vulture* takes too long to power up from rest. 
+Both the *Raven* and the *Vulture* class are also called as ICP large chassis (scientific/tactical) vessels.
 
 ## Eagle Class
 
@@ -736,9 +745,9 @@ Eagle Class Light Scout
    
 ### Description
 
-The *Eagle* is a bird of prey but it is also a curious bird. Accordingly this class of ships has better defences and offences than a *Magpie*, and better sensors than a *Vulture*.
+The ICP Large chassis was so effective that it was used in two more vessels.
 
-Unlike the other ships on this page, the *Eagle* is not used as a member of the *Exodus* "fleet". The *Eagle* is meant to carry out independent missions, and only uses the *Exodus* for its transwarp engine.
+The *Eagle* is meant to carry out independent missions, and only uses the *Exodus* for its transwarp engine.
 
 ### Structure
 
@@ -748,11 +757,6 @@ Deck 1 contains various labs, dormitories, sickbay and messhall. The front of th
 
 The secondary hull contains the warp core spanning three decks. The rear of the secondary hull contains a shuttlebay which holds two small shuttles.
 
-### Deployment
-
-The *Exodus* can carry upto 4 *Eagle* vessels in the lower hangars of sections 3, 5, 11 and 13. These ships will have independent survey or exploration missions and will use the *Exodus* for its transwarp engine.
-
-If these hangars are empty, they're used to store the *Vulture* class ships, which can get awfully crowded in hangars 7 & 9.
 
 ## Dove Class
 
@@ -783,15 +787,12 @@ Sometimes the *Eager* class is too overpowered for missions that require a Capta
 
 ### Structure
 
-Even though it resembles a starship with its structure of saucer - secondary hull - warp nacelle design, the *Dove* is actually a very large yacht.
+The *Dove* class also uses the ICP large chassis design.
 
 The Saucer section contains the cockpit and main deflector at the front, followed by a circular corridor surrounding a pantry area to exit into the engineering room aft. The outer side of the corridor has 4 luxury rooms, two on either side.
 
 The engineering section contains the main warp core and transporters.
 
-### Deployment
-
-The *Exodus* holds 3 *Dove* class yachts in the lower hangar of section 0.
 
 ## Relative scale of ships
 

@@ -40,6 +40,8 @@ module dip_body2() {
 }
 
 module dip_nacelle_assembly() {
+    translate([-19,0,0.5])
+        util_nacelle_bar(24,5,3,.5);
 
     
     util_mirrored([0,1,0])
