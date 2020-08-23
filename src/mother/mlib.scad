@@ -36,7 +36,7 @@ saucer_up_ext=5;
 saucer_down=20;
 saucer_hangar_height=20;
 saucer_hangar_in=55;
-saucer_segments=16;
+saucer_segments=15;
 saucer_hangar_width=2.56*saucer_width/saucer_segments;
 
 command_width=180;
@@ -240,10 +240,8 @@ module scout(saucer_attached=true) {
     }
 }
 
-
-
 module saucer_minus(command_attached=true, engine_attached=true, scout_attached=true) {
-        for (theta = [0: 1: 12]) {
+        for (theta = [0,6,12]) {
             rotate(6*360/saucer_segments - theta*360/saucer_segments)
             translate([saucer_width/2, 0,saucer_hangar_height/2+2])
             cube([saucer_hangar_in,
