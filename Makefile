@@ -86,41 +86,82 @@ macstls: stl/macs/shuttlepod.stl \
     stl/macs/cutter.stl \
     stl/macs/heavy-runabout.stl \
     stl/macs/hospital.stl \
+    stl/macs/small-pod.stl \
+    stl/macs/fighter.stl \
+    stl/macs/tactical-runabout.stl \
     images/macs/large-warp-harness.png \
     images/macs/disk.png \
     images/macs/extension.png \
     images/macs/habitat.png \
+    images/macs/tactical-harness.png \
     images/macs/small-warp-harness.png \
     stl/macs/freighter.stl
+
+
+stl/macs/fighter.stl: src/macs/macs.scad src/lib/util.scad \
+    src/macs/fighter.scad
+	bin/render.sh \
+	    -i src/macs/fighter.scad \
+	    -o stl/macs/fighter.stl \
+	    -p images/macs/fighter.png \
+	    -t BeforeDawn
+
+stl/macs/small-pod.stl: src/macs/macs.scad src/lib/util.scad \
+    src/macs/small-pod.scad
+	bin/render.sh \
+	    -i src/macs/small-pod.scad \
+	    -o stl/macs/small-pod.stl \
+	    -p images/macs/small-pod.png \
+	    -t BeforeDawn
+
+stl/macs/tactical-runabout.stl: src/macs/macs.scad src/lib/util.scad \
+    src/macs/tactical-runabout.scad
+	bin/render.sh \
+	    -i src/macs/tactical-runabout.scad \
+	    -o stl/macs/tactical-runabout.stl \
+	    -p images/macs/tactical-runabout.png \
+	    -t BeforeDawn
+
+images/macs/tactical-harness.png: src/macs/tactical-harness.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/tactical-harness.scad \
+	    -t BeforeDawn \
+	    -p images/macs/tactical-harness.png
 
 images/macs/large-warp-harness.png: src/macs/large-warp-harness.scad \
     src/lib/util.scad src/macs/macs.scad
 	bin/render.sh \
 	    -i src/macs/large-warp-harness.scad \
+	    -t BeforeDawn \
 	    -p images/macs/large-warp-harness.png
 
 images/macs/disk.png: src/macs/disk.scad \
     src/lib/util.scad src/macs/macs.scad
 	bin/render.sh \
 	    -i src/macs/disk.scad \
+	    -t BeforeDawn \
 	    -p images/macs/disk.png
 
 images/macs/extension.png: src/macs/extension.scad \
     src/lib/util.scad src/macs/macs.scad
 	bin/render.sh \
 	    -i src/macs/extension.scad \
+	    -t BeforeDawn \
 	    -p images/macs/extension.png
 
 images/macs/habitat.png: src/macs/habitat.scad \
     src/lib/util.scad src/macs/macs.scad
 	bin/render.sh \
 	    -i src/macs/habitat.scad \
+	    -t BeforeDawn \
 	    -p images/macs/habitat.png
 
 images/macs/small-warp-harness.png: src/macs/small-warp-harness.scad \
     src/lib/util.scad src/macs/macs.scad
 	bin/render.sh \
 	    -i src/macs/small-warp-harness.scad \
+	    -t BeforeDawn \
 	    -p images/macs/small-warp-harness.png
 
 stl/macs/shuttlepod.stl: src/macs/macs.scad src/macs/shuttlepod.scad \

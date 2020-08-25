@@ -26,11 +26,13 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
    * *Magpie* class runabouts
    * *Hawk* class tactical runabouts
    * *Hornet* class heavy shuttles
+   * *Wasp* class shuttles
    * *Raven* class heavy runabouts
    * *Vulture* class patrol vessels
    * *Eagle* class light scouts
    * *Dragonfly* class warp tugs
    * *Dove* class diplomatic yachts
+   * *Snow Owl* class yachts
    * *Nightingale* class heavy medevac vehicles
    * *Bumblebee* class light shuttles
  * Warp speed:
@@ -73,6 +75,7 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
    * *Eagle* class light scouts
    * *Dove* class diplomatic yachts
    * *Bumblebee* class light shuttles
+   * *Snow Owl* class yachts
  * Warp speed:
    * Cruising: Warp 1.2
    * Maximum: Warp 1.6
@@ -146,8 +149,8 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
    * *Magpie* class runabouts
    * *Hawk* class tactical runabouts
    * *Hornet* class heavy shuttles
+   * *Wasp* class shuttles
    * *Dragonfly* class warp tugs
-   * *Dove* class diplomatic yachts
    * *Bumblebee* class light shuttles
  * Warp speed:
    * Cruising: Warp 6
@@ -221,6 +224,7 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
  * Auxillary Craft:
    * *Bumblebee* class light shuttles
    * *Hornet* class heavy shuttles
+   * *Hawk* class Tactical runabouts
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9.5
