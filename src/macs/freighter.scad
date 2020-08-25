@@ -8,7 +8,7 @@ module macs_freighter() {
     translate([-12,0,5]) macs_extra_room();
     translate([-20,0,5]) macs_extra_room();
     translate([8,0,5]) macs_large_warp();
-    translate([25.25,0,5]) macs_pod();
+    translate([25.25,0,5]) macs_pod_small();
 }
 
 module freighter_main() {

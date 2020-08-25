@@ -27,6 +27,8 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
    * *Hawk* class tactical runabouts
    * *Hornet* class heavy shuttles
    * *Wasp* class shuttles
+   * *Black Widow* class fighters
+   * *Scorpion* class runabouts
    * *Raven* class heavy runabouts
    * *Vulture* class patrol vessels
    * *Eagle* class light scouts
@@ -35,10 +37,11 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
    * *Snow Owl* class yachts
    * *Nightingale* class heavy medevac vehicles
    * *Bumblebee* class light shuttles
+   * *Honeybee* class light shuttlepods
  * Warp speed:
    * Cruising: Warp 6
    * Maximum: Warp 8
-   * Transwarp: ??
+   * Transwarp: TW10
 
 ### Description
 
@@ -117,7 +120,7 @@ Apart from the standard shuttlecraft and runabouts, the primary function of the 
  * Warp speed:
    * Cruising: Warp 8
    * Maximum: Warp 9
-   * Transwarp
+   * Transwarp: TW10
 
 At more than a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
 
@@ -146,8 +149,7 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
    * Maximum (all stations filled): 500
    * Maximum (evacuation limit): 5000
  * Auxillary Craft
-   * *Magpie* class runabouts
-   * *Hawk* class tactical runabouts
+   * *Black Widow* class fighters
    * *Hornet* class heavy shuttles
    * *Wasp* class shuttles
    * *Dragonfly* class warp tugs
@@ -319,6 +321,33 @@ Also in keeping with the modularity aim of MACS, apart from the two seats for pi
 
 The rear half of the shuttle can be configured as seating/bunks (as in the Type 6), dense passenger seating, or additional consoles.
 
+## Honeybee Class
+
+![Small Pod](images/macs/small-pod.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/small-pod.stl)
+
+*Honeybee* class small shuttlepod
+
+### Stats
+
+ * Length: 3.8m
+ * Width: 4.8m
+ * Height: 2.3m
+ * Crew capacity: 2
+ * Speed: 0.7c sublight
+
+### Description
+
+The Honeybee class is the little brother of the Bumblebee class. A smaller warp-less shuttlepod where even the Bumblebee class is overpowered.
+
+The Honeybee class can be used as a cockpit or command module wherever the Bumblebee class can be used in MACs ships.
+
+### Structure
+
+The Honeybee class is approximately the size of a Type 15 shuttlepod and can be used as a replacement for it except where warp travle is required.
+
+The Honeybee class from the inside is essentially just the fron two seats for pilot and copilot and the two alcoves to the rear.
 
 ## Wasp Class
 
@@ -402,7 +431,7 @@ Dragonfly class heavy shuttle/cutter
 
 ### Stats
 
- * Length: 32.5m
+ * Length: 29.9m
  * Width: 26.5m
  * Height: 5.5m
  * Crew Capacity:
@@ -420,7 +449,7 @@ But the most common use is to attach it to one of the MACS cargo section and use
 
 ### Structure
 
-The *Dragonfly* attaches a MACS large warp harness to the *Bumblebee*
+The *Dragonfly* attaches a MACS large warp harness to the *honeybee*
 
 ![Large Warp Harness](images/macs/large-warp-harness.png)
 
@@ -439,7 +468,7 @@ Beetle class heavy cargo shuttle/runabout
 
 ### Stats
 
- * Length: 40.5m
+ * Length: 37.9m
  * Width: 26.5m
  * Height: 6.5m
  * Crew Capacity:
@@ -511,6 +540,39 @@ Even though the *Nightingale* is supposed to just carry patients from affected a
 
 Regarding the ship itself, there's a second MACS *Bumblebee* module attached to the rear of the large warp harness. This can be used as a secondary command module, and given that it has been configured to detach and re-attach to the harness without requiring an engineering team, can also be used as an auxillary vehicle for the *Nightingale* itself.
 
+## Black Widow Class
+
+![Fighter](images/macs/fighter.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/macs/fighter.stl)
+
+*Black Widow* class fighter
+
+### Stats
+
+  * Length: 16.3m
+  * Width: 13.8m
+  * height: 2.4m
+  * Crew Capacity: 2
+  * Warp Speed:
+    * Cruising: Warp 3
+    * Peak: Warp 7
+
+### Description
+
+As the MACs program gained traction in the remote regions of the federation it was starting to become obvious that the MACS vehicles are woefully undefended against most enemies.
+
+To mitigate this, the MACs program came up with a tactical harness which combined a warp core, warp coils, extra rooms, science stations and phaser banks and a micro-torpedo launcher.
+
+### Structure
+
+The *Black Widow* combines a *Honeybee* cockpit with the MACS Tactical harness
+
+![Tactical Harness](images/macs/tactical-harness.png)
+
+The tactical harness adds a type IV phaser backed by two phaser banks. In addition it also adds a micro-torpedo launcher.
+
+Internally it adds a warp core and engineering console, plus two extra rooms that can be configured as anything from living quarters to science stations to extra phaser banks or torpedo stores.
 
 # ICP
 
@@ -524,6 +586,14 @@ The Intermediate Craft Program (ICP) began with the following observations:
 The ICP was started to come up with craft in the 25m to 100m range, which is too large to be a shuttle but too small to be a starship. The ICP designed vehicles should be able to be used as standalone starships or as auxillary vehicles aboard starbases and large starships.
 
 Each design had to come up with a scientific version and a tactical version. The designs were rated primarily on ruggedness, then ease of manufacture.
+
+The stated design aims are as follows:
+
+ * Any design should be rugged, capable of operating upto 5 years without access to a starbase.
+ * Design should be between 20 and 100m in length
+ * Design should be under 20m in height
+ * Design should be used for scientific or tactical usage. Separate designs are also permitted.
+ * Design should accomodate an auxillary vehicle of the size equivalent to at least a *Honeybee* class shuttlepod.
 
 ## Magpie Class
 
@@ -543,7 +613,7 @@ Magpie Class Scientific Heavy Runabout
    * Minimum: 1
    * Typical: 5
    * Maximum: 100
- * Auxillary Craft: *See note below*
+ * Auxillary Craft: *Honeybee* class shuttle
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -630,6 +700,37 @@ The ship is built like a conventional starship, but with the dimensions of a yac
 The primary hull contains the cockpit, bunk beds, and modular observation labs. The secondary hull contains the engine and transporters.
 
 The *Snow Owl* class is also called as ICP Medium Chassis.
+
+## Scorpion Class
+
+![Tactical runabout](images/macs/tactical-runabout.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/macs/tactical-runabout.stl)
+
+*Scorpion* class tactical runabout
+
+### Stats
+
+  * Length: 26.8m
+  * Width: 13.8m
+  * Height: 2.4m
+  * Decks: 1
+  * Crew Capacity:
+    * Minimum: 2
+    * Typical: 5
+    * Maximum: 20
+  * Auxillary Craft:
+    * *Bumblebee* class shuttle - also primary command module
+    * *Honeybee* class shuttlepod - also secondary command module
+  * Warp speed
+    * Cruising: Warp 4
+    * Maximum: Warp 7
+
+### Description
+
+After the success of the *Black Widow* class the MACS program made its own submission to the ICP - the *Scorpion* class tactical runabout.
+
+It's composed of a *Bumblebee* command module, a MACS extension module, a MACS tactical harness and a MACS *Honeybee* secondary command module. Both command modules are separable for use as auxillary vehicles. This makes the *Scorpion* the smallest starfleet vessel capable of Multivector Asault Mode.
  
 ## Raven Class
 
