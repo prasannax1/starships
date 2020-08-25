@@ -1,6 +1,6 @@
 all: stls 
 
-stls: icpstls macstls motherstls combinestls miscstls
+stls: icpstls macstls motherstls miscstls
 
 icpstls: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
@@ -401,30 +401,4 @@ images/mothership/normal-separation.png: src/lib/util.scad \
 	    -p images/mothership/normal-separation.png \
 	    -c "-423.55,0,30.79,90,0,0,4238" \
 	    -t Tomorrow
-
-combinestls: images/combined/scale.png
-
-images/combined/scale.png: src/lib/util.scad \
-    src/mother/mlib.scad \
-    images/mothership/full-separation.png \
-    src/macs/macs.scad \
-    src/macs/shuttle.scad \
-    src/macs/runabout.scad \
-    src/macs/cutter.scad \
-    src/macs/heavy.scad \
-    src/icp/runabout.scad \
-    src/icp/science.scad \
-    src/icp/yacht.scad \
-    src/icp/attack.scad \
-    src/icp/tactical-runabout.scad \
-    src/macs/hospital.scad \
-    src/combined/color.scad \
-    src/combined/scale.scad
-	bin/render.sh \
-	    -i src/combined/scale.scad \
-	    -p images/combined/scale.png \
-	    -s 5760,2160 \
-	    -c "-337.35,0,112.96,90,0,0,3847" \
-	    -t BeforeDawn
-
 

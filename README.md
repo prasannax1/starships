@@ -651,7 +651,7 @@ Hawk Class tactical runabout
    * Minimum: 1
    * Typical: 2
    * Maximum: 50
- * Auxillary Craft: None
+ * Auxillary Craft: *Honeybee* class shuttlepod
  * Warp Speed:
    * Cruising: Warp 5.2
    * Maximum: Warp 8.7
@@ -899,7 +899,4 @@ The Saucer section contains the cockpit and main deflector at the front, followe
 The engineering section contains the main warp core and transporters.
 
 
-## Relative scale of ships
-
-![scale](images/combined/scale.png)
 
