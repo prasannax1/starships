@@ -1,13 +1,16 @@
 all: stls 
 
-stls: icpstls macstls motherstls combinestls miscstls
+stls: icpstls macstls motherstls miscstls
 
 icpstls: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
     stl/icp/runabout.stl \
     stl/icp/tactical-shuttle.stl \
     stl/icp/science.stl \
-    stl/icp/scout.stl 
+    stl/icp/explorer.stl \
+    stl/icp/destroyer.stl \
+    stl/icp/diplomat.stl \
+    stl/icp/yacht.stl 
 
 stl/icp/attack.stl: src/icp/attack.scad \
     src/lib/util.scad \
@@ -18,12 +21,31 @@ stl/icp/attack.stl: src/icp/attack.scad \
 	    -p images/icp/attack.png \
 	    -t Sunset
 
-stl/icp/diplomat.stl: src/icp/diplomatic.scad src/lib/util.scad
+stl/icp/explorer.stl: src/icp/explorer.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
 	bin/render.sh \
-	    -i src/icp/diplomatic.scad \
-	    -o stl/icp/diplomat.stl \
-	    -p images/icp/diplomat.png \
+	    -i src/icp/explorer.scad \
+	    -o stl/icp/explorer.stl \
+	    -p images/icp/explorer.png \
 	    -t Tomorrow
+
+stl/icp/destroyer.stl: src/icp/destroyer.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
+	bin/render.sh \
+	    -i src/icp/destroyer.scad \
+	    -o stl/icp/destroyer.stl \
+	    -p images/icp/destroyer.png \
+	    -t Sunset
+
+stl/icp/yacht.stl: src/icp/yacht.scad src/lib/util.scad \
+    src/icp/yacht-common.scad
+	bin/render.sh \
+	    -i src/icp/yacht.scad \
+	    -o stl/icp/yacht.stl \
+	    -p images/icp/yacht.png \
+	    -t Starnight
 
 stl/icp/runabout.stl: src/icp/runabout.scad src/lib/util.scad
 	bin/render.sh \
@@ -37,7 +59,7 @@ stl/icp/tactical-shuttle.stl: src/icp/tactical-runabout.scad \
 	bin/render.sh \
 	    -i src/icp/tactical-runabout.scad \
 	    -o stl/icp/tactical-shuttle.stl \
-	    -p images/icp/tactical-shutle.png \
+	    -p images/icp/tactical-shuttle.png \
 	    -t Solarized
 
 stl/icp/science.stl: src/icp/science.scad \
@@ -47,16 +69,16 @@ stl/icp/science.stl: src/icp/science.scad \
 	    -i src/icp/science.scad \
 	    -o stl/icp/science.stl \
 	    -p images/icp/science.png \
-	    -t Metallic
+	    -t Nature
 
-stl/icp/scout.stl: src/icp/scout.scad \
+stl/icp/diplomat.stl: src/icp/diplomat.scad \
     src/lib/util.scad \
     src/icp/icp.scad
 	bin/render.sh \
-	    -i src/icp/scout.scad \
-	    -o stl/icp/scout.stl \
-	    -p images/icp/scout.png \
-	    -t "Tomorrow Night"
+	    -i src/icp/diplomat.scad \
+	    -o stl/icp/diplomat.stl \
+	    -p images/icp/diplomat.png \
+	    -t Metallic
 
 macstls: stl/macs/shuttlepod.stl \
     stl/macs/shuttle.stl \
@@ -64,7 +86,83 @@ macstls: stl/macs/shuttlepod.stl \
     stl/macs/cutter.stl \
     stl/macs/heavy-runabout.stl \
     stl/macs/hospital.stl \
+    stl/macs/small-pod.stl \
+    stl/macs/fighter.stl \
+    stl/macs/tactical-runabout.stl \
+    images/macs/large-warp-harness.png \
+    images/macs/disk.png \
+    images/macs/extension.png \
+    images/macs/habitat.png \
+    images/macs/tactical-harness.png \
+    images/macs/small-warp-harness.png \
     stl/macs/freighter.stl
+
+
+stl/macs/fighter.stl: src/macs/macs.scad src/lib/util.scad \
+    src/macs/fighter.scad
+	bin/render.sh \
+	    -i src/macs/fighter.scad \
+	    -o stl/macs/fighter.stl \
+	    -p images/macs/fighter.png \
+	    -t BeforeDawn
+
+stl/macs/small-pod.stl: src/macs/macs.scad src/lib/util.scad \
+    src/macs/small-pod.scad
+	bin/render.sh \
+	    -i src/macs/small-pod.scad \
+	    -o stl/macs/small-pod.stl \
+	    -p images/macs/small-pod.png \
+	    -t BeforeDawn
+
+stl/macs/tactical-runabout.stl: src/macs/macs.scad src/lib/util.scad \
+    src/macs/tactical-runabout.scad
+	bin/render.sh \
+	    -i src/macs/tactical-runabout.scad \
+	    -o stl/macs/tactical-runabout.stl \
+	    -p images/macs/tactical-runabout.png \
+	    -t BeforeDawn
+
+images/macs/tactical-harness.png: src/macs/tactical-harness.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/tactical-harness.scad \
+	    -t BeforeDawn \
+	    -p images/macs/tactical-harness.png
+
+images/macs/large-warp-harness.png: src/macs/large-warp-harness.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/large-warp-harness.scad \
+	    -t BeforeDawn \
+	    -p images/macs/large-warp-harness.png
+
+images/macs/disk.png: src/macs/disk.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/disk.scad \
+	    -t BeforeDawn \
+	    -p images/macs/disk.png
+
+images/macs/extension.png: src/macs/extension.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/extension.scad \
+	    -t BeforeDawn \
+	    -p images/macs/extension.png
+
+images/macs/habitat.png: src/macs/habitat.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/habitat.scad \
+	    -t BeforeDawn \
+	    -p images/macs/habitat.png
+
+images/macs/small-warp-harness.png: src/macs/small-warp-harness.scad \
+    src/lib/util.scad src/macs/macs.scad
+	bin/render.sh \
+	    -i src/macs/small-warp-harness.scad \
+	    -t BeforeDawn \
+	    -p images/macs/small-warp-harness.png
 
 stl/macs/shuttlepod.stl: src/macs/macs.scad src/macs/shuttlepod.scad \
     src/lib/util.scad
@@ -155,14 +253,16 @@ motherstls: stl/mother/saucer.stl \
     stl/mother/transwarp.stl \
     stl/mother/escort.stl \
     stl/mother/scout.stl \
+    stl/mother/command.stl \
     stl/mother/main.stl \
     stl/mother/transwarp-full.stl \
-    stl/mother/transwarp-escort.stl \
-    stl/mother/battle-separation.stl \
-    stl/mother/scout-separation.stl \
-    stl/mother/escort-separation.stl \
-    stl/mother/full-separation.stl \
-    stl/mother/normal-separation.stl 
+    images/mothership/battle-separation.png \
+    images/mothership/scout-separation.png \
+    stl/mother/aux-separation.stl \
+    images/mothership/command-separation.png \
+    images/mothership/escort-separation.png \
+    images/mothership/full-separation.png \
+    images/mothership/normal-separation.png 
 
 stl/mother/transwarp.stl: src/lib/util.scad \
     src/mother/mlib.scad \
@@ -173,22 +273,21 @@ stl/mother/transwarp.stl: src/lib/util.scad \
 	    -p images/mothership/transwarp.png \
 	    -t Tomorrow
 
-stl/mother/escort-separation.stl: src/lib/util.scad \
+images/mothership/escort-separation.png: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/escort-separation.scad
 	bin/render.sh \
 	    -i src/mother/escort-separation.scad \
-	    -o stl/mother/escort-separation.stl \
 	    -p images/mothership/escort-separation.png \
-	    -c "49.20,-27.35,15.38,97.70,0,185.3,3086" \
+	    -c "-423.55,0,18.72,90,0,0,3064" \
 	    -t Tomorrow
 
 stl/mother/transwarp-full.stl: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/transwarp-full.scad
 	bin/render.sh \
-	    -i src/mother/transwarp-full.scad \
 	    -o stl/mother/transwarp-full.stl \
+	    -i src/mother/transwarp-full.scad \
 	    -p images/mothership/transwarp-full.png \
 	    -t Tomorrow
 
@@ -199,7 +298,7 @@ stl/mother/transwarp-escort.stl: src/lib/util.scad \
 	    -i src/mother/transwarp-escort.scad \
 	    -o stl/mother/transwarp-escort.stl \
 	    -p images/mothership/transwarp-escort.png \
-	    -c "-144.39,0.28,27.82,139.7,0,43.2,2198" \
+	    -c "-224.52,0,2.65,136.9,0,41.8,2173" \
 	    -t Tomorrow
 
 stl/mother/scout.stl: src/lib/util.scad \
@@ -211,24 +310,50 @@ stl/mother/scout.stl: src/lib/util.scad \
 	    -p images/mothership/scout.png \
 	    -t Tomorrow
 
-stl/mother/battle-separation.stl: src/lib/util.scad \
+stl/mother/command.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/command.scad
+	bin/render.sh \
+	    -i src/mother/command.scad \
+	    -o stl/mother/command.stl \
+	    -p images/mothership/command.png \
+	    -t Tomorrow
+
+images/mothership/battle-separation.png: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/battle-separation.scad
 	bin/render.sh \
 	    -i src/mother/battle-separation.scad \
-	    -o stl/mother/battle-separation.stl \
 	    -p images/mothership/battle-separation.png \
-	    -c "-35.83,29.84,58.27,90,0,0,3787" \
+	    -c "-423.55,0,30.79,90,0,0,3814" \
 	    -t Tomorrow
 
-stl/mother/scout-separation.stl: src/lib/util.scad \
+images/mothership/scout-separation.png: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/scout-separation.scad
 	bin/render.sh \
 	    -i src/mother/scout-separation.scad \
-	    -o stl/mother/scout-separation.stl \
 	    -p images/mothership/scout-separation.png \
-	    -c "-35.83,29.84,58.27,90,0,0,3787" \
+	    -c "-119.74,-63.73,-19.55,96.3,0,178.3,1646" \
+	    -t Tomorrow
+
+stl/mother/aux-separation.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/aux-separation.scad
+	bin/render.sh \
+	    -i src/mother/aux-separation.scad \
+	    -o stl/mother/aux-separation.stl 
+#	    -p images/mothership/aux-separation.png \
+#	    -c "-423.55,0,68.29,90,0,0,3087" \
+#	    -t Tomorrow
+
+images/mothership/command-separation.png: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/command-separation.scad
+	bin/render.sh \
+	    -i src/mother/command-separation.scad \
+	    -p images/mothership/command-separation.png \
+	    -c "-423.55,0,80.79,77.4,0,7.7,3099" \
 	    -t Tomorrow
 
 stl/mother/saucer.stl: src/lib/util.scad \
@@ -247,7 +372,7 @@ stl/mother/escort.stl: src/lib/util.scad \
 	    -i src/mother/escort.scad \
 	    -o stl/mother/escort.stl \
 	    -p images/mothership/escort.png \
-	    -c "-9.95,30.52,-1.32,127.8,0,52.3,500" \
+	    -c "-0.95,-5.9,2.74,139.7,0,48.1,810" \
 	    -t Tomorrow
 
 stl/mother/main.stl: src/lib/util.scad \
@@ -259,50 +384,21 @@ stl/mother/main.stl: src/lib/util.scad \
 	    -p images/mothership/main.png \
 	    -t Tomorrow
 
-stl/mother/full-separation.stl: src/lib/util.scad \
+images/mothership/full-separation.png: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/full-separation.scad
 	bin/render.sh \
 	    -i src/mother/full-separation.scad \
-	    -o stl/mother/full-separation.stl \
 	    -p images/mothership/full-separation.png \
-	    -c "-35.83,29.84,58.27,90,0,0,3787" \
+	    -c "-423.55,0,68.72,90,0,0,4289" \
 	    -t Tomorrow
 
-stl/mother/normal-separation.stl: src/lib/util.scad \
+images/mothership/normal-separation.png: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/normal-separation.scad 
 	bin/render.sh \
 	    -i src/mother/normal-separation.scad \
-	    -o stl/mother/normal-separation.stl \
 	    -p images/mothership/normal-separation.png \
-	    -c "-35.83,29.84,58.27,90,0,0,3787" \
+	    -c "-423.55,0,30.79,90,0,0,4238" \
 	    -t Tomorrow
-
-combinestls: stl/combined/scale.stl
-
-stl/combined/scale.stl: src/lib/util.scad \
-    src/mother/mlib.scad \
-    stl/mother/full-separation.stl \
-    src/macs/macs.scad \
-    src/macs/shuttle.scad \
-    src/macs/runabout.scad \
-    src/macs/cutter.scad \
-    src/macs/heavy.scad \
-    src/icp/runabout.scad \
-    src/icp/science.scad \
-    src/icp/diplomatic.scad \
-    src/icp/attack.scad \
-    src/icp/tactical-runabout.scad \
-    src/macs/hospital.scad \
-    src/combined/color.scad \
-    src/combined/scale.scad
-	bin/render.sh \
-	    -i src/combined/scale.scad \
-	    -o stl/combined/scale.stl \
-	    -p images/combined/scale.png \
-	    -s 5760,2160 \
-	    -c "26.20,0,235.23,90,0,0,2500" \
-	    -t BeforeDawn
-
 

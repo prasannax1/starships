@@ -8,7 +8,7 @@ module model2() {
     util_mirrored([0,1,0]) 
         translate([-0,11,4])
             rotate([60,0,0])
-                util_nacelle(40,8,14,curved=true,up=false);
+                util_nacelle(42,8,14,curved=true,up=false);
 
 }
 

@@ -168,10 +168,10 @@ module util_q_sphere(rad, quadrant, faces) {
     difference() {
         sphere(rad, $fn=faces);
 
-        translate([x_sign*-1.1*rad + .01,0,0])
+        translate([x_sign*(-1.1*rad - .01),0,0])
         cube(2.2*rad, center=true);
 
-        translate([0,0,z_sign*-1.1*rad + .01])
+        translate([0,0,z_sign*(-1.1*rad - .01)])
         cube(2.2*rad, center=true);
     }
 }

@@ -1,6 +1,13 @@
 use <../lib/util.scad>;
 
-
+module macs_pod_small() {
+    difference() {
+        scale([.5,.4,.35])
+            rotate(90)
+                sphere(6, $fn=6);
+        macs_pod_diff();
+    }
+}
 
 module macs_pod_diff() {
     translate([0,0,-(6+.5)])
@@ -68,6 +75,34 @@ module macs_extra_room() {
             cube(12, center=true);
     }
 }
+
+module macs_tactical_warp() {
+    translate([0,0,0])
+    macs_corridor(8);
+
+    difference() {
+        translate([0,0,-.5+1.2])
+        cylinder(h=2.4,r1=8,r2=5,center=true,$fn=3);
+
+        translate([4+3,0,0])
+        cube(8, center=true);
+    }
+
+    util_mirrored([0,1,0])
+    translate([-1.5,4,-.5+.6])
+    scale([2.5,1,1])
+    difference() {
+        rotate(45/2)
+        cylinder(h=1.2,r1=3,r2=2,center=true, $fn=8);
+        
+        translate([0,-3.5,0])
+        rotate([-20,0,0])
+        cube(7,center=true);
+    }
+}
+
+
+
 
 
 module macs_corridor(length) {
