@@ -2,6 +2,69 @@ all: stls
 
 stls: icpstls macstls motherstls miscstls
 
+combined: stl/combined/command-shuttles.stl \
+    stl/combined/scout-shuttles.stl \
+    stl/combined/escort-shuttles.stl \
+    stl/combined/saucer-ships.stl \
+    stl/combined/transwarp-ships.stl
+
+stl/combined/command-shuttles.stl: src/combined/command-shuttles.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/macs/fighter.scad
+	bin/render.sh \
+	    -i src/combined/command-shuttles.scad \
+	    -o stl/combined/command-shuttles.stl \
+
+stl/combined/scout-shuttles.stl: src/combined/scout-shuttles.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad 
+	bin/render.sh \
+	    -i src/combined/scout-shuttles.scad \
+	    -o stl/combined/scout-shuttles.stl \
+
+stl/combined/escort-shuttles.stl: src/combined/escort-shuttles.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/macs/fighter.scad \
+    src/icp/tactical-runabout.scad
+	bin/render.sh \
+	    -i src/combined/escort-shuttles.scad \
+	    -o stl/combined/escort-shuttles.stl \
+
+stl/combined/saucer-ships.stl: src/combined/saucer-ships.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/icp/runabout.scad \
+    src/icp/tactical-runabout.scad \
+    src/icp/science.scad \
+    src/icp/explorer.scad \
+    src/icp/yacht.scad \
+    src/icp/diplomat.scad
+	bin/render.sh \
+	    -i src/combined/saucer-ships.scad \
+	    -o stl/combined/saucer-ships.stl \
+
+stl/combined/transwarp-ships.stl: src/combined/transwarp-ships.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/macs/fighter.scad \
+    src/icp/attack.scad \
+    src/icp/tactical-runabout.scad
+	bin/render.sh \
+	    -i src/combined/transwarp-ships.scad \
+	    -o stl/combined/transwarp-ships.stl \
+
 icpstls: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
     stl/icp/runabout.stl \
