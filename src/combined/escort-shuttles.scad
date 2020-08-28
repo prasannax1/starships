@@ -6,17 +6,20 @@ use <../lib/util.scad>;
 use <../icp/tactical-runabout.scad>;
 use <multilib.scad>;
 
+module escort_shuttles() {
+    color("SlateGray")
+    mvm_escort();
 
-color("SlateGray")
-mvm_escort();
+    color("IndianRed")
+    translate([140,0,5])
+    tactical();
 
-color("IndianRed")
-translate([140,0,5])
-tactical();
+    color("Chocolate")
+    util_mirrored([0,1,0])
+    repeat(2,tv=[0,18,0])
+    translate([10,9,5])
+    rotate(180)
+    macs_fighter();
+}
 
-color("Chocolate")
-util_mirrored([0,1,0])
-repeat(2,tv=[0,18,0])
-translate([10,9,5])
-rotate(180)
-macs_fighter();
+escort_shuttles();
