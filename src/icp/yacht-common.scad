@@ -30,7 +30,18 @@ module dip_body() {
                     cylinder(12,4,4, center=true);
         }
     }
+    
+    difference() {
+        translate([-9,0,2])
+        util_ovoid(12.5,12.5,12,3.2,1);
+        
+        translate([-30,0,0])
+        rotate([0,15,0])
+        cube(25,center=true);
+    }
 }
+
+dip_body();
 
 module dip_body2() {
     intersection() {

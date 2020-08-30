@@ -47,6 +47,12 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
 The *Exodus Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
 
+The *Exodus Class* is enormous, at about a mile long, it's gigantic compared with even regular large ships.
+
+##### Comparison with known ships
+
+![Standard Comparison](images/scale/scale-standard.png)
+
 ### Structure
 
 The *Exodus* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Exodus. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
@@ -86,6 +92,10 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
    
 At 750m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the primary hull of the *Photon* class fits snugly.
 
+##### Comparison with Galaxy Class
+
+![Saucer Comparison](images/scale/scale-saucer.png)
+
 6 decks in the widest part of the saucer form the primary hangar of the *Aviary* class which runs all the way through from fore to aft. There are 3 exits to the hangar, one in the front and two in the back, each 20m tall and 120m wide.
 
 Apart from the standard shuttlecraft and runabouts, the primary function of the *aviary* class is to carry a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
@@ -124,6 +134,10 @@ Apart from the standard shuttlecraft and runabouts, the primary function of the 
 
 At more than a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
 
+##### Comparison with Sovereign Class
+
+![Transwarp Comparison](images/scale/scale-transwarp.png)
+
 In contrast with the *Aviary* class, the *Mjolnir* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
 
 The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Mjolnir* is meant to the the testbed of experimental propulsion.
@@ -159,6 +173,10 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
    * Maximum: Warp 9.7
 
 Ostensibly the *Photon* class is just the command section of the *Exodus* assembly. But The *Photon* class is a heavy cruiser comparable to the Excelsior in size and function.
+
+##### Comparison with Excelsior
+
+![Command comparison](images/scale/scale-command.png)
 
 The *Photon* class has a variable geometry structure - The saucer section rises up by about 20m to allow the Photon to slide back from it's snug harness on top of the Aviary.
 
@@ -198,6 +216,10 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
 
 The *Eager* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Exodus* but it's a full fledged general purpose light cruiser.
 
+##### Comparison with Constitution class
+
+![Constitution comparison](images/scale/scale-scout.png)
+
 At roughly the same size as a *Nova* class, the *Eager* class can be used as an exploratory vessel, advanced scout, or as a Captain's yacht for diplomatic fucntions.
 
 ##### Image showing launch of Eager class from Exodus
@@ -234,6 +256,10 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
 Under the secondary hull/*Mjolnir* class lies the Bat class which is a dedicated escort vessel for the *Exodus*.
 
 But at 400m long, it's a full size destroyer comparable to the *Prometheus* class
+
+##### Comaprison with Excelsior
+
+![EScort comparison](images/scale/scale-escort.png)
 
 ##### Image showing launch of Bat class from Exodus
 

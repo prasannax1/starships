@@ -12,4 +12,4 @@ use <galaxy.scad>;
 render()
 mvm_saucer();
 
-translate([0,0,200]) galaxy();
+translate([0,0,300]) galaxy();

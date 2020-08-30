@@ -6,7 +6,32 @@ combined: stl/combined/command-shuttles.stl \
     stl/combined/scout-shuttles.stl \
     stl/combined/escort-shuttles.stl \
     stl/combined/saucer-ships.stl \
+    stl/combined/icp-shuttles.stl \
     stl/combined/transwarp-ships.stl
+
+combined_all: stl/combined/mother-ships.stl \
+    stl/combined/just-ships.stl \
+    combined
+
+stl/combined/just-ships.stl: src/combined/just-ships.scad \
+    src/combined/command-shuttles.scad \
+    src/combined/scout-shuttles.scad \
+    src/combined/escort-shuttles.scad \
+    src/combined/saucer-ships.scad \
+    src/combined/transwarp-ships.scad
+	bin/render.sh \
+	    -i src/combined/just-ships.scad \
+	    -o stl/combined/just-ships.stl
+
+stl/combined/mother-ships.stl: src/combined/mother-ships.scad \
+    src/combined/command-shuttles.scad \
+    src/combined/scout-shuttles.scad \
+    src/combined/escort-shuttles.scad \
+    src/combined/saucer-ships.scad \
+    src/combined/transwarp-ships.scad
+	bin/render.sh \
+	    -i src/combined/mother-ships.scad \
+	    -o stl/combined/mother-ships.stl
 
 stl/combined/command-shuttles.stl: src/combined/command-shuttles.scad \
     src/lib/util.scad \
@@ -52,6 +77,20 @@ stl/combined/saucer-ships.stl: src/combined/saucer-ships.scad \
 	bin/render.sh \
 	    -i src/combined/saucer-ships.scad \
 	    -o stl/combined/saucer-ships.stl \
+
+stl/combined/icp-shuttles.stl: src/combined/icp-shuttles.scad \
+    src/lib/util.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/icp/runabout.scad \
+    src/icp/tactical-runabout.scad \
+    src/icp/science.scad \
+    src/icp/explorer.scad \
+    src/icp/yacht.scad \
+    src/icp/diplomat.scad
+	bin/render.sh \
+	    -i src/combined/icp-shuttles.scad \
+	    -o stl/combined/icp-shuttles.stl \
 
 stl/combined/transwarp-ships.stl: src/combined/transwarp-ships.scad \
     src/lib/util.scad \

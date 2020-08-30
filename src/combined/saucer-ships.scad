@@ -12,10 +12,12 @@ use <../macs/runabout.scad>;
 use <../icp/tactical-runabout.scad>;
 use <multilib.scad>;
 
-module saucer_ships() {
-    color("SlateGray")
-    render()
-    mvm_saucer();
+module saucer_ships(draw_ship=true) {
+    if (draw_ship==true) {
+        color("SlateGray")
+        render()
+        mvm_saucer();
+    }
 
     //color("Firebrick")
     ////util_mirrored([0,1,0])

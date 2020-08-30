@@ -4,9 +4,11 @@ use <../macs/shuttle.scad>;
 use <../lib/util.scad>;
 use <multilib.scad>;
 
-module scout_shuttles() {
-    color("SlateGray")
-    mvm_scout();
+module scout_shuttles(draw_ship=true) {
+    if (draw_ship==true) {
+        color("SlateGray")
+        mvm_scout();
+    }
 
     color("Gold") {
         util_mirrored([0,1,0])

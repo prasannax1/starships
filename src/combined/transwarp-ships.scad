@@ -7,9 +7,11 @@ use <../icp/tactical-runabout.scad>;
 use <../icp/attack.scad>;
 use <multilib.scad>;
 
-module transwarp_ships() {
-    color("SlateGray")
-    mvm_transwarp();
+module transwarp_ships(draw_ship=true) {
+    if (draw_ship == true) {
+        color("SlateGray")
+        mvm_transwarp();
+    }
 
     color("FireBrick")
     util_mirrored([0,1,0])

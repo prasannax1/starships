@@ -5,10 +5,12 @@ use <../macs/shuttle.scad>;
 use <../lib/util.scad>;
 use <multilib.scad>;
 
-module command_shuttles() {
-    color("SlateGray")
-    mvm_command();
-
+module command_shuttles(draw_ship=true) {
+    if (draw_ship ==true) {
+        color("SlateGray")
+        mvm_command();
+    }
+    
     color("Chocolate")
     util_mirrored([0,1,0])
     repeat(3, tv=[18,0,0])
