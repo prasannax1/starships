@@ -1,8 +1,111 @@
-all: stls 
+all: 
+	$(info no target for all)
 
-stls: icpstls macstls motherstls miscstls
+stls: icp macs mother misc
 
-icpstls: stl/icp/attack.stl \
+combined: stl/combined/command-shuttles.stl \
+    stl/combined/scout-shuttles.stl \
+    stl/combined/escort-shuttles.stl \
+    stl/combined/saucer-ships.stl \
+    stl/combined/icp-shuttles.stl \
+    stl/combined/transwarp-ships.stl
+
+combined_all: stl/combined/mother-ships.stl \
+    stl/combined/just-ships.stl \
+    combined
+
+stl/combined/just-ships.stl: src/combined/just-ships.scad \
+    src/combined/command-shuttles.scad \
+    src/combined/scout-shuttles.scad \
+    src/combined/escort-shuttles.scad \
+    src/combined/saucer-ships.scad \
+    src/combined/transwarp-ships.scad
+	bin/render.sh \
+	    -i src/combined/just-ships.scad \
+	    -o stl/combined/just-ships.stl
+
+stl/combined/mother-ships.stl: src/combined/mother-ships.scad \
+    src/combined/command-shuttles.scad \
+    src/combined/scout-shuttles.scad \
+    src/combined/escort-shuttles.scad \
+    src/combined/saucer-ships.scad \
+    src/combined/transwarp-ships.scad
+	bin/render.sh \
+	    -i src/combined/mother-ships.scad \
+	    -o stl/combined/mother-ships.stl
+
+stl/combined/command-shuttles.stl: src/combined/command-shuttles.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/macs/fighter.scad
+	bin/render.sh \
+	    -i src/combined/command-shuttles.scad \
+	    -o stl/combined/command-shuttles.stl \
+
+stl/combined/scout-shuttles.stl: src/combined/scout-shuttles.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad 
+	bin/render.sh \
+	    -i src/combined/scout-shuttles.scad \
+	    -o stl/combined/scout-shuttles.stl \
+
+stl/combined/escort-shuttles.stl: src/combined/escort-shuttles.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/macs/fighter.scad \
+    src/icp/tactical-runabout.scad
+	bin/render.sh \
+	    -i src/combined/escort-shuttles.scad \
+	    -o stl/combined/escort-shuttles.stl \
+
+stl/combined/saucer-ships.stl: src/combined/saucer-ships.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/icp/runabout.scad \
+    src/icp/tactical-runabout.scad \
+    src/icp/science.scad \
+    src/icp/explorer.scad \
+    src/icp/yacht.scad \
+    src/icp/diplomat.scad
+	bin/render.sh \
+	    -i src/combined/saucer-ships.scad \
+	    -o stl/combined/saucer-ships.stl \
+
+stl/combined/icp-shuttles.stl: src/combined/icp-shuttles.scad \
+    src/lib/util.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/icp/runabout.scad \
+    src/icp/tactical-runabout.scad \
+    src/icp/science.scad \
+    src/icp/explorer.scad \
+    src/icp/yacht.scad \
+    src/icp/diplomat.scad
+	bin/render.sh \
+	    -i src/combined/icp-shuttles.scad \
+	    -o stl/combined/icp-shuttles.stl \
+
+stl/combined/transwarp-ships.stl: src/combined/transwarp-ships.scad \
+    src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/macs/macs.scad \
+    src/combined/multilib.scad \
+    src/macs/fighter.scad \
+    src/icp/attack.scad \
+    src/icp/tactical-runabout.scad
+	bin/render.sh \
+	    -i src/combined/transwarp-ships.scad \
+	    -o stl/combined/transwarp-ships.stl \
+
+icp: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
     stl/icp/runabout.stl \
     stl/icp/tactical-shuttle.stl \
@@ -80,7 +183,7 @@ stl/icp/diplomat.stl: src/icp/diplomat.scad \
 	    -p images/icp/diplomat.png \
 	    -t Metallic
 
-macstls: stl/macs/shuttlepod.stl \
+macs: stl/macs/shuttlepod.stl \
     stl/macs/shuttle.stl \
     stl/macs/small-runabout.stl \
     stl/macs/cutter.stl \
@@ -220,7 +323,7 @@ stl/macs/freighter.stl: src/macs/macs.scad src/lib/util.scad \
 	    -p images/macs/freighter.png \
 	    -t Nature
 
-miscstls: stl/misc/cruiser.stl \
+misc: stl/misc/cruiser.stl \
     stl/misc/cruiser2.stl \
     stl/misc/cruiser3.stl
 
@@ -249,7 +352,7 @@ stl/misc/cruiser3.stl: src/lib/util.scad src/misc/cruiser3.scad
 	    -t Solarized
 
 
-motherstls: stl/mother/saucer.stl \
+mother: stl/mother/saucer.stl \
     stl/mother/transwarp.stl \
     stl/mother/escort.stl \
     stl/mother/scout.stl \

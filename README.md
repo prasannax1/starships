@@ -47,6 +47,9 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
 The *Exodus Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
 
+The *Exodus Class* is enormous, at about a mile long, it's gigantic compared with even regular large ships.
+
+
 ### Structure
 
 The *Exodus* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Exodus. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
@@ -85,6 +88,7 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
 
    
 At 750m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the primary hull of the *Photon* class fits snugly.
+
 
 6 decks in the widest part of the saucer form the primary hangar of the *Aviary* class which runs all the way through from fore to aft. There are 3 exits to the hangar, one in the front and two in the back, each 20m tall and 120m wide.
 
@@ -899,4 +903,60 @@ The Saucer section contains the cockpit and main deflector at the front, followe
 The engineering section contains the main warp core and transporters.
 
 
+## Scale of ships
 
+At almost a mile long the *Exodus* class is in a class of its own, even compared with other "large" ships:
+
+
+##### Comparison with known ships
+
+![Standard Comparison](images/scale/scale-standard.png)
+
+##### Comparison with Galaxy Class
+
+![Saucer Comparison](images/scale/scale-saucer.png)
+
+##### Comparison with Sovereign Class
+
+![Transwarp Comparison](images/scale/scale-transwarp.png)
+
+##### Comparison with Excelsior
+
+![Command comparison](images/scale/scale-command.png)
+
+##### Comparison with Constitution class
+
+![Constitution comparison](images/scale/scale-scout.png)
+
+##### Comparison with Excelsior
+
+![EScort comparison](images/scale/scale-escort.png)
+
+
+The *Exodus* looks even more gigantic compared with the auxillary ships it carries
+
+##### All auxillary ships
+
+![Mother Ships](images/combined/scale.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/combined/mother-ships.stl)
+
+##### Auxillary ships in Photon class
+
+![Command Ships](images/combined/command.png)
+
+##### Auxillary ships in Eager Class
+
+![Scout ships](images/combined/scout.png)
+
+##### Auxillary ships in the Bat Class
+
+![Escort Ships](images/combined/escort.png)
+
+##### Auxillary ships in the Aviary Class
+
+![Suacer Ships](images/combined/saucer.png)
+
+##### Auxillary ships in the Mjolnir class
+
+![Transarp SHips](images/combined/transwarp.png)
