@@ -690,7 +690,7 @@ Snow Owl Class Yacht
    * Minimum: 2
    * Typical: 4
    * Maximum: 50
- * Auxillary Craft: None
+ * Auxillary Craft: *Honeybee* class shuttlepod
  * Warp Speed:
    * Cruising: Warp 5.2
    * Maximum: Warp 8.7
