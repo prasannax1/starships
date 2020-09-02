@@ -1,6 +1,7 @@
-all: stls 
+all: 
+	$(info no target for all)
 
-stls: icpstls macstls motherstls miscstls
+stls: icp macs mother misc
 
 combined: stl/combined/command-shuttles.stl \
     stl/combined/scout-shuttles.stl \
@@ -104,7 +105,7 @@ stl/combined/transwarp-ships.stl: src/combined/transwarp-ships.scad \
 	    -i src/combined/transwarp-ships.scad \
 	    -o stl/combined/transwarp-ships.stl \
 
-icpstls: stl/icp/attack.stl \
+icp: stl/icp/attack.stl \
     stl/icp/diplomat.stl \
     stl/icp/runabout.stl \
     stl/icp/tactical-shuttle.stl \
@@ -182,7 +183,7 @@ stl/icp/diplomat.stl: src/icp/diplomat.scad \
 	    -p images/icp/diplomat.png \
 	    -t Metallic
 
-macstls: stl/macs/shuttlepod.stl \
+macs: stl/macs/shuttlepod.stl \
     stl/macs/shuttle.stl \
     stl/macs/small-runabout.stl \
     stl/macs/cutter.stl \
@@ -322,7 +323,7 @@ stl/macs/freighter.stl: src/macs/macs.scad src/lib/util.scad \
 	    -p images/macs/freighter.png \
 	    -t Nature
 
-miscstls: stl/misc/cruiser.stl \
+misc: stl/misc/cruiser.stl \
     stl/misc/cruiser2.stl \
     stl/misc/cruiser3.stl
 
@@ -351,7 +352,7 @@ stl/misc/cruiser3.stl: src/lib/util.scad src/misc/cruiser3.scad
 	    -t Solarized
 
 
-motherstls: stl/mother/saucer.stl \
+mother: stl/mother/saucer.stl \
     stl/mother/transwarp.stl \
     stl/mother/escort.stl \
     stl/mother/scout.stl \

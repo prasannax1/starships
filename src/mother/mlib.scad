@@ -405,7 +405,6 @@ module command_disk() {
         util_ovoid(command_bridge_width/2, command_bridge_width/2, command_bridge_width, command_bridge_height, command_bridge_height, faces=7);
 }
 
-
 module command(saucer_attached=true, saucer_raised=false,engine_attached=true) {
     
     if (saucer_raised == true) {
@@ -442,7 +441,7 @@ module command(saucer_attached=true, saucer_raised=false,engine_attached=true) {
 
         translate([0,0,command_width]) cube(command_width*2,center=true);
         
-        if (saucer_attached==false) {
+        if (saucer_raised==true) {
             translate([command_width/2+command_engine_width,0,-command_height/4])
             scale([1,1,1.2])
             cylinder(h=command_height/2,d1=command_width-10,d2=command_width, center=true);
