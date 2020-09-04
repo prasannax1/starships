@@ -6,9 +6,9 @@ Other files not included in source code.
 */
 
 use <../mother/mlib.scad>;
-use <excelsior.scad>;
+use <constitution.scad>;
 
 
 mvm_escort();
 
-translate([0,0,120]) excelsior();
+translate([100,0,120]) constitution();

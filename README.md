@@ -14,8 +14,8 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
  * Length: 1595m
  * Width: 746m
- * Height: 245m
- * Decks: 57
+ * Height: 312m
+ * Decks: 56
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
@@ -66,8 +66,8 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
 
  * Length: 746m
  * Width: 746m
- * Height: 90m
- * Decks: 27
+ * Height: 95m
+ * Decks: 28
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 50
@@ -105,8 +105,8 @@ Apart from the standard shuttlecraft and runabouts, the primary function of the 
 ##### Stats
 
  * Length: 1147m
- * Width: 669m
- * Height: 205m
+ * Width: 649m
+ * Height: 219m
  * Decks: 40
  * Crew Capacity:
    * Minimum (skeleton): 5
@@ -184,9 +184,9 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
  
 #### Stats
 
- * Length: 180m
+ * Length: 206m
  * Width: 100m
- * Height: 36m 
+ * Height: 35m 
  * Decks: 9
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -219,10 +219,10 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
 
 #### stats
 
- * Length: 400m
- * Width: 167m
- * Height: 30m
- * Decks: 9
+ * Length: 279m
+ * Width: 166m
+ * Height: 27m
+ * Decks: 8
  * Crew Capacity:
    * Minimum: 5
    * Typical: 20
@@ -928,7 +928,7 @@ At almost a mile long the *Exodus* class is in a class of its own, even compared
 
 ![Constitution comparison](images/scale/scale-scout.png)
 
-##### Comparison with Excelsior
+##### Comparison with Constitution Class
 
 ![EScort comparison](images/scale/scale-escort.png)
 

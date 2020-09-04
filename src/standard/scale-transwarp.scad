@@ -11,4 +11,4 @@ use <sovereign.scad>;
 
 mvm_transwarp();
 
-translate([0,0,200]) sovereign();
+translate([0,0,250]) sovereign();
