@@ -142,8 +142,7 @@ stl/icp/destroyer.stl: src/icp/destroyer.scad \
 	    -p images/icp/destroyer.png \
 	    -t Sunset
 
-stl/icp/yacht.stl: src/icp/yacht.scad src/lib/util.scad \
-    src/icp/yacht-common.scad
+stl/icp/yacht.stl: src/icp/yacht.scad src/lib/util.scad 
 	bin/render.sh \
 	    -i src/icp/yacht.scad \
 	    -o stl/icp/yacht.stl \
