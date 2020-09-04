@@ -14,7 +14,7 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
  * Length: 1595m
  * Width: 746m
- * Height: 312m
+ * Height: 246m
  * Decks: 56
  * Crew Capacity:
    * Minimum (skeleton): 10
