@@ -32,8 +32,8 @@ saucer_width=750;
 saucer_front=750/2;
 saucer_back=750/2;
 saucer_up=70;
-saucer_up_ext=5;
-saucer_down=10;
+saucer_up_ext=6.5;
+saucer_down=7.5;
 saucer_down2=25;
 saucer_down2_ext=7.5;
 saucer_2_width=300;
@@ -79,7 +79,7 @@ scout_down=3;
 scout_body_up=10;
 scout_body_down=15;
 scout_body_front=18;
-scout_body_width=35;
+scout_body_width=32;
 scout_body_back=110;
 
 separate_length=500;
@@ -93,14 +93,18 @@ module saucer_plus() {
                     saucer_width,
                     saucer_up+saucer_up_ext,
                     saucer_down);
-            
+            difference() {
             util_ovoid(saucer_2_width/2, saucer_2_width/2,
                 saucer_2_width, 5, saucer_down2+saucer_down2_ext);
+                
+                translate([-saucer_width/2,0,0])
+                engine_front_part();
+            }
 
             intersection() {
                 translate([0,0,0])
                 scale([1,1,1])
-                util_nacelle(saucer_back*1.3,saucer_width*.5,
+                util_nacelle(saucer_back*1.3,saucer_width*.55,
                     (2*saucer_up+saucer_up_ext), curved=true);
                     
                 cylinder(r=saucer_front, h=saucer_up*4, center=true);
@@ -116,23 +120,37 @@ module saucer_plus() {
     }
 }
 
+module engine_front_part() {
+    hull() {
+        util_ovoid(15,15,engine_width, engine_up,engine_down);
+    
+        translate([saucer_width/2,0,0])
+        util_ovoid(40,40,80,10,engine_down);
+
+    }
+}
 
 module engine_main(saucer_attached=true, escort_attached=true) {
     difference() {
-        util_ovoid(engine_front, engine_back, engine_width,
+        
+        union() {
+            util_ovoid(5, engine_back, engine_width,
             engine_up, engine_down);
+            
+            engine_front_part();
+        }
         
 
-            translate([0,0,-saucer_width/2-engine_down+engine_down_diff])
-            cube(saucer_width,center=true);
+        translate([0,0,-saucer_width/2-engine_down+engine_down_diff])
+        cube(saucer_width,center=true);
             
             
         
         translate([0,0,-saucer_width/2-engine_down+engine_down_diff-escort_down])
         cube(saucer_width,center=true);
      
-        translate([engine_front, 0, -engine_down+engine_down_diff])
-        scale([(engine_front-escort_front)/(engine_down-engine_down_diff), 1,1])
+        translate([saucer_width/2, 0, -engine_down+engine_down_diff-3.3])
+        scale([(saucer_width/2-escort_front)/(engine_down-engine_down_diff), 1,1])
         rotate([90,0,0])
         cylinder(h=engine_width, r=(engine_down-engine_down_diff),
             center=true);
@@ -146,22 +164,22 @@ module engine_main(saucer_attached=true, escort_attached=true) {
         rotate([0,30,0])
         cube(engine_width, center=true);
         
-        if (saucer_attached == false) {
-            translate([saucer_back,0,engine_up/2])
-            cylinder(r=saucer_front, h=engine_up, center=true);
-        }
+//        if (saucer_attached == false) {
+//            translate([saucer_back,0,engine_up/2])
+//            cylinder(r=saucer_front, h=engine_up, center=true);
+//        }
     }
 
 
 
-    util_ovoid(engine_front, engine_back/2, engine_width,
-            engine_disk_up, engine_disk_down);
-
-    util_ovoid(engine_front, 5, engine_width-20,
-            engine_up_2, engine_disk_down);
+//    util_ovoid(engine_front, engine_back/2, engine_width,
+//            engine_disk_up, engine_disk_down);
+//
+//    util_ovoid(engine_front, 5, engine_width-20,
+//            engine_up_2, engine_disk_down);
 
     difference() {
-        util_ovoid(engine_front-40, 5, engine_width-40,
+        util_ovoid(engine_front-20, 5, engine_width-40,
                 engine_disk_up, engine_down - engine_down_diff  +escort_down);
         
             translate([0,0,-engine_down + engine_down_diff - saucer_width/2])
@@ -245,7 +263,7 @@ module scout(saucer_attached=true) {
                 cylinder(h=10,r=.8,center=true);
             }
 
-            translate([-scout_body_back*.70,scout_width/2-10,scout_up-2])
+            translate([-scout_body_back*.70,scout_width/2-15,scout_up-2])
         util_ovoid(scout_body_front,scout_body_back*.75, scout_up,
             scout_up*.55,2, faces=13);
         }
@@ -262,19 +280,18 @@ module saucer_minus(command_attached=true, engine_attached=true, scout_attached=
         }
         
      
-        hull() {
-        translate([-saucer_back,0,-25])
-        scale([(engine_front)/(engine_width*.5),1,1])
-        cylinder(h=50,d=engine_width+20,center=true);
-          
-      translate([0,0,-25])  
-        cylinder(h=50,d=scout_width*.75,center=true);
-        }
+//        hull() {
+//        translate([-saucer_back,0,-25])
+//        scale([(engine_front)/(engine_width*.5),1,1])
+//        cylinder(h=50,d=engine_width+20,center=true);
+//          
+//      translate([0,0,-25])  
+//        cylinder(h=50,d=scout_width*.75,center=true);
+//        }
         
     if (engine_attached == false) {
         translate([-saucer_back,0,0])
-            util_ovoid(engine_front, 5, engine_width-20,
-            engine_up_2, engine_disk_down);
+            engine_front_part();
         
         
         translate([-saucer_back+engine_front-engine_up_2,0,-0])
