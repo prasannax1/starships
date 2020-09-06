@@ -7,9 +7,12 @@ Other files not included in source code.
 
 use <../mother/mlib.scad>;
 use <galaxy.scad>;
+use <sovereign.scad>;
 
 
 render()
 mvm_saucer();
 
-translate([150,0,250]) galaxy();
+translate([150,0,400]) galaxy();
+
+translate([150,0,200]) sovereign();

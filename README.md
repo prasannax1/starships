@@ -912,11 +912,11 @@ At almost a mile long the *Exodus* class is in a class of its own, even compared
 
 ![Standard Comparison](images/scale/scale-standard.png)
 
-##### Comparison with Galaxy Class
+##### Comparison with Galaxy and Sovereign Class
 
 ![Saucer Comparison](images/scale/scale-saucer.png)
 
-##### Comparison with Sovereign Class
+##### Comparison with Odyssey Class
 
 ![Transwarp Comparison](images/scale/scale-transwarp.png)
 
@@ -924,7 +924,7 @@ At almost a mile long the *Exodus* class is in a class of its own, even compared
 
 ![Command comparison](images/scale/scale-command.png)
 
-##### Comparison with Constitution class
+##### Comparison with NX class
 
 ![Constitution comparison](images/scale/scale-scout.png)
 

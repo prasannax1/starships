@@ -6,9 +6,9 @@ Other files not included in source code.
 */
 
 use <../mother/mlib.scad>;
-use <sovereign.scad>;
+use <odyssey.scad>;
 
 
 mvm_transwarp();
 
-translate([0,0,250]) sovereign();
+translate([200,0,270]) odyssey();
