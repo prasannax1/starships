@@ -6,9 +6,7 @@ stls: icp macs mother misc
 combined: stl/combined/command-shuttles.stl \
     stl/combined/scout-shuttles.stl \
     stl/combined/escort-shuttles.stl \
-    stl/combined/saucer-ships.stl \
-    stl/combined/icp-shuttles.stl \
-    stl/combined/transwarp-ships.stl
+    stl/combined/icp-shuttles.stl 
 
 combined_all: stl/combined/mother-ships.stl \
     stl/combined/just-ships.stl \

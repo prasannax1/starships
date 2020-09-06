@@ -9,7 +9,7 @@ use <multilib.scad>;
 module escort_shuttles(draw_ship=true) {
     if (draw_ship==true) {
         color("SlateGray")
-        mvm_escort();
+        render() mvm_escort();
     }
 
     color("IndianRed")

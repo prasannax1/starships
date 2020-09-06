@@ -104,7 +104,7 @@ Apart from the standard shuttlecraft and runabouts, the primary function of the 
 
 ##### Stats
 
- * Length: 1147m
+ * Length: 1261m
  * Width: 649m
  * Height: 219m
  * Decks: 40
@@ -144,7 +144,7 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
  * Length: 445m
  * Width: 179m
- * Height: 65m 
+ * Height: 66m 
  * Decks: 20 
  * Crew Capacity:
    * Minimum (skeleton): 10
