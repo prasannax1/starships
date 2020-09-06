@@ -6,9 +6,9 @@ Other files not included in source code.
 */
 
 use <../mother/mlib.scad>;
-use <constitution.scad>;
+use <nx01.scad>;
 
 
 mvm_scout();
 
-translate([0,0,120]) constitution();
+translate([0,0,75]) nx01();

@@ -9,6 +9,6 @@ use <../mother/mlib.scad>;
 use <constitution.scad>;
 
 
-mvm_escort();
+render() mvm_escort();
 
 translate([100,0,120]) constitution();

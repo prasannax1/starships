@@ -10,13 +10,19 @@ use <constitution.scad>;
 use <excelsior.scad>;
 use <galaxy.scad>;
 use <sovereign.scad>;
+use <nx01.scad>;
+use <odyssey.scad>;
 
-mother();
+translate([0,0,-200]) render() mother();
 
-translate([0,0,680]) constitution();
+translate([0,0,700]) nx01();
 
-translate([0,0,540]) excelsior();
+translate([0,0,620]) constitution();
 
-translate([0,0,400]) galaxy();
+translate([0,0,500]) excelsior();
 
-translate([0,0,200]) sovereign();
+translate([0,0,360]) galaxy();
+
+translate([0,0,180]) sovereign();
+
+translate([0,0,50]) odyssey();
