@@ -924,11 +924,11 @@ At almost a mile long the *Exodus* class is in a class of its own, even compared
 
 ![Command comparison](images/scale/scale-command.png)
 
-##### Comparison with NX class
+##### Comparison with Nova class
 
 ![Constitution comparison](images/scale/scale-scout.png)
 
-##### Comparison with Constitution Class
+##### Comparison with Defiant Class
 
 ![EScort comparison](images/scale/scale-escort.png)
 

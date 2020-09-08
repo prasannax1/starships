@@ -6,9 +6,9 @@ Other files not included in source code.
 */
 
 use <../mother/mlib.scad>;
-use <nx01.scad>;
+use <nova.scad>;
 
 
 mvm_scout();
 
-translate([0,0,75]) nx01();
+translate([-60,0,75]) nova();
