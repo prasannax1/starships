@@ -16,8 +16,8 @@ engine_wall_ratio=0.99;
 engine_inv_ratio=1.6;
 engine_defl_x2=80;
 
-engine_hangar_width=100;
-engine_hangar_height=30;
+engine_hangar_width=120;
+engine_hangar_height=34;
 
 nacelle_place_back=engine_back-50;
 nacelle_place_width=550;
@@ -42,8 +42,10 @@ saucer_down2_ext=7.5;
 saucer_2_width=300;
 saucer_hangar_height=20;
 saucer_hangar_in=55;
+
 saucer_segments=15;
-saucer_hangar_width=2.56*saucer_width/saucer_segments;
+
+saucer_hangar_width=2*saucer_width/saucer_segments;
 
 command_width=180;
 command_front=90;
