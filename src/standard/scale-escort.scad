@@ -6,9 +6,9 @@ Other files not included in source code.
 */
 
 use <../mother/mlib.scad>;
-use <constitution.scad>;
+use <defiant.scad>;
 
 
 render() mvm_escort();
 
-translate([100,0,120]) constitution();
+translate([75,0,50]) defiant();
