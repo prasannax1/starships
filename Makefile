@@ -490,6 +490,7 @@ stl/mother/main.stl: src/lib/util.scad \
 	    -i src/mother/main.scad \
 	    -o stl/mother/main.stl \
 	    -p images/mothership/main.png \
+	    -c "-423.55,0,29.82,92.1,0,341.6,2474.88" \
 	    -t Tomorrow
 
 images/mothership/full-separation.png: src/lib/util.scad \
