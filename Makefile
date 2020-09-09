@@ -111,6 +111,7 @@ icp: stl/icp/attack.stl \
     stl/icp/explorer.stl \
     stl/icp/destroyer.stl \
     stl/icp/diplomat.stl \
+    stl/icp/long-yacht.stl \
     stl/icp/yacht.stl 
 
 stl/icp/attack.stl: src/icp/attack.scad \
@@ -146,6 +147,13 @@ stl/icp/yacht.stl: src/icp/yacht.scad src/lib/util.scad
 	    -o stl/icp/yacht.stl \
 	    -p images/icp/yacht.png \
 	    -t Starnight
+
+stl/icp/long-yacht.stl: src/icp/long-yacht.scad src/lib/util.scad 
+	bin/render.sh \
+	    -i src/icp/long-yacht.scad \
+	    -o stl/icp/long-yacht.stl \
+	    -p images/icp/long-yacht.png \
+	    -t DeepOcean
 
 stl/icp/runabout.stl: src/icp/runabout.scad src/lib/util.scad
 	bin/render.sh \

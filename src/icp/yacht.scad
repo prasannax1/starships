@@ -32,14 +32,23 @@ module dip_body() {
     }
     
     difference() {
-        translate([-9,0,2])
-        util_ovoid(12.5,12.5,12,3.2,1);
+        hull() {
+            translate([0,0,2])
+            util_ovoid(6,1,12,3,1);
+            translate([-9,0,2])
+            util_ovoid(12.5,12.5,12,3,1);
+        }
         
         translate([-30,0,0])
         rotate([0,15,0])
         cube(25,center=true);
     }
+    
+    translate([-15,0,2])
+    util_ovoid(4.8,4.5,9.6,2.4,1, faces=18);
 }
+
+
 
 module dip_body2() {
     intersection() {
