@@ -125,6 +125,58 @@ module saucer_plus() {
     }
 }
 
+
+
+module dread_saucer_plus() {
+    difference() {
+        union() {
+            
+            util_ovoid(saucer_2_width/2, saucer_2_width/2,
+                saucer_2_width, saucer_up, saucer_down);
+            difference() {
+            util_ovoid(saucer_front, saucer_back, 
+                    saucer_width,
+                    saucer_up+saucer_up_ext,
+                    saucer_down);
+                
+                translate([0,0,saucer_width*0.6 + saucer_hangar_height+5])
+        cube(saucer_width*1.2,center=true);
+            }
+            difference() {
+            util_ovoid(saucer_2_width/2, saucer_2_width/2,
+                saucer_2_width, 5, saucer_down2+saucer_down2_ext);
+                
+                translate([-saucer_width/2,0,0])
+                engine_front_part();
+            }
+
+            intersection() {
+                translate([0,0,0])
+                scale([1,1,1])
+                util_nacelle(saucer_back*1.3,saucer_width*.55,
+                    (2*saucer_up+saucer_up_ext), curved=true);
+                    
+                cylinder(r=saucer_front, h=saucer_up*4, center=true);
+            }
+        }
+        
+        difference() {
+            cylinder(d=saucer_width-220, h=100, center=true);
+            cylinder(h=150, d=saucer_2_width, center=true);
+            util_mirrored([0,0,1])  util_nacelle(saucer_back*1.3,saucer_width*.55,
+                            (2*saucer_up+saucer_up_ext), curved=true);
+        }
+
+        translate([0,0,saucer_width*0.6 + saucer_up])
+        cube(saucer_width*1.2,center=true);
+        
+        translate([0,0,-saucer_width*0.6 -saucer_down2])
+        cube(saucer_width*1.2,center=true);
+        
+    }
+}
+
+
 module engine_front_part() {
     hull() {
         util_ovoid(15,15,engine_width, engine_up,engine_down);
@@ -227,6 +279,80 @@ module saucer(command_attached=true, engine_attached=true, scout_attached=true) 
         saucer_minus(command_attached=command_attached, engine_attached=engine_attached, scout_attached=scout_attached);
     }
 }
+
+module dread_saucer(command_attached=true, engine_attached=true, scout_attached=true) {
+    difference() {
+        dread_saucer_plus();
+        saucer_minus(command_attached=command_attached, engine_attached=engine_attached, scout_attached=scout_attached);
+    }
+}
+
+module dread_scout(saucer_attached=true) {
+    util_ovoid(scout_width/2, scout_width/2,
+        scout_width, scout_up,scout_down/3);
+    
+    difference() {
+    util_ovoid(scout_width/2,
+            scout_width/2*1.5,
+            scout_body_width,
+            scout_body_up,
+            scout_body_down);
+    
+            translate([scout_width/2,0,-scout_body_down])
+        scale([scout_width/(2*scout_body_down),1,1])
+        rotate([90,0,0])
+        cylinder(r=scout_body_down, h= scout_body_width*1.5, center=true);
+        
+                translate([-scout_width/2*1.5,0,-scout_body_down])
+            scale([2,1,1])
+        rotate([90,0,0])
+        cylinder(r=scout_body_down, h= scout_body_width*1.5, center=true);
+        
+        translate([-scout_width/2*1.5-5,0,2])
+        rotate([0,30,0])
+        cube(scout_body_width,center=true);
+    }
+    
+    util_ovoid(1,scout_width/2*1.5-2,
+            scout_body_width,
+            1,
+            3.5);
+    
+    util_ovoid(scout_body_front+10,
+            1,
+            scout_body_width-4,
+            1,
+            scout_body_down-2);
+    
+    translate([-scout_width/2*1.5+15,0,0])
+    util_ovoid(8.1,8.1,16.2,5.7,1);
+    
+    
+    
+    util_mirrored([0,1,0]) {
+        hull() {
+        translate([-scout_width/2-10,scout_width/2-20,-scout_body_down+5])
+        rotate([0,90,0])
+        cylinder(h=10, d1=6, d2=4, center=true);
+        
+        translate([-20,0,0])
+        rotate([0,90,0])
+        cylinder(h=25,d1=8, d2=5, center=true);
+        }
+        
+        translate([-scout_width/2-10,scout_width/2-20,-scout_body_down+5])
+        rotate([-110,0,0])
+        util_ovoid(scout_body_front,scout_width*.75, scout_up,
+                scout_up,5, faces=9);
+        
+    }
+        
+}
+
+module mvm_dread_scout() {
+    dread_scout(saucer_attached=false);
+}
+
 
 module scout(saucer_attached=true) {
     util_ovoid(scout_width/2, scout_width/2,
@@ -546,6 +672,14 @@ module mother() {
 }
 
 
+module dreadnaught() {
+    dread_saucer();
+    translate([0,0,saucer_up-.01]) command();
+    translate([scout_width/2,0,-saucer_down2+.01]) dread_scout();
+    translate([-saucer_back+.01,0,0]) engine();
+    translate([-saucer_back+.01,0,-(engine_down-engine_down_diff)+.01]) escort();
+}
+
 
 module mvm_escort() {
     escort(engine_attached=false);
@@ -553,6 +687,10 @@ module mvm_escort() {
 
 module mvm_saucer() {
     saucer(command_attached=false,engine_attached=false,scout_attached=false);
+}
+
+module mvm_dread_saucer() {
+    dread_saucer(command_attached=false,engine_attached=false,scout_attached=false);
 }
 
 module mvm_scout() {
