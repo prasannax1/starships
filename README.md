@@ -167,7 +167,7 @@ Ostensibly the *Photon* class is just the command section of the *Exodus* assemb
 The *Photon* class has a variable geometry structure - The saucer section rises up by about 20m to allow the Photon to slide back from it's snug harness on top of the Aviary.
 
 Like the Excelsior, the *Photon* class is used in mainly two ways:
- * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the two shuttlebays which can hold several fighter craft
+ * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the shuttlebay which can hold several fighter craft
  * As a flagship - the bridge of the Photon Class is also the main bridge of the Exodus class when fully assembled. When disassembled, the Photon class is the flagship of the Exodus mini-fleet.
  
 ##### Image showing launch of Photon class from Exodus
@@ -237,7 +237,8 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
 
 Under the secondary hull/*Mjolnir* class lies the Bat class which is a dedicated escort vessel for the *Exodus*.
 
-But at 400m long, it's a full size destroyer comparable to the *Prometheus* class
+The *Bat* class is a full size escort vessel comparable to the *Defiant* class.
+
 
 ##### Image showing launch of Bat class from Exodus
 
