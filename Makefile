@@ -112,6 +112,7 @@ icp: stl/icp/attack.stl \
     stl/icp/destroyer.stl \
     stl/icp/diplomat.stl \
     stl/icp/long-yacht.stl \
+    stl/icp/observer.stl \
     stl/icp/yacht.stl 
 
 stl/icp/attack.stl: src/icp/attack.scad \
@@ -131,6 +132,15 @@ stl/icp/explorer.stl: src/icp/explorer.scad \
 	    -o stl/icp/explorer.stl \
 	    -p images/icp/explorer.png \
 	    -t Tomorrow
+
+stl/icp/observer.stl: src/icp/observer.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
+	bin/render.sh \
+	    -i src/icp/observer.scad \
+	    -o stl/icp/observer.stl \
+	    -p images/icp/observer.png \
+	    -t "Tomorrow Night"
 
 stl/icp/destroyer.stl: src/icp/destroyer.scad \
     src/lib/util.scad \
