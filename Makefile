@@ -112,6 +112,7 @@ icp: stl/icp/attack.stl \
     stl/icp/destroyer.stl \
     stl/icp/diplomat.stl \
     stl/icp/long-yacht.stl \
+    stl/icp/observer.stl \
     stl/icp/yacht.stl 
 
 stl/icp/attack.stl: src/icp/attack.scad \
@@ -131,6 +132,15 @@ stl/icp/explorer.stl: src/icp/explorer.scad \
 	    -o stl/icp/explorer.stl \
 	    -p images/icp/explorer.png \
 	    -t Tomorrow
+
+stl/icp/observer.stl: src/icp/observer.scad \
+    src/lib/util.scad \
+    src/icp/icp.scad
+	bin/render.sh \
+	    -i src/icp/observer.scad \
+	    -o stl/icp/observer.stl \
+	    -p images/icp/observer.png \
+	    -t "Tomorrow Night"
 
 stl/icp/destroyer.stl: src/icp/destroyer.scad \
     src/lib/util.scad \
@@ -361,6 +371,9 @@ mother: stl/mother/saucer.stl \
     stl/mother/transwarp.stl \
     stl/mother/escort.stl \
     stl/mother/scout.stl \
+    stl/mother/dread-scout.stl \
+    stl/mother/dread-saucer.stl \
+    stl/mother/dreadnaught.stl \
     stl/mother/command.stl \
     stl/mother/main.stl \
     stl/mother/transwarp-full.stl \
@@ -408,6 +421,15 @@ stl/mother/transwarp-escort.stl: src/lib/util.scad \
 	    -p images/mothership/transwarp-escort.png \
 	    -c "-224.52,0,2.65,136.9,0,41.8,2173" \
 	    -t Tomorrow
+
+stl/mother/dread-scout.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/dread-scout.scad
+	bin/render.sh \
+	    -i src/mother/dread-scout.scad \
+	    -o stl/mother/dread-scout.stl \
+	    -p images/mothership/dread-scout.png \
+	    -t Sunset
 
 stl/mother/scout.stl: src/lib/util.scad \
     src/mother/mlib.scad \
@@ -464,6 +486,15 @@ images/mothership/command-separation.png: src/lib/util.scad \
 	    -c "-423.55,0,80.79,77.4,0,7.7,3099" \
 	    -t Tomorrow
 
+stl/mother/dread-saucer.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/dread-saucer.scad
+	bin/render.sh \
+	    -i src/mother/dread-saucer.scad \
+	    -o stl/mother/dread-saucer.stl \
+	    -p images/mothership/dread-saucer.png \
+	    -t Sunset
+
 stl/mother/saucer.stl: src/lib/util.scad \
     src/mother/mlib.scad \
     src/mother/saucer.scad
@@ -482,6 +513,15 @@ stl/mother/escort.stl: src/lib/util.scad \
 	    -p images/mothership/escort.png \
 	    -c "-0.95,-5.9,2.74,139.7,0,48.1,810" \
 	    -t Tomorrow
+
+stl/mother/dreadnaught.stl: src/lib/util.scad \
+    src/mother/mlib.scad \
+    src/mother/dreadnaught.scad
+	bin/render.sh \
+	    -i src/mother/dreadnaught.scad \
+	    -o stl/mother/dreadnaught.stl \
+	    -p images/mothership/dreadnaught.png \
+	    -t Sunset
 
 stl/mother/main.stl: src/lib/util.scad \
     src/mother/mlib.scad \

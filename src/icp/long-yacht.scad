@@ -108,6 +108,7 @@ module long_yacht() {
         yacht_neck();
         yacht_body();
         yacht_pylons();
+        translate([6,0,0])
         yacht_nacelles();
     }
 }
