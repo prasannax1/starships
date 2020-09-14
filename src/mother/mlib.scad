@@ -131,8 +131,9 @@ module dread_saucer_plus() {
     difference() {
         union() {
             
+            translate([0,0,saucer_hangar_height+5])
             util_ovoid(saucer_2_width/2, saucer_2_width/2,
-                saucer_2_width, saucer_up, saucer_down);
+                saucer_2_width, saucer_up/4, saucer_down);
             difference() {
             util_ovoid(saucer_front, saucer_back, 
                     saucer_width,
@@ -142,29 +143,28 @@ module dread_saucer_plus() {
                 translate([0,0,saucer_width*0.6 + saucer_hangar_height+5])
         cube(saucer_width*1.2,center=true);
             }
-            difference() {
-            util_ovoid(saucer_2_width/2, saucer_2_width/2,
-                saucer_2_width, 5, saucer_down2+saucer_down2_ext);
-                
-                translate([-saucer_width/2,0,0])
-                engine_front_part();
-            }
+
 
             intersection() {
-                translate([0,0,0])
-                scale([1,1,1])
-                util_nacelle(saucer_back*1.3,saucer_width*.55,
-                    (2*saucer_up+saucer_up_ext), curved=true);
+                translate([-saucer_width/4,0,10])
+                scale([1,engine_width/saucer_up,1])
+                rotate([0,90,0])
+                rotate(30)
+                cylinder(h=saucer_width/2, r=saucer_up, $fn=6,center=true);
                     
                 cylinder(r=saucer_front, h=saucer_up*4, center=true);
             }
         }
         
         difference() {
-            cylinder(d=saucer_width-220, h=100, center=true);
-            cylinder(h=150, d=saucer_2_width, center=true);
-            util_mirrored([0,0,1])  util_nacelle(saucer_back*1.3,saucer_width*.55,
-                            (2*saucer_up+saucer_up_ext), curved=true);
+            cylinder(d=saucer_width-220, h=500, center=true);
+            
+            translate([0,0,250])
+            cylinder(h=500, d=saucer_2_width, center=true);
+            
+            translate([-saucer_width/4, 0, saucer_up/2])
+            cube([saucer_width/2,saucer_2_width/2,saucer_up],
+            center=true);
         }
 
         translate([0,0,saucer_width*0.6 + saucer_up])
@@ -174,6 +174,16 @@ module dread_saucer_plus() {
         cube(saucer_width*1.2,center=true);
         
     }
+                difference() {
+            util_ovoid(saucer_2_width/2, saucer_2_width/2,
+                saucer_2_width, 5, saucer_down2+saucer_down2_ext);
+                
+                translate([-saucer_width/2,0,0])
+                engine_front_part();
+                    
+                translate([0,0,-saucer_width*0.6 -saucer_down2])
+        cube(saucer_width*1.2,center=true);
+            }
 }
 
 
