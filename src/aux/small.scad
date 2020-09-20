@@ -29,12 +29,12 @@ module shuttle_body() {
 
     translate([0,0,.25])
     rotate(90)
-    airlock(1);
+    airlock(.5);
 }
 
 module shuttle() {
     shuttle_body();
-    shuttle_nacelle();
+    shuttle_nacelles();
 }
 
 module shuttle_nacelles() {
@@ -46,4 +46,33 @@ module shuttle_nacelles() {
     sphere(.25, $fn=10);
 }
 
-shuttle();
+module shuttlepod() {
+    hull() {
+        difference() {
+            translate([0,0,-.25])
+            sphere(3/2, $fn=16);
+            translate([0,0,-2-1.2])
+            cube(4,center=true);
+            
+            translate([-2,0,0])
+            cube(4, center=true);
+        }
+
+        translate([-1,0,0])
+        rotate([0,90,0])
+        cylinder(d=2.4, h=.5, center=true, $fn=16);
+    }
+
+    translate([-1.25,0,-1])
+    rotate(90)
+    airlock(.5);
+}
+
+
+translate([0,0,.25])
+rotate(90)
+airlock(1);
+
+translate([1,0,2.5])
+rotate([0,180,0])
+util_nacelle(8,2.5,1,curved=true,up=false);
