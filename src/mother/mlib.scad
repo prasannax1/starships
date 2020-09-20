@@ -365,9 +365,22 @@ module mvm_dread_scout() {
 
 
 module scout(saucer_attached=true) {
-    util_ovoid(scout_width/2, scout_width/2,
+    difference() {
+        util_ovoid(scout_width/2, scout_width/2,
         scout_width, scout_up,scout_down);
-    
+        
+        if (saucer_attached==false) {
+            difference() {
+                translate([0,0,scout_body_up+scout_width/2])
+                cube(scout_width, center=true);
+                
+                cylinder(r1=scout_width/1.25, r2=scout_width/10, h=scout_up*2, center=true);
+                
+                translate([-scout_width/4,0,0])
+                cube([scout_width/2,scout_width/6,scout_up*2],center=true);
+            }
+        }
+    }
     util_ovoid(scout_width/6, scout_width/6, scout_width/3, 5, scout_up/3);
 
     difference() {
@@ -414,9 +427,22 @@ module scout(saucer_attached=true) {
                 cylinder(h=10,r=.8,center=true);
             }
 
-            translate([-scout_body_back*.70,scout_width/2-15,scout_up-2])
-        util_ovoid(scout_body_front,scout_body_back*.75, scout_up,
-            scout_up*.55,2, faces=13);
+            translate([-scout_body_back*.70,scout_width/2-15,scout_up]) {
+                difference() {
+            util_ovoid(scout_body_front,scout_body_back*.8, scout_up*.9,
+                scout_up*.45,scout_up*.45, faces=13);
+                    
+                    translate([scout_body_front*.75,0,0])
+                    sphere(scout_up*.4, $fn=16);
+                    
+                    translate([-scout_body_back*.8,0,-5])
+                    rotate([0,-45,0])
+                    cube(scout_up*2, center=true);
+                }
+                
+                util_ovoid(scout_body_front*.8,1, scout_up*.8,
+                scout_up*.4,scout_up*.4, faces=20);
+            }
         }
     }
 }
