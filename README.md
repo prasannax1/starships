@@ -184,9 +184,9 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
  
 #### Stats
 
- * Length: 206m
+ * Length: 202m
  * Width: 100m
- * Height: 35m 
+ * Height: 36m 
  * Decks: 9
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -925,7 +925,7 @@ At almost a mile long the *Exodus* class is in a class of its own, even compared
 
 ![Command comparison](images/scale/scale-command.png)
 
-##### Comparison with Nova class
+##### Comparison with Constitution class
 
 ![Constitution comparison](images/scale/scale-scout.png)
 
