@@ -69,10 +69,3 @@ module shuttlepod() {
 }
 
 
-translate([0,0,.25])
-rotate(90)
-airlock(1);
-
-translate([1,0,2.5])
-rotate([0,180,0])
-util_nacelle(8,2.5,1,curved=true,up=false);
