@@ -80,7 +80,7 @@ escort_minus_length=25;
 
 scout_width=100;
 scout_up=15;
-scout_down=3;
+scout_down=1;
 scout_body_up=10;
 scout_body_down=15;
 scout_body_front=18;
@@ -89,7 +89,6 @@ scout_body_back=110;
 
 separate_length=500;
 separate_height=100;
-
 
 module saucer_plus() {
     difference() {
@@ -394,6 +393,9 @@ module scout(saucer_attached=true) {
         scale([2,1,1])
         rotate([90,0,0])
         cylinder(r=scout_body_down, h= scout_body_width*1.5, center=true);
+        
+        translate([scout_width/2,0,-scout_width/2])
+        cube(scout_width, center=true);
         
                 translate([-scout_body_back,0,-scout_body_down])
         scale([2.7,1,1])
