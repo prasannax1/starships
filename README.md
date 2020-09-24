@@ -219,8 +219,8 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
 
 #### stats
 
- * Length: 279m
- * Width: 166m
+ * Length: 297m
+ * Width: 162m
  * Height: 27m
  * Decks: 8
  * Crew Capacity:

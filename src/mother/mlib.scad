@@ -4,6 +4,7 @@ render_nacelles=true;
 
 engine_front=300;
 engine_back=400;
+engine_back2=500;
 engine_up=60;
 engine_up_2=60;
 engine_down=125;
@@ -16,8 +17,8 @@ engine_wall_ratio=0.99;
 engine_inv_ratio=1.6;
 engine_defl_x2=80;
 
-engine_hangar_width=120;
-engine_hangar_height=34;
+engine_hangar_width=154;
+engine_hangar_height=44;
 
 nacelle_place_back=engine_back-50;
 nacelle_place_width=550;
@@ -71,7 +72,7 @@ escort_width=150;
 escort_front=180;
 escort_down=27;
 escort_up=1;
-escort_rear_width=80;
+escort_rear_width=100;
 escort_deflector_width=36;
 escort_nacelle_length=180;
 escort_nacelle_height=36;
@@ -200,7 +201,7 @@ module engine_main(saucer_attached=true, escort_attached=true) {
     difference() {
         
         union() {
-            util_ovoid(5, engine_back, engine_width,
+            util_ovoid(5, engine_back2, engine_width,
             engine_up, engine_down);
             
             engine_front_part();
@@ -221,7 +222,7 @@ module engine_main(saucer_attached=true, escort_attached=true) {
         cylinder(h=engine_width, r=(engine_down-engine_down_diff),
             center=true);
         
-        translate([-engine_back+75,0,-engine_down])
+        translate([-engine_back+80,0,-engine_down*.95])
         scale([(engine_back-escort_nacelle_length)*1.2/engine_down,1,1-.05])
         rotate([90,0,0])
         cylinder(r=engine_down, h=engine_width, center=true);
@@ -236,9 +237,12 @@ module engine_main(saucer_attached=true, escort_attached=true) {
 //        }
     }
     
-    util_ovoid(5,engine_back,engine_width, 5,20);
+    intersection() {
+        util_ovoid(5,engine_back*1.02,1.5*engine_width, 5,15);
+        util_ovoid(5,engine_back2,engine_width,5,15);
+    }
     
-    translate([-engine_back+engine_hangar_width*.75,0,0])
+    translate([-engine_back+engine_hangar_width*.6,0,0])
     util_ovoid(engine_hangar_width/2, engine_hangar_width/2, engine_hangar_width, engine_hangar_height, 5);
 
 

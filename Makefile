@@ -23,6 +23,7 @@ stl/combined/just-ships.stl: src/combined/just-ships.scad \
 	    -o stl/combined/just-ships.stl
 
 stl/combined/mother-ships.stl: src/combined/mother-ships.scad \
+    src/mother/mlib.scad \
     src/combined/command-shuttles.scad \
     src/combined/scout-shuttles.scad \
     src/combined/escort-shuttles.scad \
