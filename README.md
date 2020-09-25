@@ -14,8 +14,8 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
  * Length: 1595m
  * Width: 746m
- * Height: 246m
- * Decks: 56
+ * Height: 251m
+ * Decks: 58
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
@@ -66,8 +66,8 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
 
  * Length: 746m
  * Width: 746m
- * Height: 95m
- * Decks: 28
+ * Height: 100m
+ * Decks: 30
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 50
@@ -106,8 +106,8 @@ Apart from the standard shuttlecraft and runabouts, the primary function of the 
 
  * Length: 1261m
  * Width: 649m
- * Height: 219m
- * Decks: 40
+ * Height: 224m
+ * Decks: 42
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 100
@@ -144,7 +144,7 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
  * Length: 445m
  * Width: 179m
- * Height: 66m 
+ * Height: 67m 
  * Decks: 20 
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -219,8 +219,8 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
 
 #### stats
 
- * Length: 297m
- * Width: 162m
+ * Length: 300m
+ * Width: 155m
  * Height: 27m
  * Decks: 8
  * Crew Capacity:
@@ -237,7 +237,7 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
 
 Under the secondary hull/*Mjolnir* class lies the Bat class which is a dedicated escort vessel for the *Exodus*.
 
-The *Bat* class is a full size escort vessel comparable to the *Defiant* class.
+The *Bat* class is a full size escort vessel twice as long the *Defiant* class and three times as powerful.
 
 
 ##### Image showing launch of Bat class from Exodus
@@ -961,3 +961,8 @@ The *Exodus* looks even more gigantic compared with the auxillary ships it carri
 ##### Auxillary ships in the Mjolnir class
 
 ![Transarp SHips](images/combined/transwarp.png)
+
+##### Shuttles in Auxillary (ICP) ships
+
+![Aux Shuttles](images/combined/auxillary.png)
+
