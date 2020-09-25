@@ -9,7 +9,6 @@ combined: stl/combined/command-shuttles.stl \
     stl/combined/icp-shuttles.stl 
 
 combined_all: stl/combined/mother-ships.stl \
-    stl/combined/just-ships.stl \
     combined
 
 stl/combined/just-ships.stl: src/combined/just-ships.scad \

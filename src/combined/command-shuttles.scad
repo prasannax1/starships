@@ -11,31 +11,33 @@ module command_shuttles(draw_ship=true) {
         mvm_command();
     }
     
-    color("Chocolate")
-    util_mirrored([0,1,0])
-    repeat(3, tv=[18,0,0])
-    translate([-220,-7.5,15]) 
-    rotate(90) macs_fighter();
-
-    color("Gold") {
+    translate([50,0,0]){
+        color("Chocolate")
         util_mirrored([0,1,0])
-        repeat(3, tv=[0,5.4, 0])
-        translate([-145,5.4,15])
-        rotate(180)
-        macs_pod();
+        repeat(3, tv=[18,0,0])
+        translate([-215,-7.5,15]) 
+        rotate(90) macs_fighter();
 
-        translate([-145,0,15])
-        rotate(180)
-        macs_pod();
+        color("Gold") {
+            util_mirrored([0,1,0])
+            repeat(3, tv=[0,5.4, 0])
+            translate([-145,5.4,15])
+            rotate(180)
+            macs_pod();
+
+            translate([-145,0,15])
+            rotate(180)
+            macs_pod();
+        }
+
+        color("Lime")
+        util_mirrored([0,1,0])
+        repeat(2, tv=[-5,0,0])
+        repeat(2, tv=[0,-6,0])
+        translate([-160,-9,15])
+        rotate(90)
+        macs_pod_small();
     }
-
-    color("Lime")
-    util_mirrored([0,1,0])
-    repeat(2, tv=[-5,0,0])
-    repeat(2, tv=[0,-6,0])
-    translate([-162,-9,15])
-    rotate(90)
-    macs_pod_small();
 }
 
 command_shuttles();
