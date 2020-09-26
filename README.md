@@ -14,7 +14,7 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
  * Length: 1595m
  * Width: 746m
- * Height: 251m
+ * Height: 250m
  * Decks: 58
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -144,7 +144,8 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
  * Length: 445m
  * Width: 179m
- * Height: 67m 
+ * Height: 81m (Nacelles up)
+ * Height: 67m (Nacelles down)
  * Decks: 20 
  * Crew Capacity:
    * Minimum (skeleton): 10
@@ -164,7 +165,7 @@ The aft half of the ship is composed of the two massive warp coils of the ship. 
 
 Ostensibly the *Photon* class is just the command section of the *Exodus* assembly. But The *Photon* class is a heavy cruiser comparable to the Excelsior in size and function.
 
-The *Photon* class has a variable geometry structure - The saucer section rises up by about 20m to allow the Photon to slide back from it's snug harness on top of the Aviary.
+The *Photon* class has a variable geometry structure - The saucer section rises up by about 20m to allow the Photon to slide back from it's snug harness on top of the Aviary. And the nacelles rise by upto 15 meters when the Photon class gets separated from the Aviary.
 
 Like the Excelsior, the *Photon* class is used in mainly two ways:
  * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the shuttlebay which can hold several fighter craft
@@ -221,7 +222,7 @@ At roughly the same size as a *Nova* class, the *Eager* class can be used as an 
 
  * Length: 300m
  * Width: 155m
- * Height: 27m
+ * Height: 25m
  * Decks: 8
  * Crew Capacity:
    * Minimum: 5

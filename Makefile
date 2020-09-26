@@ -371,9 +371,6 @@ mother: stl/mother/saucer.stl \
     stl/mother/transwarp.stl \
     stl/mother/escort.stl \
     stl/mother/scout.stl \
-    stl/mother/dread-scout.stl \
-    stl/mother/dread-saucer.stl \
-    stl/mother/dreadnaught.stl \
     stl/mother/command.stl \
     stl/mother/main.stl \
     stl/mother/transwarp-full.stl \

@@ -70,7 +70,7 @@ command_neck_width=16;
 
 escort_width=145;
 escort_front=180;
-escort_down=27;
+escort_down=25;
 escort_up=1;
 escort_rear_width=100;
 escort_deflector_width=36;
@@ -90,6 +90,14 @@ scout_body_back=110;
 
 separate_length=500;
 separate_height=100;
+
+module if_rotate(condition, rot_vector) {
+    if (condition) {
+        rotate(rot_vector) children();
+    } else {
+        children();
+    }
+}
 
 module saucer_plus() {
     difference() {
@@ -620,8 +628,6 @@ module command_disk() {
         util_ovoid(command_bridge_width/2, command_bridge_width/2, command_bridge_width, command_bridge_height, command_bridge_height, faces=7);
 }
 
-command(engine_attached=false, saucer_raised=true);
-
 module command(saucer_attached=true, saucer_raised=false,engine_attached=true) {
     
     if (saucer_raised == true) {
@@ -695,23 +701,27 @@ module command(saucer_attached=true, saucer_raised=false,engine_attached=true) {
 
     if (render_nacelles==true) {
         util_mirrored([0,1,0])
-        hull() {
-            translate([-command_width/2-5,0,0])
-            sphere(4, $fn=16);
+            if_rotate(saucer_attached==false, [15,0,0]) 
+            hull() {
+                translate([-command_width/2-5,0,0])
+                sphere(4, $fn=16);
+                
+                translate([-command_width/2-20,0,0])
+                sphere(4, $fn=16);
+                
+                translate([-command_width, command_width/2.7, 3])
+                sphere(2, $fn=16);
+                
+                translate([-command_width-50, command_width/2.7, 3])
+                sphere(2, $fn=16);
+            }
             
-            translate([-command_width/2-20,0,0])
-            sphere(4, $fn=16);
-            
-            translate([-command_width, command_width/2.7, 3])
-            sphere(2, $fn=16);
-            
-            translate([-command_width-50, command_width/2.7, 3])
-            sphere(2, $fn=16);
-        }
+            util_mirrored([0,1,0])
+            if_rotate(saucer_attached==false, [15,0,0]) 
+            translate([-command_width, command_width/2.7, 0])
+            if_rotate(saucer_attached==false,[-15,0,0])
+            util_ovoid(command_width/2.5, command_width, command_bridge_width/1.5, command_bridge_height*3, 1, faces=13);
         
-        util_mirrored([0,1,0])
-        translate([-command_width, command_width/2.7, 0])
-        util_ovoid(command_width/2.5, command_width, command_bridge_width/1.5, command_bridge_height*3, 1, faces=13);
     }
     
     translate([-command_engine_width*2.4,0,-.01])
