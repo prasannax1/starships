@@ -1,3 +1,3 @@
 use <mlib.scad>;
 
-mvm_scout();
+mvm_scout_single();
