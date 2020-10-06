@@ -5,11 +5,7 @@ STL += scout.stl
 STL += command.stl 
 STL += carrier.stl 
 STL += main.stl 
-STL += saucer-full.stl 
-STL += carrier-full.stl
-STL += transwarp-full.stl 
-STL += half-separation.stl 
-STL += full-separation.stl
+STL += no-carrier.stl 
 
 all: $(STL)
 
@@ -39,18 +35,6 @@ carrier.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
 main.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
     ../../src/mother/main.scad
 
-saucer-full.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
-    ../../src/mother/saucer-full.scad
-
-carrier-full.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
-    ../../src/mother/carrier-full.scad
-
-transwarp-full.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
-    ../../src/mother/transwarp-full.scad
-
-half-separation.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
-    ../../src/mother/half-separation.scad
-
-full-separation.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
-    ../../src/mother/full-separation.scad
+no-carrier.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
+    ../../src/mother/no-carrier.scad
 

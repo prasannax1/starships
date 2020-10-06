@@ -6,7 +6,7 @@ IMG += mother_images
 all: $(IMG)
 
 mother_images: $(wildcard ../src/mother/*.scad)
-	@$(MAKE) -C mother
+	@$(MAKE) -C mothership
 
 icp_images: $(wildcard ../src/icp/*.scad)
 	@$(MAKE) -C icp

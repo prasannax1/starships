@@ -1,7 +1,7 @@
 STL += attack.stl 
 STL += diplomat.stl 
 STL += runabout.stl 
-STL += tactical-shuttle.stl 
+STL += tactical-runabout.stl 
 STL += science.stl 
 STL += explorer.stl 
 STL += destroyer.stl 
@@ -39,7 +39,7 @@ long-yacht.stl: ../../src/icp/long-yacht.scad ../../src/lib/util.scad
 
 runabout.stl: ../../src/icp/runabout.scad ../../src/lib/util.scad
 
-tactical-shuttle.stl: ../../src/icp/tactical-runabout.scad \
+tactical-runabout.stl: ../../src/icp/tactical-runabout.scad \
     ../../src/lib/util.scad
 
 science.stl: ../../src/icp/science.scad \

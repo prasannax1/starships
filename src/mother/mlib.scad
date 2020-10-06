@@ -32,9 +32,11 @@ module if_rotate(condition, rot_vector) {
     }
 }
 
+
 hangar_saucer_width = 750;
 hangar_saucer_height = 30;
-hangar_saucer_height_ext = 64;
+hangar_saucer_direction = 1;
+hangar_saucer_height_ext = 45;
 hangar_saucer_inner_diam = 320;
 hangar_saucer_extreme_angle = 150;
 
@@ -81,7 +83,7 @@ module mvm_saucer_minus_carrier() {
 
 module mvm_carrier(saucer_attached=true, engine_attached=true) {
     difference() {
-        translate([0,0,-hangar_saucer_height/2])
+        translate([0,0,-hangar_saucer_direction*hangar_saucer_height/2])
         saucer_shape(hangar_saucer_width, hangar_saucer_height, hangar_saucer_height_ext, 3, 0);
 
 
@@ -162,7 +164,7 @@ module mother() {
 }
 
 
-saucer_width=700;
+saucer_width=660;
 saucer_height=50;
 saucer_height_extra=7.5;
 
@@ -659,4 +661,15 @@ module mvm_without_carrier() {
         mvm_scout();
     }
 }
+
+module mvm_without_saucer() {
+    mvm_carrier_full();
+    mvm_transwarp_full();
+}
+
+module mvm_without_transwarp() {
+    mvm_saucer_full();
+    mvm_carrier_full();
+}
+
 

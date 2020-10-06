@@ -2,7 +2,7 @@
 icp: attack.png \
     diplomat.png \
     runabout.png \
-    tactical-shuttle.png \
+    tactical-runabout.png \
     science.png \
     explorer.png \
     destroyer.png \
@@ -61,11 +61,11 @@ runabout.png: ../../src/icp/runabout.scad ../../src/lib/util.scad
 	    -p runabout.png \
 	    -t Tomorrow
 
-tactical-shuttle.png: ../../src/icp/tactical-runabout.scad \
+tactical-runabout.png: ../../src/icp/tactical-runabout.scad \
     ../../src/lib/util.scad
 	../../bin/render.sh \
 	    -i ../../src/icp/tactical-runabout.scad \
-	    -p tactical-shuttle.png \
+	    -p tactical-runabout.png \
 	    -t Solarized
 
 science.png: ../../src/icp/science.scad \

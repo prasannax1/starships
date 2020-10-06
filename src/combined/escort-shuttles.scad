@@ -9,7 +9,8 @@ use <multilib.scad>;
 module escort_shuttles(draw_ship=true) {
     if (draw_ship==true) {
         color("SlateGray")
-        render() mvm_escort();
+        translate([750,0,0])
+        mvm_escort_single();
     }
 
     color("IndianRed")
@@ -19,7 +20,7 @@ module escort_shuttles(draw_ship=true) {
     color("Chocolate")
     util_mirrored([0,1,0])
     repeat(2,tv=[0,18,0])
-    translate([10,9,5])
+    translate([50,9,5])
     rotate(180)
     macs_fighter();
 }

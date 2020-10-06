@@ -94,9 +94,9 @@ shuttle.png: ../../src/macs/macs.scad ../../src/lib/util.scad \
 	    -t BeforeDawn
 
 small-runabout.png: ../../src/macs/macs.scad ../../src/lib/util.scad \
-    ../../src/macs/runabout.scad
+    ../../src/macs/small-runabout.scad
 	../../bin/render.sh \
-	    -i ../../src/macs/runabout.scad \
+	    -i ../../src/macs/small-runabout.scad \
 	    -p small-runabout.png \
 	    -t BeforeDawn
 
@@ -108,9 +108,9 @@ cutter.png: ../../src/macs/macs.scad ../../src/lib/util.scad \
 	    -t BeforeDawn
 
 heavy-runabout.png: ../../src/macs/macs.scad ../../src/lib/util.scad \
-    ../../src/macs/heavy.scad
+    ../../src/macs/heavy-runabout.scad
 	../../bin/render.sh \
-	    -i ../../src/macs/heavy.scad \
+	    -i ../../src/macs/heavy-runabout.scad \
 	    -p heavy-runabout.png \
 	    -t BeforeDawn
 

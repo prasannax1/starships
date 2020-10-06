@@ -32,13 +32,13 @@ shuttle.stl: ../../src/macs/macs.scad ../../src/lib/util.scad \
     ../../src/macs/shuttle.scad
 
 small-runabout.stl: ../../src/macs/macs.scad ../../src/lib/util.scad \
-    ../../src/macs/runabout.scad
+    ../../src/macs/small-runabout.scad
 
 cutter.stl: ../../src/macs/macs.scad ../../src/lib/util.scad \
     ../../src/macs/cutter.scad
 
 heavy-runabout.stl: ../../src/macs/macs.scad ../../src/lib/util.scad \
-    ../../src/macs/heavy.scad
+    ../../src/macs/heavy-runabout.scad
 
 hospital.stl: ../../src/macs/macs.scad ../../src/lib/util.scad \
     ../../src/macs/hospital.scad

@@ -1,4 +1,4 @@
-STL += combined_stls 
+#STL += combined_stls 
 STL += icp_stls
 STL += macs_stls
 STL += misc_stls
@@ -19,4 +19,4 @@ misc_stls: $(wildcard ../src/misc/*.scad)
 	@$(MAKE) -C misc
 
 combined_stls: $(wildcard ../src/combined/*.scad)
-	@$(MAKE) -C mother
+	@$(MAKE) -C combined
