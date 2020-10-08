@@ -6,6 +6,8 @@ STL += command.stl
 STL += carrier.stl 
 STL += main.stl 
 STL += no-carrier.stl 
+STL += no-saucer.stl 
+STL += no-transwarp.stl 
 
 all: $(STL)
 
@@ -37,4 +39,10 @@ main.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
 
 no-carrier.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
     ../../src/mother/no-carrier.scad
+
+no-saucer.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
+    ../../src/mother/no-saucer.scad
+
+no-transwarp.stl: ../../src/lib/util.scad ../../src/mother/mlib.scad \
+    ../../src/mother/no-transwarp.scad
 
