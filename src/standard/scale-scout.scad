@@ -9,6 +9,6 @@ use <../mother/mlib.scad>;
 use <constitution.scad>;
 
 
-mvm_scout();
+mvm_scout_single();
 
-translate([-0,0,90]) constitution();
+translate([100,0,90]) constitution();

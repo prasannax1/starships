@@ -10,9 +10,7 @@ use <galaxy.scad>;
 use <sovereign.scad>;
 
 
-render()
-mvm_saucer();
+mvm_saucer_single();
 
-translate([150,0,400]) galaxy();
+translate([100,0,200]) galaxy();
 
-translate([150,0,200]) sovereign();
