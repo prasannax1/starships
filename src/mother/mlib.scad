@@ -1,7 +1,7 @@
 use <../lib/util.scad>;
 use <../combined/multilib.scad>;
 
-
+show_nacelles=true;
 
 
 module saucer_shape(width, height, height_ext, depth, depth_ext) {
@@ -36,7 +36,7 @@ module if_rotate(condition, rot_vector) {
 hangar_saucer_width = 750;
 hangar_saucer_height = 30;
 hangar_saucer_direction = 1;
-hangar_saucer_height_ext = 45;
+hangar_saucer_height_ext = 50;
 hangar_saucer_inner_diam = 320;
 hangar_saucer_extreme_angle = 150;
 
@@ -44,7 +44,7 @@ hangar_saucer_hangar_length = 55;
 hangar_saucer_hangar_width = 100;
 hangar_saucer_hangar_height = 22;
 
-hangar_body_width=205;
+hangar_body_width=200;
 hangar_body_back=480;
 hangar_body_max_height=75;
 
@@ -65,11 +65,11 @@ big_nacelle_back_hangar=600;
 big_nacelle_back_saucer=600;
 big_nacelle_back_transwarp=600;
 big_nacelle_width=50;
-big_nacelle_up=15;
-big_nacelle_down=15;
+big_nacelle_up=12.5;
+big_nacelle_down=12.5;
 
 big_nacelle_loc_back=750/2 + 250;
-big_nacelle_loc_up=84;
+big_nacelle_loc_up=95;
 
 module mvm_hexagon() {
             translate([0,0,hangar_saucer_width-hangar_body_front_minus_up])
@@ -108,12 +108,6 @@ module mvm_carrier(saucer_attached=true, engine_attached=true) {
 
 
 
-//        translate([-hangar_saucer_inner_diam/2,0,0])
-//    scale([1.5,.75,1])
-//        cylinder(r2=hangar_inner_saucer_width,r1=0,h=hangar_inner_saucer_up+hangar_inner_saucer_down,center=true,$fn=4);
-//        util_ovoid(hangar_saucer_inner_diam/2 + hangar_inner_front_extra,hangar_saucer_inner_diam/2,hangar_inner_saucer_width,hangar_inner_saucer_up, hangar_inner_saucer_down);
-
-
     difference() {
         translate([-hangar_saucer_width/2,0,-hangar_saucer_height/2])
         util_ovoid(hangar_body_width/1.5, hangar_body_back, hangar_body_width, hangar_body_max_height, 3);
@@ -131,27 +125,29 @@ module mvm_carrier(saucer_attached=true, engine_attached=true) {
     translate([-hangar_saucer_width/2-hangar_body_back*hangar_rear_door_l_ratio,0,-10])
     util_ovoid(hangar_body_width*hangar_rear_door_w_ratio/2, hangar_body_width*hangar_rear_door_w_ratio/2,hangar_body_width*hangar_rear_door_w_ratio,hangar_body_max_height*hangar_rear_door_h_ratio,3);
 
-    util_mirrored([0,1,0]) {
-        translate([-big_nacelle_loc_back,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up]) {
-            hull() {
-        translate([0,big_nacelle_width/2,big_nacelle_up/2])
-        util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
-            
-        translate([0,-big_nacelle_width/2,big_nacelle_up/2])
-        util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
+    if (show_nacelles == true) {
+        util_mirrored([0,1,0]) {
+            translate([-big_nacelle_loc_back,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up]) {
+                hull() {
+            translate([0,big_nacelle_width/2,big_nacelle_up/2])
+            util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
                 
-    translate([0,big_nacelle_width/2,-big_nacelle_down/2])
-        util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
-            
-        translate([0,-big_nacelle_width/2,-big_nacelle_down/2])
-        util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
-            }
-            
+            translate([0,-big_nacelle_width/2,big_nacelle_up/2])
+            util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
+                    
+        translate([0,big_nacelle_width/2,-big_nacelle_down/2])
+            util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
+                
+            translate([0,-big_nacelle_width/2,-big_nacelle_down/2])
+            util_ovoid(big_nacelle_front,big_nacelle_back_hangar,big_nacelle_width,big_nacelle_up/2,big_nacelle_down/2);
+                }
+                
 
-       }
+           }
+        }
+        
+        mvm_main_nacelle(15,0);
     }
-    
-    mvm_main_nacelle(15,0);
 }
 
 module mother() {
@@ -166,7 +162,7 @@ module mother() {
 
 saucer_width=660;
 saucer_height=50;
-saucer_height_extra=7.5;
+saucer_height_extra=10;
 
 saucer_body_width=240;
 
@@ -194,7 +190,6 @@ module mvm_saucer_basic() {
 
     }
 
-    mvm_main_nacelle(15,1);
     
     translate([-hangar_saucer_width/2-180,0,.9*hangar_body_max_height])
     mirror([0,0,1])
@@ -211,19 +206,22 @@ module mvm_saucer_basic() {
     rotate([30,0,0])
     cube([200,20,saucer_height*.75], center=true);
 
+    if (show_nacelles == true) {
+        mvm_main_nacelle(15,1);
         
-    translate([-big_nacelle_loc_back,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up+big_nacelle_up+big_nacelle_down]) {
-        hull() {
-        translate([0,big_nacelle_width/2,-(big_nacelle_up+big_nacelle_down)/2])
-        util_ovoid(big_nacelle_front,big_nacelle_back_saucer,big_nacelle_width,big_nacelle_up+big_nacelle_down-3,3);
-            
-        translate([0,-big_nacelle_width/2,-(big_nacelle_up+big_nacelle_down)/2])
-        util_ovoid(big_nacelle_front,big_nacelle_back_saucer,big_nacelle_width,big_nacelle_up+big_nacelle_down-3,3);
+        translate([-big_nacelle_loc_back,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up+big_nacelle_up+big_nacelle_down]) {
+            hull() {
+            translate([0,big_nacelle_width/2,-(big_nacelle_up+big_nacelle_down)/2])
+            util_ovoid(big_nacelle_front,big_nacelle_back_saucer,big_nacelle_width,big_nacelle_up+big_nacelle_down-3,3);
+                
+            translate([0,-big_nacelle_width/2,-(big_nacelle_up+big_nacelle_down)/2])
+            util_ovoid(big_nacelle_front,big_nacelle_back_saucer,big_nacelle_width,big_nacelle_up+big_nacelle_down-3,3);
+                }
+                
+
+
+                
             }
-            
-
-
-            
         }
     }
     
@@ -233,8 +231,7 @@ module mvm_saucer_basic() {
     cylinder(d=100,h=120,center=true);
 }
 
-
-engine_down=105;
+engine_down=100;
 engine_front=hangar_saucer_width/2;
 engine_back=hangar_body_back;
 engine_width=200;
@@ -244,7 +241,7 @@ engine_saucer_height_ext=30;
 engine_smaller_saucer=430;
 engine_smaller_saucer_h=10;
 engine_smaller_saucer_h_ext=10;
-engine_back_diff=30;
+engine_back_diff=0;
 engine_upper_disk_width=200;
 engine_upper_disk_height=15;
 
@@ -306,25 +303,27 @@ module mvm_engine(scout_attached=true, carrier_attached=true) {
     }
 
 
+    if (show_nacelles == true) {
     mvm_main_nacelle(15,-1);
-    util_mirrored([0,1,0]) {
+        util_mirrored([0,1,0]) {
 
 
-            
-        translate([-big_nacelle_loc_back,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up-(big_nacelle_up+big_nacelle_down)]) {
-            hull() {
-            translate([0,big_nacelle_width/2,(big_nacelle_up+big_nacelle_down)/2])
-            util_ovoid(big_nacelle_front,big_nacelle_back_transwarp,big_nacelle_width,3, big_nacelle_up+big_nacelle_down-3);
                 
-            translate([0,-big_nacelle_width/2,(big_nacelle_up+big_nacelle_down)/2])
-            util_ovoid(big_nacelle_front,big_nacelle_back_transwarp,big_nacelle_width,3, big_nacelle_up+big_nacelle_down-3);
+            translate([-big_nacelle_loc_back,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up-(big_nacelle_up+big_nacelle_down)]) {
+                hull() {
+                translate([0,big_nacelle_width/2,(big_nacelle_up+big_nacelle_down)/2])
+                util_ovoid(big_nacelle_front,big_nacelle_back_transwarp,big_nacelle_width,3, big_nacelle_up+big_nacelle_down-3);
+                    
+                translate([0,-big_nacelle_width/2,(big_nacelle_up+big_nacelle_down)/2])
+                util_ovoid(big_nacelle_front,big_nacelle_back_transwarp,big_nacelle_width,3, big_nacelle_up+big_nacelle_down-3);
+                    }
+                    
+
+
+                    
                 }
-                
-
-
-                
             }
-    }
+        }
 }
 
 module mvm_command_body() {
@@ -394,7 +393,6 @@ command_nacelle_down=2;
 
 
 
-
 module mvm_command(saucer_attached=true) {
     translate([0,0,hangar_saucer_height/2+saucer_height])
     saucer_shape(command_width,command_height,command_height_ext,3,0);
@@ -424,33 +422,41 @@ module mvm_command(saucer_attached=true) {
             rotate([0,45,0])
             cube(command_width, center=true);
         }
+        
+        translate([-command_width+command_body_up/2,0,          hangar_saucer_height/2+saucer_height+command_body_up])
+        rotate([90,0,0])
+        cylinder(r=command_body_up, h=1.5*command_body_width, $fn=6, center=true);
     }
     
+    translate([-command_width+command_body_up*1.3,0,hangar_saucer_height/2+saucer_height])
+    util_saucer(34,34,18);
 
 
 
-    translate([0,0,hangar_saucer_height/2+saucer_height])
-    util_mirrored([0,1,0])
-    if_rotate(saucer_attached==false, [30,0,0]) {
-    hull() {
-        translate([-command_width/2,0,0])
-        sphere(2.5);
+    if (show_nacelles == true) {
+        translate([0,0,hangar_saucer_height/2+saucer_height])
+        util_mirrored([0,1,0])
+        if_rotate(saucer_attached==false, [30,0,0]) {
+        hull() {
+            translate([-command_width/2,0,0])
+            sphere(2.5);
 
-        translate([-command_width/2-25,0,0])
-        sphere(2.5);
+            translate([-command_width/2-25,0,0])
+            sphere(2.5);
+
+            translate([-command_body_front-command_body_back+25, command_width/2-command_nacelle_width*1.5, 0])
+            sphere(1.5);
+
+            translate([-command_body_front-command_body_back-35, command_width/2-command_nacelle_width*1.5, 0])
+            sphere(1.5);
+        }
 
         translate([-command_body_front-command_body_back+25, command_width/2-command_nacelle_width*1.5, 0])
-        sphere(1.5);
-
-        translate([-command_body_front-command_body_back-35, command_width/2-command_nacelle_width*1.5, 0])
-        sphere(1.5);
-    }
-
-    translate([-command_body_front-command_body_back+25, command_width/2-command_nacelle_width*1.5, 0])
-    if_rotate(saucer_attached==false, [-30,0,0])
-    hull()
-    repeat(2, tv=[0,command_nacelle_width/2,0])
-    util_ovoid(command_nacelle_front,command_nacelle_back,command_nacelle_width/2,command_nacelle_up,command_nacelle_down,faces=9);
+        if_rotate(saucer_attached==false, [-30,0,0])
+        hull()
+        repeat(2, tv=[0,command_nacelle_width/2,0])
+        util_ovoid(command_nacelle_front,command_nacelle_back,command_nacelle_width/2,command_nacelle_up,command_nacelle_down,faces=9);
+        }
     }
 }
 
@@ -498,19 +504,21 @@ scout_body_front=50;
 scout_body_back=50;
 scout_body_width=25;
 scout_body_up=10;
-scout_body_down=15;
+scout_body_down=12.5;
 scout_nacelle_front=25;
 scout_nacelle_back=75;
 scout_nacelle_up=8;
 scout_nacelle_down=2;
 scout_nacelle_width=8;
 
-
 module mvm_scout(engine_attached=true) {
     translate([scout_width,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h]) {
         saucer_shape(scout_width,scout_up,scout_up_ext,1,0);
         saucer_shape(scout_width/3,scout_up+3.3, 3.3, 3.3, 1);
     }
+
+    translate([scout_body_down*1.25,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h])
+    util_saucer(16,16,7);
 
     difference() {
         translate([scout_body_back,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h])
@@ -525,9 +533,15 @@ module mvm_scout(engine_attached=true) {
         scale([2,1,1])
         rotate([90,0,0])
         cylinder(r=scout_body_down, h=scout_body_width*1.5,center=true);
+        
+        translate([scout_body_down*.5,0,-hangar_saucer_height/2-engine_saucer_h+scout_body_down/6])
+        rotate([90,0,0])
+        cylinder(r=scout_body_down, h=scout_body_width*1.5, $fn=6, center=true);
     }
     
-    mvm_scout_nacelle_assembly();
+    if (show_nacelles == true) {
+        mvm_scout_nacelle_assembly();
+    }
     
 }
 
