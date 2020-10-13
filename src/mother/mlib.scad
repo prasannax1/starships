@@ -385,12 +385,11 @@ command_body_back=100;
 command_body_width=50;
 command_body_up=25;
 command_body_down=30;
-command_nacelle_front=70;
-command_nacelle_back=180;
-command_nacelle_width=25;
-command_nacelle_up=13;
-command_nacelle_down=2;
-
+command_nacelle_front=75;
+command_nacelle_back=200;
+command_nacelle_width=20;
+command_nacelle_up=18;
+command_nacelle_down=1;
 
 
 module mvm_command(saucer_attached=true) {
@@ -452,11 +451,27 @@ module mvm_command(saucer_attached=true) {
         }
 
         translate([-command_body_front-command_body_back+25, command_width/2-command_nacelle_width*1.5, 0])
-        if_rotate(saucer_attached==false, [-30,0,0])
+        if_rotate(saucer_attached==false, [-30,0,0]){
+            
+                    repeat(2, tv=[0,command_nacelle_width/2,0])
+            translate([0,0,command_nacelle_up/4])
+        util_ovoid(command_nacelle_front*.8,2,command_nacelle_width*.9 ,command_nacelle_up*.9/2,command_nacelle_up*.5/2);
+        
+        difference() {
         hull()
         repeat(2, tv=[0,command_nacelle_width/2,0])
-        util_ovoid(command_nacelle_front,command_nacelle_back,command_nacelle_width/2,command_nacelle_up,command_nacelle_down,faces=9);
+        util_ovoid(command_nacelle_front,command_nacelle_back,command_nacelle_width ,command_nacelle_up,command_nacelle_down);
+            
+            translate([command_nacelle_front*.9,command_nacelle_width/4,0])
+            sphere(command_nacelle_up);
+            
+            
+            translate([-command_nacelle_back*.96,command_nacelle_width/4,-5])
+            rotate([0,45,0])
+            cube(command_nacelle_width,center=true);
         }
+        }
+    }
     }
 }
 
@@ -506,10 +521,10 @@ scout_body_width=25;
 scout_body_up=10;
 scout_body_down=12.5;
 scout_nacelle_front=25;
-scout_nacelle_back=75;
-scout_nacelle_up=8;
-scout_nacelle_down=2;
-scout_nacelle_width=8;
+scout_nacelle_back=90;
+scout_nacelle_up=7.5;
+scout_nacelle_down=7.5;
+scout_nacelle_width=15;
 
 module mvm_scout(engine_attached=true) {
     translate([scout_width,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h]) {
@@ -564,23 +579,34 @@ module scout_saucer_minus() {
     
 
 
+
 module mvm_scout_nacelle_assembly() {
     util_mirrored([0,1,0]) {
-        translate([scout_nacelle_front/2,scout_width/2-2*scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
-        hull()
-        util_mirrored([0,1,0])
-        translate([0,2,0])
+        difference() {
+        translate([scout_nacelle_front/2,scout_width/2-1.2*scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
         util_ovoid(scout_nacelle_front,scout_nacelle_back,scout_nacelle_width,scout_nacelle_up,scout_nacelle_down);
+            
+    translate([scout_nacelle_front*1.2,scout_width/2-1.2*       scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
+        sphere(scout_nacelle_width/2);
+            
+            translate([-scout_nacelle_back+16,scout_width/2-1.2*       scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h-8])
+            rotate([0,45,0])
+            cube(scout_body_width, center=true);
+        }
+        
+                translate([scout_nacelle_front/2,scout_width/2-1.2*scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
+        util_ovoid(scout_nacelle_front*.75,2,scout_nacelle_width*.9,scout_nacelle_up*.9,scout_nacelle_down*.9);
+        
         
         hull() {
-            translate([scout_body_back,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h]) sphere(1);
+            translate([scout_body_back+10,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h]) sphere(1);
             
-            translate([scout_body_back-25,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h]) sphere(1);
+            translate([scout_body_back-20,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h]) sphere(1);
             
-            translate([scout_nacelle_front/2+5,scout_width/2-2*scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
+            translate([scout_nacelle_front/2-10,scout_width/2-scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
             sphere(1);
             
-            translate([scout_nacelle_front/2-5,scout_width/2-2*scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
+            translate([scout_nacelle_front/2-20,scout_width/2-scout_nacelle_width,-hangar_saucer_height/2-engine_saucer_h])
             sphere(1);
         }
     }
