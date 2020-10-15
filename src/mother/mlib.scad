@@ -453,9 +453,10 @@ module mvm_command(saucer_attached=true) {
         translate([-command_body_front-command_body_back+25, command_width/2-command_nacelle_width*1.5, 0])
         if_rotate(saucer_attached==false, [-30,0,0]){
             
+            hull()
                     repeat(2, tv=[0,command_nacelle_width/2,0])
-            translate([0,0,command_nacelle_up/4])
-        util_ovoid(command_nacelle_front*.8,2,command_nacelle_width*.9 ,command_nacelle_up*.9/2,command_nacelle_up*.5/2);
+            translate([0,0,command_nacelle_up/8])
+        util_ovoid(command_nacelle_front*.8,2,command_nacelle_width*.9 ,command_nacelle_up*.9,command_nacelle_down*.8);
         
         difference() {
         hull()
