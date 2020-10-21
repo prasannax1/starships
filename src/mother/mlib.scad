@@ -523,12 +523,88 @@ scout_body_width=25;
 scout_body_up=10;
 scout_body_down=12.5;
 scout_nacelle_front=25;
-scout_nacelle_back=90;
+scout_nacelle_back=100;
 scout_nacelle_up=7.5;
 scout_nacelle_down=7.5;
 scout_nacelle_width=15;
 
+
+
 module mvm_scout(engine_attached=true) {
+    translate([scout_width,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h+.01]) mvm_scout_unpositioned(engine_attached=engine_attached);
+    
+}
+
+
+module mvm_scout_unpositioned(engine_attached=true) {
+    saucer_shape(scout_width, scout_up, scout_up_ext, 1,0);
+    saucer_shape(scout_width/3,scout_up+3.3, 3.3, 3.3, 1);
+
+
+    difference() {
+        hull() {
+            util_nacelle(scout_body_front+scout_body_back, scout_body_width*1.25, scout_body_up* 1.58, curved=true, up=true);
+
+            translate([-scout_width/2,0,0])
+            util_ovoid(scout_body_front, scout_body_back, scout_body_width, 1, scout_body_down);
+        }
+
+        translate([0,0,-scout_width/2+scout_body_down])
+                rotate([90,0,0])
+                cylinder(d=scout_width*.9,h=scout_width,center=true,$fn=6);
+
+
+        translate([-scout_width, 0, -scout_body_down])
+                scale([2,1,1])
+                rotate([90,0,0])
+                cylinder(r=scout_body_down, h=scout_body_width*1.5,center=true);
+
+        translate([-scout_width +scout_body_down/2, 0, scout_body_down*1.1])
+                rotate([90,0,0])
+                cylinder(r=scout_body_down*1.2, h=scout_body_width*1.5, $fn=6, center=true);
+    }
+
+
+
+    util_mirrored([0,1,0])
+    if_rotate(engine_attached==false, [20,0,0]) {
+        hull() {
+            translate([-scout_width/1.5-3,0,0])
+            sphere(1.5);
+
+            translate([-scout_width/1.5-12,0,0])
+            sphere(1.5);
+
+            translate([-scout_width/1.5-3, scout_width/2.4,0])
+            sphere(1);
+
+            translate([-scout_width/1.5-12, scout_width/2.4,0])
+            sphere(1);
+        }
+
+
+
+        translate([-scout_width/1.5, scout_width/2.4,0]) {
+            if_rotate(engine_attached==false,[-20,0,0]) {
+            difference() {
+                util_ovoid(scout_nacelle_front, scout_nacelle_back, scout_nacelle_width, scout_nacelle_up, scout_nacelle_down);
+
+                translate([scout_width/6,0,0])
+                sphere(scout_width/6);
+
+
+                translate([-scout_nacelle_back,0,-scout_body_width/3])
+                rotate([0,45,0])
+                cube(scout_body_width, center=true);
+            }
+
+            sphere(0.9*scout_nacelle_width/2);
+            }
+        }
+    }
+}
+
+module mvm_scout_old(engine_attached=true) {
     translate([scout_width,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h]) {
         saucer_shape(scout_width,scout_up,scout_up_ext,1,0);
         saucer_shape(scout_width/3,scout_up+3.3, 3.3, 3.3, 1);
@@ -563,8 +639,15 @@ module mvm_scout(engine_attached=true) {
 }
 
 module scout_nacelle_minus() {
+    
+    difference() {
     translate([-10,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h+3])
-    cube([1.2*scout_width, .8*scout_width, 2*scout_body_up+scout_body_down],center=true);
+    cube([1.2*scout_width, scout_width+5, 2*scout_body_up+scout_body_down],center=true);
+
+        translate([-12-scout_body_back,0,-hangar_saucer_height/2-engine_saucer_h-engine_smaller_saucer_h+3])
+        cube([1.2*scout_width,.6*scout_width, 2.2*scout_body_down], center=true);
+        
+    }
 }
 
 module scout_saucer_minus() {
@@ -662,7 +745,7 @@ module mvm_transwarp_single() {
 }
 
 module mvm_scout_single() {
-    mvm_scout();
+    mvm_scout(engine_attached=false);
 }
 
 module mvm_half_separation() {
