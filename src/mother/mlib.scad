@@ -69,7 +69,8 @@ big_nacelle_up=12.5;
 big_nacelle_down=12.5;
 
 big_nacelle_loc_back=750/2 + 250;
-big_nacelle_loc_up=95;
+big_nacelle_loc_up=97;
+
 
 module mvm_hexagon() {
             translate([0,0,hangar_saucer_width-hangar_body_front_minus_up])

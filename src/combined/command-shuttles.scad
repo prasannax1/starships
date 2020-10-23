@@ -12,7 +12,7 @@ module command_shuttles(draw_ship=true) {
         mvm_command_single();
     }
     
-    translate([35,0,0]){
+    translate([40,0,0]){
         color("Chocolate")
         util_mirrored([0,1,0])
         repeat(2, tv=[18,0,0])
