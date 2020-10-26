@@ -3,7 +3,6 @@ use <../combined/multilib.scad>;
 
 show_nacelles=true;
 
-
 module saucer_shape(width, height, height_ext, depth, depth_ext) {
     difference() {
         util_ovoid(width/2,
@@ -31,7 +30,6 @@ module if_rotate(condition, rot_vector) {
         children();
     }
 }
-
 
 hangar_saucer_width = 750;
 hangar_saucer_height = 30;
@@ -247,8 +245,10 @@ engine_upper_disk_width=200;
 engine_upper_disk_height=15;
 
 module carrier_minus_engine() {
-    translate([0,0,-hangar_saucer_height/2]) 
-    cylinder(h=2*engine_upper_disk_height, d=engine_upper_disk_width, center=true);
+    translate([0,0,-hangar_saucer_height/2]) {
+        cylinder(h=20, d=200, center=true);
+        cylinder(h=26, d=80, center=true);
+    }
 }
 
 module mvm_engine(scout_attached=true, carrier_attached=true) {
@@ -352,24 +352,24 @@ module mvm_main_nacelle(w, pos) {
 
         translate([0,0,pos*main_nacelle_difference])
                 hull() {
-                    translate([-hangar_saucer_width/2-25,hangar_body_width/2.2,0])
+                    translate([-hangar_saucer_width/2,hangar_body_width/2.2,0])
                     sphere(w/2,$fn=16);
 
-                    translate([-hangar_saucer_width/2-175,hangar_body_width/2.4,0])
+                    translate([-hangar_saucer_width/2-200,hangar_body_width/2.4,0])
                     sphere(w/2,$fn=16);
 
-                    translate([-big_nacelle_loc_back+25,(hangar_saucer_width/2)-3*big_nacelle_width,big_nacelle_loc_up])
+                    translate([-big_nacelle_loc_back-75+50,(hangar_saucer_width/2)-3*big_nacelle_width,big_nacelle_loc_up])
                     sphere(w/2,$fn=16);
 
-                    translate([-big_nacelle_loc_back-25,(hangar_saucer_width/2)-3*big_nacelle_width,big_nacelle_loc_up])
+                    translate([-big_nacelle_loc_back-75-50,(hangar_saucer_width/2)-3*big_nacelle_width,big_nacelle_loc_up])
                     sphere(w/2,$fn=16);
                 }
                 
                 
 
-    translate([-big_nacelle_loc_back,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up+ pos*(big_nacelle_up+big_nacelle_down)]) {
+    translate([-big_nacelle_loc_back-75,(hangar_saucer_width/2)-2*big_nacelle_width,big_nacelle_loc_up+ pos*(big_nacelle_up+big_nacelle_down)]) {
                 
-            cube([120,2*big_nacelle_width+1,big_nacelle_up+big_nacelle_down+1],center=true);
+            cube([125,2*big_nacelle_width+1,big_nacelle_up+big_nacelle_down+1],center=true);
         }
     }
 }
