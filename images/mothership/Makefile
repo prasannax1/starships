@@ -8,7 +8,6 @@ IMG += transwarp-full.png
 IMG += half-separation.png 
 IMG += full-separation.png
 IMG += no-saucer.png
-IMG += no-carrier.png
 IMG += no-transwarp.png
 
 all: $(IMG)

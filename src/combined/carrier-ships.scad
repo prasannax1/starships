@@ -67,7 +67,7 @@ module saucer_ships(draw_ship=true) {
     repeat(5,tv=[30,0,0])
     translate([-300,25,0])
     rotate(90)
-    translate([100,0,75])
+    translate([75,0,75])
     tactical();
 
     color("LightCyan")
