@@ -1,5 +1,6 @@
 use <../lib/util.scad>;
 use <../combined/multilib.scad>;
+//use <../icp/yacht.scad>;
 
 show_nacelles=true;
 
@@ -414,21 +415,32 @@ command_nacelle_up=18;
 command_nacelle_down=1;
 
 
+
 module mvm_command(saucer_attached=true) {
-    translate([0,0,hangar_saucer_height/2+saucer_height])
+    translate([0,0,hangar_saucer_height/2+saucer_height]) {
     saucer_shape(command_width,command_height,command_height_ext,3,0);
+        
+    }
+    //translate([13.5,0,hangar_saucer_height/2+saucer_height-3])
+            //yacht();
+
+
+    translate([0,0,hangar_saucer_height/2+saucer_height+command_height])
+    cylinder(d=command_middle_width, h=2*command_middle_height, center=true);
 
     hull() {
         translate([0,0,hangar_saucer_height/2+saucer_height+command_height])
-        cylinder(d=command_middle_width, h=2*command_middle_height, center=true);
+        cylinder(d=command_impulse_width, h=2*command_middle_height, center=true);
 
         translate([-command_width/2,0,hangar_saucer_height/2+saucer_height+0.5*(command_height+command_middle_height)])
         cube([2,command_impulse_width,command_height+command_middle_height],center=true);
     }
 
     translate([0,0,hangar_saucer_height/2+saucer_height+command_height+command_middle_height])
+    scale([1,1,.25])
     rotate(45/2)
-    util_ovoid(command_bridge_width/2,command_bridge_width/2,command_bridge_width,command_bridge_height,1,faces=8);
+    //util_ovoid(command_bridge_width/2,command_bridge_width/2,command_bridge_width,command_bridge_height,1,faces=8);
+    sphere(command_bridge_width/2, $fn=8);
 
     difference() {
         mvm_command_body();
