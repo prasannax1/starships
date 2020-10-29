@@ -549,19 +549,17 @@ module mvm_escort(docked=true) {
 
 scout_width=100;
 scout_up=10;
-scout_up_ext=5;
+scout_up_ext=3;
 scout_body_front=50;
 scout_body_back=50;
-scout_body_width=25;
+scout_body_width=30;
 scout_body_up=10;
-scout_body_down=12.5;
+scout_body_down=15;
 scout_nacelle_front=25;
 scout_nacelle_back=100;
 scout_nacelle_up=7.5;
 scout_nacelle_down=7.5;
 scout_nacelle_width=15;
-
-
 
 module mvm_scout(engine_attached=true) {
     translate([scout_width,0,-hangar_saucer_height/2+.01-3]) mvm_scout_unpositioned(engine_attached=engine_attached);
@@ -571,12 +569,13 @@ module mvm_scout(engine_attached=true) {
 
 module mvm_scout_unpositioned(engine_attached=true) {
     saucer_shape(scout_width, scout_up, scout_up_ext, 1,0);
-    saucer_shape(scout_width/3,scout_up+3.3, 3.3, 3.3, 1);
+    saucer_shape(scout_width/3,scout_up+3.3, 3.3, 1,0);
+    saucer_shape(scout_width/4,1,0, 4,2);
 
 
     difference() {
         hull() {
-            util_nacelle(scout_body_front+scout_body_back, scout_body_width*1.25, scout_body_up* 1.58, curved=true, up=true);
+            util_nacelle(scout_body_front+scout_body_back, scout_body_width, scout_body_up* 1.58, curved=true, up=true);
 
             translate([-scout_width/2,0,0])
             util_ovoid(scout_body_front, scout_body_back, scout_body_width, 1, scout_body_down);
