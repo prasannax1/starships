@@ -1,7 +1,8 @@
 use <../lib/util.scad>;
 use <icp.scad>;
+use <../aux/hulls.scad>;
 
-module diplomat() {
+module diplomat_old() {
     icp_saucer_large();
     util_saucer(18,40,10);
     
@@ -35,6 +36,10 @@ module diplomat() {
     translate([-15,18,4])
     util_nacelle(40,8,8,curved=true);
     
+}
+
+module diplomat() {
+    diplomat_hull();
 }
 
 diplomat();

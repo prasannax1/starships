@@ -1,5 +1,6 @@
 use <../lib/util.scad>;
 use <icp.scad>;
+use <../aux/hulls.scad>;
 
 
 module model2() {
@@ -13,7 +14,7 @@ module model2() {
 }
 
 module attack() {
-    model2();
+    attack_hull_4();
 }
 
 attack();
