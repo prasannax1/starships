@@ -5,9 +5,7 @@ icp: attack.png \
     tactical-runabout.png \
     science.png \
     explorer.png \
-    destroyer.png \
     diplomat.png \
-    long-yacht.png \
     observer.png \
     yacht.png 
 
@@ -17,6 +15,7 @@ attack.png: ../../src/icp/attack.scad \
 	../../bin/render.sh \
 	    -i ../../src/icp/attack.scad \
 	    -p attack.png \
+	    -c "-17.27,0,0,42.4,0,308,279" \
 	    -t Sunset
 
 explorer.png: ../../src/icp/explorer.scad \
@@ -35,25 +34,11 @@ observer.png: ../../src/icp/observer.scad \
 	    -p observer.png \
 	    -t "Tomorrow Night"
 
-destroyer.png: ../../src/icp/destroyer.scad \
-    ../../src/lib/util.scad \
-    ../../src/icp/icp.scad
-	../../bin/render.sh \
-	    -i ../../src/icp/destroyer.scad \
-	    -p destroyer.png \
-	    -t Sunset
-
 yacht.png: ../../src/icp/yacht.scad ../../src/lib/util.scad 
 	../../bin/render.sh \
 	    -i ../../src/icp/yacht.scad \
 	    -p yacht.png \
 	    -t Starnight
-
-long-yacht.png: ../../src/icp/long-yacht.scad ../../src/lib/util.scad 
-	../../bin/render.sh \
-	    -i ../../src/icp/long-yacht.scad \
-	    -p long-yacht.png \
-	    -t DeepOcean
 
 runabout.png: ../../src/icp/runabout.scad ../../src/lib/util.scad
 	../../bin/render.sh \
