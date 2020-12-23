@@ -8,7 +8,7 @@ Star Trek type starships
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
-Trinity Class Multi-mission Deep Space Explorer/Heavy Carrier
+Trinity Class Multi-role Multi-mission Deep Space Explorer/Heavy Carrier
 
 ### Stats
 
@@ -52,7 +52,7 @@ The *Trinity Class* is enormous, at about a mile long, it's gigantic compared wi
 
 ### Structure
 
-The *Trinity* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Trinity. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
+The *Trinity* is an amalgamation of three ships which can operate independently but normally link up to join the Trinity. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
 
 #### Vishnu Class
 
@@ -87,12 +87,9 @@ The *Trinity* is an amalgamation of several smaller ships which can operate inde
    * Maximum: Warp 1.6
 
    
-At 750m long, the Vishnu class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the primary hull of the *Laxmi* class fits snugly.
+At 750m long, the Vishnu class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the secondary hull of the *Laxmi* class fits snugly.
 
-
-6 decks in the widest part of the saucer form the primary hangar of the *Vishnu* class which runs all the way through from fore to aft. There are 3 exits to the hangar, one in the front and two in the back, each 20m tall and 120m wide.
-
-Apart from the standard shuttlecraft and runabouts, the primary function of the *aviary* class is to carry a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
+In Hindu mythology Vishnu is said to carry his devotees - and similarly the Vishnu class is mainly built to carry people. As large as a small city, the Vishnu Class can carry entire colonies with all the equipment they need to get started.
 
 #### Laxmi Class
 
@@ -170,14 +167,11 @@ Like the Excelsior, the *Laxmi* class is used in mainly two ways:
    * Maximum: Warp 1.6
 
    
-At 750m long, the Shiva class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the primary hull of the *Laxmi* class fits snugly.
+Named after the God of Destruction, the Shiva class supercarrier (not to be confused with the obsolete Shiva class destroyer from more than a century ago) redefines the term super carrier.
 
+Apart from the standard shuttlecraft and runabouts, the fore hangar carries a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
 
-6 decks in the widest part of the saucer form the primary hangar of the *Shiva* class which runs all the way through from fore to aft. There are 3 exits to the hangar, one in the front and two in the back, each 20m tall and 120m wide.
-
-Apart from the standard shuttlecraft and runabouts, the primary function of the *aviary* class is to carry a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
-
-
+But what really sets this class apart is the aft hangar, which is about 400m long, 60m tall and 120m wide at the hangar doors. This means that full size starship like Intrepid and Prometheus classes can fit inside this hangar.
 
 #### Kali Class
 
@@ -205,7 +199,7 @@ Apart from the standard shuttlecraft and runabouts, the primary function of the 
    * Cruising: Warp 7
    * Maximum: Warp 9.5
 
-Under the secondary hull/*Brahma* class lies the Kali class which is a dedicated escort vessel for the *Trinity*.
+Under the aft hangar of the *Shiva* class lies the Kali class which is a dedicated escort vessel for the *Trinity*.
 
 The *Kali* class is a full size escort vessel twice as long the *Defiant* class and three times as powerful.
 
@@ -247,11 +241,9 @@ The *Kali* class is a full size escort vessel twice as long the *Defiant* class 
    * Maximum: Warp 9
    * Transwarp: TW10
 
-At more than a kilometer long, the Brahma is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Brahma is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
+In Hindu mythology Brahma is the God of creation. The *Brahma* class is the crucible of a lot of development with unprecedented number of science labs and experimental propulsions.
 
-In contrast with the *Vishnu* class, the *Brahma* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
-
-The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Brahma* is meant to the the testbed of experimental propulsion.
+The Brahma class provides transwarp propulsion to the *Trinity* class, but it can also act as a stand alone ship to taxi any other ship into transwarp - this is the main reason behind the extremely flat dorsal side of the secondary hull.
 
 
 #### Saraswati Class
@@ -294,10 +286,15 @@ At roughly the same size as a *Nova* class, the *Saraswati* class can be used as
 
 ### Multi vector mode
 
+![Half Separation](images/mothership/half-separation.png)
+
+
+The *Trinity* class also has the multivector mode where all three ships separate. This is generally the default mode in battle.
+
+If more multivector functionality is needed, the attached ships also separate:
+
 ![Full Separation](images/mothership/full-separation.png)
 
-
-The *Trinity* class also has the multivector mode where all the component ships separate. This is generally the default mode in battle.
 
 
 ## Auxillary craft
