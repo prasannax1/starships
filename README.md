@@ -56,7 +56,7 @@ The *Trinity* is an amalgamation of several smaller ships which can operate inde
 
 #### Vishnu Class
 
-![Saucer Section](images/mothership/saucer.png)
+![Saucer Section](images/mothership/saucer-full.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
@@ -137,83 +137,9 @@ Like the Excelsior, the *Laxmi* class is used in mainly two ways:
 
 ![Scout separation](images/mothership/command-separation.png)
 
-
-#### Brahma Class
-
-![Transwarp](images/mothership/transwarp.png)
-
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
-
-*Brahma class* Multimission Deep Space Explorer/ Heavy Experimental vessel/ Carrier
-
-##### Stats
-
- * Length: 1261m
- * Width: 649m
- * Height: 224m
- * Decks: 42
- * Crew Capacity:
-   * Minimum (skeleton): 5
-   * Minimum (sustainable): 100
-   * Typical: 400
-   * Maximum (all stations filled): 900
-   * Maximum (evacuation limit): 10000
- * Auxillary Craft
-   * *Vulture* class patrol vessels
-   * *Eagle* class light scouts
-   * *Dove* class diplomatic yachts
-   * *Defiant* Class escort vessels
-   * *Nova* Class science vessels
-   * Small starship under 200m long and under 40m high
- * Warp speed:
-   * Cruising: Warp 8
-   * Maximum: Warp 9
-   * Transwarp: TW10
-
-At more than a kilometer long, the Brahma is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Brahma is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
-
-In contrast with the *Vishnu* class, the *Brahma* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
-
-The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Brahma* is meant to the the testbed of experimental propulsion.
-
-
-#### Saraswati Class
-
-![Scout](images/mothership/scout.png)
-
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
-
-*Saraswati* Class Light cruiser
- 
-#### Stats
-
- * Length: 202m
- * Width: 100m
- * Height: 36m 
- * Decks: 9
- * Crew Capacity:
-   * Minimum (skeleton): 10
-   * Minimum (sustainable): 10
-   * Typical: 80
-   * Maximum (all stations filled): 100
-   * Maximum (evacuation limit): 500
- * Auxillary Craft
-   * *Bumblebee* class light shuttles
- * Warp speed:
-   * Cruising: Warp 6
-   * Maximum: Warp 9.7
-
-The *Saraswati* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Trinity* but it's a full fledged general purpose light cruiser.
-
-At roughly the same size as a *Nova* class, the *Saraswati* class can be used as an exploratory vessel, advanced scout, or as a Captain's yacht for diplomatic fucntions.
-
-##### Image showing launch of Saraswati class from Trinity
-
-![Scout separation](images/mothership/scout-separation.png)
-
 #### Shiva Class
 
-![Carrier Section](images/mothership/carrier.png)
+![Carrier Section](images/mothership/carrier-full.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
 
@@ -287,6 +213,82 @@ The *Kali* class is a full size escort vessel twice as long the *Defiant* class 
 ##### Image showing launch of Kali class from Trinity
 
 ![Escort Separation](images/mothership/escort-separation.png)
+
+
+#### Brahma Class
+
+![Transwarp](images/mothership/transwarp-full.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
+
+*Brahma class* Multimission Deep Space Explorer/ Heavy Experimental vessel/ Carrier
+
+##### Stats
+
+ * Length: 1261m
+ * Width: 649m
+ * Height: 224m
+ * Decks: 42
+ * Crew Capacity:
+   * Minimum (skeleton): 5
+   * Minimum (sustainable): 100
+   * Typical: 400
+   * Maximum (all stations filled): 900
+   * Maximum (evacuation limit): 10000
+ * Auxillary Craft
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dove* class diplomatic yachts
+   * *Defiant* Class escort vessels
+   * *Nova* Class science vessels
+   * Small starship under 200m long and under 40m high
+ * Warp speed:
+   * Cruising: Warp 8
+   * Maximum: Warp 9
+   * Transwarp: TW10
+
+At more than a kilometer long, the Brahma is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Brahma is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
+
+In contrast with the *Vishnu* class, the *Brahma* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
+
+The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Brahma* is meant to the the testbed of experimental propulsion.
+
+
+#### Saraswati Class
+
+![Scout](images/mothership/scout.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
+
+*Saraswati* Class Light cruiser
+ 
+#### Stats
+
+ * Length: 202m
+ * Width: 100m
+ * Height: 36m 
+ * Decks: 9
+ * Crew Capacity:
+   * Minimum (skeleton): 10
+   * Minimum (sustainable): 10
+   * Typical: 80
+   * Maximum (all stations filled): 100
+   * Maximum (evacuation limit): 500
+ * Auxillary Craft
+   * *Bumblebee* class light shuttles
+ * Warp speed:
+   * Cruising: Warp 6
+   * Maximum: Warp 9.7
+
+The *Saraswati* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Trinity* but it's a full fledged general purpose light cruiser.
+
+At roughly the same size as a *Nova* class, the *Saraswati* class can be used as an exploratory vessel, advanced scout, or as a Captain's yacht for diplomatic fucntions.
+
+##### Image showing launch of Saraswati class from Trinity
+
+![Scout separation](images/mothership/scout-separation.png)
+
+
 
 
 
