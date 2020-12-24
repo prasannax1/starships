@@ -15,7 +15,7 @@ Trinity Class Multi-role Multi-mission Deep Space Explorer/Heavy Carrier
  * Length: 1595m
  * Width: 746m
  * Height: 250m
- * Decks: 58
+ * Decks: 62
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
@@ -64,10 +64,10 @@ The *Trinity* is an amalgamation of three ships which can operate independently 
 
 ##### Stats
 
- * Length: 746m
- * Width: 746m
- * Height: 100m
- * Decks: 30
+ * Length: 1560m
+ * Width: 676m
+ * Height: 135
+ * Decks: 24
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 50
@@ -101,11 +101,10 @@ In Hindu mythology Vishnu is said to carry his devotees - and similarly the Vish
 
 #### Stats
 
- * Length: 445m
- * Width: 179m
- * Height: 81m (Nacelles up)
- * Height: 67m (Nacelles down)
- * Decks: 20 
+ * Length: 463m
+ * Width: 199m
+ * Height: 118m
+ * Decks: 18 
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 10
@@ -123,8 +122,6 @@ In Hindu mythology Vishnu is said to carry his devotees - and similarly the Vish
    * Maximum: Warp 9.7
 
 Ostensibly the *Laxmi* class is just the command section of the *Trinity* assembly. But The *Laxmi* class is a heavy cruiser comparable to the Excelsior in size and function.
-
-The *Laxmi* class has a variable geometry structure - The saucer section rises up by about 20m to allow the Laxmi to slide back from it's snug harness on top of the Vishnu. And the nacelles rise by upto 15 meters when the Laxmi class gets separated from the Vishnu.
 
 Like the Excelsior, the *Laxmi* class is used in mainly two ways:
  * As a control ship - the Laxmi class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Laxmi class has and the shuttlebay which can hold several fighter craft
@@ -144,10 +141,10 @@ Like the Excelsior, the *Laxmi* class is used in mainly two ways:
 
 ##### Stats
 
- * Length: 746m
+ * Length: 1595
  * Width: 746m
- * Height: 100m
- * Decks: 30
+ * Height: 127m
+ * Decks: 23
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 50
@@ -183,9 +180,9 @@ But what really sets this class apart is the aft hangar, which is about 400m lon
 
 #### stats
 
- * Length: 300m
- * Width: 155m
- * Height: 25m
+ * Length: 275m
+ * Width: 160m
+ * Height: 28m
  * Decks: 8
  * Crew Capacity:
    * Minimum: 5
@@ -219,10 +216,10 @@ The *Kali* class is a full size escort vessel twice as long the *Defiant* class 
 
 ##### Stats
 
- * Length: 1261m
- * Width: 649m
- * Height: 224m
- * Decks: 42
+ * Length: 1396m
+ * Width: 651m
+ * Height: 206m
+ * Decks: 39
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 100
@@ -256,10 +253,10 @@ The Brahma class provides transwarp propulsion to the *Trinity* class, but it ca
  
 #### Stats
 
- * Length: 202m
- * Width: 100m
+ * Length: 208m
+ * Width: 99m
  * Height: 36m 
- * Decks: 9
+ * Decks: 7
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 10
@@ -762,15 +759,15 @@ Raven Class Scientific Heavy Runabout
 
 ### Stats
 
- * Length:51m 
+ * Length:52m 
  * Width: 40m
- * Height: 14m
- * Decks: 3
+ * Height: 7m
+ * Decks: 2
  * Crew Capacity:
    * Minimum: 2
    * Typical: 10
    * Maximum: 200
- * Auxillary Craft: *Bumblebee* class shuttle
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -787,10 +784,6 @@ Like all ships of the ICP, the *Raven* lacks a true bridge, which is replaced by
 
 The front part of deck 1 has additional labs which require specialized instrumentation.
 
-#### Auxillary vehicles.
-
-The large aft cargo bay of the *Raven* is large enough to hold small to medium shuttles and frequently carries 1 *Bumblebee* class shuttle.
-
 
 ## Vulture Class
 
@@ -802,15 +795,15 @@ Vulture Class Light Corvette/Patrol Vessel
 
 ### Stats
 
- * Length: 82m
- * Width: 45m
- * Height: 15m
+ * Length: 99m
+ * Width: 41m
+ * Height: 13m
  * Decks: 3
  * Crew Capacity:
    * Minimum: 4
    * Typical: 12
    * Maximum: 56
- * Auxillary Craft: *Bumblebee* class shuttle
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9.95
@@ -841,8 +834,6 @@ The warp core of the *Vulture* is much more powerful than a ship of this size wo
 
 #### Note
 
-The cargo hold of the *Vulture* can also hold a *Bumblebee* class shuttle. However it rarely carries one due to mission profiles never needing (relatively) delicate shuttles.
-
 Both the *Raven* and the *Vulture* class are also called as ICP large chassis (scientific/tactical) vessels.
 
 ## Eagle Class
@@ -855,9 +846,9 @@ Eagle Class Light Scout
 
 ### Stats
 
- * Length:117m 
- * Width: 46m
- * Height: 17m
+ * Length:111m 
+ * Width: 40m
+ * Height: 18m
  * Decks: 4
  * Crew Capacity:
    * Minimum: 4
@@ -893,10 +884,10 @@ Dove Class Diplomatic Yacht/Light Courier
 
 ### Stats
 
- * Length: 94m
- * Width: 44m
+ * Length: 92m
+ * Width: 40m
  * Height: 16m
- * Decks: 4
+ * Decks: 3
  * Crew Capacity:
    * Minimum: 4
    * Typical: 10
