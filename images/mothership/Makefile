@@ -7,6 +7,9 @@ IMG += carrier-full.png
 IMG += transwarp-full.png 
 IMG += half-separation.png 
 IMG += full-separation.png
+IMG += transwarp-separation.png
+IMG += saucer-separation.png
+IMG += carrier-separation.png
 IMG += no-saucer.png
 IMG += no-transwarp.png
 
@@ -48,16 +51,40 @@ main.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
 
 saucer-full.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
     ../../src/mother/saucer-full.scad
+	../../bin/render.sh \
+	    -i ../../src/mother/saucer-full.scad \
+	    -p saucer-full.png \
+	    -t Tomorrow 
+
 
 carrier-full.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
     ../../src/mother/carrier-full.scad
+	../../bin/render.sh \
+	    -i ../../src/mother/carrier-full.scad \
+	    -p carrier-full.png \
+	    -t Tomorrow 
+
 
 transwarp-full.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
     ../../src/mother/transwarp-full.scad
+	../../bin/render.sh \
+	    -i ../../src/mother/transwarp-full.scad \
+	    -p transwarp-full.png \
+	    -t Tomorrow 
+
 
 half-separation.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
     ../../src/mother/half-separation.scad
 
 full-separation.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
     ../../src/mother/full-separation.scad
+
+carrier-separation.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
+    ../../src/mother/carrier-separation.scad
+
+saucer-separation.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
+    ../../src/mother/saucer-separation.scad
+
+transwarp-separation.png: ../../src/lib/util.scad ../../src/mother/mlib.scad \
+    ../../src/mother/transwarp-separation.scad
 
