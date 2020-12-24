@@ -132,7 +132,7 @@ Like the Excelsior, the *Laxmi* class is used in mainly two ways:
  
 ##### Image showing launch of Laxmi class from Trinity
 
-![Scout separation](images/mothership/command-separation.png)
+![Scout separation](images/mothership/saucer-separation.png)
 
 #### Shiva Class
 
@@ -206,7 +206,7 @@ The *Kali* class is a full size escort vessel twice as long the *Defiant* class 
 
 ##### Image showing launch of Kali class from Trinity
 
-![Escort Separation](images/mothership/escort-separation.png)
+![Escort Separation](images/mothership/carrier-separation.png)
 
 
 #### Brahma Class
@@ -278,7 +278,7 @@ At roughly the same size as a *Nova* class, the *Saraswati* class can be used as
 
 ##### Image showing launch of Saraswati class from Trinity
 
-![Scout separation](images/mothership/scout-separation.png)
+![Scout separation](images/mothership/transwarp-separation.png)
 
 
 
