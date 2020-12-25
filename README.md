@@ -630,7 +630,7 @@ Magpie Class Scientific Heavy Runabout
    * Minimum: 1
    * Typical: 5
    * Maximum: 100
- * Auxillary Craft: *Honeybee* class shuttle
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -645,9 +645,6 @@ The cockpit is in the front which contains the main consoles, transporter and re
 
 Descending down into the cargo hold, we see the doors connecting to the half second deck underneath the main deck. The center of this is occupied by a horizontal warp core, with additional modular units on the sides. 
 
-#### Note on auxillary vehicles
-
-The cargo hold of the *Magpie* is big enough to hold land vehicle - or even a small shuttle although it would be a tight fit. To facilitate this, the cargo bay of the *Magpie* is equipped with semi-permeable shields.
 
 
 ## Hawk Class
@@ -668,7 +665,7 @@ Hawk Class tactical runabout
    * Minimum: 1
    * Typical: 2
    * Maximum: 50
- * Auxillary Craft: *Honeybee* class shuttlepod
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 5.2
    * Maximum: Warp 8.7
