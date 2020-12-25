@@ -9,6 +9,6 @@ use <../mother/mlib.scad>;
 use <odyssey.scad>;
 
 
-mvm_transwarp();
+mvm_transwarp_single();
 
-translate([200,0,270]) odyssey();
+translate([0,0,200]) odyssey();

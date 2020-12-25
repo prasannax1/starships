@@ -9,6 +9,7 @@ use <../mother/mlib.scad>;
 use <excelsior.scad>;
 
 
-mvm_command();
+translate([0,0,-90])
+mvm_command_single();
 
 translate([0,0,120]) excelsior();

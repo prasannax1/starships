@@ -1,7 +1,8 @@
 use <../lib/util.scad>;
 use <icp.scad>;
+use <../aux/hulls.scad>;
 
-module explorer() {
+module explorer_old() {
     icp_saucer_large();
     util_saucer(18,40,10);
     
@@ -39,6 +40,10 @@ module explorer() {
     translate([-25,18,6])
     util_nacelle(54,10,6,curved=true);
     
+}
+
+module explorer() {
+    explorer_hull();
 }
 
 explorer();

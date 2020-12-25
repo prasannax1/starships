@@ -9,6 +9,6 @@ use <../mother/mlib.scad>;
 use <defiant.scad>;
 
 
-render() mvm_escort();
+translate([725,0,0]) mvm_escort_single();
 
 translate([75,0,50]) defiant();

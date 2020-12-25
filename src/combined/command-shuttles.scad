@@ -8,14 +8,15 @@ use <multilib.scad>;
 module command_shuttles(draw_ship=true) {
     if (draw_ship ==true) {
         color("SlateGray")
-        mvm_command();
+        translate([0,0,-80])
+        mvm_command_single();
     }
     
-    translate([50,0,0]){
+    translate([40,0,0]){
         color("Chocolate")
         util_mirrored([0,1,0])
-        repeat(3, tv=[18,0,0])
-        translate([-215,-7.5,15]) 
+        repeat(2, tv=[18,0,0])
+        translate([-200,-7.5,15]) 
         rotate(90) macs_fighter();
 
         color("Gold") {

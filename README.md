@@ -2,20 +2,20 @@
 
 Star Trek type starships
 
-## Exodus Class
+## Trinity Class
 
 ![Mother Ship](images/mothership/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
-Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
+Trinity Class Multi-role Multi-mission Deep Space Explorer/Heavy Carrier
 
 ### Stats
 
  * Length: 1595m
  * Width: 746m
  * Height: 250m
- * Decks: 58
+ * Decks: 62
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 113
@@ -45,29 +45,29 @@ Exodus Class Multi-mission Deep Space Explorer/Heavy Carrier
 
 ### Description
 
-The *Exodus Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
+The *Trinity Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
 
-The *Exodus Class* is enormous, at about a mile long, it's gigantic compared with even regular large ships.
+The *Trinity Class* is enormous, at about a mile long, it's gigantic compared with even regular large ships.
 
 
 ### Structure
 
-The *Exodus* is an amalgamation of several smaller ships which can operate independently but normally link up to join the Exodus. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
+The *Trinity* is an amalgamation of three ships which can operate independently but normally link up to join the Trinity. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
 
-#### Aviary Class
+#### Vishnu Class
 
-![Saucer Section](images/mothership/saucer.png)
+![Saucer Section](images/mothership/saucer-full.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
-*Aviary Class* Mobile starbase/Heavy Carrier
+*Vishnu Class* Mobile starbase/Colony Transporter
 
 ##### Stats
 
- * Length: 746m
- * Width: 746m
- * Height: 100m
- * Decks: 30
+ * Length: 1560m
+ * Width: 676m
+ * Height: 135
+ * Decks: 24
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 50
@@ -87,27 +87,139 @@ The *Exodus* is an amalgamation of several smaller ships which can operate indep
    * Maximum: Warp 1.6
 
    
-At 750m long, the Aviary class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the primary hull of the *Photon* class fits snugly.
+At 750m long, the Vishnu class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the secondary hull of the *Laxmi* class fits snugly.
 
+In Hindu mythology Vishnu is said to carry his devotees - and similarly the Vishnu class is mainly built to carry people. As large as a small city, the Vishnu Class can carry entire colonies with all the equipment they need to get started.
 
-6 decks in the widest part of the saucer form the primary hangar of the *Aviary* class which runs all the way through from fore to aft. There are 3 exits to the hangar, one in the front and two in the back, each 20m tall and 120m wide.
+#### Laxmi Class
 
-Apart from the standard shuttlecraft and runabouts, the primary function of the *aviary* class is to carry a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
+![Command](images/mothership/command.png)
 
-#### Mjolnir Class
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
 
-![Transwarp](images/mothership/transwarp.png)
+*Laxmi Class* heavy cruiser/ multimission explorer
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
+#### Stats
 
-*Mjolnir class* Multimission Deep Space Explorer/ Heavy Experimental vessel/ Carrier
+ * Length: 463m
+ * Width: 199m
+ * Height: 118m
+ * Decks: 18 
+ * Crew Capacity:
+   * Minimum (skeleton): 10
+   * Minimum (sustainable): 10
+   * Typical: 200
+   * Maximum (all stations filled): 500
+   * Maximum (evacuation limit): 5000
+ * Auxillary Craft
+   * *Black Widow* class fighters
+   * *Hornet* class heavy shuttles
+   * *Wasp* class shuttles
+   * *Dragonfly* class warp tugs
+   * *Bumblebee* class light shuttles
+ * Warp speed:
+   * Cruising: Warp 6
+   * Maximum: Warp 9.7
+
+Ostensibly the *Laxmi* class is just the command section of the *Trinity* assembly. But The *Laxmi* class is a heavy cruiser comparable to the Excelsior in size and function.
+
+Like the Excelsior, the *Laxmi* class is used in mainly two ways:
+ * As a control ship - the Laxmi class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Laxmi class has and the shuttlebay which can hold several fighter craft
+ * As a flagship - the bridge of the Laxmi Class is also the main bridge of the Trinity class when fully assembled. When disassembled, the Laxmi class is the flagship of the Trinity mini-fleet.
+ 
+##### Image showing launch of Laxmi class from Trinity
+
+![Scout separation](images/mothership/saucer-separation.png)
+
+#### Shiva Class
+
+![Carrier Section](images/mothership/carrier-full.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
+
+*Shiva Class* Super Carrier
 
 ##### Stats
 
- * Length: 1261m
- * Width: 649m
- * Height: 224m
- * Decks: 42
+ * Length: 1595
+ * Width: 746m
+ * Height: 127m
+ * Decks: 23
+ * Crew Capacity:
+   * Minimum (skeleton): 5
+   * Minimum (sustainable): 50
+   * Typical: 2500
+   * Maximum (all stations filled): 10000
+   * Maximum (evacuation limit): 75000
+ * Auxillary Craft
+   * *Magpie* class runabouts
+   * *Hawk* class tactical runabouts
+   * *Vulture* class patrol vessels
+   * *Eagle* class light scouts
+   * *Dove* class diplomatic yachts
+   * *Bumblebee* class light shuttles
+   * *Snow Owl* class yachts
+ * Warp speed:
+   * Cruising: Warp 1.2
+   * Maximum: Warp 1.6
+
+   
+Named after the God of Destruction, the Shiva class supercarrier (not to be confused with the obsolete Shiva class destroyer from more than a century ago) redefines the term super carrier.
+
+Apart from the standard shuttlecraft and runabouts, the fore hangar carries a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
+
+But what really sets this class apart is the aft hangar, which is about 400m long, 60m tall and 120m wide at the hangar doors. This means that full size starship like Intrepid and Prometheus classes can fit inside this hangar.
+
+#### Kali Class
+
+![Escort](images/mothership/escort.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
+
+*Kali* class destroyer
+
+#### stats
+
+ * Length: 275m
+ * Width: 160m
+ * Height: 28m
+ * Decks: 8
+ * Crew Capacity:
+   * Minimum: 5
+   * Typical: 20
+   * Maximum: 150
+ * Auxillary Craft:
+   * *Bumblebee* class light shuttles
+   * *Hornet* class heavy shuttles
+   * *Hawk* class Tactical runabouts
+ * Warp Speed:
+   * Cruising: Warp 7
+   * Maximum: Warp 9.5
+
+Under the aft hangar of the *Shiva* class lies the Kali class which is a dedicated escort vessel for the *Trinity*.
+
+The *Kali* class is a full size escort vessel twice as long the *Defiant* class and three times as powerful.
+
+
+##### Image showing launch of Kali class from Trinity
+
+![Escort Separation](images/mothership/carrier-separation.png)
+
+
+#### Brahma Class
+
+![Transwarp](images/mothership/transwarp-full.png)
+
+[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
+
+*Brahma class* Multimission Deep Space Explorer/ Heavy Experimental vessel/ Carrier
+
+##### Stats
+
+ * Length: 1396m
+ * Width: 651m
+ * Height: 206m
+ * Decks: 39
  * Crew Capacity:
    * Minimum (skeleton): 5
    * Minimum (sustainable): 100
@@ -126,69 +238,25 @@ Apart from the standard shuttlecraft and runabouts, the primary function of the 
    * Maximum: Warp 9
    * Transwarp: TW10
 
-At more than a kilometer long, the Mjolnir is so big that you can't believe it's meant to operate as only part of a starship. And indeed, the Mjolnir is by itself a complete multimission explorer that can compete with the Galaxy or a Sovereign Class.
+In Hindu mythology Brahma is the God of creation. The *Brahma* class is the crucible of a lot of development with unprecedented number of science labs and experimental propulsions.
 
-In contrast with the *Aviary* class, the *Mjolnir* is almost entirely secondary hull, with the main saucer fused into the engineering section. The aft part of the upper hull is a massive hangar which can hold anything from several fighter craft, to a squadron of light escort vessels like the Vulture Class, to even a Defiant or a Nova class and equivalents.
+The Brahma class provides transwarp propulsion to the *Trinity* class, but it can also act as a stand alone ship to taxi any other ship into transwarp - this is the main reason behind the extremely flat dorsal side of the secondary hull.
 
-The aft half of the ship is composed of the two massive warp coils of the ship. Like the *Excelsior* a century ago, the *Mjolnir* is meant to the the testbed of experimental propulsion.
 
-#### Photon Class
-
-![Command](images/mothership/command.png)
-
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
-
-*Photon Class* heavy cruiser/ multimission explorer
-
-#### Stats
-
- * Length: 445m
- * Width: 179m
- * Height: 81m (Nacelles up)
- * Height: 67m (Nacelles down)
- * Decks: 20 
- * Crew Capacity:
-   * Minimum (skeleton): 10
-   * Minimum (sustainable): 10
-   * Typical: 200
-   * Maximum (all stations filled): 500
-   * Maximum (evacuation limit): 5000
- * Auxillary Craft
-   * *Black Widow* class fighters
-   * *Hornet* class heavy shuttles
-   * *Wasp* class shuttles
-   * *Dragonfly* class warp tugs
-   * *Bumblebee* class light shuttles
- * Warp speed:
-   * Cruising: Warp 6
-   * Maximum: Warp 9.7
-
-Ostensibly the *Photon* class is just the command section of the *Exodus* assembly. But The *Photon* class is a heavy cruiser comparable to the Excelsior in size and function.
-
-The *Photon* class has a variable geometry structure - The saucer section rises up by about 20m to allow the Photon to slide back from it's snug harness on top of the Aviary. And the nacelles rise by upto 15 meters when the Photon class gets separated from the Aviary.
-
-Like the Excelsior, the *Photon* class is used in mainly two ways:
- * As a control ship - the Photon class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Photon class has and the shuttlebay which can hold several fighter craft
- * As a flagship - the bridge of the Photon Class is also the main bridge of the Exodus class when fully assembled. When disassembled, the Photon class is the flagship of the Exodus mini-fleet.
- 
-##### Image showing launch of Photon class from Exodus
-
-![Scout separation](images/mothership/command-separation.png)
-
-#### Eager Class
+#### Saraswati Class
 
 ![Scout](images/mothership/scout.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
 
-*Eager* Class Light cruiser
+*Saraswati* Class Light cruiser
  
 #### Stats
 
- * Length: 202m
- * Width: 100m
+ * Length: 208m
+ * Width: 99m
  * Height: 36m 
- * Decks: 9
+ * Decks: 7
  * Crew Capacity:
    * Minimum (skeleton): 10
    * Minimum (sustainable): 10
@@ -201,91 +269,34 @@ Like the Excelsior, the *Photon* class is used in mainly two ways:
    * Cruising: Warp 6
    * Maximum: Warp 9.7
 
-The *Eager* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Exodus* but it's a full fledged general purpose light cruiser.
+The *Saraswati* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Trinity* but it's a full fledged general purpose light cruiser.
 
-At roughly the same size as a *Nova* class, the *Eager* class can be used as an exploratory vessel, advanced scout, or as a Captain's yacht for diplomatic fucntions.
+At roughly the same size as a *Nova* class, the *Saraswati* class can be used as an exploratory vessel, advanced scout, or as a Captain's yacht for diplomatic fucntions.
 
-##### Image showing launch of Eager class from Exodus
+##### Image showing launch of Saraswati class from Trinity
 
-![Scout separation](images/mothership/scout-separation.png)
-
-
-#### Bat Class
-
-![Escort](images/mothership/escort.png)
-
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
-
-*Bat* class destroyer
-
-#### stats
-
- * Length: 300m
- * Width: 155m
- * Height: 25m
- * Decks: 8
- * Crew Capacity:
-   * Minimum: 5
-   * Typical: 20
-   * Maximum: 150
- * Auxillary Craft:
-   * *Bumblebee* class light shuttles
-   * *Hornet* class heavy shuttles
-   * *Hawk* class Tactical runabouts
- * Warp Speed:
-   * Cruising: Warp 7
-   * Maximum: Warp 9.5
-
-Under the secondary hull/*Mjolnir* class lies the Bat class which is a dedicated escort vessel for the *Exodus*.
-
-The *Bat* class is a full size escort vessel twice as long the *Defiant* class and three times as powerful.
+![Scout separation](images/mothership/transwarp-separation.png)
 
 
-##### Image showing launch of Bat class from Exodus
-
-![Escort Separation](images/mothership/escort-separation.png)
-
-### Saucer separation
-
-The *Exodus* class has two modes of saucer separation
-
-#### Normal mode
-
-![Normal Separation](images/mothership/normal-separation.png)
 
 
-This is similar to the saucer separation of other large starship. The ship separates into two sections
- - The Saucer section with the *Aviary*, *Photon* and *Eager* parts
- - The engineering section which is just the *Mjolnir* and *Bat* class
- 
-#### Battle Mode
-
-![Battle Separation](images/mothership/battle-separation.png)
-
-
-Here the *Photon* class remains with the secondary hull, making the two sections as
- - The saucer section with the *Aviary* and *Eager* classes
- - The Battle section with the *Mjolnir*, *Bat* and the *Photon* classes
- 
-Even if both the *Mjolnir* and *Photon* classes are classified as general purpose explorers, the combination of the two makes for a formidable battle cruiser:
-
-![Battle Cruiser](images/mothership/transwarp-full.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp-full.stl)
 
 ### Multi vector mode
+
+![Half Separation](images/mothership/half-separation.png)
+
+
+The *Trinity* class also has the multivector mode where all three ships separate. This is generally the default mode in battle.
+
+If more multivector functionality is needed, the attached ships also separate:
 
 ![Full Separation](images/mothership/full-separation.png)
 
 
-The *Exodus* class also has the multivector mode where all the component ships separate. This is generally the default mode in battle.
-
-One of the drawbacks of early multivector ships was that if one of the middle vectors is destroyed or disabled, the whole ship is disabled because the extreme vectors cannot attach to each other. The *Exodus* doesn't have this problem as the *Photon* class can attach to both the *Aviary* and the *Mjolnir* classes.
-
 
 ## Auxillary craft
 
-The *Exodus* is home to two separate families of auxillary craft.
+The *Trinity* is home to two separate families of auxillary craft.
 
 # MACS
 
@@ -321,7 +332,7 @@ The Bumblebee class shuttle is the foundation of the MACS program. Not only is i
 
 ### Structure
 
-The Bumblebee is approximately the size of a Type 6 shuttlecraft and is used as replacement for the Type 6 on various ships (but not on the *Exodus*; we'll come to that later). Keeping in with the stated aims of the MACS program, it has much better armor and can take enough punishment to destroy the Type 6 ten times over. 
+The Bumblebee is approximately the size of a Type 6 shuttlecraft and is used as replacement for the Type 6 on various ships (but not on the *Trinity*; we'll come to that later). Keeping in with the stated aims of the MACS program, it has much better armor and can take enough punishment to destroy the Type 6 ten times over. 
 
 Also in keeping with the modularity aim of MACS, apart from the two seats for pilot and co-pilot, all parts of the Bumblebee's interior can be swapped out. Right behind the cockpit area are two alcoves to the side which can be configured as replicators, weapons lockers, lavatories or just plain exits - the last one being particularly useful when the standard exit of the shuttle (at the rear) is blocked by additional modules.
 
@@ -527,7 +538,7 @@ Nightingale Class Heavy Medevac Runabout
    
 ### Description
 
-The *Nightingale* is not a true member of the MACS family, although it is built from the standard MACS components. It was built specifically as a medevac vehicle for the *Exodus*, although it has since found use in a variety of ships and stations.
+The *Nightingale* is not a true member of the MACS family, although it is built from the standard MACS components. It was built specifically as a medevac vehicle for the *Trinity*, although it has since found use in a variety of ships and stations.
 
 ### Structure
 
@@ -542,7 +553,7 @@ Apart from containing independent gravity and environment controls, the disk als
   * Medical transporters with highly sensitive biofilters
   * Holo-emitters spanning the entire breadth of the disk capable of projecting 6 independent EMH
 
-Even though the *Nightingale* is supposed to just carry patients from affected areas to the main hospital decks of the *Exodus*, the *Nightingale* by itself acts as a fully capable small hospital.
+Even though the *Nightingale* is supposed to just carry patients from affected areas to the main hospital decks of the *Trinity*, the *Nightingale* by itself acts as a fully capable small hospital.
 
 Regarding the ship itself, there's a second MACS *Bumblebee* module attached to the rear of the large warp harness. This can be used as a secondary command module, and given that it has been configured to detach and re-attach to the harness without requiring an engineering team, can also be used as an auxillary vehicle for the *Nightingale* itself.
 
@@ -619,7 +630,7 @@ Magpie Class Scientific Heavy Runabout
    * Minimum: 1
    * Typical: 5
    * Maximum: 100
- * Auxillary Craft: *Honeybee* class shuttle
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -634,14 +645,11 @@ The cockpit is in the front which contains the main consoles, transporter and re
 
 Descending down into the cargo hold, we see the doors connecting to the half second deck underneath the main deck. The center of this is occupied by a horizontal warp core, with additional modular units on the sides. 
 
-#### Note on auxillary vehicles
-
-The cargo hold of the *Magpie* is big enough to hold land vehicle - or even a small shuttle although it would be a tight fit. To facilitate this, the cargo bay of the *Magpie* is equipped with semi-permeable shields.
 
 
 ## Hawk Class
 
-![Tactical Runabout](images/icp/tactical-shuttle.png)
+![Tactical Runabout](images/icp/tactical-runabout.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/tactical-runabout.stl)
 
@@ -657,7 +665,7 @@ Hawk Class tactical runabout
    * Minimum: 1
    * Typical: 2
    * Maximum: 50
- * Auxillary Craft: *Honeybee* class shuttlepod
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 5.2
    * Maximum: Warp 8.7
@@ -748,15 +756,15 @@ Raven Class Scientific Heavy Runabout
 
 ### Stats
 
- * Length:51m 
+ * Length:52m 
  * Width: 40m
- * Height: 14m
- * Decks: 3
+ * Height: 7m
+ * Decks: 2
  * Crew Capacity:
    * Minimum: 2
    * Typical: 10
    * Maximum: 200
- * Auxillary Craft: *Bumblebee* class shuttle
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 4
    * Maximum: Warp 8.5
@@ -773,10 +781,6 @@ Like all ships of the ICP, the *Raven* lacks a true bridge, which is replaced by
 
 The front part of deck 1 has additional labs which require specialized instrumentation.
 
-#### Auxillary vehicles.
-
-The large aft cargo bay of the *Raven* is large enough to hold small to medium shuttles and frequently carries 1 *Bumblebee* class shuttle.
-
 
 ## Vulture Class
 
@@ -788,15 +792,15 @@ Vulture Class Light Corvette/Patrol Vessel
 
 ### Stats
 
- * Length: 82m
- * Width: 45m
- * Height: 15m
+ * Length: 99m
+ * Width: 41m
+ * Height: 13m
  * Decks: 3
  * Crew Capacity:
    * Minimum: 4
    * Typical: 12
    * Maximum: 56
- * Auxillary Craft: *Bumblebee* class shuttle
+ * Auxillary Craft: None
  * Warp Speed:
    * Cruising: Warp 7
    * Maximum: Warp 9.95
@@ -827,8 +831,6 @@ The warp core of the *Vulture* is much more powerful than a ship of this size wo
 
 #### Note
 
-The cargo hold of the *Vulture* can also hold a *Bumblebee* class shuttle. However it rarely carries one due to mission profiles never needing (relatively) delicate shuttles.
-
 Both the *Raven* and the *Vulture* class are also called as ICP large chassis (scientific/tactical) vessels.
 
 ## Eagle Class
@@ -841,9 +843,9 @@ Eagle Class Light Scout
 
 ### Stats
 
- * Length:117m 
- * Width: 46m
- * Height: 17m
+ * Length:111m 
+ * Width: 40m
+ * Height: 18m
  * Decks: 4
  * Crew Capacity:
    * Minimum: 4
@@ -858,7 +860,7 @@ Eagle Class Light Scout
 
 The ICP Large chassis was so effective that it was used in two more vessels.
 
-The *Eagle* is meant to carry out independent missions, and only uses the *Exodus* for its transwarp engine.
+The *Eagle* is meant to carry out independent missions, and only uses the *Trinity* for its transwarp engine.
 
 ### Structure
 
@@ -879,10 +881,10 @@ Dove Class Diplomatic Yacht/Light Courier
 
 ### Stats
 
- * Length: 94m
- * Width: 44m
+ * Length: 92m
+ * Width: 40m
  * Height: 16m
- * Decks: 4
+ * Decks: 3
  * Crew Capacity:
    * Minimum: 4
    * Typical: 10
@@ -894,7 +896,7 @@ Dove Class Diplomatic Yacht/Light Courier
 
 ### Description
 
-Sometimes the *Eager* class is too overpowered for missions that require a Captain's yacht or a diplomatic vessel. For these occasions, we have the *dove* class
+Sometimes the *Saraswati* class is too overpowered for missions that require a Captain's yacht or a diplomatic vessel. For these occasions, we have the *dove* class
 
 ### Structure
 
@@ -907,16 +909,20 @@ The engineering section contains the main warp core and transporters.
 
 ## Scale of ships
 
-At almost a mile long the *Exodus* class is in a class of its own, even compared with other "large" ships:
+At almost a mile long the *Trinity* class is in a class of its own, even compared with other "large" ships:
 
 
 ##### Comparison with known ships
 
 ![Standard Comparison](images/scale/scale-standard.png)
 
-##### Comparison with Galaxy and Sovereign Class
+##### Comparison with Galaxy Class
 
 ![Saucer Comparison](images/scale/scale-saucer.png)
+
+##### Comparison with Sovereign Class
+
+![Carrier Comparison](images/scale/scale-carrier.png)
 
 ##### Comparison with Odyssey Class
 
@@ -935,35 +941,33 @@ At almost a mile long the *Exodus* class is in a class of its own, even compared
 ![EScort comparison](images/scale/scale-escort.png)
 
 
-The *Exodus* looks even more gigantic compared with the auxillary ships it carries
+The *Trinity* looks even more gigantic compared with the auxillary ships it carries
 
-##### All auxillary ships
-
-![Mother Ships](images/combined/scale.png)
-
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/combined/mother-ships.stl)
-
-##### Auxillary ships in Photon class
+##### Auxillary ships in Laxmi class
 
 ![Command Ships](images/combined/command.png)
 
-##### Auxillary ships in Eager Class
+##### Auxillary ships in Saraswati Class
 
 ![Scout ships](images/combined/scout.png)
 
-##### Auxillary ships in the Bat Class
+##### Auxillary ships in the Kali Class
 
 ![Escort Ships](images/combined/escort.png)
 
-##### Auxillary ships in the Aviary Class
+##### Auxillary ships in the Vishnu Class
 
-![Suacer Ships](images/combined/saucer.png)
+![Saucer Ships](images/combined/saucer.png)
 
-##### Auxillary ships in the Mjolnir class
+##### Auxillary ships in the Shiva Class
 
-![Transarp SHips](images/combined/transwarp.png)
+![Carrier Ships](images/combined/carrier.png)
 
-##### Shuttles in Auxillary (ICP) ships
+##### Auxillary ships in the Brahma class
+
+![Transwarp Ships](images/combined/transwarp.png)
+
+##### Shuttles in Auxillary (ICP) ships 
 
 ![Aux Shuttles](images/combined/auxillary.png)
 
