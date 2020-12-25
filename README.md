@@ -967,7 +967,7 @@ The *Trinity* looks even more gigantic compared with the auxillary ships it carr
 
 ![Transwarp Ships](images/combined/transwarp.png)
 
-##### Shuttles in Auxillary (ICP) ships (OUTDATED:FIXME)
+##### Shuttles in Auxillary (ICP) ships 
 
 ![Aux Shuttles](images/combined/auxillary.png)
 
