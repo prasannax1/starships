@@ -649,7 +649,7 @@ Descending down into the cargo hold, we see the doors connecting to the half sec
 
 ## Hawk Class
 
-![Tactical Runabout](images/icp/tactical-shuttle.png)
+![Tactical Runabout](images/icp/tactical-runabout.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/tactical-runabout.stl)
 
@@ -967,7 +967,7 @@ The *Trinity* looks even more gigantic compared with the auxillary ships it carr
 
 ![Transwarp Ships](images/combined/transwarp.png)
 
-##### Shuttles in Auxillary (ICP) ships
+##### Shuttles in Auxillary (ICP) ships (OUTDATED:FIXME)
 
 ![Aux Shuttles](images/combined/auxillary.png)
 
