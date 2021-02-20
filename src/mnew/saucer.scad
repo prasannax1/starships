@@ -3,6 +3,13 @@ include <global_vars.scad>;
 include <transwarp_lib.scad>;
 include <saucer_lib.scad>;
 include <scout_lib.scad>;
+//use <transwarp.scad>;
+//use <command.scad>;
+//use <scout.scad>;
+//
+//tw();
+//cm_pos();
+//sc_pos();
 
 module sauc_pos() {
     translate([big_disk_width/2,0,engine_rear_height_offset+neck_height-saucer_height+.01])
@@ -10,15 +17,30 @@ module sauc_pos() {
 
 
 
-    intersection() {
-        scale([.99,5,1]) tw_neck();
-
-        translate([0,0,engine_rear_height_offset+neck_height-saucer_height/2])
-        cube([500,500,saucer_height], center=true);
-    }
+//    intersection() {
+//        scale([.99,5,1]) tw_neck();
+//
+//        translate([0,0,engine_rear_height_offset+neck_height-saucer_height/2])
+//        cube([500,500,saucer_height], center=true);
+//    }
     
     sauc_nacelle_assembly();
+    
+
+    difference() {
+        translate([0,0,neck_height-saucer_height/2-saucer_neck_height])
+        util_ovoid(saucer_neck_length*1.2, 20, saucer_neck_width*2, saucer_height*1.5, 5);
+
+        translate([big_disk_width/2,0,0])
+        cylinder(d=saucer_engine_width*1.1, h=1000, center=true);
+    }
+    
+    translate([40,0,neck_height-saucer_height/2-saucer_neck_height+5])
+    cube([50,350,7], center=true);
 }
+
+
+
 
 module sauc_unpos() {
     difference() {
@@ -41,7 +63,7 @@ module sauc_single() {
     sauc_final(tw_attached=false, sc_attached=false);
 }
 
-sauc_single();
+sauc_final();
 
 module sauc_final(tw_attached=true, sc_attached=true) {
     difference() {
@@ -72,13 +94,16 @@ module sauc_final(tw_attached=true, sc_attached=true) {
 
 module sauc_nacelle_assembly() {
     util_mirrored([0,1,0]) {
-        translate([nacelle_length/2, neck_width*2.5-nacelle_width_back/2,engine_rear_height_offset+neck_height-saucer_height-nacelle_height])
+        translate([nacelle_length/2+40, neck_width*3.2,engine_rear_height_offset+neck_height-saucer_height-nacelle_height*1.2])
         sauc_nacelle();
 
-        translate([0, neck_width*2.5-nacelle_width_back/2,engine_rear_height_offset+neck_height-saucer_height-nacelle_height+15])
-        scale([2,1,1])
-        cylinder(h=30,r=10,center=true);
-    }
+//        translate([0, neck_width*2.5-nacelle_width_back/2,engine_rear_height_offset+neck_height-saucer_height-nacelle_height+15])
+//        scale([2,1,1])
+//        cylinder(h=30,r=10,center=true);
+   }
+   
+   
+   
 }
 
 module sauc_nacelle() {

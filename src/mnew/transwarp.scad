@@ -1,6 +1,7 @@
 use <../lib/util.scad>;
 include <global_vars.scad>;
 include <transwarp_lib.scad>;
+include <command_lib.scad>;
 
 module tw_body() {
     difference() {
@@ -43,29 +44,48 @@ module tw_body() {
 }
 
 module tw_disk() {
-    translate([big_disk_width/2, 0, engine_rear_height_offset+neck_height])
     difference() {
-        util_saucer(disk_width,disk_width,disk_h_over);
+        union() {
+            translate([big_disk_width/2, 0, engine_rear_height_offset+neck_height])
+            difference() {
+                util_saucer(disk_width,disk_width,disk_h_over);
 
-        translate([0,0,200+disk_height])
-        cube(400,center=true);
+                translate([0,0,200+disk_height])
+                cube(400,center=true);
+                
+
+            }
+
+            difference() {
+                translate([engine_front,0,engine_rear_height_offset+neck_height])
+                scale([1,1,.4])
+                rotate([0,90,0])
+                cylinder(d=disk_neck_width,h=disk_width*1.1,center=true);
+
+                translate([engine_front,0,engine_rear_height_offset+neck_height+disk_height+250])
+                cube(500,center=true);
+
+                translate([engine_front,0,engine_rear_height_offset+neck_height-250-.01])
+                cube(500,center=true);
+                
+                translate([-40,0,engine_rear_height_offset+neck_height])
+                rotate([90,0,0])
+                cylinder(r=40,h=200,$fn=6,center=true);
+            }
+        }
+        tw_cm_minus();
     }
+}
 
-    difference() {
-        translate([engine_front,0,engine_rear_height_offset+neck_height])
-        scale([1,1,.4])
-        rotate([0,90,0])
-        cylinder(d=disk_neck_width,h=disk_width*1.1,center=true);
-
-        translate([engine_front,0,engine_rear_height_offset+neck_height+disk_height+250])
-        cube(500,center=true);
-
-        translate([engine_front,0,engine_rear_height_offset+neck_height-250-.01])
-        cube(500,center=true);
+module tw_cm_minus() {
+    translate([big_disk_width/2, 0, engine_rear_height_offset+neck_height]) {
+        hull() {
+            cylinder(d=cm_body_width, h=3*disk_height, center=true);
+            translate([-cm_body_length-cm_disk_width/2,0,0])
+            cylinder(d=cm_body_width, h=3*disk_height, center=true);
+        }
         
-        translate([-40,0,engine_rear_height_offset+neck_height])
-        rotate([90,0,0])
-        cylinder(r=40,h=200,$fn=6,center=true);
+         cylinder(d=cm_upper_disk_width*1.5, h=3*disk_height,center=true);
     }
 }
 
@@ -80,11 +100,11 @@ tw();
 
 module tw_nacelle_assembly() {
     util_mirrored([0,1,0])
-    translate([-engine_back/2+25,nacelle_pos_width/2,engine_rear_height_offset+neck_height+disk_height+nacelle_height])
+    translate([-engine_back/2+25,nacelle_pos_width/2-nacelle_width/4,engine_rear_height_offset+neck_height+nacelle_height])
     tw_nacelle();
 
     translate([-engine_back/2,0,engine_rear_height_offset])
-    util_nacelle_bar(nacelle_pos_width, engine_rear_height_offset+neck_height+disk_height+nacelle_height/2, 75, 8);
+    util_nacelle_bar(nacelle_pos_width, engine_rear_height_offset+neck_height+nacelle_height/2, 90, 8, faces=75);
 }
 
 
@@ -98,5 +118,5 @@ module tw_nacelle() {
     hull()
     util_mirrored([0,1,0])
     translate([0,nacelle_width/4,nacelle_height/3])
-    util_ovoid(nacelle_front,nacelle_back/10,nacelle_width/2,nacelle_height/2+5,5);
+    util_ovoid(nacelle_front,nacelle_back/10,nacelle_width/2,nacelle_height/2+10,5);
 }
