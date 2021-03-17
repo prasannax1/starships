@@ -1,118 +1,92 @@
 use <../lib/util.scad>;
-include <global_vars.scad>;
-include <transwarp_lib.scad>;
 include <saucer_lib.scad>;
 include <scout_lib.scad>;
-//use <transwarp.scad>;
-//use <command.scad>;
-//use <scout.scad>;
-//
-//tw();
-//cm_pos();
-//sc_pos();
 
-module sauc_pos() {
-    translate([big_disk_width/2,0,engine_rear_height_offset+neck_height-saucer_height+.01])
-    sauc_unpos();
-
-
-
-//    intersection() {
-//        scale([.99,5,1]) tw_neck();
-//
-//        translate([0,0,engine_rear_height_offset+neck_height-saucer_height/2])
-//        cube([500,500,saucer_height], center=true);
-//    }
-    
-    sauc_nacelle_assembly();
-    
-
+module sauce_disk() {
     difference() {
-        translate([0,0,neck_height-saucer_height/2-saucer_neck_height])
-        util_ovoid(saucer_neck_length*1.2, 20, saucer_neck_width*2, saucer_height*1.5, 5);
+        union() {
+            util_ovoid(saucer_width/2, saucer_width/2, saucer_width,saucer_height_ext, 3);
+            
+            hull() {
+                translate([0,0,saucer_height/2])
+                cylinder(h=saucer_height-.01, d=saucer_neck_width, center=true);
 
-        translate([big_disk_width/2,0,0])
-        cylinder(d=saucer_engine_width*1.1, h=1000, center=true);
-    }
-    
-    translate([40,0,neck_height-saucer_height/2-saucer_neck_height+5])
-    cube([50,350,7], center=true);
-}
-
+                translate([-saucer_width/2-saucer_neck_width/2,0,saucer_height])
+                sphere(d=saucer_neck_width);
 
 
+                translate([-saucer_width/2-saucer_neck_width/2,0,saucer_neck_width/2])
+                sphere(d=saucer_neck_width);
+            }
+        }
 
-module sauc_unpos() {
-    difference() {
-        util_saucer(saucer_width, saucer_width, saucer_height_ext);
-
-        translate([0,0,saucer_width/2+saucer_height])
-        cube(saucer_width, center=true);
-    }
-    
-    difference() {
-        util_ovoid(saucer_engine_width/2, saucer_engine_width/2, saucer_engine_width, 5, saucer_engine_height_ext);
-
-        translate([0,0,-saucer_width/2 - saucer_engine_height])
-        cube(saucer_width, center=true);
-    }
-}
-
-
-module sauc_single() {
-    sauc_final(tw_attached=false, sc_attached=false);
-}
-
-sauc_final();
-
-module sauc_final(tw_attached=true, sc_attached=true) {
-    difference() {
-        sauc_pos();
+        translate([0,0,saucer_width*1.5/2+saucer_height+.01])
+        cube(saucer_width*1.5, center=true);
         
-        if (tw_attached == false) {
-            scale([1,1,1.5]) tw_neck();
+        translate([saucer_width/2,0,s_deflector_width/2])
+        cube([s_deflector_width, s_deflector_width, s_deflector_width/4], center=true);
+    }
+}
+
+
+module saucer() {
+    sauce_disk();
+    sauce_assembly();
+}
+
+module saucer_pos(scout_attached=false, transwarp_attached=false) {
+    difference() {
+        translate([saucer_width/2, 0,0])
+        saucer();
+        
+        translate([saucer_width/2, 0, -3])
+        cylinder(h=4, d=sc_disk_width+4, center=true);
+        
+        if (scout_attached==false) {
+            translate([saucer_width/2, 0, -3])
+            util_ovoid(sc_disk_width/2, sc_disk_width/2, sc_disk_width, sc_disk_height_ext, sc_disk_height_ext);
         }
         
-        if (sc_attached == false) {
-            translate([sc_saucer_width/2+big_disk_width/2,0,engine_rear_height_offset+neck_height-saucer_height-saucer_engine_height])
-            util_ovoid(sc_saucer_width/2, sc_saucer_width/2, sc_saucer_width,sc_saucer_height_ext, 2*sc_saucer_height_ext);
+        if (transwarp_attached == false) {
+            translate([saucer_width/2,0,saucer_height])
+            difference() {
+                cylinder(d=40, h=8, center=true);
+                cylinder(d=32, h=12, center=true);
+            }
         }
-        
-        translate([sc_saucer_width/2+big_disk_width/2,0,engine_rear_height_offset+neck_height-saucer_height-saucer_engine_height])
-        cylinder(d=sc_saucer_width+5,h=5,center=true);
-        
-        translate([big_disk_width/2-saucer_engine_height,0,engine_rear_height_offset+neck_height-saucer_height-saucer_engine_height])
-        rotate([90,0,0])
-        cylinder(r=saucer_engine_height, h=sc_saucer_width,center=true);
-
-        translate([big_disk_width/2-saucer_engine_height-saucer_engine_width/4,0,engine_rear_height_offset+neck_height-saucer_height-saucer_engine_height])
-        cube([saucer_engine_width/2, sc_saucer_width, 1.9*saucer_engine_height],center=true);
     }
 }
 
 
 
-module sauc_nacelle_assembly() {
-    util_mirrored([0,1,0]) {
-        translate([nacelle_length/2+40, neck_width*3.2,engine_rear_height_offset+neck_height-saucer_height-nacelle_height*1.2])
-        sauc_nacelle();
 
-//        translate([0, neck_width*2.5-nacelle_width_back/2,engine_rear_height_offset+neck_height-saucer_height-nacelle_height+15])
-//        scale([2,1,1])
-//        cylinder(h=30,r=10,center=true);
-   }
-   
-   
-   
+module sauce_nacelle() {
+    hull()
+    util_mirrored([0,1,0])
+    translate([0,saucer_nacelle_w/4,0])
+    util_ovoid(saucer_nacelle_f, saucer_nacelle_b, saucer_nacelle_w/2, saucer_nacelle_h/2, saucer_nacelle_h/2);
 }
 
-module sauc_nacelle() {
+
+module sauce_assembly() {
+    translate([0,0,saucer_height/2])
+    util_mirrored([0,0,1])
+    util_mirrored([0,1,0])
+    translate([saucer_nacelle_x,saucer_nacelle_y,saucer_nacelle_z])
+    sauce_nacelle();
+
+    translate([0,0,saucer_height/2])
+    util_mirrored([0,0,1])
+    util_mirrored([0,1,0])
     hull() {
-        translate([nacelle_length/2,0,0])
-        util_ovoid(nacelle_width_front/2,nacelle_width_front/2,nacelle_width_front,nacelle_height/2, nacelle_height/2);
+        translate([saucer_nacelle_x+10,0,0])
+        rotate([0,90,0])
+        cylinder(r=3, h=30, $fn=10, center=true);
 
-
-        translate([-nacelle_length/2,0,0])
-        util_ovoid(nacelle_width_back/2,nacelle_width_back/2,nacelle_width_back,nacelle_height/2, nacelle_height/2);
+        translate([saucer_nacelle_x+10,saucer_nacelle_y,saucer_nacelle_z])
+        rotate([0,90,0])
+        cylinder(r=3, h=30, $fn=10, center=true);
     }
 }
+
+saucer_pos(false, false);
