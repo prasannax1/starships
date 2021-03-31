@@ -51,7 +51,7 @@ module transwarp() {
 
 module tw_assembly() {
     util_mirrored([0,1,0]) {
-        translate([-tw_nacelle_f*1.5+45, tw_disk_width/2, tw_nacelle_up])
+        translate([-tw_nacelle_f*1.5+45, tw_disk_width_2/2, tw_nacelle_up])
         tw_nacelle();
 
 
@@ -62,10 +62,10 @@ module tw_assembly() {
             translate([-tw_nacelle_f*2,0,saucer_height/2])
             sphere(tw_nacelle_inner_r);
 
-            translate([-tw_nacelle_f*2.5+75,tw_disk_width/2,tw_nacelle_up])
+            translate([-tw_nacelle_f*2.5+75,tw_disk_width_2/2,tw_nacelle_up])
             sphere(tw_nacelle_outer_r);
 
-            translate([-tw_nacelle_f*3+75,tw_disk_width/2,tw_nacelle_up])
+            translate([-tw_nacelle_f*3+75,tw_disk_width_2/2,tw_nacelle_up])
             sphere(tw_nacelle_outer_r);
         }
     }

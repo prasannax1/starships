@@ -1,5 +1,5 @@
 saucer_width=750;
-saucer_height=60;
+saucer_height=50;
 saucer_height_ext=120;
 
 saucer_neck_width=75;
