@@ -36,7 +36,7 @@ module cr_body() {
             cylinder(h=cr_width*1.5, r=cr_rear_curve_r, center=true);
         }
         
-        translate([saucer_width/2, 0, -saucer_width/2+ saucer_height*2])
+        translate([saucer_width/2, 0, -saucer_width/2+ saucer_height*2.5])
         scale([.8,1,.8])
         rotate([90,0,0])
         cylinder(d=saucer_width, h=saucer_width, $fn=6, center=true);
