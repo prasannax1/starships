@@ -10,7 +10,7 @@ include <command_lib.scad>;
 
 module cm_disk() {
     difference() {
-        util_ovoid(cm_disk_width/2, cm_disk_width/2, cm_disk_width, cm_disk_height_ext, 3);
+        util_ovoid(cm_disk_width/2, cm_disk_width/2, cm_disk_width, cm_disk_height_ext, 1);
 
         translate([0,0,cm_disk_width/2 + cm_disk_height])
         cube(cm_disk_width, center=true);
@@ -25,10 +25,14 @@ module cm_disk() {
         }
 
         translate([0,0,cm_disk_width/2+cm_disk_height+cm_upper_disk_h])
-        cube(cm_disk_width, center=true);
+        cube([1.5*cm_disk_width,1.5*cm_disk_width,cm_disk_width], center=true);
     }
 
     translate([0,0,cm_disk_height+cm_upper_disk_h])
+    rotate(180/cm_bridge_faces)
+    util_ovoid(cm_bridge_w/2, cm_bridge_w/2, cm_bridge_w, cm_bridge_h, cm_bridge_h, faces=cm_bridge_faces);   
+   
+    translate([0,0,-1])
     rotate(180/cm_bridge_faces)
     util_ovoid(cm_bridge_w/2, cm_bridge_w/2, cm_bridge_w, cm_bridge_h, cm_bridge_h, faces=cm_bridge_faces);
 }
@@ -63,7 +67,7 @@ module command_pos(tw_attached=false) {
         if (tw_attached == true) {
             cm_assembly(0);
         } else {
-            cm_assembly(20);
+            cm_assembly(15);
         }
     }
 }
