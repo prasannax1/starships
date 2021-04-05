@@ -1,7 +1,7 @@
 include <transwarp_lib.scad>;
 cr_width=180;
 cr_height=120;
-cr_f=600;
+cr_f=550;
 cr_b=300;
 
 cr_rear_curve_r=50;

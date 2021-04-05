@@ -58,16 +58,16 @@ module cr_nacelle() {
 
 module cr_assembly() {
     util_mirrored([0,1,0])
-    translate([-tw_neck_length_2*.6, cr_disk_w/2-cr_nacelle_w, cr_nacelle_h])
+    translate([-tw_neck_length_2*.6, cr_disk_w/2-1.4*cr_nacelle_w, cr_nacelle_h])
     cr_nacelle();
 
     util_mirrored([0,1,0])
     hull() {
-        translate([-tw_neck_length_2*.6, cr_disk_w/2-cr_nacelle_w*.75, cr_nacelle_h])
+        translate([-tw_neck_length_2*.6, cr_disk_w/2-cr_nacelle_w*1.4, cr_nacelle_h])
         rotate([0,90,0])
         cylinder(r=3, h=50, center=true);
 
-        translate([-tw_neck_length_2*.6, cr_disk_w/2-1.3*cr_nacelle_w, -5])
+        translate([-tw_neck_length_2*.6, cr_disk_w/2-1.4*cr_nacelle_w, -5])
         rotate([0,90,0])
         cylinder(r=3, h=50, center=true);
     }
