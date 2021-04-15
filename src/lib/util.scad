@@ -195,3 +195,23 @@ module util_ovoid(front_rad, back_rad, width, upper_rad, lower_rad, faces=32) {
         util_q_sphere(smallest, 2, faces);
     }
 }
+
+module util_saucer_shape(width, height, height_ext, depth, depth_ext) {
+    difference() {
+        util_ovoid(width/2,
+                   width/2,
+                   width,
+                   height+height_ext,
+                   depth+depth_ext);
+        
+        if (height_ext > 0) {
+            translate([0,0,width/2 + height])
+            cube(width, center=true);
+        }
+        
+        if (depth_ext > 0) {
+            translate([0,0,-width/2 - depth])
+            cube(width, center=true);
+        }
+    }
+}
