@@ -1,5 +1,5 @@
 scout_height=7;
-scout_bridge_w=18;
+scout_bridge_w=32;
 scout_bridge_h=3;
 
 scout_body_f=scout_width/2;

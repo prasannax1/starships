@@ -9,7 +9,7 @@ include <transwarp_lib.scad>;
 
 
 
-module tw_body() {
+module tw_body(saucer_attached=true) {
     difference() {
         intersection() {
             transwarp_position() 
@@ -62,9 +62,11 @@ module tw_body() {
         translate([0,0,saucer_width/2+1 ])
         cube(saucer_width, center=true);
         
-        translate([0,0,-body_height/4])
-        scale([.25,1,1])
-        sphere(d=75);
+        if (saucer_attached == false) {
+            translate([0,0,-body_height/4])
+            scale([.25,1,1])
+            sphere(d=75);
+        }
     }
 }
 
@@ -100,9 +102,9 @@ module tw_disk() {
     util_saucer_shape(32,3,1,3,0);
 }
 
-module transwarp() {
+module transwarp(saucer_attached=true) {
     tw_disk();
-    tw_body();
+    tw_body(saucer_attached);
     tw_assembly();
 }
 
@@ -122,7 +124,7 @@ module tw_assembly() {
         nacelle_position()
         sphere(d=8);
 
-        translate([-body_length/2+100,0,6])
+        translate([-body_length/2+200,0,6])
         sphere(d=12);
 
         translate([-body_length/2-200,0,6])
@@ -146,4 +148,4 @@ module tw_nacelle() {
     util_ovoid(200,30,nacelle_width*.75,36,30);
 }
 
-transwarp();
+transwarp(saucer_attached=false);

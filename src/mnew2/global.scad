@@ -123,7 +123,7 @@ module nacelle_shape() {
     cube([nacelle_back,80,80], center=true);
 }
 
-nacelle_pos_x=-500;
+nacelle_pos_x=-600;
 nacelle_pos_y=250;
 nacelle_pos_z=78;
 

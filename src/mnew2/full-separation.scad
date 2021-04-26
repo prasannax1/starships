@@ -22,7 +22,7 @@ module full_sep() {
     }
     
     translate([0,0,distance]) {
-        transwarp();
+        transwarp(saucer_attached=false);
         
         translate([0,0,distance])
         command(tw_attached=false);

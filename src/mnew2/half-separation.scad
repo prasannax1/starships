@@ -19,7 +19,7 @@ module half_sep() {
     }
     
     translate([0,0,distance]) {
-        transwarp();
+        transwarp(saucer_attached=false);
         command();
     }
 }
