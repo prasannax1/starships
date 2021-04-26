@@ -11,3 +11,6 @@ scout_nacelle_f=20;
 scout_nacelle_b=100;
 scout_nacelle_w=12.5;
 scout_nacelle_h=12.5;
+
+scout_active_angle=45;
+scout_passive_angle=25;

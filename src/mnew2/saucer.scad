@@ -31,7 +31,25 @@ module saucer_disk2() {
 }
 
 module saucer_disk() {
-    saucer_disk_1();
+    
+    difference() {
+        saucer_disk_1();
+        
+        saucer_position()
+        rotate(0)
+        translate([saucer_upper_width/2+20,0,saucer_height-5])
+        cube([50,50,8], center=true);
+
+        saucer_position()
+        rotate(150)
+        translate([saucer_upper_width/2+20,0,saucer_height-5])
+        cube([50,50,8], center=true);
+
+        saucer_position()
+        rotate(-150)
+        translate([saucer_upper_width/2+20,0,saucer_height-5])
+        cube([50,50,8], center=true);
+    }
     
     difference() {
         hull() {
@@ -130,3 +148,4 @@ module saucer_assembly() {
 }
 
 saucer();
+

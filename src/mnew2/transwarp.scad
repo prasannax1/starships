@@ -7,6 +7,8 @@ include <transwarp_lib.scad>;
 //saucer_position() saucer_basic();
 //body_position() body_basic();
 
+
+
 module tw_body() {
     difference() {
         intersection() {
@@ -41,7 +43,32 @@ module tw_body() {
     
     translate([-body_length,0,5])
     util_saucer(1.2*body_back, tw_body_width*1.2, 20);
+    
+    difference() {
+        hull()
+        util_mirrored([0,0,1])
+        intersection() {
+            body_position()
+            body_basic();
+
+
+            tw_body_hexagon();
+        }
+                        
+        translate([-1,0,0])
+        saucer_position()
+        cube(saucer_width, center=true);
+        
+        translate([0,0,saucer_width/2+1 ])
+        cube(saucer_width, center=true);
+        
+        translate([0,0,-body_height/4])
+        scale([.25,1,1])
+        sphere(d=75);
+    }
 }
+
+
 
 
 
@@ -65,6 +92,12 @@ module tw_disk() {
         translate([-275/2,0,0])
         cube([275,50,500],center=true);
     }
+    
+    translate([75,0,saucer_height*1.5])
+    util_saucer_shape(100,7,2,5,0);
+
+    translate([75,0,saucer_height*1.5  + 7])
+    util_saucer_shape(32,3,1,3,0);
 }
 
 module transwarp() {
@@ -81,15 +114,15 @@ module tw_assembly() {
 
     util_mirrored([0,1,0])
     hull() {
-        translate([-50,0,0])
+        translate([0,0,0])
         nacelle_position()
         sphere(d=8);
 
-        translate([-150,0,0])
+        translate([-100 ,0,0])
         nacelle_position()
         sphere(d=8);
 
-        translate([-body_length/2+50,0,6])
+        translate([-body_length/2+100,0,6])
         sphere(d=12);
 
         translate([-body_length/2-200,0,6])
@@ -109,8 +142,8 @@ module tw_nacelle() {
 
     hull()
     util_mirrored([0,1,0])
-    translate([100,nacelle_width/2-5,0])
-    util_ovoid(200,30,nacelle_width*.5,36,30);
+    translate([200,nacelle_width/2-5,0])
+    util_ovoid(200,30,nacelle_width*.75,36,30);
 }
 
 transwarp();

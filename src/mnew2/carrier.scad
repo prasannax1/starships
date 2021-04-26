@@ -12,13 +12,16 @@ module cr_body() {
             body_position() 
             body_basic();
             
-            translate([-cr_disk_width/2+delta, 0, -cr_disk_height/2])
+            translate([-cr_disk_width/2+delta-100, 0, -cr_disk_height/2])
             util_saucer_shape(cr_disk_width, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2);
             
             translate([-body_length-escort_width/2-cr_rear_curve,0,-cr_disk_height/2])
             scale([2,1,1])
             util_saucer_shape(cr_disk_width*.75, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2);
         }
+
+        scale(1.01)
+        tw_body_hexagon();
 
         translate([0,0,body_length*2+1])
         cube(body_length*4, center=true);
@@ -48,7 +51,22 @@ module cr_body() {
             cylinder(d=escort_width, h=2*body_height, center=true);
         }
     }
+    
+    difference() {
+        translate([-100,0,-body_height/4])
+        rotate([0,90,0])
+        cylinder(d=125,h=200, center=true);
+        
+        scale(.95)
+        tw_body_hexagon();
+        
+        translate([0,0,saucer_width/2])
+        cube(saucer_width, center=true);
+    }
+
 }
+
+
 
 module carrier() {
     cr_body();

@@ -25,7 +25,7 @@ module command(tw_attached=true) {
         if (tw_attached == true) {
             command_assembly(0);
         } else {
-            command_assembly(12.5);
+            command_assembly(15);
         }
     }
 }
@@ -65,12 +65,12 @@ module command_body() {
         rotate([90,0,0])
         cylinder(d=command_width/2, h=command_width, $fn=6, center=true);
 
-        translate([-command_width/2-command_body_h,0,-command_body_h])
+        translate([-command_width/2-command_body_h*2,0,-command_body_h])
         rotate([90,0,0])
         cylinder(r=command_body_h, h=command_width, $fn=64, center=true);
 
 
-        translate([-command_width-command_body_h,0,-command_width/2])
+        translate([-command_width-command_body_h*2,0,-command_width/2])
         cube(command_width, center=true);
     }
 

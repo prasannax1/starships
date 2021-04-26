@@ -5,10 +5,10 @@ saucer_height=50;
 saucer_body_length=180;
 body_width=180 ;
 body_height=180;
-body_length=360;
+body_length=400;
 body_back=280;
 nacelle_length=800;
-nacelle_front=250;
+nacelle_front=350;
 nacelle_back=800-nacelle_front;
 escort_width=100;
 escort_height=20;
@@ -73,6 +73,12 @@ module body_position() {
 }
 
 
+module tw_body_hexagon() {
+    translate([40,0,0])
+    scale([1.5,1,1.5])
+    rotate([90,0,0])
+    cylinder(r=100, h=500, $fn=6, center=true);
+}
 
 transwarp_pos_x=saucer_width/2;
 transwarp_pos_y=0;
@@ -117,7 +123,7 @@ module nacelle_shape() {
     cube([nacelle_back,80,80], center=true);
 }
 
-nacelle_pos_x=-450;
+nacelle_pos_x=-500;
 nacelle_pos_y=250;
 nacelle_pos_z=78;
 
@@ -141,4 +147,6 @@ module show_primitives() {
     util_mirrored([0,1,0])
     nacelle_position()
     nacelle_shape();
+    
+    tw_body_hexagon();
 }

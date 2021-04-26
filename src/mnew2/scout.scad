@@ -115,9 +115,9 @@ module scout(saucer_attached=true) {
         scout_body();
         scout_neck();
         if (saucer_attached == true) {
-            scout_assembly(0);
+            scout_assembly(scout_passive_angle);
         } else {
-            scout_assembly(45);
+            scout_assembly(scout_active_angle);
         }
     }
 }
