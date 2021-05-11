@@ -61,9 +61,9 @@ module command_body() {
         util_ovoid(command_body_f, command_body_b, command_body_w, command_outer_h, command_body_h);
 
         translate([0,0,-command_width/4])
-        scale([1,1,1.2])
+        scale([1,1,1.1])
         rotate([90,0,0])
-        cylinder(d=command_width/2, h=command_width, $fn=6, center=true);
+        cylinder(d=command_width/2, h=command_width, $fn=64, center=true);
 
         translate([-command_width/2-command_body_h*2,0,-command_body_h])
         rotate([90,0,0])
@@ -75,7 +75,12 @@ module command_body() {
     }
 
     util_nacelle(command_width*.85, command_body_w, command_outer_h+command_inner_h+command_bridge_h, curved=true);
+    
+    translate([-command_body_f,0,0])
+    util_ovoid(command_body_f*.85, 5, command_body_w*.9, 3, command_body_h*.9, faces=64);
 }
+
+
 
 module command_nacelle() {
     hull()

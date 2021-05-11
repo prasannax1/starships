@@ -20,6 +20,12 @@ module cr_body() {
             util_saucer_shape(cr_disk_width*.75, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2);
         }
 
+translate([-body_length+2, 0, -body_height/4-15])
+rotate([0,-15,0])
+translate([-0,0,0])
+cube ([10, 125, 75], center=true);
+
+
         scale(1.01)
         tw_body_hexagon();
 
@@ -88,6 +94,7 @@ module cr_assembly() {
 }
 
 carrier();
+
 
 
 

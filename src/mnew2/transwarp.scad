@@ -75,7 +75,6 @@ module tw_body(saucer_attached=true) {
 
 
 
-
 module tw_disk() {
     difference() {
         hull()
@@ -93,6 +92,20 @@ module tw_disk() {
         saucer_position()
         translate([-275/2,0,0])
         cube([275,50,500],center=true);
+        
+        util_mirrored([0,1,0]) {
+            translate([120, transwarp_disk_w/2, saucer_height + saucer_height/4])
+            cube([40,50,15], center=true);
+
+            translate([170, transwarp_disk_w/2, saucer_height + saucer_height/4])
+            cube([40,50,15], center=true);
+
+            translate([220, transwarp_disk_w/2, saucer_height + saucer_height/4])
+            cube([40,50,15], center=true);
+
+            translate([270, transwarp_disk_w/2, saucer_height + saucer_height/4])
+            cube([40,50,15], center=true);
+        }
     }
     
     translate([75,0,saucer_height*1.5])
