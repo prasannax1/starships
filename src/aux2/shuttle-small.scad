@@ -1,7 +1,7 @@
 use <../lib/util.scad>;
 
 module small_shuttle_base() {
-    util_ovoid(2.5, .5, 1, 1.75, .25, faces=16);
+    util_ovoid(3, .5, 1, 1.75, .25, faces=16);
 }
 
 module small_shuttle_body() {
