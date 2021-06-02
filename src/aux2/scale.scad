@@ -5,6 +5,7 @@ use <shuttle-large.scad>;
 use <fighter.scad>;
 use <runabout.scad>;
 use <tactical-runabout.scad>;
+use <heavy-runabout.scad>;
 
 pod();
 
@@ -19,3 +20,5 @@ translate([0,0,-16]) fighter();
 translate([0,0,-22]) runabout();
 
 translate([0,0,-28]) tactical();
+
+translate([0,0,-36]) heavy_runabout();
