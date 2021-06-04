@@ -45,7 +45,7 @@ module science_nacelle() {
     hull()
     util_mirrored([0,1,0])
     translate([0,2,0])
-    util_ovoid(25,15,5,2.2,2.2);
+    util_ovoid(23,15,4,2,2);
 }
 
 module science() {
