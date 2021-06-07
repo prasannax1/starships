@@ -1,3 +1,0 @@
-use <mlib.scad>;
-
-mother();

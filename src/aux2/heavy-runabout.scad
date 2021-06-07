@@ -9,10 +9,10 @@ module heavy_body() {
         translate([20,2,3.5])
         util_ovoid(6,6,2,3,1);
 
-        util_ovoid(25,10,15,6.5,.5);
+        util_ovoid(25,10,20,6.5,.5);
 
         translate([-10,0,0])
-        util_ovoid(1,1,12,6,.5);
+        util_ovoid(1,1,15,6,.5);
     }
 }
 
@@ -29,10 +29,10 @@ module heavy_runabout() {
 }
 
 module heavy_assembly() {
-    translate([0,10,3]) heavy_nacelle();
+    translate([0,12.5,3]) heavy_nacelle();
 
     hull() {
-        translate([0,10,3])
+        translate([0,12.5,3])
         sphere(d=2, $fn=10);
 
         translate([0,0,1.2])
