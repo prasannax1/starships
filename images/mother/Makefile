@@ -57,19 +57,12 @@ main.png: \
 
 saucer-full.png: ../../src/mother/saucer.scad ../../src/mother/scout.scad \
     ../../src/mother/saucer-full.scad
-	../../bin/render.sh \
-	    -i ../../src/mother/saucer-full.scad \
-	    -p saucer-full.png \
-	    -t Tomorrow 
+	../../bin/render.sh 
 
 
 carrier-full.png: ../../src/mother/carrier.scad ../../src/mother/escort.scad \
     ../../src/mother/carrier-full.scad
-	../../bin/render.sh \
-	    -i ../../src/mother/carrier-full.scad \
-	    -p carrier-full.png \
-	    -t Tomorrow 
-
+	../../bin/render.sh 
 
 transwarp-full.png: ../../src/mother/transwarp.scad ../../src/mother/command.scad \
     ../../src/mother/transwarp-full.scad
