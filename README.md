@@ -4,7 +4,7 @@ Star Trek type starships
 
 ## Trinity Class
 
-![Mother Ship](images/mothership/main.png)
+![Mother Ship](images/mother/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
@@ -56,7 +56,7 @@ The *Trinity* is an amalgamation of three ships which can operate independently 
 
 #### Vishnu Class
 
-![Saucer Section](images/mothership/saucer-full.png)
+![Saucer Section](images/mother/saucer-full.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
@@ -93,7 +93,7 @@ In Hindu mythology Vishnu is said to carry his devotees - and similarly the Vish
 
 #### Laxmi Class
 
-![Command](images/mothership/command.png)
+![Command](images/mother/command.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
 
@@ -129,11 +129,11 @@ Like the Excelsior, the *Laxmi* class is used in mainly two ways:
  
 ##### Image showing launch of Laxmi class from Trinity
 
-![Scout separation](images/mothership/saucer-separation.png)
+![Scout separation](images/mother/saucer-separation.png)
 
 #### Shiva Class
 
-![Carrier Section](images/mothership/carrier-full.png)
+![Carrier Section](images/mother/carrier-full.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
 
@@ -172,7 +172,7 @@ But what really sets this class apart is the aft hangar, which is about 400m lon
 
 #### Kali Class
 
-![Escort](images/mothership/escort.png)
+![Escort](images/mother/escort.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
 
@@ -203,12 +203,12 @@ The *Kali* class is a full size escort vessel twice as long the *Defiant* class 
 
 ##### Image showing launch of Kali class from Trinity
 
-![Escort Separation](images/mothership/carrier-separation.png)
+![Escort Separation](images/mother/carrier-separation.png)
 
 
 #### Brahma Class
 
-![Transwarp](images/mothership/transwarp-full.png)
+![Transwarp](images/mother/transwarp-full.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
 
@@ -245,7 +245,7 @@ The Brahma class provides transwarp propulsion to the *Trinity* class, but it ca
 
 #### Saraswati Class
 
-![Scout](images/mothership/scout.png)
+![Scout](images/mother/scout.png)
 
 [View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
 
@@ -275,7 +275,7 @@ At roughly the same size as a *Nova* class, the *Saraswati* class can be used as
 
 ##### Image showing launch of Saraswati class from Trinity
 
-![Scout separation](images/mothership/transwarp-separation.png)
+![Scout separation](images/mother/transwarp-separation.png)
 
 
 
@@ -283,14 +283,14 @@ At roughly the same size as a *Nova* class, the *Saraswati* class can be used as
 
 ### Multi vector mode
 
-![Half Separation](images/mothership/half-separation.png)
+![Half Separation](images/mother/half-separation.png)
 
 
 The *Trinity* class also has the multivector mode where all three ships separate. This is generally the default mode in battle.
 
 If more multivector functionality is needed, the attached ships also separate:
 
-![Full Separation](images/mothership/full-separation.png)
+![Full Separation](images/mother/full-separation.png)
 
 
 
