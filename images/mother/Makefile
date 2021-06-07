@@ -10,8 +10,6 @@ IMG += full-separation.png
 IMG += transwarp-separation.png
 IMG += saucer-separation.png
 IMG += carrier-separation.png
-IMG += no-saucer.png
-IMG += no-transwarp.png
 
 all: $(IMG)
 
@@ -57,12 +55,10 @@ main.png: \
 
 saucer-full.png: ../../src/mother/saucer.scad ../../src/mother/scout.scad \
     ../../src/mother/saucer-full.scad
-	../../bin/render.sh 
 
 
 carrier-full.png: ../../src/mother/carrier.scad ../../src/mother/escort.scad \
     ../../src/mother/carrier-full.scad
-	../../bin/render.sh 
 
 transwarp-full.png: ../../src/mother/transwarp.scad ../../src/mother/command.scad \
     ../../src/mother/transwarp-full.scad
