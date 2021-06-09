@@ -5,12 +5,12 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/mlib.scad>;
+use <../mother/saucer.scad>;
 use <galaxy.scad>;
 use <sovereign.scad>;
 
 
-mvm_saucer_single();
+saucer();
 
-translate([100,0,200]) galaxy();
+translate([400,0,200]) galaxy();
 
