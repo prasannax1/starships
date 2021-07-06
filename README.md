@@ -109,4 +109,33 @@ lauch mechanism. The aeroshuttle extends to the upper deck as well.
 
 ##### Auxillary vessels
 
- - 
+ - Type 20 small shuttles
+ - Type 23 medium shuttles
+ - Type 3 large shuttles
+ - Pirahna Class fighters
+ - Amazon Class runabouts
+ - Mako class tactical runabouts
+
+#### Atlas-B Class
+
+![Transwarp Ship](images/mother/trasnwarp.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/trasnwarp.stl)
+
+Atlas-B Class Multimission Explorer and Science and Research vessel
+
+##### Stats
+
+  - Length: 1572m
+  - Width: 600m
+  - Height: 229m
+  - Decks: 70
+  - Crew Capacity: 1200
+  - Warp Speed
+    - Cruising: Warp 8
+    - Peak: Warp 9.95
+    - Transwarp: TW10
+
+##### Description
+
+The Atlas-B class is
