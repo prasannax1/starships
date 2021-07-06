@@ -118,9 +118,9 @@ lauch mechanism. The aeroshuttle extends to the upper deck as well.
 
 #### Atlas-B Class
 
-![Transwarp Ship](images/mother/trasnwarp.png)
+![Transwarp Ship](images/mother/transwarp.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/trasnwarp.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
 
 Atlas-B Class Multimission Explorer and Science and Research vessel
 
