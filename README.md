@@ -32,6 +32,8 @@ massive living areas, and allow the bulk of the exploration to be done by smalle
 Once the exploration is done colonies are settled down and the ship returns back to 
 federation territory.
 
+![Ship scale](images/scale/scale-standard.png)
+
 The Atlas is capable of being in remote space for up to 20 years without a starbase. In 
 fact, with an industrial replicator on board, the Atlas for the most part is its own 
 starbase.
@@ -93,6 +95,8 @@ but it is a heavy cruiser capable of versatile roles.
 
 The Atlas-A class is roughly about as big as an Excelsior and is generally used in most of
 the same capacities - as the flagship of the Atlas mini-fleet and as a space control vessel.
+
+![Ship scale](images/scale/scale-command.png)
 
 ##### Structure
 
