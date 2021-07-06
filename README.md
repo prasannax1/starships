@@ -39,6 +39,26 @@ starbase.
 In practice however, Atlas ships would return to starbase at least every 5 years for 
 upgrades and refits.
 
+### History
+
+The Atlas program was started right as the Galaxy Class was being constructed as a future
+replacement for the Galaxy Class. In it's original form the Atlas was a single ship with
+massive hangars combined with the main saucer that would hold *Nova* sized vessels for 
+mission specific exploration.
+
+But after the Dominion war the whole program was put on hold as Starfleet was not in favor
+of sending civilians in a starship, not to mention presenting such a large target. It was 
+noted that an *Atlas* (in it's original design) could carry up to 8 *Defiant* class ships,
+but it was much cheaper and easier to just send 8 *Defiants* to any situation than to send
+an *Atlas* and deploy them.
+
+At the same time Starfleet was exploring the Multi-Vector Assualt paradigm, the *Atlas* team
+decided to incorporate some of the principles from that approach and sell the *Atlas* as what
+eventually turned out to be six separate ships that join up as one or can operate independently.
+
+This approach was much more successful as individually, most of the components of the *Atlas* 
+found enough of a niche to justify the entire ship.
+
 ### Structure
 
 The Atlas is a fairly conventional looking starship, looking deceptively delicate due
