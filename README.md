@@ -15,7 +15,7 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
  - Length: 1798m
  - Width: 750m
  - Height: 249m
- - Decks: 90
+ - Decks: 75
  - Crew Capacity: 2500
    - Maximum evacuation limit: 50000
  - Warp Speed
@@ -133,7 +133,7 @@ Atlas-B Class Multimission Explorer and Science and Research vessel
   - Length: 1572m
   - Width: 600m
   - Height: 229m
-  - Decks: 70
+  - Decks: 66
   - Crew Capacity: 1200
   - Warp Speed
     - Cruising: Warp 8
