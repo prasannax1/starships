@@ -142,4 +142,17 @@ Atlas-B Class Multimission Explorer and Science and Research vessel
 
 ##### Description
 
-The Atlas-B class is
+The Atlas-B class is almost a mile long by itself and is probably the part of the *Atlas* supership
+that ended up saving the *Atlas* program ultimately due to how useful it was.
+
+The B Class contains the main science labs, engineering sections and propulsion of the *Atlas* group.
+And since it is designed to interface with the other sections, it has docks and ports which enable any
+ship to be attached to the B Class frame, allowing it to be used as a 'transwarp taxi' for any class of
+starship.
+
+Because of this existing starships like Sovereign Class and Galaxy class could be sent to places only 
+accessible through transwarp without actually modifying the ships.
+
+##### Structure
+
+
