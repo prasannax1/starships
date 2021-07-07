@@ -155,4 +155,24 @@ accessible through transwarp without actually modifying the ships.
 
 ##### Structure
 
+The most notable points about the structure of the Atlas-B is that it is huge, and it is mostly just
+a massive transwarp core and warp engines.
 
+![Ship scale](images/scale/scale-transwarp.png)
+
+The saucer section is split into two sections, the main saucer in the rear which contains the main 
+command sections and living quarters and common areas, while the ring like area in the fore contains
+all the science laboratories.
+
+They are connected by a section which contains 8 intermediate hangars (18m height x 40m width x 95m length)
+for intermediate science vessels.
+
+The aft part of the ship contains a large shuttlebay, to the fore of which is a massive cargo area almost
+350m long.
+
+##### Auxillary vessels
+
+- Intermediate hangars
+  - Orca class light corvettes
+  - Raven class science vessels
+  - 
