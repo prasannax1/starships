@@ -277,3 +277,12 @@ Despite having to be attached to another ship, the D-Class is built conventional
 ship in the entire Atlas collection. This is a deliberate decision as the D-class is meant for first contact missions and so is
 designed to look very representive of Starfleet and Federation.
 
+The saucer section has a 32m wide integrated bridge and command section. This is followed by the main saucer which is 100m wide and 
+two decks tall. The lower section of the saucer has a 32m wide sensor array which also houses the main phasers.
+
+The secondary hull is fairly minimal and fucntional; the engineering section followed by a small shuttlebay.
+
+##### Auxillary vehicles
+
+- Bumblebee class Shuttlepods
+- Type 20 small shuttles
