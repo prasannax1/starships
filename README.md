@@ -176,12 +176,11 @@ The aft part of the ship contains a large shuttlebay, to the fore of which is a 
   - Orca class light corvettes
   - Raven class science vessels
   - Orbit class Yachts
-
 - Shuttlebay
- - Type 20 small shuttles
- - Type 23 medium shuttles
- - Type 3 large shuttles
- - Pirahna Class fighters
- - Amazon Class runabouts
- - Mako class tactical runabouts
- - Ganges class heavy runabouts
+  - Type 20 small shuttles
+  - Type 23 medium shuttles
+  - Type 3 large shuttles
+  - Pirahna Class fighters
+  - Amazon Class runabouts
+  - Mako class tactical runabouts
+  - Ganges class heavy runabouts
