@@ -184,3 +184,47 @@ The aft part of the ship contains a large shuttlebay, to the fore of which is a 
   - Amazon Class runabouts
   - Mako class tactical runabouts
   - Ganges class heavy runabouts
+
+#### Atlas-C Class
+
+![Saucer Ship](images/mother/saucer.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
+
+Atlas-C Class Multimission Explorer and Super Colony Transport
+
+##### Stats
+
+  - Length: 998m
+  - Width: 750m
+  - Height: 170m
+  - Decks: 50
+  - Crew Capacity: 1500
+  - Warp Speed
+    - Cruising: Warp 6
+    - Peak: Warp 8.5
+
+##### Description
+
+The C Class is closest to the original pre-dominion design of the Atlas. The changes would have been
+the main saucer would have been 50m taller to hold a hangar for small ship, and the secondary hull would 
+have been slightly larger to accomodate a transwarp core.
+
+As it is, the C Class is built like a super Galaxy-class, with an extremely large saucer (bigger than a whole 
+Galaxy class ship) which more or less contains a small city inside it.
+
+![Ship scale](images/scale/scale-saucer.png)
+
+This city contains long term residence for colony members intended to extreme long term transport, as well as 
+accomodation for crew of all components of the Atlas class.
+
+##### Structure
+
+On top of the saucer is the main command area, which is a 32m bridge section followed by a 
+100m wide, two deck area just like in the A-Class.
+
+The next section is the main saucer itself, which is 750m wide and 50m tall. The top 3 decks
+are dedicated to the main shuttlebay, which is a 200m wide ring all round. The remaining decks
+of the saucer (12) have living areas, schools, colleges, hospitals, parks, etc.
+
+The secondary hull seems tiny next to the saucer of the C class, but it is quite large in fact.
