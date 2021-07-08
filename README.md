@@ -16,8 +16,8 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
  - Width: 750m
  - Height: 249m
  - Decks: 75
- - Crew Capacity: 2500
-   - Maximum evacuation limit: 50000
+ - Crew Capacity: 3000
+   - Maximum evacuation limit: 75000
  - Warp Speed
    - Cruising: Warp 6
    - Peak: Warp 9.5
@@ -83,7 +83,7 @@ Atlas-A Class Heavy Cruiser and Command Vessel
   - Width: 199m
   - Height: 56m
   - Decks: 15
-  - Crew Capacity: 400
+  - Crew Capacity: 250
   - Warp Speed
     - Cruising: Warp 7
     - Peak: Warp 9.8
@@ -286,3 +286,65 @@ The secondary hull is fairly minimal and fucntional; the engineering section fol
 
 - Bumblebee class Shuttlepods
 - Type 20 small shuttles
+
+#### Atlas-E Class
+
+![Carrier Ship](images/mother/carrier.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
+
+Atlas-E Class Super carrier and dreadnought
+
+##### Stats
+
+  - Length: 590m
+  - Width: 248m
+  - Height: 161m
+  - Decks: 48
+  - Crew Capacity: 250
+  - Warp Speed
+    - Cruising: Warp 3
+    - Peak: Warp 7
+
+##### Description
+
+The E-class came about when the original Atlas had its hangars removed from the saucer section to form the Atlas-C class.
+
+The hangars were incorporated into it's own ship and converted into a super carrier class.
+
+At 75m tall, 150m wide and 350m long the main hangar is big enough to hold full sized ships like an *Intrepid* or a 
+*Constitution* class. Or two *Defiants*. In practice it can hold multiple *Mako* class tactical runabouts for a deadly
+strike force.
+
+The ship contains its owm industrial replicator and is used as the main ship factory of the *Atlas* group.
+
+![Ship scale](images/scale/scale-carrier.png)
+
+##### Structure
+
+The ship structure resembles the structure of the Oberth Class if the bars connecting the primary hull to the secondary
+hulls were converted to entire walls to form the main hangar.
+
+The main saucer is integrated with the engineering section, followed by the hollow section of the main hangar, and at the
+bottom is the man cargo bay and antimatter storage.
+
+##### Auxillary vehicles
+
+- Full size vehicles
+  - Intrepid class cruiser
+  - Constitution class cruiser
+  - Saladin/Hermes class
+  - Nova class cruiser
+  - Defiant class escort
+  - Steamrunner class escort
+  - Norway class
+  - Saber class
+
+- Intermediate ships
+  - Orca class light corvettes
+  - Raven class science vessels
+  - Orbit class Yachts
+
+- Shuttles
+  - Mako class tactical runabouts
+  - Pirahna class fighters
