@@ -348,3 +348,59 @@ bottom is the man cargo bay and antimatter storage.
 - Shuttles
   - Mako class tactical runabouts
   - Pirahna class fighters
+
+#### Atlas-F Class
+
+![Escort Ship](images/mother/escort.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
+
+Atlas-F Class Escort Carrier
+
+##### Stats
+
+  - Length: 199m
+  - Width: 110m
+  - Height: 30m
+  - Decks: 6
+  - Crew Capacity: 50
+  - Warp Speed
+    - Cruising: Warp 7
+    - Peak: Warp 9.9
+
+##### Description
+
+The F class is a dedicated escort vessel for the Atlas group.
+
+It is comparable to a *Defiant* in size and function and is built with two aims in mind:
+1. Fit in the space between the nacelles of the E-class
+2. Not win any beauty contests
+
+![Ship scale](images/scale/scale-escort.png)
+
+##### Structure
+
+The F-class is built tight, with the warp core integrated into the primary saucer. 
+
+The space between the nacelles is entirely a cargo bay cum hangar which can hold multiple
+wings of *Pirahna* class fighters, or loads of photon torpedoes depending on mission profile.
+
+##### Auxillary vehicles
+
+- Pirahna class fighters
+- Mako class tactical runabouts
+- Type 20 small shuttles
+
+### Intermediate auxillary vehicles
+
+These are vehicles that are too big to be  a shuttle or a runabout, but smaller than even the small ships.
+
+These are ships which lie in the 50m to 100m range.
+
+#### Orca class
+
+![Attack Ship](images/aux/attack.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack.stl)
+
+Orca class light corvette
