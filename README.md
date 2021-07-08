@@ -180,7 +180,6 @@ The aft part of the ship contains a large shuttlebay, to the fore of which is a 
   - Type 20 small shuttles
   - Type 23 medium shuttles
   - Type 3 large shuttles
-  - Pirahna Class fighters
   - Amazon Class runabouts
   - Mako class tactical runabouts
   - Ganges class heavy runabouts
@@ -224,7 +223,57 @@ On top of the saucer is the main command area, which is a 32m bridge section fol
 100m wide, two deck area just like in the A-Class.
 
 The next section is the main saucer itself, which is 750m wide and 50m tall. The top 3 decks
-are dedicated to the main shuttlebay, which is a 200m wide ring all round. The remaining decks
+are dedicated to the main shuttlebay, which is a 200m wide ring all round. The shuttlebay
+has three doors, one in the fore and two in the aft. The remaining decks
 of the saucer (12) have living areas, schools, colleges, hospitals, parks, etc.
 
 The secondary hull seems tiny next to the saucer of the C class, but it is quite large in fact.
+
+##### Auxillary vehicles
+
+- Type 20 small shuttles
+- Type 23 medium shuttles
+- Type 3 large shuttles
+- Amazon Class runabouts
+- Mako class tactical runabouts
+- Ganges class heavy runabouts
+- Orca-A class heavy tactical runabouts
+
+#### Atlas-D Class
+
+![Scout Ship](images/mother/scout.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
+
+Atlas-D Class Light Cruiser and Explorer
+
+##### Stats
+
+  - Length: 222m
+  - Width: 99m
+  - Height: 42m
+  - Decks: 10
+  - Crew Capacity: 100
+  - Warp Speed
+    - Cruising: Warp 4
+    - Peak: Warp 9.1
+
+##### Description
+
+The D-Class was also concieved at the beginning of the Atlas design process, as the Atlas collection needs a
+diplomatic cruiser for the following two reasons:
+
+1. Taking the whole ship to a potentially hostile situation will be risky for the civilian passengers
+2. Overwhelming a first contact situation with a kilometer long ship might be overkill and potentially send the wrong message
+
+The D-Class is a light cruiser about the size of a Nova class. It can be used as a stand-alone multimission explorer, but with
+the Atlas collection is typically used as a first-contact mission diplomatic ship.
+
+![Ship scale](images/scale/scale-scout.png)
+
+##### Structure
+
+Despite having to be attached to another ship, the D-Class is built conventionally - quite possibly the most conventional looking
+ship in the entire Atlas collection. This is a deliberate decision as the D-class is meant for first contact missions and so is
+designed to look very representive of Starfleet and Federation.
+
