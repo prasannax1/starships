@@ -69,6 +69,9 @@ to the scale of the ship.
 The Atlas is an amalgamation of six ships, each of which can operate independently in
 a specialized or generic role.
 
+![Ship Separation](images/mother/full-separation.png)
+
+
 #### Atlas-A Class
 
 ![Command Ship](images/mother/command.png)
