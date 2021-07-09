@@ -748,3 +748,32 @@ Mako class runabout
 The Mako class is a tactical runabout tweaked for maximum speed and striking power.
 
 The Mako class forms the primary line of defence for the Atlas group.
+
+#### Ganges Class Heavy Runabout
+
+![Runabout](images/aux/heavy-runabout.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/heavy-runabout.stl)
+
+Ganges class heavy runabout
+
+##### Stats
+
+  - Length: 25m
+  - Width: 13.5m
+  - Height: 4.2m
+  - Crew Capacity: 10
+  - Warp Speed
+    - Cruising: Warp 6.5
+    - Peak: Warp 9.2
+
+##### Description
+
+The Ganges class straddles the line between a small and intermediate ship and falls into the small ship category
+by about 1m. But with two decks and even a sizable shuttlebay the Ganges can easily be a small starship rather
+than an auxillary vehicle.
+
+##### Auxillary vehicles
+
+- Bumblebee class shuttlepod
+- misc land vehicles
