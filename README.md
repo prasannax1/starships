@@ -723,3 +723,28 @@ The Amazon class is nominally of the same dimensions as the *Danube* or *Yellows
 capacity. 
 
 The Amazon class is fast rising up to become the standard runabout in all classes of starship and starbase that can carry a runabout.
+
+
+#### Mako Class Runabout
+
+![Runabout](images/aux/tactical-runabout.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/tactical-runabout.stl)
+
+Mako class runabout
+
+##### Stats
+
+  - Length: 25m
+  - Width: 13.5m
+  - Height: 4.2m
+  - Crew Capacity: 10
+  - Warp Speed
+    - Cruising: Warp 6.5
+    - Peak: Warp 9.2
+
+##### Description
+
+The Mako class is a tactical runabout tweaked for maximum speed and striking power.
+
+The Mako class forms the primary line of defence for the Atlas group.
