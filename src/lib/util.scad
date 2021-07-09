@@ -85,12 +85,12 @@ module util_mirrored(v) {
     mirror(v) children();
 }
 
-module util_ring(outer, inner, height) {
+module util_ring(outer, inner, height, fn=fn1) {
     difference() {
         translate([0,0,-height/2])
-            cylinder(height, outer, outer);
+            cylinder(height, outer, outer, $fn=fn);
         translate([0,0,-(height/2 + height/19)])
-            cylinder(height+height/10, inner, inner);
+            cylinder(height+height/10, inner, inner, $fn=fn);
     }
 }
 
@@ -141,14 +141,14 @@ module util_hangar_form(length, width, height, num, inner=0) {
     scale(.95) children();
 }
 
-module util_nacelle_bar(span, height, width, thickness) {
+module util_nacelle_bar(span, height, width, thickness, faces=fn1) {
     rad = (span*span/(8*height) + height/2);
     outer = rad + thickness/2;
     inner = rad - thickness/2;
     difference(){
         translate([0,0,outer])
             rotate([0,90,0])
-                util_ring(outer, inner, width);
+                util_ring(outer, inner, width, fn=faces);
     
         translate([0,0,1.1*outer+height])
             cube(2.2*outer, center=true);
@@ -193,5 +193,25 @@ module util_ovoid(front_rad, back_rad, width, upper_rad, lower_rad, faces=32) {
         
         scale([back_rad/smallest, half_width/smallest, upper_rad/smallest])
         util_q_sphere(smallest, 2, faces);
+    }
+}
+
+module util_saucer_shape(width, height, height_ext, depth, depth_ext) {
+    difference() {
+        util_ovoid(width/2,
+                   width/2,
+                   width,
+                   height+height_ext,
+                   depth+depth_ext);
+        
+        if (height_ext > 0) {
+            translate([0,0,width/2 + height])
+            cube(width, center=true);
+        }
+        
+        if (depth_ext > 0) {
+            translate([0,0,-width/2 - depth])
+            cube(width, center=true);
+        }
     }
 }

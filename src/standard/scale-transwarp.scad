@@ -5,10 +5,10 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/mlib.scad>;
+use <../mother/transwarp.scad>;
 use <odyssey.scad>;
 
 
-mvm_transwarp_single();
+transwarp();
 
-translate([0,0,200]) odyssey();
+translate([100,0,250]) odyssey();

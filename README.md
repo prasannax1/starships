@@ -1,973 +1,779 @@
 # Starship Designs
 
-Star Trek type starships
+Starships and Shuttles - Star Trek style
 
-## Trinity Class
+## Atlas Class
 
-![Mother Ship](images/mothership/main.png)
+![Mother Ship](images/mother/main.png)
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
 
-Trinity Class Multi-role Multi-mission Deep Space Explorer/Heavy Carrier
+Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Stats
 
- * Length: 1595m
- * Width: 746m
- * Height: 250m
- * Decks: 62
- * Crew Capacity:
-   * Minimum (skeleton): 10
-   * Minimum (sustainable): 113
-   * Typical: 3000
-   * Maximum (all stations filled): 12000
-   * Maximum (evacuation limit): 90000
- * Auxillary Craft
-   * *Magpie* class runabouts
-   * *Hawk* class tactical runabouts
-   * *Hornet* class heavy shuttles
-   * *Wasp* class shuttles
-   * *Black Widow* class fighters
-   * *Scorpion* class runabouts
-   * *Raven* class heavy runabouts
-   * *Vulture* class patrol vessels
-   * *Eagle* class light scouts
-   * *Dragonfly* class warp tugs
-   * *Dove* class diplomatic yachts
-   * *Snow Owl* class yachts
-   * *Nightingale* class heavy medevac vehicles
-   * *Bumblebee* class light shuttles
-   * *Honeybee* class light shuttlepods
- * Warp speed:
-   * Cruising: Warp 6
-   * Maximum: Warp 8
-   * Transwarp: TW10
+ - Length: 1798m
+ - Width: 750m
+ - Height: 249m
+ - Decks: 75
+ - Crew Capacity: 3000
+   - Maximum evacuation limit: 75000
+ - Warp Speed
+   - Cruising: Warp 6
+   - Peak: Warp 9.5
+   - Transwarp: TW10
 
 ### Description
 
-The *Trinity Class* is meant to act as both a deep space explorer, and as a mobile starbase to launch other exploration missions from. It is designed primarily for scientific missions, but like any ship designed after Wolf 359 and The Dominion War, it can also be used in military conflicts.
+The Atlas class is a massive ship almost 2KM long. Nominally it's a deep space explorer,
+but it is mainly used as a mobile starbase and colony transporter. A typical mission of
+the Atlas class is to transwarp to unexplored space with entire colonies settled in its
+massive living areas, and allow the bulk of the exploration to be done by smaller ships.
+Once the exploration is done colonies are settled down and the ship returns back to 
+federation territory.
 
-The *Trinity Class* is enormous, at about a mile long, it's gigantic compared with even regular large ships.
+![Ship scale](images/scale/scale-standard.png)
 
+The Atlas is capable of being in remote space for up to 20 years without a starbase. In 
+fact, with an industrial replicator on board, the Atlas for the most part is its own 
+starbase.
+
+In practice however, Atlas ships would return to starbase at least every 5 years for 
+upgrades and refits.
+
+### History
+
+The Atlas program was started right as the Galaxy Class was being constructed as a future
+replacement for the Galaxy Class. In it's original form the Atlas was a single ship with
+massive hangars combined with the main saucer that would hold *Nova* sized vessels for 
+mission specific exploration.
+
+But after the Dominion war the whole program was put on hold as Starfleet was not in favor
+of sending civilians in a starship, not to mention presenting such a large target. It was 
+noted that an *Atlas* (in it's original design) could carry up to 8 *Defiant* class ships,
+but it was much cheaper and easier to just send 8 *Defiants* to any situation than to send
+an *Atlas* and deploy them.
+
+At the same time Starfleet was exploring the Multi-Vector Assualt paradigm, the *Atlas* team
+decided to incorporate some of the principles from that approach and sell the *Atlas* as what
+eventually turned out to be six separate ships that join up as one or can operate independently.
+
+This approach was much more successful as individually, most of the components of the *Atlas* 
+found enough of a niche to justify the entire ship.
 
 ### Structure
 
-The *Trinity* is an amalgamation of three ships which can operate independently but normally link up to join the Trinity. Multi-vector mode is a nice idea for smaller ships - but for a ship that's about a mile long it's impossible to build without.
+The Atlas is a fairly conventional looking starship, looking deceptively delicate due
+to the scale of the ship.
 
-#### Vishnu Class
+The Atlas is an amalgamation of six ships, each of which can operate independently in
+a specialized or generic role.
 
-![Saucer Section](images/mothership/saucer-full.png)
+![Ship Separation](images/mother/full-separation.png)
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
-*Vishnu Class* Mobile starbase/Colony Transporter
+#### Atlas-A Class
+
+![Command Ship](images/mother/command.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
+
+Atlas-A Class Heavy Cruiser and Command Vessel
 
 ##### Stats
 
- * Length: 1560m
- * Width: 676m
- * Height: 135
- * Decks: 24
- * Crew Capacity:
-   * Minimum (skeleton): 5
-   * Minimum (sustainable): 50
-   * Typical: 2500
-   * Maximum (all stations filled): 10000
-   * Maximum (evacuation limit): 75000
- * Auxillary Craft
-   * *Magpie* class runabouts
-   * *Hawk* class tactical runabouts
-   * *Vulture* class patrol vessels
-   * *Eagle* class light scouts
-   * *Dove* class diplomatic yachts
-   * *Bumblebee* class light shuttles
-   * *Snow Owl* class yachts
- * Warp speed:
-   * Cruising: Warp 1.2
-   * Maximum: Warp 1.6
+  - Length: 424m
+  - Width: 199m
+  - Height: 56m
+  - Decks: 15
+  - Crew Capacity: 250
+  - Warp Speed
+    - Cruising: Warp 7
+    - Peak: Warp 9.8
 
-   
-At 750m long, the Vishnu class is one of the largest ships in the Starfleet inventory. It's built almost entirely primary hull, with the engine sections and warp nacelles integrated into the saucer body. The upper part of the saucer has a depression where the secondary hull of the *Laxmi* class fits snugly.
+##### Description
 
-In Hindu mythology Vishnu is said to carry his devotees - and similarly the Vishnu class is mainly built to carry people. As large as a small city, the Vishnu Class can carry entire colonies with all the equipment they need to get started.
+The Atlas-A class acts as the command module and bridge of the Atlas in regular operation
+but it is a heavy cruiser capable of versatile roles.
 
-#### Laxmi Class
+The Atlas-A class is roughly about as big as an Excelsior and is generally used in most of
+the same capacities - as the flagship of the Atlas mini-fleet and as a space control vessel.
 
-![Command](images/mothership/command.png)
+![Ship scale](images/scale/scale-command.png)
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
+##### Structure
 
-*Laxmi Class* heavy cruiser/ multimission explorer
+The Atlas-A follows a fairly conventional primary hull, secondary hull and warp nacelles 
+structure. The saucer is roughly split into these sections:
 
-#### Stats
+ - The 32m structure at the top is the main bridge and command module
+ - The 100m wide 2 deck high structure next contains the officers quarters, sickbay and
+main messhall
+ - The next 200m wide 4 deck high part comntains the rest of the crew quarters, science
+labs, auxillary sickbay and main computer core.
+ - The 32m wide structure at the bottom of the saucer section contains the aeroshuttle 
+lauch mechanism. The aeroshuttle extends to the upper deck as well.
 
- * Length: 463m
- * Width: 199m
- * Height: 118m
- * Decks: 18 
- * Crew Capacity:
-   * Minimum (skeleton): 10
-   * Minimum (sustainable): 10
-   * Typical: 200
-   * Maximum (all stations filled): 500
-   * Maximum (evacuation limit): 5000
- * Auxillary Craft
-   * *Black Widow* class fighters
-   * *Hornet* class heavy shuttles
-   * *Wasp* class shuttles
-   * *Dragonfly* class warp tugs
-   * *Bumblebee* class light shuttles
- * Warp speed:
-   * Cruising: Warp 6
-   * Maximum: Warp 9.7
+##### Auxillary vessels
 
-Ostensibly the *Laxmi* class is just the command section of the *Trinity* assembly. But The *Laxmi* class is a heavy cruiser comparable to the Excelsior in size and function.
+ - Type 20 small shuttles
+ - Type 23 medium shuttles
+ - Type 3 large shuttles
+ - Pirahna Class fighters
+ - Amazon Class runabouts
+ - Mako class tactical runabouts
 
-Like the Excelsior, the *Laxmi* class is used in mainly two ways:
- * As a control ship - the Laxmi class captures and "holds" a part of space during tactical operations. This is helped by the multi-phaser array that the Laxmi class has and the shuttlebay which can hold several fighter craft
- * As a flagship - the bridge of the Laxmi Class is also the main bridge of the Trinity class when fully assembled. When disassembled, the Laxmi class is the flagship of the Trinity mini-fleet.
- 
-##### Image showing launch of Laxmi class from Trinity
+#### Atlas-B Class
 
-![Scout separation](images/mothership/saucer-separation.png)
+![Transwarp Ship](images/mother/transwarp.png)
 
-#### Shiva Class
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
 
-![Carrier Section](images/mothership/carrier-full.png)
-
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
-
-*Shiva Class* Super Carrier
+Atlas-B Class Multimission Explorer and Science and Research vessel
 
 ##### Stats
 
- * Length: 1595
- * Width: 746m
- * Height: 127m
- * Decks: 23
- * Crew Capacity:
-   * Minimum (skeleton): 5
-   * Minimum (sustainable): 50
-   * Typical: 2500
-   * Maximum (all stations filled): 10000
-   * Maximum (evacuation limit): 75000
- * Auxillary Craft
-   * *Magpie* class runabouts
-   * *Hawk* class tactical runabouts
-   * *Vulture* class patrol vessels
-   * *Eagle* class light scouts
-   * *Dove* class diplomatic yachts
-   * *Bumblebee* class light shuttles
-   * *Snow Owl* class yachts
- * Warp speed:
-   * Cruising: Warp 1.2
-   * Maximum: Warp 1.6
+  - Length: 1572m
+  - Width: 600m
+  - Height: 229m
+  - Decks: 66
+  - Crew Capacity: 1200
+  - Warp Speed
+    - Cruising: Warp 8
+    - Peak: Warp 9.95
+    - Transwarp: TW10
 
-   
-Named after the God of Destruction, the Shiva class supercarrier (not to be confused with the obsolete Shiva class destroyer from more than a century ago) redefines the term super carrier.
+##### Description
 
-Apart from the standard shuttlecraft and runabouts, the fore hangar carries a variety of intermediate size starships which are under 20m tall - for example, *Raven* class exploratory vessels, *Magpie* class explorers. *Vulture* class patrol vessels, etc.
+The Atlas-B class is almost a mile long by itself and is probably the part of the *Atlas* supership
+that ended up saving the *Atlas* program ultimately due to how useful it was.
 
-But what really sets this class apart is the aft hangar, which is about 400m long, 60m tall and 120m wide at the hangar doors. This means that full size starship like Intrepid and Prometheus classes can fit inside this hangar.
+The B Class contains the main science labs, engineering sections and propulsion of the *Atlas* group.
+And since it is designed to interface with the other sections, it has docks and ports which enable any
+ship to be attached to the B Class frame, allowing it to be used as a 'transwarp taxi' for any class of
+starship.
 
-#### Kali Class
+Because of this existing starships like Sovereign Class and Galaxy class could be sent to places only 
+accessible through transwarp without actually modifying the ships.
 
-![Escort](images/mothership/escort.png)
+##### Structure
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
+The most notable points about the structure of the Atlas-B is that it is huge, and it is mostly just
+a massive transwarp core and warp engines.
 
-*Kali* class destroyer
+![Ship scale](images/scale/scale-transwarp.png)
 
-#### stats
+The saucer section is split into two sections, the main saucer in the rear which contains the main 
+command sections and living quarters and common areas, while the ring like area in the fore contains
+all the science laboratories.
 
- * Length: 275m
- * Width: 160m
- * Height: 28m
- * Decks: 8
- * Crew Capacity:
-   * Minimum: 5
-   * Typical: 20
-   * Maximum: 150
- * Auxillary Craft:
-   * *Bumblebee* class light shuttles
-   * *Hornet* class heavy shuttles
-   * *Hawk* class Tactical runabouts
- * Warp Speed:
-   * Cruising: Warp 7
-   * Maximum: Warp 9.5
+They are connected by a section which contains 8 intermediate hangars (18m height x 40m width x 95m length)
+for intermediate science vessels.
 
-Under the aft hangar of the *Shiva* class lies the Kali class which is a dedicated escort vessel for the *Trinity*.
+The aft part of the ship contains a large shuttlebay, to the fore of which is a massive cargo area almost
+350m long.
 
-The *Kali* class is a full size escort vessel twice as long the *Defiant* class and three times as powerful.
+##### Auxillary vessels
 
+- Intermediate hangars
+  - Orca class light corvettes
+  - Raven class science vessels
+  - Orbit class Yachts
+- Shuttlebay
+  - Type 20 small shuttles
+  - Type 23 medium shuttles
+  - Type 3 large shuttles
+  - Amazon Class runabouts
+  - Mako class tactical runabouts
+  - Ganges class heavy runabouts
 
-##### Image showing launch of Kali class from Trinity
+#### Atlas-C Class
 
-![Escort Separation](images/mothership/carrier-separation.png)
+![Saucer Ship](images/mother/saucer.png)
 
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
-#### Brahma Class
-
-![Transwarp](images/mothership/transwarp-full.png)
-
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
-
-*Brahma class* Multimission Deep Space Explorer/ Heavy Experimental vessel/ Carrier
+Atlas-C Class Multimission Explorer and Super Colony Transport
 
 ##### Stats
 
- * Length: 1396m
- * Width: 651m
- * Height: 206m
- * Decks: 39
- * Crew Capacity:
-   * Minimum (skeleton): 5
-   * Minimum (sustainable): 100
-   * Typical: 400
-   * Maximum (all stations filled): 900
-   * Maximum (evacuation limit): 10000
- * Auxillary Craft
-   * *Vulture* class patrol vessels
-   * *Eagle* class light scouts
-   * *Dove* class diplomatic yachts
-   * *Defiant* Class escort vessels
-   * *Nova* Class science vessels
-   * Small starship under 200m long and under 40m high
- * Warp speed:
-   * Cruising: Warp 8
-   * Maximum: Warp 9
-   * Transwarp: TW10
+  - Length: 998m
+  - Width: 750m
+  - Height: 170m
+  - Decks: 50
+  - Crew Capacity: 1500
+  - Warp Speed
+    - Cruising: Warp 6
+    - Peak: Warp 8.5
 
-In Hindu mythology Brahma is the God of creation. The *Brahma* class is the crucible of a lot of development with unprecedented number of science labs and experimental propulsions.
+##### Description
 
-The Brahma class provides transwarp propulsion to the *Trinity* class, but it can also act as a stand alone ship to taxi any other ship into transwarp - this is the main reason behind the extremely flat dorsal side of the secondary hull.
+The C Class is closest to the original pre-dominion design of the Atlas. The changes would have been
+the main saucer would have been 50m taller to hold a hangar for small ship, and the secondary hull would 
+have been slightly larger to accomodate a transwarp core.
 
+As it is, the C Class is built like a super Galaxy-class, with an extremely large saucer (bigger than a whole 
+Galaxy class ship) which more or less contains a small city inside it.
 
-#### Saraswati Class
+![Ship scale](images/scale/scale-saucer.png)
 
-![Scout](images/mothership/scout.png)
+This city contains long term residence for colony members intended to extreme long term transport, as well as 
+accomodation for crew of all components of the Atlas class.
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
+##### Structure
 
-*Saraswati* Class Light cruiser
- 
-#### Stats
+On top of the saucer is the main command area, which is a 32m bridge section followed by a 
+100m wide, two deck area just like in the A-Class.
 
- * Length: 208m
- * Width: 99m
- * Height: 36m 
- * Decks: 7
- * Crew Capacity:
-   * Minimum (skeleton): 10
-   * Minimum (sustainable): 10
-   * Typical: 80
-   * Maximum (all stations filled): 100
-   * Maximum (evacuation limit): 500
- * Auxillary Craft
-   * *Bumblebee* class light shuttles
- * Warp speed:
-   * Cruising: Warp 6
-   * Maximum: Warp 9.7
+The next section is the main saucer itself, which is 750m wide and 50m tall. The top 3 decks
+are dedicated to the main shuttlebay, which is a 200m wide ring all round. The shuttlebay
+has three doors, one in the fore and two in the aft. The remaining decks
+of the saucer (12) have living areas, schools, colleges, hospitals, parks, etc.
 
-The *Saraswati* class lives where you would expect a diplomatic yacht. It's used as a diplomatic vehicle by the *Trinity* but it's a full fledged general purpose light cruiser.
+The secondary hull seems tiny next to the saucer of the C class, but it is quite large in fact.
 
-At roughly the same size as a *Nova* class, the *Saraswati* class can be used as an exploratory vessel, advanced scout, or as a Captain's yacht for diplomatic fucntions.
+##### Auxillary vehicles
 
-##### Image showing launch of Saraswati class from Trinity
+- Type 3 large shuttles
+- Amazon Class runabouts
+- Mako class tactical runabouts
+- Ganges class heavy runabouts
+- Orca-A class heavy tactical runabouts
 
-![Scout separation](images/mothership/transwarp-separation.png)
+#### Atlas-D Class
 
+![Scout Ship](images/mother/scout.png)
 
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
 
+Atlas-D Class Light Cruiser and Explorer
 
+##### Stats
 
-### Multi vector mode
+  - Length: 222m
+  - Width: 99m
+  - Height: 42m
+  - Decks: 10
+  - Crew Capacity: 100
+  - Warp Speed
+    - Cruising: Warp 4
+    - Peak: Warp 9.1
 
-![Half Separation](images/mothership/half-separation.png)
+##### Description
 
+The D-Class was also concieved at the beginning of the Atlas design process, as the Atlas collection needs a
+diplomatic cruiser for the following two reasons:
 
-The *Trinity* class also has the multivector mode where all three ships separate. This is generally the default mode in battle.
+1. Taking the whole ship to a potentially hostile situation will be risky for the civilian passengers
+2. Overwhelming a first contact situation with a kilometer long ship might be overkill and potentially send the wrong message
 
-If more multivector functionality is needed, the attached ships also separate:
+The D-Class is a light cruiser about the size of a Nova class. It can be used as a stand-alone multimission explorer, but with
+the Atlas collection is typically used as a first-contact mission diplomatic ship.
 
-![Full Separation](images/mothership/full-separation.png)
+![Ship scale](images/scale/scale-scout.png)
 
+##### Structure
 
+Despite having to be attached to another ship, the D-Class is built conventionally - quite possibly the most conventional looking
+ship in the entire Atlas collection. This is a deliberate decision as the D-class is meant for first contact missions and so is
+designed to look very representive of Starfleet and Federation.
 
-## Auxillary craft
+The saucer section has a 32m wide integrated bridge and command section. This is followed by the main saucer which is 100m wide and 
+two decks tall. The lower section of the saucer has a 32m wide sensor array which also houses the main phasers.
 
-The *Trinity* is home to two separate families of auxillary craft.
+The secondary hull is fairly minimal and fucntional; the engineering section followed by a small shuttlebay.
 
-# MACS
+##### Auxillary vehicles
 
-The Modular Auxillary Craft System (MACS) was conceived as a result of starships losing entirely too many shuttlecraft on away missions. The aims for the MACS program were two fold:
- 1. Shuttlecraft should be harder to destroy
- 2. Shuttlecraft should be easier to replace
- 
-With these dual aims in mind, the MACS system was conceived as a set of extremely durable shuttle craft components that could nevertheless be easily replicated and assembled as per mission requirements.
+- Bumblebee class Shuttlepods
+- Type 20 small shuttles
 
-## Bumblebee Class
+#### Atlas-E Class
 
-![Shuttlepod](images/macs/pod.png)
+![Carrier Ship](images/mother/carrier.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/shuttlepod.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
 
-Bumblebee class small shuttle
+Atlas-E Class Super carrier and dreadnought
 
-### Stats
+##### Stats
 
- * Length: 6.4m
- * Width: 4.8m
- * Height: 2.3m
- * Crew Capacity:
-   * Minimum: 1
-   * Maximum: 6
- * Warp Speed:
-   * Cruising: Warp 1.2
-   * Maximum: Warp 2
+  - Length: 590m
+  - Width: 248m
+  - Height: 161m
+  - Decks: 48
+  - Crew Capacity: 250
+  - Warp Speed
+    - Cruising: Warp 3
+    - Peak: Warp 7
 
-### Description
+##### Description
 
-The Bumblebee class shuttle is the foundation of the MACS program. Not only is it a stand alone shuttle, but it also acts as the cockpit/command module for every vehicle built on the MACS program.
+The E-class came about when the original Atlas had its hangars removed from the saucer section to form the Atlas-C class.
 
-### Structure
+The hangars were incorporated into it's own ship and converted into a super carrier class.
 
-The Bumblebee is approximately the size of a Type 6 shuttlecraft and is used as replacement for the Type 6 on various ships (but not on the *Trinity*; we'll come to that later). Keeping in with the stated aims of the MACS program, it has much better armor and can take enough punishment to destroy the Type 6 ten times over. 
+At 75m tall, 150m wide and 350m long the main hangar is big enough to hold full sized ships like an *Intrepid* or a 
+*Constitution* class. Or two *Defiants*. In practice it can hold multiple *Mako* class tactical runabouts for a deadly
+strike force.
 
-Also in keeping with the modularity aim of MACS, apart from the two seats for pilot and co-pilot, all parts of the Bumblebee's interior can be swapped out. Right behind the cockpit area are two alcoves to the side which can be configured as replicators, weapons lockers, lavatories or just plain exits - the last one being particularly useful when the standard exit of the shuttle (at the rear) is blocked by additional modules.
+The ship contains its owm industrial replicator and is used as the main ship factory of the *Atlas* group.
 
-The rear half of the shuttle can be configured as seating/bunks (as in the Type 6), dense passenger seating, or additional consoles.
+![Ship scale](images/scale/scale-carrier.png)
 
-## Honeybee Class
+##### Structure
 
-![Small Pod](images/macs/small-pod.png)
+The ship structure resembles the structure of the Oberth Class if the bars connecting the primary hull to the secondary
+hulls were converted to entire walls to form the main hangar.
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/small-pod.stl)
+The main saucer is integrated with the engineering section, followed by the hollow section of the main hangar, and at the
+bottom is the man cargo bay and antimatter storage.
 
-*Honeybee* class small shuttlepod
+##### Auxillary vehicles
 
-### Stats
+- Full size vehicles
+  - Intrepid class cruiser
+  - Constitution class cruiser
+  - Saladin/Hermes class
+  - Nova class cruiser
+  - Defiant class escort
+  - Steamrunner class escort
+  - Norway class
+  - Saber class
 
- * Length: 3.8m
- * Width: 4.8m
- * Height: 2.3m
- * Crew capacity: 2
- * Speed: 0.7c sublight
+- Intermediate ships
+  - Orca class light corvettes
+  - Raven class science vessels
+  - Orbit class Yachts
 
-### Description
+- Shuttles
+  - Mako class tactical runabouts
+  - Pirahna class fighters
 
-The Honeybee class is the little brother of the Bumblebee class. A smaller warp-less shuttlepod where even the Bumblebee class is overpowered.
+#### Atlas-F Class
 
-The Honeybee class can be used as a cockpit or command module wherever the Bumblebee class can be used in MACs ships.
+![Escort Ship](images/mother/escort.png)
 
-### Structure
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
 
-The Honeybee class is approximately the size of a Type 15 shuttlepod and can be used as a replacement for it except where warp travle is required.
+Atlas-F Class Escort Carrier
 
-The Honeybee class from the inside is essentially just the fron two seats for pilot and copilot and the two alcoves to the rear.
+##### Stats
 
-## Wasp Class
+  - Length: 199m
+  - Width: 110m
+  - Height: 30m
+  - Decks: 6
+  - Crew Capacity: 50
+  - Warp Speed
+    - Cruising: Warp 7
+    - Peak: Warp 9.9
 
-![Shuttle](images/macs/shuttle.png)
+##### Description
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/shuttle.stl)
+The F class is a dedicated escort vessel for the Atlas group.
 
-Wasp class medium shuttle
+It is comparable to a *Defiant* in size and function and is built with two aims in mind:
+1. Fit in the space between the nacelles of the E-class
+2. Not win any beauty contests
 
-### Stats
+![Ship scale](images/scale/scale-escort.png)
 
- * Length: 12.6m
- * Width: 9.4m
- * Height: 2.9m
- * Crew Capacity:
-   * Minimum: 1
-   * Maximum: 6
- * Warp Speed:
-   * Cruising: Warp 3
-   * Maximum: Warp 5
-   
-### Description
+##### Structure
 
-The *Wasp* class is a medium shuttle and standard inventory for light and medium cruisers in starfleet.
+The F-class is built tight, with the warp core integrated into the primary saucer. 
 
-### Structure
+The space between the nacelles is entirely a cargo bay cum hangar which can hold multiple
+wings of *Pirahna* class fighters, or loads of photon torpedoes depending on mission profile.
 
-The *Wasp* class adds a MACS small warp harness to the *Bumblebee*
+##### Auxillary vehicles
 
-![Small Warp Harness](images/macs/small-warp-harness.png)
+- Pirahna class fighters
+- Mako class tactical runabouts
+- Type 20 small shuttles
 
-The warp harness adds a bigger warp engine, and additonal components like extra phasers and a micro torpedo launcher.
+### Intermediate auxillary vehicles
 
-From the interiors, the warp harness adds another replicator and a transporter alcove. There's a console to access the second warp core as well.
+These are vehicles that are too big to be  a shuttle or a runabout, but smaller than even the small ships.
 
+These are ships which lie in the 50m to 100m range.
 
-## Hornet class
+#### Raven class
 
-![Small Runabout](images/macs/small-runabout.png)
+![Science Ship](images/aux/science.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/small-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/science.stl)
 
-Hornet class heavy shuttle
+Raven class science ship.
 
-### Stats
+##### Stats
 
- * Length: 20.6m
- * Width: 9.4m
- * Height: 2.9m
- * Crew Capacity:
-   * Minimum: 1
-   * Maximum: 14
- * Warp Speed:
-   * Cruising: Warp 2.1
-   * Maximum: Warp 3.5
+  - Length: 85m
+  - Width: 36m
+  - Height: 12.5m
+  - Decks: 4
+  - Crew Capacity: 25
+  - Warp Speed
+    - Cruising: Warp 6
+    - Peak: Warp 8.8
 
-### Description
+##### Description
 
-The *Hornet* class is a heavy shuttle more than 20m long, and is used as heavy shuttle on heavy and medium cruisers, and as a runabout on light cruisers.
+The *Raven* class occupies a functional niche in between a runabout and a full size starship. It's meant to
+go on missions of exloration alone, but will not be able to handle deep space for more than a couple of months.
 
-### Structure
+For its size the *Raven* is chock full of labs. It's also built to limp back from damage that can destroy bigger 
+ships, since the typical usage for this ship is to go where a full sized starship is too large to go.
 
-The *Hornet* class extends the *Wasp* by adding a MACS standard connector section in between.
+##### Structure
 
-![Extension](images/macs/extension.png)
+As the *Raven* is in between a runabout and a full size starship in functionality so it is in structure - and you
+can see elements of both from the shape.
 
-The connector section contains 4 bunk beds, a replicator, and a lavatory. It also contains an extra computer core.
+The topmost deck contains a hybrid bridge cum cockpit. The subsequent decks in the 'saucer' section have the labs,
+living quarters, messhall, sickbay, etc. The saucer section is followed by the engineering section which continues
+into what is quite a large shuttlebay for this size of ship.
 
-However the most important function of the connector section is that it connects the MACS components to its front and its back - and also any component that might be fixed below, by means of collapsible stairs.
+##### Auxillary vehicles
 
-In case the *Hornet* is used as a runabout, the bunk beds can be swapped out for science stations as required.
+- Type 20 small shuttles
+- Bumblebee Shuttlepods
 
+#### Orca class
 
-## Dragonfly Class
+![Attack Ship](images/aux/attack.png)
 
-![Cutter](images/macs/cutter.png)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack.stl)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/cutter.stl)
+Orca class light corvette
 
-Dragonfly class heavy shuttle/cutter
+##### Stats
 
-### Stats
+  - Length: 86m
+  - Width: 25m
+  - Height: 12m
+  - Decks: 3
+  - Crew Capacity: 12
+  - Warp Speed
+    - Cruising: Warp 8
+    - Peak: Warp 9.9
 
- * Length: 29.9m
- * Width: 26.5m
- * Height: 5.5m
- * Crew Capacity:
-   * Minimum: 2
-   * Maximum: 8
- * Warp Speed:
-   * Cruising: Warp 5
-   * Maximum: Warp 9
+##### Description
 
-### Description
+After the Dominion war Starfleet felt the need for ships that are substantially larger than the *Peregrine* class
+fighters, but still smaller than full size starships. The *Defiant* was famously effective but even that was too
+big to effectively engage the Jem'Hadar attack fighters.
 
-The *Dragonfly* is a small ship with a large engine. It is used as a fast courier/cutter to gain the speed of the large warp core, and is used as a tug to utilize its powerful engine.
+The Orca was conceived as an intermediate spacecraft that ewould be cheap to build and deploy in numbers, but still 
+durable and deadly enough to make an impact. The design team also decided to use the Orca as a proof of concept that
+the Multi-Vector paradigm scales down to smaller ships.
 
-But the most common use is to attach it to one of the MACS cargo section and use it to haul cargo.
+This makes the Orca a small and deadly ship that can occasionally be two small and deadly ships.
 
-### Structure
+##### Structure
 
-The *Dragonfly* attaches a MACS large warp harness to the *honeybee*
+The Orca is structured like a conventional attack ship, with a primary hull inline with the secondary hull and engine
+nacelles trailing behind and below.
 
-![Large Warp Harness](images/macs/large-warp-harness.png)
+As mentioned before, the Orca also splits up into two ships, each of which are worth exploring on their own.
 
-The large warp harness delivers a warp core powerful enough for a large yacht or a small starship. 
+##### Orca-A class
 
-From the interiors it adds a lavatory, replicator, transporter alcove, a computer core and an engineering console.
+![Attack Ship](images/aux/attack-primary.png)
 
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack-primary.stl)
 
-## Beetle Class
+Orca-A class heavy tactical runabout
 
-![Heavy Runabout](images/macs/heavy-runabout.png)
+  - Length: 46m
+  - Width: 25m
+  - Height: 6m
+  - Decks: 2
+  - Crew Capacity: 9
+  - Warp Speed
+    - Cruising: Warp 8.5
+    - Peak: Warp 9.5
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/heavy-runabout.stl)
+The Orca-A class is a stand-alone heavy tactical runabout that can hold three shifts of 3 crew. It's not as
+roomy as its dimensions might indicate since large sections of deck 2 are taken up by the phaser batteries.
 
-Beetle class heavy cargo shuttle/runabout
+The Orca-A can land on a planet's surface.
 
-### Stats
+When the A class is coupled up with the B class to form the entire Orca ship, the A-class warp core is fully
+dedicated to powering up the phaser batteries. 
 
- * Length: 37.9m
- * Width: 26.5m
- * Height: 6.5m
- * Crew Capacity:
-   * Minimum: 2
-   * typical: 5
-   * Maximum: 35
- * Warp Speed:
-   * Cruising: Warp 3.5
-   * Maximum: Warp 6.2
+##### Orca-B class
 
-### Description
+![Attack Ship](images/aux/attack-secondary.png)
 
-The *Beetle* class is one of the ships that really demonstrate the power and viability of the MACS program. It's built out of the same conponents which are standard in the MACS program but it's a craft big enough to be a small starship.
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack-secondary.stl)
 
-### Structure
+Orca-B class torpedo boat
 
-The *Beetle* class adds the MACS heavy cargo containers to what is essentially a *Dragonfly* with a MACS connector module.
+  - Length: 56m
+  - Width: 22m
+  - Height: 12m
+  - Decks: 3
+  - Crew Capacity: 3
+  - Warp Speed
+    - Cruising: Warp 6.2
+    - Peak: Warp 9.9
 
-![Box](images/macs/habitat.png)
+The Orca-B class is technically stand-alone but practically much less so than the A-class.
 
-The cargo containers have independent gravity and environment systems, and can be configured to be habitable if needed. This makes the *Beetle* class not only a heavy cargo hauler, but also a heavy people hauler.
+Structurally the B class is a small starship sized warp core and engines connected to a runabout
+sized living quarters.
 
-The Cargo containers can even be configured as scientific labs, and the *Beetle* class can be used as a heavy runabout, or a light science vessel.
+##### Auxillary vehicles
 
-The *Beetle* class is notorious for being used as a fast and cheap general purpose starship in remote Federation colonies.
+The Orca class contains a single *Bumblebee* class shuttlepod which enters and leaves the ship 
+through a bay door on the bottom side of the primary hull. During separation this lies entirely
+in the A-class.
 
+The B-class has no auxillary vehicles.
 
-## Nightingale Class
+#### Orbit class
 
-![Hospital Ship](images/macs/hospital.png)
+![Diplomatic Ship](images/aux/diplomat.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/macs/hospital.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/diplomat.stl)
 
-Nightingale Class Heavy Medevac Runabout
+Orbit class yacht
 
-### Stats
+##### Stats
 
- * Length: 46m
- * Width: 32m
- * Height: 8.4
- * Decks: 2
- * Crew Capacity:
-   * Minimum: 4
-   * Typical: 10
-   * Maximum: 75
- * Auxillary Craft: 1 *Bumblebee* class light shuttle
- * Warp Speed:
-   * Cruising: Warp 2.3
-   * Maximum: Warp 5
-   
-### Description
+  - Length: 78m
+  - Width: 36m
+  - Height: 13.5m
+  - Decks: 4
+  - Crew Capacity: 30
+  - Warp Speed
+    - Cruising: Warp 5
+    - Peak: Warp 8.2
 
-The *Nightingale* is not a true member of the MACS family, although it is built from the standard MACS components. It was built specifically as a medevac vehicle for the *Trinity*, although it has since found use in a variety of ships and stations.
+##### Descriptions
 
-### Structure
+The Orbit class was designed when it was noticed that on most ships the Captain's yacht was seldom
+used for the diplomatic functions it was intended for. The ship design team went about designing 
+what a yacht would require for diplomatic missions.
 
-The *Nightingale* complements what is the shuttle part of a *Beetle* class with a custom medical habitat:
+##### Structure
 
-![Disk](images/macs/disk.png)
+The yacht looks like a full size shape at first glance. This is a deliberate choice, and for similar
+reasons as the Atlas-D class itself - it  was deciced that a starfleet first contact vessel should
+look like a starfleet vessel.
 
-Apart from containing independent gravity and environment controls, the disk also contains
+The interiors of the vessel are fairly conventional except that instead of science labs the saucer 
+section has large luxury accomodations. In effect this is a glorified taxi ship although it does
+not lack sensors or scientific capabilities.
 
-  * The latest of medical equipment and scanners
-  * Up to 20 isolated patient beds
-  * Medical transporters with highly sensitive biofilters
-  * Holo-emitters spanning the entire breadth of the disk capable of projecting 6 independent EMH
+##### Auxillary vehicles
 
-Even though the *Nightingale* is supposed to just carry patients from affected areas to the main hospital decks of the *Trinity*, the *Nightingale* by itself acts as a fully capable small hospital.
+- Bumblebee Class shuttlepod
 
-Regarding the ship itself, there's a second MACS *Bumblebee* module attached to the rear of the large warp harness. This can be used as a secondary command module, and given that it has been configured to detach and re-attach to the harness without requiring an engineering team, can also be used as an auxillary vehicle for the *Nightingale* itself.
 
-## Black Widow Class
+### Conventional auxillary vehicles
 
-![Fighter](images/macs/fighter.png)
+These are regular sized shuttles and and runabouts.
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/macs/fighter.stl)
+#### Bumblebee class
 
-*Black Widow* class fighter
+![shuttle Pod](images/aux/shuttlepod.png)
 
-### Stats
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttlepod.stl)
 
-  * Length: 16.3m
-  * Width: 13.8m
-  * height: 2.4m
-  * Crew Capacity: 2
-  * Warp Speed:
-    * Cruising: Warp 3
-    * Peak: Warp 7
+Bumblebee Class Shuttlepod
 
-### Description
+##### Stats
 
-As the MACs program gained traction in the remote regions of the federation it was starting to become obvious that the MACS vehicles are woefully undefended against most enemies.
+  - Length: 3m
+  - Width: 2.5m
+  - Height: 1.8m
+  - Crew Capacity: 2
+  - Warp Speed: no
 
-To mitigate this, the MACs program came up with a tactical harness which combined a warp core, warp coils, extra rooms, science stations and phaser banks and a micro-torpedo launcher.
+##### Description
 
-### Structure
+The Bumblebee is a minimal shuttlepod that is built to safely take two people from orbit
+to a planet's surface, and then safely back.
 
-The *Black Widow* combines a *Honeybee* cockpit with the MACS Tactical harness
+The Bumblebee has another property that it is extremely small. Hence it is used as auxillary
+ship in intermediate and small starships.
 
-![Tactical Harness](images/macs/tactical-harness.png)
+#### Type 20 class
 
-The tactical harness adds a type IV phaser backed by two phaser banks. In addition it also adds a micro-torpedo launcher.
+![Small Shuttle](images/aux/shuttle-small.png)
 
-Internally it adds a warp core and engineering console, plus two extra rooms that can be configured as anything from living quarters to science stations to extra phaser banks or torpedo stores.
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-small.stl)
 
-# ICP
+Type 20 small shuttle
 
-The Intermediate Craft Program (ICP) began with the following observations:
+##### Stats
 
- * Starships are getting larger and larger. Starships exceeding a kilometer in length are becoming the norm.
- * As a consequence of this, the capacity of starships to carry auxillary vehicles is also increasing.
- * Consequently, auxillary vehicles are becoming larger
- * Due to miniaturization and march of technology, any ship is more powerful than a previous generation's ship of comparable size.
+  - Length: 6m
+  - Width: 3.3m
+  - Height: 2.5m
+  - Crew Capacity: 6
+  - Warp Speed
+    - Cruising: Warp 1.5
+    - Peak: Warp 2.7
 
-The ICP was started to come up with craft in the 25m to 100m range, which is too large to be a shuttle but too small to be a starship. The ICP designed vehicles should be able to be used as standalone starships or as auxillary vehicles aboard starbases and large starships.
+##### Description
 
-Each design had to come up with a scientific version and a tactical version. The designs were rated primarily on ruggedness, then ease of manufacture.
+The type 20 is the standard workhorse shuttle of the federation. It is not glamorous or special
+but it gets the job done.
 
-The stated design aims are as follows:
+The Type 20 is found throughout starfleet on small and medium starships.
 
- * Any design should be rugged, capable of operating upto 5 years without access to a starbase.
- * Design should be between 20 and 100m in length
- * Design should be under 20m in height
- * Design should be used for scientific or tactical usage. Separate designs are also permitted.
- * Design should accomodate an auxillary vehicle of the size equivalent to at least a *Honeybee* class shuttlepod.
+#### Type 23 Shuttle
 
-## Magpie Class
+![Medium Shuttle](images/aux/shuttle-medium.png)
 
-![Science Ship](images/icp/runabout.png)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-medium.stl)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/runabout.stl)
+Type 23 medium shuttle
 
-Magpie Class Scientific Heavy Runabout
+##### Stats
 
-### Stats
+  - Length: 12m
+  - Width: 6.6m
+  - Height: 2.5m
+  - Crew Capacity: 15
+  - Warp Speed
+    - Cruising: Warp 2.1
+    - Peak: Warp 3.5
 
- * Length: 22m
- * Width: 13.9m
- * Height: 5.1m
- * Decks: 1.5
- * Crew Capacity:
-   * Minimum: 1
-   * Typical: 5
-   * Maximum: 100
- * Auxillary Craft: None
- * Warp Speed:
-   * Cruising: Warp 4
-   * Maximum: Warp 8.5
+##### Description
 
-### Description
+The Type 23 is a larger shuttle than the type 20. It has all the equipment in correspondingly larger
+quantities and capabilities.
 
-The *Magpie* is nominally the size of a regular runabout, but because of its boxy build manages to fit twice as much capacity as a regular runabout of its size. 
+The Type 23 is also ubiquitous in medium and large starships.
 
-### Structure
+#### Type 3 large shuttle
 
-The cockpit is in the front which contains the main consoles, transporter and replicator. The cockpit ends in a stair ascending half a deck to the rest of the ship. This contains the modular units of a runabout towards the sides, and towards the center there's an open area containing a messhall and an assembly area. Aft of that, is the cargo hold, which spans the height of two decks. 
+![large shuttle](images/aux/shuttle-large.png)
 
-Descending down into the cargo hold, we see the doors connecting to the half second deck underneath the main deck. The center of this is occupied by a horizontal warp core, with additional modular units on the sides. 
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-large.stl)
 
+Type 3 large shuttle
 
+##### Stats
 
-## Hawk Class
+  - Length: 18m
+  - Width: 10m
+  - Height: 3.2m,
+  - Crew Capacity: 25
+  - Warp Speed
+    - Cruising: Warp 3.2
+    - Peak: Warp 5.6
 
-![Tactical Runabout](images/icp/tactical-runabout.png)
+##### Description
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/tactical-runabout.stl)
+At 18m long the Type 3 is more of a mini-runabout than a shuttle. 
 
-Hawk Class tactical runabout
+It is frequently found in medium starships as a runabout, and in large and very large starships as shuttle.
 
-### Stats
+#### Pirahna Class Fighter
 
- * Length: 31m
- * Width: 21m
- * Height: 5m
- * Decks: 1
- * Crew Capacity:
-   * Minimum: 1
-   * Typical: 2
-   * Maximum: 50
- * Auxillary Craft: None
- * Warp Speed:
-   * Cruising: Warp 5.2
-   * Maximum: Warp 8.7
+![Fighter](images/aux/fighter.png)
 
-### Description
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/fighter.stl)
 
-The *Hawk* class is the tactical version of the *Magpie*. The external changes are a differentiated warp assembly. Internally, more of the modular labs of the *Magpie* are replaced by phaser banks and torpedo stores.
+Pirahna class fighter
 
-### Structure
+##### Stats
 
-The combat capabilities of the *Hawk* class is comparable to dedicated fighters like the *Peregrine* and the *Valkyirie*, but unlike those, the *Hawk* class is a true runabout from the inside; apart from the command section and cockpit, the *Hawk* class also contains 4 rooms and a rear cargo hold like a standard runabout.
+  - Length: 12.3m
+  - Width: 7.9m
+  - Height: 2.4m
+  - Crew Capacity: 2
+  - Warp Speed
+    - Cruising: See Note
+    - Peak: Warp 9.5
 
-Typical deployments for the *Hawk* class are aboard starbases and large starships, where they supplement or replace dedicated fighter craft. Unlike warp fighters, which have a typical range of a few hundred million KM, *Hawk* class vessels can escort craft over several star systems.
+##### Description
 
-Both the *Magpie* and the *Hawk* are also called as ICP small chassis (scientific/tactical) runabouts.
+The Pirahna class is an atmospheric and exo single or double occupancy fighter meant for planetary and star system defence.
 
-## Snow Owl Class
+This means that although it has warp, its only used to warp at maximum speed to any part of a star system to start engaging the 
+enemy. All the manouvers happen at impulse speeds after that.
 
-![Yacht](images/icp/yacht.png)
+#### Amazon Class Runabout
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/yacht.stl)
+![Runabout](images/aux/runabout.png)
 
-Snow Owl Class Yacht
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/runabout.stl)
 
-### Stats
+Amazon class runabout
 
- * Length: 46m
- * Width: 27m
- * Height: 11m
- * Decks: 2
- * Crew Capacity:
-   * Minimum: 2
-   * Typical: 4
-   * Maximum: 50
- * Auxillary Craft: *Honeybee* class shuttlepod
- * Warp Speed:
-   * Cruising: Warp 5.2
-   * Maximum: Warp 8.7
+##### Stats
 
-### Description
+  - Length: 23m
+  - Width: 13m
+  - Height: 5.5m
+  - Crew Capacity: 16
+  - Warp Speed
+    - Cruising: Warp 5
+    - Peak: Warp 7
 
-The *Snow Owl* is the one entry which uses the same chassis for both the scientific and tactical versions, with the internals swapped out.
+##### Description
 
-The ship is built like a conventional starship, but with the dimensions of a yacht or a runabout.
+The Amazon class is nominally of the same dimensions as the *Danube* or *Yellowstone* class but because of its boxy build has twice the
+capacity. 
 
-The primary hull contains the cockpit, bunk beds, and modular observation labs. The secondary hull contains the engine and transporters.
+The Amazon class is fast rising up to become the standard runabout in all classes of starship and starbase that can carry a runabout.
 
-The *Snow Owl* class is also called as ICP Medium Chassis.
 
-## Scorpion Class
+#### Mako Class Runabout
 
-![Tactical runabout](images/macs/tactical-runabout.png)
+![Runabout](images/aux/tactical-runabout.png)
 
-[View 3D](https://github.com/prasannax1/starships/blob/master/stl/macs/tactical-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/tactical-runabout.stl)
 
-*Scorpion* class tactical runabout
+Mako class runabout
 
-### Stats
+##### Stats
 
-  * Length: 26.8m
-  * Width: 13.8m
-  * Height: 2.4m
-  * Decks: 1
-  * Crew Capacity:
-    * Minimum: 2
-    * Typical: 5
-    * Maximum: 20
-  * Auxillary Craft:
-    * *Bumblebee* class shuttle - also primary command module
-    * *Honeybee* class shuttlepod - also secondary command module
-  * Warp speed
-    * Cruising: Warp 4
-    * Maximum: Warp 7
+  - Length: 25m
+  - Width: 13.5m
+  - Height: 4.2m
+  - Crew Capacity: 10
+  - Warp Speed
+    - Cruising: Warp 6.5
+    - Peak: Warp 9.2
 
-### Description
+##### Description
 
-After the success of the *Black Widow* class the MACS program made its own submission to the ICP - the *Scorpion* class tactical runabout.
+The Mako class is a tactical runabout tweaked for maximum speed and striking power.
 
-It's composed of a *Bumblebee* command module, a MACS extension module, a MACS tactical harness and a MACS *Honeybee* secondary command module. Both command modules are separable for use as auxillary vehicles. This makes the *Scorpion* the smallest starfleet vessel capable of Multivector Asault Mode.
- 
-## Raven Class
+The Mako class forms the primary line of defence for the Atlas group.
 
-![Science Ship](images/icp/science.png)
+#### Ganges Class Heavy Runabout
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/science.stl)
+![Runabout](images/aux/heavy-runabout.png)
 
-Raven Class Scientific Heavy Runabout
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/heavy-runabout.stl)
 
-### Stats
+Ganges class heavy runabout
 
- * Length:52m 
- * Width: 40m
- * Height: 7m
- * Decks: 2
- * Crew Capacity:
-   * Minimum: 2
-   * Typical: 10
-   * Maximum: 200
- * Auxillary Craft: None
- * Warp Speed:
-   * Cruising: Warp 4
-   * Maximum: Warp 8.5
+##### Stats
 
-### Description
+  - Length: 25m
+  - Width: 13.5m
+  - Height: 4.2m
+  - Crew Capacity: 10
+  - Warp Speed
+    - Cruising: Warp 6.5
+    - Peak: Warp 9.2
 
-The *Raven* is the first vessel created by the ICP which successfully acts as an independent ship as well as an auxillary vehicle. It is feature par with any science vessel from the pioneering age of warp travel, from the late 2100s to the early 2200s.
+##### Description
 
-### Structure
+The Ganges class straddles the line between a small and intermediate ship and falls into the small ship category
+by about 1m. But with two decks and even a sizable shuttlebay the Ganges can easily be a small starship rather
+than an auxillary vehicle.
 
-The *Raven* has a very simple structure of single saucer shaped hull with warp coils at the bottom - somewhat like the ubiquitious *Miranda* class but much smaller.
+##### Auxillary vehicles
 
-Like all ships of the ICP, the *Raven* lacks a true bridge, which is replaced by the large cockpit at the front of deck 2. This is followed by runabout like modular labs and living area - messhall, sickbay, etc. This is followed by the engine room which houses the vertical warp core which occupies both decks. This is followed by the cargo/shuttle bay, which also houses the ship's transporters. The cargo bay also spans both decks.
-
-The front part of deck 1 has additional labs which require specialized instrumentation.
-
-
-## Vulture Class
-
-![Attack Ship](images/icp/attack.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/attack.stl)
-
-Vulture Class Light Corvette/Patrol Vessel
-
-### Stats
-
- * Length: 99m
- * Width: 41m
- * Height: 13m
- * Decks: 3
- * Crew Capacity:
-   * Minimum: 4
-   * Typical: 12
-   * Maximum: 56
- * Auxillary Craft: None
- * Warp Speed:
-   * Cruising: Warp 7
-   * Maximum: Warp 9.95
-
-### Description
-
-The *Vulture* is the tactical version of the *Raven*.
-
-The *Vulture Class* is not just named after a bird of prey - for all practical purposes it is a Bird of Prey built to Star Fleet specifications.
-
-The *Vulture* is arguably the most successful space craft built by the ICP. With a destructive power comparable to the *Constitution* class of about two centuries ago, the *Vulture* is deployed in a variety of patrol and escort roles. Within Federation space, the *Vulture* forms the first response to any threat. 
-
-The *Vulture* can limp back from damage that would destroy much larger ships and with that it is fast developing a reputation of being the last response required as well.
-
-### Structure
-
-The *Vulture* uses the same primary hull as the *Raven*, with the internals largely replaced by phaser banks, larger warp drive, and larger warp coils.
-
-The *Vulture* contains a saucer section and a secondary hull but they're both fused together. The Warp nacelles are attached directly to the saucer section instead of being attached by pylons.
-
-The upper deck is essentially a runabout, with the cockpit in front followed by main transporter and replicator, dormitory, sickbay, gym and brig. The aft part of the upper deck is a small cargo bay, which extends to an upper "attic" section above the main deck 1. This cargo section is directly connected to the torpedo launchers and can be used to hold extra torpedoes, or can be configured with a sensor array if required.
-
-Deck 2 consists of engineering, with the deflector in front, the warp core and antimatter reserve extending almost the entire length of deck 2.
-
-The saucer section is bigger than the interiors would indicate - and the extra space is occupied by a massive phaser array and auxillary antimatter reserve.
-
-The warp core of the *Vulture* is much more powerful than a ship of this size would indicate, and even at it's top speed of Warp 9.95 it consumes only 25% of the power output. The overpowered warp core is mainly used to power the phaser array, which is what enables the *Vulture* to take out ships several times its size without breaking a sweat.
-
-#### Note
-
-Both the *Raven* and the *Vulture* class are also called as ICP large chassis (scientific/tactical) vessels.
-
-## Eagle Class
-
-![Scout Ship](images/icp/explorer.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/explorer.stl)
-
-Eagle Class Light Scout
-
-### Stats
-
- * Length:111m 
- * Width: 40m
- * Height: 18m
- * Decks: 4
- * Crew Capacity:
-   * Minimum: 4
-   * Typical: 30
-   * Maximum: 120
- * Auxillary Craft: *Bumblebee* class small shuttles
- * Warp Speed:
-   * Cruising: Warp 7.5
-   * Maximum: Warp 9.5
-   
-### Description
-
-The ICP Large chassis was so effective that it was used in two more vessels.
-
-The *Eagle* is meant to carry out independent missions, and only uses the *Trinity* for its transwarp engine.
-
-### Structure
-
-The *Eagle* has a classic "starship" structure, with saucer shaped primary hull, secondary hull and warp nacelles.
-
-Deck 1 contains various labs, dormitories, sickbay and messhall. The front of the primary hull contains the primary deflector, and an observation lounge behind it.
-
-The secondary hull contains the warp core spanning three decks. The rear of the secondary hull contains a shuttlebay which holds two small shuttles.
-
-
-## Dove Class
-
-![Diplomatic Yacht](images/icp/diplomat.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/icp/diplomat.stl)
-
-Dove Class Diplomatic Yacht/Light Courier
-
-### Stats
-
- * Length: 92m
- * Width: 40m
- * Height: 16m
- * Decks: 3
- * Crew Capacity:
-   * Minimum: 4
-   * Typical: 10
-   * Maximum: 90
- * Auxillary Craft: *Bumblebee* class small shuttles
- * Warp Speed:
-   * Cruising: Warp 5
-   * Maximum: Warp 7.5
-
-### Description
-
-Sometimes the *Saraswati* class is too overpowered for missions that require a Captain's yacht or a diplomatic vessel. For these occasions, we have the *dove* class
-
-### Structure
-
-The *Dove* class also uses the ICP large chassis design.
-
-The Saucer section contains the cockpit and main deflector at the front, followed by a circular corridor surrounding a pantry area to exit into the engineering room aft. The outer side of the corridor has 4 luxury rooms, two on either side.
-
-The engineering section contains the main warp core and transporters.
-
-
-## Scale of ships
-
-At almost a mile long the *Trinity* class is in a class of its own, even compared with other "large" ships:
-
-
-##### Comparison with known ships
-
-![Standard Comparison](images/scale/scale-standard.png)
-
-##### Comparison with Galaxy Class
-
-![Saucer Comparison](images/scale/scale-saucer.png)
-
-##### Comparison with Sovereign Class
-
-![Carrier Comparison](images/scale/scale-carrier.png)
-
-##### Comparison with Odyssey Class
-
-![Transwarp Comparison](images/scale/scale-transwarp.png)
-
-##### Comparison with Excelsior
-
-![Command comparison](images/scale/scale-command.png)
-
-##### Comparison with Constitution class
-
-![Constitution comparison](images/scale/scale-scout.png)
-
-##### Comparison with Defiant Class
-
-![EScort comparison](images/scale/scale-escort.png)
-
-
-The *Trinity* looks even more gigantic compared with the auxillary ships it carries
-
-##### Auxillary ships in Laxmi class
-
-![Command Ships](images/combined/command.png)
-
-##### Auxillary ships in Saraswati Class
-
-![Scout ships](images/combined/scout.png)
-
-##### Auxillary ships in the Kali Class
-
-![Escort Ships](images/combined/escort.png)
-
-##### Auxillary ships in the Vishnu Class
-
-![Saucer Ships](images/combined/saucer.png)
-
-##### Auxillary ships in the Shiva Class
-
-![Carrier Ships](images/combined/carrier.png)
-
-##### Auxillary ships in the Brahma class
-
-![Transwarp Ships](images/combined/transwarp.png)
-
-##### Shuttles in Auxillary (ICP) ships 
-
-![Aux Shuttles](images/combined/auxillary.png)
-
+- Bumblebee class shuttlepod
+- misc land vehicles

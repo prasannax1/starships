@@ -5,12 +5,12 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/mlib.scad>;
+use <../mother/carrier.scad>;
 use <galaxy.scad>;
 use <sovereign.scad>;
 
 
-mvm_carrier_single();
+carrier();
 
-translate([100,0,200]) sovereign();
+translate([-75,0,100]) sovereign();
 
