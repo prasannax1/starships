@@ -407,3 +407,88 @@ These are ships which lie in the 50m to 100m range.
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack.stl)
 
 Orca class light corvette
+
+##### Stats
+
+  - Length: 86m
+  - Width: 25m
+  - Height: 12m
+  - Decks: 3
+  - Crew Capacity: 12
+  - Warp Speed
+    - Cruising: Warp 8
+    - Peak: Warp 9.9
+
+##### Description
+
+After the Dominion war Starfleet felt the need for ships that are substantially larger than the *Peregrine* class
+fighters, but still smaller than full size starships. The *Defiant* was famously effective but even that was too
+big to effectively engage the Jem'Hadar attack fighters.
+
+The Orca was conceived as an intermediate spacecraft that ewould be cheap to build and deploy in numbers, but still 
+durable and deadly enough to make an impact. The design team also decided to use the Orca as a proof of concept that
+the Multi-Vector paradigm scales down to smaller ships.
+
+This makes the Orca a small and deadly ship that can occasionally be two small and deadly ships.
+
+##### Structure
+
+The Orca is structured like a conventional attack ship, with a primary hull inline with the secondary hull and engine
+nacelles trailing behind and below.
+
+As mentioned before, the Orca also splits up into two ships, each of which are worth exploring on their own.
+
+##### Orca-A class
+
+![Attack Ship](images/aux/attack-primary.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack-primary.stl)
+
+Orca-A class heavy tactical runabout
+
+  - Length: 46m
+  - Width: 25m
+  - Height: 6m
+  - Decks: 2
+  - Crew Capacity: 9
+  - Warp Speed
+    - Cruising: Warp 8.5
+    - Peak: Warp 9.5
+
+The Orca-A class is a stand-alone heavy tactical runabout that can hold three shifts of 3 crew. It's not as
+roomy as its dimensions might indicate since large sections of deck 2 are taken up by the phaser batteries.
+
+The Orca-A can land on a planet's surface.
+
+When the A class is coupled up with the B class to form the entire Orca ship, the A-class warp core is fully
+dedicated to powering up the phaser batteries. 
+
+##### Orca-B class
+
+![Attack Ship](images/aux/attack-secondary.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack-secondary.stl)
+
+Orca-B class torpedo boat
+
+  - Length: 56m
+  - Width: 22m
+  - Height: 12m
+  - Decks: 3
+  - Crew Capacity: 3
+  - Warp Speed
+    - Cruising: Warp 6.2
+    - Peak: Warp 9.9
+
+The Orca-B class is technically stand-alone but practically much less so than the A-class.
+
+Structurally the B class is a small starship sized warp core and engines connected to a runabout
+sized living quarters.
+
+##### Auxillary vehicles
+
+The Orca class contains a single *Bumblebee* class shuttlepod which enters and leaves the ship 
+through a bay door on the bottom side of the primary hull. During separation this lies entirely
+in the A-class.
+
+The B-class has no auxillary vehicles.
