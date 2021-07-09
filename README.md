@@ -674,3 +674,27 @@ At 18m long the Type 3 is more of a mini-runabout than a shuttle.
 
 It is frequently found in medium starships as a runabout, and in large and very large starships as shuttle.
 
+#### Pirahna Class Fighter
+
+![Fighter](images/aux/fighter.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/fighter.stl)
+
+Pirahna class fighter
+
+##### Stats
+
+  - Length: 12.3m
+  - Width: 7.9m
+  - Height: 2.4m
+  - Crew Capacity: 2
+  - Warp Speed
+    - Cruising: See Note
+    - Peak: Warp 9.5
+
+##### Description
+
+The Pirahna class is an atmospheric and exo single or double occupancy fighter meant for planetary and star system defence.
+
+This means that although it has warp, its only used to warp at maximum speed to any part of a star system to start engaging the 
+enemy. All the manouvers happen at impulse speeds after that.
