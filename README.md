@@ -400,6 +400,29 @@ These are vehicles that are too big to be  a shuttle or a runabout, but smaller 
 
 These are ships which lie in the 50m to 100m range.
 
+#### Raven class
+
+![Science Ship](images/aux/science.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/science.stl)
+
+Raven class science ship.
+
+##### Stats
+
+  - Length: 85m
+  - Width: 36m
+  - Height: 12.5m
+  - Decks: 4
+  - Crew Capacity: 25
+  - Warp Speed
+    - Cruising: Warp 6
+    - Peak: Warp 8.8
+
+##### Description
+
+
+
 #### Orca class
 
 ![Attack Ship](images/aux/attack.png)
