@@ -698,3 +698,28 @@ The Pirahna class is an atmospheric and exo single or double occupancy fighter m
 
 This means that although it has warp, its only used to warp at maximum speed to any part of a star system to start engaging the 
 enemy. All the manouvers happen at impulse speeds after that.
+
+#### Amazon Class Runabout
+
+![Runabout](images/aux/runabout.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/runabout.stl)
+
+Amazon class runabout
+
+##### Stats
+
+  - Length: 23m
+  - Width: 13m
+  - Height: 5.5m
+  - Crew Capacity: 16
+  - Warp Speed
+    - Cruising: Warp 5
+    - Peak: Warp 7
+
+##### Description
+
+The Amazon class is nominally of the same dimensions as the *Danube* or *Yellowstone* class but because of its boxy build has twice the
+capacity. 
+
+The Amazon class is fast rising up to become the standard runabout in all classes of starship and starbase that can carry a runabout.
