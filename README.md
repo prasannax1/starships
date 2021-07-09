@@ -421,7 +421,25 @@ Raven class science ship.
 
 ##### Description
 
+The *Raven* class occupies a functional niche in between a runabout and a full size starship. It's meant to
+go on missions of exloration alone, but will not be able to handle deep space for more than a couple of months.
 
+For its size the *Raven* is chock full of labs. It's also built to limp back from damage that can destroy bigger 
+ships, since the typical usage for this ship is to go where a full sized starship is too large to go.
+
+##### Structure
+
+As the *Raven* is in between a runabout and a full size starship in functionality so it is in structure - and you
+can see elements of both from the shape.
+
+The topmost deck contains a hybrid bridge cum cockpit. The subsequent decks in the 'saucer' section have the labs,
+living quarters, messhall, sickbay, etc. The saucer section is followed by the engineering section which continues
+into what is quite a large shuttlebay for this size of ship.
+
+##### Auxillary vehicles
+
+- Type 20 small shuttles
+- Bumblebee Shuttlepods
 
 #### Orca class
 
