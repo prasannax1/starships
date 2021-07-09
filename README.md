@@ -234,8 +234,6 @@ The secondary hull seems tiny next to the saucer of the C class, but it is quite
 
 ##### Auxillary vehicles
 
-- Type 20 small shuttles
-- Type 23 medium shuttles
 - Type 3 large shuttles
 - Amazon Class runabouts
 - Mako class tactical runabouts
@@ -593,3 +591,86 @@ Bumblebee Class Shuttlepod
   - Height: 1.8m
   - Crew Capacity: 2
   - Warp Speed: no
+
+##### Description
+
+The Bumblebee is a minimal shuttlepod that is built to safely take two people from orbit
+to a planet's surface, and then safely back.
+
+The Bumblebee has another property that it is extremely small. Hence it is used as auxillary
+ship in intermediate and small starships.
+
+#### Type 20 class
+
+![Small Shuttle](images/aux/shuttle-small.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-small.stl)
+
+Type 20 small shuttle
+
+##### Stats
+
+  - Length: 6m
+  - Width: 3.3m
+  - Height: 2.5m
+  - Crew Capacity: 6
+  - Warp Speed
+    - Cruising: Warp 1.5
+    - Peak: Warp 2.7
+
+##### Description
+
+The type 20 is the standard workhorse shuttle of the federation. It is not glamorous or special
+but it gets the job done.
+
+The Type 20 is found throughout starfleet on small and medium starships.
+
+#### Type 23 Shuttle
+
+![Medium Shuttle](images/aux/shuttle-medium.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-medium.stl)
+
+Type 23 medium shuttle
+
+##### Stats
+
+  - Length: 12m
+  - Width: 6.6m
+  - Height: 2.5m
+  - Crew Capacity: 15
+  - Warp Speed
+    - Cruising: Warp 2.1
+    - Peak: Warp 3.5
+
+##### Description
+
+The Type 23 is a larger shuttle than the type 20. It has all the equipment in correspondingly larger
+quantities and capabilities.
+
+The Type 23 is also ubiquitous in medium and large starships.
+
+#### Type 3 large shuttle
+
+![large shuttle](images/aux/shuttle-large.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-large.stl)
+
+Type 3 large shuttle
+
+##### Stats
+
+  - Length: 18m
+  - Width: 10m
+  - Height: 3.2m,
+  - Crew Capacity: 25
+  - Warp Speed
+    - Cruising: Warp 3.2
+    - Peak: Warp 5.6
+
+##### Description
+
+At 18m long the Type 3 is more of a mini-runabout than a shuttle. 
+
+It is frequently found in medium starships as a runabout, and in large and very large starships as shuttle.
+
