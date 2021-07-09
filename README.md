@@ -533,3 +533,63 @@ through a bay door on the bottom side of the primary hull. During separation thi
 in the A-class.
 
 The B-class has no auxillary vehicles.
+
+#### Orbit class
+
+![Diplomatic Ship](images/aux/diplomat.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/diplomat.stl)
+
+Orbit class yacht
+
+##### Stats
+
+  - Length: 78m
+  - Width: 36m
+  - Height: 13.5m
+  - Decks: 4
+  - Crew Capacity: 30
+  - Warp Speed
+    - Cruising: Warp 5
+    - Peak: Warp 8.2
+
+##### Descriptions
+
+The Orbit class was designed when it was noticed that on most ships the Captain's yacht was seldom
+used for the diplomatic functions it was intended for. The ship design team went about designing 
+what a yacht would require for diplomatic missions.
+
+##### Structure
+
+The yacht looks like a full size shape at first glance. This is a deliberate choice, and for similar
+reasons as the Atlas-D class itself - it  was deciced that a starfleet first contact vessel should
+look like a starfleet vessel.
+
+The interiors of the vessel are fairly conventional except that instead of science labs the saucer 
+section has large luxury accomodations. In effect this is a glorified taxi ship although it does
+not lack sensors or scientific capabilities.
+
+##### Auxillary vehicles
+
+- Bumblebee Class shuttlepod
+
+
+### Conventional auxillary vehicles
+
+These are regular sized shuttles and and runabouts.
+
+#### Bumblebee class
+
+![shuttle Pod](images/aux/shuttlepod.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttlepod.stl)
+
+Bumblebee Class Shuttlepod
+
+##### Stats
+
+  - Length: 3m
+  - Width: 2.5m
+  - Height: 1.8m
+  - Crew Capacity: 2
+  - Warp Speed: no
