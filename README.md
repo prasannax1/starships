@@ -759,13 +759,14 @@ Ganges class heavy runabout
 
 ##### Stats
 
-  - Length: 25m
-  - Width: 13.5m
-  - Height: 4.2m
-  - Crew Capacity: 10
+  - Length: 49m
+  - Width: 24m
+  - Height: 6.9m
+  - Decks: 2
+  - Crew Capacity: 65
   - Warp Speed
-    - Cruising: Warp 6.5
-    - Peak: Warp 9.2
+    - Cruising: Warp 6.8
+    - Peak: Warp 9.5
 
 ##### Description
 
