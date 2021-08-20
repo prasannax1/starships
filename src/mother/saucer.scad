@@ -1,89 +1,30 @@
 use <../lib/util.scad>;
-include <global.scad>;
-include <saucer_lib.scad>;
+include <common.scad>;
 
-
-module saucer_disk_1() {
-    saucer_position()
-    hull()
+module saucer_saucer() {
     saucer_basic();
     
-    saucer_position()
-    translate([0,0,saucer_height])
-    util_saucer_shape(scout_width, 7, 3, 1, 1);
-    
-    saucer_position()
-    //hull()
-    translate([0,0,saucer_height+7])
-    util_saucer_shape(32, 3, 1, 1, 1);
-}
-
-
-module saucer_disk2() {
-    difference() {
-        saucer_disk_1();
-        
-        saucer_position() {
-            cylinder(d=scout_width+4, h=4, center=true);
-            cylinder(d1=scout_width+10, d2=scout_width-14, h=20, center=true);
-        }
-    }
-}
-
-module saucer_disk() {
-    
-    difference() {
-        saucer_disk_1();
-        
-        saucer_position()
-        rotate(0)
-        translate([saucer_upper_width/2+20,0,saucer_height-5])
-        cube([50,50,8], center=true);
-
-        saucer_position()
-        rotate(150)
-        translate([saucer_upper_width/2+20,0,saucer_height-5])
-        cube([50,50,8], center=true);
-
-        saucer_position()
-        rotate(-150)
-        translate([saucer_upper_width/2+20,0,saucer_height-5])
-        cube([50,50,8], center=true);
-    }
+    translate([0,0,saucer_height/2])
+    bridge_module();
     
     difference() {
         hull() {
-            saucer_position()
-            cylinder(d=scout_width+20, h=body_height/2, center=true);
-            cylinder(d=scout_width+20, h=body_height/2, center=true);
+            translate([0,0,-saucer_height/2])
+            cylinder(d=scout_width+20, h=scout_height*2, center=true);
+
+            translate([-saucer_width/2+scout_width,0,-saucer_height/2])
+            cylinder(d=scout_width+20, h=scout_height*2, center=true);
         }
 
         hull() {
-            saucer_position()
-            cylinder(d=scout_width-8, h=body_height/2+20, center=true);
-            cylinder(d=scout_width-8, h=body_height/2+20, center=true);
+            translate([0,0,-saucer_height/2])
+            cylinder(d=scout_width, h=scout_height*2.5, center=true);
+
+            translate([-saucer_width/2+scout_width,0,-saucer_height/2])
+            cylinder(d=scout_width, h=scout_height*2.5, center=true);
         }
-        
-        
-
-        translate([saucer_body_length,0,-body_height/4])
-        scale([2.5,1,1])
-        rotate([90,0,0])
-        cylinder(h=500, r=body_height/4-10, center=true, $fn=64);
-        
-        translate([0,0,saucer_body_length])
-        cube(2*saucer_body_length, center=true);
-
-        translate([-saucer_body_length,0,0])
-        cube(2*saucer_body_length, center=true);
-        
-        saucer_position()
-        translate([0,0,-(saucer_width-2*saucer_body_length)/2-10])
-        cube(saucer_width-2*saucer_body_length, center=true);
     }
 }
-
-
 
 
 
@@ -91,61 +32,52 @@ module saucer_disk() {
 
 module saucer_body() {
     difference() {
-        union() {
+        saucer_truncate() body_offset() body_basic();
 
-
-            hull() {
-                body_position()
-                body_basic();
-
-            }
-        }
-
-        translate([-body_length*2+1,0,0])
-        cube(body_length*4, center=true);
-        
-        translate([saucer_width/2-(saucer_width/2-saucer_body_length+30)/2,0,-40])
-        cube([saucer_width/2-saucer_body_length+30,100,100], center=true);
-        
-        translate([saucer_width/2-(saucer_width/2-saucer_body_length+30),0,-body_height/4])
-        scale([.5,1,1])
-        sphere(d=40, $fn=64);
-        
-        translate([0,0,saucer_height/2 + 10])
-        saucer_position()
-        cylinder(d=saucer_width*1.5, h=saucer_height, center=true);
+        translate([-body_pos_x_offset*1.5,0,-body_width/2-saucer_height/2])
+        sphere(d=body_width-10, $fn=100);
     }
+}
 
-    translate([0,0,-body_height/4])
-    rotate([0,90,0])
-    cylinder(d=100, h=4, center=true);
-    
+module saucer_truncate() {
+    intersection() {
+        children();
+        cube(saucer_width+.01, center=true);
+    }
+}
 
+module saucer_neck() {
+    neck_h=saucer_height/2 + body_width/2;
+
+    saucer_truncate()
+    translate([-saucer_width/2,0,-neck_h/2+saucer_height/2])
+    scale([8,1.5,1])
+    cylinder($fn=64, r1=0, r2=50, h=neck_h, center=true);
+}
+
+module saucer() {
+    saucer_saucer();
+    saucer_body();
+    saucer_neck();
+    saucer_assembly();
+}
+
+saucer();
+
+module saucer_assembly() {
+    util_mirrored([0,1,0])
+    translate([-saucer_width/2+saucer_nacelle_w,1.8*scout_width/2,-saucer_height/2-body_width/2])
+    saucer_nacelle();
+
+    translate([-saucer_width/2+saucer_nacelle_w,0,-saucer_height/2-body_width/2])
+    rotate([90,0,0])
+    cylinder(d=saucer_nacelle_w, h=1.8*scout_width, center=true);
 }
 
 module saucer_nacelle() {
     hull()
     util_mirrored([0,0,1])
-    translate([0,0,saucer_nacelle_h/2])
-    util_ovoid(saucer_nacelle_f, saucer_nacelle_b, saucer_nacelle_w, saucer_nacelle_h/2, saucer_nacelle_h/2);
+    translate([0,0,saucer_nacelle_h/4])
+    util_ovoid(saucer_nacelle_l/2, saucer_nacelle_l/2, saucer_nacelle_w,
+    saucer_nacelle_h/4,saucer_nacelle_h/4);
 }
-
-
-module saucer() {
-    saucer_disk();
-    saucer_body();
-    saucer_assembly();
-}
-
-module saucer_assembly() {
-    util_mirrored([0,1,0])
-    translate([0,body_width/2+saucer_nacelle_w/2, - saucer_nacelle_h-20])
-    saucer_nacelle();
-
-    translate([saucer_nacelle_f/2, 0, -saucer_nacelle_h-20])
-    rotate([90,0,0])
-    cylinder(d=25, h=body_width+saucer_nacelle_w, center=true, $fn=32);
-}
-
-saucer();
-

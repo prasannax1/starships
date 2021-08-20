@@ -1,100 +1,71 @@
 use <../lib/util.scad>;
-include <global.scad>;
-include <carrier_lib.scad>;
+include <common.scad>;
 
-//saucer_position() saucer_basic();
 
-module cr_body() {
+module carrier_body() {
     difference() {
-        union() {
-            delta = 12;
+        intersection() {
+            body_offset() body_basic();
+
+            translate([-1.3*saucer_width,0,0])
+            cube(saucer_width+.01, center=true);
             
-            body_position() 
-            body_basic();
-            
-            translate([-cr_disk_width/2+delta-100, 0, -cr_disk_height/2])
-            util_saucer_shape(cr_disk_width, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2);
-            
-            translate([-body_length-escort_width/2-cr_rear_curve,0,-cr_disk_height/2])
-            scale([2,1,1])
-            util_saucer_shape(cr_disk_width*.75, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2, cr_disk_height/2);
+            translate([saucer_width/2-1000,0,0])
+            cube(saucer_width+.01, center=true);
         }
 
-translate([-body_length+2, 0, -body_height/4-15])
-rotate([0,-15,0])
-translate([-0,0,0])
-cube ([10, 125, 75], center=true);
-
-
-        scale(1.01)
-        tw_body_hexagon();
-
-        translate([0,0,body_length*2+1])
-        cube(body_length*4, center=true);
-        
-        translate([saucer_width/2-2,0,0])
+        util_mirrored([0,1,0])
+        translate([-saucer_width/2,saucer_width/2+carrier_body_width/2,-saucer_height-body_width*1.6-carrier_center_offset])
+        body_offset()
         cube(saucer_width, center=true);
         
-        hull() {
-            translate([-body_length-cr_rear_curve, 0, -body_height/4])
-            rotate([90,0,0])
-            cylinder(r=cr_rear_curve, h=body_width*1.5, center=true, $fn=64);
+        translate([-body_width*1.2,0,-body_width/2-carrier_center_offset])
+        body_offset()
+        rotate([90,0,0])
+        cylinder(h=body_width*1.5, d=body_width, center=true, $fn=100);
 
-            translate([-body_length*3, 0, -body_height/4])
-            rotate([90,0,0])
-            cylinder(r=cr_rear_curve, h=body_width*1.5, center=true, $fn=64);
-
-            translate([-body_length+2*cr_rear_curve, 0, -body_height*2])
-            rotate([90,0,0])
-            cylinder(r=cr_rear_curve, h=body_width*1.5, center=true, $fn=64);
-        }
-        
-        hull() {
-            translate([-body_length-escort_width/2-cr_rear_curve,0,0])
-            cylinder(d=escort_width-1, h=2*body_height, center=true);
-
-            translate([-body_length-body_back,0,0])
-            cylinder(d=escort_width, h=2*body_height, center=true);
-        }
-    }
-    
-    difference() {
-        translate([-100,0,-body_height/4])
-        rotate([0,90,0])
-        cylinder(d=125,h=200, center=true);
-        
-        scale(.95)
-        tw_body_hexagon();
-        
-        translate([0,0,saucer_width/2])
+        translate([-body_width*1.2,0,-carrier_center_offset])
+        body_offset()
+        translate([-saucer_width/2, 0, -saucer_width/2])
         cube(saucer_width, center=true);
     }
-
 }
 
-
-
-module carrier() {
-    cr_body();
-    cr_assembly();
-}
-module cr_nacelle() {
+module carrier_nacelle() {
     hull()
     util_mirrored([0,0,1])
-    translate([0,0,cr_nacelle_h/2])
-    util_ovoid(cr_nacelle_f, cr_nacelle_b, cr_nacelle_w, cr_nacelle_h/2, cr_nacelle_h/2);
+    translate([0,0,carrier_nacelle_h/4])
+    util_ovoid(carrier_nacelle_l*.2, carrier_nacelle_l*.8, carrier_nacelle_w,
+    carrier_nacelle_h/4,carrier_nacelle_h/4);
 }
 
-module cr_assembly() {
+module carrier_assembly() {
     util_mirrored([0,1,0])
-    translate([-body_length-escort_width-cr_rear_curve,cr_disk_width*.75/2-cr_nacelle_w/2,-cr_nacelle_h/4])
-    rotate([-45,0,0])
-    translate([-0,0,cr_nacelle_h/2])
-    cr_nacelle();
+    translate([-carrier_nacelle_l*.9,carrier_nacelle_h, -1.2*carrier_nacelle_h])
+    body_offset()
+    carrier_nacelle();
+
+    translate([-carrier_nacelle_l*.85,0, -1.2*carrier_nacelle_h])
+    body_offset()
+    rotate([90,0,0])
+    cylinder(h=carrier_nacelle_h*2, d=carrier_nacelle_w, center=true);
+}
+
+module carrier_saucer() {
+    translate([-100,0,body_width/2])
+    body_offset() {
+        bridge_module();
+        
+        translate([-30,0,-24])
+        cylinder(h=50, d=50, center=true);
+    }
+}
+
+module carrier() {
+    carrier_body();
+    carrier_assembly();
+    carrier_saucer();
 }
 
 carrier();
-
-
-
 
