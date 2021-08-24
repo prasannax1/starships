@@ -17,7 +17,7 @@ $(IMG):
 	    -t Tomorrow \
 	    -c "-382.1,9.81,23.48,98.4,0,339,4078"
 
-escort.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mother/escort_lib.scad \
+escort.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/escort.scad
 	../../bin/render.sh \
 	    -i ../../src/mother/escort.scad \
@@ -25,7 +25,7 @@ escort.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mothe
 	    -t Tomorrow 
 
 
-scout.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mother/scout_lib.scad \
+scout.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/scout.scad
 	../../bin/render.sh \
 	    -i ../../src/mother/scout.scad \
@@ -33,7 +33,7 @@ scout.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mother
 	    -t Tomorrow 
 
 
-command.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mother/command_lib.scad \
+command.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/command.scad
 	../../bin/render.sh \
 	    -i ../../src/mother/command.scad \
@@ -41,21 +41,21 @@ command.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/moth
 	    -t Tomorrow 
 
 
-transwarp.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mother/transwarp_lib.scad \
+transwarp.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/transwarp.scad
 	../../bin/render.sh \
 	    -i ../../src/mother/transwarp.scad \
 	    -p transwarp.png \
 	    -t Tomorrow 
 
-saucer.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mother/saucer_lib.scad \
+saucer.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/saucer.scad
 	../../bin/render.sh \
 	    -i ../../src/mother/saucer.scad \
 	    -p saucer.png \
 	    -t Tomorrow 
 
-carrier.png: ../../src/lib/util.scad ../../src/mother/global.scad ../../src/mother/carrier_lib.scad \
+carrier.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/carrier.scad
 	../../bin/render.sh \
 	    -i ../../src/mother/carrier.scad \
