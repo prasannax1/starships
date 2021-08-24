@@ -1,125 +1,128 @@
 use <../lib/util.scad>;
-include <global.scad>;
-include <scout_lib.scad>;
+include <common.scad>;
 
 
-module scout_disk() {
-    util_saucer_shape(scout_width, scout_height, scout_height, 1, 2);
+scout_body_width=22;
+scout_body_f=15;
+scout_body_f_ext=15;
 
-    translate([0,0,scout_height])
-    util_saucer_shape(scout_bridge_w, scout_bridge_h, scout_bridge_h/3, scout_bridge_h, 0);
+scout_body_b=75;
+scout_body_b_ext=25;
+
+scout_neck_width=8;
+
+scout_nacelle_w=16;
+scout_nacelle_f=20;
+scout_nacelle_b=110;
+
+module scout_saucer() {
+    bridge_module();
 
     translate([0,0,-1])
-    util_saucer_shape(scout_bridge_w, scout_bridge_h, 0, scout_bridge_h, scout_bridge_h/3);
+    util_saucer_shape(bridge_width, bridge_height, bridge_height, bridge_height, bridge_height);
 }
-
-
-
-module scout_body() {
-    difference() {
-        translate([-scout_body_f, 0, -scout_body_h/2-3])
-        util_ovoid(scout_body_f-15, scout_body_b+25, scout_body_w, scout_body_h/2, scout_body_h/2);
-
-        translate([-scout_width/2-scout_body_f-scout_body_b,0,-scout_body_h/2-3])
-        cube(scout_width, center=true);
-
-        translate([0,0,-scout_body_h/2-3])
-        cube(scout_body_f, center=true);
-
-        translate([-scout_body_f-scout_body_b,0,-3-scout_body_h])
-        scale([2,1,1])
-        rotate([90,0,0])
-        cylinder(d=scout_body_h, h=50, center=true, $fn=64);
-        
-        translate([-scout_body_f/2,0,-3-scout_body_h/2])
-        scale([.5,1,1])
-        sphere(d=12, $fn=64);
-    }
-
-}
-
-
 module scout_neck() {
     difference() {
-        intersection() {
-            translate([0,0,-3-scout_body_h])
-            util_nacelle(scout_body_f+scout_body_b*.7, scout_body_w*3, 2*scout_body_h+3+3+scout_height, curved=true);
+        translate([0,0,-bridge_height-scout_body_width/2])
+        scale([3.55,1,1])
+        rotate([90,0,0])
+        cylinder(r=scout_body_width/2+bridge_height*2+scout_height*.75, h=scout_neck_width, $fn=100, center=true);
 
-            cube([1000,8,1000],center=true);
-        }
+        translate([saucer_width/2,0,0])
+        cube(saucer_width, center=true);
 
+        translate([0,0,-saucer_width/2-bridge_height-scout_body_width/2])
+        cube(saucer_width, center=true);
 
-        translate([0,0,-scout_body_h/2-13])
-        cube(scout_body_f+6, center=true);
-
-        translate([0,0,-500-scout_body_h/2-3])
-        cube(1000,center=true);
-
-        translate([0,0,scout_width/2+scout_height+scout_bridge_h])
-        cube(scout_width, center=true);
-        
-        translate([scout_bridge_w/2,0,scout_bridge_w/2])
-        cube(scout_bridge_w, center=true);
+        translate([saucer_width/2-scout_width/3.6,0,-saucer_width/2])
+        cube(saucer_width, center=true);
     }
+}
+
+module scout_body_plus() {
+    translate([-scout_width/3,0,-scout_body_width/2-bridge_height-1])
+    intersection() {
+        translate([scout_body_f,0,0])
+        translate([-(scout_body_f+scout_body_b)/2,0,0])
+        cube(scout_body_f+scout_body_b, center=true);
+        util_ovoid(scout_body_f+scout_body_f_ext, scout_body_b+scout_body_b_ext, scout_body_width, scout_body_width/2, scout_body_width/2);
+    }
+}
+
+
+module scout_body_minus() {
+    translate([-scout_width/4.8,0,-scout_body_width/2-bridge_height-1])
+    scale([.25,1,1])
+    sphere(d=15, $fn=100);
+    
+    translate([-scout_width/3-scout_body_b,0,-scout_body_width-bridge_height-2.5])
+    scale([2.5,1,1])
+    rotate([90,0,0])
+    cylinder(d=scout_body_width, h=scout_body_width*2, $fn=100, center=true);
 }
 
 module scout_nacelle() {
     difference() {
-        util_ovoid(scout_nacelle_f, scout_nacelle_b, scout_nacelle_w, scout_nacelle_h/2, scout_nacelle_h/2);
+        util_ovoid(scout_nacelle_f, scout_nacelle_b, scout_nacelle_w, scout_nacelle_w/2, scout_nacelle_w/2);
 
-        translate([20,0,0])
-        sphere(r=10, $fn=64);
+        translate([scout_nacelle_f*.9,0,0])
+        sphere(d=scout_nacelle_w, $fn=100);
 
-        translate([-90,0,0])
+        translate([-scout_nacelle_b*.9,0,0])
         rotate([0,-45,0])
-        translate([-50,0,0])
-        cube(100, center=true);
+        translate([-saucer_width/2,0,0])
+        cube(saucer_width, center=true);
     }
 
-    translate([8,0,0])
-    sphere(d=10,$fn=64);
+    translate([scout_nacelle_f*.35,0,0])
+    sphere(d=scout_nacelle_w*.9, $fn=64);
 }
 
 
-theta=0;
-
-module scout_assembly(theta=45) {
+module scout_assembly(theta=0) {
+    translate([0,0,-scout_body_width/2-bridge_height-1])
     util_mirrored([0,1,0])
-    rotate([theta,0,0])
-    translate([-scout_body_f-scout_nacelle_f*1.5, scout_width/2-scout_nacelle_w*1.5,-3-scout_body_h/2])
-    rotate([-theta,0,0])
-    scout_nacelle();
+    rotate([theta,0,0]) {
+        hull() {
+            translate([-scout_width*.75-20, scout_width/2-scout_nacelle_w,0])
+            sphere(1.2);
 
-    util_mirrored([0,1,0])
-    hull() {
-        translate([-scout_body_f-scout_body_b/2 + 20,0,-3-scout_body_h/2])
-        sphere(1);
+            translate([-scout_width*.75-50, scout_width/2-scout_nacelle_w,0])
+            sphere(1.2);
 
-        translate([-scout_body_f-scout_body_b/2 + 10,0,-3-scout_body_h/2])
-        sphere(1);
+            translate([-scout_width*.5, 0,0])
+            sphere(1.5);
+            
+            translate([-scout_width*.5-7.5, 0,0])
+            sphere(1.5);
+        }
 
-        rotate([theta,0,0])
-        translate([-scout_body_f-scout_nacelle_f*1.5-15,scout_width/2-scout_nacelle_w*1.5,-3-scout_body_h/2])
-        sphere(1);
-        
-        rotate([theta,0,0])
-        translate([-scout_body_f-scout_nacelle_f*1.5-40,scout_width/2-scout_nacelle_w*1.5,-3-scout_body_h/2])
-        sphere(1);
+
+
+        translate([-scout_width*.75, scout_width/2-scout_nacelle_w,0])
+        rotate([-theta,0,0])
+        scout_nacelle();
     }
 }
 
+module scout_body() {
+    difference() {
+        scout_body_plus();
+        scout_body_minus();
+    }
+}
 
 module scout(saucer_attached=true) {
-    scout_position() {
-        scout_disk();
+    translate([0,0,-scout_height]) {
+        scout_saucer();
         scout_body();
-        scout_neck();
+        render() scout_neck();
         if (saucer_attached == true) {
-            scout_assembly(scout_passive_angle);
+            scout_assembly(22);
         } else {
-            scout_assembly(scout_active_angle);
+            scout_assembly(45);
         }
     }
 }
 
-scout(saucer_attached=false);
+scout(false);

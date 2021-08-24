@@ -1,135 +1,103 @@
 use <../lib/util.scad>;
-include <global.scad>;
-include <saucer_lib.scad>;
+include <common.scad>;
 
-
-module saucer_disk_1() {
-    saucer_position()
-    hull()
-    saucer_basic();
-    
-    saucer_position()
-    translate([0,0,saucer_height])
-    util_saucer_shape(scout_width, 7, 3, 1, 1);
-    
-    saucer_position()
-    //hull()
-    translate([0,0,saucer_height+7])
-    util_saucer_shape(32, 3, 1, 1, 1);
-}
-
-
-module saucer_disk2() {
-    difference() {
-        saucer_disk_1();
-        
-        saucer_position() {
-            cylinder(d=scout_width+4, h=4, center=true);
-            cylinder(d1=scout_width+10, d2=scout_width-14, h=20, center=true);
-        }
-    }
-}
 
 module saucer_disk() {
-    
-    difference() {
-        saucer_disk_1();
-        
-        saucer_position()
-        rotate(0)
-        translate([saucer_upper_width/2+20,0,saucer_height-5])
-        cube([50,50,8], center=true);
+    saucer_basic();
 
-        saucer_position()
-        rotate(150)
-        translate([saucer_upper_width/2+20,0,saucer_height-5])
-        cube([50,50,8], center=true);
-
-        saucer_position()
-        rotate(-150)
-        translate([saucer_upper_width/2+20,0,saucer_height-5])
-        cube([50,50,8], center=true);
-    }
-    
-    difference() {
-        hull() {
-            saucer_position()
-            cylinder(d=scout_width+20, h=body_height/2, center=true);
-            cylinder(d=scout_width+20, h=body_height/2, center=true);
-        }
-
-        hull() {
-            saucer_position()
-            cylinder(d=scout_width-8, h=body_height/2+20, center=true);
-            cylinder(d=scout_width-8, h=body_height/2+20, center=true);
-        }
-        
-        
-
-        translate([saucer_body_length,0,-body_height/4])
-        scale([2.5,1,1])
-        rotate([90,0,0])
-        cylinder(h=500, r=body_height/4-10, center=true, $fn=64);
-        
-        translate([0,0,saucer_body_length])
-        cube(2*saucer_body_length, center=true);
-
-        translate([-saucer_body_length,0,0])
-        cube(2*saucer_body_length, center=true);
-        
-        saucer_position()
-        translate([0,0,-(saucer_width-2*saucer_body_length)/2-10])
-        cube(saucer_width-2*saucer_body_length, center=true);
-    }
+    translate([0,0,saucer_height])
+    bridge_module();
 }
-
-
-
-
-
-
 
 module saucer_body() {
     difference() {
-        union() {
-
-
-            hull() {
-                body_position()
-                body_basic();
-
-            }
-        }
-
-        translate([-body_length*2+1,0,0])
-        cube(body_length*4, center=true);
-        
-        translate([saucer_width/2-(saucer_width/2-saucer_body_length+30)/2,0,-40])
-        cube([saucer_width/2-saucer_body_length+30,100,100], center=true);
-        
-        translate([saucer_width/2-(saucer_width/2-saucer_body_length+30),0,-body_height/4])
-        scale([.5,1,1])
-        sphere(d=40, $fn=64);
-        
-        translate([0,0,saucer_height/2 + 10])
-        saucer_position()
-        cylinder(d=saucer_width*1.5, h=saucer_height, center=true);
+        saucer_body_plus();
+        saucer_body_minus();
     }
-
-    translate([0,0,-body_height/4])
-    rotate([0,90,0])
-    cylinder(d=100, h=4, center=true);
     
-
+    translate([-saucer_width/2+scout_width*.75,0,-tw_body_w/2+saucer_height])
+    rotate([0,90,0]){   
+       difference() { 
+            cylinder(h=100, d=100, center=true, $fn=100);
+            
+            translate([0,0,50])
+            scale([1,1,.2])
+            sphere(d=75, $fn=100);
+       }
+    }
 }
+
+
+module saucer_body_minus() {
+    translate([-saucer_width/2,0,saucer_height-5])
+    cube([20,40, 8], center=true);
+    
+    hull() {
+        translate([-saucer_width/2+scout_width,0,0])
+        cylinder(d=scout_width, h=scout_height*2.5, center=true);
+        
+        cylinder(d=scout_width, h=scout_height*2.5, center=true);
+    }
+    
+    translate([-saucer_width/2+scout_width*1.5,0,-tw_body_w/2-scout_height-.01]) {
+        scale([.5,1,1])
+        rotate([90,0,0])
+        cylinder($fn=100, d=tw_body_w, h=tw_body_w*2, center=true);
+
+        translate([saucer_width/2,0,-saucer_width/2+tw_body_w/2])
+        cube(saucer_width, center=true);
+    }
+    
+    intersection() {
+        translate([0,0,-tw_body_w/2+saucer_height])
+        rotate([0,90,0])
+        cylinder(d=.65*tw_body_w, h=.65*saucer_width, center=true, $fn=100);
+
+        translate([0,0,-saucer_width/2-scout_height-.01])
+        cube(saucer_width, center=true);
+    }
+}
+
+
+
+
+
+module saucer_body_plus() {
+        intersection() {
+        hull()
+        util_mirrored([0,0,1])
+        saucer_body_pos() saucer_body_basic();
+
+        translate([-10,0,-saucer_width/2 + saucer_height])
+        cube(saucer_width, center=true);
+    }
+    
+    hull() {
+        translate([-saucer_width/2+scout_width,0,0])
+        cylinder(d=scout_width*1.1, h=scout_height*2, center=true);
+        
+        cylinder(d=scout_width*1.1, h=scout_height*2, center=true);
+    }
+}
+
 
 module saucer_nacelle() {
     hull()
     util_mirrored([0,0,1])
-    translate([0,0,saucer_nacelle_h/2])
-    util_ovoid(saucer_nacelle_f, saucer_nacelle_b, saucer_nacelle_w, saucer_nacelle_h/2, saucer_nacelle_h/2);
+    util_mirrored([1,0,0])
+    translate([100,0,10])
+    sphere(d=20);
 }
 
+module saucer_assembly() {
+    util_mirrored([0,1,0])
+    translate([-saucer_width/2+75, tw_body_w/2, -tw_body_w/2+saucer_height])
+    saucer_nacelle();
+
+    translate([-saucer_width/2+scout_width/2,0,-tw_body_w/2+saucer_height])
+    rotate([90,0,0])
+    cylinder(h=tw_body_w, d=20, center=true);
+}
 
 module saucer() {
     saucer_disk();
@@ -137,15 +105,4 @@ module saucer() {
     saucer_assembly();
 }
 
-module saucer_assembly() {
-    util_mirrored([0,1,0])
-    translate([0,body_width/2+saucer_nacelle_w/2, - saucer_nacelle_h-20])
-    saucer_nacelle();
-
-    translate([saucer_nacelle_f/2, 0, -saucer_nacelle_h-20])
-    rotate([90,0,0])
-    cylinder(d=25, h=body_width+saucer_nacelle_w, center=true, $fn=32);
-}
-
 saucer();
-
