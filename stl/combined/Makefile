@@ -7,7 +7,7 @@ STL += mother-ships.stl
 all: $(STL)
 
 $(STL):
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/combined/$(basename $(notdir $@)).scad \
 	    -o $@
 

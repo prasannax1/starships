@@ -15,7 +15,7 @@ STL += tactical-runabout.stl
 all: $(STL)
 
 $(STL):
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/small/$(basename $(notdir $@)).scad \
 	    -o $@
 

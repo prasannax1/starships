@@ -11,7 +11,7 @@ IMG += full-separation.png
 all: $(IMG)
 
 $(IMG):
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Tomorrow \
@@ -19,7 +19,7 @@ $(IMG):
 
 escort.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/escort.scad
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/escort.scad \
 	    -p escort.png \
 	    -t Tomorrow 
@@ -27,7 +27,7 @@ escort.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
 
 scout.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/scout.scad
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/scout.scad \
 	    -p scout.png \
 	    -t Tomorrow 
@@ -35,7 +35,7 @@ scout.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
 
 command.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/command.scad
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/command.scad \
 	    -p command.png \
 	    -t Tomorrow 
@@ -43,21 +43,21 @@ command.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
 
 transwarp.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/transwarp.scad
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/transwarp.scad \
 	    -p transwarp.png \
 	    -t Tomorrow 
 
 saucer.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/saucer.scad
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/saucer.scad \
 	    -p saucer.png \
 	    -t Tomorrow 
 
 carrier.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/carrier.scad
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/carrier.scad \
 	    -p carrier.png \
 	    -t Tomorrow 

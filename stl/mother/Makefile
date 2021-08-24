@@ -9,7 +9,7 @@ STL += main.stl
 all: $(STL)
 
 $(STL):
-	../../bin/render.sh \
+	bash ../../bin/render.sh \
 	    -i ../../src/mother/$(basename $(notdir $@)).scad \
 	    -o $@
 
