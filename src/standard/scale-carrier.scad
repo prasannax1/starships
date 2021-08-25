@@ -12,5 +12,5 @@ use <sovereign.scad>;
 
 carrier();
 
-translate([-75,0,100]) sovereign();
+translate([-500,0,100]) sovereign();
 

@@ -10,12 +10,12 @@ use <constitution.scad>;
 use <excelsior.scad>;
 use <galaxy.scad>;
 use <sovereign.scad>;
-use <nx01.scad>;
+use <nx.scad>;
 use <odyssey.scad>;
 
 translate([0,0,-200]) mother();
 
-translate([0,0,700]) nx01();
+translate([0,0,700]) nx();
 
 translate([0,0,620]) constitution();
 

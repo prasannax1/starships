@@ -9,7 +9,7 @@ use <../mother/command.scad>;
 use <excelsior.scad>;
 
 
-translate([-400,0,-90])
+translate([-0,0,-90])
 command(tw_attached=false);
 
 translate([0,0,120]) excelsior();

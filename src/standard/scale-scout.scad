@@ -11,4 +11,4 @@ use <constitution.scad>;
 
 scout(saucer_attached=false);
 
-translate([400,0,90]) constitution();
+translate([0,0,90]) constitution();
