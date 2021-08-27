@@ -16,10 +16,10 @@ scout_nacelle_f=20;
 scout_nacelle_b=110;
 
 module scout_saucer() {
-    bridge_module();
+    disk_class_2();
 
     translate([0,0,-1])
-    util_saucer_shape(bridge_width, bridge_height, bridge_height, bridge_height, bridge_height);
+    disk_class_1();
 }
 module scout_neck() {
     difference() {

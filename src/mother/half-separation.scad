@@ -1,9 +1,11 @@
+use <common.scad>;
 use <command.scad>;
 use <transwarp.scad>;
 use <saucer.scad>;
 use <scout.scad>;
 use <carrier.scad>;
 use <escort.scad>;
+use <warp.scad>;
 
 module half_sep() {
     distance=100;
@@ -21,6 +23,7 @@ module half_sep() {
     translate([0,0,distance]) {
         transwarp(saucer_attached=false);
         command();
+        nacelle_pos() warp();
     }
 }
 

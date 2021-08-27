@@ -18,25 +18,26 @@ module command_saucer() {
     util_saucer_shape(command_width, command_outer_h, scout_height,1,1);
 
     translate([0,0,command_outer_h])
-    bridge_module();
+    disk_class_2();
 
     translate([0,0,-1])
-    util_saucer_shape(bridge_width, bridge_height,bridge_height,bridge_height,bridge_height);
+    disk_class_1();
+
 }
 
 module command_body() {
     difference() {
         translate([-command_width/1.5,0,0])
-        util_ovoid(command_body_f, command_body_b, command_body_width, command_body_u, command_body_l);
+        util_ovoid(command_body_f, command_body_b, command_body_w, command_body_u, command_body_l);
 
         translate([0,0,-command_body_l])
         scale([command_width*.25/command_body_l,1,1])
         rotate([90,0,0])
-        cylinder(r=command_body_l, h=command_body_width*2, center=true, $fn=100);
+        cylinder(r=command_body_l, h=command_body_w*2, center=true, $fn=100);
 
         translate([-command_width/1.5-command_body_l,0,-command_body_l-3])
         rotate([90,0,0])
-        cylinder(r=command_body_l, h=command_body_width*2, center=true, $fn=100);
+        cylinder(r=command_body_l, h=command_body_w*2, center=true, $fn=100);
 
         translate([-command_width/1.5-command_body_l,0,-3])
         translate([-saucer_width/2,0,-saucer_width/2])
