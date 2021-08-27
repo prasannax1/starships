@@ -9,7 +9,7 @@ saucer_body_l=250;
 saucer_rim=10;
 saucer_inner=600;
 
-command_width=180;
+command_width=200;
 command_height=saucer_height/2;
 command_body_w=saucer_height;
 
