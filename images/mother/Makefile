@@ -7,6 +7,7 @@ IMG += carrier.png
 IMG += main.png 
 IMG += half-separation.png 
 IMG += full-separation.png
+IMG += warp.png
 
 all: $(IMG)
 
@@ -62,6 +63,13 @@ carrier.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
 	    -p carrier.png \
 	    -t Tomorrow 
 
+warp.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
+    ../../src/mother/warp.scad
+	bash ../../bin/render.sh \
+	    -i ../../src/mother/warp.scad \
+	    -p warp.png \
+	    -t Tomorrow 
+
 main.png: \
     ../../src/mother/command.scad \
     ../../src/mother/transwarp.scad \
@@ -69,6 +77,7 @@ main.png: \
     ../../src/mother/carrier.scad \
     ../../src/mother/scout.scad \
     ../../src/mother/escort.scad \
+    ../../src/mother/warp.scad \
     ../../src/mother/main.scad
 
 half-separation.png: \
@@ -78,6 +87,7 @@ half-separation.png: \
     ../../src/mother/carrier.scad \
     ../../src/mother/scout.scad \
     ../../src/mother/escort.scad \
+    ../../src/mother/warp.scad \
     ../../src/mother/half-separation.scad
 
 full-separation.png: \
@@ -87,5 +97,6 @@ full-separation.png: \
     ../../src/mother/carrier.scad \
     ../../src/mother/scout.scad \
     ../../src/mother/escort.scad \
+    ../../src/mother/warp.scad \
     ../../src/mother/full-separation.scad
 

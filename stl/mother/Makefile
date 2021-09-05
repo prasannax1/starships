@@ -4,6 +4,7 @@ STL += escort.stl
 STL += scout.stl 
 STL += command.stl 
 STL += carrier.stl 
+STL += warp.stl 
 STL += main.stl 
 
 all: $(STL)
@@ -15,6 +16,9 @@ $(STL):
 
 saucer.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/saucer.scad
+
+warp.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
+    ../../src/mother/warp.scad
 
 transwarp.stl: ../../src/lib/util.scad  ../../src/mother/common.scad \
     ../../src/mother/transwarp.scad
@@ -38,5 +42,6 @@ main.stl: \
     scout.stl \
     command.stl \
     carrier.stl \
+    warp.stl \
     ../../src/mother/main.scad
 
