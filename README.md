@@ -400,9 +400,9 @@ These are ships which lie in the 50m to 100m range.
 
 #### Raven class
 
-![Science Ship](images/aux/science.png)
+![Science Ship](images/small/science.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/science.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/small/aux/science.stl)
 
 Raven class science ship.
 
@@ -441,9 +441,9 @@ into what is quite a large shuttlebay for this size of ship.
 
 #### Orca class
 
-![Attack Ship](images/aux/attack.png)
+![Attack Ship](images/small/attack.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/small/aux/attack.stl)
 
 Orca class light corvette
 
@@ -479,9 +479,9 @@ As mentioned before, the Orca also splits up into two ships, each of which are w
 
 ##### Orca-A class
 
-![Attack Ship](images/aux/attack-primary.png)
+![Attack Ship](images/small/attack-primary.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack-primary.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/attack-primary.stl)
 
 Orca-A class heavy tactical runabout
 
@@ -504,9 +504,9 @@ dedicated to powering up the phaser batteries.
 
 ##### Orca-B class
 
-![Attack Ship](images/aux/attack-secondary.png)
+![Attack Ship](images/small/attack-secondary.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/attack-secondary.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/attack-secondary.stl)
 
 Orca-B class torpedo boat
 
@@ -534,9 +534,9 @@ The B-class has no auxillary vehicles.
 
 #### Orbit class
 
-![Diplomatic Ship](images/aux/diplomat.png)
+![Diplomatic Ship](images/small/diplomat.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/diplomat.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/diplomat.stl)
 
 Orbit class yacht
 
@@ -578,9 +578,9 @@ These are regular sized shuttles and and runabouts.
 
 #### Bumblebee class
 
-![shuttle Pod](images/aux/shuttlepod.png)
+![shuttle Pod](images/small/shuttlepod.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttlepod.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttlepod.stl)
 
 Bumblebee Class Shuttlepod
 
@@ -602,9 +602,9 @@ ship in intermediate and small starships.
 
 #### Type 20 class
 
-![Small Shuttle](images/aux/shuttle-small.png)
+![Small Shuttle](images/small/shuttle-small.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-small.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-small.stl)
 
 Type 20 small shuttle
 
@@ -627,9 +627,9 @@ The Type 20 is found throughout starfleet on small and medium starships.
 
 #### Type 23 Shuttle
 
-![Medium Shuttle](images/aux/shuttle-medium.png)
+![Medium Shuttle](images/small/shuttle-medium.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-medium.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-medium.stl)
 
 Type 23 medium shuttle
 
@@ -652,9 +652,9 @@ The Type 23 is also ubiquitous in medium and large starships.
 
 #### Type 3 large shuttle
 
-![large shuttle](images/aux/shuttle-large.png)
+![large shuttle](images/small/shuttle-large.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/shuttle-large.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-large.stl)
 
 Type 3 large shuttle
 
@@ -676,9 +676,9 @@ It is frequently found in medium starships as a runabout, and in large and very 
 
 #### Pirahna Class Fighter
 
-![Fighter](images/aux/fighter.png)
+![Fighter](images/small/fighter.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/fighter.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/fighter.stl)
 
 Pirahna class fighter
 
@@ -701,9 +701,9 @@ enemy. All the manouvers happen at impulse speeds after that.
 
 #### Amazon Class Runabout
 
-![Runabout](images/aux/runabout.png)
+![Runabout](images/small/runabout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/runabout.stl)
 
 Amazon class runabout
 
@@ -727,9 +727,9 @@ The Amazon class is fast rising up to become the standard runabout in all classe
 
 #### Mako Class Runabout
 
-![Runabout](images/aux/tactical-runabout.png)
+![Runabout](images/small/tactical-runabout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/tactical-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/tactical-runabout.stl)
 
 Mako class runabout
 
@@ -751,9 +751,9 @@ The Mako class forms the primary line of defence for the Atlas group.
 
 #### Ganges Class Heavy Runabout
 
-![Runabout](images/aux/heavy-runabout.png)
+![Runabout](images/small/heavy-runabout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/aux/heavy-runabout.stl)
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/heavy-runabout.stl)
 
 Ganges class heavy runabout
 
