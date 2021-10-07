@@ -12,9 +12,9 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Stats
 
- - Length: 1798m
+ - Length: 1859m
  - Width: 750m
- - Height: 249m
+ - Height: 285m
  - Decks: 75
  - Crew Capacity: 3000
    - Maximum evacuation limit: 75000
