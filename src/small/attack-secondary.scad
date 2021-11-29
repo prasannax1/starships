@@ -1,24 +1,56 @@
 use <../lib/util.scad>;
 
-module attack_secondary_body(attached=true) {
+//include <attack-primary.scad>;
 
+module attack_secondary_body_plus() {
     difference() {
-    translate([-20,0,-9])
-    render()
-    difference() {
-        scale([3.975,1,1.25])
+        intersection() {
+            translate([-25-20,0,-3])
+            rotate([0,90,0])
+            cylinder(d=12, h=50, center=true,$fn=64);
+
+            translate([0,0,0])
+            translate([0,0,-500])
+            cube(1000,center=true);
+        }
+
+        translate([-20-50,0,-2.5-.5]) 
+        intersection() {
+            cube([.5, 18, 5], center=true);
+
+            rotate([0,90,0])
+            cylinder(h=.5, d=10, center=true, $fn=64);
+        }
+        
+        translate([-70,0,-9])
+        scale([8,1,1])
         rotate([90,0,0])
-        cylinder(r=12, h=12, center=true,$fn=64);
-        
-        translate([500+.01,0,0])
-        cube(1000, center=true);
-        
-        translate([0,0,-500])
-        cube(1000, center=true);
-        
+        cylinder(r=3, h=18, center=true, $fn=64);
     }
 
 
+
+    intersection() {
+        translate([-20,0,-1.5])
+        scale([8,1,1.25])
+        rotate([90,0,0])
+        cylinder(d=12, h=12, center=true,$fn=64);
+
+
+        translate([-20,0,-3])
+        translate([-500,0,500])
+        cube(1000,center=true);
+    }
+
+    translate([-20,0,4.5])
+    cylinder(d=12, h=3, $fn=64, center=true);
+
+}
+
+module attack_secondary_body(attached=true) {
+    difference() {
+        attack_secondary_body_plus();
+        
         if (attached==false) {
             translate([-20,0,0])
             hull()
@@ -27,67 +59,11 @@ module attack_secondary_body(attached=true) {
             translate([0,4.5,1.5])
             rotate([0,90,0])
             cylinder($fn=8, d=2, h=.5, center=true);
-        }
+        }    
         
-        intersection() {
-            translate([-68,0,0])
-            hull()
-            util_mirrored([0,0,1])
-            util_mirrored([0,1,0])
-            translate([0,4.5,1.5])
-            rotate([0,90,0])
-            cylinder($fn=8, d=2, h=50, center=true);
-
-
-            translate([-74,0,3])
-            scale([3.5,1,1])
-            rotate([90,0,0])
-            cylinder(r=8, h=15, $fn=6, center=true);
-        }
+        translate([-20, 0, 6])
+        cylinder(d=10, h=.5, center=true, $fn=64);
     }
-           
-
-
-
-    difference() {
-        hull()
-        util_mirrored([0,1,0])
-        translate([-20,6,-9]) 
-        intersection() {
-            util_ovoid(10,48,10,5,5);
-            
-            translate([-500+7.5,0,0])
-            cube(1000, center=true);
-        }
-
-        hull()
-        util_mirrored([0,1,0])
-        translate([-12.5,6,-9]) 
-        sphere(d=5, $fn=100);
-        
-        translate([-68,0,-9-5])
-        scale([5,1,1])
-        rotate([90,0,0])
-        cylinder(r=5, h=20, center=true, $fn=100);
-    }
-
-
-
-    translate([-20,0,4.5])
-    cylinder(h=3, d=12, center=true, $fn=100);
-}
-
-module attack_nacelle() {
-    hull()
-    util_mirrored([0,0,1])
-    translate([10,0,-1.5])
-    util_ovoid(20,60,5,2.5,2.5);
-
-    hull()
-    util_mirrored([1,0,0])
-    util_mirrored([0,0,1])
-    translate([22,0,-1.5])
-    sphere(d=6, $fn=32);
 }
 
 
@@ -95,34 +71,48 @@ module attack_secondary(attached=true) {
     attack_secondary_body(attached);
 
     util_mirrored([0,1,0])
-    translate([-36.5-20,6, -9])
-    attack_assembly(-105);
+    translate([0,0,-2.5])
+    rotate([70,0,0]) {
+        translate([-50,0,-12])
+        attack_secondary_nacelle();
+
+        translate([-60,0,-8])
+        cube([16, 3, 16], center=true);
+    }
 }
 
+module attack_secondary_nacelle() {
+    scale([7.5,1,1]) {
+        intersection() {
+            rotate([90,0,0]) {
+                cylinder(h=4, r=8, center=true, $fn=64);
+
+                util_mirrored([0,0,1])
+                translate([0,0,3-.01])
+                cylinder(h=2, r1=8, r2=4, center=true, $fn=64);
+            }
+
+            translate([-25+.01, 0, -25+.01])
+            cube(50, center=true);
+        }
 
 
-module attack_assembly(theta) {
-    rotate([theta,0,0]) {
-        translate([0,0,17.5])
-        rotate([-180,0,0])
-        translate([0,0,-2.5])
-        attack_nacelle();
+        rotate([0,-90,0]) {
+            translate([0,0,2])
+            cylinder(h=4, d=8, center=true, $fn=64);
 
-
-        hull() {
-            translate([0,0,17.5])
-            sphere(d=2.5);
-
-            translate([10,0,17.5])
-            sphere(d=2.5);
-
-            translate([20,0,0])
-            sphere(d=2.5);
-
-            translate([40,0,0])
-            sphere(d=2.5);
+            translate([0,0,6-.01])
+            cylinder(h=4, d1=8, d2=4, center=true, $fn=64);
         }
     }
+
+    sphere(d=8, $fn=64);
+
+    translate([0,0,-2])
+    cylinder(h=4, d=8, center=true, $fn=64);
+
+    translate([0,0,-6+.01])
+    cylinder(h=4, d1=4, d2=8, center=true, $fn=64);
 }
 
 attack_secondary(attached=false);
