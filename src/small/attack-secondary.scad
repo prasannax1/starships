@@ -103,8 +103,14 @@ module attack_secondary(attached=true) {
         translate([-50,0,-12])
         attack_secondary_nacelle();
 
-        translate([-60,0,-8])
-        cube([16, 3, 16], center=true);
+        translate([-60,0,-8]) {
+            cube([13, 3, 16], center=true);
+            
+            util_mirrored([1,0,0])
+            translate([6.5,0,0])
+            cylinder(d=3, h=16, $fn=64, center=true);
+            
+        }
     }
 }
 
