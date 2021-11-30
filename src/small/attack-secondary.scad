@@ -33,8 +33,13 @@ module attack_secondary_body_plus() {
     intersection() {
         translate([-20,0,-1.5])
         scale([8,1,1.25])
-        rotate([90,0,0])
-        cylinder(d=12, h=12, center=true,$fn=64);
+        rotate([90,0,0]) {
+            cylinder(d=12, h=9.5, center=true,$fn=64);
+        
+            util_mirrored([0,0,1])
+            translate([0,0,1.25/2+9.5/2-.01])
+            cylinder(d1=12, d2=10, h=1.25+.02, center=true, $fn=64);
+        }
 
 
         translate([-20,0,-3])
@@ -42,8 +47,13 @@ module attack_secondary_body_plus() {
         cube(1000,center=true);
     }
 
-    translate([-20,0,4.5])
-    cylinder(d=12, h=3, $fn=64, center=true);
+    translate([-20,0,4.5]) {
+        translate([0,0,-.5])
+        cylinder(d=12, h=1.5, $fn=64, center=true);
+        
+        translate([0,0,1-.01])
+        cylinder(d1=12, d2=9.5, h=1.5, $fn=64, center=true);
+    }
 
 }
 
@@ -62,10 +72,27 @@ module attack_secondary_body(attached=true) {
         }    
         
         translate([-20, 0, 6])
-        cylinder(d=10, h=.5, center=true, $fn=64);
-    }
-}
+        cylinder(d=9, h=.5, center=true, $fn=64);
+        
+        translate([-20,0,-9])
+        scale([1.5,1,1])
+        rotate([90,0,0])
+        cylinder(r=6, h=18, center=true, $fn=64);
+        
+        intersection() {
+            translate([0,0,-3])
+            rotate([0,90,0])
+            cylinder(d=10,h=60,center=true, $fn=64);
 
+            translate([0,0,-50-3+.01])
+            cube(100, center=true);
+        }
+    }
+    
+    translate([-30,0,-3])
+    scale([.75,1,1])
+    sphere(d=8, $fn=64);
+}
 
 module attack_secondary(attached=true) {
     attack_secondary_body(attached);
