@@ -6,16 +6,33 @@ at_w=40;
 at_h=10;
 at_faces=8;
 
+module ap_inner_disk() {
+    util_mirrored([0,0,1])
+    translate([0,0,2.25-.01])
+    cylinder(h=2.5, d1=32, d2=24, $fn=64, center=true);
+
+    cylinder(h=1, d=32, $fn=64, center=true);
+}
+
+module ap_outer_disk() {
+    util_mirrored([0,0,1])
+    translate([0,0,2.5-.01])
+    cylinder(h=2.25, d1=40, d2=30, $fn=64, center=true);
+
+    cylinder(h=2.5, d=40, $fn=64, center=true);
+}
+
 module attack_primary(attached=true) {
     translate([0,0,0])
     difference() {
         scale([1,1,1])
-        util_saucer_shape(32, 3, 1, 3, 1);
+        translate([0,0,-3])
+        util_saucer_shape(32, 6, 1, 0, 1);
 
         cube([100,100,.5], center=true);
     }
 
-    cylinder(center=true, h=1, d=30);
+    cylinder(center=true, h=1, d=27);
 
     //util_saucer_shape(15, 4, .5, 4, .5);
 
@@ -23,7 +40,8 @@ module attack_primary(attached=true) {
     translate([-20,0,0])
     difference() {
         scale([2.25,1,1])
-        util_saucer_shape(40, 4,1,4,1);
+        translate([0,0,-3])
+        util_saucer_shape(40, 7,1,1,1);
         
         cube([200,12-.01,200],center=true);
         
@@ -56,7 +74,8 @@ module attack_primary(attached=true) {
     }
 
     difference() {
-        scale([1,1,6/25])
+        translate([0,0,-3])
+        scale([1,1,8/25])
         rotate([0,-90,0])
         translate([0,0,25])
         cylinder(h=48,d1=35, d2=30, center=true);
@@ -69,7 +88,10 @@ module attack_primary(attached=true) {
         translate([-50,0,0])
         cube(100, center=true);
         
-                cube([500,500,.5], center=true);
+        translate([0,0,-250-3])
+        cube(500, center=true);
+        
+                //cube([500,500,.5], center=true);
 
     }
 }
