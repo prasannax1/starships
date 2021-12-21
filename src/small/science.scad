@@ -63,7 +63,7 @@ module science() {
 
 module sci_assembly() {
 util_mirrored([0,1,0])
-translate([-40,12, 4.5]) sci_nacelle();
+translate([-45,12, 4.5]) sci_nacelle();
 
 util_mirrored([0,1,0])
 translate([-28,0,-3]) {
@@ -116,7 +116,7 @@ module sci_nacelle() {
 difference() {
 hull()
 util_mirrored([1,0,0])
-translate([20,0,0]) {
+translate([25,0,0]) {
 cylinder(h=3, d=6, center=true, $fn=64);
 
 translate([0,0,1.5])
@@ -130,7 +130,7 @@ cylinder(h=3,d1=3,d2=6,center=true, $fn=64);
 util_mirrored([0,1,0])
 translate([0,3,0])
 rotate([0,90,0])
-cylinder(h=36, d=1.5, center=true, $fn=64);
+cylinder(h=45, d=1.5, center=true, $fn=64);
 }
 }
 
