@@ -5,12 +5,12 @@ module sci_saucer() {
     difference() {
         scale([1,1,1])
         translate([0,0,-3])
-        util_saucer_shape(32, 6, 1, 0, 1);
+        util_saucer_shape(40, 6, 1, 0, 1);
 
         cube([100,100,.5], center=true);
     }
 
-    cylinder(center=true, h=1, d=27);
+    cylinder(center=true, h=1, d=33);
 }
     
 module sci_body_plus() {
