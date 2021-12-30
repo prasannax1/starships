@@ -11,6 +11,7 @@ IMG += shuttle-medium.png
 IMG += shuttlepod.png
 IMG += shuttle-small.png
 IMG += tactical-runabout.png
+IMG += yacht.png
 
 all: $(IMG)
 
@@ -33,6 +34,12 @@ attack-secondary.png: ../../src/lib/util.scad ../../src/small/attack-secondary.s
 	    -t Sunset 
 
 diplomat.png: ../../src/lib/util.scad ../../src/small/diplomat.scad
+	bash ../../bin/render.sh \
+	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -p $@ \
+	    -t Metallic 
+
+yacht.png: ../../src/lib/util.scad ../../src/small/yacht.scad
 	bash ../../bin/render.sh \
 	    -i ../../src/small/$(basename $(notdir $@)).scad \
 	    -p $@ \
