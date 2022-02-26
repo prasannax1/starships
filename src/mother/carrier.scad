@@ -1,58 +1,129 @@
 use <../lib/util.scad>;
 include <common.scad>;
 
-hangar_height = 2*carrier_elevation;
-carrier_saucer_w = 250;
-carrier_saucer_h = 25;
-
-module carrier_saucer() {
-    intersection() {
-        translate([-saucer_width/2-carrier_body_l/5,0,carrier_elevation])
-        util_saucer_shape(
-            carrier_saucer_w,
-            carrier_saucer_h/2,
-            carrier_saucer_h/4,
-            carrier_saucer_h/2,
-            carrier_saucer_h/4);
-
-        translate([-saucer_width/2-carrier_body_l/2,0,carrier_elevation])
-        cube(carrier_body_l, center=true);
-    }
-}
-
 module carrier_body() {
     difference() {
-        body_pos() body_basic();
+        intersection() {
+            scale([1.2,1,.8])
+            translate([0,0,saucer_width-carrier_height])
+            sphere(d=2*saucer_width, $fn=02*faces_concave);
 
-        translate([-saucer_width/2-carrier_body_l/2,0,saucer_width/2-.01])
-        cube(saucer_width, center=true);
+            union() {
+                translate([-(carrier_front + carrier_back)/2+carrier_front,0,-carrier_height/2-carrier_hangar_offset*2])
+                cube([carrier_front + carrier_back, carrier_width, carrier_height], center=true);
+                
+                translate([-(carrier_front + carrier_back)/2+carrier_front,0,-carrier_height/2])
+                cube([carrier_front + carrier_back, carrier_width-carrier_hangar_offset*4, carrier_height], center=true);
+                
+                util_mirrored([0,1,0])
+                translate([-(carrier_front + carrier_back)/2+carrier_front, carrier_width/2-2*carrier_hangar_offset,-2*carrier_hangar_offset])
+                rotate([0,90,0])
+                cylinder(r=carrier_hangar_offset*2, h=carrier_front+carrier_back, center=true, $fn=faces_convex);
+            }
+        }
+
+        translate([-carrier_back,0,-carrier_hangar_height/2-carrier_hangar_offset])
+        carrier_hangar_door();
         
-        util_mirrored([0,1,0])
-        translate([-saucer_width/2-carrier_body_l/2, command_body_w/2, hangar_height])
-        translate([0,saucer_width/2,-saucer_width/2])
-        cube(saucer_width, center=true);
+        translate([carrier_front,0,-carrier_hangar_height/2-carrier_hangar_offset])
+        carrier_hangar_door();
         
-        translate([-saucer_width/2-carrier_body_w-hangar_height,0,+carrier_elevation-carrier_body_w/2])
+        translate([100,0,0])
+        cylinder(d=scout_width-2, h=19, $fn=faces_concave, center=true);
+        
+        translate([-(200-carrier_hangar_height-2*carrier_hangar_offset),0,-200])
         rotate([90,0,0])
-        cylinder(
-            d=carrier_body_w+hangar_height,
-            h=500, center=true, $fn=faces_concave);
+        cylinder(r=200-carrier_hangar_height-2*carrier_hangar_offset, h=200, $fn=faces_concave, center=true);
 
-        translate([-saucer_width/2-carrier_body_w-hangar_height,0,+carrier_elevation-carrier_body_w/2+(carrier_body_w+hangar_height)/2])
-        translate([-saucer_width/2,0,-saucer_width/2])
-        cube(saucer_width, center=true);
+        translate([-(200-carrier_hangar_height-2*carrier_hangar_offset),0,-carrier_hangar_height-2*carrier_hangar_offset])
+        translate([-250,0,-250])
+        cube([500,200,500], center=true);
     }
 }
 
-module carrier_assembly() {
-    util_mirrored([0,1,0])
-    translate([-saucer_width/2-carrier_body_l/5,carrier_saucer_w/2-20,carrier_elevation])
-    hull()
-    util_mirrored([0,0,1])
-    translate([0,0,10])
-    util_ovoid(carrier_body_l/5, carrier_body_l/2, 20, 10,10);
+
+
+module carrier_saucer() {
+    translate([100,0,-10])
+    disk_class_2();
 }
 
+module carrier_hangar_door() {
+    cube([5,carrier_hangar_width-2*carrier_hangar_offset, carrier_hangar_height], center=true);
+
+    cube([5,carrier_hangar_width, carrier_hangar_height-2*carrier_hangar_offset], center=true);
+
+    util_mirrored([0,1,0])
+    util_mirrored([0,0,1])
+    translate([0,carrier_hangar_width/2-carrier_hangar_offset, carrier_hangar_height/2 - carrier_hangar_offset])
+    rotate([0,90,0])
+    cylinder(h=5, r=carrier_hangar_offset, $fn=faces_concave, center=true);
+}
+
+module carrier_nacelle() {
+    cube([200,30,30],center=true);
+
+    difference() {
+        union() {
+            translate([150, 15,0])
+            sphere(d=30, $fn=faces_convex);
+
+            translate([-250, 15,0])
+            sphere(d=30, $fn=faces_convex);
+
+            translate([150, 15, -30])
+            sphere(d=30, $fn=faces_convex);
+
+            translate([-250, 15,-30])
+            sphere(d=30, $fn=faces_convex);
+
+            translate([-50,15,-15])
+            cube([400,30,30],center=true);
+
+            translate([-50,15,0])
+            rotate([0,90,0])
+            cylinder(d=30, h=400, $fn=faces_convex, center=true);
+
+            translate([-50,15,-30])
+            rotate([0,90,0])
+            cylinder(d=30, h=400, $fn=faces_convex, center=true);
+
+            translate([150,15,-15])
+            cylinder(d=30, h=30, $fn=faces_convex, center=true);
+
+            translate([-250,15,-15])
+            cylinder(d=30, h=30, $fn=faces_convex, center=true);
+        }
+
+        translate([-50,30,-15])
+        rotate([0,90,0])
+        cylinder(d=5, h=400, $fn=faces_concave, center=true);
+
+        translate([-50,0,-15])
+        rotate([0,90,0])
+        cylinder(d=5, h=400, $fn=faces_concave, center=true);
+    }
+}
+
+module carrier_bar() {
+    translate([0,0,warp_nacelle_height/2])
+    difference() {
+        union() {
+            util_mirrored([1,0,0])
+            translate([90,0,0])
+            cylinder(d=20, h=warp_nacelle_height, $fn=faces_convex, center=true);
+
+            cube([180,10,warp_nacelle_height], center=true);
+        }
+
+        util_mirrored([1,0,0])
+        translate([25,0,0])
+        rotate([90,0,0])
+        cylinder(d=50, h=100, $fn=faces_concave, center=true);
+
+        cube([50,100,50], center=true);
+    }
+}
 
 module carrier() {
     carrier_saucer();
@@ -62,3 +133,14 @@ module carrier() {
 
 carrier();
 
+module carrier_assembly() {
+    util_mirrored([0,1,0])
+    translate([-carrier_back/2, carrier_width/2-2*carrier_hangar_offset, -carrier_hangar_offset*2])
+    rotate([-warp_theta,0,0]) {
+        carrier_bar();
+
+        translate([0,0,warp_nacelle_height]) 
+        rotate([warp_theta,0,0])
+        carrier_nacelle();
+    }
+}

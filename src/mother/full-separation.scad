@@ -8,28 +8,30 @@ use <escort.scad>;
 use <warp.scad>;
 
 module full_sep() {
-    distance=100;
+    distance=200;
     
     translate([distance,0, 0]) {
-        saucer();
+        saucer_pos() saucer();
         translate([0,0, -distance])
-        scout(saucer_attached=false);
+        scout_pos() scout(saucer_attached=false);
     }
     
     translate([-distance, 0, 0]) {
-        carrier();
+        carrier_pos() carrier();
         
         translate([0,0,-distance])
-        escort();
+        escort_pos() escort(carrier_attached=false);
+        
+        warp_pos()
+        translate([0,distance,distance]) 
+        warp();
     }
     
     translate([0,0,distance]) {
-        transwarp(saucer_attached=false);
+        transwarp();
         
         translate([0,0,distance])
-        command(tw_attached=false);
-        
-        nacelle_pos() translate([0,distance,distance]) warp();
+        command_pos() command(tw_attached=false);
     }
 }
 

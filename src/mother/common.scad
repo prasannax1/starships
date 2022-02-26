@@ -3,140 +3,151 @@ use <../lib/util.scad>;
 faces_convex=64;
 faces_concave=100;
 
-saucer_width = 750;
-saucer_height = 50;
-saucer_body_l=250;
-saucer_rim=10;
-saucer_inner=600;
-
-command_width=200;
-command_height=saucer_height/2;
-command_body_w=saucer_height;
-
-tw_saucer_width=360;
-tw_saucer_height=saucer_height/2;
-tw_saucer_inner=150;
-
-carrier_body_w=180;
-carrier_body_l=450;
-carrier_body_b=300;
-carrier_elevation=-40;
-
-wt_f=250;
-wt_b=750;
-wt_w=120;
-wt_h=80;
+carrier_front=200;
+carrier_front_ext=50;
+carrier_back=400;
+carrier_back_ext=105;
+carrier_width=250;
+carrier_height=240;
+carrier_hangar_height=100;
+carrier_hangar_width=200;
+carrier_hangar_offset=10;
+carrier_nacelle_length=400;
+carrier_nacelle_bar_length=333;
 
 bridge_width=32;
-bridge_height=3;
-
 scout_width=120;
-scout_height=10;
+scout_theta=45;
 
-escort_w=120;
-escort_l=360;
-escort_h=20;
+warp_length=900;
+warp_height=80;
+warp_hangar_length=800;
+warp_hangar_width=125;
+warp_theta=60;
+warp_nacelle_height=150;
 
-module disk_class_1() {
-    util_saucer_shape(
-        bridge_width,
-        bridge_height,
-        .5*bridge_height,
-        bridge_height,
-        .5*bridge_height);
-}
+saucer_width=750;
+saucer_height=50;
 
-module disk_class_2() {
-    util_saucer_shape(
-        scout_width,
-        .75*scout_height,
-        .25*scout_height,
-        1,1);
+tw_lower_d=300;
+tw_upper_d=200;
+tw_disk_h=30;
 
-    translate([0,0,.75*scout_height])
-    disk_class_1();
-}
-
-module saucer_basic() {
-    hull() {
-        translate([0,0,saucer_rim/2])
-        cylinder(
-            h=saucer_rim, 
-            d=saucer_width, 
-            center=true,
-            $fn=faces_convex);
-
-        translate([0,0,saucer_height/2])
-        cylinder(
-            h=saucer_height,
-            d=saucer_inner,
-            center=true,
-            $fn=faces_convex);
-    }
-}
-
-module body_pos() {
-    translate([-saucer_width/2, 0, carrier_elevation])
-    children();
-}
+command_width=180;
+command_body_width=40;
+command_saucer_height=10;
+command_body_length=command_width;
+command_theta=15;
 
 module body_basic() {
-    intersection() {
-        util_ovoid(
-            5,
-            carrier_body_l +
-            carrier_body_b, 
-            carrier_body_w, 
-            carrier_body_w/2, 
-            carrier_body_w/2, 
-            faces=faces_convex);
-            
-        translate([-carrier_body_l/2,0,carrier_elevation])
-        cube(carrier_body_l+2, center=true);
-    }
-}
-
-module saucer_body_basic() {
     util_ovoid(
-        saucer_body_l,
-        5, 
-        carrier_body_w, 
-        carrier_body_w/2, 
-        carrier_body_w/2, 
+        carrier_front + carrier_front_ext,
+        carrier_back + carrier_back_ext,
+        carrier_width,
+        carrier_height/2,
+        carrier_height/2,
         faces=faces_convex);
 }
 
-module nacelle_pos() {
+module disk_class_1() {
+    difference() {
+        intersection() {
+            scale([1,1,.3])
+            sphere(d=bridge_width, $fn=faces_convex);
+
+            cube([bridge_width*1.5,bridge_width*1.5,7], center=true);
+        }
+        
+        translate([0,0,7/2])
+        cylinder(d=bridge_width*.6, h=.2, $fn=faces_concave, center=true);
+    }
+}
+
+module disk_class_2() {
+    difference() {
+        intersection() {
+            scale([1,1,.2])
+            sphere(d=scout_width, $fn=faces_convex);
+
+            translate([0,0,scout_width*1.5/2-.01])
+            cube(scout_width*1.5, center=true);
+        }
+
+        translate([0,0,scout_width*1.5/2+7])
+        cube(scout_width*1.5, center=true);
+        
+        translate([0,0,3.5])
+        cube([scout_width*1.5,scout_width*1.5,.2], center=true);
+    }
+
+    translate([0,0,3.5])
+    cylinder(h=6, d1=scout_width*.97, d2=scout_width*.8,center=true);
+
+    translate([0,0,7])
+    disk_class_1();
+}
+
+module disk_class_3() {
+    difference() {
+        intersection() {
+            scale([1,1,.2])
+            sphere(d=command_width, $fn=faces_convex);
+            
+            translate([0,0,250-.01])
+            cube(500, center=true);
+        }
+        
+        translate([0,0,250+command_saucer_height])
+        cube(500, center=true);
+    }
+    
+    translate([0,0,command_saucer_height-.01])
+    disk_class_2();
+}
+
+module warp_pos() {
     util_mirrored([0,1,0])
-    translate([-saucer_width/2-carrier_body_l/4-wt_f,saucer_width/2-wt_w,saucer_height+tw_saucer_height])
+    translate([-400,carrier_width/2-24,-12])
+    rotate([-warp_theta,0,0])
+    translate([0,0,warp_nacelle_height])
+    rotate([warp_theta,0,0])
     children();
 }
 
-module nacelle_basic() {
-    util_ovoid(wt_f, wt_b, wt_w, wt_h/2, wt_h/2);
-}
-
-module tw_saucer_pos() {    
-    translate([0,0,saucer_height+tw_saucer_height/2-.01])
+module carrier_pos() {
+    translate([-200+.01,0,0])
     children();
 }
 
-module tw_saucer_basic() {
-    cylinder(
-        d1=tw_saucer_width+tw_saucer_height, 
-        d2=tw_saucer_width-tw_saucer_height,
-        h=tw_saucer_height,
-        center=true,
-        $fn=faces_convex);
+module saucer_pos() {
+    translate([800-saucer_width/2-.01,0,0])
+    children();
 }
 
-module demo(){
-    saucer_basic();
-    body_pos() body_basic();
-    body_pos() saucer_body_basic();
-
-    nacelle_pos() nacelle_basic();
-    tw_saucer_pos() tw_saucer_basic();
+module final_warp_pos() {
+    util_mirrored([0,1,0])
+    translate([warp_hangar_width*1.5,0,0])
+    warp_pos(warp_theta)
+    children();
 }
 
-//demo();
+module tw_pos() {
+    translate([200,0,100+50])
+    children();
+}
+
+module command_pos() {
+    translate([0,0,tw_disk_h-.5])
+    saucer_pos()
+    children();
+}
+
+module escort_pos() {
+    translate([-350,0,-carrier_hangar_height-2*carrier_hangar_offset])
+    children();
+}
+
+module scout_pos() {
+    saucer_pos() translate([0,0,-1-saucer_height-tw_disk_h+.05])
+    children();
+}

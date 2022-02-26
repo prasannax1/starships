@@ -8,22 +8,22 @@ use <escort.scad>;
 use <warp.scad>;
 
 module half_sep() {
-    distance=100;
+    distance=200;
     
-    translate([distance,0, 0]) {
-        saucer();
-        scout();
+    translate([distance,0, 0]) union() {
+        saucer_pos() saucer();
+        scout_pos() scout();
     }
     
-    translate([-distance, 0, 0]) {
-        carrier();
-        escort();
+    translate([-distance, 0, 0]) union() {
+        carrier_pos() carrier();
+        escort_pos() escort();
+        warp_pos() warp();
     }
     
-    translate([0,0,distance]) {
-        transwarp(saucer_attached=false);
-        command();
-        nacelle_pos() warp();
+    translate([0,0,distance]) union() {
+        transwarp();
+        command_pos() command();
     }
 }
 
