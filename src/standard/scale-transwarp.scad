@@ -11,4 +11,4 @@ use <odyssey.scad>;
 
 transwarp();
 
-translate([0,0,250]) odyssey();
+translate([400,0,150]) odyssey();

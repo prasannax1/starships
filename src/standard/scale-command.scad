@@ -7,9 +7,12 @@ Other files not included in source code.
 
 use <../mother/command.scad>;
 use <excelsior.scad>;
+use <constitution-refit.scad>;
 
 
-translate([-0,0,-90])
+translate([0,0,0])
 command(tw_attached=false);
 
-translate([0,0,120]) excelsior();
+translate([0,0,100]) excelsior();
+
+translate([0,0,-60]) constitution_refit();

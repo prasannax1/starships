@@ -13,7 +13,7 @@ use <sovereign.scad>;
 use <nx.scad>;
 use <odyssey.scad>;
 
-translate([0,0,-200]) mother();
+translate([-400,0,-200]) mother();
 
 translate([0,0,700]) nx();
 

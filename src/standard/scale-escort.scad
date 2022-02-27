@@ -9,6 +9,6 @@ use <../mother/escort.scad>;
 use <defiant.scad>;
 
 
-translate([700,0,0]) escort();
+translate([0,0,0]) escort();
 
 translate([0,0,50]) defiant();
