@@ -5,7 +5,7 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/main.scad>;
+use <mother.scad>;
 use <constitution.scad>;
 use <excelsior.scad>;
 use <galaxy.scad>;
