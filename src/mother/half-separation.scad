@@ -21,7 +21,7 @@ module half_sep() {
         warp_pos() warp();
     }
     
-    translate([0,0,distance]) union() {
+    translate([0,0,distance*1.5]) union() {
         transwarp();
         command_pos() command();
     }

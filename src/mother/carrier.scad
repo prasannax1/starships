@@ -4,7 +4,7 @@ include <common.scad>;
 module carrier_body() {
     difference() {
         intersection() {
-            scale([1.25,.65,.8])
+            scale([1.25,.55,.75])
             translate([0,0,saucer_width-carrier_height])
             sphere(d=2*saucer_width, $fn=02*faces_concave);
 

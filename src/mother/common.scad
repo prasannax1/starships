@@ -9,7 +9,7 @@ carrier_back=400;
 carrier_back_ext=105;
 carrier_width=250;
 carrier_height=240;
-carrier_hangar_height=100;
+carrier_hangar_height=90;
 carrier_hangar_width=200;
 carrier_hangar_offset=10;
 carrier_nacelle_length=400;
@@ -24,7 +24,7 @@ warp_height=80;
 warp_hangar_length=800;
 warp_hangar_width=125;
 warp_theta=60;
-warp_nacelle_height=150;
+warp_nacelle_height=180;
 
 saucer_width=750;
 saucer_height=50;
@@ -121,18 +121,6 @@ module carrier_pos() {
 
 module saucer_pos() {
     translate([800-saucer_width/2-.01,0,0])
-    children();
-}
-
-module final_warp_pos() {
-    util_mirrored([0,1,0])
-    translate([warp_hangar_width*1.5,0,0])
-    warp_pos(warp_theta)
-    children();
-}
-
-module tw_pos() {
-    translate([200,0,100+50])
     children();
 }
 
