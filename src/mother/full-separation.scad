@@ -12,7 +12,7 @@ module full_sep() {
     
     translate([distance,0, 0]) {
         saucer_pos() saucer();
-        translate([0,0, -distance])
+        translate([2*distance,0, -distance])
         scout_pos() scout(saucer_attached=false);
     }
     

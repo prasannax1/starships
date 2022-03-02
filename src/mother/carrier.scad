@@ -39,6 +39,18 @@ module carrier_body() {
         translate([-250,0,-250])
         cube([500,200,500], center=true);
     }
+    
+    util_mirrored([0,1,0])
+    translate([-350, 50,0])
+    cylinder(h=14, r=20, $fn=faces_convex, center=true);
+
+    translate([-350,0,0])
+    cube([40, 100, 14], center=true);
+
+    util_mirrored([0,1,0])
+    translate([-350, 50, 7])
+    scale([1,1,.4])
+    sphere(d=20, $fn=faces_convex);
 }
 
 

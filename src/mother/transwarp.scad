@@ -21,24 +21,15 @@ module tw_body() {
 
 
         hull() tw_double() cylinder(d=command_body_width, h=tw_disk_h*4, $fn=faces_concave, center=true);
-    }
-
-    difference() {
-        intersection() {
-            translate([-100-tw_upper_d/2,0,0])
-            scale([5,1,1])
-            rotate([90,0,0])
-            cylinder(r=tw_disk_h, h=75, $fn=faces_convex, center=true);
-
-            translate([-160,0,0])
-            translate([-150,0,150])
-            cube(300, center=true);
-        }
-
-        translate([-350,0,15])
-        cube([100,50,10], center=true);
+        
+        util_repeat(5, [60,0,0])
+        util_mirrored([0,1,0])
+        translate([10,(tw_upper_d+tw_lower_d)/4, tw_disk_h/2])
+        cube([40,50,20], center=true);
     }
 }
+
+
 
 module tw_disk() {
     translate([-100,0,tw_disk_h-.02])
