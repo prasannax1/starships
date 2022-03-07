@@ -1,12 +1,25 @@
 use <../lib/util.scad>;
 include <common.scad>;
 
+module carrier_base_globe() {
+    union(){
+        difference() {
+            sphere(d=2*saucer_width, $fn=02*faces_concave);
+            translate([saucer_width*2,0,0])
+            cube(4*saucer_width, center=true);
+        }
+        
+        scale([.55,1,1])
+        sphere(d=2*saucer_width, $fn=02*faces_concave);
+    }
+}
+
 module carrier_body() {
     difference() {
         intersection() {
             scale([1.25,.55,.75])
             translate([0,0,saucer_width-carrier_height])
-            sphere(d=2*saucer_width, $fn=02*faces_concave);
+            carrier_base_globe();
 
             union() {
                 translate([-(carrier_front + carrier_back)/2+carrier_front,0,-carrier_height/2-carrier_hangar_offset*2])
