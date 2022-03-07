@@ -50,7 +50,14 @@ module saucer_body_minus() {
         rotate([0,90,0])
         cylinder(d=10, h=5, $fn=faces_concave, center=true);
     }
+    
+    util_repeat(3, [60,0,0])
+    util_mirrored([0,1,0])
+    translate([-saucer_width/4-110,(tw_upper_d+tw_lower_d)/4, -saucer_height -5-.5])
+    cube([40,50,10], center=true);
 }
+
+        
 
 module saucer_nacelle() {
     translate([-100,0,0])
