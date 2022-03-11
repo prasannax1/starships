@@ -12,12 +12,12 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Stats
 
- - Length: 1859m
+ - Length: 1921m
  - Width: 750m
- - Height: 285m
- - Decks: 75
- - Crew Capacity: 3000
-   - Maximum evacuation limit: 75000
+ - Height: 348m
+ - Decks: 69
+ - Crew Capacity: 5000
+   - Maximum evacuation limit: 100000
  - Warp Speed
    - Cruising: Warp 6
    - Peak: Warp 9.5
@@ -56,7 +56,7 @@ an *Atlas* and deploy them.
 
 At the same time Starfleet was exploring the Multi-Vector Assualt paradigm, the *Atlas* team
 decided to incorporate some of the principles from that approach and sell the *Atlas* as what
-eventually turned out to be six separate ships that join up as one or can operate independently.
+eventually turned out to be 7 separate ship types that join up as one or can operate independently.
 
 This approach was much more successful as individually, most of the components of the *Atlas* 
 found enough of a niche to justify the entire ship.
@@ -66,7 +66,7 @@ found enough of a niche to justify the entire ship.
 The Atlas is a fairly conventional looking starship, looking deceptively delicate due
 to the scale of the ship.
 
-The Atlas is an amalgamation of six ships, each of which can operate independently in
+The Atlas is an amalgamation of 8 ships, each of which can operate independently in
 a specialized or generic role.
 
 ![Ship Separation](images/mother/full-separation.png)
@@ -96,7 +96,7 @@ Atlas-A Class Heavy Cruiser and Command Vessel
 The Atlas-A class acts as the command module and bridge of the Atlas in regular operation
 but it is a heavy cruiser capable of versatile roles.
 
-The Atlas-A class is roughly about as big as an Excelsior and is generally used in most of
+The Atlas-A class midway in size between a Constitution class and an Excelsior and is generally used in most of
 the same capacities - as the flagship of the Atlas mini-fleet and as a space control vessel.
 
 ![Ship scale](images/scale/scale-command.png)
@@ -120,8 +120,6 @@ lauch mechanism. The aeroshuttle extends to the upper deck as well.
  - Type 23 medium shuttles
  - Type 3 large shuttles
  - Pirahna Class fighters
- - Amazon Class runabouts
- - Mako class tactical runabouts
 
 #### Atlas-B Class
 
