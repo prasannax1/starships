@@ -32,7 +32,7 @@ module attack_primary(attached=true) {
         cube([100,100,.5], center=true);
     }
 
-    cylinder(center=true, h=1, d=27);
+    cylinder(center=true, h=1, d1=28, d2=26);
 
     //util_saucer_shape(15, 4, .5, 4, .5);
 

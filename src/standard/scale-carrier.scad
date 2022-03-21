@@ -8,9 +8,10 @@ Other files not included in source code.
 use <../mother/carrier.scad>;
 use <galaxy.scad>;
 use <sovereign.scad>;
+use <excelsior.scad>;
 
 
 carrier();
 
-translate([-0,0,150]) sovereign();
+translate([-0,0,150]) excelsior();
 
