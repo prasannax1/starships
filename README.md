@@ -25,8 +25,9 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Description
 
-The Atlas class is a massive ship almost 2KM long. Nominally it's a deep space explorer,
-but it is mainly used as a mobile starbase and colony transporter. A typical mission of
+The Atlas class is a massive ship almost 2KM long. 
+
+It is mainly used as a mobile starbase and colony transporter. A typical mission of
 the Atlas class is to transwarp to unexplored space with entire colonies settled in its
 massive living areas, and allow the bulk of the exploration to be done by smaller ships.
 Once the exploration is done colonies are settled down and the ship returns back to 
@@ -34,12 +35,9 @@ federation territory.
 
 ![Ship scale](images/scale/scale-standard.png)
 
-The Atlas is capable of being in remote space for up to 20 years without a starbase. In 
-fact, with an industrial replicator on board, the Atlas for the most part is its own 
-starbase.
-
-In practice however, Atlas ships would return to starbase at least every 5 years for 
-upgrades and refits.
+The Atlas is intended to be on 20 year deep space missions between refits. Having industrial
+replicators on board, the Atlas doesn't even have to be physically present at a starbase for
+refits - it can download the specs and do a refit wherever it is.
 
 ### History
 
@@ -50,13 +48,21 @@ mission specific exploration.
 
 But after the Dominion war the whole program was put on hold as Starfleet was not in favor
 of sending civilians in a starship, not to mention presenting such a large target. It was 
-noted that an *Atlas* (in it's original design) could carry up to 8 *Defiant* class ships,
+noted that an *Atlas* (in its original design) could carry up to 8 *Defiant* class ships,
 but it was much cheaper and easier to just send 8 *Defiants* to any situation than to send
-an *Atlas* and deploy them.
+an *Atlas* and deploy them.[^1]
+
+[^1]: Of course as Starfleet had neither a working Atlas class, nor for that matter 8 *Defiant*s,
+the whole discussion was deemed moot.
 
 At the same time Starfleet was exploring the Multi-Vector Assualt paradigm, the *Atlas* team
 decided to incorporate some of the principles from that approach and sell the *Atlas* as what
-eventually turned out to be 7 separate ship types that join up as one or can operate independently.
+eventually turned out to be 7 separate ship types that join up as one or can operate independently.[^2]
+
+[^2]: It should be noted that though the *Atlas* borrows heavily from Mutli-Vector Assault Vehicles, it
+is not intended to be used as a Multi-Vector Assault vehicle. While the ship can undock its components
+faster than a *Galaxy* class, the ship does not have the centralized control grid that make a multi-vector
+ship; once it splits, it becomes separate ships.
 
 This approach was much more successful as individually, most of the components of the *Atlas* 
 found enough of a niche to justify the entire ship.
