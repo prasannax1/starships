@@ -639,6 +639,39 @@ not lack sensors or scientific capabilities.
 - Bumblebee Class shuttlepod
 
 
+#### Iceland class
+
+![Yacht](images/small/yacht.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/yacht.stl)
+
+Iceland class yacht
+
+##### Stats
+
+  - Length: 37m
+  - Width: 36m
+  - Height: 14m
+  - Decks: 4
+  - Crew Capacity: 30
+  - Warp Speed
+    - Cruising: Warp 4
+    - Peak: Warp 8
+
+##### Descriptions
+
+The Iceland class is a general purpose yacht which is bigger than a regular runabout, but smaller than a heavy
+runabout, although it has a higher capacity due to its 4 decks.
+
+##### Structure
+
+The two deck primary hull sits on top of the secondary hull with the warp nacelles extending downwards. At the aft
+part is a small hangar able to contain workbees or a small shuttelpod.
+
+##### Auxillary vehicles
+
+- Bumblebee Class shuttlepod
+
 ### Conventional auxillary vehicles
 
 These are regular sized shuttles and and runabouts.
