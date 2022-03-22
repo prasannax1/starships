@@ -171,11 +171,8 @@ hull with only the warp engines jutting out.
 
 ##### Auxillary vessels
 
-- Intermediate hangars
-  - Orca class light corvettes
-  - Raven class science vessels
+  - Orca-A class heavy tactical runabouts
   - Orbit class Yachts
-- Shuttlebay
   - Type 20 small shuttles
   - Type 23 medium shuttles
   - Type 3 large shuttles
@@ -377,7 +374,7 @@ Atlas-F Class Escort Carrier
 The F class is a dedicated escort vessel for the Atlas group.
 
 It is comparable to a *Saber* in size and function and is built with two aims in mind:
-1. Fit in the space between the nacelles of the E-class
+1. Fit in the space below the main hangar of the E-class
 2. Not win any beauty contests
 
 ![Ship scale](images/scale/scale-escort.png)
@@ -392,8 +389,55 @@ wings of *Pirahna* class fighters to serve as a light carrier vehicle.
 ##### Auxillary vehicles
 
 - Pirahna class fighters
-- Mako class tactical runabouts
 - Type 20 small shuttles
+
+#### Atlas-G class
+
+![Warp Ship](images/mother/warp.png)
+
+[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/warp.stl)
+
+Atlas-G Class Super-heavy warp and transwarp tug
+
+##### Stats
+
+  - Length: 1021m
+  - Width: 120m
+  - Height: 94m
+  - Decks: 28
+  - Crew Capacity: 100
+  - Warp Speed
+    - Cruising: Warp 9
+    - Peak: Warp 9.99
+	- Transwarp: TW10
+
+##### Description
+
+Unlike the other ships in the Atlas assembly, the G class is not a multi-role ship. It has only one role - 
+to use its extremely powerful warp and transwarp engines to pull a super-heavy class object into its warp
+bubble and move it elsewhere.
+
+![Ship scale](images/scale/scale-warp.png)
+
+The G class can combine with up to 20 other G classes to create a warp bubble big enough to encase a full starbase
+or a small to medium asteroid.
+
+##### Structure
+
+Despite looking like a single unconnected warp engine, the G class is a proper starship. The primary hull is merged into
+the body of the secondary hull, as are the warp nacelles which line the entire ventral side of the ship. The dorsal side is
+a hangar cum cargo storage bay which opens at both ends and can hold anything from shuttles and runabouts to minor starships.
+
+##### Auxillary vehicles
+
+- Intermediate ships
+  - Orca class light corvettes
+  - Raven class science vessels
+  - Orbit class Yachts
+
+- Shuttles
+  - Mako class tactical runabouts
+  - Pirahna class fighters
 
 ### Intermediate auxillary vehicles
 
