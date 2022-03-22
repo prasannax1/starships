@@ -15,13 +15,15 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
  - Length: 1921m
  - Width: 750m
  - Height: 348m
- - Decks: 69
+ - Decks: 69[^1]
  - Crew Capacity: 5000
    - Maximum evacuation limit: 100000
  - Warp Speed
    - Cruising: Warp 6
    - Peak: Warp 9.5
    - Transwarp: TW10
+
+[^1]: Or 97, depending on if decks of the G class are counted.
 
 ### Description
 
@@ -50,16 +52,16 @@ But after the Dominion war the whole program was put on hold as Starfleet was no
 of sending civilians in a starship, not to mention presenting such a large target. It was 
 noted that an *Atlas* (in its original design) could carry up to 8 *Defiant* class ships,
 but it was much cheaper and easier to just send 8 *Defiants* to any situation than to send
-an *Atlas* and deploy them.[^1]
+an *Atlas* and deploy them.[^2]
 
-[^1]: Of course as Starfleet had neither a working Atlas class, nor for that matter 8 *Defiant*s,
+[^2]: Of course as Starfleet had neither a working Atlas class, nor for that matter 8 *Defiant*s,
 the whole discussion was deemed moot.
 
 At the same time Starfleet was exploring the Multi-Vector Assualt paradigm, the *Atlas* team
 decided to incorporate some of the principles from that approach and sell the *Atlas* as what
-eventually turned out to be 7 separate ship types that join up as one or can operate independently.[^2]
+eventually turned out to be 7 separate ship types that join up as one or can operate independently.[^3]
 
-[^2]: It should be noted that though the *Atlas* borrows heavily from Mutli-Vector Assault Vehicles, it
+[^3]: It should be noted that though the *Atlas* borrows heavily from Mutli-Vector Assault Vehicles, it
 is not intended to be used as a Multi-Vector Assault vehicle. While the ship can undock its components
 faster than a *Galaxy* class, the ship does not have the centralized control grid that make a multi-vector
 ship; once it splits, it becomes separate ships.
@@ -219,9 +221,9 @@ On top of the saucer is the main command area, which is a 32m bridge section fol
 120m wide, two deck area just like in the A-Class.
 
 The next section is the main saucer itself, which is 750m wide and 50m tall. This is in effect
-a whole city with living areas, schools, colleges, hospitals, parks, etc.[^3]
+a whole city with living areas, schools, colleges, hospitals, parks, etc.[^4]
 
-[^3]: It's common for crew of all Atlas classes to have residence allocated in the C-class and "commute" to their workstation, whereas
+[^4]: It's common for crew of all Atlas classes to have residence allocated in the C-class and "commute" to their workstation, whereas
 the living areas on other classes are mainly used as emergency dormitories.
 
 The secondary hull is affixed to the bottom of the main saucer. The first 3 decks of the secondary hull comprise the main
@@ -523,9 +525,9 @@ This makes the Orca a small and deadly ship that can occasionally be two small a
 The Orca is structured like a conventional attack ship, with a primary hull inline with the secondary hull and engine
 nacelles trailing behind and below.
 
-As mentioned before, the Orca also splits up into two ships, each of which are worth exploring on their own.[^4]
+As mentioned before, the Orca also splits up into two ships, each of which are worth exploring on their own.[^5]
 
-[^4]: Unlike the Atlas class, the *Orca* is a true multi-vector assault vehicle.
+[^5]: Unlike the Atlas class, the *Orca* is a true multi-vector assault vehicle.
 
 ##### Orca-A class / Manta Ray Class
 
@@ -533,9 +535,9 @@ As mentioned before, the Orca also splits up into two ships, each of which are w
 
 [View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/attack-primary.stl)
 
-Orca-A / Manta Ray class heavy tactical runabout[^5]
+Orca-A / Manta Ray class heavy tactical runabout[^6]
 
-[^5]: The Orca-A class was initially conceived as a stand-alone ship, named the *Manta Ray*. It was augmented with the Orca-B class,
+[^6]: The Orca-A class was initially conceived as a stand-alone ship, named the *Manta Ray*. It was augmented with the Orca-B class,
 and renamed to the Orca-A.
 
   - Length: 65m
@@ -557,9 +559,9 @@ This achieves several things:
 The dual single-warp-engine arrangement causes the warp field to be unstable at higher warp speeds. The Orca-A class
 uses this instability to deliberately generate a warp field for upto a few seconds to as less as a few microseconds, with
 alternate nacelles regenerating a warp field just at the moment of collapse. This makes the Orca-A class unusually maneuverable
-at warp speeds, able to achieve seemingly impossible tasks as being able to warp through an asteroid field.[^6]
+at warp speeds, able to achieve seemingly impossible tasks as being able to warp through an asteroid field.[^7]
 
-[^6]: Given sufficient advance telemetry, of course. 
+[^7]: Given sufficient advance telemetry, of course. 
 
 The Orca-A class contains powerful mega-phasers powered directly by the warp cores. The redundancy arrangement of the cores
 ensures that there is not even a flicker as phaser fire completely drains the power of a warp core. This gives the Orca-A
