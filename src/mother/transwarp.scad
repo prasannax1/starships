@@ -1,164 +1,83 @@
 use <../lib/util.scad>;
-include <global.scad>;
-include <transwarp_lib.scad>;
+include <common.scad>;
 
 
-
-//saucer_position() saucer_basic();
-//body_position() body_basic();
-
-
-
-module tw_body(saucer_attached=true) {
-    difference() {
-        intersection() {
-            transwarp_position() 
-            transwarp_basic();
-
-            union() {
-                translate([tw_body_width,0,0])
-                scale([10,1,1])
-                rotate(30)
-                cylinder(h=5000, r=tw_body_width, $fn=6, center=true);
-                    
-                translate([tw_body_width,0,0])
-                scale([1,.75,1])
-                rotate(30)
-                cylinder(h=5000, r=2*tw_body_width, $fn=6, center=true);
-            }
-        }
-
-        saucer_position() {
-            translate([0,0,saucer_height/2+10])
-            cylinder(d1=saucer_width-2, d2=saucer_upper_width-2, h=saucer_height-10, center=true);
-
-            translate([0,0,0])
-            cylinder(d=saucer_width-2, h=30.2, center=true);
-        }
-        
-        saucer_position()
-        cylinder(r=command_width/2 + command_body_length, h=saucer_width, center=true, $fn=64);
-        
-    }
-    
-    translate([-body_length,0,5])
-    util_saucer(1.2*body_back, tw_body_width*1.2, 20);
-    
-    difference() {
-        hull()
-        util_mirrored([0,0,1])
-        intersection() {
-            body_position()
-            body_basic();
-
-
-            tw_body_hexagon();
-        }
-                        
-        translate([-1,0,0])
-        saucer_position()
-        cube(saucer_width, center=true);
-        
-        translate([0,0,saucer_width/2+1 ])
-        cube(saucer_width, center=true);
-        
-        if (saucer_attached == false) {
-            translate([0,0,-body_height/4])
-            scale([.25,1,1])
-            sphere(d=75);
-        }
-    }
+module tw_disk_single() {
+    translate([0,0,tw_disk_h/2-.01])
+    cylinder(d1=tw_lower_d, d2=tw_upper_d, h=tw_disk_h, $fn=faces_convex, center=true);
 }
 
+module tw_double() {
+    saucer_pos() children();
+    translate([-100,0,0]) children();
+}
+
+module tw_body() {
+    difference() {
+        hull() tw_double() tw_disk_single();
+            
+        saucer_pos()
+        cylinder(h=tw_disk_h*4, d=(tw_upper_d+scout_width)/2, $fn=faces_concave, center=true);
 
 
+        hull() tw_double() cylinder(d=command_body_width, h=tw_disk_h*4, $fn=faces_concave, center=true);
+        
+        util_repeat(5, [60,0,0])
+        util_mirrored([0,1,0])
+        translate([10,(tw_upper_d+tw_lower_d)/4, tw_disk_h/2])
+        cube([40,50,20], center=true);
+    }
+}
 
 
 
 module tw_disk() {
-    difference() {
-        hull()
-        util_mirrored([1,0,0])
-        translate([0,0,saucer_height-1])
-        saucer_position()
-        util_saucer_shape(transwarp_disk_w, 25, 15, 1,0);
-
-        translate([-420, 0,0])
-        cube(1000, center=true);
-        
-        saucer_position()
-        cylinder(d=transwarp_disk_hole, h=saucer_width, center=true);
-        
-        saucer_position()
-        translate([-275/2,0,0])
-        cube([275,50,500],center=true);
-        
-        util_mirrored([0,1,0]) {
-            translate([120, transwarp_disk_w/2, saucer_height + saucer_height/4])
-            cube([40,50,15], center=true);
-
-            translate([170, transwarp_disk_w/2, saucer_height + saucer_height/4])
-            cube([40,50,15], center=true);
-
-            translate([220, transwarp_disk_w/2, saucer_height + saucer_height/4])
-            cube([40,50,15], center=true);
-
-            translate([270, transwarp_disk_w/2, saucer_height + saucer_height/4])
-            cube([40,50,15], center=true);
-        }
-    }
-    
-    translate([75,0,saucer_height*1.5])
-    util_saucer_shape(100,7,2,5,0);
-
-    translate([75,0,saucer_height*1.5  + 7])
-    util_saucer_shape(32,3,1,3,0);
+    translate([-100,0,tw_disk_h-.02])
+    disk_class_2();
 }
 
-module transwarp(saucer_attached=true) {
+module transwarp() {
     tw_disk();
-    tw_body(saucer_attached);
+    tw_body();
     tw_assembly();
 }
 
-
 module tw_assembly() {
-    util_mirrored([0,1,0]) 
-    nacelle_position()
-    tw_nacelle();
+    util_mirrored([0,1,0]) {
+        translate([-150,tw_lower_d/2-12,-saucer_height])
+        tw_nacelle();
 
-    util_mirrored([0,1,0])
-    hull() {
-        translate([0,0,0])
-        nacelle_position()
-        sphere(d=8);
-
-        translate([-100 ,0,0])
-        nacelle_position()
-        sphere(d=8);
-
-        translate([-body_length/2+200,0,6])
-        sphere(d=12);
-
-        translate([-body_length/2-200,0,6])
-        sphere(d=12);
+        translate([-100,tw_lower_d/2-12,-saucer_height/2])
+        cube([50,10,56], center=true);
     }
-
 }
-
 
 module tw_nacelle() {
-    hull()
-    util_mirrored([0,0,1])
-    util_mirrored([0,1,0])
-    translate([0,nacelle_width/2, nacelle_height/2])
-    util_ovoid(nacelle_front, nacelle_back,nacelle_width,
-    nacelle_height/2, nacelle_height/2);
+    translate([-100,0,0])
+    difference() {
+        union() {
+            util_mirrored([0,0,1])
+            util_mirrored([1,0,0])
+            translate([200,0,12])
+            sphere(d=24, $fn=faces_convex);
 
-    hull()
-    util_mirrored([0,1,0])
-    translate([200,nacelle_width/2-5,0])
-    util_ovoid(200,30,nacelle_width*.75,36,30);
+            cube([400,24,24], center=true);
+
+            util_mirrored([0,0,1])
+            translate([0,0,12])
+            rotate([0,90,0])
+            cylinder(d=24, h=400, $fn=faces_convex, center=true);
+
+            util_mirrored([1,0,0])
+            translate([200,0,0])
+            cylinder(d=24,h=24,$fn=faces_convex, center=true);
+        }
+
+        util_mirrored([0,1,0])
+        translate([0,12,0])
+        rotate([0,90,0])
+        cylinder(h=360,d=5,$fn=faces_concave,center=true);
+    }
 }
 
-transwarp(saucer_attached=false);
+transwarp();

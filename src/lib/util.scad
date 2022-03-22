@@ -215,3 +215,13 @@ module util_saucer_shape(width, height, height_ext, depth, depth_ext) {
         }
     }
 }
+
+module util_repeat(times, vector) {
+    x = vector[0];
+    y = vector[1];
+    z = vector[2];
+    for(i=[0:times]) {
+        translate([i*x, i*y, i*z])
+        children();
+    }
+}

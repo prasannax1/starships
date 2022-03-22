@@ -7,8 +7,11 @@ Other files not included in source code.
 
 use <../mother/scout.scad>;
 use <constitution.scad>;
+use <equinox.scad>;
 
 
 scout(saucer_attached=false);
 
-translate([400,0,90]) constitution();
+translate([0,0,80]) constitution();
+
+translate([-40,0,-80]) equinox();

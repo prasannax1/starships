@@ -12,5 +12,5 @@ use <sovereign.scad>;
 
 saucer();
 
-translate([400,0,200]) galaxy();
+translate([0,0,200]) galaxy();
 
