@@ -75,7 +75,7 @@ module command_assembly(theta) {
         translate([0,0,2.5])
         rotate([theta,0,0])
         hull() {
-            translate([-command_width/2,0,0])
+            translate([-command_width/3-10,0,0])
             sphere(d=3);
 
             translate([-command_width*.75,0,0])
