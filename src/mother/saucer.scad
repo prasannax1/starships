@@ -8,7 +8,7 @@ module saucer_disk() {
         cylinder(d=saucer_width, h=10, $fn=faces_concave, center=true);
 
         translate([0,0,-5])
-        cylinder(d=saucer_width-2*saucer_height, h=10, $fn=faces_concave, center=true);
+        cylinder(d=saucer_width-4*saucer_height, h=10, $fn=faces_concave, center=true);
     }
 
     disk_class_2();
