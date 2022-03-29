@@ -12,7 +12,25 @@ module saucer_disk() {
     }
 
     disk_class_2();
+    
+    difference() {
+        cylinder(d=400, h=6, $fn=faces_concave, center=true);
+        cylinder(d=400-50, h=10, $fn=faces_concave, center=true);
+        
+        util_mirrored([0,1,0])
+        scale([1,1,1])
+        rotate(50)
+        translate([-saucer_width/2, saucer_width/2, 0])
+        cube(saucer_width, center=true);
+    }
+
+    util_mirrored([0,1,0])
+    rotate(50)
+    translate([-200+25/2,0,0])
+    cylinder(d=25, h=6, $fn=faces_convex, center=true);
 }
+
+
 
 
 module saucer_body_plus() {

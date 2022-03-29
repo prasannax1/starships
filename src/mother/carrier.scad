@@ -46,11 +46,11 @@ module carrier_body() {
         
         translate([-(200-carrier_hangar_height-2*carrier_hangar_offset),0,-200])
         rotate([90,0,0])
-        cylinder(r=200-carrier_hangar_height-2*carrier_hangar_offset, h=200, $fn=faces_concave, center=true);
+        cylinder(r=200-carrier_hangar_height-2*carrier_hangar_offset, h=carrier_hangar_width, $fn=faces_concave, center=true);
 
         translate([-(200-carrier_hangar_height-2*carrier_hangar_offset),0,-carrier_hangar_height-2*carrier_hangar_offset])
         translate([-250,0,-250])
-        cube([500,200,500], center=true);
+        cube([500,carrier_hangar_width,500], center=true);
     }
     
     util_mirrored([0,1,0])

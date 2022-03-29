@@ -11,7 +11,7 @@ module scout_neck() {
     difference() {
         intersection() {
             translate([0,0,-24+10])
-            scale([1.25,1,.5])
+            scale([1.5,1,.5])
             rotate([90,0,0])
             cylinder(d=scout_width, h=10, $fn=faces_concave, center=true);
 
@@ -49,7 +49,7 @@ module scout_body() {
         }
 
 
-        translate([-25,0,-14])
+        translate([-20,0,-14])
         scale([.5,1,1])
         sphere(d=14, $fn=faces_concave);
 
@@ -59,7 +59,7 @@ module scout_body() {
         cylinder(d=24, h=50, $fn=faces_concave, center=true);
         
         intersection() {
-            translate([-scout_width+6, 0, -14])
+            translate([-scout_width+5, 0, -14])
             rotate([0,90,0])
             cylinder(d=16, h=2, $fn=faces_concave, center=true);
 
@@ -107,11 +107,11 @@ module scout_bar() {
 }
 
 module scout_assembly(theta) {
-    translate([-scout_width/2,0,-14])
+    translate([-scout_width/2+10,0,-14])
     util_mirrored([0,1,0])
     rotate([-theta,0,0]) {
         scout_bar();
-        translate([-75,0,scout_width/2-15]) 
+        translate([-70,0,scout_width/2-15]) 
         rotate([theta,0,0])
         scout_nacelle();
     }
