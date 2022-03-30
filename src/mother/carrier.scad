@@ -14,7 +14,7 @@ module carrier_base_globe() {
     }
 }
 
-module carrier_body() {
+module carrier_body(tw_attached) {
     difference() {
         intersection() {
             scale([1.25,.55,.75])
@@ -41,8 +41,10 @@ module carrier_body() {
         translate([carrier_front,0,-carrier_hangar_height/2-carrier_hangar_offset])
         carrier_hangar_door();
         
-        translate([100,0,0])
-        cylinder(d=scout_width-2, h=19, $fn=faces_concave, center=true);
+        if (tw_attached == false) {
+            translate([100,0,0])
+            cylinder(d=scout_width-2, h=19, $fn=faces_concave, center=true);
+        }
         
         translate([-(200-carrier_hangar_height-2*carrier_hangar_offset),0,-200])
         rotate([90,0,0])
@@ -150,13 +152,13 @@ module carrier_bar() {
     }
 }
 
-module carrier() {
+module carrier(tw_attached=true) {
     carrier_saucer();
-    carrier_body();
+    carrier_body(tw_attached);
     carrier_assembly();
 }
 
-carrier();
+carrier(tw_attached=false);
 
 module carrier_assembly() {
     util_mirrored([0,1,0])

@@ -19,7 +19,7 @@ bridge_width=32;
 scout_width=100;
 scout_theta=45;
 
-warp_length=900;
+warp_length=1000;
 warp_height=80;
 warp_hangar_length=800;
 warp_hangar_width=125;

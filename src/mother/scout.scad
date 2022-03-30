@@ -4,7 +4,11 @@ include <common.scad>;
 module scout_disk() {
     disk_class_1();
     disk_class_2();
+    
+    translate([0,0,3.5])
+    sphere(d=20, $fn=faces_convex);
 }
+
 
 
 module scout_neck() {
@@ -45,7 +49,7 @@ module scout_body() {
 
             translate([-scout_width/5,0,0])
             translate([-scout_width*.75/2,0,0])
-            cube(scout_width*.75, center=true);
+            cube(scout_width*.8, center=true);
         }
 
 
@@ -59,7 +63,7 @@ module scout_body() {
         cylinder(d=24, h=50, $fn=faces_concave, center=true);
         
         intersection() {
-            translate([-scout_width+5, 0, -14])
+            translate([-scout_width+2.5, 0, -14])
             rotate([0,90,0])
             cylinder(d=16, h=2, $fn=faces_concave, center=true);
 
@@ -69,6 +73,7 @@ module scout_body() {
         }
     }
 }
+
 
 module scout_nacelle() {
     translate([scout_width/2.2,0,0]) {
