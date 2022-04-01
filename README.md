@@ -12,10 +12,10 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Stats
 
- - Length: 1921m
+ - Length: 1996m
  - Width: 750m
  - Height: 348m
- - Decks: 69[^decks] 
+ - Decks: 67[^decks] 
  - Crew Capacity: 5000
    - Maximum evacuation limit: 100000
  - Warp Speed
@@ -23,7 +23,7 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
    - Peak: Warp 9.5
    - Transwarp: TW10
 
-[^decks]: Or 97, depending on if decks of the G class are counted.
+[^decks]: Or 95, depending on if decks of the G class are counted.
 
 ### Description
 
@@ -141,10 +141,10 @@ Atlas-B Class Multimission Explorer and Science and Research vessel
 
 ##### Stats
 
-  - Length: 1037m
-  - Width: 300m
-  - Height: 115m
-  - Decks: 9
+  - Length: 1012m
+  - Width: 250
+  - Height: 110m
+  - Decks: 7
   - Crew Capacity: 1200
   - Warp Speed
     - Cruising: Warp 7
@@ -249,9 +249,9 @@ Atlas-D Class Light Cruiser and Explorer
 
 ##### Stats
 
-  - Length: 277m
-  - Width: 120m
-  - Height: 51m
+  - Length: 230m
+  - Width: 100m
+  - Height: 44m
   - Decks: 10
   - Crew Capacity: 100
   - Warp Speed
@@ -299,7 +299,7 @@ Atlas-E Class Super carrier and dreadnought
 ##### Stats
 
   - Length: 665m
-  - Width: 582m
+  - Width: 532m
   - Height: 265m
   - Decks: 54
   - Crew Capacity: 250
@@ -405,8 +405,8 @@ Atlas-G Class Super-heavy warp and transwarp tug
 
 ##### Stats
 
-  - Length: 1021m
-  - Width: 120m
+  - Length: 1126m
+  - Width: 100m
   - Height: 94m
   - Decks: 28
   - Crew Capacity: 100
