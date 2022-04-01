@@ -12,6 +12,11 @@ module tw_double() {
     translate([-100,0,0]) children();
 }
 
+module tw_double_2() {
+    saucer_pos() children();
+    translate([300,0,0]) children();
+}
+
 module tw_body() {
     difference() {
         hull() tw_double() tw_disk_single();
@@ -20,14 +25,20 @@ module tw_body() {
         cylinder(h=tw_disk_h*4, d=(tw_upper_d+scout_width)/2, $fn=faces_concave, center=true);
 
 
-        hull() tw_double() cylinder(d=command_body_width, h=tw_disk_h*4, $fn=faces_concave, center=true);
+        hull() tw_double_2() cylinder(d=command_body_width, h=tw_disk_h*4, $fn=faces_concave, center=true);
         
         util_repeat(5, [60,0,0])
         util_mirrored([0,1,0])
         translate([10,(tw_upper_d+tw_lower_d)/4, tw_disk_h/2])
-        cube([40,50,20], center=true);
+        cube([40,50,18], center=true);
     }
+    
+    util_repeat(22,[10,0,0])
+    translate([0,0,tw_disk_h])
+    rotate([90,0,0])
+    cylinder(h=100, d=5, $fn=8, center=true);
 }
+
 
 
 

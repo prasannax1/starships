@@ -17,7 +17,7 @@ module full_sep() {
     }
     
     translate([-distance, 0, 0]) {
-        carrier_pos() carrier();
+        carrier_pos() carrier(tw_attached=false);
         
         translate([0,0,-distance])
         escort_pos() escort(carrier_attached=false);

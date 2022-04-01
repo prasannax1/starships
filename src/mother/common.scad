@@ -7,19 +7,19 @@ carrier_front=200;
 carrier_front_ext=50;
 carrier_back=400;
 carrier_back_ext=105;
-carrier_width=250;
+carrier_width=200;
 carrier_height=240;
 carrier_hangar_height=90;
-carrier_hangar_width=200;
+carrier_hangar_width=180;
 carrier_hangar_offset=10;
 carrier_nacelle_length=400;
 carrier_nacelle_bar_length=333;
 
 bridge_width=32;
-scout_width=120;
+scout_width=100;
 scout_theta=45;
 
-warp_length=900;
+warp_length=1000;
 warp_height=80;
 warp_hangar_length=800;
 warp_hangar_width=125;
@@ -29,9 +29,9 @@ warp_nacelle_height=180;
 saucer_width=750;
 saucer_height=50;
 
-tw_lower_d=300;
-tw_upper_d=200;
-tw_disk_h=30;
+tw_lower_d=250;
+tw_upper_d=180;
+tw_disk_h=25;
 
 command_width=180;
 command_body_width=40;
@@ -81,7 +81,7 @@ module disk_class_2() {
     }
 
     translate([0,0,3.5])
-    cylinder(h=6, d1=scout_width*.97, d2=scout_width*.8,center=true);
+    cylinder(h=6, d1=scout_width*.97, d2=scout_width*.75,center=true);
 
     translate([0,0,7])
     disk_class_1();

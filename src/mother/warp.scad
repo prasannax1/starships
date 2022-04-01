@@ -44,7 +44,7 @@ module warp_unpos() {
         cube([500,50,100],center=true);
     }
 
-    translate([15+warp_length/2,0,24])
+    translate([30+warp_length/2,0,24])
     disk_class_2();
 
     translate([75,0,-12])

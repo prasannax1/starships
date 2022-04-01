@@ -16,7 +16,7 @@ module half_sep() {
     }
     
     translate([-distance, 0, 0]) union() {
-        carrier_pos() carrier();
+        carrier_pos() carrier(tw_attached=false);
         escort_pos() escort();
         warp_pos() warp();
     }
