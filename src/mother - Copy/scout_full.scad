@@ -1,0 +1,3 @@
+use <scout.scad>;
+
+scout();

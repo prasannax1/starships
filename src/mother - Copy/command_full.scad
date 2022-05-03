@@ -1,0 +1,3 @@
+use <command.scad>;
+
+command();
