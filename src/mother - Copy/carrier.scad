@@ -163,6 +163,9 @@ module carr_body() {
         rotate([0,90,0])
         cylinder(d=hangar_height+10, h=carrier_width+20, center=true, $fn=faces_rough);
     }
+    
+    translate([1.6*carrier_width,0,25-.005])
+    cylinder(d=hangar_width, h=30, $fn=faces_convex, center=true);
 }
 
 module rear_hangar_minus() {

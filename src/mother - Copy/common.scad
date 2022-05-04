@@ -119,7 +119,7 @@ module nacelle(w, h, l) {
 }
 
 module warp_pos(theta) {
-    translate([-carrier_width+50, hangar_width/2,0])
+    translate([-carrier_width+62, hangar_width/2,0])
     translate([0,0,15-.01])
     translate([0,30,0])
     rotate([-theta,0,0])
@@ -129,6 +129,6 @@ module warp_pos(theta) {
 }
 
 module saucer_pos() {
-    translate([2.75*carrier_width-12,0,10])
+    translate([2.75*carrier_width,0,10+30-.01])
     children();
 }
