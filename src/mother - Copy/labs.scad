@@ -3,8 +3,14 @@ include <common.scad>;
 use <secondaries.scad>;
 
 
-module labs_disk_plus() {
-    disk_3();
+module labs_disk_plus(command_attached = true, saucer_attached = true) {
+    if (command_attached == true && saucer_attached == true) {
+        disk_3(false);    
+    } else {
+        disk_3(true);
+    }
+    
+    
     translate([-command_width/2,0,labs_height-.01]) disk_0();
 
     difference() {
@@ -41,17 +47,17 @@ module labs_disk_minus() {
     hex();
 }
 
-module labs_disk() {
+module labs_disk(command_attached = true, saucer_attached = true) {
     difference() {
-        labs_disk_plus();
+        labs_disk_plus(command_attached, saucer_attached);
         labs_disk_minus();
     }
 }
 
 module labs() {
-    labs_disk();
+    labs_disk(command_attached = false, saucer_attached=false);
     translate([-labs_width/2,0,0]) sec_body();
 }
 
-labs_disk();
+labs_disk(command_attached=false, saucer_attached=false);
     

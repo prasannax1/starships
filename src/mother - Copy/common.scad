@@ -25,6 +25,7 @@ hex_size=50;
 carrier_width=250;
 hangar_height=80;
 hangar_width=180;
+carrier_theta=60;
 
 module hex() {
     rotate(90)
@@ -69,11 +70,13 @@ module disk_2() {
     mirror([0,0,1]) disk_0();
 }
 
-module disk_3() {
+module disk_3(show_hole=true) {
     difference() {
         disk(labs_width, labs_height, faces_convex, 3);
         
-        cylinder(h=labs_height*5, d=(command_width+scout_width)/2, center=true, $fn=faces_concave);
+        if (show_hole == true) {
+            cylinder(h=labs_height*5, d=(command_width+scout_width)/2, center=true, $fn=faces_concave);
+        }
     }
 }    
 
@@ -116,11 +119,16 @@ module nacelle(w, h, l) {
 }
 
 module warp_pos(theta) {
-    translate([-carrier_width, hangar_width/2,0])
+    translate([-carrier_width+50, hangar_width/2,0])
     translate([0,0,15-.01])
     translate([0,30,0])
     rotate([-theta,0,0])
     translate([0,0,hangar_width])
     rotate([theta,0,0])
+    children();
+}
+
+module saucer_pos() {
+    translate([2.75*carrier_width-12,0,10])
     children();
 }

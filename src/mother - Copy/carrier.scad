@@ -43,7 +43,7 @@ module carr_body_basic() {
     carr_plane_basic();
 
     difference() {
-        scale([1,1,.25])
+        scale([1,1,.3])
         carr_lower_shape();
 
         hull() {
@@ -118,12 +118,12 @@ module carr_assembly(theta) {
 
 module carrier() {
     util_mirrored([0,1,0])
-    translate([-carrier_width, hangar_width/2,0])
-    carr_assembly(60);
+    translate([-carrier_width/2-40, hangar_width/2,0])
+    carr_assembly(carrier_theta);
     
     util_mirrored([0,1,0])
     translate([0,30-.01,-25])
-    warp_pos(60)
+    warp_pos(carrier_theta)
     nacelle(30, 20, carrier_width);
     
     carr_body();
@@ -157,7 +157,7 @@ module carr_body() {
     intersection() {
         scale([1.02,1,.25])
         rotate([90,0,0])
-        cylinder(d=4*carrier_width-50, h=hangar_width, $fn=faces_rough, center=true);
+        cylinder(d=4*carrier_width-50, h=hangar_width, $fn=faces_convex, center=true);
 
         translate([2*carrier_width, 0, -hangar_height/2])
         rotate([0,90,0])
