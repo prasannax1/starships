@@ -131,10 +131,14 @@ module carrier() {
 
 
 
-
 module carr_body() {
+    translate([-carrier_width*2+hangar_width/2,0,0])
+    cylinder(d=hangar_width+5, h=15, $fn=faces_convex, center=true);
     difference() {
         carr_body_basic();
+        
+        translate([-2*carrier_width,0,0])
+        cube([20,40,10], center=true);
 
         translate([-carrier_width/2,0,-hangar_height/2+.01])
         rear_hangar_minus();
