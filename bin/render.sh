@@ -12,7 +12,7 @@ else
 fi
 
 if command -v xfvb-run &> /dev/null; then
-    RENDERCMD="xfvb-run ${RENDERCMD}"
+    RENDERCMD="xfvb-run $(which openscad)"
 fi
 
 # Util functions
