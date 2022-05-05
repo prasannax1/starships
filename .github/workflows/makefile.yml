@@ -13,6 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        apt install -y flatpak imagemagick;
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
+        flatpak install flathub org.openscad.OpenSCAD;
+      
       
     - name: Install
       run: make
