@@ -16,7 +16,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        sudo apt install -y flatpak imagemagick openscad;
+        sudo apt install -y xvfb imagemagick openscad;
       
     - name: Install
       run: make

@@ -11,6 +11,9 @@ else
     RENDERCMD="$(which openscad)"
 fi
 
+if command -v xfvb-run &> /dev/null; then
+    RENDERCMD="xfvb-run ${RENDERCMD}"
+fi
 
 # Util functions
 usage() {
