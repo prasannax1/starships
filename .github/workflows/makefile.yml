@@ -16,10 +16,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        sudo apt install -y flatpak imagemagick;
-        sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
-        sudo flatpak install -y flathub org.openscad.OpenSCAD;
-      
+        sudo apt install -y flatpak imagemagick openscad;
       
     - name: Install
       run: make
