@@ -3,16 +3,11 @@
 
 # Set up some variables
 # Arch independent
+RENDERCMD="$(which openscad)"
 if flatpak list | grep -q openscad; then
     RENDERCMD='flatpak run org.openscad.OpenSCAD/x86_64/stable'
 elif snap list | grep -q openscad; then
     RENDERCMD='snap run openscad-nightly'
-else
-    RENDERCMD="$(which openscad)"
-fi
-
-if command -v xfvb-run &> /dev/null; then
-    RENDERCMD="xfvb-run $(which openscad)"
 fi
 
 # Util functions
