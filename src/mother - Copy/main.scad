@@ -7,6 +7,7 @@ use <labs.scad>;
 use <command.scad>;
 use <warp.scad>;
 use <secondaries.scad>;
+use <escort.scad>;
 
 module main() {
     carrier();
@@ -20,6 +21,8 @@ module main() {
     saucer_pos() translate([0,0,saucer_height+labs_height-.02]) command_disk();
 
     util_mirrored([0,1,0]) warp_pos(carrier_theta) translate([0,0,0]) warp();
+    
+    translate([-carrier_width*2+hangar_width/2,0,10+.01]) escort();
 }
 
 main();
