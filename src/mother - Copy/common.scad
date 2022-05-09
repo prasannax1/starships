@@ -123,7 +123,7 @@ module warp_pos(theta) {
     translate([0,0,15-.01])
     translate([0,30,0])
     rotate([-theta,0,0])
-    translate([0,0,hangar_width])
+    translate([0,0,hangar_width*.8])
     rotate([theta,0,0])
     children();
 }

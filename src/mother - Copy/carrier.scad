@@ -43,7 +43,7 @@ module carr_body_basic() {
     carr_plane_basic();
 
     difference() {
-        scale([1,1,.3])
+        scale([1,1,.25])
         carr_lower_shape();
 
         hull() {
@@ -63,32 +63,32 @@ module carr_body_basic() {
 }
 
 module carr_bar() {
-    translate([0,0,hangar_width/2])
+    translate([0,0,hangar_width*.8/2])
     rotate([90,0,0]) {
         util_mirrored([0,1,0])
         util_mirrored([1,0,0])
-        translate([hangar_width/2-20-.01, hangar_width/2-20-.01, 0])
+        translate([hangar_width*.8/2-20-.01, hangar_width*.8/2-20-.01, 0])
         rotate_extrude(angle=90, $fn=faces_convex)
         translate([20,0,0])
         circle(d=20, $fn=faces_rough);
 
         util_mirrored([1,0,0])
-        translate([hangar_width/2-.01,0,0])
+        translate([hangar_width*.8/2-.01,0,0])
         rotate([90,0,0])
-        cylinder(d=20, h=hangar_width-40, $fn=faces_rough, center=true);
+        cylinder(d=20, h=hangar_width*.8-40, $fn=faces_rough, center=true);
 
         util_mirrored([0,1,0])
-        translate([0, hangar_width/2-.01,0])
+        translate([0, hangar_width*.8/2-.01,0])
         rotate([0,90,0])
-        cylinder(d=20, h=hangar_width-40, $fn=faces_rough, center=true);
+        cylinder(d=20, h=hangar_width*.8-40, $fn=faces_rough, center=true);
         
         difference() {
-            cube([hangar_width, hangar_width, 10], center=true);
-            cylinder(d=hangar_width/2, h=30, center=true, $fn=faces_rough);
+            cube([hangar_width*.8, hangar_width*.8, 10], center=true);
+            cylinder(d=hangar_width*.8/2, h=30, center=true, $fn=faces_rough);
         }
         
         rotate_extrude(angle=360, $fn=faces_convex)
-        translate([hangar_width/4,0,0])
+        translate([hangar_width*.8/4,0,0])
         circle(d=10, $fn=faces_rough);
     }
 }
@@ -107,7 +107,7 @@ module carr_assembly(theta) {
     translate([0,30,0]) {
         rotate([-theta,0,0]) {
             carr_bar();
-            translate([0,0,hangar_width]) 
+            translate([0,0,hangar_width*.8]) 
             rotate([theta,0,0]) carr_bar_box();
         }
 
@@ -124,7 +124,7 @@ module carrier() {
     util_mirrored([0,1,0])
     translate([0,30-.01,-25])
     warp_pos(carrier_theta)
-    nacelle(30, 20, carrier_width);
+    nacelle(30, 20, carrier_width*1.25);
     
     carr_body();
 }

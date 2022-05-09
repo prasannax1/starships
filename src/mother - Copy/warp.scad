@@ -41,7 +41,7 @@ module warp_body() {
     cylinder(d=12.5, h=10, center=true, $fn=faces_rough);
 }
 
-module warp_nacelle() {
+module warp_nacelle_2() {
     nacelle(scout_width/2.2, scout_width/4, warp_length);
     
     translate([0,0,scout_width/8])
@@ -50,10 +50,28 @@ module warp_nacelle() {
     cylinder(d=scout_width/1.5, h=warp_length/4, $fn=faces_convex, center=true);
 }
 
+module warp_nacelle() {
+    translate([-scout_width/2,-scout_width/4,0])
+    difference() {
+        rotate([0,-90,0]) {
+            translate([0,0,-warp_length/2])
+            sphere(d=scout_width, $fn=faces_convex);
+            translate([0,0,-warp_length/4+.01])
+            cylinder(d=scout_width, h=warp_length/2, $fn=faces_convex, center=true);
+
+            translate([0,0,warp_length/4-.01])
+            cylinder(d1=scout_width, d2=scout_width*.5, h=warp_length/2, $fn=faces_convex, center=true);
+        }
+
+        translate([0,-warp_length,60])
+        cube(2*warp_length, center=true);
+    }
+}
+
 module warp_assembly() {
     util_mirrored([0,1,0])
     translate([-scout_width/2, scout_width/3, scout_width/2.5])
-    rotate([-30,0,0])
+    //rotate([-30,0,0])
     warp_nacelle();
 
     util_mirrored([0,1,0])
