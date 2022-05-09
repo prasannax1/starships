@@ -84,11 +84,11 @@ module carr_bar() {
         
         difference() {
             cube([hangar_width*.8, hangar_width*.8, 10], center=true);
-            cylinder(d=hangar_width*.8/2, h=30, center=true, $fn=faces_rough);
+            cylinder(d=hangar_width/2, h=30, center=true, $fn=faces_rough);
         }
         
         rotate_extrude(angle=360, $fn=faces_convex)
-        translate([hangar_width*.8/4,0,0])
+        translate([hangar_width/4,0,0])
         circle(d=10, $fn=faces_rough);
     }
 }
