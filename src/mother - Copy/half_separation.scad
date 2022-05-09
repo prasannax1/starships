@@ -19,7 +19,7 @@ module main() {
         
         saucer_pos() translate([-150,0,-labs_height-command_height+.02 -50]) scout_secondary_hull();
 
-        saucer_pos() translate([0,0,saucer_height-.01 + 50]) labs_disk();
+        saucer_pos() translate([0,0,saucer_height-.01 + 50]) labs_disk(saucer_attached=false, command_attached=false);
 
         saucer_pos() translate([0,0,saucer_height+labs_height-.02 + 100]) command_disk();
     }

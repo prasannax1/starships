@@ -51,26 +51,23 @@ module warp_nacelle_2() {
 }
 
 module warp_nacelle() {
-    translate([-scout_width/2,-scout_width/4,0])
-    difference() {
+    translate([-scout_width/4,0,0])
         rotate([0,-90,0]) {
             translate([0,0,-warp_length/2])
-            sphere(d=scout_width, $fn=faces_convex);
+            sphere(d=scout_width*.75, $fn=faces_convex);
             translate([0,0,-warp_length/4+.01])
-            cylinder(d=scout_width, h=warp_length/2, $fn=faces_convex, center=true);
+            cylinder(d=scout_width*.75, h=warp_length/2, $fn=faces_convex, center=true);
 
             translate([0,0,warp_length/4-.01])
-            cylinder(d1=scout_width, d2=scout_width*.5, h=warp_length/2, $fn=faces_convex, center=true);
+            cylinder(d1=scout_width*.75, d2=scout_width*.75*.5, h=warp_length/2, $fn=faces_convex, center=true);
         }
 
-        translate([0,-warp_length,60])
-        cube(2*warp_length, center=true);
-    }
+
 }
 
 module warp_assembly() {
     util_mirrored([0,1,0])
-    translate([-scout_width/2, scout_width/3, scout_width/2.5])
+    translate([-scout_width/2, scout_width/3+2, scout_width/2.5])
     //rotate([-30,0,0])
     warp_nacelle();
 
