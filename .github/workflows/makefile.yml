@@ -3,10 +3,10 @@ name: Makefile CI
 on:
   push:
     branches: [ master ]
-    paths: [ src ]
+    paths: [ "src/mother", "src/small" ]
   pull_request:
     branches: [ master ]
-    paths: [ src ]
+    paths: [ "src/mother", "src/small" ]
 
 jobs:
   build:

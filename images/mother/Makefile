@@ -83,6 +83,7 @@ full_separation.png: \
     ../../src/mother/command.scad \
     ../../src/mother/labs.scad \
     ../../src/mother/saucer.scad \
+    ../../src/mother/saucer_full.scad \
     ../../src/mother/carrier.scad \
     ../../src/mother/scout.scad \
     ../../src/mother/escort.scad \

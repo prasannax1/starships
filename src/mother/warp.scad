@@ -12,7 +12,7 @@ module warp_saucer() {
 
 module warp_body() {
     difference() {
-        scale([1,1,1.5])
+        scale([1,1,1])
         rotate([0,90,0]) {
             util_mirrored([0,0,1])
             translate([0,0,warp_length/2])
