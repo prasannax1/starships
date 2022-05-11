@@ -1,123 +1,59 @@
 use <../lib/util.scad>;
 include <common.scad>;
+use <secondaries.scad>;
 
-module command_disk() {
-    disk_class_3();
-    disk_class_1();
-}
+module command_disk_plus() {
+    disk_2();
 
-module command_body() {
+    translate([-bridge_width/2,0,command_height])
     difference() {
         intersection() {
-            util_ovoid(command_body_width,
-                command_body_length*1.1,
-                command_body_width,
-                command_body_width/2,
-                command_body_width/2,
-                faces=faces_convex);
-            
-            translate([-command_width*.9/2,0,0])
-            cube(command_width*.9, center=true);
-        }
-        
-        translate([0,0,-command_body_width/2+.02])
-        scale([scout_width/command_body_width,1,1])
-        rotate([90,0,0])
-        cylinder(d=command_body_width, h=command_width, center=true, $fn=faces_concave);
-        
-        intersection() {
+            translate([-scout_width/4,0,0])
+            scale([1,1,.6])
             rotate([0,90,0])
-            cylinder(h=scout_width, d=command_body_width*.8, center=true, $fn=faces_concave);
-            
-            translate([0,0,-command_width/2])
-            cube(command_width, center=true);
+            cylinder(d=bridge_width, h=scout_width/2, center=true, $fn=faces_rough);
+
+            scale([1,1,.3])
+            rotate([90,0,0])
+            cylinder(d=scout_width, h=scout_width, center=true, $fn=faces_concave);
         }
+
+        util_mirrored([0,0,1])
+        translate([-scout_width/4,0,scout_width/2+scout_height])
+        cube(scout_width, center=true);
         
-        translate([-command_body_length*.75,0,-command_body_width/2+.02])
-        rotate([90,0,0])
-        cylinder(d=command_body_width, h=command_width, center=true, $fn=faces_concave);
-
-        translate([-command_body_length*.75,0,0])
-        translate([-command_width/2,0,-command_width/2])
-        cube(command_width, center=true);
-        
-        translate([-command_width*.9,0,0])
-        intersection() {
-            rotate([0,90,0])
-            cylinder(d=20, h=2, $fn=faces_concave, center=true);
-
-            translate([0,0,command_width/2+1])
-            cube(command_width, center=true);
-        }
+        translate([-scout_width/2, 0, 0])
+        cube([10, 20, 12], center=true);
     }
-
-    translate([-scout_width/2,0,0])
-    sphere(d=command_body_width*.75, $fn=faces_convex);
+    
+    translate([-scout_width*.57,0,command_height])
+    scale([1.2,1,1])
+    rotate([90,0,0])
+    cylinder(d=12.5, h=22, center=true, $fn=faces_rough);
+    
+    translate([-command_width/2,0,0])
+    translate([40,0,7.5/2])
+    cube([80,80,7.5], center=true);
 }
 
-module command(tw_attached=true) {
-    command_disk();
-    command_body();
-    if (tw_attached == true) {
-        command_assembly(0);
-    } else {
-        command_assembly(command_theta);
-    }    
-}
-
-module command_assembly(theta) {
-    util_mirrored([0,1,0]) {
-        rotate([theta,0,0]) 
-        translate([-command_body_length*1.1, command_width/2-20, 0])
-        rotate([-theta,0,0])
-        command_nacelle();
-
-        translate([0,0,2.5])
-        rotate([theta,0,0])
-        hull() {
-            translate([-command_width/3-10,0,0])
-            sphere(d=3);
-
-            translate([-command_width*.75,0,0])
-            sphere(d=3);
-
-            translate([-command_body_length*1.1+10, command_width/2-20, 0])
-            sphere(d=3);
-
-            translate([-command_body_length*1.1-10, command_width/2-20, 0])
-            sphere(d=3);
-        }
-    }
+module command() {
+    command_disk(body_attached=true);
+    translate([-command_width/2,0,0]) sec_body();
 }
 
 
-module command_nacelle() {
+module command_disk(body_attached=false) {
     difference() {
-        translate([-10,0,2.5-.01])
-        scale([1,.64,1])
-        intersection() {
-            rotate([0,90,0])
-            rotate(90) {
-                cylinder(r2=20,r1=18, h=command_body_length/2,$fn=6, center=true);
-                translate([0,0,command_body_length/4+command_body_length/8-.01])
-                cylinder(r1=20,r2=12, h=command_body_length/4, $fn=6, center=true);
-                translate([0,0,-command_body_length/4-command_body_length/8+.01])
-                cylinder(r2=18,r1=10, h=command_body_length/4, $fn=6, center=true);
-                translate([0,0,command_body_length/2-.02])
-                sphere(r=12, $fn=6);
-                translate([0,0,-command_body_length/2+.02])
-                sphere(r=10, $fn=6);
-            }
-
-            translate([0,0,250-2.5])
-            cube(500,center=true);
+        command_disk_plus();
+        if (body_attached == false) {
+            command_disk_minus();
         }
-        
-        translate([-.5*command_body_length,0,0])
-        rotate([0,-45,0])
-        translate([-250,0,0])
-        cube(500, center=true);
     }
 }
 
-command(tw_attached=false);
+module command_disk_minus() {
+    translate([-command_width/2,0,0])
+    hex();
+}
+
+command_disk();

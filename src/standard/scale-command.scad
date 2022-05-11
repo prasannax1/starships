@@ -11,7 +11,7 @@ use <constitution-refit.scad>;
 
 
 translate([0,0,0])
-command(tw_attached=false);
+command();
 
 translate([0,0,100]) excelsior();
 

@@ -10,8 +10,8 @@ use <constitution.scad>;
 use <equinox.scad>;
 
 
-scout(saucer_attached=false);
+scout();
 
-translate([0,0,80]) constitution();
+translate([0,0,100]) constitution();
 
 translate([-40,0,-80]) equinox();

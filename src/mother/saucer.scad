@@ -1,130 +1,73 @@
 use <../lib/util.scad>;
 include <common.scad>;
+use <secondaries.scad>;
 
+use <labs.scad>;
+use <command.scad>;
+use <scout.scad>;
 
-module saucer_disk() {
-    hull() {
-        translate([0,0,-saucer_height+5])
-        cylinder(d=saucer_width, h=10, $fn=faces_concave, center=true);
+module saucer_plus() {
+    disk_4();
 
-        translate([0,0,-5])
-        cylinder(d=saucer_width-4*saucer_height, h=10, $fn=faces_concave, center=true);
-    }
+    translate([0,0,saucer_height])
+    disk_1();
+}
 
-    disk_class_2();
-    
-    difference() {
-        cylinder(d=400, h=6, $fn=faces_concave, center=true);
-        cylinder(d=400-50, h=10, $fn=faces_concave, center=true);
-        
-        util_mirrored([0,1,0])
-        scale([1,1,1])
-        rotate(50)
-        translate([-saucer_width/2, saucer_width/2, 0])
-        cube(saucer_width, center=true);
-    }
-
+module saucer_minus(scout_attached) {
+    util_repeat_rot(4, [0,0,90])
+    translate([-labs_width/2, 0, -7])
+    hull()
+    util_mirrored([0,0,1])
     util_mirrored([0,1,0])
-    rotate(50)
-    translate([-200+25/2,0,0])
-    cylinder(d=25, h=6, $fn=faces_convex, center=true);
-}
-
-
-
-
-module saucer_body_plus() {
-    translate([-400+saucer_width/2,0,-saucer_height/2])
-    translate([-200,0,0])
-    cube([400, max(carrier_width,tw_lower_d), saucer_height], center=true);
-
-
-    intersection() {
-        hull() {
-            translate([-saucer_width,0,-saucer_height-tw_disk_h/2+.01])
-            cylinder(h=tw_disk_h, d1=tw_upper_d, d2=tw_lower_d, $fn=faces_convex, center=true);
-
-            translate([0,0,-saucer_height-tw_disk_h/2+.01])
-            cylinder(h=tw_disk_h, d1=tw_upper_d, d2=tw_lower_d, $fn=faces_convex, center=true);
-        }
-
-        translate([-400+saucer_width/2,0,-saucer_height/2])
-        cube([800, max(carrier_width,tw_lower_d), saucer_height*4], center=true);
-    }
-}
-
-module saucer_body_minus() {
-    translate([0,0,-saucer_height-tw_disk_h])
-    cylinder(d=scout_width-2, h=20, $fn=faces_concave, center=true);
-
-    translate([-400,0, -saucer_height-tw_disk_h])
-    cube([800, scout_width-2, 20], center=true);
+    translate([0, 25, 4])
+    rotate([0,90,0])
+    cylinder(d=2, h=30, $fn=12, center=true);
     
-    translate([326-saucer_width,0,-saucer_height-5]) {
-        cube([5,100,10], center=true);
+//    translate([-saucer_width/2,0,0])
+//    scale([.99, .99, 4])
+//    hex();
+    
+    translate([0,0,-labs_height-command_height])
+    cylinder(h=2, d=scout_width+2, $fn=faces_concave, center=true);
+    
+    if (scout_attached == false) {
+        translate([0,0,-labs_height-command_height])
+        cylinder(d1=scout_width+20, d2=scout_width-20, h=20, center=true, $fn=faces_concave);
+
+        translate([0,0,-labs_height-command_height+scout_height/2])
+        sphere(d=20, $fn=faces_concave);
         
+        translate([0,0,-labs_height-command_height])
+        translate([-scout_width/4, 0, scout_height/2])
+        cube([scout_width/2, 15, scout_height*1.5], center=true);
+    }
+}
+
+module saucer_impulse() {
+    difference() {
+        hull()
         util_mirrored([0,1,0])
-        translate([0,50,0])
+        translate([0,command_height,0])
         rotate([0,90,0])
-        cylinder(d=10, h=5, $fn=faces_concave, center=true);
+        rotate(90)
+        cylinder(d=command_height, h=command_width, $fn=6, center=true);
+
+        util_mirrored([0,1,0])
+        translate([-command_width/2,command_height,0])
+        rotate([0,90,0])
+        rotate(90)
+        cylinder(d=command_height*.8, h=scout_height, $fn=6, center=true);
+    }
+}
+
+module saucer(scout_attached=true) {
+    difference() {
+        saucer_plus();
+        saucer_minus(scout_attached);
     }
     
-    util_repeat(3, [60,0,0])
     util_mirrored([0,1,0])
-    translate([-saucer_width/4-110,(tw_upper_d+tw_lower_d)/4, -saucer_height -5-.5])
-    cube([40,50,10], center=true);
+    translate([-saucer_width/2+command_width/2,scout_width/2,saucer_height/2]) saucer_impulse();
 }
 
-        
-
-module saucer_nacelle() {
-    translate([-100,0,0])
-    difference() {
-        union() {
-            util_mirrored([0,0,1])
-            util_mirrored([1,0,0])
-            translate([200,0,12])
-            sphere(d=24, $fn=faces_convex);
-
-            cube([400,24,24], center=true);
-
-            util_mirrored([0,0,1])
-            translate([0,0,12])
-            rotate([0,90,0])
-            cylinder(d=24, h=400, $fn=faces_convex, center=true);
-
-            util_mirrored([1,0,0])
-            translate([200,0,0])
-            cylinder(d=24,h=24,$fn=faces_convex, center=true);
-        }
-
-        util_mirrored([0,1,0])
-        translate([0,12,0])
-        rotate([0,90,0])
-        cylinder(h=360,d=5,$fn=faces_concave,center=true);
-    }
-}
-
-module saucer_assembly() {
-    util_mirrored([0,1,0]) {
-        translate([-saucer_width/2, tw_lower_d/2-12, -saucer_height-50]) saucer_nacelle();
-
-        translate([-saucer_width/2, tw_lower_d/2-12, -saucer_height])
-        cube([50,15,100], center=true);
-    }
-}
-
-module saucer_body() {
-    difference() {
-        saucer_body_plus();
-        saucer_body_minus();
-    }
-}
-
-module saucer() {
-    saucer_disk();
-    saucer_body();
-    saucer_assembly();
-}
-
-saucer();
+saucer(scout_attached=false);
