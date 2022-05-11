@@ -64,7 +64,7 @@ blacken() {
     convert "${IN}" \
         -fuzz 0% \
         -fill none \
-        -draw "matte 0,0 floodfill" \
+        -draw "color 0,0 replace" \
         -background black \
         -flatten \
         "${OUT}"
