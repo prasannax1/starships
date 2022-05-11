@@ -47,6 +47,9 @@ command_full.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
 labs_full.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/labs.scad ../../src/mother/labs_full.scad
 
+saucer.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
+    ../../src/mother/saucer.scad
+
 saucer_full.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/saucer.scad ../../src/mother/saucer_full.scad
 
