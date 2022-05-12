@@ -6,8 +6,6 @@ Starships and Shuttles - Star Trek style
 
 ![Mother Ship](images/mother/main.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
-
 Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Stats
@@ -79,14 +77,12 @@ to the scale of the ship.
 The Atlas is an amalgamation of 8 ships, each of which can operate independently in
 a specialized or generic role.
 
-![Ship Separation](images/mother/full-separation.png)
+![Ship Separation](images/mother/full_separation.png)
 
 
 #### Atlas-A Class
 
 ![Command Ship](images/mother/command.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
 
 Atlas-A Class Exploratory Cruiser and Command Vessel
 
@@ -133,9 +129,7 @@ lauch mechanism. The aeroshuttle extends to the upper deck as well.
 
 #### Atlas-B Class
 
-![Transwarp Ship](images/mother/transwarp.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
+![Transwarp Ship](images/mother/labs.png)
 
 Atlas-B Class Multimission Explorer and Science and Research vessel
 
@@ -161,7 +155,7 @@ variety of research and experimental space offered.
 Due to its nature as a sub-component of a larger ship, the B class has an unusual structure - just a 
 slab like structure 9 decks tall
 
-![Ship scale](images/scale/scale-transwarp.png)
+![Ship scale](images/scale/scale-labs.png)
 
 The primary hull is split into two sections, the main saucer in the rear which contains the main 
 command sections and living quarters and common areas, while the ring like area in the fore contains
@@ -187,8 +181,6 @@ hull with only the warp engines jutting out.
 #### Atlas-C Class
 
 ![Saucer Ship](images/mother/saucer.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
 
 Atlas-C Class Multimission Explorer and Super Colony Transport
 
@@ -243,8 +235,6 @@ shuttlebay. Connected to the main shuttlebay are 8 independent hangars, which al
 
 ![Scout Ship](images/mother/scout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
-
 Atlas-D Class Light Cruiser and Explorer
 
 ##### Stats
@@ -291,8 +281,6 @@ The secondary hull is fairly minimal and fucntional; the engineering section fol
 #### Atlas-E Class
 
 ![Carrier Ship](images/mother/carrier.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
 
 Atlas-E Class Super carrier and dreadnought
 
@@ -358,8 +346,6 @@ bottom is the man cargo bay and antimatter storage.
 
 ![Escort Ship](images/mother/escort.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
-
 Atlas-F Class Escort Carrier
 
 ##### Stats
@@ -398,8 +384,6 @@ wings of *Pirahna* class fighters to serve as a light carrier vehicle.
 #### Atlas-G class
 
 ![Warp Ship](images/mother/warp.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/warp.stl)
 
 Atlas-G Class Super-heavy warp and transwarp tug
 
@@ -453,8 +437,6 @@ These are ships which lie in the 50m to 100m range.
 
 ![Science Ship](images/small/science.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/small/aux/science.stl)
-
 Raven class science ship.
 
 ##### Stats
@@ -492,8 +474,6 @@ into what is quite a large shuttlebay for this size of ship.
 #### Orca class
 
 ![Attack Ship](images/small/attack.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/small/aux/attack.stl)
 
 Orca class light corvette
 
@@ -535,8 +515,6 @@ As mentioned before, the Orca also splits up into two ships, each of which are w
 
 ![Attack Ship](images/small/attack-primary.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/attack-primary.stl)
-
 Orca-A / Manta Ray class heavy tactical runabout[^orca]
 
 [^orca]: The Orca-A class was initially conceived as a stand-alone ship, named the *Manta Ray*. It was augmented with the Orca-B class, 
@@ -573,8 +551,6 @@ class the ability to punch beyond its weight class with just phaser fire.
 
 ![Attack Ship](images/small/attack-secondary.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/attack-secondary.stl)
-
 Orca-B class torpedo boat
 
   - Length: 96m
@@ -606,8 +582,6 @@ The Orca-B class can contain upto 3 pirahna fighters, or 5 conventional small sh
 #### Orbit class
 
 ![Diplomatic Ship](images/small/diplomat.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/diplomat.stl)
 
 Orbit class yacht
 
@@ -647,8 +621,6 @@ not lack sensors or scientific capabilities.
 
 ![Yacht](images/small/yacht.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/yacht.stl)
-
 Iceland class yacht
 
 ##### Stats
@@ -687,8 +659,6 @@ These are regular sized shuttles and and runabouts.
 
 ![shuttle Pod](images/small/shuttlepod.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttlepod.stl)
-
 Bumblebee Class Shuttlepod
 
 ##### Stats
@@ -710,8 +680,6 @@ ship in intermediate and small starships.
 #### Type 20 class
 
 ![Small Shuttle](images/small/shuttle-small.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-small.stl)
 
 Type 20 small shuttle
 
@@ -736,8 +704,6 @@ The Type 20 is found throughout starfleet on small and medium starships.
 
 ![Medium Shuttle](images/small/shuttle-medium.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-medium.stl)
-
 Type 23 medium shuttle
 
 ##### Stats
@@ -761,8 +727,6 @@ The Type 23 is also ubiquitous in medium and large starships.
 
 ![large shuttle](images/small/shuttle-large.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-large.stl)
-
 Type 3 large shuttle
 
 ##### Stats
@@ -784,8 +748,6 @@ It is frequently found in medium starships as a runabout, and in large and very 
 #### Pirahna Class Fighter
 
 ![Fighter](images/small/fighter.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/fighter.stl)
 
 Pirahna class fighter
 
@@ -809,8 +771,6 @@ enemy. All the manouvers happen at impulse speeds after that.
 #### Amazon Class Runabout
 
 ![Runabout](images/small/runabout.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/runabout.stl)
 
 Amazon class runabout
 
@@ -836,8 +796,6 @@ The Amazon class is fast rising up to become the standard runabout in all classe
 
 ![Runabout](images/small/tactical-runabout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/tactical-runabout.stl)
-
 Mako class runabout
 
 ##### Stats
@@ -859,8 +817,6 @@ The Mako class forms the primary line of defence for the Atlas group.
 #### Ganges Class Heavy Runabout
 
 ![Runabout](images/small/heavy-runabout.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/heavy-runabout.stl)
 
 Ganges class heavy runabout
 
