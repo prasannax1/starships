@@ -3,7 +3,7 @@ include <common.scad>;
 
 module sec_body_plus() {
     intersection(){
-        util_ovoid(command_width/2, command_width/2, hex_size, command_height, hex_size/2, faces=faces_convex);
+        util_ovoid(0.82*command_width/2, command_width/2, hex_size, command_height, hex_size/2, faces=faces_convex);
 
         union() {
             translate([0,0,-command_width/2+.01])
