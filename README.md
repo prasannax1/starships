@@ -77,12 +77,12 @@ to the scale of the ship.
 The Atlas is an amalgamation of 8 ships, each of which can operate independently in
 a specialized or generic role.
 
-![Ship Separation](images/mother/full_separation.png)
+![Ship Separation](images/mother/half_separation.png)
 
 
 #### Atlas-A Class
 
-![Command Ship](images/mother/command.png)
+![Command Ship](images/mother/command_full.png)
 
 Atlas-A Class Exploratory Cruiser and Command Vessel
 
@@ -233,7 +233,7 @@ shuttlebay. Connected to the main shuttlebay are 8 independent hangars, which al
 
 #### Atlas-D Class
 
-![Scout Ship](images/mother/scout.png)
+![Scout Ship](images/mother/scout_full.png)
 
 Atlas-D Class Light Cruiser and Explorer
 
