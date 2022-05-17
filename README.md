@@ -74,10 +74,10 @@ found enough of a niche to justify the entire ship.
 The Atlas is a fairly conventional looking starship, looking deceptively delicate due
 to the scale of the ship.
 
-The Atlas is an amalgamation of 8 ships, each of which can operate independently in
+The Atlas is an amalgamation of 7 types of ship, each of which can operate independently in
 a specialized or generic role.
 
-![Ship Separation](images/mother/half_separation.png)
+![Ship Separation](images/scale/scale-components.png)
 
 
 #### Atlas-A Class
