@@ -1,3 +1,0 @@
-use <labs.scad>;
-
-labs();

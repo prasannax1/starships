@@ -1,3 +1,5 @@
-use <scout.scad>;
+use <../lib/util.scad>;
+include <common.scad>;
 
-scout_secondary_hull();
+disk_1(bottom_open=true);
+
