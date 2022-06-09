@@ -2,29 +2,37 @@ use  <../lib/util.scad>;
 include <common.scad>;
 
 module warp_nacelle() {
-    scale([1,.64,1.5])
-    intersection() {
-        rotate([0,90,0])
-        rotate(90) {
-            translate([0,0,warp_length/2-.02])
-            scale([1,1,2])
-            sphere(d=scout_width, $fn=6);
+    difference() {
+        scale([1,.64,1.5])
+        intersection() {
+            rotate([0,90,0])
+            rotate(90) {
+                translate([0,0,warp_length/2-.02])
+                scale([1,1,2])
+                sphere(d=scout_width, $fn=6);
 
-            translate([0,0,warp_length/4-.01])
-            cylinder(d=scout_width, h=warp_length/2, center=true, $fn=6);
+                translate([0,0,warp_length/4-.01])
+                cylinder(d=scout_width, h=warp_length/2, center=true, $fn=6);
 
-            translate([0,0,-warp_length/4+.01])
-            cylinder(d2=scout_width, d1=scout_width*.75, h=warp_length/2, center=true, $fn=6);
+                translate([0,0,-warp_length/4+.01])
+                cylinder(d2=scout_width, d1=scout_width*.75, h=warp_length/2, center=true, $fn=6);
 
-            translate([0,0,-warp_length/2+.02])
-            scale([1,1,2])
-            sphere(d=scout_width*.75, $fn=6);
+                translate([0,0,-warp_length/2+.02])
+                scale([1,1,2])
+                sphere(d=scout_width*.75, $fn=6);
+            }
+
+            translate([0,0,.6*warp_length-.01])
+            cube(1.2* warp_length, center=true);
         }
-
-        translate([0,0,.6*warp_length-.01])
-        cube(1.2* warp_length, center=true);
+        
+        translate([-warp_length/2,0,0])
+        rotate([0,-45,0])
+        translate([-scout_width,0,0])
+        cube(2*scout_width, center=true);
     }
 }
+
 
 
 module warp_body() {

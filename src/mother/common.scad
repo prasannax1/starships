@@ -17,6 +17,7 @@ command_theta=45;
 
 scout_width=100;
 scout_height=10;
+scout_theta=45;
 
 bridge_width=32;
 bridge_height=4;
@@ -91,7 +92,6 @@ module disk_1(bottom_open=false) {
     cylinder(d=6, h=scout_width/2, $fn=6, center=true);
 }
 
-
 module disk_2() {
     disk_h = 10;
     
@@ -140,17 +140,21 @@ module disk_3(show_hole=false) {
 }    
 
 module disk_4() {
-    hull()
-    rotate_extrude(angle=360, $fn=faces_concave) {
-        translate([saucer_width/2-5,5,0])
-        circle(d=10, $fn=faces_rough);
-
-        translate([saucer_upper/2-5, saucer_height-5,0])
-        circle(d=10, $fn=faces_rough);
+    hull() {
+        translate([0,0,2])
+        cylinder(h=4, d=saucer_width, $fn=faces_concave*2, center=true);
+        
+        translate([0,0,saucer_height/2])
+        cylinder(h=saucer_height+.02, d=saucer_upper, $fn=faces_concave*2, center=true);
     }
+    
     
     translate([0,0, -15+.01])
     cylinder(d2=hangar_width, d1=(command_width+scout_width)/2, $fn=faces_convex, h=30, center=true);
+    
+    translate([0,0,-30+.01])
+    mirror([0,0,1])
+    disk_0();
 }
 
 module nacelle(w, h, l) {
@@ -180,7 +184,7 @@ module nacelle(w, h, l) {
     }
 }
 
-module command_pos() {
+module command_pos_1() {
     translate([command_width/2.75,0,28-.01]) children();
 }
 
@@ -220,5 +224,10 @@ module labs_pos() {
 module command_pos() {
     labs_pos()
     translate([0,0,labs_height-.01])
+    children();
+}
+
+module escort_pos() {
+    translate([-carrier_length/3, 0, 5-.02])
     children();
 }

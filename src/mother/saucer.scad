@@ -4,7 +4,7 @@ include <common.scad>;
 module saucer_plus() {
     disk_4();
 
-    util_repeat_rot(11, [0,0,360/12])
+    util_repeat_rot(7, [0,0,360/8])
     translate([(labs_width+saucer_upper)/4, 0, saucer_height-.01])
     disk_1();
 

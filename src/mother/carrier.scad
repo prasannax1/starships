@@ -177,7 +177,11 @@ module carr_body_minus() {
     translate([carrier_length/4, 0, -hangar_height/2-10])
     rotate([0,90,0])
     cylinder(d=hangar_height-10, h=carrier_length/4, $fn=faces_concave, center=true);
+    
+    translate([-carrier_length/2-hangar_width/2-20,0,1.6])
+    cube([20,50,10], center=true);
 }
+
 
 
 
