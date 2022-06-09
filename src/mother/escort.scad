@@ -51,14 +51,20 @@ module escort_assembly() {
 
 
 
-
-module escort() {
+module escort(carrier_attached=true) {
     difference() {
         escort_plus();
         escort_minus();
     }
     
     escort_assembly();
+    
+    if (carrier_attached == true) {
+        util_mirrored([0,1,0])
+        translate([-scout_width/2-scout_height/2-1,scout_width/2-2,0])
+        rotate([0,90,0])
+        cylinder(d=scout_height, h=scout_width+2, center=true);
+    }
 }
 
-escort();
+escort(carrier_attached=false);

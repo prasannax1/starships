@@ -107,7 +107,7 @@ module warp_secondary() {
     warp_body();
 
     util_mirrored([0,1,0])
-    translate([-warp_length/2-scout_width/2,.64/2* scout_width, -.01])
+    translate([-warp_length/2-scout_width/2,.64/2* scout_width, -.01-9])
     warp_nacelle();
 
     translate([-warp_length+warp_length/4,0, -35/2-10+.01])
