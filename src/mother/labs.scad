@@ -15,4 +15,4 @@ module labs(show_hole=false) {
     }
 }
 
-labs();
+labs(show_hole=true);
