@@ -6,7 +6,7 @@ Other files not included in source code.
 */
 
 use <../mother/main.scad>;
-use <../mother/scout.scad>;
+use <../mother/scout_full.scad>;
 use <../mother/command.scad>;
 use <../mother/labs.scad>;
 use <../mother/saucer.scad>;
@@ -18,7 +18,7 @@ translate([-400,0,-500]) main();
 
 translate([0,0,600]) escort(carrier_attached=false);
 
-translate([0,0,500]) scout();
+translate([0,0,500]) scout_full();
 
 translate([0,0,400]) command();
 
