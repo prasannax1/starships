@@ -9,8 +9,6 @@ IMG += saucer_full.png
 IMG += labs_full.png 
 IMG += carrier.png 
 IMG += main.png 
-IMG += half_separation.png 
-IMG += full_separation.png
 IMG += warp.png
 
 all: $(IMG)
@@ -69,24 +67,4 @@ main.png: \
     ../../src/mother/warp.scad \
     ../../src/mother/main.scad
 
-half_separation.png: \
-    ../../src/mother/command.scad \
-    ../../src/mother/labs.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/half_separation.scad
-
-full_separation.png: \
-    ../../src/mother/command.scad \
-    ../../src/mother/labs.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/saucer_full.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/full_separation.scad
 
