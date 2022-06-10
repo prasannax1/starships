@@ -16,7 +16,7 @@ use <../mother/warp.scad>;
 
 translate([-400,0,-500]) main();
 
-translate([0,0,600]) escort(carrier_attached=false);
+translate([0,0,550]) escort(carrier_attached=false);
 
 translate([0,0,500]) scout_full();
 

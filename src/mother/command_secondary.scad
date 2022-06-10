@@ -85,16 +85,16 @@ module command_secondary() {
 module command_assembly(theta) {
     rotate([-theta,0,0]) {
         hull() {
-            translate([-command_width*.75+command_width/5,0,command_width/2-10]) sphere(d=3);
+            translate([-command_width*.75+command_width/5,0,command_width/2-20]) sphere(d=3);
 
-            translate([-command_width*.75-command_width/5,0,command_width/2-10]) sphere(d=3);
+            translate([-command_width*.75-command_width/5,0,command_width/2-20]) sphere(d=3);
 
             translate([-5,0,0]) sphere(d=3);
 
             translate([-10,0,0]) sphere(d=3);
         }
 
-        translate([-command_width*.75,0,command_width/2-10])
+        translate([-command_width*.75,0,command_width/2-20])
         rotate([theta,0,0])
         command_nacelle();
     }
