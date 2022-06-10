@@ -6,12 +6,13 @@ Other files not included in source code.
 */
 
 use <../mother/labs.scad>;
+use <../mother/labs_full.scad>;
 use <odyssey.scad>;
 
 
 translate([0,0,-100])
-labs();
+labs_full();
 
-labs_disk();
+labs();
 
 translate([200,0,150]) odyssey();

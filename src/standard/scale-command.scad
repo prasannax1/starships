@@ -10,9 +10,6 @@ use <excelsior.scad>;
 use <constitution-refit.scad>;
 
 
-translate([0,0,0])
-command();
+translate([0,0,0]) command();
 
-translate([0,0,100]) excelsior();
-
-translate([0,0,-60]) constitution_refit();
+translate([75,0,-60]) constitution_refit();

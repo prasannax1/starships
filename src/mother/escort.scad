@@ -2,71 +2,69 @@ use <../lib/util.scad>;
 include <common.scad>;
 
 module escort_plus() {
-    union() {
-        intersection() {
-            disk_1();
+    disk_1();
 
-            translate([0,0,scout_width/2])
-            cube (scout_width, center=true);
-        }
+    intersection() {
+        translate([-scout_width/2+25,0,0])
+        util_ovoid(10, 1*scout_width, scout_height*3.6, scout_height*1.5, 10, faces=faces_convex);
 
-        translate([-20,0,0])
-        difference() {
-            scale([7.6,2,1.5])
-            intersection() {
-                rotate([0,90,0])
-                sphere(d=20, $fn=faces_convex);
-
-                translate([0,0,15])
-                cube (30, center=true);
-            }
-
-            translate([0,0,1.5*scout_width + 10])
-            cube(3*scout_width, center=true);
-        }
+        translate([-scout_width/2+25+.01,0,0])
+        translate([-.5*.75*scout_width,0,.5*.75*scout_width-.01])
+        cube(.75*scout_width, center=true);
     }
 }
 
 module escort_minus() {
-    translate([scout_width,0,0])
-    cube(scout_width, center=true);
+    translate([scout_width/2,0,0])
+    cube(25, center=true);
     
-    translate([-scout_width*1.28,0,scout_width/2+1.5])
-    cube(scout_width, center=true);
+    translate([-scout_width,0,0])
+    intersection() {
+        scale([1,1,1.5/1.8])
+        rotate([0,90,0])
+        cylinder(h=1, d=scout_height*2.2, $fn=faces_concave, center=true);
+        
+        translate([0,0,25/2+2])
+        cube(25, center=true);
+    }
     
     util_mirrored([0,1,0])
-    translate([0,scout_width/2,0])
-    scale([2,1,1])
-    cylinder(d=20, h=30, $fn=6, center=true);
+    translate([0,3/8*scout_width,0])
+    translate([-25,25/2,0])
+    cube([50,25,25], center=true);
 }
 
-module escort_body() {
+module escort_assembly() {
+    util_mirrored([0,1,0])
+    {
+        translate([-scout_width/2-scout_height/2-1,scout_width/2-2,scout_height/2])
+        rotate([90,0,0])
+        nacelle(scout_height,scout_height,scout_width);
+
+        translate([-11,3/8*scout_width, 2])
+        cube([25,15,2],center=true);
+    }
+    
+    translate([-scout_width/2+10, 0, 6/2])
+    cube([20, 50, 6], center=true);
+}
+
+
+
+module escort(carrier_attached=true) {
     difference() {
         escort_plus();
         escort_minus();
     }
-}
-
-module escort(carrier_attached=true) {
-    escort_body();
+    
+    escort_assembly();
     
     if (carrier_attached == true) {
-        cube(16, center=true);
+        util_mirrored([0,1,0])
+        translate([-scout_width/2-scout_height/2-1,scout_width/2-2,0])
+        rotate([0,90,0])
+        cylinder(d=scout_height, h=scout_width+2, center=true);
     }
-
-    translate([-scout_width*.77,0,1.5]) 
-    scale([1,1,.6])
-    difference() {
-        sphere(d=24, $fn=faces_rough);
-        
-        translate([0,0,-15-.5]) cube(30, center=true);
-    }
-    
-    util_mirrored([0,1,0])
-    translate([-scout_width/2+15, scout_width/2-2.5, 7.5])
-    rotate([-45,0,0])
-    nacelle(10, 8, scout_width);
-
 }
 
 escort(carrier_attached=false);

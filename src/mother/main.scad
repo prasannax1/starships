@@ -1,28 +1,18 @@
-use <../lib/util.scad>;
-include <common.scad>;
-use <carrier.scad>;
-use <saucer.scad>;
-use <scout.scad>;
+use <saucer.scad>
+use <carrier.scad>
+use <warp.scad>;
 use <labs.scad>;
 use <command.scad>;
-use <warp.scad>;
-use <secondaries.scad>;
 use <escort.scad>;
+include <common.scad>;
 
 module main() {
     carrier();
-
-    saucer_pos() saucer(scout_attached=true);
-
-    saucer_pos() translate([0,0,-labs_height-command_height+.02]) scout_saucer();
-
-    saucer_pos() translate([0,0,saucer_height-.01]) labs_disk();
-
-    saucer_pos() translate([0,0,saucer_height+labs_height-.02]) command_disk();
-
-    util_mirrored([0,1,0]) warp_pos(carrier_theta) translate([0,0,0]) warp();
-    
-    translate([-carrier_width*2+hangar_width/2,0,10+.01]) escort();
+    saucer_pos() saucer();
+    labs_pos() labs();
+    command_pos() disk_2();
+    util_mirrored([0,1,0]) warp_pos() warp();
+    escort_pos() escort();
 }
 
 main();

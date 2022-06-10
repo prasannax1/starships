@@ -5,13 +5,11 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/scout.scad>;
+use <../mother/scout_full.scad>;
 use <constitution.scad>;
 use <equinox.scad>;
 
 
-scout();
-
-translate([0,0,100]) constitution();
+scout_full();
 
 translate([-40,0,-80]) equinox();
