@@ -99,7 +99,7 @@ module warp_hangar() {
 
 module warp_saucer() {
     translate([scout_width,0,-.01])
-    disk_1(bottom_open=true);
+    disk_1();
 }
 
 

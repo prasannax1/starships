@@ -11,9 +11,9 @@ saucer_height=50;
 labs_width=400;
 labs_height=30;
 
-command_width=150;
-command_height=25;
-command_theta=45;
+command_width=180;
+command_height=20;
+command_theta=75;
 
 scout_width=100;
 scout_height=10;
@@ -66,7 +66,7 @@ module disk_0() {
     disk(bridge_width, bridge_height, faces_rough, 2.8);
 }
 
-module disk_1(bottom_open=false) {
+module disk_1() {
     difference() {
         semi(scout_width, scout_height, faces_convex);
         
@@ -76,9 +76,9 @@ module disk_1(bottom_open=false) {
         translate([-scout_width/2,0,0])
         cube([50, 12-.02, 30], center=true);
         
-        if (bottom_open == true) {
-            cylinder(d=18, h=1, $fn=faces_concave, center=true);
-        }
+        
+        translate([scout_width/2,0,.5*.75*scout_height])
+        cube([7.5,18,6.4], center=true);
     }
     
     translate([0,0,scout_height-bridge_height-.01])
@@ -90,44 +90,44 @@ module disk_1(bottom_open=false) {
     rotate([0,90,0])
     rotate(90)
     cylinder(d=6, h=scout_width/2, $fn=6, center=true);
+    
+    difference() {
+        intersection() {
+            scale([1,1,.4])
+            sphere(d=scout_width, $fn=faces_concave);
+
+            scale([1,1,.75])
+            rotate([0,90,0])
+            cylinder(d=30, h=scout_width, $fn=faces_convex, center=true);
+
+            translate([scout_width/2,0,.5*.75*scout_height])
+            cube([scout_width, 25, .75*scout_height], center=true);
+        }
+        
+        translate([scout_width/2,0,.5*.75*scout_height])
+        cube([7.5,18,6.4], center=true);
+    }
 }
+
+
 
 module disk_2() {
     disk_h = 10;
     
+    translate([0,0,disk_h-.01]) disk_1();
+    
     translate([0,0,disk_h/2])
     cylinder(d1=command_width, d2=command_width-2*disk_h, h=disk_h, $fn=faces_convex, center=true);
     
-    
-    intersection() {
-        hull() {
-            translate([0,0,disk_h+7/2-.01])
-            cylinder(d1=60, d2=60-14, h=7, $fn=faces_convex, center=true);
-            
-            translate([-30,0,disk_h+7/2-.01])
-            cylinder(d1=30, d2=30-14, h=7, $fn=faces_convex, center=true);
-        }
-        
-        cube(60, center=true);
-    }
-    
-    translate([0,0,disk_h + 7 - .02]) disk_0();
-    
-    translate([0,0,-5+.01])
-    cylinder(d2=50, d1=50-20, h=10, center=true, $fn=faces_convex);
-    
-    translate([0,0,-10])
-    scale([1,1,.5])
-    sphere(d=20, $fn=faces_convex);
-    
     hull()
     util_mirrored([0,1,0])
-    translate([-command_width/4, 10, 5])
+    translate([-command_width/4, 20, 5])
     scale([1,2,1])
     rotate([0,90,0])
     rotate(90)
     cylinder(h=command_width/2, d=10, $fn=6, center=true);
 }
+
 
 module disk_3(show_hole=false) {
     difference() {

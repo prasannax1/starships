@@ -3,7 +3,7 @@ include <common.scad>;
 
 
 module labs(show_hole=false) {
-    translate([scout_width,0,labs_height-.01]) disk_0();
+    translate([scout_width+20,0,labs_height-.01]) disk_0();
 
     difference() {
         disk_3(show_hole);
@@ -16,3 +16,4 @@ module labs(show_hole=false) {
 }
 
 labs(show_hole=true);
+

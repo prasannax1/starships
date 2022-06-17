@@ -4,8 +4,8 @@ include <common.scad>;
 module scout_body() {
     difference() {
         intersection(){
-            translate([-scout_width/4,0,0])
-            util_ovoid(.25*scout_width, .75*scout_width, 2*scout_height, scout_height, scout_height, faces=faces_convex);
+            translate([-scout_width/2,0,0])
+            util_ovoid(.5*scout_width, .5*scout_width, 2*scout_height, scout_height, scout_height, faces=faces_convex);
 
             union() {
                 translate([-scout_width/2-10,0,-scout_width/2+.02])
@@ -46,23 +46,23 @@ module scout_secondary() {
 module scout_assembly(theta) {
     util_mirrored([0,1,0])
     rotate([-theta,0,0]) {
-        translate([-scout_width-scout_height/2,0,2*scout_height])
+        translate([-scout_width-scout_height/2,0,2.4*scout_height])
         rotate([theta,0,0])
         scout_nacelle();
 
 
         hull() {
-            translate([-scout_width+5,0,2*scout_height])
-            sphere(d=2);
+            translate([-scout_width*.75+5,0,2.4*scout_height])
+            sphere(d=3);
 
-            translate([-scout_width-5,0,2*scout_height])
-            sphere(d=2);
+            translate([-scout_width*.75-5,0,2.4*scout_height])
+            sphere(d=3);
 
-            translate([-scout_width/2,0,1.01])
-            sphere(d=2);
+            translate([-scout_width*.75+5,0,1.01])
+            sphere(d=3);
 
-            translate([-scout_width/2-40,0,1.01])
-            sphere(d=2);
+            translate([-scout_width*.75-5,0,1.01])
+            sphere(d=3);
         }
     }
 }
