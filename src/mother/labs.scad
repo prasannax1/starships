@@ -3,7 +3,7 @@ include <common.scad>;
 
 
 module labs(show_hole=false) {
-    util_repeat_rot(11, [0,0,360/12])
+    util_repeat_rot(5, [0,0,360/6])
     translate([scout_width+20,0,labs_height-.01]) disk_0();
 
     difference() {
