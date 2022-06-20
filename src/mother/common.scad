@@ -150,7 +150,7 @@ module disk_4() {
     
     
     translate([0,0, -15+.01])
-    cylinder(d2=hangar_width, d1=(command_width+scout_width)/2, $fn=faces_convex, h=30, center=true);
+    cylinder(d2=hangar_width, d1=(150+scout_width)/2, $fn=faces_convex, h=30, center=true);
     
     translate([0,0,-30+.01])
     mirror([0,0,1])

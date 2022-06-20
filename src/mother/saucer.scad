@@ -4,7 +4,11 @@ include <common.scad>;
 module saucer_plus() {
     disk_4();
 
-    util_repeat_rot(7, [0,0,360/8])
+    util_repeat_rot(23, [0,0,360/24])
+    translate([(labs_width+saucer_upper)/4, 0, saucer_height-.01])
+    disk_0();
+    
+    util_repeat_rot(2, [0,0,360/3])
     translate([(labs_width+saucer_upper)/4, 0, saucer_height-.01])
     disk_1();
 
@@ -14,7 +18,7 @@ module saucer_plus() {
 
 module saucer_minus() {
     util_repeat_rot(3, [0,0,90])
-    translate([-command_width/2, 0, -25])
+    translate([-150/2, 0, -25])
     cube([30,30, 8], center=true);
 }
 
