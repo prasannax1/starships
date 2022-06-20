@@ -106,11 +106,11 @@ module carr_bar() {
         
         difference() {
             cube([hangar_width*carrier_ratio, hangar_width*carrier_ratio, 10], center=true);
-            cylinder(d=hangar_width/2, h=30, center=true, $fn=faces_rough);
+            cylinder(d=hangar_width*carrier_ratio*1.2/2, h=30, center=true, $fn=faces_rough);
         }
         
         rotate_extrude(angle=360, $fn=faces_convex)
-        translate([hangar_width/4,0,0])
+        translate([hangar_width*carrier_ratio*1.2/4,0,0])
         circle(d=10, $fn=faces_rough);
     }
 }
@@ -180,6 +180,11 @@ module carr_body_minus() {
     
     translate([-carrier_length/2-hangar_width/2-20,0,1.6])
     cube([20,50,10], center=true);
+    
+    util_mirrored([0,1,0])
+    util_repeat(4, [0,0,-10])
+    translate([0,hangar_width/2+20,-20])
+    cube([carrier_length, 10, 5], center=true);
 }
 
 
