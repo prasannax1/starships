@@ -29,7 +29,8 @@ carrier_width=250;
 carrier_length=900;
 hangar_height=80;
 hangar_width=180;
-carrier_theta=60;
+carrier_theta=45;
+carrier_ratio=.6;
 
 module hex() {
     rotate(90)
@@ -198,7 +199,7 @@ module warp_base_pos() {
 module warp_top_pos() {
     translate([0,30,0]) 
     rotate([-carrier_theta,0,0]) 
-    translate([0,0,hangar_width*.8]) 
+    translate([0,0,hangar_width*carrier_ratio]) 
     rotate([carrier_theta,0,0])
     children();
 }
