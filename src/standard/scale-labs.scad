@@ -5,14 +5,14 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/labs.scad>;
+use <../mother/labs_medium.scad>;
 use <../mother/labs_full.scad>;
 use <odyssey.scad>;
 
 
-translate([0,0,-100])
+translate([0,0,-120])
 labs_full();
 
-labs();
+labs_medium();
 
 translate([200,0,150]) odyssey();

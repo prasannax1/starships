@@ -1,6 +1,8 @@
 use <../lib/util.scad>;
 include <common.scad>;
 
+use <command_engine.scad>;
+
 module command_body() {
     difference() {
         intersection() {
@@ -32,7 +34,7 @@ module command_body() {
     }
 
     translate([-.64*command_width,0,0])
-    scale([1,1,.5])
+    scale([1,1,.75])
     rotate([0,90,0])
     cylinder(d=command_height, h=command_width/4, center=true, $fn=faces_rough);
 
@@ -45,44 +47,20 @@ module command_body() {
     }
 }
 
-module command_nacelle() {
-    translate([0,0,5]) {
-        nacelle(10, 10, command_width);
+module command_assembly() {
+    translate([-.7*command_width,0,3])
+    cube([command_height, command_width/2, 2], center=true);
 
-        translate([command_width/3.5,0,5])
-        rotate([0,90,0])
-        cylinder(d=12.5, h=command_width/3, center=true, $fn=faces_convex);
-
-        translate([-command_width/2.5,0,5])
-        util_mirrored([0,1,0])
-        rotate([45,0,0])
-        translate([0,0,7.5/2])
-        cube([25, 1, 7.5], center=true);
-    }
+    util_mirrored([0,1,0])
+    translate([-.7*command_width,command_width/4-command_height/2,3])
+    mirror([0,0,1])
+    command_engine();
 }
 
-module command_assembly(theta) {
-    rotate([-theta,0,0]) {
-        hull() {
-            translate([-command_width*.8+10,0,command_height*2.4]) sphere(d=3);
-
-            translate([-command_width*.8-10,0,command_height*2.4]) sphere(d=3);
-
-            translate([-.64*command_width+20,0,0]) sphere(d=3);
-
-            translate([-.64*command_width-18,0,0]) sphere(d=3);
-        }
-
-        translate([-command_width*1.1,0,command_height*2.4])
-        rotate([theta,0,0])
-        command_nacelle();
-    }
-}
 
 module command_secondary() {
     command_body();
-
-    util_mirrored([0,1,0]) command_assembly(command_theta);
+    command_assembly();
 }
 
 command_secondary();

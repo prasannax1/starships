@@ -75,7 +75,7 @@ module disk_1() {
         cylinder(d1=bridge_width, d2=bridge_width*1.1, h=bridge_height, $fn=faces_concave, center=true);
         
         translate([-scout_width/2,0,0])
-        cube([50, 12-.02, 30], center=true);
+        cube([50, 6-.02, 30], center=true);
         
         
         translate([scout_width/2,0,.5*.75*scout_height])
@@ -208,6 +208,11 @@ module warp_pos() {
     warp_base_pos()
     warp_top_pos()
     translate([0,0,15-.01])
+    children();
+}
+
+module scout_pos() {
+    translate([50-.01,0,12.5]) 
     children();
 }
 
