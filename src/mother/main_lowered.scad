@@ -1,4 +1,4 @@
 use <main.scad>;
 
-translate([0,0,-200])
+translate([0,0,-250])
 main();
