@@ -8,7 +8,7 @@ module saucer_plus() {
 //    translate([(labs_width+saucer_upper)/4, 0, saucer_height-.01])
 //    disk_0();
     
-    util_repeat_rot(2, [0,0,360/3])
+    util_repeat_rot(3, [0,0,360/4])
     translate([(labs_width+saucer_upper)/4, 0, saucer_height-.01])
     disk_1();
 
