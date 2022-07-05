@@ -3,7 +3,7 @@ include <common.scad>;
 
 module warp_nacelle() {
     difference() {
-        scale([1,.64,1.5])
+        scale([1,.7,1.4])
         intersection() {
             rotate([0,90,0])
             rotate(90) {
@@ -15,11 +15,11 @@ module warp_nacelle() {
                 cylinder(d=scout_width, h=warp_length/2, center=true, $fn=6);
 
                 translate([0,0,-warp_length/4+.01])
-                cylinder(d2=scout_width, d1=scout_width*.75, h=warp_length/2, center=true, $fn=6);
+                cylinder(d2=scout_width, d1=scout_width*.5, h=warp_length/2, center=true, $fn=6);
 
                 translate([0,0,-warp_length/2+.02])
                 scale([1,1,2])
-                sphere(d=scout_width*.75, $fn=6);
+                sphere(d=scout_width*.5, $fn=6);
             }
 
             translate([0,0,.6*warp_length-.01])
@@ -32,10 +32,15 @@ module warp_nacelle() {
         cube(2*scout_width, center=true);
         
         util_mirrored([0,1,0]) {
-            translate([0,35, 20])
+            translate([0,37.5, 12.5])
             cube([warp_length, 40, 5], center=true);
-
-            translate([0,30, 40])
+            translate([0,35, 22.5])
+            cube([warp_length, 40, 5], center=true);
+            translate([0,32.5, 32.5])
+            cube([warp_length, 40, 5], center=true);
+            translate([0,30, 42.5])
+            cube([warp_length, 40, 5], center=true);
+            translate([0,27.5, 52.5])
             cube([warp_length, 40, 5], center=true);
         }
     }
