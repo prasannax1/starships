@@ -111,7 +111,6 @@ module disk_1() {
 }
 
 
-
 module disk_2() {
     disk_h = 10;
     
@@ -127,6 +126,8 @@ module disk_2() {
     rotate([0,90,0])
     rotate(90)
     cylinder(h=command_width/2, d=10, $fn=6, center=true);
+    
+    mirror([0,0,1]) disk_0();
 }
 
 

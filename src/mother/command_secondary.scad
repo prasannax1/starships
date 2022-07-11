@@ -59,8 +59,10 @@ module command_assembly() {
 
 
 module command_secondary() {
-    command_body();
-    command_assembly();
+    translate([-bridge_width,0,0]) {
+        command_body();
+        command_assembly();
+    }
 }
 
 command_secondary();
