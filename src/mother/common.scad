@@ -197,7 +197,7 @@ module warp_base_pos() {
 }
 
 module warp_top_pos() {
-    translate([0,30,0]) 
+    translate([-hangar_width/4,30,0]) 
     rotate([-carrier_theta,0,0]) 
     translate([0,0,hangar_width*carrier_ratio]) 
     rotate([carrier_theta,0,0])
