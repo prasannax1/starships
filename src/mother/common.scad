@@ -111,7 +111,6 @@ module disk_1() {
 }
 
 
-
 module disk_2() {
     disk_h = 10;
     
@@ -127,6 +126,8 @@ module disk_2() {
     rotate([0,90,0])
     rotate(90)
     cylinder(h=command_width/2, d=10, $fn=6, center=true);
+    
+    mirror([0,0,1]) disk_0();
 }
 
 
@@ -197,7 +198,7 @@ module warp_base_pos() {
 }
 
 module warp_top_pos() {
-    translate([0,30,0]) 
+    translate([-hangar_width/4,30,0]) 
     rotate([-carrier_theta,0,0]) 
     translate([0,0,hangar_width*carrier_ratio]) 
     rotate([carrier_theta,0,0])

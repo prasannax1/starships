@@ -1,21 +1,46 @@
-/*
-The other components in this file are STLs I downloaded
-off the internet and scaled so that 1 pt = 1 meter.
+module main() {
+    import("d:/github/shareStuff/main.stl", 10);
+}
 
-Other files not included in source code.
-*/
+module escort(carrier_attached = false) {
+    import("d:/github/shareStuff/escort.stl", 10);
+}
 
-use <../mother/main.scad>;
-use <../mother/scout_full.scad>;
-use <../mother/scout_simple.scad>;
-use <../mother/command.scad>;
-use <../mother/command_simple.scad>;
-use <../mother/command_medium.scad>;
-use <../mother/labs.scad>;
-use <../mother/saucer.scad>;
-use <../mother/carrier.scad>;
-use <../mother/escort.scad>;
-use <../mother/warp.scad>;
+module scout_simple() {
+    import("d:/github/shareStuff/scout_simple.stl", 10);
+}
+
+module scout_full() {
+    import("d:/github/shareStuff/scout_full.stl", 10);
+}
+
+module command_simple() {
+    import("d:/github/shareStuff/command_simple.stl", 10);
+}
+
+module command_medium() {
+    import("d:/github/shareStuff/command_medium.stl", 10);
+}
+
+module command() {
+    import("d:/github/shareStuff/command_full.stl", 10);
+}
+
+module labs() {
+    import("d:/github/shareStuff/labs_medium.stl", 10);
+}
+
+module carrier() {
+    import("d:/github/shareStuff/carrier.stl", 10);
+}
+
+module warp() {
+    import("d:/github/shareStuff/warp.stl", 10);
+}
+
+module saucer() {
+    import("d:/github/shareStuff/saucer.stl", 10);
+}
 
 translate([-400,0,-500]) main();
 

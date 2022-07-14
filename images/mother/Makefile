@@ -23,7 +23,7 @@ $(IMG):
 	bash ../../bin/render.sh \
 	    -i ../../src/mother/$(basename $(notdir $@)).scad \
 	    -p $@ \
-	    -t Tomorrow \
+	    -t Sunset \
 
 escort.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/escort.scad

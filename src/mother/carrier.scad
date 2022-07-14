@@ -125,12 +125,14 @@ module carr_bar_box(length) {
 
 module carr_assembly(theta) {
     translate([0,30,0]) {
+        translate([-hangar_width/4,0,0])
         rotate([-theta,0,0]) {
             carr_bar();
             translate([0,0,hangar_width*carrier_ratio]) 
             rotate([theta,0,0]) carr_bar_box(hangar_width*carrier_ratio/2);
         }
 
+        translate([-hangar_width/4,0,0])
         carr_bar_box(hangar_width*carrier_ratio/2);
         translate([0,-30+.01,0]) carr_bar_box(hangar_width);
     }
