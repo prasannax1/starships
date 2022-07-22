@@ -17,18 +17,21 @@ module command_nacelle() {
     }
 }
 
-module command_engine() {
-    difference() {
-        util_ovoid(command_height, command_height, command_height, 1, command_height*1.25, faces=faces_convex);
-            
-        translate([command_height*1,0,-command_height/3])
-        sphere(d=command_height/3, $fn=faces_concave);
-    }
+module command_neck(theta, ratio) {
+    rotate([-theta,0,0])
+    translate([0,0,-.01])
+    linear_extrude(height=command_height*ratio, convexity=10, scale=[2,1])
+    circle(d=command_height, $fn=faces_convex);
+}
 
-    translate([-command_width*.36,0,-command_height*1.5])
+module command_engine(theta) {
+    command_neck(theta, 2);
+
+    translate([0,0,-command_height*.75])
+    rotate([-theta,0,0])
+    translate([-command_width/2+command_height*1.5,0,command_height*2])
+    rotate([theta,0,0])
     command_nacelle();
 }
 
-
-
-command_engine();
+command_engine(180);

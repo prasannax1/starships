@@ -51,7 +51,7 @@ translate([-250,0,500]) scout_full();
 
 translate([0,0,400]) command_simple();
 translate([-320,0,400]) command_medium();
-translate([-600,0,400]) command();
+translate([-750,0,400]) command();
 
 translate([0,0,280]) labs();
 
