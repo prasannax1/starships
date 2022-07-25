@@ -11,11 +11,12 @@ use <../mother/command_medium.scad>;
 use <excelsior.scad>;
 use <constitution-refit.scad>;
 
+translate([50,0,100]) excelsior();
 
 translate([0,0,0]) command();
 
-translate([0,0,100]) command_simple();
+translate([-180,0,-100]) command_simple();
 
-translate([0,0,160]) command_medium();
+translate([-360,0,0]) command_medium();
 
-translate([75,0,-60]) constitution_refit();
+translate([-360,0,100]) constitution_refit();
