@@ -7,6 +7,7 @@ module command_body_basic() {
     difference() {
         intersection() {
             translate([0,0,command_width*.75])
+            scale([1,1,1])
             rotate([90,0,0])
             rotate_extrude(angle=360, convexity=10, $fn=faces_concave) {
                 translate([command_width,0,0])
@@ -40,7 +41,15 @@ module command_body_basic() {
         rotate([0,90,0])
         cylinder(d2=command_height*1.8, d1=command_height*.5, h=command_height*2.5, center=true, $fn=faces_concave);
     }
+    
+    translate([0,0,-command_height*2+2.5])
+    util_mirrored([0,1,0])
+    translate([0,command_height*.75,0])
+    linear_extrude(height=5, convexity=10, scale=[1.2,1])
+    square([command_width, command_height], center=true);
 }
+
+
 
 module command_hangar() {
     difference() {
