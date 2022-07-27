@@ -2,21 +2,22 @@ use <../lib/util.scad>;
 
 faces_rough=32;
 faces_convex=64;
-faces_concave=100;
+faces_concave=128;
 
 saucer_width=750;
 saucer_upper=640;
 saucer_height=50;
 
 labs_width=400;
-labs_height=30;
+labs_height=40;
 
 command_width=180;
-command_height=20;
+command_height=15;
+command_body_width=50;
 command_theta=75;
 
 scout_width=100;
-scout_height=10;
+scout_height=15;
 scout_theta=45;
 
 bridge_width=32;
@@ -68,72 +69,97 @@ module disk_0() {
 }
 
 module disk_1() {
+    translate([0,0,1.5])
+    cylinder(d=scout_width, h=3, center=true, $fn=faces_convex);
+    
     difference() {
-        semi(scout_width, scout_height, faces_convex);
-        
-        translate([0,0,scout_height-bridge_height/2])
-        cylinder(d1=bridge_width, d2=bridge_width*1.1, h=bridge_height, $fn=faces_concave, center=true);
-        
-        translate([-scout_width/2,0,0])
-        cube([50, 6-.02, 30], center=true);
+        translate([0,0,scout_height/2])
+        cylinder(h=scout_height+.02, d1=scout_width-10, d2=bridge_width+10, $fn=faces_convex, center=true);
         
         
-        translate([scout_width/2,0,.5*.75*scout_height])
-        cube([7.5,18,6.4], center=true);
+        translate([0,0,scout_height])
+        cylinder(d2=bridge_width+18, d1=bridge_width-1, h=bridge_height*2, center=true, $fn=faces_concave);
     }
     
-    translate([0,0,scout_height-bridge_height-.01])
+    translate([0,0,scout_height-bridge_height-.1])
     disk_0();
     
-    util_mirrored([0,1,0])
-    translate([-scout_width/4, 12, 3.6])
-    scale([1,2,1])
-    rotate([0,90,0])
-    rotate(90)
-    cylinder(d=6, h=scout_width/2, $fn=6, center=true);
-    
+    disk_1_hangar();
+    disk_1_impulse();
+}
+
+module disk_1_hangar() {
     difference() {
         intersection() {
-            scale([1,1,.4])
-            sphere(d=scout_width, $fn=faces_concave);
+            translate([scout_width/4,0,0])
+            union() {
+                translate([0,0,5])
+                cube([scout_width/2, scout_width/6-6, 10], center=true);
 
-            scale([1,1,.75])
-            rotate([0,90,0])
-            cylinder(d=30, h=scout_width, $fn=faces_convex, center=true);
+                translate([0,0,3.5])
+                cube([scout_width/2, scout_width/6, 7], center=true);
 
-            translate([scout_width/2,0,.5*.75*scout_height])
-            cube([scout_width, 25, .75*scout_height], center=true);
+                util_mirrored([0,1,0])
+                translate([0,scout_width/12-3, 10-3])
+                rotate([0,90,0])
+                cylinder(r=3, h=scout_width/2, center=true, $fn=faces_rough);
+            }
+
+            cylinder(h=2.5*scout_height, d1=scout_width+2*scout_height, d2=scout_width-2*scout_height, $fn=faces_convex, center=true);
         }
         
-        translate([scout_width/2,0,.5*.75*scout_height])
-        cube([7.5,18,6.4], center=true);
+        translate([scout_width/2,0,0])
+        cube([scout_height, scout_width/6-4, 18], center=true);
     }
 }
 
+module disk_1_impulse() {
+    hull()
+    util_mirrored([0,1,0])
+    translate([0,scout_height/2,0])
+    scale([1,3,1])
+    translate([-scout_width/4, 0, scout_height/2])
+    rotate([0,90,0])
+    cylinder(h=scout_width/2, d=scout_height/2, center=true, $fn=6);
+}
 
-module disk_2() {
-    disk_h = 10;
+
+module disk_2(standalone=false) {
+    disk_h = 9;
     
-    translate([0,0,disk_h-.01]) disk_1();
+    if (standalone == false) {
+        translate([0,0,disk_h-.01]) disk_1();
+    }
     
     translate([0,0,disk_h/2])
     cylinder(d1=command_width, d2=command_width-2*disk_h, h=disk_h, $fn=faces_convex, center=true);
     
     hull()
     util_mirrored([0,1,0])
-    translate([-command_width/4, 20, 5])
+    translate([-command_width*.44, 20, disk_h/2])
     scale([1,2,1])
     rotate([0,90,0])
     rotate(90)
-    cylinder(h=command_width/2, d=10, $fn=6, center=true);
+    cylinder(h=command_width/8, d=10, $fn=6, center=true);
     
+    translate([0,0,-3+.01])
+    cylinder(d2=50, d1=bridge_width+4, h=6, $fn=faces_convex, center=true);
+    
+    translate([0,0,-6+.02])
     mirror([0,0,1]) disk_0();
 }
 
-
 module disk_3(show_hole=false) {
     difference() {
-        disk(labs_width, labs_height, faces_convex, 3);
+        union() {
+            util_mirrored([0,0,1])
+            translate([0,0,labs_height/4-.01])
+            cylinder(d1=labs_width, d2=labs_width-labs_height*2, h=labs_height/2, center=true, $fn=faces_convex);
+            
+            translate([-labs_width*.35,0,0])
+            linear_extrude(height=labs_height/2, convexity=10, scale=[.8,1])
+            square([labs_width*.7, command_body_width], center=true);
+        }
         
         if (show_hole == true) {
             cylinder(d=50, h=3*labs_height, center=true,$fn=faces_concave);
@@ -141,15 +167,21 @@ module disk_3(show_hole=false) {
     }
 }    
 
-module disk_4() {
-    hull() {
-        translate([0,0,2])
-        cylinder(h=4, d=saucer_width, $fn=faces_concave*2, center=true);
+module disk_4(show_holes=false) {
+    difference() {
+        hull() {
+            translate([0,0,2])
+            cylinder(h=4, d=saucer_width, $fn=faces_concave*2, center=true);
+            
+            translate([0,0,saucer_height/2])
+            cylinder(h=saucer_height+.02, d=saucer_upper, $fn=faces_concave*2, center=true);
+        }
         
-        translate([0,0,saucer_height/2])
-        cylinder(h=saucer_height+.02, d=saucer_upper, $fn=faces_concave*2, center=true);
+        if (show_holes == true) {
+            translate([0,0,saucer_height])
+            cylinder(d2=labs_width+labs_height*2, d1=labs_width-labs_height*2, h=labs_height, center=true, $fn=faces_convex);
+        }
     }
-    
     
     translate([0,0, -15+.01])
     cylinder(d2=hangar_width, d1=(150+scout_width)/2, $fn=faces_convex, h=30, center=true);
@@ -213,7 +245,7 @@ module warp_pos() {
 }
 
 module scout_pos() {
-    translate([50-.01,0,12.5]) 
+    translate([25-.01,0,1.5]) 
     children();
 }
 
@@ -230,7 +262,7 @@ module labs_pos() {
 
 module command_pos() {
     labs_pos()
-    translate([0,0,labs_height-.01])
+    translate([0,0,labs_height/2-.01])
     children();
 }
 

@@ -7,8 +7,8 @@ module command_medium() {
     disk_2();
 
     util_mirrored([0,1,0])
-    translate([-command_width/4, command_width/4, -scout_height])
-    scout_engine();
+    translate([-command_width/4, command_width/4, 1.5])
+    scout_engine(120);
 }
 
 command_medium();

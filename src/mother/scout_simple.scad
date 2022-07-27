@@ -6,8 +6,8 @@ use <scout_engine.scad>;
 
 module scout_simple() {
     scout_saucer();
-    translate([-25,0,-3])
-    scout_engine();
+    translate([-25,0,9])
+    scout_engine(180);
 }
 
 scout_simple();
