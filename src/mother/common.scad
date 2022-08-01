@@ -70,7 +70,7 @@ module disk_0() {
 
 module disk_1() {
     translate([0,0,1.5])
-    cylinder(d=scout_width, h=3, center=true, $fn=faces_convex);
+    cylinder(d1=scout_width, d2=scout_width-6, h=3, center=true, $fn=faces_convex);
     
     difference() {
         translate([0,0,scout_height/2])
@@ -116,7 +116,7 @@ module disk_1_hangar() {
 module disk_1_impulse() {
     hull()
     util_mirrored([0,1,0])
-    translate([0,scout_height/2,0])
+    translate([0,scout_height/4,0])
     scale([1,3,1])
     translate([-scout_width/4, 0, scout_height/2])
     rotate([0,90,0])
@@ -125,18 +125,26 @@ module disk_1_impulse() {
 
 
 module disk_2(standalone=false) {
-    disk_h = 9;
+    disk_h = 6;
+    disk_h2 = 3;
     
     if (standalone == false) {
-        translate([0,0,disk_h-.01]) disk_1();
+        translate([0,0,disk_h+disk_h2-.01]) disk_1();
     }
     
     translate([0,0,disk_h/2])
-    cylinder(d1=command_width, d2=command_width-2*disk_h, h=disk_h, $fn=faces_convex, center=true);
+    cylinder(d1=command_width, d2=command_width-2.5*disk_h, h=disk_h, $fn=faces_convex, center=true);
     
+    translate([0,0,disk_h + (disk_h2+3)/2-.01])
+    difference() {
+        cylinder(d1=command_width-2.5*disk_h, d2=scout_width+6, h=disk_h2+3, $fn=faces_convex, center=true);
+    
+        translate([0,0,1.51])
+        cylinder(d1=scout_width, d2=scout_width+6, h=3, center=true, $fn=faces_concave);
+    }
     hull()
     util_mirrored([0,1,0])
-    translate([-command_width*.44, 20, disk_h/2])
+    translate([-command_width*.44, 20, 5])
     scale([1,2,1])
     rotate([0,90,0])
     rotate(90)
