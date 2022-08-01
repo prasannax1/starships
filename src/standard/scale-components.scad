@@ -1,45 +1,45 @@
 module main() {
-    import("d:/github/shareStuff/main.stl", 10);
+    import("../../../shareStuff/main.stl", 10);
 }
 
 module escort(carrier_attached = false) {
-    import("d:/github/shareStuff/escort.stl", 10);
+    import("../../../shareStuff/escort.stl", 10);
 }
 
 module scout_simple() {
-    import("d:/github/shareStuff/scout_simple.stl", 10);
+    import("../../../shareStuff/scout_simple.stl", 10);
 }
 
 module scout_full() {
-    import("d:/github/shareStuff/scout_full.stl", 10);
+    import("../../../shareStuff/scout_full.stl", 10);
 }
 
 module command_simple() {
-    import("d:/github/shareStuff/command_simple.stl", 10);
+    import("../../../shareStuff/command_simple.stl", 10);
 }
 
 module command_medium() {
-    import("d:/github/shareStuff/command_medium.stl", 10);
+    import("../../../shareStuff/command_medium.stl", 10);
 }
 
 module command() {
-    import("d:/github/shareStuff/command_full.stl", 10);
+    import("../../../shareStuff/command_full.stl", 10);
 }
 
 module labs() {
-    import("d:/github/shareStuff/labs_medium.stl", 10);
+    import("../../../shareStuff/labs_medium.stl", 10);
 }
 
 module carrier() {
-    import("d:/github/shareStuff/carrier.stl", 10);
+    import("../../../shareStuff/carrier.stl", 10);
 }
 
 module warp() {
-    import("d:/github/shareStuff/warp.stl", 10);
+    import("../../../shareStuff/warp.stl", 10);
 }
 
 module saucer() {
-    import("d:/github/shareStuff/saucer.stl", 10);
+    import("../../../shareStuff/saucer.stl", 10);
 }
 
 translate([-400,0,-500]) main();
