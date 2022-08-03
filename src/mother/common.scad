@@ -5,7 +5,7 @@ faces_convex=64;
 faces_concave=128;
 
 saucer_width=750;
-saucer_upper=640;
+saucer_upper=600;
 saucer_height=50;
 
 labs_width=400;
@@ -70,11 +70,19 @@ module disk_0() {
 
 module disk_1() {
     translate([0,0,1.5])
-    cylinder(d1=scout_width, d2=scout_width-6, h=3, center=true, $fn=faces_convex);
+    cylinder(d2=scout_width, d1=scout_width-6, h=3, center=true, $fn=faces_convex);
+    
+    difference() {
+        translate([0,0,4.5-.1])
+        cylinder(d1=scout_width, d2=bridge_width+18, h=3, center=true, $fn=faces_convex);
+        
+        translate([scout_width/2-10,0,0])
+        cube([scout_height*2, scout_width/6-4, 18], center=true);
+    }
     
     difference() {
         translate([0,0,scout_height/2])
-        cylinder(h=scout_height+.02, d1=scout_width-10, d2=bridge_width+10, $fn=faces_convex, center=true);
+        cylinder(h=scout_height+.02, d1=scout_width-20, d2=bridge_width+10, $fn=faces_convex, center=true);
         
         
         translate([0,0,scout_height])
@@ -84,6 +92,7 @@ module disk_1() {
     translate([0,0,scout_height-bridge_height-.1])
     disk_0();
     
+    translate([-3,0,0])
     disk_1_hangar();
     disk_1_impulse();
 }
@@ -270,7 +279,7 @@ module labs_pos() {
 
 module command_pos() {
     labs_pos()
-    translate([0,0,labs_height/2-.01])
+    translate([0,0,labs_height/2-.05])
     children();
 }
 

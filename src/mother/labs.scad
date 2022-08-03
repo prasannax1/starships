@@ -9,12 +9,12 @@ module labs(show_hole=false) {
     difference() {
         disk_3(show_hole);
 
-        util_repeat_rot(2, [0,0,-160])
-        rotate(160)
-        translate([labs_width/2,0,labs_height/4])
-        cube([75,50,18], center=true);
+        translate([-labs_width*.695, 0, 10])
+        cube([50,40,15], center=true);
     }
 }
+
+
 
 labs(show_hole=true);
 
