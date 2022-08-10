@@ -25,11 +25,11 @@ module command_neck(theta, ratio) {
 }
 
 module command_engine(theta) {
-    command_neck(theta, 2);
+    command_neck(theta, 1.5);
 
     translate([0,0,-command_height*.75])
     rotate([-theta,0,0])
-    translate([-command_width*.64+command_height*1.5,0,command_height*2])
+    translate([-command_width*.64+command_height*1.5,0,command_height*1.5])
     rotate([theta,0,0])
     command_nacelle();
 }

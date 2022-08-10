@@ -3,6 +3,15 @@ include <common.scad>;
 
 module escort_plus() {
     disk_1();
+    
+    difference() {
+        translate([0,0,3])
+        scale([1,1,.25])
+        sphere(d=scout_width-1.2*bridge_width, $fn=faces_rough);
+        
+        translate([0,0,-scout_width/2+1.5])
+        cube(scout_width, center=true);
+    }
 }
 
 module escort_minus() {
@@ -26,9 +35,9 @@ module escort_minus() {
 module escort_assembly() {
     util_mirrored([0,1,0])
     {
-        translate([-scout_width/2-scout_height/2-1,scout_width/2-10,scout_height-3])
+        translate([-scout_width/2-scout_height/2,scout_width/2-7.5,scout_height-9])
         rotate([60,0,0])
-        nacelle(scout_height,scout_height,scout_width);
+        nacelle(scout_height/2,scout_height/2,scout_width);
 
         translate([-11,3/8*scout_width, 2])
         cube([25,15,2],center=true);

@@ -7,7 +7,7 @@ use <command_engine.scad>;
 module command_simple() {
     disk_2();
 
-    translate([-command_width/2+command_height,0,0])
+    translate([-command_width/2+command_height*1.5,0,0])
     command_engine(180);
 }
 

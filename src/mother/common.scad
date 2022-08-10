@@ -20,7 +20,7 @@ scout_width=100;
 scout_height=15;
 scout_theta=45;
 
-bridge_width=32;
+bridge_width=18;
 bridge_height=4;
 
 warp_length=900;
@@ -68,22 +68,28 @@ module disk_0() {
     disk(bridge_width, bridge_height, faces_rough, 2.8);
 }
 
-module disk_1() {
-    translate([0,0,1.5])
-    cylinder(d2=scout_width, d1=scout_width-6, h=3, center=true, $fn=faces_convex);
-    
+module disk_1_base() {
+    translate([0,0,scout_height/2-.01])
+    mirror([0,0,1])
+    rotate_extrude(angle=360, convexity=10, $fn=faces_convex)
     difference() {
-        translate([0,0,4.5-.1])
-        cylinder(d1=scout_width, d2=bridge_width+18, h=3, center=true, $fn=faces_convex);
+        translate([scout_width/4, 0,0])
+        square([scout_width/2, scout_height],center=true);
+
+        translate([scout_width/2, scout_height/2-3,0])
+        rotate(45)
+        translate([scout_width/4,0,0])
+        square(scout_width/2, center=true);
         
-        translate([scout_width/2-10,0,0])
-        cube([scout_height*2, scout_width/6-4, 18], center=true);
+        translate([scout_width/2, -scout_height/2,0])
+        scale([(scout_width/2-bridge_width/2-5)/(scout_height-3),1,1])
+        circle(r=scout_height-3, $fn=faces_concave);
     }
-    
+}
+
+module disk_1() {
     difference() {
-        translate([0,0,scout_height/2])
-        cylinder(h=scout_height+.02, d1=scout_width-20, d2=bridge_width+10, $fn=faces_convex, center=true);
-        
+        disk_1_base();        
         
         translate([0,0,scout_height])
         cylinder(d2=bridge_width+18, d1=bridge_width-1, h=bridge_height*2, center=true, $fn=faces_concave);
@@ -126,12 +132,11 @@ module disk_1_impulse() {
     hull()
     util_mirrored([0,1,0])
     translate([0,scout_height/4,0])
-    scale([1,3,1])
     translate([-scout_width/4, 0, scout_height/2])
+    scale([1,3,.75])
     rotate([0,90,0])
     cylinder(h=scout_width/2, d=scout_height/2, center=true, $fn=6);
 }
-
 
 module disk_2(standalone=false) {
     disk_h = 6;
