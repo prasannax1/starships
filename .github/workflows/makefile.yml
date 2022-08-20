@@ -33,7 +33,6 @@ jobs:
     - name: build stls
       run: |
         cd stls/generated
-        Xvfb :5 -screen 0 800x600x24 &
         export DISPLAY=:5
         make
         cd -
