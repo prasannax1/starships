@@ -14,9 +14,9 @@ module command_body_plus() {
                 rotate([0,90,0])
                 sphere(d=command_body_width, $fn=faces_convex);
 
-                rotate([0,90,0])
-                translate([0,0,-command_width/4])
-                cylinder(d=command_body_width, h=command_width/2, center=true, $fn=faces_convex);
+//                rotate([0,90,0])
+//                translate([0,0,-command_width/4])
+//                cylinder(d=command_body_width, h=command_width/2, center=true, $fn=faces_convex);
     //
     //            rotate([0,90,0])
     //            translate([0,0,-command_width/2])
