@@ -41,8 +41,16 @@ module command_body_plus() {
     translate([-command_width/4-command_height,0,-3])
     linear_extrude(height=15, convexity=10, scale=[.75,.5])
     translate([-command_width*.8/4,0,0])
-    square([command_width*.8, command_body_width*.75], center=true);
+    intersection() {
+        square([command_width*.8, command_body_width*.75], center=true);
+
+        scale([command_width*1.5/command_body_width*1.5,1,1])
+        rotate(180)
+        circle(d=command_body_width, $fn=3);
+    }
 }
+
+
 
 module command_body_minus() {
     translate([command_body_width, 0, -command_body_width/4+5])
