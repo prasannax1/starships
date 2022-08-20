@@ -15,7 +15,7 @@ MOTHERSTL += labs_medium.stl
 MOTHERSTL += carrier.stl 
 MOTHERSTL += main.stl 
 MOTHERSTL += main_lowered.stl 
-MOTHERSTL += scale_components.stl 
+#MOTHERSTL += scale_components.stl 
 MOTHERSTL += warp.stl
 
 $(MOTHERSTL):
@@ -44,7 +44,7 @@ $(SMALLSTL):
 	    -i ../../src/small/$(basename $(notdir $@)).scad \
 	    -o $@ 
 		
-all: $(MOTHERSTL) $(SMALLSTL)		
+all: $(MOTHERSTL) $(SMALLSTL) scale_components.stl
 
 attack-primary.stl: ../../src/lib/util.scad ../../src/small/attack-primary.scad
 
