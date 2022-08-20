@@ -14,8 +14,9 @@ module saucer_plus(labs_attached=true) {
     
     util_mirrored([0,1,0])
     util_repeat_rot(1, [0,0,-360/16])
-    rotate(160)
-    translate([(labs_width+saucer_upper)/4, 0, saucer_height-.01])
+    rotate(100)
+    translate([(labs_width+saucer_upper)/4+4, 0, saucer_height-.01])
+    rotate(180)
     disk_1();
 
     translate([0,0,saucer_height-labs_height/2-.01]) disk_0();

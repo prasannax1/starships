@@ -1,18 +1,31 @@
 use <../lib/util.scad>;
 include <common.scad>;
+use <scout_engine.scad>;
 
 module escort_plus() {
     disk_1();
     
+    escort_ribbed_cylinder();
+}
+
+module escort_ribbed_cylinder() {
+    rotate_extrude(angle = 360, convexity=10, $fn=faces_convex)
     difference() {
-        translate([0,0,3])
-        scale([1,1,.25])
-        sphere(d=scout_width-1.2*bridge_width, $fn=faces_rough);
+        translate([(scout_width-bridge_width)/4, (scout_height-bridge_height)/2,0])
+        square([(scout_width-bridge_width)/2, scout_height-bridge_height], center=true);
+
+        translate([(scout_width-bridge_width)/2,0,0])
+        rotate(45)
+        translate([2*scout_height,0,0])
+        square(4*scout_height, center=true);
         
-        translate([0,0,-scout_width/2+1.5])
-        cube(scout_width, center=true);
+        util_repeat(15, [-.5,.5,0])
+        translate([(scout_width-bridge_width)/2-1.5,1.5,0])
+        square([5,.25],center=true);
     }
 }
+
+
 
 module escort_minus() {
     
@@ -27,23 +40,21 @@ module escort_minus() {
     }
     
     util_mirrored([0,1,0])
-    translate([0,3/8*scout_width,0])
+    translate([0,3/8*scout_width-5,0])
     translate([-25,25/2,0])
     cube([50,25,25], center=true);
+    
+    translate([scout_width/2,0,0])
+    cube(bridge_width, center=true);
 }
+
 
 module escort_assembly() {
     util_mirrored([0,1,0])
     {
-        translate([-scout_width/2-scout_height/2,scout_width/2-7.5,scout_height-9])
-        rotate([60,0,0])
-        nacelle(scout_height/2,scout_height/2,scout_width);
-
-        translate([-11,3/8*scout_width, 2])
-        cube([25,15,2],center=true);
+        translate([-scout_height/2,scout_width/4-10,1])
+        scout_engine(60);
     }
-    
-
 }
 
 
@@ -55,13 +66,6 @@ module escort(carrier_attached=true) {
     }
     
     escort_assembly();
-    
-    if (carrier_attached == true) {
-        util_mirrored([0,1,0])
-        translate([-scout_width/2-scout_height/2-1,scout_width/2-2,0])
-        rotate([0,90,0])
-        cylinder(d=scout_height, h=scout_width+2, center=true);
-    }
 }
 
 escort(carrier_attached=false);

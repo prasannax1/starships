@@ -5,7 +5,7 @@ use <command_secondary.scad>;
 use <scout_simple.scad>;
 
 module command() {
-    translate([1*command_width, 0, -command_height/2-.01])
+    translate([.5*command_width, 0, -.01])
     disk_2();
     command_secondary();
 }

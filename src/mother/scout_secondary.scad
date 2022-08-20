@@ -18,12 +18,9 @@ module scout_body() {
                 translate([-scout_width, 0, -scout_width])
                 cube(2*scout_width, center=true);
                 
-                translate([-25+5,0,0])
-                rotate([0,-45,0])
-                translate([-scout_width,0,0])
-                cube(2*scout_width, center=true);
 
-                translate([-25,0,0])
+
+                translate([-20,0,0])
                 translate([-scout_width,0,0])
                 cube(2*scout_width, center=true);
             }
@@ -64,7 +61,7 @@ module scout_secondary() {
     scout_body();
 
     util_mirrored([0,1,0])
-    translate([-scout_width+scout_height*3.3,4,4])
+    translate([-scout_width+scout_height*4,4,4])
     scout_engine(scout_theta);
 }
 

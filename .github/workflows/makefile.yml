@@ -23,7 +23,7 @@ jobs:
       run: |
         sudo apt install -y xvfb imagemagick openscad;
       
-    - name: build images
+    - name: build images and stls
       run: |
         Xvfb :5 -screen 0 800x600x24 &
         export DISPLAY=:5
