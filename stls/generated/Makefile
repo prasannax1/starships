@@ -1,5 +1,3 @@
-all: $(MOTHERSTL) $(SMALLSTL) scale_components.stl
-
 MOTHERSTL += escort.stl
 MOTHERSTL += scout.stl
 MOTHERSTL += command.stl
@@ -19,12 +17,6 @@ MOTHERSTL += main.stl
 MOTHERSTL += main_lowered.stl
 MOTHERSTL += warp.stl
 
-$(MOTHERSTL):
-	bash ../../bin/render.sh \
-	    -i ../../src/mother/$(basename $(notdir $@)).scad \
-	    -o $@
-
-
 SMALLSTL += attack-primary.stl
 SMALLSTL += attack.stl
 SMALLSTL += attack-secondary.stl
@@ -39,6 +31,14 @@ SMALLSTL += shuttlepod.stl
 SMALLSTL += shuttle-small.stl
 SMALLSTL += tactical-runabout.stl
 SMALLSTL += yacht.stl
+
+all: $(MOTHERSTL) $(SMALLSTL) scale_components.stl
+
+$(MOTHERSTL):
+	bash ../../bin/render.sh \
+	    -i ../../src/mother/$(basename $(notdir $@)).scad \
+	    -o $@
+
 
 $(SMALLSTL):
 	bash ../../bin/render.sh \
