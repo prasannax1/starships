@@ -3,9 +3,11 @@ MOTHERSTL += scout.stl
 MOTHERSTL += command.stl
 MOTHERSTL += saucer.stl
 MOTHERSTL += scout_full.stl
+MOTHERSTL += scout_secondary.stl
 MOTHERSTL += scout_simple.stl
 MOTHERSTL += scout_engine.stl
 MOTHERSTL += command_full.stl
+MOTHERSTL += command_secondary.stl
 MOTHERSTL += command_engine.stl
 MOTHERSTL += command_medium.stl
 MOTHERSTL += command_simple.stl
@@ -99,6 +101,12 @@ scout.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
 command.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/command.scad
 
+scout_secondary.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
+    ../../src/mother/scout_secondary.scad
+
+
+command-secondary.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
+    ../../src/mother/command_secondary.scad
 
 labs.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
     ../../src/mother/labs.scad
