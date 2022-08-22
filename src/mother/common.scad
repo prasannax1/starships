@@ -294,10 +294,10 @@ module disk_3_basic() {
     intersection() {
         union() {
             disk_3_round();
-            disk_3_straight(labs_width/2+labs_height*2);
+            disk_3_straight(saucer_width/2-labs_height);
         }
         
-        translate([-labs_width/2-labs_height,0,0])
+        translate([-saucer_width/2+labs_height*2,0,0])
         rotate([0,45,0])
         translate([labs_width,0,0])
         cube(2*labs_width, center=true);
