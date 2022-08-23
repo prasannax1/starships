@@ -39,7 +39,6 @@ jobs:
       run: |
         export DISPLAY=:5
         cd stls/generated
-        rm *.stl
         make
         cd -
         
