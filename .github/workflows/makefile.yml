@@ -39,7 +39,7 @@ jobs:
       run: |
         export DISPLAY=:5
         cd stls/generated
-        make
+        make -B
         cd -
         
     - name: commit changes and push
