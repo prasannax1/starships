@@ -30,13 +30,16 @@ jobs:
       
     - name: build images
       run: |
+        export DISPLAY=:5
         cd images
         make
         cd -
                
     - name: build stls
       run: |
+        export DISPLAY=:5
         cd stls/generated
+        rm *.stl
         make
         cd -
         
