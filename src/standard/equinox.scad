@@ -1,5 +1,5 @@
 module equinox() {
-    import("../../../shareStuff/equinox.stl", 10);
+    import("../../stls/standard/equinox.stl", 10);
 }
 
 equinox();

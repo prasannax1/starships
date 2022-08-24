@@ -1,5 +1,5 @@
 module constitution_refit() {
-    import("../../../shareStuff/constitution-refit.stl", 10);
+    import("../../stls/standard/constitution-refit.stl", 10);
 }
 
 constitution_refit();

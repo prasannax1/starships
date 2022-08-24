@@ -1,5 +1,5 @@
 module constitution() {
-    import("../../../shareStuff/constitution.stl", 10);
+    import("../../stls/standard/constitution.stl", 10);
 }
 
 constitution();

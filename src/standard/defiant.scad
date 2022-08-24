@@ -1,5 +1,5 @@
 module defiant() {
-    import("../../../shareStuff/defiant.stl", 10);
+    import("../../stls/standard/defiant.stl", 10);
 }
 
 defiant();

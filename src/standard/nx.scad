@@ -1,5 +1,5 @@
 module nx() {
-    import("../../../shareStuff/nx.stl", 10);
+    import("../../stls/standard/nx.stl", 10);
 }
 
 nx();

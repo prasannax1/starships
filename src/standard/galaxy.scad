@@ -1,5 +1,5 @@
 module galaxy() {
-    import("../../../shareStuff/galaxy.stl", 10);
+    import("../../stls/standard/galaxy.stl", 10);
 }
 
 galaxy();

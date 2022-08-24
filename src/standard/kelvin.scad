@@ -1,5 +1,5 @@
 module kelvin() {
-    import("../../../shareStuff/kelvin.stl", 10);
+    import("../../stls/standard/kelvin.stl", 10);
 }
 
 kelvin();

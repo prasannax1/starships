@@ -1,5 +1,5 @@
 module vengeance() {
-    import("../../../shareStuff/vengeance.stl", 10);
+    import("../../stls/standard/vengeance.stl", 10);
 }
 
 vengeance();
