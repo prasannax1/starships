@@ -1,45 +1,45 @@
 module main() {
-    import("../../../shareStuff/main.stl", 10);
+    import("../../stls/generated/main.stl", 10);
 }
 
 module escort(carrier_attached = false) {
-    import("../../../shareStuff/escort.stl", 10);
+    import("../../stls/generated/escort.stl", 10);
 }
 
 module scout_simple() {
-    import("../../../shareStuff/scout_simple.stl", 10);
+    import("../../stls/generated/scout_simple.stl", 10);
 }
 
 module scout_full() {
-    import("../../../shareStuff/scout_full.stl", 10);
+    import("../../stls/generated/scout_full.stl", 10);
 }
 
 module command_simple() {
-    import("../../../shareStuff/command_simple.stl", 10);
+    import("../../stls/generated/command_simple.stl", 10);
 }
 
 module command_medium() {
-    import("../../../shareStuff/command_medium.stl", 10);
+    import("../../stls/generated/command_medium.stl", 10);
 }
 
 module command() {
-    import("../../../shareStuff/command_full.stl", 10);
+    import("../../stls/generated/command_full.stl", 10);
 }
 
 module labs() {
-    import("../../../shareStuff/labs_medium.stl", 10);
+    import("../../stls/generated/labs_medium.stl", 10);
 }
 
 module carrier() {
-    import("../../../shareStuff/carrier.stl", 10);
+    import("../../stls/generated/carrier.stl", 10);
 }
 
 module warp() {
-    import("../../../shareStuff/warp.stl", 10);
+    import("../../stls/generated/warp.stl", 10);
 }
 
 module saucer() {
-    import("../../../shareStuff/saucer.stl", 10);
+    import("../../stls/generated/saucer.stl", 10);
 }
 
 translate([-400,0,-500]) main();
