@@ -2,9 +2,10 @@ use <../lib/util.scad>;
 include <common.scad>;
 
 module labs(show_hole=false) {
-    util_repeat_rot(7, [0,0,360/8])
-    translate([scout_width+10,0,labs_height/2-.01]) disk_0();
-
+    util_mirrored([0,1,0])
+    translate([-command_width/2-scout_width, scout_width*.55, labs_height/2-.01])
+    disk_1();
+    
     difference() {
         disk_3(show_hole);
 
