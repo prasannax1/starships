@@ -10,7 +10,7 @@ module command_body_plus() {
     difference() {
         intersection() {
             union() {
-                scale([2.5,1,1])
+                scale([2.5,1,1.2])
                 rotate([0,90,0])
                 sphere(d=command_body_width, $fn=faces_convex);
 
@@ -76,7 +76,7 @@ module command_body_minus() {
 module command_assembly() {
     util_mirrored([0,1,0])
     translate([-command_width/3,command_body_width/4,0])
-    command_engine(60, 3.75);
+    command_engine(45, 3.75);
 }
 
 module command_secondary() {

@@ -417,6 +417,6 @@ module command_pos() {
 }
 
 module escort_pos() {
-    translate([-carrier_length/3, 0, 5-.02])
+    translate([-carrier_length/3, 0, 5-.02-3])
     children();
 }
