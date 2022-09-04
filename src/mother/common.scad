@@ -65,13 +65,17 @@ module semi(d, h, faces) {
     }
 }
 
+module disk_0_flat() {
+    translate([bridge_width/2-bridge_height,0,0])
+    circle(r=bridge_height, $fn=7);
+
+    translate([(bridge_width/2-bridge_height)/2,0,0])
+    square([bridge_width/2-bridge_height, 6], center=true);
+}
+
 module disk_0() {
     rotate_extrude(angle=360, $fn=faces_convex) {
-        translate([bridge_width/2-bridge_height,0,0])
-        circle(r=bridge_height, $fn=7);
-
-        translate([(bridge_width/2-bridge_height)/2,0,0])
-        square([bridge_width/2-bridge_height, 6], center=true);
+        disk_0_flat();
     }
 }
 
@@ -328,6 +332,21 @@ module disk_3(show_hole=false) {
     }
 }
 
+
+module disk_4_array() {
+    rotate(-120)
+    rotate_extrude(angle=240+.02, convexity=10, $fn=faces_concave)
+    translate([(labs_width/2 + saucer_upper/2)/2,0,0])
+    util_mirrored([1,0,0])
+    disk_0_flat();
+
+    util_mirrored([0,1,0])
+    rotate(120-.01)
+    translate([(labs_width/2 + saucer_upper/2)/2,0,0])
+    rotate_extrude(angle=180, convexity=10, $fn=faces_convex)
+    disk_0_flat();
+}
+
 module disk_4(show_holes=false) {
     difference() {
         hull() {
@@ -353,6 +372,9 @@ module disk_4(show_holes=false) {
     translate([0,0,-30+.01])
     mirror([0,0,1])
     disk_0();
+    
+    translate([0,0,saucer_height-.01])
+    disk_4_array();
 }
 
 module nacelle(w, h, l) {
