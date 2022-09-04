@@ -243,12 +243,13 @@ module disk_2_basic() {
     }
 }
 
+
 module disk_2(standalone=false) {
     disk_h = 6;
     disk_h2 = 3;
     
     if (standalone == false) {
-        translate([0,0,disk_h+disk_h2-.01]) disk_1();
+        translate([0,0,command_disk_h+command_disk_h2-.01]) disk_1();
     }
     
     disk_2_basic();
@@ -258,6 +259,19 @@ module disk_2(standalone=false) {
     
     translate([0,0,-6+.02])
     mirror([0,0,1]) disk_0();
+    
+    translate([-scout_width/2-command_height*1.5,0,0]) {
+        intersection() {
+            sphere(r=command_disk_h+command_disk_h2+scout_height-3, $fn=faces_convex);
+
+            translate([0,0,command_height/2+.01])
+            cube([scout_width,scout_width,command_height], center=true);
+        }
+
+        translate([0,0,command_height-5])
+        scale([1,1,1])
+        sphere(r=command_disk_h+command_disk_h2, $fn=faces_convex);
+    }
 }
 
 module disk_3_flat() {
