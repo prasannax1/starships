@@ -6,7 +6,7 @@ module scout_body() {
     difference() {
         intersection() {
             hull() {
-                scale([1.75,1,1])
+                scale([1.5,1,1])
                 sphere(d=2*scout_height, $fn=faces_convex);
 
                 translate([-scout_width+scout_height*2,0,0])
@@ -14,7 +14,7 @@ module scout_body() {
             }
 
             union() {
-                translate([scout_height*1.5, 0, 1.5])
+                translate([scout_height*1.25, 0, 1.5+9])
                 translate([-scout_width, 0, -scout_width])
                 cube(2*scout_width, center=true);
                 
@@ -32,9 +32,9 @@ module scout_body() {
         cylinder(h=2.5*scout_height, r=scout_height, $fn=faces_concave, center=true);
         
         
-        translate([1.5*scout_height, 0, -.15*scout_height])
-        scale([.25,1.5,.5])
-        sphere(d=scout_height/2, $fn=faces_concave);
+        translate([1.25*scout_height, 0, 0])
+        scale([.25,1,1])
+        sphere(d=scout_height, $fn=faces_concave);
         
         translate([-scout_width+scout_height*2,0,0])
         translate([-6,0,6])
@@ -61,7 +61,7 @@ module scout_secondary() {
     scout_body();
 
     util_mirrored([0,1,0])
-    translate([-scout_width+scout_height*4,4,4])
+    translate([-scout_width+scout_height*4,5,5])
     scout_engine(scout_theta);
 }
 

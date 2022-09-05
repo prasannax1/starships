@@ -1,20 +1,26 @@
 use <../lib/util.scad>;
 
-difference() {
-    intersection() {
-        scale([1,1,6/16])
-        sphere(d=36, $fn=128);
+module att_disk() {
+    difference() {
+        intersection() {
+            scale([1,1,7/16])
+            sphere(d=36, $fn=128);
 
-        translate([0,0,20])
+            translate([0,0,20])
+            cube(40, center=true);
+        }
+
+        translate([0,0,2.4])
+        rotate_extrude(angle=360, convexity=10, $fn=128)
+        translate([18,0,0])
+        square([2,.25], center=true);
+        
+        translate([0,0,20+4.8])
         cube(40, center=true);
     }
-
-    translate([0,0,2.5])
-    rotate_extrude(angle=360, convexity=10, $fn=128)
-    translate([18,0,0])
-    square([5,.25], center=true);
-    
-    translate([0,0,20+5])
-    cube(40, center=true);
 }
 
+att_disk();
+
+translate([-9-3,0,2.4])
+cube([18, 12, 6], center=true);

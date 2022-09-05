@@ -431,7 +431,7 @@ module warp_pos() {
 }
 
 module scout_pos() {
-    translate([30-.01,0,1.5]) 
+    translate([30-.01,0,9-.02]) 
     children();
 }
 
