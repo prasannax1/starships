@@ -14,7 +14,7 @@ module scout_body() {
             }
 
             union() {
-                translate([scout_height*1.25, 0, 1.5+9])
+                translate([scout_height*1.25, 0, 9+.01])
                 translate([-scout_width, 0, -scout_width])
                 cube(2*scout_width, center=true);
                 
@@ -26,8 +26,8 @@ module scout_body() {
             }
         }
 
-        translate([-scout_width+scout_height*2,0,-scout_height-1.5])
-        scale([4,1,1])
+        translate([-scout_width+scout_height*2-5,0,-scout_height-1.5])
+        scale([4.4,1,1])
         rotate([90,0,0])
         cylinder(h=2.5*scout_height, r=scout_height, $fn=faces_concave, center=true);
         
@@ -40,9 +40,9 @@ module scout_body() {
         translate([-6,0,6])
         cube(12, center=true);
         
-        translate([0,0,9])
-        translate([0,0,scout_width])
-        cube(2*scout_width, center=true);
+//        translate([0,0,9])
+//        translate([0,0,scout_width])
+//        cube(2*scout_width, center=true);
     }
     
     translate([-scout_width+scout_height*2,0,0])
