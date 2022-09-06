@@ -16,7 +16,9 @@ att_hangar_length=24;
 module att_engine_assembly() {
     util_mirrored([0,1,0])
     translate([-att_width/3, att_width/2-att_engine_width/4,att_height/2])
-    small_engine(att_width, att_engine_width, att_engine_ratio, att_engine_offset);
+    difference() {
+        small_engine(att_width, att_engine_width, att_engine_ratio, att_engine_offset);
+    }
 }
 
 module att_nacelle_assembly() {
@@ -24,7 +26,7 @@ module att_nacelle_assembly() {
     translate([0,0,att_height/2])
     util_mirrored([0,0,1])
     translate([-att_width/2,att_width/2-att_engine_width/2,att_nacelle_width/4])
-    rotate([45,0,0])
+    rotate([-45,0,0])
     small_nacelle(att_nacelle_width, att_nacelle_ratio);
 }
 

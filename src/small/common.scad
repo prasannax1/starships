@@ -46,15 +46,21 @@ module small_disk(width, height, ratio) {
 }
 
 module small_engine(length, width, ratio, offset) {
-    intersection() {
-        scale([ratio,1,1])
-        sphere(d=width, $fn=small_faces_smooth);
+    difference() {
+        intersection() {
+            scale([ratio,1,1])
+            sphere(d=width, $fn=small_faces_smooth);
 
-        translate([offset,0,0])
-        cube(length, center=true);
+            translate([offset,0,0])
+            cube(length, center=true);
+            
+            translate([0,length-width,0])
+            cube(length*2, center=true);
+        }
         
-        translate([0,length-width,0])
-        cube(length*2, center=true);
+        translate([length/2+offset,0,0])
+        scale([.25,1,1])
+        sphere(d=width*.75, $fn=small_faces_smooth);
     }
 }
 
@@ -92,7 +98,7 @@ module small_nacelle_corner(width) {
     }
 }
 
-module small_nacelle(width, ratio) {
+module small_nacelle_1(width, ratio) {
     scale([ratio,1,1])
     rotate([0,-90,0])
     intersection() {
@@ -107,6 +113,28 @@ module small_nacelle(width, ratio) {
     rotate([90,0,0])
     rotate(90)
     small_nacelle_corner(width);
+}
+
+module small_nacelle_2(width, ratio) {
+    translate([0,0,width])
+    mirror([0,0,1])
+    small_nacelle_1(width, ratio);
+}
+
+module small_nacelle_3(width, ratio) {
+    scale([ratio,1,1])
+    rotate([0,-90,0])
+    intersection() {
+        small_nacelle_core(width);
+        translate([0,0,20])
+        cube(40, center=true);
+    } 
+    
+    sphere(d=width, $fn=small_faces_smooth);
+}
+
+module small_nacelle(width, ratio) {
+    small_nacelle_1(width, ratio);
 }
 
 module small_hangar_flat(width, ratio) {
