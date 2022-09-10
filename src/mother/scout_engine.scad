@@ -11,7 +11,8 @@ module scout_nacelle() {
 
             translate([-scout_width+scout_height/2,0,-1.5])
             scale([1,1,1])
-            sphere(d=8, $fn=faces_convex);
+            rotate([0,0,0])
+            sphere(d=8, $fn=8);
         }
 
         translate([-scout_width+scout_height/2,0,0])
