@@ -6,7 +6,7 @@ module scout_body() {
     difference() {
         intersection() {
             hull() {
-                scale([1.5,1,.75])
+                scale([1.5,.75,.75])
                 sphere(d=2*scout_height, $fn=faces_convex);
 
                 translate([-scout_width+scout_height*2,0,0])
@@ -14,7 +14,7 @@ module scout_body() {
             }
 
             union() {
-                translate([scout_height*1.25, 0, 9+.01])
+                translate([scout_height*1.25, 0, 8.25+.01])
                 translate([-scout_width, 0, -scout_width])
                 cube(2*scout_width, center=true);
                 
@@ -33,7 +33,7 @@ module scout_body() {
         
         
         translate([1.25*scout_height, 0, 0])
-        scale([.25,1,.75])
+        scale([.25,.75,.75])
         sphere(d=scout_height, $fn=faces_concave);
         
         translate([-scout_width+scout_height*2,0,0])
