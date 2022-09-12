@@ -8,7 +8,7 @@ module command_simple() {
     disk_2();
 
     translate([-command_width/2+command_height,0,0])
-    command_engine(180);
+    command_engine(180, 1.5);
 }
 
 command_simple();

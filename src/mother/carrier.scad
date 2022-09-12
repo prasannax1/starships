@@ -69,8 +69,7 @@ module carr_body_plus() {
     rotate([90,0,0])
     cylinder(h=hangar_width+20, d=20, $fn=faces_rough, center=true);
     
-    translate([0,0,10-.01]) disk_1();
-    
+
     translate([-carrier_length/4,0,0])
     cube([carrier_length/2, hangar_width+20, 10], center=true);
 
@@ -155,6 +154,8 @@ module carr_body() {
         carr_body_minus();
     }
     
+    translate([0,0,10-.01-3]) disk_1();
+    
     intersection() {
         translate([-hangar_width*.75,0,0])
         scale(.75) carr_hex_filter();
@@ -176,6 +177,7 @@ module carr_body_minus() {
     translate([-hangar_width/2, 0, -hangar_height/2-10])
     cube ([hangar_width, hangar_width, hangar_height], center=true);
     
+    
     translate([carrier_length/4, 0, -hangar_height/2-10])
     rotate([0,90,0])
     cylinder(d=hangar_height-10, h=carrier_length/4, $fn=faces_concave, center=true);
@@ -187,6 +189,13 @@ module carr_body_minus() {
     util_repeat(4, [0,0,-10])
     translate([0,hangar_width/2+20,-20])
     cube([carrier_length, 10, 5], center=true);
+    
+    translate([0,0,10])
+    cylinder(d1=scout_width, d2=scout_width+12, h=6-.02, center=true, $fn=faces_concave);
+    
+    translate([0,0,3])
+    escort_pos()
+    cylinder(d1=scout_width, d2=scout_width+12, h=6-.02, center=true, $fn=faces_concave);
 }
 
 

@@ -13,7 +13,7 @@ use <constitution-refit.scad>;
 
 translate([50,0,100]) excelsior();
 
-translate([0,0,0]) command();
+translate([75,0,0]) command();
 
 translate([-180,0,-100]) command_simple();
 

@@ -3,7 +3,7 @@ include <common.scad>;
 
 module warp_nacelle() {
     difference() {
-        scale([1,.7,1.4])
+        scale([1,.8,1.4])
         intersection() {
             rotate([0,90,0])
             rotate(90) {
@@ -77,10 +77,10 @@ module warp_body() {
     }
 
     translate([-warp_length/2,0,-5])
-    cube([warp_length, scout_width, 10], center=true);
+    cube([warp_length, scout_width*.8, 10], center=true);
 
     translate([-warp_length,0,-5])
-    cylinder(h=10, d=scout_width, $fn=faces_convex, center=true);
+    cylinder(h=10, d=scout_width*.8, $fn=faces_convex, center=true);
 }
 
 
@@ -91,7 +91,7 @@ module warp_hangar() {
             hull()
             util_mirrored([1,0,0])
             translate([warp_length/4, 0, 0])
-            cylinder(h=35, d1=scout_width, d2=scout_width*.5, center=true, $fn=faces_convex);
+            cylinder(h=35, d1=scout_width*.8, d2=scout_width*.4, center=true, $fn=faces_convex);
 
             util_mirrored([1,0,0])
             translate([scout_width/4 + warp_length/4 ,0,0])
@@ -100,7 +100,7 @@ module warp_hangar() {
 
         util_mirrored([1,0,0])
         translate([warp_length/4, 0, 0])
-        cylinder(h=34, d1=scout_width*.9, d2=scout_width*.5*.9, center=true, $fn=16);
+        cylinder(h=34, d1=scout_width*.75, d2=scout_width*.5*.75, center=true, $fn=16);
 
         util_mirrored([1,0,0])
         translate([warp_length/4,0,35/2])
@@ -120,7 +120,7 @@ module warp_secondary() {
     warp_body();
 
     util_mirrored([0,1,0])
-    translate([-warp_length/2-scout_width/2,.64/2* scout_width, -.01-9])
+    translate([-warp_length/2-scout_width/2,.25* scout_width, -.01-8.5])
     warp_nacelle();
 
     translate([-warp_length+warp_length/4,0, -35/2-10+.01])

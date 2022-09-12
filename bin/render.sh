@@ -23,7 +23,7 @@ render_stl() {
     local INFILE="$1"
     local OUTFILE="$2"
 
-    ${RENDERCMD} -o "${OUTFILE}" "${INFILE}"
+    ${RENDERCMD} --export-format binstl -o "${OUTFILE}" "${INFILE}"
 }
 
 render_image() {

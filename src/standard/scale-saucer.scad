@@ -13,7 +13,5 @@ use <sovereign.scad>;
 
 saucer();
 
-translate([0,0,-200]) saucer_full();
-
 translate([0,0,200]) galaxy();
 

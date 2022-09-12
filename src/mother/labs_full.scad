@@ -8,7 +8,7 @@ module labs_full() {
     translate([0,0,labs_height/2-.02])
     disk_1();
 
-    translate([-labs_width*.82,0,0.01])
+    translate([-saucer_width/2+.25*labs_height,0,-labs_height/2+0.01])
     warp_secondary();
 }
 

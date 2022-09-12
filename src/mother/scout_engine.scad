@@ -11,7 +11,8 @@ module scout_nacelle() {
 
             translate([-scout_width+scout_height/2,0,-1.5])
             scale([1,1,1])
-            sphere(d=6, $fn=faces_convex);
+            rotate([0,0,0])
+            sphere(d=8, $fn=8);
         }
 
         translate([-scout_width+scout_height/2,0,0])
@@ -48,8 +49,8 @@ module scout_nacelle() {
 module scout_neck() {
     translate([0,0,-.01])
     linear_extrude(height = 2*scout_height, convexity = 10, scale=[2,1])
-    translate([-scout_height/2,0,0])
-    square([scout_height,3], center=true);
+    translate([-scout_height*.75,0,0])
+    square([scout_height*.75,2], center=true);
 }
 
 module scout_engine(theta) {
