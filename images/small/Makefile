@@ -1,6 +1,4 @@
-IMG += attack-primary.png
 IMG += attack.png
-IMG += attack-secondary.png
 IMG += diplomat.png
 IMG += fighter.png
 IMG += heavy-runabout.png
@@ -15,33 +13,21 @@ IMG += yacht.png
 
 all: $(IMG)
 
-attack-primary.png: ../../src/lib/util.scad ../../src/small/attack-primary.scad
+attack.png: ../../src/lib/util.scad ../../src/unified/attack.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Sunset 
 
-attack.png: attack-primary.png attack-secondary.png
+diplomat.png: ../../src/lib/util.scad ../../src/unified/diplomat.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
-	    -p $@ \
-	    -t Sunset 
-
-attack-secondary.png: ../../src/lib/util.scad ../../src/small/attack-secondary.scad
-	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
-	    -p $@ \
-	    -t Sunset 
-
-diplomat.png: ../../src/lib/util.scad ../../src/small/diplomat.scad
-	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Metallic 
 
-yacht.png: ../../src/lib/util.scad ../../src/small/yacht.scad
+yacht.png: ../../src/lib/util.scad ../../src/unified/yacht.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Metallic 
 

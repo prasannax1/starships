@@ -1,6 +1,6 @@
 all: $(IMG)
 
-$(IMG): $(wildcard ../src/mother/*.scad)
+$(IMG): $(wildcard ../src/unified/*.scad)
 	@$(MAKE) -C generated
 
 

@@ -1,28 +1,23 @@
-MOTHERSTL += escort.stl
-MOTHERSTL += scout.stl
-MOTHERSTL += command.stl
-MOTHERSTL += saucer.stl
-MOTHERSTL += scout_full.stl
-MOTHERSTL += scout_secondary.stl
-MOTHERSTL += scout_simple.stl
-MOTHERSTL += scout_engine.stl
-MOTHERSTL += command_full.stl
-MOTHERSTL += command_secondary.stl
-MOTHERSTL += command_engine.stl
-MOTHERSTL += command_medium.stl
-MOTHERSTL += command_simple.stl
-MOTHERSTL += saucer_full.stl
-MOTHERSTL += labs_full.stl
-MOTHERSTL += labs_medium.stl
-MOTHERSTL += carrier.stl
-MOTHERSTL += main.stl
-MOTHERSTL += main_lowered.stl
-MOTHERSTL += warp.stl
+unifiedSTL += escort.stl
+unifiedSTL += scout.stl
+unifiedSTL += command.stl
+unifiedSTL += saucer.stl
+unifiedSTL += scout_full.stl
+unifiedSTL += scout_simple.stl
+unifiedSTL += command_full.stl
+unifiedSTL += command_alt.stl
+unifiedSTL += command_simple.stl
+unifiedSTL += saucer_full.stl
+unifiedSTL += labs_full.stl
+unifiedSTL += labs_alt.stl
+unifiedSTL += carrier.stl
+unifiedSTL += main.stl
+unifiedSTL += main_lowered.stl
+unifiedSTL += warp.stl
+unifiedSTL += attack.stl
+unifiedSTL += diplomat.stl
+unifiedSTL += yacht.stl
 
-SMALLSTL += attack-primary.stl
-SMALLSTL += attack.stl
-SMALLSTL += attack-secondary.stl
-SMALLSTL += diplomat.stl
 SMALLSTL += fighter.stl
 SMALLSTL += heavy-runabout.stl
 SMALLSTL += runabout.stl
@@ -32,13 +27,13 @@ SMALLSTL += shuttle-medium.stl
 SMALLSTL += shuttlepod.stl
 SMALLSTL += shuttle-small.stl
 SMALLSTL += tactical-runabout.stl
-SMALLSTL += yacht.stl
 
-all: $(MOTHERSTL) $(SMALLSTL) scale_components.stl
 
-$(MOTHERSTL):
+all: $(unifiedSTL) $(SMALLSTL) scale_components.stl
+
+$(unifiedSTL):
 	bash ../../bin/render.sh \
-	    -i ../../src/mother/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -o $@
 
 
@@ -48,15 +43,12 @@ $(SMALLSTL):
 	    -o $@
 
 
-attack-primary.stl: ../../src/lib/util.scad ../../src/small/attack-primary.scad
 
-attack.stl: attack-primary.stl attack-secondary.stl
+attack.stl: ../../src/lib/util.scad ../../src/unified/attack.scad
 
-attack-secondary.stl: ../../src/lib/util.scad ../../src/small/attack-secondary.scad
+diplomat.stl: ../../src/lib/util.scad ../../src/unified/diplomat.scad
 
-diplomat.stl: ../../src/lib/util.scad ../../src/small/diplomat.scad
-
-yacht.stl: ../../src/lib/util.scad ../../src/small/yacht.scad
+yacht.stl: ../../src/lib/util.scad ../../src/unified/yacht.scad
 
 fighter.stl: ../../src/lib/util.scad ../../src/small/fighter.scad
 
@@ -76,103 +68,84 @@ shuttle-small.stl: ../../src/lib/util.scad ../../src/small/shuttle-small.scad
 
 tactical-runabout.stl: ../../src/lib/util.scad ../../src/small/tactical-runabout.scad
 
-scale_components.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command.scad \
-    ../../src/mother/labs.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/main.scad \
+scale_components.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/command.scad \
+    ../../src/unified/labs.scad \
+    ../../src/unified/saucer.scad \
+    ../../src/unified/carrier.scad \
+    ../../src/unified/scout.scad \
+    ../../src/unified/escort.scad \
+    ../../src/unified/warp.scad \
+    ../../src/unified/main.scad \
     ../../src/standard/scale-components-for-stl.scad
 	bash ../../bin/render.sh \
 	    -i ../../src/standard/scale-components-for-stl.scad \
 	    -o $@
 
-escort.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/escort.scad
+escort.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/escort.scad
 
 
-scout.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/scout.scad
+scout.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/scout.scad
 
 
-command.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command.scad
+command.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/command.scad
 
-scout_secondary.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/scout_secondary.scad
+labs.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/labs.scad
 
+scout_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/scout.scad ../../src/unified/scout_full.scad
 
-command-secondary.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command_secondary.scad
+scout_simple.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/scout.scad ../../src/unified/scout_simple.scad
 
-labs.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/labs.scad
+command_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/command.scad ../../src/unified/command_full.scad
 
-scout_full.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/scout.scad ../../src/mother/scout_full.scad \
-    ../../src/mother/scout_engine.scad ../../src/mother/scout_secondary.scad
+command_alt.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/command.scad ../../src/unified/command_alt.scad
 
-scout_engine.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/scout.scad ../../src/mother/scout_engine.scad
+command_simple.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/command.scad ../../src/unified/command_simple.scad
 
-scout_simple.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/scout.scad ../../src/mother/scout_simple.scad \
-    ../../src/mother/scout_engine.scad
+labs_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/labs.scad ../../src/unified/labs_full.scad
 
-command_full.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command.scad ../../src/mother/command_full.scad \
-    ../../src/mother/command_engine.scad ../../src/mother/command_secondary.scad
+labs_alt.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/labs.scad ../../src/unified/labs_alt.scad
 
-command_medium.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command.scad ../../src/mother/command_medium.scad \
-    ../../src/mother/scout_engine.scad
+saucer.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/saucer.scad
 
-command_simple.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command.scad ../../src/mother/command_simple.scad \
-    ../../src/mother/command_engine.scad
+saucer_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/saucer.scad ../../src/unified/saucer_full.scad
 
-command_engine.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command.scad ../../src/mother/command_engine.scad
+carrier.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/carrier.scad
 
-labs_full.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/labs.scad ../../src/mother/labs_full.scad
-
-labs_medium.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/labs.scad ../../src/mother/labs_medium.scad \
-    ../../src/mother/command_engine.scad
-
-saucer.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/saucer.scad
-
-saucer_full.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/saucer.scad ../../src/mother/saucer_full.scad
-
-carrier.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/carrier.scad
-
-warp.stl: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/warp.scad
+warp.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
+    ../../src/unified/warp.scad
 
 main.stl: \
-    ../../src/mother/command.scad \
-    ../../src/mother/labs.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/main.scad
+    ../../src/unified/command.scad \
+    ../../src/unified/labs.scad \
+    ../../src/unified/saucer.scad \
+    ../../src/unified/carrier.scad \
+    ../../src/unified/scout.scad \
+    ../../src/unified/escort.scad \
+    ../../src/unified/warp.scad \
+    ../../src/unified/main.scad
 
 
 main_lowered.stl: \
-    ../../src/mother/command.scad \
-    ../../src/mother/labs.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/main_lowered.scad
+    ../../src/unified/command.scad \
+    ../../src/unified/labs.scad \
+    ../../src/unified/saucer.scad \
+    ../../src/unified/carrier.scad \
+    ../../src/unified/scout.scad \
+    ../../src/unified/escort.scad \
+    ../../src/unified/warp.scad \
+    ../../src/unified/main_lowered.scad
