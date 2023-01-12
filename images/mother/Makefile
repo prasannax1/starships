@@ -28,16 +28,13 @@ escort.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/escort.scad
 
-
 scout.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/scout.scad
 
-
 command.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/command.scad
-
 
 labs.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
@@ -46,7 +43,7 @@ labs.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 scout_full.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/scout_full.scad
-	
+
 scout_simple.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/scout_simple.scad
@@ -66,7 +63,7 @@ command_alt.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 command_simple.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/command_simple.scad
-	
+
 labs_full.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/labs_full.scad
@@ -95,4 +92,3 @@ main.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
 	../../src/unified/warp.scad ../../src/unified/escort.scad \
 	../../src/unified/main.scad
-
