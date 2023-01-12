@@ -44,11 +44,17 @@ $(SMALLSTL):
 
 
 
-attack.stl: ../../src/lib/util.scad ../../src/unified/attack.scad
+attack.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/attack.scad
 
-diplomat.stl: ../../src/lib/util.scad ../../src/unified/diplomat.scad
+diplomat.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/diplomat.scad
 
-yacht.stl: ../../src/lib/util.scad ../../src/unified/yacht.scad
+yacht.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/yacht.scad
 
 fighter.stl: ../../src/lib/util.scad ../../src/small/fighter.scad
 
@@ -82,70 +88,73 @@ scale_components.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	    -i ../../src/standard/scale-components-for-stl.scad \
 	    -o $@
 
-escort.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/escort.scad
+escort.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/escort.scad
 
 
-scout.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/scout.scad
+scout.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/scout.scad
 
 
-command.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/command.scad
+command.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/command.scad
 
-labs.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/labs.scad
+labs.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/labs.scad
 
-scout_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/scout.scad ../../src/unified/scout_full.scad
+scout_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/scout_full.scad
 
-scout_simple.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/scout.scad ../../src/unified/scout_simple.scad
+scout_simple.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/scout_simple.scad
 
-command_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/command.scad ../../src/unified/command_full.scad
+command_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/command_full.scad
 
-command_alt.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/command.scad ../../src/unified/command_alt.scad
+command_alt.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/command_alt.scad
 
-command_simple.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/command.scad ../../src/unified/command_simple.scad
+command_simple.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/command_simple.scad
 
-labs_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/labs.scad ../../src/unified/labs_full.scad
+labs_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/labs_full.scad
 
-labs_alt.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/labs.scad ../../src/unified/labs_alt.scad
+labs_alt.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/labs_alt.scad
 
-saucer.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/saucer.scad
+saucer.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/saucer.scad
 
-saucer_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/saucer.scad ../../src/unified/saucer_full.scad
+saucer_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/saucer_full.scad
 
-carrier.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/carrier.scad
+carrier.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/carrier.scad
 
-warp.stl: ../../src/lib/util.scad ../../src/unified/common.scad  \
-    ../../src/unified/warp.scad
+warp.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/warp.scad
 
-main.stl: \
-    ../../src/unified/command.scad \
-    ../../src/unified/labs.scad \
-    ../../src/unified/saucer.scad \
-    ../../src/unified/carrier.scad \
-    ../../src/unified/scout.scad \
-    ../../src/unified/escort.scad \
-    ../../src/unified/warp.scad \
-    ../../src/unified/main.scad
+main.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/warp.scad ../../src/unified/escort.scad \
+	../../src/unified/main.scad
 
-
-main_lowered.stl: \
-    ../../src/unified/command.scad \
-    ../../src/unified/labs.scad \
-    ../../src/unified/saucer.scad \
-    ../../src/unified/carrier.scad \
-    ../../src/unified/scout.scad \
-    ../../src/unified/escort.scad \
-    ../../src/unified/warp.scad \
-    ../../src/unified/main_lowered.scad
+main_lowered.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/main.scad ../../src/unified/main_lowered.scad
