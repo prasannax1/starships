@@ -4,6 +4,7 @@ unifiedSTL += command.stl
 unifiedSTL += saucer.stl
 unifiedSTL += scout_full.stl
 unifiedSTL += scout_simple.stl
+unifiedSTL += scout_alt.stl
 unifiedSTL += command_full.stl
 unifiedSTL += command_alt.stl
 unifiedSTL += command_simple.stl
@@ -109,6 +110,10 @@ labs.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 scout_full.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
 	../../src/unified/scout_full.scad
+
+scout_alt.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/scout_alt.scad
 
 scout_simple.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
