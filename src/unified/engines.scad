@@ -511,7 +511,7 @@ module class_4_body_plus() {
             cube([150, class_4_nacelle_sep, 10], center=true);
             
             util_mirrored([0,1,0])
-            translate([0,class_4_nacelle_sep/2,0-class_3_nacelle_h/2+10])
+            translate([0,class_4_nacelle_sep/2,0-class_3_nacelle_h/2+15.6])
             class_3_nacelle();
         }
     }
