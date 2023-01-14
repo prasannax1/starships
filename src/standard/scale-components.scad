@@ -10,6 +10,10 @@ module scout_simple() {
     import("../../stls/generated/scout_simple.stl", 10);
 }
 
+module scout_alt() {
+    import("../../stls/generated/scout_alt.stl", 10);
+}
+
 module scout_full() {
     import("../../stls/generated/scout_full.stl", 10);
 }
@@ -19,7 +23,7 @@ module command_simple() {
 }
 
 module command_medium() {
-    import("../../stls/generated/command_medium.stl", 10);
+    import("../../stls/generated/command_alt.stl", 10);
 }
 
 module command() {
@@ -27,7 +31,7 @@ module command() {
 }
 
 module labs() {
-    import("../../stls/generated/labs_medium.stl", 10);
+    import("../../stls/generated/labs_alt.stl", 10);
 }
 
 module carrier() {
@@ -48,6 +52,7 @@ translate([0,0,550]) escort(carrier_attached=false);
 
 translate([0,0,500]) scout_simple();
 translate([-250,0,500]) scout_full();
+translate([-500,0,500]) scout_alt();
 
 translate([0,0,400]) command_simple();
 translate([-320,0,400]) command_medium();
