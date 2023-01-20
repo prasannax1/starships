@@ -17,6 +17,52 @@ module class_0_nacelle() {
     sphere(d=class_0_nacelles_w*.8, $fn=faces_convex);
 }
 
+module class_0_attack_engine() {
+    class_0_secondary();
+    util_mirrored([0,1,0])
+    translate([-class_0_nacelles_l*.75,class_0_nacelles_w/2,0])
+    class_0_nacelle();
+}
+
+module class_0_hangars() {
+    difference() {
+        union() {
+            translate([0,0,disk_0_deck_h])
+            cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h), d2=disk_0_upper_d, h=disk_0_deck_h*2, center=true, $fn=faces_convex);
+
+            linear_extrude(convexity=10, height=2*disk_0_deck_h, scale=[1,(disk_0_upper_d/ (disk_0_upper_d+2*disk_0_deck_h))])
+            translate([-disk_0_width/2,0,0])
+            square([disk_0_width, disk_0_upper_d+2*disk_0_deck_h], center=true);
+
+            translate([-disk_0_width,0,disk_0_deck_h])
+            cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h), d2=disk_0_upper_d, h=disk_0_deck_h*2, center=true, $fn=faces_convex);
+
+            scale([1,1,.25]) {
+                sphere(d=disk_0_upper_d+2*disk_0_deck_h, $fn=faces_convex);
+
+                rotate([0,-90,0])
+                translate([0,0,disk_0_width/2])
+                cylinder(d=disk_0_upper_d+2*disk_0_deck_h, h=disk_0_width, center=true, $fn=faces_convex);
+
+                translate([-disk_0_width,0,0])
+                sphere(d=disk_0_upper_d+2*disk_0_deck_h, $fn=faces_convex);
+            }
+        }
+
+        translate([disk_0_upper_d+.1,0,disk_0_deck_h])
+        cube([2*disk_0_upper_d, 2*disk_0_upper_d, 4], center=true);
+
+        translate([-disk_0_upper_d-disk_0_width-.1,0,disk_0_deck_h])
+        cube([2*disk_0_upper_d, 2*disk_0_upper_d, 4], center=true);
+    }
+
+    translate([0,0,disk_0_deck_h])
+            cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h-1), d2=disk_0_upper_d-.5, h=disk_0_deck_h*2-1, center=true, $fn=faces_rough);
+
+    translate([-disk_0_width,0,disk_0_deck_h])
+    cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h-1), d2=disk_0_upper_d-.5, h=disk_0_deck_h*2-1, center=true, $fn=faces_rough);
+}
+
 module class_0_secondary() {
     difference(){
         intersection() {
@@ -562,4 +608,3 @@ module class_4_body() {
     disk_1();
 }
 
-class_4_body();

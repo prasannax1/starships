@@ -16,6 +16,7 @@ unifiedSTL += main.stl
 unifiedSTL += main_lowered.stl
 unifiedSTL += warp.stl
 unifiedSTL += attack.stl
+unifiedSTL += destroyer.stl
 unifiedSTL += diplomat.stl
 unifiedSTL += yacht.stl
 
@@ -48,6 +49,10 @@ $(SMALLSTL):
 attack.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
 	../../src/unified/attack.scad
+
+destroyer.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/destroyer.scad
 
 diplomat.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \

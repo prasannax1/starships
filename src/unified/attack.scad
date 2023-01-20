@@ -15,10 +15,7 @@ module attack_no_armor() {
 }
 
 module attack_engine() {
-    class_0_secondary();
-    util_mirrored([0,1,0])
-    translate([-class_0_nacelles_l*.75,class_0_nacelles_w/2,0])
-    class_0_nacelle();
+    class_0_attack_engine();
 }
 
 module attack() {
