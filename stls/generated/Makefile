@@ -19,11 +19,11 @@ unifiedSTL += attack.stl
 unifiedSTL += destroyer.stl
 unifiedSTL += diplomat.stl
 unifiedSTL += yacht.stl
+unifiedSTL += science.stl
 
 SMALLSTL += fighter.stl
 SMALLSTL += heavy-runabout.stl
 SMALLSTL += runabout.stl
-SMALLSTL += science.stl
 SMALLSTL += shuttle-large.stl
 SMALLSTL += shuttle-medium.stl
 SMALLSTL += shuttlepod.stl
