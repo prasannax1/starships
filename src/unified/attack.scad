@@ -3,6 +3,7 @@ use <disks.scad>
 use <engines.scad>
 include <common.scad>
 
+faces_armor=faces_rough/3;
 
 module attack_no_armor() {
     disk_0();
@@ -34,8 +35,8 @@ module attack_armor_1() {
     difference() {
         intersection() {
             translate([-disk_0_width/2,0,0])
-            scale([2.5,1,6*disk_0_deck_h/disk_0_width])
-            sphere(d=disk_0_width, $fn=faces_rough/3);
+            scale([2.5,1.05,6*disk_0_deck_h/disk_0_width])
+            sphere(d=disk_0_width, $fn=faces_armor);
 
             util_mirrored([0,1,0])
             translate([-disk_0_width/2,disk_0_width*.6,1.2*disk_0_deck_h])
@@ -54,7 +55,7 @@ module attack_armor_2() {
     difference() {
         intersection() {
             scale([1,1,4.2*disk_0_deck_h/disk_0_width])
-            sphere(d=disk_0_width, $fn=faces_rough/3);
+            sphere(d=disk_0_width, $fn=faces_armor);
 
             translate([0,0,1.2*disk_0_deck_h])
             cube([disk_0_width*1.2, disk_0_width*1.2, 2.4*disk_0_deck_h], center=true);
@@ -68,8 +69,8 @@ module attack_armor_3() {
     difference() {
         intersection() {
             translate([-disk_0_width/2,0,0])
-            scale([2.5,1,2*disk_0_deck_h/disk_0_width])
-            sphere(d=disk_0_width, $fn=faces_rough/3);
+            scale([2.5,1.05,2*disk_0_deck_h/disk_0_width])
+            sphere(d=disk_0_width, $fn=faces_armor);
 
             util_mirrored([0,1,0])
             translate([-disk_0_width/2,disk_0_width*.6,-1.2*disk_0_deck_h])
