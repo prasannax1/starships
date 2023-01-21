@@ -38,13 +38,10 @@ $(unifiedSTL):
 	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -o $@
 
-
 $(SMALLSTL):
 	bash ../../bin/render.sh \
 	    -i ../../src/small/$(basename $(notdir $@)).scad \
 	    -o $@
-
-
 
 attack.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
@@ -68,7 +65,9 @@ heavy-runabout.stl: ../../src/lib/util.scad ../../src/small/heavy-runabout.scad
 
 runabout.stl: ../../src/lib/util.scad ../../src/small/runabout.scad
 
-science.stl: ../../src/lib/util.scad ../../src/unified/science.scad
+science.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/science.scad
 
 shuttle-large.stl: ../../src/lib/util.scad ../../src/small/shuttle-large.scad
 
