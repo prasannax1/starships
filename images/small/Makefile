@@ -49,9 +49,9 @@ runabout.png: ../../src/lib/util.scad ../../src/small/runabout.scad
 	    -p $@ \
 	    -t BeforeDawn 
 
-science.png: ../../src/lib/util.scad ../../src/small/science.scad
+science.png: ../../src/lib/util.scad ../../src/unified/science.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t BeforeDawn 
 

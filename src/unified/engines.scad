@@ -103,6 +103,24 @@ module class_0_secondary() {
     }
 }
 
+module class_0_habitat() {
+    intersection() {
+        scale([5,1,1])
+        sphere(d=disk_0_upper_d, $fn=faces_convex);
+        
+        cube(disk_0_width, center=true);
+    }
+    
+    rotate([0,90,0])
+    cylinder(d=disk_0_upper_d*.7, h=disk_0_width+1, center=true, $fn=faces_convex);
+    
+    translate([disk_1_height*.75,0,disk_1_height*.5/2])
+    cylinder(d1=disk_0_upper_d*.75, d2=disk_0_upper_d*.3, h=disk_1_height*.5, center=true, $fn=faces_convex);
+    
+        translate([-disk_1_height*.75,0,disk_1_height*.25])
+    cylinder(d1=disk_0_upper_d*.75, d2=disk_0_upper_d*.3, h=disk_1_height*.5, center=true, $fn=faces_convex);
+}
+
 module class_1_nacelle() {
     intersection() {
         scale([class_1_nacelle_l*2/class_1_nacelle_w,1,1]) {
