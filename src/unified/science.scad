@@ -11,7 +11,7 @@ module science() {
     translate([-disk_0_width/2, disk_0_width/3, 0+.01])
     class_0_attack_engine();
 
-    translate([-disk_0_width*.6,0,-disk_1_height*.5-.05])
+    translate([-disk_0_width*.6,0,-disk_1_height*.5+.05])
     class_0_habitat();
 }
 
