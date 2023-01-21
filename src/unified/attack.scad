@@ -69,7 +69,7 @@ module attack_armor_3() {
     difference() {
         intersection() {
             translate([-disk_0_width/2,0,0])
-            scale([2.5,1.05,2*disk_0_deck_h/disk_0_width])
+            scale([2.5,1.05,2.5*disk_0_deck_h/disk_0_width])
             sphere(d=disk_0_width, $fn=faces_armor);
 
             util_mirrored([0,1,0])
