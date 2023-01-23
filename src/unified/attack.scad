@@ -13,6 +13,7 @@ module attack_no_armor() {
     translate([0,0,disk_0_deck_h])
     rotate([90,0,0]) 
     attack_engine();
+    //translate([0,0,.01]) class_0_secondary();
 }
 
 module attack_engine() {
