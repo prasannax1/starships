@@ -1,7 +1,6 @@
 use <../lib/util.scad>
 include <common.scad>
 
-
 module disk_0_plus() {
     translate([0,0,disk_0_deck_h/2])
     cylinder(d1=disk_0_width, d2=(disk_0_width-2*disk_0_deck_h), h=disk_0_deck_h, center=true, $fn=faces_convex);
@@ -16,6 +15,26 @@ module disk_0_plus() {
     util_mirrored([0,1,0])
     translate([-disk_0_width/2, disk_0_upper_d/2 + disk_0_deck_h/2, disk_0_deck_h/2+.5])
     sphere(d=.8*disk_0_deck_h, $fn=faces_convex);
+}
+
+module disk_0_under() {
+    difference() {
+        translate([0,0,-disk_0_deck_h])
+        cylinder(d2=(disk_0_upper_d+4*disk_0_deck_h), d1=disk_0_upper_d, h=disk_0_deck_h*2, center=true, $fn=faces_convex);
+        
+        translate([0,0,-2*disk_0_deck_h])
+        cylinder(d2=disk_0_upper_d-2, d1=disk_0_upper_d, h=.5, center=true, $fn=faces_convex);
+    }
+}
+
+module disk_0_under_2() {
+    difference() {
+        translate([0,0,-disk_0_deck_h])
+        cylinder(d2=disk_0_width, d1=(disk_0_width-4*disk_0_deck_h), h=disk_0_deck_h*2, center=true, $fn=faces_convex);
+        
+        translate([0,0,-2*disk_0_deck_h])
+        cylinder(d2=disk_0_upper_d-2, d1=disk_0_upper_d, h=.5, center=true, $fn=faces_convex);
+    }
 }
 
 module disk_0_minus() {
@@ -54,6 +73,8 @@ module disk_1_plus() {
     translate([0,0,disk_1_width*.48/2])
     rotate(180)
     cylinder(d=h_adj, h=disk_1_width*.48, center=true, $fn=5);
+    
+    translate([0,0,.01]) disk_0_under();
 }
 
 module disk_1_minus() {
@@ -78,6 +99,8 @@ module disk_2_plus() {
     
     translate([-disk_2_width/4-2*disk_2_deck,0,3*disk_2_deck])
     cube([disk_2_width/2, disk_1_width/2, 6*disk_2_deck], center=true);
+    
+    translate([0,0,.01]) disk_0_under_2();
 }
 
 module disk_2_minus() {
@@ -155,6 +178,8 @@ module disk_3_minus() {
     translate([-disk_4_width/2+disk_3_height/2,36,0])
     rotate([0,45,0])
     cube([2, 60, 40], center=true);
+    
+    translate([0,0,disk_3_height/2-6+.05]) disk_0_under_2();
 }
 
 module disk_3() {
