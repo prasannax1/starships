@@ -3,6 +3,7 @@ include <common.scad>
 
 module disk_0_plus() {
     translate([0,0,disk_0_deck_h/2])
+    color("LightGrey")
     cylinder(d1=disk_0_width, d2=(disk_0_width-2*disk_0_deck_h), h=disk_0_deck_h, center=true, $fn=faces_convex);
 
     translate([0,0,disk_0_deck_h])
@@ -56,10 +57,12 @@ module disk_0() {
     }
 }
 
-module disk_1_plus() {
+
+module disk_1_plus(){
     h_adj=disk_1_height-2*disk_0_deck_h;
     
     translate([0,0,h_adj/6])
+    color("DarkGray")
     cylinder(d1=disk_1_width-2*h_adj/3, d2=disk_1_width, h=h_adj/3, center=true, $fn=faces_convex);
     
     translate([0,0,h_adj/3+h_adj/3-.01])
@@ -95,6 +98,7 @@ module disk_2_plus() {
     cylinder(d1=disk_2_width, d2=disk_2_width-4*disk_2_deck, h=2*disk_2_deck+.02, center=true, $fn=faces_convex);
     
     translate([0,0,4*disk_2_deck-.02])
+    color("DarkGray")
     cylinder(d1=disk_2_width-4*disk_2_deck, d2=disk_1_width+disk_2_deck*16, h=4*disk_2_deck+.02, center=true, $fn=faces_convex);
     
     translate([-disk_2_width/4-2*disk_2_deck,0,3*disk_2_deck])
@@ -151,6 +155,7 @@ ratio3=(disk_4_width/2-disk_3_height)/(disk_4_width/2-disk_3_height/2);
 
 module disk_3_plus() {
     translate([0,0,-disk_3_height/4+.01])
+    color("DarkGray")
     cylinder(d1=disk_3_width-disk_3_height, d2=disk_3_width, h=disk_3_height/2+.02, center=true, $fn=faces_convex); 
 
     translate([0,0,disk_3_height/4-.01])

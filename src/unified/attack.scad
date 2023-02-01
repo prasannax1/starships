@@ -27,9 +27,11 @@ module attack() {
 
 
 module attack_armor() {
-    attack_armor_1();
-    attack_armor_2();
-    attack_armor_3();
+    color("FireBrick") {
+        attack_armor_1();
+        attack_armor_2();
+        attack_armor_3();
+    }
 }
 
 module attack_armor_1() {

@@ -2,7 +2,6 @@ use <../lib/util.scad>
 include <common.scad>
 use <disks.scad>
 
-
 module class_0_nacelle() {
     intersection() {
         translate([class_0_nacelles_l/4,0,0])
@@ -14,6 +13,7 @@ module class_0_nacelle() {
     }
 
     translate([class_0_nacelles_l/2-class_0_nacelles_l/8,0,0])
+    color("FireBrick")
     sphere(d=class_0_nacelles_w*.8, $fn=faces_convex);
 }
 
@@ -57,11 +57,14 @@ module class_0_hangars() {
     }
 
     translate([0,0,disk_0_deck_h])
-            cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h-1), d2=disk_0_upper_d-.5, h=disk_0_deck_h*2-1, center=true, $fn=faces_rough);
+    color("DimGray")
+    cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h-1), d2=disk_0_upper_d-.5, h=disk_0_deck_h*2-1, center=true, $fn=faces_rough);
 
     translate([-disk_0_width,0,disk_0_deck_h])
+    color("DimGray")
     cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h-1), d2=disk_0_upper_d-.5, h=disk_0_deck_h*2-1, center=true, $fn=faces_rough);
 }
+
 
 module class_0_secondary() {
     difference(){
@@ -96,6 +99,7 @@ module class_0_secondary() {
 
     translate([class_0_secondary_l/2-class_0_secondary_w/2,0,0])
     intersection() {
+        color("LightSkyBlue")
         sphere(d=class_0_secondary_w-2, $fn=faces_rough);
         
         translate([0,0,-class_0_secondary_w/2-.05])
@@ -112,6 +116,7 @@ module class_0_habitat() {
     }
     
     rotate([0,90,0])
+    color("Snow")
     cylinder(d=disk_0_upper_d*.7, h=disk_0_width+1, center=true, $fn=faces_convex);
     
     translate([disk_1_height*.75,0,disk_1_height*.5/2])
@@ -128,6 +133,7 @@ module class_1_nacelle() {
             translate([0,0,class_1_nacelle_w/4])
             sphere(d=class_1_nacelle_w, $fn=faces_convex);
 
+            color("SteelBlue")
             cylinder(d=class_1_nacelle_w,h=class_1_nacelle_w/2,center=true, $fn=faces_convex);
         }
 
@@ -137,6 +143,7 @@ module class_1_nacelle() {
     }
 
     translate([class_1_nacelle_l/5.5,0,0])
+    color("FireBrick")
     scale([2,1,1]) {
         util_mirrored([0,0,1])
         translate([0,0,class_1_nacelle_w/4])
@@ -202,6 +209,7 @@ module class_1_sec_body() {
     
     translate([-class_1_secondary_l*.63,0,0])
     intersection() {
+        color("DimGray")
         sphere(d=class_1_secondary_w*.7-2, $fn=faces_rough);
         translate([0,0,class_1_secondary_w/2+.05])
         cube(class_1_secondary_w, center=true);
@@ -281,6 +289,7 @@ module class_2_nacelle() {
         linear_extrude(height=class_2_nacelle_h*.7, convexity=10, scale=[.6,.5])
         class_2_nacelle_flat();
 
+        color("FireBrick")
         linear_extrude(height=class_2_nacelle_h*.8, convexity=10, scale=[.64,1])
         translate([class_2_nacelle_l*.1,0,0])
         square([.25*class_2_nacelle_l, .4*class_2_nacelle_w], center=true);
@@ -301,8 +310,8 @@ module class_2_sec_body() {
             circle(d=class_2_secondary_w, $fn=faces_convex);
 
             rotate(12.5)
-            translate([0,class_2_secondary_l/4,0])
-            square([class_2_secondary_w, class_2_secondary_l/2], center=true);
+            translate([0,class_2_secondary_l*.8/4,0])
+            square([class_2_secondary_w, class_2_secondary_l*.8/2], center=true);
         }
 
         translate([-class_2_secondary_l/2,class_2_secondary_l/4,0])
@@ -347,11 +356,13 @@ module class_2_sec_body() {
     translate([-class_2_secondary_l*.75+class_2_secondary_w,0,0])
     scale([1,1,.6])
     difference() {
+        color("DimGray")
         sphere(d=class_2_secondary_w*.6, $fn=faces_rough);
         translate([0,0,-class_2_secondary_w/2])
         cube(class_2_secondary_w, center=true);
     }
 }
+
 
 module class_2_secondary() {
     class_2_sec_body();
@@ -383,6 +394,7 @@ module class_3_nacelle() {
         union() {
             translate([class_3_nacelle_l/2-.01,0,0])
             rotate(-90)
+            color("FireBrick")
             rotate_extrude(angle=180, convexity=10, $fn=faces_convex) {
                 translate([class_3_nacelle_w/2-class_3_nacelle_h/2,0,0])
                 circle(d=class_3_nacelle_h, $fn=faces_rough);
@@ -412,6 +424,11 @@ module class_3_nacelle() {
         rotate([0,90,0])
         cylinder(d=class_3_nacelle_h/8, $fn=faces_rough, h=class_3_nacelle_l, center=true);
     }
+    
+    util_mirrored([0,1,0])
+        translate([0,class_3_nacelle_w/2-class_3_nacelle_h/16,0])
+    color("SteelBlue")
+    cube([class_3_nacelle_l,.5,class_3_nacelle_h/8],center=true);
 }
 
 module class_4_nacelle_flat() {
@@ -613,8 +630,6 @@ module class_4_body_minus() {
     translate([-class_4_body_l, 0, disk_4_height+4])
     cube([20,50,10],center=true);
 }
-
-
 
 module class_4_body() {
     difference() {
