@@ -1,9 +1,13 @@
 use <../lib/util.scad>
 include <common.scad>
 
+module window() {
+    translate([2,0,0])
+    cube([5, 2, 1], center=true);
+}
+
 module disk_0_plus() {
     translate([0,0,disk_0_deck_h/2])
-    color("LightGrey")
     cylinder(d1=disk_0_width, d2=(disk_0_width-2*disk_0_deck_h), h=disk_0_deck_h, center=true, $fn=faces_convex);
 
     translate([0,0,disk_0_deck_h])
@@ -25,6 +29,12 @@ module disk_0_under() {
         
         translate([0,0,-2*disk_0_deck_h])
         cylinder(d2=disk_0_upper_d-2, d1=disk_0_upper_d, h=.5, center=true, $fn=faces_convex);
+        
+        util_repeat_rot(7, [0,0,45])
+        translate([disk_0_upper_d/2+disk_0_deck_h,0,-disk_0_deck_h*.5]) window();
+        
+        util_repeat_rot(3, [0,0,90])
+        translate([disk_0_upper_d/2,0,-disk_0_deck_h*1.5]) window();
     }
 }
 
@@ -48,7 +58,24 @@ module disk_0_minus() {
     util_mirrored([0,1,0])
     translate([-disk_0_width/2-.4*disk_0_deck_h, disk_0_upper_d/2 + disk_0_deck_h/2, disk_0_deck_h/2+.5])
     sphere(d=.6*disk_0_deck_h, $fn=faces_convex);
+    
+    translate([disk_0_upper_d/2, 0, disk_0_deck_h*1.5])
+    scale([1,2,1])
+    window();
+    
+    util_mirrored([0,1,0])
+    util_repeat(3, [-4,0,0])
+    rotate(90)
+    translate([disk_0_upper_d/2, 0, disk_0_deck_h*1.5])
+    window();
+    
+    util_mirrored([0,1,0])
+    util_repeat_rot(6, [0,0,22])
+    translate([disk_0_width/2-disk_0_deck_h,0, disk_0_deck_h*.5])
+    window();
 }
+
+ 
 
 module disk_0() {
     difference() {
@@ -62,7 +89,6 @@ module disk_1_plus(){
     h_adj=disk_1_height-2*disk_0_deck_h;
     
     translate([0,0,h_adj/6])
-    color("DarkGray")
     cylinder(d1=disk_1_width-2*h_adj/3, d2=disk_1_width, h=h_adj/3, center=true, $fn=faces_convex);
     
     translate([0,0,h_adj/3+h_adj/3-.01])
@@ -84,7 +110,13 @@ module disk_1_minus() {
     translate([-disk_1_width*.48,0,disk_1_height*.4])
     rotate([90,0,0])
     cylinder(d=disk_0_deck_h*.75, h=disk_1_height*1.5, center=true, $fn=faces_rough);
+    
+    util_mirrored([0,1,0])
+    util_repeat_rot(9, [0,0,15])
+    translate([disk_1_width/2-3,0, 1.5])
+    window();
 }
+
 
 module disk_1() {
     difference() {
@@ -98,7 +130,6 @@ module disk_2_plus() {
     cylinder(d1=disk_2_width, d2=disk_2_width-4*disk_2_deck, h=2*disk_2_deck+.02, center=true, $fn=faces_convex);
     
     translate([0,0,4*disk_2_deck-.02])
-    color("DarkGray")
     cylinder(d1=disk_2_width-4*disk_2_deck, d2=disk_1_width+disk_2_deck*16, h=4*disk_2_deck+.02, center=true, $fn=faces_convex);
     
     translate([-disk_2_width/4-2*disk_2_deck,0,3*disk_2_deck])
@@ -128,6 +159,19 @@ module disk_2_minus() {
     rotate(155)
     translate([disk_2_width/2-2*disk_2_deck,0,3*disk_2_deck])
     cube([42, 20, 2*disk_2_deck], center=true);
+    
+    util_mirrored([0,1,0])
+    util_repeat_rot(40,[0,0,4])
+    translate([disk_2_width/2-disk_2_deck,0,disk_2_deck*.5]) window();
+    
+    util_mirrored([0,1,0])
+    util_repeat_rot(18,[0,0,9]) {
+        translate([disk_2_width/2-2*disk_2_deck,0,disk_2_deck*1.5]) window();
+        
+        rotate(2)
+        translate([disk_2_width/2-2*disk_2_deck,0,disk_2_deck*1.5]) window();
+    }
+   
 }
 
 
@@ -155,7 +199,6 @@ ratio3=(disk_4_width/2-disk_3_height)/(disk_4_width/2-disk_3_height/2);
 
 module disk_3_plus() {
     translate([0,0,-disk_3_height/4+.01])
-    color("DarkGray")
     cylinder(d1=disk_3_width-disk_3_height, d2=disk_3_width, h=disk_3_height/2+.02, center=true, $fn=faces_convex); 
 
     translate([0,0,disk_3_height/4-.01])
