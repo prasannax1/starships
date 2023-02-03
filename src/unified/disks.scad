@@ -6,6 +6,13 @@ module window() {
     cube([5, 2, 1], center=true);
 }
 
+module porthole() {
+    translate([2,0,0])
+    rotate([0,90,0])
+    cylinder(d=.75, h=5, center=true, $fn=12);
+}
+
+
 module disk_0_plus() {
     translate([0,0,disk_0_deck_h/2])
     cylinder(d1=disk_0_width, d2=(disk_0_width-2*disk_0_deck_h), h=disk_0_deck_h, center=true, $fn=faces_convex);
@@ -31,10 +38,10 @@ module disk_0_under() {
         cylinder(d2=disk_0_upper_d-2, d1=disk_0_upper_d, h=.5, center=true, $fn=faces_convex);
         
         util_repeat_rot(7, [0,0,45])
-        translate([disk_0_upper_d/2+disk_0_deck_h,0,-disk_0_deck_h*.5]) window();
+        translate([disk_0_upper_d/2+disk_0_deck_h,0,-disk_0_deck_h*.5]) porthole();
         
         util_repeat_rot(3, [0,0,90])
-        translate([disk_0_upper_d/2,0,-disk_0_deck_h*1.5]) window();
+        translate([disk_0_upper_d/2,0,-disk_0_deck_h*1.5]) porthole();
     }
 }
 
@@ -67,7 +74,7 @@ module disk_0_minus() {
     util_repeat(3, [-4,0,0])
     rotate(90)
     translate([disk_0_upper_d/2, 0, disk_0_deck_h*1.5])
-    window();
+    porthole();
     
     util_mirrored([0,1,0])
     util_repeat_rot(6, [0,0,22])
@@ -112,7 +119,7 @@ module disk_1_minus() {
     cylinder(d=disk_0_deck_h*.75, h=disk_1_height*1.5, center=true, $fn=faces_rough);
     
     util_mirrored([0,1,0])
-    util_repeat_rot(9, [0,0,15])
+    util_repeat_rot(15, [0,0,9])
     translate([disk_1_width/2-3,0, 1.5])
     window();
 }
