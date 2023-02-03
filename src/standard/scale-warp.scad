@@ -11,5 +11,5 @@ use <intrepid.scad>;
 
 warp();
 
-translate([100,0,200]) sovereign();
-translate([-600,0,150]) intrepid();
+translate([0,0,200]) sovereign();
+translate([-800,0,150]) intrepid();

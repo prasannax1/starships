@@ -1,4 +1,4 @@
-use <../unified/main.scad>;
+use <scale-components.scad>;
 use <kelvin.scad>;
 use <vengeance.scad>;
 

@@ -10,13 +10,11 @@ use <../unified/command_simple.scad>;
 use <../unified/command_alt.scad>;
 use <excelsior.scad>;
 use <constitution-refit.scad>;
+use <sovereign.scad>;
 
-translate([50,0,100]) excelsior();
+translate([0,0,100]) excelsior();
 
-translate([75,0,0]) command_full();
+translate([0,0,0]) command_full();
 
-translate([-180,0,-100]) command_simple();
+translate([100,0,-100]) sovereign();
 
-translate([-360,0,0]) command_alt();
-
-translate([-360,0,100]) constitution_refit();

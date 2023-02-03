@@ -5,10 +5,10 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../unified/labs_alt.scad>;
-use <odyssey.scad>;
+use <../unified/labs_full.scad>;
+use <galaxy.scad>;
 
 
-labs_alt();
+labs_full();
 
-translate([200,0,150]) odyssey();
+translate([-50,0,180]) galaxy();

@@ -6,11 +6,11 @@ Other files not included in source code.
 */
 
 use <../unified/scout_full.scad>;
-use <../unified/scout_simple.scad>;
+use <../unified/scout_alt.scad>;
 use <constitution.scad>;
 use <equinox.scad>;
 
-translate([0,0,80]) scout_simple();
+translate([0,0,80]) scout_alt();
 
 scout_full();
 
