@@ -235,24 +235,6 @@ module disk_3_minus() {
     cube([2, 60, 40], center=true);
     
     translate([0,0,disk_3_height/2-6+.05]) disk_0_under_2();
-    
-    util_mirrored([0,1,0]) {
-        util_repeat(19, [-7,0,0])
-        util_repeat(5, [0,0,20/6])
-        translate([-disk_3_width/2+20, disk_3_body_width/2, 20/12])
-       rotate(90) 
-        window();
-        
-        util_repeat(4, [0,0,20/6])
-        translate([-disk_3_width/2+20+7, disk_3_body_width/2, 20/12 + 20/6])
-        rotate(90) 
-        window();
-        
-        util_repeat(3, [0,0,20/6])
-        translate([-disk_3_width/2+20+7+7, disk_3_body_width/2, 20/12 + 20/6 + 20/6])
-        rotate(90) 
-        window();
-    }
 }
 
 module disk_3() {
@@ -321,30 +303,20 @@ module disk_4_minus() {
     translate([disk_3_width/2,0,0])
     square([disk_2_width, 2], center=true);
     
-    util_mirrored([0,1,0]) {
-        util_repeat_rot(7, [0,0,360/16])
-        translate([disk_4_width/2-15,0,8.33])
-        cube([50,50,10], center=true);
+    util_mirrored([0,1,0])
+    util_repeat_rot(7, [0,0,360/16])
+    translate([disk_4_width/2-15,0,8.33])
+    cube([50,50,10], center=true);
         
-        util_repeat_rot(7, [0,0,360/16])
-        translate([disk_4_width/2-5, 0, 5/3]) 
-        scale([1,4,1]) window();
-        
-        util_repeat_rot(7, [0,0,360/16])
-        util_repeat_rot(10, [0,0,2])
-        rotate(2)
-        translate([disk_4_width/2-5, 0, 5/3]) 
-        scale([1,2,1])
-        window();
-        
-        rotate(10)
-        util_repeat_rot(7, [0,0,360/16])
-        util_repeat(13, [-8.5,0,10/3])
-        util_repeat_rot(1, [0,0,4])
-        translate([disk_4_width/2-15, 0, 5/3+10/3]) 
-        scale([1,2,1])
-        window();
-    }
+    util_mirrored([0,1,0])
+    util_repeat_rot(39, [0,0,4])
+    translate([disk_4_width/2-5, 0, 5/3]) 
+    scale([1,10,1]) window();
+    
+    util_mirrored([0,1,0])
+    util_repeat_rot(39, [0,0,4])
+    translate([disk_4_upper/2, 0, disk_4_height-5/3]) 
+    scale([1,6,1]) window();
 }
 
 module disk_4() {

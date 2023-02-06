@@ -39,7 +39,7 @@ disk_3_height=40;
 disk_3_body_width=180;
 
 disk_4_width=750;
-disk_4_upper=500;
+disk_4_upper=525;
 disk_4_height=50;
 
 class_3_nacelle_w=80;
