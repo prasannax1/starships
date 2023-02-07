@@ -4,11 +4,13 @@ use <../lib/util.scad>
 include <common.scad>
 
 module escort() {
-    h_adj=disk_1_height-2*disk_0_deck_h;
-    translate([0,0,h_adj-.02]) disk_0();
+    intersection() {
+        disk_1();
+        
+        translate([0,0,.75*disk_1_width+.005])
+        cube(1.5*disk_1_width, center=true);
+    }
     
-    translate([0,0,h_adj*1/6+.01])
-    cylinder(d=disk_1_width, h=h_adj*1/3, center=true, $fn=faces_rough);
 
     util_mirrored([0,1,0])
     translate([0,disk_1_width*.25,class_2_nacelle_w/2])
