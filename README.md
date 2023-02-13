@@ -159,7 +159,7 @@ The B-class is built on the class 2 habitat, which enhances the class 1 habitat 
 
 The class 2 habitat is normally used as a strategic space station, but can be combined with class 1 engines to form a light explorer
 
-![light explorer](images/mother/command_medium.png)
+![light explorer](images/mother/command_alt.png)
 
 or with a class 2 engine to form a destroyer/scout
 
@@ -205,7 +205,7 @@ Two class 1 habitats form the command section of this vessel, with one acting as
 
 The C class primary hull can be combined with class 2 warp engines to form an independent explorer combination:
 
-![labs simple](images/mother/labs_medium.png)
+![labs simple](images/mother/labs_alt.png)
 
 or it can be combined with a class 4 engine to form a transwarp explorer[^class4]
 
