@@ -93,13 +93,13 @@ module class_0_secondary() {
         cylinder(d=class_0_secondary_w, h=class_0_secondary_w*2, center=true, $fn=faces_concave);
         
         util_mirrored([0,1,0])
-        util_repeat(7, [-2.5,0,0])
-        translate([class_0_secondary_l*.4, class_0_secondary_w/2, -1.25]) 
+        util_repeat(3, [-5,0,0])
+        translate([class_0_secondary_l*.3, class_0_secondary_w/2, -1.25]) 
         rotate(90) porthole();
         
         util_mirrored([0,1,0])
-        util_repeat(3, [-5,0,0])
-        translate([class_0_secondary_l*.4-2.5, class_0_secondary_w/2-2.5, -1.25-2.5]) 
+        util_repeat(2, [-6,0,0])
+        translate([class_0_secondary_l*.3-2.5, class_0_secondary_w/2-2.5, -1.25-2.5+.2]) 
         rotate(90) porthole();
     }
 
@@ -125,12 +125,12 @@ module class_0_habitat() {
         util_mirrored([0,1,0])
         util_mirrored([0,0,1])
         util_mirrored([1,0,0]) {
-            util_repeat(4, [-3,0,0])
+            util_repeat(2, [-6,0,0])
             translate([0, disk_0_upper_d/2-1, 1.5])
             rotate(90)
             porthole();
             
-            util_repeat(2, [-3,0,0])
+            util_repeat(1, [-6,0,0])
             translate([0, disk_0_upper_d/2-2.5, 4.5])
             rotate(90)
             porthole();
@@ -142,11 +142,11 @@ module class_0_habitat() {
         cylinder(d=disk_0_upper_d*.7, h=disk_0_width+1, center=true, $fn=faces_convex);
         
         util_mirrored([1,0,0]) {
-            translate([disk_0_width/2, 0, 1.5])
+            translate([disk_0_width/2+.75, 0, 1.5])
             window();
             
             util_mirrored([0,1,0])
-            translate([disk_0_width/2, .75, -1.5])
+            translate([disk_0_width/2+.75, .75, -1.5])
             porthole();
         }
     }
@@ -277,6 +277,17 @@ module class_1_sec_minus() {
     scale([3.2,1,1])
     rotate([90,0,0])
     cylinder(d=class_1_secondary_w, h=class_1_secondary_w, $fn=faces_concave, center=true);
+    
+    util_mirrored([0,1,0])
+    util_mirrored([0,0,1])
+    translate([0,class_1_secondary_w/2, 1.5])
+    rotate(90)
+    porthole();
+    
+    util_mirrored([0,1,0])
+    translate([-6, class_1_secondary_w/2, -1.5])
+    rotate(90)
+    window();
 
 }
 
@@ -403,7 +414,6 @@ module class_2_sec_body() {
         cube(class_2_secondary_w, center=true);
     }
 }
-
 
 module class_2_secondary() {
     class_2_sec_body();
