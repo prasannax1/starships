@@ -52,7 +52,7 @@ class_4_body_height=135;
 class_4_body_l=720;
 class_4_body_hangar=100;
 
-class_4_nacelle_sep=500;
+class_4_nacelle_sep=400;
 
 class_4_hangar_h=90;
 class_4_hangar_w=180;
