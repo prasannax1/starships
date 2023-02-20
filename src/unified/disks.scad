@@ -308,14 +308,6 @@ module disk_4_plus() {
     translate([disk_3_width/4 + disk_4_upper/4 + 5,0,disk_4_height-.01])
     disk_0();
     
-    
-    util_mirrored([0,1,0])
-    util_repeat_rot(3, [0,0,-10])
-    rotate(150)
-    translate([disk_3_width/4 + disk_4_upper/4 + 5,0,disk_4_height-.01])
-    rotate(180)
-    disk_0();
-    
     util_mirrored([0,1,0])
     translate([-disk_4_width/2,class_4_body_w/2-5,0])
     scale([2,1,.8])
