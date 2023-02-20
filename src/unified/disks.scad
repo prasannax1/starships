@@ -246,9 +246,47 @@ module disk_3() {
     translate([-disk_2_width/2-disk_1_width/2-disk_0_width,0,disk_3_height/2-3.35]) disk_1();
 }
 
-module disk_4_plus() {
+module disk_4_flat() {
+    intersection() {
+        union() {
+            translate([disk_4_upper/2,0,0])
+            scale([(disk_4_width-disk_4_upper)*.5/disk_4_height,1,1])
+            circle(d=disk_4_height*2, $fn=faces_convex);
+
+            square([disk_4_upper, disk_4_height*2], center=true);
+        }
+
+        translate([disk_4_width/2, disk_4_width/2-.05, 0])
+        square(disk_4_width, center=true);
+    }
+}
+
+module disk_4_base_1() {
     translate([0,0,disk_4_height/2-.01])
     cylinder(d1=disk_4_width, d2=disk_4_upper, h=disk_4_height+.02, center=true, $fn=faces_concave);
+}
+
+module disk_4_base_2() {
+    rotate_extrude(angle=360, convexity=2, $fn=faces_concave)
+    disk_4_flat();
+}
+
+module disk_4_base_3() {
+    translate([0,0,(10+20/3)]) {
+        translate([0,0,-(10+20/3)/2+.01])
+        cylinder(d1=disk_4_width-2*(20/3+10), d2=disk_4_width, h=(20/3+10), $fn=faces_concave, center=true);
+
+        translate([0,0,0.5*(disk_4_height-(10+20/3))-.01])
+        cylinder(d1=disk_4_width, d2=disk_4_upper, h=disk_4_height-(10+20/3), $fn=faces_concave, center=true);
+    }
+}
+
+module disk_4_base() {
+    disk_4_base_3();
+}
+
+module disk_4_plus() {
+    disk_4_base();
 
     translate([-disk_4_width/4,0,disk_4_height/2])
     cube([disk_4_width/2, class_4_body_w-2*class_4_body_curve, disk_4_height], center=true);
@@ -268,6 +306,14 @@ module disk_4_plus() {
     cylinder(d1=disk_0_width-10, d2=disk_0_width, h=5+.02, center=true, $fn=faces_convex);
     
     translate([disk_3_width/4 + disk_4_upper/4 + 5,0,disk_4_height-.01])
+    disk_0();
+    
+    
+    util_mirrored([0,1,0])
+    util_repeat_rot(3, [0,0,-10])
+    rotate(150)
+    translate([disk_3_width/4 + disk_4_upper/4 + 5,0,disk_4_height-.01])
+    rotate(180)
     disk_0();
     
     util_mirrored([0,1,0])
@@ -305,18 +351,18 @@ module disk_4_minus() {
     
     util_mirrored([0,1,0])
     util_repeat_rot(7, [0,0,360/16])
-    translate([disk_4_width/2-15,0,8.33])
+    translate([disk_4_width/2,0,8.33])
     cube([50,50,10], center=true);
         
     util_mirrored([0,1,0])
     util_repeat_rot(39, [0,0,4])
-    translate([disk_4_width/2-5, 0, 5/3]) 
-    scale([1,10,1]) window();
+    translate([disk_4_width/2-(20/3+10), 0, 5/3]) 
+    scale([1,8,1]) window();
     
     util_mirrored([0,1,0])
     util_repeat_rot(39, [0,0,4])
-    translate([disk_4_upper/2, 0, disk_4_height-5/3]) 
-    scale([1,6,1]) window();
+    translate([disk_4_width/2-5, 0, (20/3+10)-5/3]) 
+    scale([1,10,1]) window();
 }
 
 module disk_4() {
@@ -324,10 +370,5 @@ module disk_4() {
         disk_4_plus();
         disk_4_minus();
     }
-    
-    util_mirrored([0,1,0])
-    util_repeat_rot(7, [0,0,360/16])
-    translate([disk_4_width/2-36,0,3.33])
-    cube([48,48,1], center=true);
 }
 
