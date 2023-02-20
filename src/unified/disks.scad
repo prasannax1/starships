@@ -273,11 +273,11 @@ module disk_4_base_2() {
 
 module disk_4_base_3() {
     translate([0,0,(10+20/3)]) {
-        translate([0,0,-(10+20/3)/2+.01])
-        cylinder(d1=disk_4_width-2*(20/3+10), d2=disk_4_width, h=(20/3+10), $fn=faces_concave, center=true);
+        translate([0,0,-(10+20/3)/2])
+        cylinder(d1=disk_4_width-2*(20/3+10), d2=disk_4_width, h=(20/3+10)+0.02, $fn=faces_concave, center=true);
 
-        translate([0,0,0.5*(disk_4_height-(10+20/3))-.01])
-        cylinder(d1=disk_4_width, d2=disk_4_upper, h=disk_4_height-(10+20/3), $fn=faces_concave, center=true);
+        translate([0,0,0.5*(disk_4_height-(10+20/3))])
+        cylinder(d1=disk_4_width, d2=disk_4_upper, h=disk_4_height-(10+20/3)+.02, $fn=faces_concave, center=true);
     }
 }
 
