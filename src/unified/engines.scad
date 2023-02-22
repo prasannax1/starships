@@ -678,7 +678,7 @@ module class_4_body_plus() {
             cylinder(h=150,d=20, center=true, $fn=faces_rough);
             
             translate([0,0,.05])
-            cube([150, class_4_nacelle_sep, 10], center=true);
+            cube([150, class_4_nacelle_sep, 20], center=true);
             
             util_mirrored([0,1,0])
             translate([class_3_nacelle_l/4,class_4_nacelle_sep/2,0-class_3_nacelle_h/2+15.6])
