@@ -289,15 +289,15 @@ module disk_4_plus() {
     disk_4_base();
 
     translate([-disk_4_width/4,0,disk_4_height/2])
-    cube([disk_4_width/2, class_4_body_w-2*class_4_body_curve, disk_4_height], center=true);
+    cube([disk_4_width/2, class_4_body_w-2*class_4_body_upper_curve, disk_4_height], center=true);
 
-    translate([-disk_4_width/4,0,disk_4_height/2-class_4_body_curve/2])
-    cube([disk_4_width/2, class_4_body_w, disk_4_height-class_4_body_curve], center=true);
+    translate([-disk_4_width/4,0,disk_4_height/2-class_4_body_upper_curve/2])
+    cube([disk_4_width/2, class_4_body_w, disk_4_height-class_4_body_upper_curve], center=true);
 
     util_mirrored([0,1,0])
-    translate([-disk_4_width/4,class_4_body_w/2-class_4_body_curve,disk_4_height-class_4_body_curve])
+    translate([-disk_4_width/4,class_4_body_w/2-class_4_body_upper_curve,disk_4_height-class_4_body_upper_curve])
     rotate([0,90,0])
-    cylinder(r=class_4_body_curve, h=disk_4_width/2, center=true, $fn=faces_rough);
+    cylinder(r=class_4_body_upper_curve, h=disk_4_width/2, center=true, $fn=faces_rough);
     
     translate([0,0,-5+.01])
     cylinder(d1=disk_1_width-20, d2=disk_1_width, h=10, $fn=faces_convex, center=true);
@@ -309,11 +309,11 @@ module disk_4_plus() {
     disk_0();
     
     util_mirrored([0,1,0])
-    translate([-disk_4_width/2,class_4_body_w/2-5,0])
+    translate([-disk_4_width/2,40,0])
     scale([2,1,.8])
     intersection() {
         rotate([0,45,0])
-        cube([80,10, 80], center=true);
+        cube([80,40, 80], center=true);
 
         translate([100-.01,0,-100+.01])
         cube(200, center=true);
@@ -356,6 +356,8 @@ module disk_4_minus() {
     translate([disk_4_width/2-5, 0, (20/3+10)-5/3]) 
     scale([1,10,1]) window();
 }
+
+disk_4();
 
 module disk_4() {
     difference() {

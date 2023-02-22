@@ -578,32 +578,62 @@ module class_4_secondary() {
     }
 }
 
-module class_4_body_base() {
-    intersection() {
-        rotate([-90,0,0])
-        rotate_extrude(angle=180, convexity=10, $fn=faces_concave) {
+
+module class_4_body_flat() {
+    difference() {
+        class_4_body_flat_plus();
+        class_4_body_flat_minus();
+    }
+}
+
+module class_4_body_flat_plus() {
             util_mirrored([0,1,0])
             translate([class_4_body_height-class_4_body_curve, class_4_body_w/2-class_4_body_curve, 0])
-            circle(r=class_4_body_curve, $fn=faces_rough);
+            circle(r=class_4_body_curve, $fn=faces_convex);
 
             translate([(class_4_body_height-class_4_body_curve)/2,0,0])
             square([class_4_body_height-class_4_body_curve, class_4_body_w], center=true);
 
             translate([class_4_body_height-class_4_body_curve,0,0])
             square([2*class_4_body_curve, class_4_body_w-2*class_4_body_curve],center=true);
-        }
+}
 
+module class_4_body_flat_minus() {
+            util_mirrored([0,1,0])
+            translate([class_4_body_height-class_4_body_curve, class_4_body_w/2-class_4_body_curve, 0])
+            circle(r=class_4_body_curve-class_4_body_wall, $fn=6);
+
+            translate([(class_4_body_height+.5*class_4_body_wall-class_4_body_curve)/2,0,0])
+            square([class_4_body_height-class_4_body_curve-class_4_body_wall, class_4_body_w-2*class_4_body_wall], center=true);
+
+            translate([class_4_body_height-class_4_body_curve,0,0])
+            square([2*class_4_body_curve-2*class_4_body_wall, class_4_body_w-2*class_4_body_curve],center=true);
+}
+
+
+module class_4_body_base() {
+    intersection() {
         union() {
-            translate([0,0,-1.25*class_4_body_height-class_4_body_curve])
+            rotate([-90,0,0])
+            rotate_extrude(angle=180, convexity=10, $fn=faces_concave) class_4_body_flat();
+            
+            util_mirrored([1,0,0])
+            mirror([0,0,1])
+            linear_extrude(height=class_4_body_wall, convexity=10)
+            class_4_body_flat_plus();
+        }
+        
+        union() {
+            translate([0,0,-1.25*class_4_body_height-class_4_body_upper_curve])
             cube([2.5*class_4_body_height, class_4_body_w, 2.5*class_4_body_height], center=true);
 
             util_mirrored([0,1,0])
-            translate([0, class_4_body_w/2-class_4_body_curve, -class_4_body_curve])
+            translate([0, class_4_body_w/2-class_4_body_upper_curve, -class_4_body_upper_curve])
             rotate([0,90,0])
-            cylinder(r=class_4_body_curve, h=2.5*class_4_body_height, $fn=faces_rough, center=true);
+            cylinder(r=class_4_body_upper_curve, h=2.5*class_4_body_height, $fn=faces_rough, center=true);
 
-            translate([0,0,-class_4_body_curve])
-            cube([2.5*class_4_body_height, class_4_body_w-2*class_4_body_curve, 2*class_4_body_curve], center=true);
+            translate([0,0,-class_4_body_upper_curve])
+            cube([2.5*class_4_body_height, class_4_body_w-2*class_4_body_upper_curve, 2*class_4_body_upper_curve], center=true);
         }
     }
 }
@@ -614,7 +644,8 @@ module class_4_body_plus() {
             scale([1.5,1,1])
             class_4_body_base();
 
-            cube([2*class_4_body_height, class_4_body_l, class_4_body_l], center=true);
+            translate([class_4_body_height/2,0,0])
+            cube([class_4_body_height+.02, class_4_body_l, class_4_body_l], center=true);
         }
 
         scale([(class_4_body_l-class_4_body_height)/class_4_body_height,1,1])
@@ -626,7 +657,7 @@ module class_4_body_plus() {
                 cube(2.5*class_4_body_w, center=true);
             }
 
-            translate([-class_4_body_height*.66,0,-class_4_body_hangar])
+            translate([-class_4_body_height*.64,0,-class_4_body_hangar*.95])
             translate([-class_4_body_hangar,0,0])
             rotate([90,0,0])
             cylinder(r=class_4_body_hangar, h=1.5*class_4_body_w, center=true, $fn=faces_concave);
@@ -654,6 +685,28 @@ module class_4_body_plus() {
             class_3_nacelle();
         }
     }
+    
+    intersection() {
+        translate([-class_4_body_l/2, 0, -class_4_body_w/2- class_4_hangar_h/2])
+        cube([class_4_body_l, class_4_body_w, class_4_body_w], center=true);
+
+        union() {
+            translate([-class_4_body_height,0, disk_4_height])
+            scale([1.5,1,1])
+            rotate([90,0,0])
+            cylinder(r=class_4_body_height, h=class_4_body_w-2*class_4_body_curve, center=true);
+
+            translate([-class_4_body_height,0, disk_4_height])
+            scale([.905*(class_4_body_l-class_4_body_height)/class_4_body_height,1,1])
+            intersection() {
+            rotate([90,0,0])
+            cylinder(r=class_4_body_height, h=class_4_body_w-2*class_4_body_curve, center=true);
+                
+                translate([-class_4_body_height*1.25+.01,0,0])
+                cube(class_4_body_height*2.5, center=true);
+            }
+        }
+    }
 }
 
 
@@ -669,15 +722,7 @@ module class_4_hangar_door_flat() {
 }
 
 module class_4_body_minus() {
-    translate([-1,0,0])
-    rotate([0,90,0])
-    linear_extrude(height=2, convexity=10)
-    class_4_hangar_door_flat();
-    
-    translate([-.72*class_4_body_l,0,0])
-    rotate([0,-90,0])
-    linear_extrude(height=class_4_body_l/2, convexity=10)
-    class_4_hangar_door_flat();
+
     
     translate([-class_4_body_w/2,0,disk_4_height])
     cylinder(d1=disk_1_width, d2=disk_1_width+12, h=6, center=true, $fn=faces_concave);
@@ -694,6 +739,8 @@ module class_4_body_minus() {
     translate([-class_4_body_l/2, class_4_body_w/2, 5/3])
     cube([class_4_body_l,2,1.5], center=true);
 }
+
+
 
 
 module class_4_body() {

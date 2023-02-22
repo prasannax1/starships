@@ -47,7 +47,10 @@ class_3_nacelle_h=30;
 class_3_nacelle_l=360;
 
 class_4_body_w=200;
-class_4_body_curve=10;
+class_4_body_curve=50;
+class_4_body_upper_curve=10;
+class_4_body_inner_curve=5;
+class_4_body_wall=10;
 class_4_body_height=135;
 class_4_body_l=720;
 class_4_body_hangar=100;

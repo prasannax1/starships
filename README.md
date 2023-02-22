@@ -125,6 +125,7 @@ or with a class 1 secondary hull to form the more common configuration shown abo
 ##### Auxillary vessels
 
  - Type 20 small shuttles
+ - Bumblebee shuttlepods
 
 #### Atlas-B Class
 
@@ -170,6 +171,7 @@ or with the class 2 secondary hull with its massive 150m hangar to form a space 
 ##### Auxillary vessels
 
   - Type 20 small shuttles
+  - Bumblebee shuttlepods
   - Type 23 medium shuttles
   - Type 3 large shuttles
   - Pirahna class fighters
@@ -201,17 +203,15 @@ The C Class is closest to the original pre-dominion design of the Atlas. The not
 
 The main hull of the C class is a flat disk with the rear extended into a rectangular edge. The fore part of the saucer contains sensors, labs, living areas etc., while the aft section is dominated by four large hangars which can hold intermediate vessels.
 
-Two class 1 habitats form the command section of this vessel, with one acting as a redundant backup of the other, or detaching to form an independent explorer ship.
+A class 1 habitats forms the command section of this vessel, which can also detach to form an independent explorer ship.
 
 The C class primary hull can be combined with class 2 warp engines to form an independent explorer combination:
 
 ![labs simple](images/mother/labs_alt.png)
 
-or it can be combined with a class 4 engine to form a transwarp explorer[^class4]
+or it can be combined with 2 class 3 engine to form a super heavy cruiser
 
 ![labs full](images/mother/labs_full.png)
-
-[^class4] more about class 4 engine in the G-class section.
 
 ##### Auxillary vessels
 
@@ -219,6 +219,11 @@ or it can be combined with a class 4 engine to form a transwarp explorer[^class4
   - Orca class light corvettes
   - Raven class science vessels
   - Orbit class Yachts
+- Shuttles
+  - Type 20 small shuttles
+  - Bumblebee shuttlepods
+  - Type 23 medium shuttles
+  - Type 3 large shuttles
 
 #### Atlas D class
 
