@@ -542,13 +542,13 @@ module class_4_secondary_plus() {
     difference() {
         translate([-class_4_nacelle_l*.5,0,.01])
         mirror([0,0,1])
-        linear_extrude(height=class_4_nacelle_w*.4, convexity=10, scale=[.9,1])
+        linear_extrude(height=class_4_nacelle_w*.32, convexity=10, scale=[.88,1])
         translate([-class_4_nacelle_l*.4*.5,0,0])
         square([class_4_nacelle_l*.4, class_4_nacelle_w*.6], center=true);
         
         
-        translate([-class_4_nacelle_l*.9,0,-class_4_nacelle_w*.2])
-        cube([180,50,25], center=true);
+        translate([-class_4_nacelle_l*.9,0,-class_4_nacelle_w*.2+5])
+        cube([200,50,25], center=true);
     }
     
     translate([-class_4_nacelle_l*.5,0,.01])
@@ -565,7 +565,7 @@ module class_4_secondary_minus() {
     cylinder(d1=15, d2=45, center=true, $fn=faces_concave, h=class_4_nacelle_w*.5);
     
     util_mirrored([0,1,0])
-    util_repeat(7, [5/3,0,-10/3])
+    util_repeat(5, [5/3,0,-10/3])
     translate([-class_4_nacelle_l/2-class_4_nacelle_w/2, class_4_nacelle_w*.3, -20/3])
     cube([class_4_nacelle_l, 1,1], center=true);
 }
