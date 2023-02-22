@@ -357,7 +357,6 @@ module disk_4_minus() {
     scale([1,10,1]) window();
 }
 
-disk_4();
 
 module disk_4() {
     difference() {
