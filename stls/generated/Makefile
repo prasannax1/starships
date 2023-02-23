@@ -14,6 +14,7 @@ unifiedSTL += labs_alt.stl
 unifiedSTL += carrier.stl
 unifiedSTL += main.stl
 unifiedSTL += main_lowered.stl
+unifiedSTL += scale_cruisers.stl
 unifiedSTL += warp.stl
 unifiedSTL += attack.stl
 unifiedSTL += destroyer.stl
@@ -59,6 +60,10 @@ frigate.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 diplomat.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
 	../../src/unified/diplomat.scad
+
+scale_cruisers.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/scout_full.scad ../../src/unified/command_full.scad \
+	../../src/unified/scale_cruisers.scad
 
 yacht.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
