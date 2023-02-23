@@ -576,8 +576,10 @@ module class_4_secondary() {
         class_4_secondary_plus();
         class_4_secondary_minus();
     }
+    
+    translate([-class_4_nacelle_l+175,0,-2])
+    cube([100, 10, 6], center=true);
 }
-
 
 module class_4_body_flat() {
     difference() {
@@ -707,7 +709,17 @@ module class_4_body_plus() {
             }
         }
     }
+    
+    util_mirrored([0,1,0])
+    translate([-class_4_body_l/2+25, class_4_body_w/4, class_4_hangar_h/2-4])
+    cube([class_4_body_l-50, 10, 6], center=true);
+    
+    util_mirrored([0,1,0])
+    translate([-class_4_body_l * .75/2, class_4_body_w/2-12,0])
+    cube([class_4_body_l*.75, 16, 10], center=true);
 }
+
+
 
 
 module class_4_hangar_door_flat() {
@@ -739,8 +751,6 @@ module class_4_body_minus() {
     translate([-class_4_body_l/2, class_4_body_w/2, 5/3])
     cube([class_4_body_l,2,1.5], center=true);
 }
-
-
 
 
 module class_4_body() {
