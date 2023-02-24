@@ -206,21 +206,21 @@ module class_1_neck() {
             translate([0,0,-disk_1_height])
             class_1_neck_element_2();
 
-            translate([-disk_1_height*2.75,0,-disk_1_height])
+            translate([-disk_1_height*3,0,-disk_1_height])
             class_1_neck_element_2();
         }
         
         util_mirrored([0,1,0])
         util_repeat(4, [0,0,-3])
-        translate([-0, 2, -1.5]) rotate(90) window();
+        translate([-0, class_1_neck_w/2, -1.5]) rotate(90) window();
         
         util_mirrored([0,1,0])
         util_repeat(7, [3,0,0])
-        translate([-3, 2, -1.5]) rotate(90) porthole();
+        translate([-3, class_1_neck_w/2, -1.5]) rotate(90) porthole();
         
         util_mirrored([0,1,0])
         util_repeat(8, [3,0,0])
-        translate([-18, 2, -7.5]) rotate(90) porthole();
+        translate([-18, class_1_neck_w/2, -7.5]) rotate(90) porthole();
     }
 }
 
@@ -313,18 +313,19 @@ module class_1_secondary() {
     translate([-4,0,0])
     util_mirrored([0,1,0])
     rotate([theta,0,0]) {
-        translate([-disk_1_width*.45, 0, disk_1_width/2])
+        translate([-disk_1_width*.5, 0, disk_1_width/2])
         rotate([-theta,0,0])
         class_1_nacelle();
 
         hull() {
             translate([0,0,class_1_secondary_w/4])
+            scale([2,1,1])
             sphere(d=3);
 
-            translate([-disk_1_width*.5, 0, disk_1_width/2])
+            translate([-disk_1_width*.55, 0, disk_1_width/2])
             sphere(d=3);
 
-            translate([-disk_1_width*.9, 0, disk_1_width/2])
+            translate([-disk_1_width, 0, disk_1_width/2])
             sphere(d=3);
         }
     }
