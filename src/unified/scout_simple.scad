@@ -3,7 +3,11 @@ use <disks.scad>
 use <engines.scad>
 
 module scout_simple() {
-    disk_1();
+    intersection() {
+        disk_1();
+        translate([0,0,disk_1_width/2])
+        cube(disk_1_width, center=true);
+    }
     
     translate([-disk_1_width/4,0,0])
     class_0_secondary();

@@ -23,6 +23,7 @@ module class_0_attack_engine() {
     class_0_nacelle();
 }
 
+
 module class_0_hangars() {
     difference() {
         union() {
@@ -30,20 +31,20 @@ module class_0_hangars() {
             cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h), d2=disk_0_upper_d, h=disk_0_deck_h*2, center=true, $fn=faces_convex);
 
             linear_extrude(convexity=10, height=2*disk_0_deck_h, scale=[1,(disk_0_upper_d/ (disk_0_upper_d+2*disk_0_deck_h))])
-            translate([-disk_0_width/2,0,0])
-            square([disk_0_width, disk_0_upper_d+2*disk_0_deck_h], center=true);
+            translate([-class_0_hangar_l/2,0,0])
+            square([class_0_hangar_l, disk_0_upper_d+2*disk_0_deck_h], center=true);
 
-            translate([-disk_0_width,0,disk_0_deck_h])
+            translate([-class_0_hangar_l,0,disk_0_deck_h])
             cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h), d2=disk_0_upper_d, h=disk_0_deck_h*2, center=true, $fn=faces_convex);
 
             scale([1,1,.25]) {
                 sphere(d=disk_0_upper_d+2*disk_0_deck_h, $fn=faces_convex);
 
                 rotate([0,-90,0])
-                translate([0,0,disk_0_width/2])
-                cylinder(d=disk_0_upper_d+2*disk_0_deck_h, h=disk_0_width, center=true, $fn=faces_convex);
+                translate([0,0,class_0_hangar_l/2])
+                cylinder(d=disk_0_upper_d+2*disk_0_deck_h, h=class_0_hangar_l, center=true, $fn=faces_convex);
 
-                translate([-disk_0_width,0,0])
+                translate([-class_0_hangar_l,0,0])
                 sphere(d=disk_0_upper_d+2*disk_0_deck_h, $fn=faces_convex);
             }
         }
@@ -51,14 +52,14 @@ module class_0_hangars() {
         translate([disk_0_upper_d+.1,0,disk_0_deck_h])
         cube([2*disk_0_upper_d, 2*disk_0_upper_d, 4], center=true);
 
-        translate([-disk_0_upper_d-disk_0_width-.1,0,disk_0_deck_h])
+        translate([-disk_0_upper_d-class_0_hangar_l-.1,0,disk_0_deck_h])
         cube([2*disk_0_upper_d, 2*disk_0_upper_d, 4], center=true);
     }
 
     translate([0,0,disk_0_deck_h])
     cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h-1), d2=disk_0_upper_d-.5, h=disk_0_deck_h*2-1, center=true, $fn=faces_rough);
 
-    translate([-disk_0_width,0,disk_0_deck_h])
+    translate([-class_0_hangar_l,0,disk_0_deck_h])
     cylinder(d1=(disk_0_upper_d+2*disk_0_deck_h-1), d2=disk_0_upper_d-.5, h=disk_0_deck_h*2-1, center=true, $fn=faces_rough);
 }
 
@@ -189,13 +190,13 @@ module class_1_neck() {
             translate([disk_1_height*1.5,0,0])
             sphere(d=class_1_neck_w, $fn=faces_rough);
 
-            translate([-disk_1_height/3,0,0])
+            translate([0,0,0])
             sphere(d=class_1_neck_w, $fn=faces_rough);
 
-            translate([-disk_1_height/4,0,-disk_1_height])
+            translate([0,0,-disk_1_height])
             sphere(d=class_1_neck_w, $fn=faces_rough);
 
-            translate([-disk_1_height*1.2,0,-disk_1_height])
+            translate([-disk_1_height*2.75,0,-disk_1_height])
             sphere(d=class_1_neck_w, $fn=faces_rough);
         }
         
@@ -204,12 +205,12 @@ module class_1_neck() {
         translate([-3, 2, -1.5]) rotate(90) window();
         
         util_mirrored([0,1,0])
-        util_repeat(5, [3,0,0])
-        translate([0, 2, -1.5]) rotate(90) porthole();
+        util_repeat(7, [3,0,0])
+        translate([-3, 2, -1.5]) rotate(90) porthole();
         
         util_mirrored([0,1,0])
-        util_repeat(5, [3,0,0])
-        translate([-9, 2, -7.5]) rotate(90) porthole();
+        util_repeat(8, [3,0,0])
+        translate([-18, 2, -7.5]) rotate(90) porthole();
     }
 }
 

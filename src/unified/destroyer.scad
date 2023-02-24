@@ -17,7 +17,7 @@ module destroyer() {
         class_1_nacelle();
     }
     
-    translate([0,0,-disk_1_height*.75]) class_0_hangars();
+    translate([5,0,-disk_1_height*.75]) class_0_hangars();
 }
 
 destroyer();
