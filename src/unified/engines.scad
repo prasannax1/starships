@@ -303,17 +303,17 @@ module class_1_secondary() {
     translate([-class_1_neck_w,0,0])
     util_mirrored([0,1,0])
     rotate([theta,0,0]) {
-        translate([-disk_1_width/3, 0, disk_1_width/2])
+        translate([-disk_1_width*.45, 0, disk_1_width/2])
         rotate([-theta,0,0])
         class_1_nacelle();
 
         hull() {
             sphere(d=2);
 
-            translate([-disk_1_width*.4, 0, disk_1_width/2])
+            translate([-disk_1_width*.5, 0, disk_1_width/2])
             sphere(d=2);
 
-            translate([-disk_1_width*.75, 0, disk_1_width/2])
+            translate([-disk_1_width, 0, disk_1_width/2])
             sphere(d=2);
         }
     }

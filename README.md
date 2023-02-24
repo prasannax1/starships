@@ -24,7 +24,7 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Description
 
-The Atlas class is a massive ship almost 2KM long. 
+The Atlas class is a massive ship 2KM long. 
 
 It is mainly used as a mobile starbase and colony transporter. A typical mission of
 the Atlas class is to transwarp to unexplored space with entire colonies settled in its
@@ -34,7 +34,7 @@ federation territory.
 
 ![Ship scale](images/scale/scale-standard.png)
 
-The Atlas is intended to be on 20 year deep space missions between refits. Having industrial
+The Atlas is nominally intended to be on 20 year deep space missions between refits. But realistically the expectation for such ships is that once launched they become a world onto themselves, continuing exploration without intervention or support from Starfleet. Having industrial
 replicators on board, the Atlas doesn't even have to be physically present at a starbase for
 refits - it can download the specs and do a refit wherever it is.
 
