@@ -92,16 +92,6 @@ module class_0_secondary() {
         scale([2.5,1,1])
         rotate([90,0,0])
         cylinder(d=class_0_secondary_w, h=class_0_secondary_w*2, center=true, $fn=faces_concave);
-        
-        util_mirrored([0,1,0])
-        util_repeat(3, [-5,0,0])
-        translate([class_0_secondary_l*.3, class_0_secondary_w/2, -1.25]) 
-        rotate(90) porthole();
-        
-        util_mirrored([0,1,0])
-        util_repeat(2, [-6,0,0])
-        translate([class_0_secondary_l*.3-2.5, class_0_secondary_w/2-2.5, -1.25-2.5+.2]) 
-        rotate(90) porthole();
     }
 
     translate([class_0_secondary_l/2-class_0_secondary_w/2,0,0])
@@ -192,6 +182,17 @@ module class_1_neck_element_1() {
 
 module class_1_neck_element_2() {
     cylinder(h=class_1_neck_w_2, d=class_1_neck_w, center=true, $fn=faces_rough);
+}
+
+module class_1_assembly() {
+    translate([-disk_1_width/4,0,0])
+    class_0_secondary();
+    
+    translate([-disk_1_width*.35,0,0])
+    class_1_neck();
+
+    translate([-disk_1_width/2,0,-disk_1_height*1.25])
+    class_1_nacelle();
 }
 
 module class_1_neck() {
