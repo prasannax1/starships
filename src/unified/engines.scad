@@ -566,7 +566,7 @@ module class_4_secondary_plus() {
     
     translate([-class_4_nacelle_l*.5,0,.01])
     rotate([90,0,0])
-    cylinder(r=class_4_nacelle_w*.4, h=class_4_nacelle_w*.6, $fn=faces_convex, center=true);
+    cylinder(r=class_4_nacelle_w*.32, h=class_4_nacelle_w*.6, $fn=faces_convex, center=true);
     
     translate([-class_4_nacelle_l*.25,0,0])
     cube([class_4_nacelle_l*.5, class_4_nacelle_w*.6, 20], center=true);
@@ -582,7 +582,6 @@ module class_4_secondary_minus() {
     translate([-class_4_nacelle_l/2-class_4_nacelle_w/2, class_4_nacelle_w*.3, -20/3])
     cube([class_4_nacelle_l, 1,1], center=true);
 }
-
 
 module class_4_secondary() {
     difference() {
