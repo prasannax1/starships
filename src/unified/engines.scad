@@ -349,9 +349,9 @@ module class_1_secondary() {
         class_1_nacelle();
 
         hull() {
-            translate([0,0,class_1_secondary_w/4])
-            scale([2,1,1])
-            sphere(d=3);
+            translate([0,0,0])
+            scale([1,1,1])
+            sphere(d=3, $fn=12);
 
             translate([-disk_1_width*.55, 0, disk_1_width/2])
             sphere(d=3);
