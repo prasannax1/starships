@@ -149,7 +149,16 @@ module class_0_habitat() {
     cylinder(d1=disk_0_upper_d*.75, d2=disk_0_upper_d*.3, h=disk_1_height*.5, center=true, $fn=faces_convex);
 }
 
+
 module class_1_nacelle() {
+    difference() {
+        class_1_nacelle_plus();
+        class_1_nacelle_minus();
+    }
+}
+
+
+module class_1_nacelle_plus() {
     intersection() {
         scale([class_1_nacelle_l*2/class_1_nacelle_w,1,1]) {
             util_mirrored([0,0,1])
@@ -165,13 +174,34 @@ module class_1_nacelle() {
     }
 
     translate([class_1_nacelle_l/5.5,0,0])
-    scale([2,1,1]) {
+    scale([2,1,1]) 
+    rotate([0,15,0])
+    {
         util_mirrored([0,0,1])
         translate([0,0,class_1_nacelle_w/4])
         sphere(d=class_1_nacelle_w*.9, $fn=faces_convex);
 
         cylinder(d=class_1_nacelle_w*.9,h=class_1_nacelle_w/2,center=true, $fn=faces_convex);
     }
+    
+    util_mirrored([0,1,0])
+    translate([-class_1_nacelle_l*.6,0,class_1_nacelle_w/4])
+    rotate([45,0,0]) {
+        translate([0,0,class_1_nacelle_w/4])
+        cube([15,1,class_1_nacelle_w/2], center=true);
+        
+        translate([0,0,class_1_nacelle_w/2])
+        rotate([0,90,0])
+        cylinder(h=15, d=1, center=true, $fn=8);
+    }
+
+}
+
+module class_1_nacelle_minus() {
+    util_mirrored([0,1,0])
+    translate([0,class_1_nacelle_w/2,0])
+    rotate([0,90,0])
+    cylinder(h=2*class_1_nacelle_l, d=1, center=true, $fn=4);
 }
 
 

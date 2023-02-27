@@ -18,7 +18,7 @@ class_0_secondary_l=36;
 class_0_hangar_l=50;
 
 class_1_nacelle_w=9;
-class_1_nacelle_l=110;
+class_1_nacelle_l=115;
 
 class_1_neck_w=10;
 class_1_neck_w_2=1;
