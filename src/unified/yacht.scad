@@ -6,7 +6,7 @@ include <common.scad>
 module yacht() {
     disk_0();
 
-    translate([-disk_0_width/8,0,0])
+    translate([-1,0,0])
     class_0_secondary();
 
 

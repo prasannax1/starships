@@ -10,7 +10,7 @@ disk_1_width=100;
 disk_1_height=15;
 
 class_0_nacelles_w=5;
-class_0_nacelles_l=32;
+class_0_nacelles_l=36;
 
 class_0_secondary_w=10;
 class_0_secondary_l=36;

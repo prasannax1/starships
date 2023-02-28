@@ -18,11 +18,34 @@ module class_0_nacelle() {
 
 module class_0_attack_engine() {
     class_0_secondary();
-    util_mirrored([0,1,0])
-    translate([-class_0_nacelles_l*.75,class_0_nacelles_w/2,0])
-    class_0_nacelle();
+    translate([-class_0_nacelles_l*.75,0,0])
+    class_0_double_nacelle();
 }
 
+
+module class_0_double_nacelle() {
+    difference() {
+        union() {
+            util_mirrored([0,1,0])
+            translate([0,class_0_nacelles_w/2,0])
+            class_0_nacelle();
+
+            intersection() {
+                translate([class_0_nacelles_l/4,0,0])
+                scale([2*class_0_nacelles_l/class_0_nacelles_w,1,1])
+                rotate([90,0,0])
+                cylinder(d=class_0_nacelles_w, h=class_0_nacelles_w, $fn=faces_convex, center=true);
+
+                translate([-class_0_nacelles_l/8,0,0])
+                cube(class_0_nacelles_l, center=true);
+            }
+        }
+        
+        translate([-class_0_nacelles_l*5/8,0,0])
+        rotate([90,0,0])
+        cylinder(d=1,h=class_0_nacelles_w, center=true, $fn=faces_rough);
+    }
+}
 
 module class_0_hangars() {
     difference() {
@@ -67,7 +90,8 @@ module class_0_secondary() {
     difference(){
         intersection() {
             rotate([0,90,0])
-            cylinder(d=class_0_secondary_w, h=class_0_secondary_l, $fn=faces_convex, center=true);
+            rotate(90)
+            cylinder(d=class_0_secondary_w, h=class_0_secondary_l, $fn=6, center=true);
 
             translate([0,0,-class_0_secondary_l*.75+.01])
             cube(class_0_secondary_l*1.5, center=true);
@@ -82,7 +106,8 @@ module class_0_secondary() {
         translate([-class_0_secondary_w/4,0,0])
         intersection() {
             rotate([0,90,0])
-            cylinder(d=class_0_secondary_w-1, h=class_0_secondary_w/2, center=true, $fn=faces_concave);
+            rotate(90)
+            cylinder(d=class_0_secondary_w-1, h=class_0_secondary_w/2, center=true, $fn=6);
 
             translate([0,0,-class_0_secondary_w*.75-.5])
             cube(class_0_secondary_w*1.5, center=true);
@@ -91,12 +116,13 @@ module class_0_secondary() {
         translate([-class_0_secondary_l/2,0,-class_0_secondary_w/2-.5])
         scale([2.5,1,1])
         rotate([90,0,0])
-        cylinder(d=class_0_secondary_w, h=class_0_secondary_w*2, center=true, $fn=faces_concave);
+        cylinder(d=class_0_secondary_w, h=class_0_secondary_w*2, center=true, $fn=6);
     }
 
     translate([class_0_secondary_l/2-class_0_secondary_w/2,0,0])
     intersection() {
-        sphere(d=class_0_secondary_w-2, $fn=faces_rough);
+        rotate(90)
+        sphere(d=class_0_secondary_w-2, $fn=6);
         
         translate([0,0,-class_0_secondary_w/2-.05])
         cube(class_0_secondary_w, center=true);

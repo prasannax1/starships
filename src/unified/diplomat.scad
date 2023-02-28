@@ -6,7 +6,7 @@ include <common.scad>
 module diplomat() {
     disk_0();
 
-    translate([-disk_0_width*.55,0,0])
+    translate([-disk_0_width*.45,0,0])
     class_0_secondary();
 
 

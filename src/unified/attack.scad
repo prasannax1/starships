@@ -43,7 +43,7 @@ module attack_armor_1() {
     difference() {
         intersection() {
             translate([0,0,0])
-            scale([4,1.05,6*disk_0_deck_h/disk_0_width])
+            scale([4.4,1.05,6*disk_0_deck_h/disk_0_width])
             sphere(d=disk_0_width, $fn=faces_armor);
 
             util_mirrored([0,1,0])
@@ -59,10 +59,11 @@ module attack_armor_1() {
     }
 }
 
+
 module attack_armor_2() {
     difference() {
         intersection() {
-            scale([1,1,4.2*disk_0_deck_h/disk_0_width])
+            scale([1.1,1.1,4.2*disk_0_deck_h/disk_0_width])
             sphere(d=disk_0_width, $fn=faces_armor2);
 
             translate([0,0,1.2*disk_0_deck_h])
@@ -70,6 +71,9 @@ module attack_armor_2() {
         }
 
         cylinder(d=disk_0_upper_d+2, h=5*disk_0_deck_h, center=true, $fn=faces_concave);
+        
+        translate([-disk_0_width*.75,0,0])
+        cube(disk_0_width, center=true);
     }
 }
 
@@ -77,7 +81,7 @@ module attack_armor_3() {
     difference() {
         intersection() {
             translate([0,0,0])
-            scale([4,1.05,2.5*disk_0_deck_h/disk_0_width])
+            scale([4.4,1.05,2.5*disk_0_deck_h/disk_0_width])
             sphere(d=disk_0_width, $fn=faces_armor);
 
             util_mirrored([0,1,0])
