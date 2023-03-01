@@ -1,5 +1,4 @@
 IMG += attack.png
-IMG += attack_no_armor.png
 IMG += destroyer.png
 IMG += diplomat.png
 IMG += fighter.png
@@ -27,11 +26,6 @@ destroyer.png: ../../src/lib/util.scad ../../src/unified/destroyer.scad
 	    -p $@ \
 	    -t Sunset 
 
-attack_no_armor.png: ../../src/lib/util.scad ../../src/unified/attack_no_armor.scad
-	bash ../../bin/render.sh \
-	    -i ../../src/unified/$(basename $(notdir $@)).scad \
-	    -p $@ \
-	    -t Sunset 
 
 diplomat.png: ../../src/lib/util.scad ../../src/unified/diplomat.scad
 	bash ../../bin/render.sh \

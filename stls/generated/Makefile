@@ -19,7 +19,6 @@ unifiedSTL += scale_small.stl
 unifiedSTL += warp.stl
 unifiedSTL += attack.stl
 unifiedSTL += destroyer.stl
-unifiedSTL += attack_no_armor.stl
 unifiedSTL += diplomat.stl
 unifiedSTL += yacht.stl
 unifiedSTL += science.stl
@@ -53,10 +52,6 @@ attack.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 destroyer.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
 	../../src/unified/destroyer.scad
-
-attack_no_armor.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
-	../../src/unified/disks.scad ../../src/unified/engines.scad \
-	../../src/unified/attack_no_armor.scad
 
 diplomat.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
