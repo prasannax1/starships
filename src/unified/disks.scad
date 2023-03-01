@@ -66,23 +66,21 @@ module disk_0_minus() {
     translate([-disk_0_width/2-.4*disk_0_deck_h, disk_0_upper_d/2 + disk_0_deck_h/2, disk_0_deck_h/2+.5])
     sphere(d=.6*disk_0_deck_h, $fn=faces_convex);
     
-    translate([disk_0_upper_d/2, 0, disk_0_deck_h*1.5])
+    translate([disk_0_upper_d/2+disk_0_deck_h/4, 0, disk_0_deck_h*1.5])
     scale([1,2,1])
     window();
     
     util_mirrored([0,1,0])
     util_repeat(3, [-4,0,0])
     rotate(90)
-    translate([disk_0_upper_d/2, 0, disk_0_deck_h*1.5])
+    translate([disk_0_upper_d/2+disk_0_deck_h/2, 0, disk_0_deck_h*1.5])
     porthole();
     
     util_mirrored([0,1,0])
     util_repeat_rot(6, [0,0,22])
-    translate([disk_0_width/2-disk_0_deck_h,0, disk_0_deck_h*.5])
+    translate([disk_0_width/2-disk_0_deck_h/2,0, disk_0_deck_h*.5])
     window();
 }
-
- 
 
 module disk_0() {
     difference() {
