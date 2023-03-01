@@ -15,10 +15,11 @@ unifiedSTL += carrier.stl
 unifiedSTL += main.stl
 unifiedSTL += main_lowered.stl
 unifiedSTL += scale_cruisers.stl
+unifiedSTL += scale_small.stl
 unifiedSTL += warp.stl
 unifiedSTL += attack.stl
 unifiedSTL += destroyer.stl
-unifiedSTL += frigate.stl
+unifiedSTL += attack_no_armor.stl
 unifiedSTL += diplomat.stl
 unifiedSTL += yacht.stl
 unifiedSTL += science.stl
@@ -53,9 +54,9 @@ destroyer.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
 	../../src/unified/destroyer.scad
 
-frigate.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+attack_no_armor.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
-	../../src/unified/frigate.scad
+	../../src/unified/attack_no_armor.scad
 
 diplomat.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
@@ -64,6 +65,11 @@ diplomat.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 scale_cruisers.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/scout_full.scad ../../src/unified/command_full.scad \
 	../../src/unified/scale_cruisers.scad
+
+scale_small.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/attack.scad ../../src/unified/diplomat.scad \
+	../../src/unified/science.scad ../../src/unified/yacht.scad \
+	../../src/unified/scale_small.scad
 
 yacht.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \

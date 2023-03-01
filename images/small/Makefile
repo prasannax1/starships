@@ -1,4 +1,6 @@
 IMG += attack.png
+IMG += attack_no_armor.png
+IMG += destroyer.png
 IMG += diplomat.png
 IMG += fighter.png
 IMG += heavy-runabout.png
@@ -14,6 +16,18 @@ IMG += yacht.png
 all: $(IMG)
 
 attack.png: ../../src/lib/util.scad ../../src/unified/attack.scad
+	bash ../../bin/render.sh \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
+	    -p $@ \
+	    -t Sunset 
+
+destroyer.png: ../../src/lib/util.scad ../../src/unified/destroyer.scad
+	bash ../../bin/render.sh \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
+	    -p $@ \
+	    -t Sunset 
+
+attack_no_armor.png: ../../src/lib/util.scad ../../src/unified/attack_no_armor.scad
 	bash ../../bin/render.sh \
 	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \

@@ -4,7 +4,7 @@ use <engines.scad>
 include <common.scad>
 
 faces_armor=18;
-faces_armor2=10;
+faces_armor2=13;
 
 module attack_no_armor() {
     disk_0();
@@ -43,7 +43,7 @@ module attack_armor_1() {
     difference() {
         intersection() {
             translate([0,0,0])
-            scale([4.4,1.05,6*disk_0_deck_h/disk_0_width])
+            scale([4.4,1.1,6*disk_0_deck_h/disk_0_width])
             sphere(d=disk_0_width, $fn=faces_armor);
 
             util_mirrored([0,1,0])
@@ -81,7 +81,7 @@ module attack_armor_3() {
     difference() {
         intersection() {
             translate([0,0,0])
-            scale([4.4,1.05,2.5*disk_0_deck_h/disk_0_width])
+            scale([4.4,1.1,2.5*disk_0_deck_h/disk_0_width])
             sphere(d=disk_0_width, $fn=faces_armor);
 
             util_mirrored([0,1,0])
