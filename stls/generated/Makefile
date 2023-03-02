@@ -22,6 +22,7 @@ unifiedSTL += destroyer.stl
 unifiedSTL += diplomat.stl
 unifiedSTL += yacht.stl
 unifiedSTL += science.stl
+unifiedSTL += medevac.stl
 unifiedSTL += heavy_runabout.stl
 
 SMALLSTL += fighter.stl
@@ -79,6 +80,10 @@ runabout.stl: ../../src/lib/util.scad ../../src/small/runabout.scad
 science.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
 	../../src/unified/science.scad
+
+medevac.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/medevac.scad
 
 shuttle-large.stl: ../../src/lib/util.scad ../../src/small/shuttle-large.scad
 

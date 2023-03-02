@@ -5,6 +5,7 @@ IMG += fighter.png
 IMG += heavy_runabout.png
 IMG += runabout.png
 IMG += science.png
+IMG += medevac.png
 IMG += shuttle-large.png
 IMG += shuttle-medium.png
 IMG += shuttlepod.png
@@ -58,6 +59,12 @@ runabout.png: ../../src/lib/util.scad ../../src/small/runabout.scad
 	    -t BeforeDawn 
 
 science.png: ../../src/lib/util.scad ../../src/unified/science.scad
+	bash ../../bin/render.sh \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
+	    -p $@ \
+	    -t BeforeDawn 
+
+medevac.png: ../../src/lib/util.scad ../../src/unified/medevac.scad
 	bash ../../bin/render.sh \
 	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
