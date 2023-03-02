@@ -48,7 +48,7 @@ fighter.png: ../../src/lib/util.scad ../../src/small/fighter.scad
 
 heavy_runabout.png: ../../src/lib/util.scad ../../src/unified/heavy_runabout.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t BeforeDawn 
 
