@@ -2,7 +2,7 @@ IMG += attack.png
 IMG += destroyer.png
 IMG += diplomat.png
 IMG += fighter.png
-IMG += heavy-runabout.png
+IMG += heavy_runabout.png
 IMG += runabout.png
 IMG += science.png
 IMG += shuttle-large.png
@@ -45,7 +45,7 @@ fighter.png: ../../src/lib/util.scad ../../src/small/fighter.scad
 	    -p $@ \
 	    -t Solarized 
 
-heavy-runabout.png: ../../src/lib/util.scad ../../src/small/heavy-runabout.scad
+heavy_runabout.png: ../../src/lib/util.scad ../../src/unified/heavy_runabout.scad
 	bash ../../bin/render.sh \
 	    -i ../../src/small/$(basename $(notdir $@)).scad \
 	    -p $@ \

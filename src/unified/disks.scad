@@ -12,11 +12,7 @@ module porthole() {
     cylinder(d=.75, h=5, center=true, $fn=12);
 }
 
-
-module disk_0_plus() {
-    translate([0,0,disk_0_deck_h/2])
-    cylinder(d1=disk_0_width, d2=(disk_0_width-2*disk_0_deck_h), h=disk_0_deck_h, center=true, $fn=faces_convex);
-
+module disk_point_5_plus() {
     translate([0,0,disk_0_deck_h])
     cylinder(d1=(disk_0_upper_d+4*disk_0_deck_h), d2=disk_0_upper_d, h=disk_0_deck_h*2, center=true, $fn=faces_convex);
 
@@ -27,6 +23,13 @@ module disk_0_plus() {
     util_mirrored([0,1,0])
     translate([-disk_0_width/2, disk_0_upper_d/2 + disk_0_deck_h/2, disk_0_deck_h/2+.5])
     sphere(d=.8*disk_0_deck_h, $fn=faces_convex);
+}
+
+module disk_0_plus() {
+    translate([0,0,disk_0_deck_h/2])
+    cylinder(d1=disk_0_width, d2=(disk_0_width-2*disk_0_deck_h), h=disk_0_deck_h, center=true, $fn=faces_convex);
+
+    disk_point_5_plus();
 }
 
 module disk_0_under() {
@@ -55,10 +58,7 @@ module disk_0_under_2() {
     }
 }
 
-module disk_0_minus() {
-    translate([0,0,2*disk_0_deck_h])
-    cylinder(d1=disk_0_upper_d-2, d2=disk_0_upper_d, h=.5, center=true, $fn=faces_convex);
-    
+module disk_point_5_minus() {
     translate([-disk_0_width/2,0,disk_0_deck_h])
     cube([.5, disk_0_upper_d-1, 2*disk_0_deck_h-1], center=true);
     
@@ -75,6 +75,13 @@ module disk_0_minus() {
     rotate(90)
     translate([disk_0_upper_d/2+disk_0_deck_h/2, 0, disk_0_deck_h*1.5])
     porthole();
+}
+
+module disk_0_minus() {
+    translate([0,0,2*disk_0_deck_h])
+    cylinder(d1=disk_0_upper_d-2, d2=disk_0_upper_d, h=.5, center=true, $fn=faces_convex);
+    
+    disk_point_5_minus();
     
     util_mirrored([0,1,0])
     util_repeat_rot(6, [0,0,22])
@@ -89,6 +96,13 @@ module disk_0() {
     }
 }
 
+
+module disk_point_5() {
+    difference() {
+        disk_point_5_plus();
+        disk_point_5_minus();
+    }
+}
 
 module disk_1_plus(){
     h_adj=disk_1_height-2*disk_0_deck_h;

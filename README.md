@@ -792,7 +792,7 @@ The Mako class forms the primary line of defence for the Atlas group.
 
 #### Ganges Class Heavy Runabout
 
-![Runabout](images/small/heavy-runabout.png)
+![Runabout](images/small/heavy_runabout.png)
 
 Ganges class heavy runabout
 
