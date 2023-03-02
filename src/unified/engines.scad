@@ -821,7 +821,6 @@ module class_4_body_minus() {
     cube([class_4_body_l,2,1.5], center=true);
 }
 
-
 module class_4_body() {
     difference() {
         class_4_body_plus();
@@ -830,5 +829,7 @@ module class_4_body() {
     
     translate([-class_4_body_w/2,0,disk_4_height-3.1])
     disk_1();
+    
+    translate([-class_4_body_l+disk_0_width,0,class_4_body_height*.448]) rotate(180) disk_0();
 }
 
