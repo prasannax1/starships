@@ -1,6 +1,6 @@
-use <attack.scad>;
-use <science.scad>;
-use <diplomat.scad>;
+use <../unified/attack.scad>;
+use <../unified/science.scad>;
+use <../unified/diplomat.scad>;
 
 translate([0,40,0]) attack();
 

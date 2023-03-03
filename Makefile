@@ -4,4 +4,4 @@ two_d: $(wildcard src/*/*/*.scad)
 	@$(MAKE) -C images
 
 three_d: $(wildcard src/*/*/*.scad)
-	@$(MAKE) -C stl
+	@$(MAKE) -C stls

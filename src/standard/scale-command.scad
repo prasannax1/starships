@@ -5,14 +5,16 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/command.scad>;
+use <../unified/command_full.scad>;
+use <../unified/command_simple.scad>;
+use <../unified/command_alt.scad>;
 use <excelsior.scad>;
 use <constitution-refit.scad>;
-
-
-translate([0,0,0])
-command(tw_attached=false);
+use <sovereign.scad>;
 
 translate([0,0,100]) excelsior();
 
-translate([0,0,-60]) constitution_refit();
+translate([0,0,0]) command_full();
+
+translate([100,0,-100]) sovereign();
+

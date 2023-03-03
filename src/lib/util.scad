@@ -225,3 +225,13 @@ module util_repeat(times, vector) {
         children();
     }
 }
+
+module util_repeat_rot(times, rot_vector) {
+    x = rot_vector[0];
+    y = rot_vector[1];
+    z = rot_vector[2];
+    for(i=[0:times]) {
+        rotate([i*x, i*y, i*z])
+        children();
+    }
+}

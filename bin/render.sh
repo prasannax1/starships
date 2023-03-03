@@ -3,14 +3,12 @@
 
 # Set up some variables
 # Arch independent
+RENDERCMD="$(which openscad)"
 if flatpak list | grep -q openscad; then
     RENDERCMD='flatpak run org.openscad.OpenSCAD/x86_64/stable'
 elif snap list | grep -q openscad; then
     RENDERCMD='snap run openscad-nightly'
-else
-    RENDERCMD="$(which openscad)"
 fi
-
 
 # Util functions
 usage() {
@@ -25,7 +23,7 @@ render_stl() {
     local INFILE="$1"
     local OUTFILE="$2"
 
-    ${RENDERCMD} -o "${OUTFILE}" "${INFILE}"
+    ${RENDERCMD} --export-format binstl -o "${OUTFILE}" "${INFILE}"
 }
 
 render_image() {
@@ -66,7 +64,7 @@ blacken() {
     convert "${IN}" \
         -fuzz 0% \
         -fill none \
-        -draw "matte 0,0 floodfill" \
+        -draw "color 0,0 replace" \
         -background black \
         -flatten \
         "${OUT}"

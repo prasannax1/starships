@@ -6,28 +6,25 @@ Starships and Shuttles - Star Trek style
 
 ![Mother Ship](images/mother/main.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/main.stl)
-
 Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 ### Stats
 
- - Length: 1996m
+ - Length: 1999m
  - Width: 750m
- - Height: 348m
- - Decks: 67[^decks] 
- - Crew Capacity: 5000
-   - Maximum evacuation limit: 100000
+ - Height: 219m
+ - Decks: 66 
+ - Crew Capacity: 15000
+   - Maximum evacuation limit: 1000000
  - Warp Speed
    - Cruising: Warp 6
    - Peak: Warp 9.5
    - Transwarp: TW10
 
-[^decks]: Or 95, depending on if decks of the G class are counted.
 
 ### Description
 
-The Atlas class is a massive ship almost 2KM long. 
+The Atlas class is a massive ship 2KM long. 
 
 It is mainly used as a mobile starbase and colony transporter. A typical mission of
 the Atlas class is to transwarp to unexplored space with entire colonies settled in its
@@ -37,7 +34,7 @@ federation territory.
 
 ![Ship scale](images/scale/scale-standard.png)
 
-The Atlas is intended to be on 20 year deep space missions between refits. Having industrial
+The Atlas is nominally intended to be on 20 year deep space missions between refits. But realistically the expectation for such ships is that once launched they become a world onto themselves, continuing exploration without intervention or support from Starfleet. Having industrial
 replicators on board, the Atlas doesn't even have to be physically present at a starbase for
 refits - it can download the specs and do a refit wherever it is.
 
@@ -76,27 +73,25 @@ found enough of a niche to justify the entire ship.
 The Atlas is a fairly conventional looking starship, looking deceptively delicate due
 to the scale of the ship.
 
-The Atlas is an amalgamation of 8 ships, each of which can operate independently in
+The Atlas is an amalgamation of 7 types of ship, each of which can operate independently in
 a specialized or generic role.
 
-![Ship Separation](images/mother/full-separation.png)
+![Ship Separation](images/scale/scale-components.png)
 
 
 #### Atlas-A Class
 
-![Command Ship](images/mother/command.png)
+![Scout](images/mother/scout_full.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/command.stl)
-
-Atlas-A Class Exploratory Cruiser and Command Vessel
+Atlas-A Class Light Cruiser and Diplomatic Vessel
 
 ##### Stats
 
-  - Length: 388m
-  - Width: 180m
-  - Height: 57m
-  - Decks: 12
-  - Crew Capacity: 350
+  - Length: 239m
+  - Width: 100m
+  - Height: 54m
+  - Decks: 16
+  - Crew Capacity: 180
   - Warp Speed
     - Cruising: Warp 7
     - Peak: Warp 9.8
@@ -104,47 +99,46 @@ Atlas-A Class Exploratory Cruiser and Command Vessel
 ##### Description
 
 The Atlas-A class acts as the command module and bridge of the Atlas in regular operation
-but also doubles up cruiser capable of versatile roles.
+but also doubles up as a light cruiser capable of versatile roles.
 
-The Atlas-A class midway in size between a Constitution class and an Excelsior and is generally used in most of
-the same capacities - as the flagship of the Atlas mini-fleet and as a space control vessel.
+The Atlas-A class is roughly the size of a *Nova* class and used in rougly the same capabilities - as a light explorer, a command flagship or a diplomatic vessels.
 
-![Ship scale](images/scale/scale-command.png)
+the Atlas class also has multiple A class primary hulls on its other components, which can be combined with secondary hulls to form additional explorers.
+
+![Ship scale](images/scale/scale-scout.png)
 
 ##### Structure
 
-The Atlas-A follows a fairly conventional primary hull, secondary hull and warp nacelles 
-structure. The saucer is roughly split into these sections:
+The Atlas-A class is built on the standard class 1 habitat
 
- - The 32m structure at the top is the main bridge and command module
- - The 120m wide 2 deck high structure next contains the officers quarters, sickbay and
-main messhall
- - The next 180m wide 3 deck high part comntains the rest of the crew quarters, science
-labs, auxillary sickbay and main computer core.
- - The 32m wide structure at the bottom of the saucer section contains the aeroshuttle 
-lauch mechanism. The aeroshuttle extends to the upper deck as well.
+![class 1 habitat](images/mother/scout.png)
+
+This 100mx100mx15m structure is a self contained habitat with a command bridge, various labs, living areas, common areas, sickbays, a brig and even a small shuttlebay.
+
+The class 1 habitat has a small warp core just about enough to power the whole habitat and the impulse engine. It can be used as a standalone space or ground station, or can be combined with a class 1 warp engine to form a light scout
+
+![class 1 scout](images/mother/scout_simple.png)
+
+or with a class 1 secondary hull to form the more common configuration shown above.
+
 
 ##### Auxillary vessels
 
  - Type 20 small shuttles
- - Type 23 medium shuttles
- - Type 3 large shuttles
- - Pirahna Class fighters
+ - Bumblebee shuttlepods
 
 #### Atlas-B Class
 
-![Transwarp Ship](images/mother/transwarp.png)
+![Command](images/mother/command_full.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/transwarp.stl)
-
-Atlas-B Class Multimission Explorer and Science and Research vessel
+Atlas-B Class heavy explorer
 
 ##### Stats
 
-  - Length: 1012m
-  - Width: 250
-  - Height: 110m
-  - Decks: 7
+  - Length: 549m
+  - Width: 240m
+  - Height: 71m
+  - Decks: 20
   - Crew Capacity: 1200
   - Warp Speed
     - Cruising: Warp 7
@@ -152,52 +146,48 @@ Atlas-B Class Multimission Explorer and Science and Research vessel
 
 ##### Description
 
-At a kilometer long the B class is a pure research vessel dedicated to scientific research and
-experimental propulsion. It rivals several ground based research establishments in the number and
-variety of research and experimental space offered.
+The B-class is an enhancement of the A class which forms the main command section of the Atlas ship normally but separates into a heavy cruiser if needed.
+
+The B-class is between an Excelsior and a Sovereign and is used in pretty much the same capability - as a command cruiser or as a space control vessel.
+
+![Ship scale](images/scale/scale-command.png)
 
 ##### Structure
 
-Due to its nature as a sub-component of a larger ship, the B class has an unusual structure - just a 
-slab like structure 9 decks tall
+The B-class is built on the class 2 habitat, which enhances the class 1 habitat with additional living areas, additional weapons, and a more powerful reactor and impluse drive.
 
-![Ship scale](images/scale/scale-transwarp.png)
+![class 2 habitat](images/mother/command.png)
 
-The primary hull is split into two sections, the main saucer in the rear which contains the main 
-command sections and living quarters and common areas, while the ring like area in the fore contains
-all the science laboratories.
+The class 2 habitat is normally used as a strategic space station, but can be combined with class 1 engines to form a light explorer
 
-They are connected by a section which contains 12 intermediate hangars (20m height x 40m width x 100m length)
-for intermediate science vessels.
+![light explorer](images/mother/command_alt.png)
 
-The secondary hull is non-existent, instead the stardrive section is integrated into the aft part of the primary
-hull with only the warp engines jutting out.
+or with a class 2 engine to form a destroyer/scout
+
+![destroyer](images/mother/command_simple.png)
+
+or with the class 2 secondary hull with its massive 150m hangar to form a space control vehice as show above.
 
 ##### Auxillary vessels
 
-  - Orca-A class heavy tactical runabouts
-  - Orbit class Yachts
   - Type 20 small shuttles
+  - Bumblebee shuttlepods
   - Type 23 medium shuttles
   - Type 3 large shuttles
-  - Amazon Class runabouts
-  - Mako class tactical runabouts
-  - Ganges class heavy runabouts
+  - Pirahna class fighters
 
 #### Atlas-C Class
 
-![Saucer Ship](images/mother/saucer.png)
+![Labs](images/mother/labs.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/saucer.stl)
-
-Atlas-C Class Multimission Explorer and Super Colony Transport
+Atlas-C Class large scientific vessel
 
 ##### Stats
 
-  - Length: 1062
-  - Width: 750m
-  - Height: 135m
-  - Decks: 27
+  - Length: 515m
+  - Width: 400m
+  - Height: 52m
+  - Decks: 12
   - Crew Capacity: 3000
   - Warp Speed
     - Cruising: Warp 6
@@ -205,31 +195,73 @@ Atlas-C Class Multimission Explorer and Super Colony Transport
 
 ##### Description
 
-The C Class is closest to the original pre-dominion design of the Atlas. The changes would have been
-the main saucer would have been 50m taller to hold a hangar for small ship, and the secondary hull would 
-have been slightly larger to accomodate a transwarp core.
+The C Class is closest to the original pre-dominion design of the Atlas. The notable feature of having an extremely large primary hull and large hangars for intermediate class vessels are still visible on this class.
 
-As it is, the C Class is built like a super Galaxy-class, with an extremely large saucer (bigger than a whole 
-Galaxy class ship) which more or less contains a small city inside it.
-
-![Ship scale](images/scale/scale-saucer.png)
-
-This city contains long term residence for colony members intended to extreme long term transport, as well as 
-accomodation for crew of all components of the Atlas class.
+![Ship scale](images/scale/scale-labs.png)
 
 ##### Structure
 
-On top of the saucer is the main command area, which is a 32m bridge section followed by a 
-120m wide, two deck area just like in the A-Class.
+The main hull of the C class is a flat disk with the rear extended into a rectangular edge. The fore part of the saucer contains sensors, labs, living areas etc., while the aft section is dominated by four large hangars which can hold intermediate vessels.
 
-The next section is the main saucer itself, which is 750m wide and 50m tall. This is in effect
-a whole city with living areas, schools, colleges, hospitals, parks, etc.[^city]
+A class 1 habitats forms the command section of this vessel, which can also detach to form an independent explorer ship.
+
+The C class primary hull can be combined with class 2 warp engines to form an independent explorer combination:
+
+![labs simple](images/mother/labs_alt.png)
+
+or it can be combined with 2 class 3 engine to form a super heavy cruiser
+
+![labs full](images/mother/labs_full.png)
+
+##### Auxillary vessels
+
+- Intermediate ships
+  - Orca class light corvettes
+  - Raven class science vessels
+  - Orbit class Yachts
+- Shuttles
+  - Type 20 small shuttles
+  - Bumblebee shuttlepods
+  - Type 23 medium shuttles
+  - Type 3 large shuttles
+
+#### Atlas D class
+
+![Saucer](images/mother/saucer.png)
+
+Atlas D class starbase
+
+##### Stats
+  - Length: 750m
+  - Width: 750m
+  - Height: 100m
+  - Decks: 30
+  - Crew Capacity: 10000
+  - Warp Speed: NA
+
+##### Description
+
+The D Class is nothing less than a complete starbase, with administrative areas, living areas, commercial enterprises and hangars for shuttles and runabouts. It is like a self-contained city in space.
+
+This city contains long term residence for colony members intended to extreme long term transport, as well as 
+accomodation for crew of all components of the Atlas class.[^city]
 
 [^city]: It's common for crew of all Atlas classes to have residence allocated in the C-class and 
     "commute" to their workstation, whereas the living areas on other classes are mainly used as emergency dormitories.
 
-The secondary hull is affixed to the bottom of the main saucer. The first 3 decks of the secondary hull comprise the main
-shuttlebay. Connected to the main shuttlebay are 8 independent hangars, which also open up to the outside to the sides.
+![Ship scale](images/scale/scale-saucer.png)
+
+##### Structure
+
+The D-Class from the outside can be differentiated into two parts; the main saucer itself, which is 750m wide and 50m tall. This is in effect
+a whole city with living areas, schools, colleges, hospitals, parks, etc.
+
+The secondary hull is a smaller cylindrical area affixed to the bottom of the main saucer. The last 3 decks of the secondary hull comprise the main
+shuttlebay. 
+
+The D-Class can also be combined with a class-4 engine to be an independant transwarp capable colony ship.
+
+![saucer-full](images/mother/saucer_full.png)
 
 ##### Auxillary vehicles
 
@@ -239,69 +271,19 @@ shuttlebay. Connected to the main shuttlebay are 8 independent hangars, which al
 - Ganges class heavy runabouts
 - Orca-A class heavy tactical runabouts
 
-#### Atlas-D Class
-
-![Scout Ship](images/mother/scout.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/scout.stl)
-
-Atlas-D Class Light Cruiser and Explorer
-
-##### Stats
-
-  - Length: 230m
-  - Width: 100m
-  - Height: 44m
-  - Decks: 10
-  - Crew Capacity: 100
-  - Warp Speed
-    - Cruising: Warp 4
-    - Peak: Warp 9.1
-
-##### Description
-
-The D-Class was also concieved at the beginning of the Atlas design process, as the Atlas collection needs a
-diplomatic cruiser for the following two reasons:
-
-1. Taking the whole ship to a potentially hostile situation will be risky for the civilian passengers
-2. Overwhelming a first contact situation with a kilometer long ship might be overkill and potentially send the wrong message
-
-The D-Class is a light cruiser about the size of a constitution class, but with the smaller saucers has an occupancy 
-roughly equal to a Nova class. It can be used as a stand-alone multimission explorer, but with
-the Atlas collection is typically used as a first-contact mission diplomatic ship.
-
-![Ship scale](images/scale/scale-scout.png)
-
-##### Structure
-
-Despite having to be attached to another ship, the D-Class is built conventionally - quite possibly the most conventional looking
-ship in the entire Atlas collection. This is a deliberate decision as the D-class is meant for first contact missions and so is
-designed to look very representive of Starfleet and Federation.
-
-The saucer section has a 32m wide integrated bridge and command section. This is followed by the main saucer which is 120m wide and 
-two decks tall. The lower section of the saucer has a 32m wide sensor array which also houses the main phasers.
-
-The secondary hull is fairly minimal and fucntional; the engineering section followed by a small shuttlebay.
-
-##### Auxillary vehicles
-
-- Bumblebee class Shuttlepods
-- Type 20 small shuttles
 
 #### Atlas-E Class
 
 ![Carrier Ship](images/mother/carrier.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/carrier.stl)
-
-Atlas-E Class Super carrier and dreadnought
+Atlas-E Class Super carrier
 
 ##### Stats
 
-  - Length: 665m
-  - Width: 532m
-  - Height: 265m
-  - Decks: 54
+  - Length: 754m
+  - Width: 480m
+  - Height: 151m
+  - Decks: 45
   - Crew Capacity: 250
   - Warp Speed
     - Cruising: Warp 5
@@ -309,28 +291,19 @@ Atlas-E Class Super carrier and dreadnought
 
 ##### Description
 
-The E-class came about when the original Atlas had its hangars removed from the saucer section to form the Atlas-C class.
-
-The hangars were incorporated into it's own ship and converted into a super carrier class.
-
-The hangar is big enough to hold full sized starships upto and including *Excelsior* class ships. 
+Calling the E-class a carrier would be doing it a disservice; the E-class is nothing less than a mobile shipyard capable of repairing full size starships (even something as large as an Excelsior class), and outright manufacturing small to intermediate sized ships while the E-class itself is at warp.
+ 
 
 ![Ship scale](images/scale/scale-carrier.png)
-
-
-In practice it can hold multiple *Mako* class tactical runabouts for a deadly
-strike force.
 
 The ship contains its owm industrial replicator and is used as the main ship factory of the *Atlas* group.
 
 
 ##### Structure
 
-The ship structure resembles the structure of the Oberth Class if the bars connecting the primary hull to the secondary
-hulls were converted to entire walls to form the main hangar.
+The ship looks almost entirely secondary hull. The main hangar is big enough to hold full size ships, and the industrial replicator situated at the bottom of the ship can replicate any spare part on the fly.
 
-The main saucer is integrated with the engineering section, followed by the hollow section of the main hangar, and at the
-bottom is the man cargo bay and antimatter storage.
+The aft portion of the ship contains a 200m wide, 100m long three deck tall shuttlebay.
 
 ##### Auxillary vehicles
 
@@ -358,16 +331,14 @@ bottom is the man cargo bay and antimatter storage.
 
 ![Escort Ship](images/mother/escort.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/escort.stl)
-
 Atlas-F Class Escort Carrier
 
 ##### Stats
 
-  - Length: 220m
-  - Width: 164m
-  - Height: 30m
-  - Decks: 9
+  - Length: 262m
+  - Width: 100m
+  - Height: 25m
+  - Decks: 6
   - Crew Capacity: 50
   - Warp Speed
     - Cruising: Warp 7
@@ -378,17 +349,16 @@ Atlas-F Class Escort Carrier
 The F class is a dedicated escort vessel for the Atlas group.
 
 It is comparable to a *Saber* in size and function and is built with two aims in mind:
-1. Fit in the space below the main hangar of the E-class
+1. Fit in the space above the main hangar of the E-class
 2. Not win any beauty contests
 
 ![Ship scale](images/scale/scale-escort.png)
 
 ##### Structure
 
-The F-class is built tight, with the warp core integrated into the primary saucer. 
+The F class combines a class 1 primary hull with integrated warp engines, class 2 warp nacelles and lots of armor. The class 1 hangar has been extended to hold a wing of fighter craft.
 
-The shuttlebay is longer than you would expect in this class of vehicles and can hold multiple
-wings of *Pirahna* class fighters to serve as a light carrier vehicle.
+The ship is chock loaded with sensors, phaser banks and torpedoes, so the crew capacity is less than what you would expect from a class 1 habitat.
 
 ##### Auxillary vehicles
 
@@ -399,16 +369,14 @@ wings of *Pirahna* class fighters to serve as a light carrier vehicle.
 
 ![Warp Ship](images/mother/warp.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/mother/warp.stl)
-
 Atlas-G Class Super-heavy warp and transwarp tug
 
 ##### Stats
 
-  - Length: 1126m
-  - Width: 100m
-  - Height: 94m
-  - Decks: 28
+  - Length: 1149m
+  - Width: 124m
+  - Height: 110m
+  - Decks: 30
   - Crew Capacity: 100
   - Warp Speed
     - Cruising: Warp 9
@@ -430,7 +398,7 @@ or a small to medium asteroid.
 
 Despite looking like a single unconnected warp engine, the G class is a proper starship. The primary hull is merged into
 the body of the secondary hull, as are the warp nacelles which line the entire ventral side of the ship. The dorsal side is
-a hangar cum cargo storage bay which opens at both ends and can hold anything from shuttles and runabouts to minor starships.
+a hangar cum cargo storage bay which can hold anything from shuttles and runabouts to minor starships.
 
 ##### Auxillary vehicles
 
@@ -449,20 +417,20 @@ These are vehicles that are too big to be  a shuttle or a runabout, but smaller 
 
 These are ships which lie in the 50m to 100m range.
 
+These are also built based on class 0 habitat, which is used as the main bridge module on Atlas class ships. The class 0 habitat is 36m wide, has two decks, bridge and command essential areas and it's own hangar capable of holding shuttlepods or workbees.
+
 #### Raven class
 
 ![Science Ship](images/small/science.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/small/aux/science.stl)
 
 Raven class science ship.
 
 ##### Stats
 
-  - Length: 93m
-  - Width: 40m
-  - Height: 18m
-  - Decks: 5
+  - Length: 59m
+  - Width: 36m
+  - Height: 11m
+  - Decks: 3
   - Crew Capacity: 25
   - Warp Speed
     - Cruising: Warp 6
@@ -481,29 +449,25 @@ As the *Raven* is in between a runabout and a full size starship in functionalit
 can see elements of both from the shape.
 
 The topmost deck contains a hybrid bridge cum cockpit. The subsequent decks in the 'saucer' section have the labs,
-living quarters, messhall, sickbay, etc. The saucer section is followed by the engineering section which continues
-into what is quite a large shuttlebay for this size of ship.
+living quarters, messhall, sickbay, etc. The last deck is the engineering section which contains a standard class 0 warp engine.
 
 ##### Auxillary vehicles
 
-- Type 20 small shuttles
 - Bumblebee Shuttlepods
 
 #### Orca class
 
 ![Attack Ship](images/small/attack.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/small/aux/attack.stl)
-
 Orca class light corvette
 
 ##### Stats
 
-  - Length: 125m
-  - Width: 40m
-  - Height: 18m
-  - Decks: 5
-  - Crew Capacity: 25
+  - Length: 70m
+  - Width: 36m
+  - Height: 10m
+  - Decks: 2
+  - Crew Capacity: 16
   - Warp Speed
     - Cruising: Warp 8
     - Peak: Warp 9.9
@@ -520,94 +484,28 @@ the Multi-Vector paradigm scales down to smaller ships.
 
 Another concept implemented in the Orca class was mutliple warp cores.
 
-This makes the Orca a small and deadly ship that can occasionally be two small and deadly ships.
+This makes the Orca a small and deadly ship that can punch several times its weight.
 
 ##### Structure
 
-The Orca is structured like a conventional attack ship, with a primary hull inline with the secondary hull and engine
-nacelles trailing behind and below.
+The Orca is a standard class 0 habitat, combined with two class 0 warp engines. The two engines can work in tandem to increase the performance and power, or as redundancies to each other. This feature is especially useful when the Orca fires its megaphaser which is powered directly by a warp core. Unlike other ships, which must restrict themselves to less than 50% of the power or take the risk of being dead in the water while the depowered warp core re-initializes, the Orca already has a backup ready to use.
 
-As mentioned before, the Orca also splits up into two ships, each of which are worth exploring on their own.[^multivector2]
+Using warp cores in this way can make the warp field very unstable, which is why it's not used more commonly. The Orca uses the instability to operate on repeated microjumps as its normal operating mode. This can make the Orca highly unpredictable by an adversary during combat manoeuvres.
 
-[^multivector2]: Unlike the Atlas class, the *Orca* is a true multi-vector assault vehicle.
+The drawback of the Orca is that its engines consume antimatter very fast, limiting its range. This can be offset by combining the Orca with a standard class 1 single nacelle engine:
 
-##### Orca-A class / Manta Ray Class
+![Destroyer](images/small/destroyer.png)
 
-![Attack Ship](images/small/attack-primary.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/attack-primary.stl)
-
-Orca-A / Manta Ray class heavy tactical runabout[^orca]
-
-[^orca]: The Orca-A class was initially conceived as a stand-alone ship, named the *Manta Ray*. It was augmented with the Orca-B class, 
-    and renamed to the Orca-A.
-
-  - Length: 65m
-  - Width: 40m
-  - Height: 8m
-  - Decks: 2
-  - Crew Capacity: 15
-  - Warp Speed
-    - Cruising: Warp 8.5
-    - Peak: Warp 9.5
-
-The Orca-A class pioneered an experimental dual-warp system, where both warp nacelles are powered
-by independent warp cores, but with an interconnet to transfer power between the cores as needed.
-
-This achieves several things:
- - faster responsiveness since the warp core is right next to the warp nacelle without a large plasma transfer lag
- - redundancy; in case of emergency both nacelles can be powered by a singe core, albeit with an inefficient power transfer
-
-The dual single-warp-engine arrangement causes the warp field to be unstable at higher warp speeds. The Orca-A class
-uses this instability to deliberately generate a warp field for upto a few seconds to as less as a few microseconds, with
-alternate nacelles regenerating a warp field just at the moment of collapse. This makes the Orca-A class unusually maneuverable
-at warp speeds, able to achieve seemingly impossible tasks as being able to warp through an asteroid field.[^asteroid]
-
-[^asteroid]: Given sufficient advance telemetry, of course. 
-
-The Orca-A class contains powerful mega-phasers powered directly by the warp cores. The redundancy arrangement of the cores
-ensures that there is not even a flicker as phaser fire completely drains the power of a warp core. This gives the Orca-A
-class the ability to punch beyond its weight class with just phaser fire.
-
-##### Orca-B class
-
-![Attack Ship](images/small/attack-secondary.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/attack-secondary.stl)
-
-Orca-B class torpedo boat
-
-  - Length: 96m
-  - Width: 40m
-  - Height: 18m
-  - Decks: 5
-  - Crew Capacity: 10
-  - Warp Speed
-    - Cruising: Warp 6.2
-    - Peak: Warp 9.9
-
-The Orca-B class is technically stand-alone but practically much less so than the A-class. The Orca-B class was
-conceived as a way of extending the range of the Orca-A class to that of a full size starship.
-
-The main body of the Orca-B is a massive hangar running through the length of the ship split across two levels. 
-The fore entrance to the hangar aligns with the aft hangar of the Orca-A class. The aft hangar entrance of the Orca-B
-is actually a deck lower than the fore entrance.
-
-The Orca-B also contains the dual-core arrangement similar to the Orca-A, with both cores residing in the respective nacelles,
-but it sacrifices maneuverablity for speed and stability. The Orca-B's phasers are less powerful compared to the Orca-A, but
-the Orca-B has forward and backward torpedo launchers in the nacelle structure which make up for the loss.
+The Orca is detachable and re-attachable with the (slower) secondary hull, which makes this a multivector ship.
 
 ##### Auxillary vehicles
 
-The Orca-A class contains a single *Bumblebee* class shuttlepod.
+The Orca class contains a single *Bumblebee* class shuttlepod.
 
-The Orca-B class can contain upto 3 pirahna fighters, or 5 conventional small shuttles.
 
 #### Orbit class
 
 ![Diplomatic Ship](images/small/diplomat.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/diplomat.stl)
 
 Orbit class yacht
 
@@ -615,9 +513,9 @@ Orbit class yacht
 
   - Length: 78m
   - Width: 36m
-  - Height: 13.5m
-  - Decks: 4
-  - Crew Capacity: 30
+  - Height: 11m
+  - Decks: 3
+  - Crew Capacity: 15
   - Warp Speed
     - Cruising: Warp 5
     - Peak: Warp 8.2
@@ -630,9 +528,10 @@ what a yacht would require for diplomatic missions.
 
 ##### Structure
 
-The yacht looks like a full size shape at first glance. This is a deliberate choice, and for similar
-reasons as the Atlas-D class itself - it  was deciced that a starfleet first contact vessel should
+The yacht looks like a full size shape at first glance. This is a deliberate choice - it  was deciced that a starfleet first contact vessel should
 look like a starfleet vessel.
+
+The Orbit combines a class 0 habitat with a standard class 0 warp core and two class 0 type 2 engines.
 
 The interiors of the vessel are fairly conventional except that instead of science labs the saucer 
 section has large luxury accomodations. In effect this is a glorified taxi ship although it does
@@ -647,16 +546,14 @@ not lack sensors or scientific capabilities.
 
 ![Yacht](images/small/yacht.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/yacht.stl)
-
 Iceland class yacht
 
 ##### Stats
 
-  - Length: 37m
+  - Length: 50m
   - Width: 36m
-  - Height: 14m
-  - Decks: 4
+  - Height: 12m
+  - Decks: 3
   - Crew Capacity: 30
   - Warp Speed
     - Cruising: Warp 4
@@ -675,6 +572,8 @@ runabout, although it has a higher capacity due to its 4 decks.[^iceland]
 The two deck primary hull sits on top of the secondary hull with the warp nacelles extending downwards. At the aft
 part is a small hangar able to contain workbees or a small shuttelpod.
 
+The Iceland also combines a class 0 habitat with a standard class 0 warp core and two class 0 type 2 engines.
+
 ##### Auxillary vehicles
 
 - Bumblebee Class shuttlepod
@@ -686,8 +585,6 @@ These are regular sized shuttles and and runabouts.
 #### Bumblebee class
 
 ![shuttle Pod](images/small/shuttlepod.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttlepod.stl)
 
 Bumblebee Class Shuttlepod
 
@@ -710,8 +607,6 @@ ship in intermediate and small starships.
 #### Type 20 class
 
 ![Small Shuttle](images/small/shuttle-small.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-small.stl)
 
 Type 20 small shuttle
 
@@ -736,8 +631,6 @@ The Type 20 is found throughout starfleet on small and medium starships.
 
 ![Medium Shuttle](images/small/shuttle-medium.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-medium.stl)
-
 Type 23 medium shuttle
 
 ##### Stats
@@ -761,8 +654,6 @@ The Type 23 is also ubiquitous in medium and large starships.
 
 ![large shuttle](images/small/shuttle-large.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/shuttle-large.stl)
-
 Type 3 large shuttle
 
 ##### Stats
@@ -784,8 +675,6 @@ It is frequently found in medium starships as a runabout, and in large and very 
 #### Pirahna Class Fighter
 
 ![Fighter](images/small/fighter.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/fighter.stl)
 
 Pirahna class fighter
 
@@ -809,8 +698,6 @@ enemy. All the manouvers happen at impulse speeds after that.
 #### Amazon Class Runabout
 
 ![Runabout](images/small/runabout.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/runabout.stl)
 
 Amazon class runabout
 
@@ -836,8 +723,6 @@ The Amazon class is fast rising up to become the standard runabout in all classe
 
 ![Runabout](images/small/tactical-runabout.png)
 
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/tactical-runabout.stl)
-
 Mako class runabout
 
 ##### Stats
@@ -858,19 +743,17 @@ The Mako class forms the primary line of defence for the Atlas group.
 
 #### Ganges Class Heavy Runabout
 
-![Runabout](images/small/heavy-runabout.png)
-
-[View 3d](https://github.com/prasannax1/starships/blob/master/stl/small/heavy-runabout.stl)
+![Runabout](images/small/heavy_runabout.png)
 
 Ganges class heavy runabout
 
 ##### Stats
 
-  - Length: 49m
+  - Length: 48m22m
   - Width: 24m
-  - Height: 6.9m
-  - Decks: 2
-  - Crew Capacity: 65
+  - Height: 9m
+  - Decks: 3
+  - Crew Capacity: 32
   - Warp Speed
     - Cruising: Warp 6.8
     - Peak: Warp 9.5
@@ -880,6 +763,8 @@ Ganges class heavy runabout
 The Ganges class straddles the line between a small and intermediate ship and falls into the small ship category
 by about 1m. But with two decks and even a sizable shuttlebay the Ganges can easily be a small starship rather
 than an auxillary vehicle.
+
+The Ganges combines what is know as a class 0.5 habitat with a standard class 0 warp core and class 0 type 2 engines.
 
 ##### Auxillary vehicles
 

@@ -1,11 +1,11 @@
-IMG += attack-primary.png
 IMG += attack.png
-IMG += attack-secondary.png
+IMG += destroyer.png
 IMG += diplomat.png
 IMG += fighter.png
-IMG += heavy-runabout.png
+IMG += heavy_runabout.png
 IMG += runabout.png
 IMG += science.png
+IMG += medevac.png
 IMG += shuttle-large.png
 IMG += shuttle-medium.png
 IMG += shuttlepod.png
@@ -15,33 +15,28 @@ IMG += yacht.png
 
 all: $(IMG)
 
-attack-primary.png: ../../src/lib/util.scad ../../src/small/attack-primary.scad
+attack.png: ../../src/lib/util.scad ../../src/unified/attack.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Sunset 
 
-attack.png: attack-primary.png attack-secondary.png
+destroyer.png: ../../src/lib/util.scad ../../src/unified/destroyer.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Sunset 
 
-attack-secondary.png: ../../src/lib/util.scad ../../src/small/attack-secondary.scad
-	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
-	    -p $@ \
-	    -t Sunset 
 
-diplomat.png: ../../src/lib/util.scad ../../src/small/diplomat.scad
+diplomat.png: ../../src/lib/util.scad ../../src/unified/diplomat.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Metallic 
 
-yacht.png: ../../src/lib/util.scad ../../src/small/yacht.scad
+yacht.png: ../../src/lib/util.scad ../../src/unified/yacht.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t Metallic 
 
@@ -51,9 +46,9 @@ fighter.png: ../../src/lib/util.scad ../../src/small/fighter.scad
 	    -p $@ \
 	    -t Solarized 
 
-heavy-runabout.png: ../../src/lib/util.scad ../../src/small/heavy-runabout.scad
+heavy_runabout.png: ../../src/lib/util.scad ../../src/unified/heavy_runabout.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t BeforeDawn 
 
@@ -63,9 +58,15 @@ runabout.png: ../../src/lib/util.scad ../../src/small/runabout.scad
 	    -p $@ \
 	    -t BeforeDawn 
 
-science.png: ../../src/lib/util.scad ../../src/small/science.scad
+science.png: ../../src/lib/util.scad ../../src/unified/science.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
+	    -p $@ \
+	    -t BeforeDawn 
+
+medevac.png: ../../src/lib/util.scad ../../src/unified/medevac.scad
+	bash ../../bin/render.sh \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t BeforeDawn 
 

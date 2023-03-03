@@ -5,11 +5,11 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <../mother/warp.scad>;
+use <../unified/warp.scad>;
 use <sovereign.scad>;
 use <intrepid.scad>;
 
 warp();
 
-translate([100,0,200]) sovereign();
-translate([-600,0,150]) intrepid();
+translate([0,0,200]) sovereign();
+translate([-800,0,150]) intrepid();

@@ -5,7 +5,7 @@ off the internet and scaled so that 1 pt = 1 meter.
 Other files not included in source code.
 */
 
-use <mother.scad>;
+use <../unified/main.scad>;
 use <constitution.scad>;
 use <excelsior.scad>;
 use <galaxy.scad>;
@@ -13,7 +13,7 @@ use <sovereign.scad>;
 use <nx.scad>;
 use <odyssey.scad>;
 
-translate([-400,0,-200]) mother();
+translate([-400,0,-200]) main();
 
 translate([0,0,700]) nx();
 

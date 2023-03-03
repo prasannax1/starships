@@ -2,72 +2,93 @@ IMG += escort.png
 IMG += scout.png 
 IMG += command.png 
 IMG += saucer.png 
-IMG += transwarp.png 
+IMG += labs.png 
+IMG += scout_full.png 
+IMG += scout_simple.png 
+IMG += scout_alt.png 
+IMG += command_full.png 
+IMG += command_alt.png 
+IMG += command_simple.png 
+IMG += saucer_full.png 
+IMG += labs_full.png 
+IMG += labs_alt.png 
 IMG += carrier.png 
 IMG += main.png 
-IMG += half-separation.png 
-IMG += full-separation.png
 IMG += warp.png
 
 all: $(IMG)
 
 $(IMG):
 	bash ../../bin/render.sh \
-	    -i ../../src/mother/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
-	    -t Tomorrow \
+	    -t Sunset \
 
-escort.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/escort.scad
+escort.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/escort.scad
 
+scout.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/scout.scad
 
-scout.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/scout.scad
+command.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/command.scad
 
+labs.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/labs.scad
 
-command.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/command.scad
+scout_full.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/scout_full.scad
 
+scout_simple.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/scout_simple.scad
 
-transwarp.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/transwarp.scad
+scout_alt.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/scout_alt.scad
 
-saucer.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/saucer.scad
+command_full.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/command_full.scad 
 
-carrier.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/carrier.scad
+command_alt.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/command_alt.scad
 
-warp.png: ../../src/lib/util.scad ../../src/mother/common.scad  \
-    ../../src/mother/warp.scad
+command_simple.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/command_simple.scad
 
-main.png: \
-    ../../src/mother/command.scad \
-    ../../src/mother/transwarp.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/main.scad
+labs_full.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/labs_full.scad
 
-half-separation.png: \
-    ../../src/mother/command.scad \
-    ../../src/mother/transwarp.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/half-separation.scad
+labs_alt.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/labs_alt.scad
 
-full-separation.png: \
-    ../../src/mother/command.scad \
-    ../../src/mother/transwarp.scad \
-    ../../src/mother/saucer.scad \
-    ../../src/mother/carrier.scad \
-    ../../src/mother/scout.scad \
-    ../../src/mother/escort.scad \
-    ../../src/mother/warp.scad \
-    ../../src/mother/full-separation.scad
+saucer.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/saucer.scad
 
+saucer_full.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/saucer_full.scad
+
+carrier.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/carrier.scad
+
+warp.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+    ../../src/unified/warp.scad
+
+main.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
+	../../src/unified/disks.scad ../../src/unified/engines.scad \
+	../../src/unified/warp.scad ../../src/unified/escort.scad \
+	../../src/unified/main.scad
