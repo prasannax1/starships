@@ -1,9 +1,6 @@
 name: Build Images
 
 on:
-  push:
-    branches: [ master ]
-    paths: [ 'src/mother/*.scad', 'src/small/*.scad']
   pull_request:
     branches: [ master ]
     paths: [ 'src/mother/*.scad', 'src/small/*.scad']
