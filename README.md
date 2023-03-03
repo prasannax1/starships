@@ -187,7 +187,7 @@ Atlas-C Class large scientific vessel
   - Length: 515m
   - Width: 400m
   - Height: 52m
-  - Decks: 12
+  - Decks: 16
   - Crew Capacity: 3000
   - Warp Speed
     - Cruising: Warp 6
