@@ -4,7 +4,7 @@ use <engines.scad>;
 include <common.scad>;
 
 module science() {
-    theta=70;
+    theta=60;
     
     disk_0();
 
@@ -18,9 +18,14 @@ module science() {
         cube([disk_0_width*1.25, disk_0_deck_h, disk_0_deck_h], center=true);
     }
     
-    translate([-disk_0_width*1.2,0,-1])
+    translate([-disk_0_width*1.2,0,-3])
     intersection() {
-        class_0_secondary();
+        union() {
+            class_0_secondary();
+            
+            translate([0,0,-.01])
+            rotate([0,180,0]) class_0_secondary();
+        }
         
         translate([class_0_secondary_l/3,0,0])
         rotate([0,-15,0])
@@ -28,12 +33,12 @@ module science() {
     }
     
     util_mirrored([0,1,0])
-    translate([0,class_0_secondary_w*.4-1,-2])
+    translate([.5,class_0_secondary_w*.5-1,-3])
     rotate([-theta,0,0]) {
         translate([-disk_0_width*1.2,0,disk_0_width*.2-1])
         cube([4,2,disk_0_width*.4], center=true);
         
-        translate([-disk_0_width*1.2,0,disk_0_width*.4])
+        translate([-disk_0_width*1.2-.5,0,disk_0_width*.4])
         //rotate([theta,0,0])
         //rotate([90,0,0])
         class_0_double_nacelle();

@@ -427,10 +427,10 @@ Raven class science ship.
 
 ##### Stats
 
-  - Length: 59m
-  - Width: 36m
-  - Height: 11m
-  - Decks: 3
+  - Length: 84m
+  - Width: 40m
+  - Height: 16m
+  - Decks: 4
   - Crew Capacity: 25
   - Warp Speed
     - Cruising: Warp 6
