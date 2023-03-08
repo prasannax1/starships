@@ -3,7 +3,7 @@ name: Build Images
 on:
   pull_request:
     branches: [ master ]
-    paths: [ 'src/mother/*.scad', 'src/small/*.scad']
+    paths: [ 'src/unified/*.scad', 'src/small/*.scad']
   workflow_dispatch:
      inputs:
       workflow_02:
