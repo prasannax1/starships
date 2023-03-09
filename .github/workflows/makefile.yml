@@ -4,9 +4,6 @@ on:
   pull_request:
     branches: [ main, dev ]
     paths: [ 'src/unified/*.scad', 'src/small/*.scad']  
-  push:
-    branches: [ dev ]
-    paths: [ 'src/unified/*.scad', 'src/small/*.scad']
   workflow_dispatch:
      inputs:
       workflow_02:
