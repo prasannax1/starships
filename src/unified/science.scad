@@ -7,6 +7,9 @@ module science() {
     theta=60;
     
     disk_0();
+    
+    translate([0,0,disk_0_deck_h-.02])
+    disk_0_under();
 
     util_mirrored([0,1,0])
     translate([-.5*1.25*disk_0_width, disk_0_width/3, disk_0_deck_h/2 ]) {
