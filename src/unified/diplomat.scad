@@ -3,9 +3,7 @@ use <disks.scad>
 use <engines.scad>
 include <common.scad>
 
-module diplomat() {
-    disk_0();
-
+module diplomat_secondary() {
     translate([-disk_0_width*.45,0,0])
     class_0_secondary();
 
@@ -23,9 +21,13 @@ module diplomat() {
         rotate([theta,0,0])
         class_0_nacelle();
     }
+}
 
+module diplomat() {
+    disk_0();
 
-    
+    translate([-2.5,0,0])
+    diplomat_secondary();    
 }
 
 diplomat();
