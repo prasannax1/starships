@@ -511,7 +511,7 @@ Orbit class yacht
 
 ##### Stats
 
-  - Length: 78m
+  - Length: 80m
   - Width: 36m
   - Height: 11m
   - Decks: 3
