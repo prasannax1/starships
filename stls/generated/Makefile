@@ -65,7 +65,7 @@ scale_cruisers.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 scale_small.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/attack.scad ../../src/unified/diplomat.scad \
 	../../src/unified/science.scad ../../src/unified/yacht.scad \
-	../../src/unified/scale_small.scad
+	../../src/unified/scale_small.scad ../../src/unified/heavy_runabout.scad
 
 yacht.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
