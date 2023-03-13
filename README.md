@@ -749,10 +749,10 @@ Ganges class heavy runabout
 
 ##### Stats
 
-  - Length: 48m22m
-  - Width: 24m
-  - Height: 9m
-  - Decks: 3
+  - Length: 32m
+  - Width: 22m
+  - Height: 8m
+  - Decks: 2
   - Crew Capacity: 32
   - Warp Speed
     - Cruising: Warp 6.8
@@ -764,7 +764,7 @@ The Ganges class straddles the line between a small and intermediate ship and fa
 by about 1m. But with two decks and even a sizable shuttlebay the Ganges can easily be a small starship rather
 than an auxillary vehicle.
 
-The Ganges combines what is know as a class 0.5 habitat with a standard class 0 warp core and class 0 type 2 engines.
+The Ganges combines what is know as a class 0.5 habitat with smaller versions of the standard class 0 warp core and class 0 type 2 engines.
 
 ##### Auxillary vehicles
 
