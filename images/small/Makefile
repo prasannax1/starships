@@ -82,9 +82,9 @@ shuttle-medium.png: ../../src/lib/util.scad ../../src/small/shuttle-medium.scad
 	    -p $@ \
 	    -t DeepOcean 
 
-shuttlepod.png: ../../src/lib/util.scad ../../src/small/shuttlepod.scad
+shuttlepod.png: ../../src/lib/util.scad ../../src/unified/shuttlepod.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t DeepOcean 
 
