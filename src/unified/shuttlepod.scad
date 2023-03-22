@@ -5,7 +5,7 @@ module shuttlepod() {
     shuttlepod_body();
 
     util_mirrored([0,1,0])
-    translate([.5,1.28,-.2]) shuttlepod_nacelle();
+    translate([.5,1.28,-.2]) nacelle_0();
 }
 
 shuttlepod();

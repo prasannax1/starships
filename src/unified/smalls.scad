@@ -28,7 +28,7 @@ module shuttlepod_body() {
     }
 }
 
-module shuttlepod_nacelle() {
+module nacelle_0() {
     rotate([0,90,0]) {
         translate([0,0,.75])
         sphere(d=.5, $fn=10);
@@ -36,4 +36,33 @@ module shuttlepod_nacelle() {
         cylinder(d=.5, h=1.5, center=true, $fn=10);
     }
 }
+
+module shuttle_cockpit() {
+    intersection() {
+        scale([6,.8,1.8]) {
+            util_mirrored([0,1,0])
+            translate([0,1,0])
+            sphere(d=2, $fn=6);
+
+            rotate([90,0,0])
+            cylinder(d=2,h=2,$fn=6, center=true);
+        }
+        
+        
+        translate([4-.01-.2, 0, 4-.01-.2])
+        cube(8, center=true);
+    }
+}
+
+module nacelle_1() {
+    scale([1,1,.5])
+    rotate([0,90,0]) {
+        util_mirrored([0,0,1])
+        translate([0,0,1.25])
+        sphere(d=1, $fn=32);
+
+        cylinder(d=1, h=2.5, center=true, $fn=32);
+    }
+}
+
 
