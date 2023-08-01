@@ -259,10 +259,6 @@ a whole city with living areas, schools, colleges, hospitals, parks, etc.
 The secondary hull is a smaller cylindrical area affixed to the bottom of the main saucer. The last 3 decks of the secondary hull comprise the main
 shuttlebay. 
 
-The D-Class can also be combined with a class-4 engine to be an independant transwarp capable colony ship.
-
-![saucer-full](images/mother/saucer_full.png)
-
 ##### Auxillary vehicles
 
 - Type 3 large shuttles
