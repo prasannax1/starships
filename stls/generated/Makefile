@@ -24,13 +24,13 @@ unifiedSTL += yacht.stl
 unifiedSTL += science.stl
 unifiedSTL += medevac.stl
 unifiedSTL += heavy_runabout.stl
+unifiedSTL += shuttlepod.stl
+unifiedSTL += small_shuttle.stl
 
 SMALLSTL += fighter.stl
 SMALLSTL += runabout.stl
 SMALLSTL += shuttle-large.stl
 SMALLSTL += shuttle-medium.stl
-SMALLSTL += shuttlepod.stl
-SMALLSTL += shuttle-small.stl
 SMALLSTL += tactical-runabout.stl
 
 
@@ -65,7 +65,7 @@ scale_cruisers.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 scale_small.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/attack.scad ../../src/unified/diplomat.scad \
 	../../src/unified/science.scad ../../src/unified/yacht.scad \
-	../../src/unified/scale_small.scad
+	../../src/unified/scale_small.scad ../../src/unified/heavy_runabout.scad
 
 yacht.stl: ../../src/lib/util.scad ../../src/unified/common.scad \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
@@ -89,9 +89,9 @@ shuttle-large.stl: ../../src/lib/util.scad ../../src/small/shuttle-large.scad
 
 shuttle-medium.stl: ../../src/lib/util.scad ../../src/small/shuttle-medium.scad
 
-shuttlepod.stl: ../../src/lib/util.scad ../../src/small/shuttlepod.scad
+shuttlepod.stl: ../../src/lib/util.scad ../../src/unified/shuttlepod.scad
 
-shuttle-small.stl: ../../src/lib/util.scad ../../src/small/shuttle-small.scad
+small_shuttle.stl: ../../src/lib/util.scad ../../src/unified/small_shuttle.scad
 
 tactical-runabout.stl: ../../src/lib/util.scad ../../src/small/tactical-runabout.scad
 

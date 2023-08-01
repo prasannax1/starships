@@ -9,7 +9,7 @@ IMG += medevac.png
 IMG += shuttle-large.png
 IMG += shuttle-medium.png
 IMG += shuttlepod.png
-IMG += shuttle-small.png
+IMG += small_shuttle.png
 IMG += tactical-runabout.png
 IMG += yacht.png
 
@@ -82,15 +82,15 @@ shuttle-medium.png: ../../src/lib/util.scad ../../src/small/shuttle-medium.scad
 	    -p $@ \
 	    -t DeepOcean 
 
-shuttlepod.png: ../../src/lib/util.scad ../../src/small/shuttlepod.scad
+shuttlepod.png: ../../src/lib/util.scad ../../src/unified/shuttlepod.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t DeepOcean 
 
-shuttle-small.png: ../../src/lib/util.scad ../../src/small/shuttle-small.scad
+small_shuttle.png: ../../src/lib/util.scad ../../src/unified/small_shuttle.scad
 	bash ../../bin/render.sh \
-	    -i ../../src/small/$(basename $(notdir $@)).scad \
+	    -i ../../src/unified/$(basename $(notdir $@)).scad \
 	    -p $@ \
 	    -t DeepOcean 
 
