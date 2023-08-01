@@ -31,7 +31,7 @@ module command() {
 }
 
 module labs() {
-    import("../../stls/generated/labs_alt.stl", 10);
+    import("../../stls/generated/labs_full.stl", 10);
 }
 
 module carrier() {
@@ -46,22 +46,22 @@ module saucer() {
     import("../../stls/generated/saucer.stl", 10);
 }
 
-translate([-400,0,-500]) main();
+translate([-300,0,-420]) main();
 
 translate([0,0,550]) escort(carrier_attached=false);
 
 translate([0,0,500]) scout_simple();
 translate([-250,0,500]) scout_full();
-translate([-500,0,500]) scout_alt();
+translate([-450,0,500]) scout_alt();
 
 translate([0,0,400]) command_simple();
 translate([-320,0,400]) command_medium();
 translate([-750,0,400]) command();
 
-translate([0,0,280]) labs();
+translate([0,0,275]) labs();
 
 translate([0,0,140]) saucer();
 
 translate([0,0,0]) carrier();
 
-translate([0,0,-250]) warp();
+translate([0,0,-200]) warp();
