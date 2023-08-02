@@ -685,15 +685,14 @@ module class_4_body_flat_plus() {
 module class_4_body_flat_minus() {
             util_mirrored([0,1,0])
             translate([class_4_body_height-class_4_body_curve, class_4_body_w/2-class_4_body_curve, 0])
-            circle(r=class_4_body_curve-class_4_body_wall, $fn=6);
+            circle(r=class_4_body_curve-class_4_body_wall*.5, $fn=6);
 
             translate([(class_4_body_height+.5*class_4_body_wall-class_4_body_curve)/2,0,0])
-            square([class_4_body_height-class_4_body_curve-class_4_body_wall, class_4_body_w-2*class_4_body_wall], center=true);
+            square([class_4_body_height-class_4_body_curve-class_4_body_wall, class_4_body_w-1.5*class_4_body_wall], center=true);
 
             translate([class_4_body_height-class_4_body_curve,0,0])
-            square([2*class_4_body_curve-2*class_4_body_wall, class_4_body_w-2*class_4_body_curve],center=true);
+            square([2*class_4_body_curve-1.5*class_4_body_wall, class_4_body_w-2*class_4_body_curve],center=true);
 }
-
 
 module class_4_body_base() {
     intersection() {
