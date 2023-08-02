@@ -22,6 +22,20 @@ module class_0_attack_engine() {
     class_0_double_nacelle();
 }
 
+module spherical_hangar_door(d1, h1) {
+    rotate_extrude(angle=360, convexity=10, $fn=faces_rough)
+    difference() {
+        scale([1, 2*h1/d1, 1])
+        circle(d=d1, $fn=faces_concave);
+
+        translate([-(d1+h1)/2,0,0])
+        square(d1+h1, center=true);
+
+        translate([0, -(d1+h1)/2-.05,0])
+        square(d1+h1, center=true);
+    }
+}
+
 
 module class_0_double_nacelle() {
     difference() {
@@ -175,7 +189,6 @@ module class_0_habitat() {
     cylinder(d1=disk_0_upper_d*.75, d2=disk_0_upper_d*.3, h=disk_1_height*.5, center=true, $fn=faces_convex);
 }
 
-
 module class_1_nacelle() {
     difference() {
         class_1_nacelle_plus();
@@ -239,6 +252,7 @@ module class_1_neck_element_1() {
 module class_1_neck_element_2() {
     cylinder(h=class_1_neck_w_2, d=class_1_neck_w, center=true, $fn=faces_rough);
 }
+
 
 module class_1_assembly() {
     translate([-disk_1_width/4,0,0])
@@ -320,12 +334,9 @@ module class_1_sec_body() {
     }
     
     translate([-class_1_secondary_l*.63,0,0])
-    intersection() {
-        sphere(d=class_1_secondary_w*.7-2, $fn=faces_rough);
-        translate([0,0,class_1_secondary_w/2+.05])
-        cube(class_1_secondary_w, center=true);
-    }
+    spherical_hangar_door(class_1_secondary_w*.7-2, class_1_secondary_w*.35-1);
 }
+
 
 module class_1_sec_minus() {
     translate([class_1_secondary_w*.7,0,0])
@@ -381,8 +392,11 @@ module class_1_secondary() {
 
             translate([-disk_1_width*.55, 0, disk_1_width/2])
             sphere(d=3);
+            
+            translate([-disk_1_width*.75, 0, disk_1_width/2])
+            sphere(d=3);
 
-            translate([-disk_1_width, 0, disk_1_width/2])
+            translate([-disk_1_width*.75, 0, disk_1_width/2-class_1_nacelle_w*1.5])
             sphere(d=3);
         }
     }
@@ -476,23 +490,18 @@ module class_2_sec_body() {
         cube([class_2_secondary_l/2, class_2_secondary_w*1.2, class_2_secondary_w], center=true);
     }
 
-    translate([-class_2_secondary_l*.75+class_2_secondary_w,0,0])
-    scale([1,1,.6])
-    difference() {
-        sphere(d=class_2_secondary_w*.6, $fn=faces_rough);
-        translate([0,0,-class_2_secondary_w/2])
-        cube(class_2_secondary_w, center=true);
-    }
+    translate([-class_2_secondary_l*.74+class_2_secondary_w,0,0])
+    spherical_hangar_door(class_2_secondary_w*.6, class_2_secondary_w*.3*.6);
     
-    translate([-class_2_secondary_l/2-7.5,0,.5])
+    translate([-class_2_secondary_l/2-7.5,0,.05])
     disk_0_under();
 }
 
+
 module class_2_secondary() {
     class_2_sec_body();
-    theta=75;
+    theta=72;
 
-    translate([0,0,1])
     util_mirrored([0,1,0])
     rotate([theta,0,0]) {
         translate([-class_2_nacelle_l/2,0,disk_2_width/2-class_2_nacelle_w*1.5])
@@ -513,8 +522,6 @@ module class_2_secondary() {
         }
     }
 }
-
-
 
 module class_3_nacelle() {
     difference() {
