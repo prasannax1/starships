@@ -483,12 +483,16 @@ module class_2_sec_body() {
         translate([0,0,-class_2_secondary_w/2])
         cube(class_2_secondary_w, center=true);
     }
+    
+    translate([-class_2_secondary_l/2-7.5,0,.5])
+    disk_0_under();
 }
 
 module class_2_secondary() {
     class_2_sec_body();
     theta=75;
 
+    translate([0,0,1])
     util_mirrored([0,1,0])
     rotate([theta,0,0]) {
         translate([-class_2_nacelle_l/2,0,disk_2_width/2-class_2_nacelle_w*1.5])
@@ -496,10 +500,10 @@ module class_2_secondary() {
         class_2_nacelle();
 
         hull() {
-            sphere(d=2.5);
+            sphere(d=5);
 
-            translate([-class_2_secondary_l*.75+class_2_secondary_w*1.3,0,0])
-            sphere(d=2.5);
+            translate([-class_2_secondary_l*.7+class_2_secondary_w*1.3,0,0])
+            sphere(d=5);
 
             translate([-class_2_nacelle_l/2+class_0_secondary_l/2,0,disk_2_width/2-class_2_nacelle_w*1.5])
             sphere(d=2.5);
@@ -509,6 +513,8 @@ module class_2_secondary() {
         }
     }
 }
+
+
 
 module class_3_nacelle() {
     difference() {

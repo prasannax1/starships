@@ -9,7 +9,6 @@ IMG += scout_alt.png
 IMG += command_full.png 
 IMG += command_alt.png 
 IMG += command_simple.png 
-IMG += saucer_full.png 
 IMG += labs_full.png 
 IMG += labs_alt.png 
 IMG += carrier.png 
@@ -75,10 +74,6 @@ labs_alt.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 saucer.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
     ../../src/unified/saucer.scad
-
-saucer_full.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
-	../../src/unified/disks.scad ../../src/unified/engines.scad \
-    ../../src/unified/saucer_full.scad
 
 carrier.png: ../../src/lib/util.scad ../../src/unified/common.scad  \
 	../../src/unified/disks.scad ../../src/unified/engines.scad \
