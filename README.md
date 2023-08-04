@@ -137,7 +137,7 @@ Atlas-B Class heavy explorer
 
   - Length: 549m
   - Width: 240m
-  - Height: 71m
+  - Height: 76m
   - Decks: 20
   - Crew Capacity: 1200
   - Warp Speed
@@ -182,11 +182,11 @@ or with the class 2 secondary hull with its massive 150m hangar to form a space 
 
 Atlas-C Class large scientific vessel
 
-##### Stats
+##### Stats (for super heavy cruiser configuration)
 
-  - Length: 515m
+  - Length: 855m
   - Width: 400m
-  - Height: 52m
+  - Height: 75m
   - Decks: 16
   - Crew Capacity: 3000
   - Warp Speed
@@ -745,10 +745,10 @@ Ganges class heavy runabout
 
 ##### Stats
 
-  - Length: 48m22m
+  - Length: 48m
   - Width: 24m
   - Height: 9m
-  - Decks: 3
+  - Decks: 2
   - Crew Capacity: 32
   - Warp Speed
     - Cruising: Warp 6.8
