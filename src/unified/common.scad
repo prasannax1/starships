@@ -32,21 +32,25 @@ disk_2_deck=3;
 
 class_2_nacelle_w=25;
 class_2_nacelle_h=25;
-class_2_nacelle_l=300;
+class_2_nacelle_l=320;
 
 class_2_secondary_w=60;
-class_2_secondary_l=200;
+class_2_secondary_l=240;
 
 disk_3_width=400;
 disk_3_height=40;
 disk_3_body_width=180;
 
+class_3_secondary_w=80;
+class_3_secondary_h=80;
+class_3_secondary_l=400;
+
 disk_4_width=750;
-disk_4_upper=525;
+disk_4_upper=500;
 disk_4_height=50;
 
 class_3_nacelle_w=80;
-class_3_nacelle_h=30;
+class_3_nacelle_h=35;
 class_3_nacelle_l=400;
 
 class_4_body_w=200;
