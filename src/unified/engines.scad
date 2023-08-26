@@ -265,7 +265,6 @@ module class_1_assembly() {
     class_1_nacelle();
 }
 
-class_1_neck();
 
 module class_1_neck() {
     difference() {
@@ -764,6 +763,8 @@ module class_3_secondary_plus() {
     }
 }
 
+
+
 module class_3_secondary_minus() {
     translate([class_3_secondary_w*1,0,0])
     scale([.5,1,1])
@@ -786,6 +787,16 @@ module class_3_secondary_minus() {
         translate([0,0,1.5])
         translate([0,0,.625*class_3_secondary_w])
         cube(1.25*class_3_secondary_w, center=true);
+    }
+    
+    translate([-class_3_secondary_l/4,0,-1.5])
+    rotate([0,-90,0])
+    translate([0,0,class_3_secondary_l/4])
+    intersection() {
+        cylinder(d=disk_0_width*1.1, h=class_3_secondary_l/2, center=true, $fn=faces_concave);
+
+        translate([-class_3_secondary_l/2,0,0])
+        cube(class_3_secondary_l, center=true);
     }
 }
 

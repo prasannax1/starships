@@ -408,67 +408,8 @@ module disk_4_minus() {
     scale([1,10,1]) window();
 }
 
-module disk_4_upper_elem() {
-    rotate(-5)
-    rotate_extrude(angle=10, convexity=10, $fn=faces_concave*2)
-    translate([disk_4_upper/2,0,0])
-    difference() {
-        square([disk_4_width-disk_4_upper, disk_4_height], center=true);
 
-        translate([.5*(disk_4_width-disk_4_upper),0,0])
-        rotate(45)
-        translate([disk_4_height*1.8/2,0,0])
-        square(1.8*disk_4_height, center=true);
-        
-        translate([0, disk_4_height/2, 0])
-        square([2*disk_0_width, 2*2*disk_0_deck_h], center=true);
-        
-        translate([-disk_4_width/2,0,0])
-        square(disk_4_width, center=true);    
-        
-        translate([0, -disk_4_width/2,0])
-        square(disk_4_width, center=true);
-        
-        circle(d=disk_4_height, $fn=4);
-    }
-    
-    translate([disk_4_upper/2 + disk_0_width/2, 0, disk_4_height/2-disk_0_deck_h*2-.01]) 
-    rotate(180)
-    disk_0();
-}
-
-
-module disk_4_upper_elem_2() {
-    difference() {
-        intersection() {
-            rotate(5)
-            translate([0, -disk_4_width/2,0])
-            cube(disk_4_width, center=true);
-            
-            rotate(-5)
-            translate([0, disk_4_width/2,0])
-            cube(disk_4_width, center=true);
-            
-            translate([0,0,disk_4_height/4-.01])
-            cube([1.2*disk_4_width, 1.2*disk_4_width, .5*disk_4_height], center=true);
-            
-            translate([disk_4_width/2,0,0])
-            rotate([0,-45,0])
-            translate([-75/2,0,0])
-            cube([75,75,500], center=true);
-        }
-
-        translate([0,0,disk_4_height/2])
-        cylinder(h=4*disk_0_deck_h, d=disk_4_upper+2*disk_0_width, $fn=faces_concave, center=true);
-    }
-
-    translate([disk_4_upper/2 + disk_0_width/2+.01, 0, disk_4_height/2-disk_0_deck_h*2-.01]) 
-    rotate(180)
-    disk_0();
-}
-
-
-
+square([(disk_4_width-disk_4_upper), disk_4_height], center=true);
 
 
 module disk_4() {
