@@ -817,12 +817,13 @@ module class_3_secondary_base() {
     disk_0_under();
 }
 
+
 module class_3_nacelle_bar_flat() {
     scale([1.8,1,1])
-    circle(d=10, $fn=faces_rough);
+    circle(d=6, $fn=faces_rough);
 
     translate([100,0,0])
-    square([200, 5], center=true);
+    square([200, 2], center=true);
 }
 
 module class_3_nacelle_bar_plus() {
