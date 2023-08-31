@@ -409,9 +409,6 @@ module disk_4_minus() {
 }
 
 
-square([(disk_4_width-disk_4_upper), disk_4_height], center=true);
-
-
 module disk_4() {
     difference() {
         disk_4_plus();

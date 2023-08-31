@@ -50,7 +50,7 @@ disk_4_upper=500;
 disk_4_height=50;
 
 class_3_nacelle_w=80;
-class_3_nacelle_h=35;
+class_3_nacelle_h=40;
 class_3_nacelle_l=400;
 
 class_4_body_w=200;
