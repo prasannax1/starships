@@ -704,22 +704,22 @@ module class_2_secondary_old() {
     }
 }
 
-
 module class_3_nacelle_base() {
-    rotate_extrude(angle = 90, convexity = 10, $fn=faces_convex)
+    rotate_extrude(angle=90, convexity=2, $fn=faces_convex)
     intersection() {
-        union() {
+        scale([class_3_nacelle_h*3/class_3_nacelle_w,1,1]) {
             util_mirrored([0,1,0])
-            translate([0, class_3_nacelle_w/2-class_3_nacelle_h,0])
-            circle(r=class_3_nacelle_h, $fn=faces_rough);
+            translate([0, class_3_nacelle_w/6,0])
+            circle(r=class_3_nacelle_w/3, $fn=faces_convex);
 
-            square([class_3_nacelle_h*2, class_3_nacelle_w-class_3_nacelle_h*2], center=true);
+            square([class_3_nacelle_w*2/3, class_3_nacelle_w/3], center=true);
         }
-        
+
         translate([class_3_nacelle_l/2,0,0])
         square(class_3_nacelle_l, center=true);
     }
 }
+
 
 module class_3_nacelle() {
     translate([-.01,0,-.01])
@@ -733,11 +733,11 @@ module class_3_nacelle() {
     class_3_nacelle_base();
 
     translate([-.01,0, .01])
-    scale([2,1,.2])
+    scale([2,1,.25])
     rotate([-90,0,0]) class_3_nacelle_base();
 
     translate([.01,0,.01])
-    scale([(class_3_nacelle_l-class_3_nacelle_h*2)/class_3_nacelle_h,1,.2])
+    scale([(class_3_nacelle_l-class_3_nacelle_h*2)/class_3_nacelle_h,1,.25])
     rotate(180)
     rotate([-90,0,0])
     class_3_nacelle_base();
@@ -861,7 +861,7 @@ module class_3_secondary() {
     class_3_secondary_base();
     theta = 75;
 
-    translate([0,0,5])
+    translate([0,0,5+1.8])
     util_mirrored([0,1,0])
     rotate([theta,0,0]) {
         translate([-144,0,0])
