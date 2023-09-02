@@ -830,12 +830,12 @@ module class_3_nacelle_bar_plus() {
     translate([-500,0,-410+75])
     intersection() {
         rotate([90,0,0] ) {
-            rotate_extrude(angle=90, convexity=10, $fn=faces_convex)
+            rotate_extrude(angle=90, convexity=3, $fn=faces_convex)
             translate([500,0,0]) class_3_nacelle_bar_flat();
 
             translate([925,925,0])
             rotate(180)
-            rotate_extrude(angle=90, convexity=10, $fn=faces_convex)
+            rotate_extrude(angle=90, convexity=3, $fn=faces_convex)
             translate([600,0,0]) class_3_nacelle_bar_flat();
         }
 

@@ -409,11 +409,58 @@ module disk_4_minus() {
 }
 
 
-module disk_4() {
+module disk_4_old() {
     difference() {
         disk_4_plus();
         disk_4_minus();
     }
 }
+
+module disk_4() {
+    translate([0,0,disk_4_height/2-.01])
+    difference() {
+        cylinder(d1=disk_4_width, d2=disk_4_upper + disk_0_width,h=disk_4_height, center=true, $fn=faces_concave*2);
+
+        cylinder(d=disk_4_upper, h=1.2*disk_4_height, center=true, $fn=faces_concave);
+        
+        util_repeat_rot(5, [0,0,30])
+        translate([0,0,disk_4_height/2])
+        cube([disk_4_width*1.5, disk_1_width*.75, disk_4_height*1.5], center=true);
+    }
+
+    rotate_extrude(angle=360, convexity=3, $fn=faces_concave*2)
+    translate([disk_4_upper/2+1,0,0])
+    scale([(disk_4_width-disk_4_upper)/(2*disk_4_height),1,1])
+    intersection() {
+        circle(d=1.8*disk_4_height, $fn=4);
+        
+        translate([.75*disk_4_height, .75*disk_4_height,0])
+        square(1.5*disk_4_height, center=true);
+    }
+    
+    
+    translate([-disk_4_width/2,0,0.05])
+    scale([1.5,2,disk_1_width*4/disk_4_width])
+    translate([disk_4_width/8,0,-disk_4_width/8]) {
+        difference() {
+            cube([disk_4_width/4, disk_0_width, disk_4_width/4], center=true);
+            
+            translate([disk_4_width/8, 0, -disk_4_width/8])
+            rotate([90,0,0])
+            cylinder(r=disk_4_width/5, h=disk_1_width, $fn=faces_concave, center=true);
+        }
+
+        translate([disk_4_width/8, 0, -disk_4_width/8])
+        rotate(180)
+        rotate([90,0,0])
+        rotate_extrude(angle=90, convexity=3, $fn=faces_convex)
+        translate([disk_4_width/5,0,0])
+        square(10, center=true);
+    }
+}
+
+
+
+
 
 
