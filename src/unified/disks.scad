@@ -416,6 +416,8 @@ module disk_4_old() {
     }
 }
 
+disk_4();
+
 module disk_4() {
     translate([0,0,disk_4_height/2-.01])
     difference() {
@@ -457,10 +459,25 @@ module disk_4() {
         translate([disk_4_width/5,0,0])
         square(10, center=true);
     }
+
+    translate([-disk_4_width/2+disk_1_width,0,-.01]) 
+    scale([1,1,.6])
+        {
+        intersection() {
+            rotate([90,0,0])
+            difference() {
+                cylinder(h=2*disk_0_width, r=disk_1_width, center=true, $fn=faces_convex);
+                
+                rotate_extrude(angle=360, convexity=3, $fn=faces_concave)
+                translate([disk_1_width,0,0])
+                square(10, center=true);
+            }
+
+            translate([-disk_2_width/2,0,disk_2_width/2])
+            cube(disk_2_width, center=true);
+        }
+
+        translate([-disk_0_width,0,disk_1_width/2])
+        cylinder(r=disk_0_width, h=disk_1_width, center=true, $fn=faces_convex);
+    }
 }
-
-
-
-
-
-
