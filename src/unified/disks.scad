@@ -416,8 +416,6 @@ module disk_4_old() {
     }
 }
 
-disk_4();
-
 module disk_4() {
     translate([0,0,disk_4_height/2-.01])
     difference() {
