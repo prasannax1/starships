@@ -1314,6 +1314,15 @@ module class_4_nacelle_new() {
 class_5_secondary(0);
 
 module class_5_neck() {
+    
+    util_repeat(4, [0,0,-40])
+    translate([-50,0,-75])
+    cube([80, 25, 25], center=true);
+    
+    util_repeat(4, [0,0,-40])
+    translate([-10,0,-75])
+    cylinder(d=25, h=25, center=true, $fn=faces_rough);
+    
     translate([0,0,0])
     intersection() {
         union() {
