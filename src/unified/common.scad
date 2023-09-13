@@ -53,16 +53,16 @@ class_3_nacelle_w=60;
 class_3_nacelle_h=40;
 class_3_nacelle_l=400;
 
-class_4_body_w=360;
-class_4_body_h=180;
-class_4_body_curve=32;
+class_4_body_w=240;
+class_4_body_h=120;
+class_4_body_curve=20;
 class_4_body_upper_curve=10;
 class_4_body_inner_curve=5;
 class_4_body_wall=10;
 class_4_body_height=135;
 class_4_body_l=720;
-class_4_body_hangar=120;
-class_4_body_hangar_w=225;
+class_4_body_hangar=100;
+class_4_body_hangar_w=100;
 
 class_4_nacelle_sep=300;
 class_4_nacelle_disp=300;
@@ -73,5 +73,5 @@ class_4_hangar_h=90;
 class_4_hangar_w=180;
 
 class_4_nacelle_l=800;
-class_4_nacelle_w=50;
-class_4_nacelle_h=100;
+class_4_nacelle_w=40;
+class_4_nacelle_h=80;

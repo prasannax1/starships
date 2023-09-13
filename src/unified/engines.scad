@@ -1311,7 +1311,48 @@ module class_4_nacelle_new() {
     }
 }
 
-class_5_secondary(0);
+
+
+translate([0,0,0]) { 
+    disk_4();
+    disk_3();
+}
+
+util_mirrored([0,1,0])
+translate([-700,-255, 100])
+class_5_secondary(45);
+
+translate([-disk_4_width/2+disk_2_width*.6,0,disk_4_height+10-.01]) disk_2();
+
+module class_5_hangar() {
+    difference() {
+        union() {
+            util_mirrored([1,0,0])
+            translate([class_4_nacelle_l/4, 0, 0])
+            intersection() {
+                sphere(d=disk_1_width, $fn=faces_convex);
+
+                cube([disk_1_width/2, disk_1_width*1.2, disk_1_width*1.2], center=true);
+            }
+
+            rotate([0,90,0])
+            cylinder(d=disk_1_width, h=class_4_nacelle_l/2, $fn=faces_convex, center=true);
+
+            util_repeat_rot(3, [45,0,0])
+            cube([class_4_nacelle_l/4, disk_1_width, 20], center=true);
+        }
+
+        util_mirrored([1,0,0])
+        translate([class_4_nacelle_l/4+disk_1_width/4,0,0]) {
+            rotate([0,90,0])
+            rotate_extrude(angle=360, convexity=3, $fn=faces_concave)
+            translate([disk_1_width/2 - 15,0,0])
+            square(3, center=true);
+            
+            cube([3, 2*(disk_1_width/2 - 15), 3], center=true);
+        }
+    }
+}
 
 module class_5_neck() {
     
@@ -1354,6 +1395,9 @@ module class_5_neck() {
 module class_5_secondary(theta) {
     rotate([theta,0,0]) {
         class_5_neck();
+        
+        translate([-class_4_nacelle_disp*.25, 0, -class_4_nacelle_sep])
+        class_5_hangar();
         
         util_mirrored([0,1,0])
         rotate([45,0,0]) {
