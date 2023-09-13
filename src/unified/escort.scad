@@ -42,9 +42,9 @@ module escort() {
     util_mirrored([0,1,0])
     translate([-disk_1_width*.26,disk_0_width/2,disk_0_deck_h*1.2+1])
     difference() {
-    rotate([90,0,0])
-    rotate(30)
-    cylinder(h=disk_0_upper_d, r=disk_0_deck_h*1.2, $fn=6, center=true);
+        rotate([90,0,0])
+        rotate(30)
+        cylinder(h=disk_0_upper_d, r=disk_0_deck_h*1.2, $fn=6, center=true);
         
         translate([-disk_0_deck_h,0,0])
         cube([2, 10,2], center=true);
