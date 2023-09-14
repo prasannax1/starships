@@ -1313,17 +1313,6 @@ module class_4_nacelle_new() {
 
 
 
-translate([0,0,0]) { 
-    disk_4();
-    disk_3();
-}
-
-util_mirrored([0,1,0])
-translate([-700,-255, 100])
-class_5_secondary(45);
-
-translate([-disk_4_width/2+disk_2_width*.6,0,disk_4_height+10-.01]) disk_2();
-
 module class_5_hangar() {
     difference() {
         union() {
