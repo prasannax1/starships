@@ -2,7 +2,6 @@ use <disks.scad>
 use <engines.scad>
 use <../lib/util.scad>
 include <common.scad>
-use <attack.scad>;
 
 module escort() {
     difference() {
@@ -59,9 +58,8 @@ module escort() {
         cube([2, 10,2], center=true);
     }
     
-    //disk_0_under_2();
+    disk_0_under_2();
+    //mirror([0,0,1]) disk_0();
 }
 
 escort();
-
-//translate([0,0,25]) attack();
