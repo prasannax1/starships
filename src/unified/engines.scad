@@ -1366,4 +1366,71 @@ module class_4_body_old() {
     translate([-class_4_body_l+disk_0_width,0,class_4_body_height*.448]) rotate(180) disk_0();
 }
 
+module class_4_bell() {
+    difference() {
+        rotate_extrude(angle=180, convexity=3, $fn=faces_concave) {
+            difference() {
+                circle(d=class_4_body_w, $fn=faces_concave);
 
+                circle(d=class_4_body_w-10, $fn=faces_concave);
+                
+                translate([-.6*class_4_body_w,0,0])
+                square(class_4_body_w*1.2, center=true);
+                
+                translate([0, .6*class_4_body_w+20,0])
+                square(class_4_body_w*1.2, center=true);
+            }
+
+            translate([class_4_body_w*.95/4,20-5/2,0])
+            square([class_4_body_w*.95/2, 5], center=true);
+            
+            intersection() {
+                circle(d=class_4_body_w, $fn=faces_concave);
+                
+                translate([class_4_body_w/2, -class_4_body_w/2-class_4_body_w*.4,0])
+                square(class_4_body_w, center=true);
+            }
+        }
+        
+        translate([0,class_4_body_w/2,15])
+        scale([1,1,5])
+        translate([0,0,-class_4_body_w/3])
+        rotate([0,90,0])
+        cylinder(r=class_4_body_w/3, h= class_4_body_w*1.2, center=true, $fn=faces_concave);
+    }
+}
+
+//translate([disk_4_width/2, 0, 100+20-.01+30])
+//disk_4();
+
+module class_4_body_new() {
+    translate([.01,0,0])
+    scale([4.5,1,1])
+    rotate(90)
+    class_4_bell();
+
+    translate([-.01,0,0])
+    scale([2.25,1,1])
+    rotate(-90)
+    class_4_bell();
+
+    scale([2.25,1,.5]) 
+    difference() {
+        intersection() {
+            sphere(d=class_4_body_w, $fn=faces_convex);
+            
+            translate([0,0,30])
+            translate([0,0,class_4_body_w/2])
+            cube(class_4_body_w, center=true);
+        }
+
+        translate([0,0,class_4_body_w/4])
+        translate([-class_4_body_w/2,0,class_4_body_w/4])
+        rotate([90,0,0])
+        cylinder(d=class_4_body_w, h=class_4_body_w, center=true, $fn=faces_concave);
+    }
+
+    translate([100,0,15])
+    translate([0,0,22.5])
+    cylinder(d=100, h=45, $fn=faces_convex, center=true);
+}
