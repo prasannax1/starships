@@ -64,7 +64,7 @@ class_4_body_l=720;
 class_4_body_hangar=100;
 class_4_body_hangar_w=100;
 
-class_4_nacelle_sep=300;
+class_4_nacelle_sep=250;
 class_4_nacelle_disp=300;
 
 class_4_neck_curve=200;
