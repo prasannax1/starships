@@ -6,6 +6,7 @@ use <../lib/util.scad>
 include <common.scad>
 use <saucer.scad>;
 use <labs.scad>;
+use <labs_secondary.scad>;
 use <command.scad>;
 use <scout_simple.scad>;
 use <warp.scad>;
@@ -30,3 +31,9 @@ module main() {
 }
 
 main();
+
+//translate([-class_3_secondary_l/2+100,0,20+class_3_secondary_h/2+20])
+//labs_secondary();
+
+//translate([disk_4_width/2-50,0,100])
+//class_2_secondary();

@@ -1354,7 +1354,7 @@ module class_4_bell() {
 //disk_4();
 
 
-
+//class_4_body_new();
 
 module class_4_body_new() {
     translate([.01,0,0])
@@ -1393,7 +1393,9 @@ module class_4_body_new() {
     cylinder(h=class_4_body_w*1.5, d=20, center=true, $fn=faces_rough);
     
     translate([75.05,0,20-.01])
-    linear_extrude(height=100+45, convexity=3, scale=[.2, .5])
-    translate([-class_4_nacelle_disp*.5/2,0,0])
-    square([class_4_nacelle_disp*.5, disk_1_width], center=true);
+    linear_extrude(height=100+45, convexity=3, scale=[.15, .45])
+    translate([-class_4_nacelle_disp*.75/2,0,0])
+    square([class_4_nacelle_disp*.75, disk_1_width], center=true);
+    
+    translate([75-disk_0_width/2-2,0,20+144]) disk_0();
 }
