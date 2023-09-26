@@ -3,7 +3,7 @@ use <disks.scad>
 use <engines.scad>
 
 module warp() {    
-    class_5_secondary(0);
+    class_5_secondary();
 }
 
 warp();

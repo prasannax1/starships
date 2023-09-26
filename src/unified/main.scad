@@ -24,8 +24,9 @@ module main() {
     class_4_body_new();
     
     util_mirrored([0,1,0])
-    translate([-class_4_nacelle_disp*.75,-class_4_nacelle_sep*.88, class_4_nacelle_sep*.97])
-    class_5_secondary(45);
+    translate([-class_4_nacelle_disp*.75,class_4_body_w/4,20+class_4_nacelle_base_w/2-.01])
+    rotate([-45,0,0])
+    class_5_secondary();
 }
 
 main();
