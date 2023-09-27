@@ -28,6 +28,9 @@ module main() {
     translate([-class_4_nacelle_disp*.75+10,class_4_body_w/4,20+class_4_nacelle_base_w/2-.01])
     rotate([-45,0,0])
     class_5_secondary();
+    
+    translate([-class_4_nacelle_disp-disk_1_width/2, 0, 20-2.5])
+    escort();
 }
 
 main();

@@ -1354,9 +1354,26 @@ module class_4_bell() {
 //disk_4();
 
 
-//class_4_body_new();
-
 module class_4_body_new() {
+    difference() {
+        class_4_body_new_plus();
+        class_4_body_new_minus();
+    }
+}
+
+
+
+
+module class_4_body_new_minus() {
+    translate([-class_4_nacelle_disp-disk_1_width/2, 0, 20]) {
+        cylinder(d=disk_1_width-.02, h=100, $fn=faces_concave, center=true);
+
+        translate([-disk_1_width,0,0])
+        cube([2*disk_1_width, disk_1_width-.02, 100], center=true);
+    }
+}
+
+module class_4_body_new_plus() {
     translate([.01,0,0])
     scale([4.5,1,1])
     rotate(90)
