@@ -857,9 +857,8 @@ module class_3_nacelle_bar() {
     }
 }
 
-module class_3_secondary() {
+module class_3_secondary(theta) {
     class_3_secondary_base();
-    theta = 75;
 
     translate([0,0,5+1.8])
     util_mirrored([0,1,0])
@@ -1353,6 +1352,7 @@ module class_4_bell() {
 //translate([disk_4_width/2, 0, 100+20-.01+30])
 //disk_4();
 
+//class_4_body_new();
 
 module class_4_body_new() {
     difference() {
@@ -1370,6 +1370,16 @@ module class_4_body_new_minus() {
 
         translate([-disk_1_width,0,0])
         cube([2*disk_1_width, disk_1_width-.02, 100], center=true);
+    }
+    
+    
+    translate([-class_3_secondary_l+76,0,20+class_3_secondary_h/2+10-.02])
+    intersection() {
+        rotate([0,90,0])
+        cylinder(d=class_3_secondary_w-.02, h=class_3_secondary_l*2, center=true, $fn=faces_concave);
+
+        translate([0,0,-class_3_secondary_w*.6])
+        cube([class_3_secondary_l*3, class_3_secondary_w*1.2, class_3_secondary_w*1.2], center=true);
     }
 }
 
@@ -1410,7 +1420,7 @@ module class_4_body_new_plus() {
     cylinder(h=class_4_body_w*1.5, d=20, center=true, $fn=faces_rough);
     
     translate([75.05,0,20-.01])
-    linear_extrude(height=100+45, convexity=3, scale=[.15, .45])
+    linear_extrude(height=100+45, convexity=3, scale=[.15, .75])
     translate([-class_4_nacelle_disp*.75/2,0,0])
     square([class_4_nacelle_disp*.75, disk_1_width], center=true);
     

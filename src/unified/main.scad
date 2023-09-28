@@ -31,12 +31,12 @@ module main() {
     
     translate([-class_4_nacelle_disp-disk_1_width/2, 0, 20-2.5])
     escort();
+    
+    translate([-class_3_secondary_l/2+95,0,20+class_3_secondary_h/2+10])
+    labs_secondary(65);
 }
 
 main();
-
-//translate([-class_3_secondary_l/2+100,0,20+class_3_secondary_h/2+20])
-//labs_secondary();
 
 //translate([disk_4_width/2-50,0,100])
 //class_2_secondary();

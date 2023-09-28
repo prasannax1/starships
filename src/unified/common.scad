@@ -49,8 +49,8 @@ disk_4_width=750;
 disk_4_upper=480;
 disk_4_height=50;
 
-class_3_nacelle_w=50;
-class_3_nacelle_h=40;
+class_3_nacelle_w=36;
+class_3_nacelle_h=36;
 class_3_nacelle_l=400;
 
 class_4_body_w=240;
