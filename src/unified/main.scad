@@ -35,6 +35,9 @@ module main() {
     translate([-class_3_secondary_l/2+95,0,20+class_3_secondary_h/2+10])
     labs_secondary(65);
     
+    translate([-class_4_nacelle_disp+disk_1_width*.5, 0, 40])
+    class_1_secondary();
+    
     translate([disk_4_width/2,0,105])
     class_2_secondary();
 }
