@@ -16,6 +16,7 @@ module main() {
         saucer();
         
         translate([0,0,-.01])
+        rotate(180)
         labs();
         
         translate([-disk_4_width/2+disk_2_width*.6,0,disk_4_height+10-.01])
