@@ -1216,6 +1216,12 @@ module class_4_nacelle_new() {
 
 
 module class_5_secondary() {
+    translate([-class_4_nacelle_disp/4, 0, class_4_nacelle_sep/2]) class_5_hangar();
+    
+    translate([-class_4_nacelle_disp/4, 0, class_4_nacelle_sep/2+70]) class_5_hangar();
+    
+    translate([-class_4_nacelle_disp/4, 0, class_4_nacelle_sep/2-70]) class_5_hangar();
+    
     intersection() {
         cube([class_4_nacelle_disp, class_4_nacelle_base_w,class_4_nacelle_base_w], center=true);
 
@@ -1361,8 +1367,43 @@ module class_4_body_new() {
     }
 }
 
+module class_5_hangar() {
+    difference() {
+        union() {
+            rotate([90,0,0])
+            rotate(-90)
+            rotate_extrude(angle=180, convexity=3, $fn=faces_rough) {
+                translate([35/2,0,0])
+                circle(d=24, $fn=faces_rough);
+
+                translate([35/4,0,0])
+                square([35/2,24], center=true);
+            }
+
+            util_mirrored([0,0,1])
+            translate([-50+.01,0,35/2])
+            rotate([0,90,0])
+            cylinder(d=24, h=100, $fn=faces_rough, center=true);
+
+            translate([-50+.01,0,0])
+            cube([100, 24, 35], center=true);
+        }
+
+        util_mirrored([0,1,0])
+        translate([0,24/2,0])
+        rotate([90,0,0])
+        cylinder(h=2, d=32, center=true, $fn=faces_concave);
 
 
+        util_mirrored([0,0,1])
+        translate([-100,0,35/2])
+        rotate([0,90,0])
+        cylinder(d=20, $fn=faces_concave, center=true, h=2);
+
+        translate([-100,0,0])
+        cube([2, 20, 35], center=true);
+    }
+}
 
 module class_4_body_new_minus() {
     translate([-class_4_nacelle_disp-disk_1_width/2, 0, 20]) {
