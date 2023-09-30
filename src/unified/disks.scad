@@ -428,16 +428,26 @@ module disk_4() {
         cube([disk_4_width*1.5, disk_1_width*.75, disk_4_height*1.5], center=true);
     }
 
-    rotate_extrude(angle=360, convexity=3, $fn=faces_concave*2)
-    translate([disk_4_upper/2+1,0,0])
-    scale([(disk_4_width-disk_4_upper)/(2*disk_4_height),1,1])
-    intersection() {
-        circle(d=1.8*disk_4_height, $fn=4);
+    difference() {
+        rotate_extrude(angle=360, convexity=3, $fn=faces_concave*2)
+        translate([disk_4_upper/2+1,0,0])
+        scale([(disk_4_width-disk_4_upper)/(2*disk_4_height),1,1])
+        intersection() {
+            circle(d=1.8*disk_4_height, $fn=4);
+            
+            translate([.75*disk_4_height, .75*disk_4_height,0])
+            square(1.5*disk_4_height, center=true);
+        }
         
-        translate([.75*disk_4_height, .75*disk_4_height,0])
-        square(1.5*disk_4_height, center=true);
+        util_repeat_rot(4, [0,0,-30])
+        rotate(-30)
+        translate([disk_4_width/2-60,0,20])
+        cube([50,50,10], center=true);
+        
+        util_repeat_rot(5, [0,0,30])
+        translate([disk_4_width/2-60,0,20])
+        cube([50,50,10], center=true);
     }
-    
     
     translate([-disk_4_width/2,0,0.05])
     scale([1.5,2,disk_1_width*4/disk_4_width])
