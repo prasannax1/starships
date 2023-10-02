@@ -416,6 +416,7 @@ module disk_4_old() {
     }
 }
 
+
 module disk_4() {
     translate([0,0,disk_4_height/2-.01])
     difference() {
@@ -488,4 +489,13 @@ module disk_4() {
         translate([-disk_0_width,0,disk_1_width/2])
         cylinder(r=disk_0_width, h=disk_1_width, center=true, $fn=faces_convex);
     }
+    
+    intersection() {
+        translate([0,0,-disk_2_height-10])
+        cylinder(d1=disk_0_width, d2=disk_2_width*1.5, h=disk_2_height*2, center=true, $fn=faces_convex);
+
+        cylinder(d1=disk_2_width*1.5, d2=disk_1_width, h=300, $fn=faces_convex, center=true);
+    }
+
+    translate([0,0,-disk_2_height*2-10+.01]) disk_0_under_2();
 }

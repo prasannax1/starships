@@ -26,21 +26,11 @@ module main() {
     class_4_body_new();
     
     util_mirrored([0,1,0])
-    translate([-class_4_nacelle_disp*.75+10,class_4_body_w/4,20+class_4_nacelle_base_w/2-.01])
-    rotate([-45,0,0])
+    translate([-3.5*class_4_body_h+class_4_nacelle_disp/4, class_4_nacelle_disp*.75, 20-.05]) 
     class_5_secondary();
     
     translate([-class_4_nacelle_disp-disk_1_width/2, 0, 20-2.5])
     escort();
-    
-    translate([-class_3_secondary_l/2+95,0,20+class_3_secondary_h/2+10])
-    labs_secondary(65);
-    
-    translate([-class_4_nacelle_disp+disk_1_width*.5, 0, 40])
-    class_1_secondary();
-    
-    translate([disk_4_width/2,0,105])
-    class_2_secondary();
 }
 
 main();
