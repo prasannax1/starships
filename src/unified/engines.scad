@@ -1363,8 +1363,6 @@ module class_5_hangar() {
 
 //class_5_secondary();
 
-class_4_body_new();
-
 module class_4_body_new() {
     difference() {
         class_4_body_new_plus();

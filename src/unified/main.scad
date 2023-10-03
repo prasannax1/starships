@@ -26,7 +26,7 @@ module main() {
     class_4_body_new();
     
     util_mirrored([0,1,0])
-    translate([-3.5*class_4_body_h+disk_1_width*1.5,-class_4_body_h*.6,.7*disk_1_width/2+20-.01])
+    translate([-3.5*class_4_body_h+disk_1_width*.9,-class_4_body_h*.6,.7*disk_1_width/2+20-.01])
     rotate([45,0,0])
     class_5_secondary();
     
