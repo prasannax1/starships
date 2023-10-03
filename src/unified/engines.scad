@@ -1216,38 +1216,48 @@ module class_4_nacelle_new() {
     }
 }
 
-class_5_secondary();
 
 module class_5_secondary() {
-    difference() {
-        linear_extrude(height=disk_1_width/2, convexity=3, scale=[.75,.5])
-        square([class_4_nacelle_disp*.75, disk_1_width], center=true);
+    translate([-25,0,0]) {
+        difference() {
+            intersection() {
+                linear_extrude(height=disk_1_width/2, convexity=3, scale=[.75,.5])
+                square([class_4_nacelle_disp*.75, disk_1_width], center=true);
+                
+                union() {
+                    util_mirrored([1,0,0])
+                    translate([class_4_nacelle_disp*.75/2-disk_1_width/2,0,0])
+                    cylinder(d=disk_1_width, h=disk_1_width, center=true, $fn=faces_convex);
 
-        util_mirrored([1,0,0])
-        translate([.7*class_4_nacelle_disp/2,0,0])
-        intersection() {
-            rotate([90,0,0])
-            cylinder(d=disk_1_width, h=disk_1_width*1.5, $fn=6, center=true);
+                    cube([class_4_nacelle_disp*.75-disk_1_width, disk_1_width, disk_1_width], center=true);
+                }
+            }
 
-            translate([0,0,disk_1_width*1.5/2+5])
-            cube(disk_1_width*1.5, center=true);
+            util_mirrored([1,0,0])
+            translate([.7*class_4_nacelle_disp/2,0,0])
+            intersection() {
+                rotate([90,0,0])
+                cylinder(d=disk_1_width, h=disk_1_width*1.5, $fn=6, center=true);
+
+                translate([0,0,disk_1_width*1.5/2+5])
+                cube(disk_1_width*1.5, center=true);
+            }
         }
-    }
 
-    util_mirrored([1,0,0])
-    translate([class_4_nacelle_disp*.75/2-disk_1_width/2,0,0])
-    spherical_hangar_door(disk_1_width*.8, disk_1_width/2);
-
-    linear_extrude(height=class_4_nacelle_sep*class_4_nacelle_disp_ratio, convexity=2, scale=[2.5, 2.5])
-    {
-         square([class_4_nacelle_disp*.3, disk_1_width/5], center=true);
-        
         util_mirrored([1,0,0])
-        translate([class_4_nacelle_disp*.3/2,0,0])
-        circle(d=disk_1_width/5, $fn=faces_rough);
+        translate([class_4_nacelle_disp*.75/2-disk_1_width/2,0,0])
+        spherical_hangar_door(disk_1_width*.8, disk_1_width/2);
+    }
+    
+    linear_extrude(height=class_4_nacelle_sep*class_4_nacelle_disp_ratio, convexity=2, scale=[10, 2.5])
+    {     
+        translate([-disk_1_width/10,0,0])
+        scale([3,1,1])
+        rotate(30)
+        circle(d=disk_1_width/5, $fn=6);
     }
 
-    translate([0,0,class_4_nacelle_sep*class_4_nacelle_disp_ratio]) {
+    translate([25,0,class_4_nacelle_sep*class_4_nacelle_disp_ratio-.2*disk_1_width]) {
         sphere(d=.8*disk_1_width, $fn=faces_convex);
         
         rotate([90,0,0])
@@ -1263,7 +1273,7 @@ module class_5_secondary() {
         }
     }
 
-    translate([-class_4_nacelle_l/2-50,0,class_4_nacelle_sep*class_4_nacelle_disp_ratio]) 
+    translate([-class_4_nacelle_l/2-50+25,0,class_4_nacelle_sep*class_4_nacelle_disp_ratio-.2*disk_1_width]) 
     util_mirrored([0,0,1])
     util_mirrored([0,1,0])
     rotate([45,0,0])
@@ -1353,7 +1363,7 @@ module class_5_hangar() {
 
 //class_5_secondary();
 
-//class_4_body_new();
+class_4_body_new();
 
 module class_4_body_new() {
     difference() {
@@ -1377,7 +1387,6 @@ module class_4_body_new_minus() {
 //    translate([0,0,-250])
 //    cube([800,50,500],center=true);
 }
-
 
 
 module class_4_body_new_plus() {
@@ -1411,52 +1420,21 @@ module class_4_body_new_plus() {
     translate([0,0,22.5])
     cylinder(d=100, h=45, $fn=faces_convex, center=true);
     
-    hull() {
+
         translate([75,0,20])
         linear_extrude(convexity=3, height=145, scale=[.1,.5])
         translate([-145*1.5,0,0])
         square([3*145, disk_1_width],center=true);
-//        scale([3,1,1])
-//        intersection() {
-//        rotate([90,0,0])
-//        cylinder(r=145, h=disk_1_width*.75, $fn=faces_concave, center=true);
-            
-//        translate([-100+.01,0,100-.01])
-//        cube(200, center=true);
-//        }
-
-        translate([0,0,20])
-        scale([4.5,1,1])
-        intersection() {
-        cylinder(d=class_4_body_w, h=2, $fn=faces_convex, center=true);
-            
-            translate([-class_4_body_w/2,0,0])
-            cube(class_4_body_w, center=true);
-            
-            translate([-class_4_body_w/4,0,0])
-            translate([class_4_body_w/2,0,0])
-            cube(class_4_body_w, center=true);
-        }
-    }
     
     util_mirrored([0,1,0])
-    hull() {
-        intersection() {
-            translate([-3.5*class_4_body_h, 0, 15-.05])
-            translate([class_4_nacelle_disp/2, class_4_nacelle_disp/2, -disk_1_width/2])
-            cube([class_4_nacelle_disp, class_4_nacelle_disp, disk_1_width], center=true);
+    translate([-3.5*class_4_body_h+disk_1_width*1.5,-class_4_body_h*.6,.7*disk_1_width/2+20])
+    difference() {
+    cube([1.5*disk_1_width, disk_1_width*.7, disk_1_width*.7], center=true);
 
-
-            scale([4.5,1,1])
-            rotate(90)
-            class_4_bell();
-        }
-
-        translate([-3.5*class_4_body_h+class_4_nacelle_disp/4, class_4_nacelle_disp*.75, 20-2.5-.05])
-        cube([class_4_nacelle_disp/2, disk_1_width, 5], center=true);
+    rotate([45,0,0])
+    translate([0,0,disk_1_width])
+    cube(2*disk_1_width, center=true);
     }
-    
-    translate([75-disk_0_width/2-2,0,20+144]) disk_0();
 }
 
 
