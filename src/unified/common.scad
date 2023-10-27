@@ -47,7 +47,10 @@ class_3_secondary_l=400;
 
 disk_4_width=750;
 disk_4_upper=480;
-disk_4_height=50;
+disk_4_height=100;
+disk_4_hangar_h=50;
+disk_4_hangar_w=100;
+disk_4_hangar_l=100;
 
 class_3_nacelle_w=36;
 class_3_nacelle_h=36;
@@ -60,11 +63,11 @@ class_4_body_upper_curve=10;
 class_4_body_inner_curve=5;
 class_4_body_wall=10;
 class_4_body_height=135;
-class_4_body_l=720;
+class_4_body_l=500;
 class_4_body_hangar=100;
 class_4_body_hangar_w=100;
 
-class_4_nacelle_sep=250;
+class_4_nacelle_sep=120;
 class_4_nacelle_disp=360;
 class_4_nacelle_base_w=20;
 class_4_nacelle_disp_ratio=1;

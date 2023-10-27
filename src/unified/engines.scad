@@ -1437,5 +1437,45 @@ module class_4_body_new_plus() {
 
 
 
+module class_4_secondary_new(escort=true) {
+    difference() {
+        class_4_body_base_1();
+
+        cube(disk_4_upper + 2*(disk_2_width+10)-1, center=true);
+        
+        translate([-disk_4_upper/2 -disk_2_width -10 - class_4_body_l, 0, disk_4_height -50])
+        cube([10, 1*class_4_body_w, disk_4_hangar_h*1.2], center=true);
+        
+        util_mirrored([0,1,0])
+        translate([-disk_4_upper/2 - disk_2_width - 10 - 10 - disk_1_width/2, 10 + disk_1_width/2, disk_4_height])
+        cylinder(d1=disk_1_width, d2=disk_1_width+6, h=6, center=true, $fn=faces_concave);
+        
+        util_mirrored([0,1,0])
+        translate([-disk_4_upper/2 - disk_2_width - 10 -class_4_body_l+disk_1_width, 10 + disk_1_width/2, disk_4_height])
+        cylinder(d1=disk_1_width, d2=disk_1_width+6, h=6, center=true, $fn=faces_concave);
+        
+        util_mirrored([0,1,0])
+        translate([-disk_4_upper/2 - disk_2_width - 10 -class_4_body_l+disk_1_width/2, 10 + disk_1_width/2, disk_4_height])
+        cube([disk_1_width, disk_1_width, 6], center=true);
+        
+        if (escort == false) {
+            util_mirrored([0,1,0])
+            translate([-disk_4_upper/2 - disk_2_width - 10 -class_4_body_l+disk_1_width, 10 + disk_1_width/2, disk_4_height-3])
+        disk_0_under_2();;
+        }
+    }
+    
+    util_mirrored([0,1,0])
+    translate([-disk_4_upper/2 - disk_2_width - 10 - 10 - disk_1_width/2, 10 + disk_1_width/2, disk_4_height-3.1])
+    disk_1();
+}
+
+       
+
+    
+
+//class_4_secondary_new(false);
+
+
 
 
