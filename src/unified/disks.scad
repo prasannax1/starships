@@ -346,15 +346,15 @@ module disk_4_base() {
 }
 
 
-module class_4_body_base_1() {
+module class_4_body_base_1(ratio=4) {
     intersection() {
             rotate([0,-90,0])
             linear_extrude(height=disk_4_upper/2+10+disk_2_width+class_4_body_l, convexity=3) class_4_body_basic_flat();
 
-            translate([-(disk_4_upper + 2*(disk_2_width+10))/2,0,4*class_4_body_l])
+            translate([-(disk_4_upper + 2*(disk_2_width+10))/2,0,ratio*class_4_body_l])
             rotate([90,0,0])
             rotate_extrude(angle=360, convexity=3, $fn=faces_concave*2)
-            translate([4*class_4_body_l,0,0])
+            translate([ratio*class_4_body_l,0,0])
             rotate(180)
             class_4_body_basic_flat();
         }
@@ -379,7 +379,6 @@ module class_4_body_basic_flat() {
     square([disk_4_height, class_4_body_w+10+50], center=true);
 }
 
-disk_1();
 module disk_4_hangar_minus() {
     intersection() {
         union() {
@@ -404,7 +403,7 @@ module disk_4_new(command=true) {
         intersection() {
             union() {
                 disk_4_base_1();
-                class_4_body_base_1();
+                class_4_body_base_1(2);
             }
 
             cube(disk_4_upper + 2*(disk_2_width+10), center=true);
