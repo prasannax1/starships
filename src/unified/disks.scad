@@ -403,7 +403,7 @@ module disk_4_new(command=true) {
         intersection() {
             union() {
                 disk_4_base_1();
-                class_4_body_base_1(2);
+                class_4_body_base_1(.6);
             }
 
             cube(disk_4_upper + 2*(disk_2_width+10), center=true);
