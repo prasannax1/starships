@@ -1463,18 +1463,17 @@ module class_4_secondary_new(escort=true) {
             translate([-disk_4_upper/2 - disk_2_width - 10 -class_4_body_l+disk_1_width, 10 + disk_1_width/2, disk_4_height-3])
         disk_0_under_2();;
         }
+        
+        util_mirrored([0,1,0])
+        translate([-disk_4_upper/2 - disk_2_width - 10 -class_4_body_l/2, class_4_body_w/2+30, disk_4_height-40])
+        cube([1.5*class_4_body_l, 10, 20], center=true);
+    
     }
     
     util_mirrored([0,1,0])
     translate([-disk_4_upper/2 - disk_2_width - 10 - 10 - disk_1_width/2, 10 + disk_1_width/2, disk_4_height-3.1])
     disk_1();
 }
-
-       
-
-    
-
-//class_4_secondary_new(false);
 
 
 
