@@ -349,34 +349,45 @@ module disk_4_base() {
 module class_4_body_base_1(ratio=4) {
     intersection() {
             rotate([0,-90,0])
-            linear_extrude(height=disk_4_upper/2+10+disk_2_width+class_4_body_l, convexity=3) class_4_body_basic_flat();
+            linear_extrude(height=disk_4_upper/2+10+disk_2_width+class_4_body_l, convexity=3) class_4_body_basic_flat(class_4_body_curve);
 
             translate([-(disk_4_upper + 2*(disk_2_width+10))/2,0,ratio*class_4_body_l])
             rotate([90,0,0])
             rotate_extrude(angle=360, convexity=3, $fn=faces_concave*2)
             translate([ratio*class_4_body_l,0,0])
             rotate(180)
-            class_4_body_basic_flat();
+            class_4_body_basic_flat(class_4_body_curve);
         }
 }
 
-module class_4_body_basic_flat() {
-    translate([disk_4_height/2,0,0])
-    square([disk_4_height, class_4_body_w+10], center=true);
+module class_4_body_basic_flat(r) {
+    translate([disk_4_height-25,0,0])
+    square([50, class_4_body_w+10], center=true);
 
     util_mirrored([0,1,0])
-    translate([-25,class_4_body_w/2+5,0])
-    circle(d=50, $fn=faces_rough);
+    translate([r-class_4_body_h_extra,class_4_body_w/2+5+25-r,0])
+    intersection() {
+        circle(d=2*r, $fn=faces_convex);
+        
+        translate([-r/2,r/2,0])
+        square(r, center=true);
+    }
 
     util_mirrored([0,1,0])
     translate([disk_4_height-25,class_4_body_w/2+5,0])
     circle(d=50, $fn=4);
-
-    translate([-25,0,0])
-    square([50, class_4_body_w+10], center=true);
-
-    translate([(disk_4_height)/2-25,0,0])
-    square([disk_4_height, class_4_body_w+10+50], center=true);
+    
+    translate([(disk_4_height + class_4_body_h_extra)/2-class_4_body_h_extra, 0,0])
+    square([disk_4_height + class_4_body_h_extra, class_4_body_w+10+50-2*r], center=true);
+    
+    difference() {
+        translate([(disk_4_height-25)/2,0,0])
+        square([disk_4_height-25, class_4_body_w+10+50], center=true);
+        
+        translate([r-class_4_body_h_extra,0,0])
+        translate([-r/2,0,0])
+        square([r, class_4_body_w+10+50], center=true);
+    }
 }
 
 module disk_4_hangar_minus() {
