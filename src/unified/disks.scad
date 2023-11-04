@@ -409,12 +409,14 @@ module disk_4_hangar_minus() {
     }
 }
 
+disk_4_new();
+
 module disk_4_new(command=true) {
     difference() {
         intersection() {
             union() {
                 disk_4_base_1();
-                class_4_body_base_1(.6);
+                class_4_body_base_1(.75);
             }
 
             cube(disk_4_upper + 2*(disk_2_width+10), center=true);
