@@ -320,7 +320,7 @@ module disk_4_base_1_old() {
 module disk_4_base_1() {
     translate([0,0,disk_4_height-disk_3_height-.01])
     translate([0,0,disk_3_height/2])
-    cylinder(d1=disk_3_width+2*disk_2_width+20+10+10, d2=disk_4_upper, h=disk_3_height, center=true, $fn=faces_concave);
+    cylinder(d1=disk_4_width, d2=disk_4_upper, h=disk_3_height, center=true, $fn=faces_concave);
 
     translate([0,0, (disk_4_height-disk_3_height)/2])
     cylinder(h=disk_4_height-disk_3_height, d2=disk_4_width, d1=disk_4_width-1.5*(disk_4_height-disk_3_height), center=true, $fn=faces_concave);
