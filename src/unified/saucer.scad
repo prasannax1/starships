@@ -1,8 +1,8 @@
-use <disks.scad>
+use <disk4.scad>
 use <engines.scad>
 
 module saucer() {
-    disk_4_new(command=false);
+    disk_4();
 }
 
 saucer();

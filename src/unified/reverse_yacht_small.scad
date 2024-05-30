@@ -1,6 +1,6 @@
 include <common.scad>;
-use <disks.scad>;
-use <engines.scad>;
+use <disk0.scad>;
+use <engine0.scad>;
 use <../lib/util.scad>;
 
 module reverse_yacht_small() {

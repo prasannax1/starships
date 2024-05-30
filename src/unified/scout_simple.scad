@@ -1,6 +1,6 @@
 include <common.scad>
-use <disks.scad>
-use <engines.scad>
+use <disk1.scad>
+use <engine1.scad>
 
 module scout_simple() {
     intersection() {

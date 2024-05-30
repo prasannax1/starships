@@ -1,5 +1,7 @@
-use <disks.scad>
-use <engines.scad>
+use <disk0.scad>
+use <engine0.scad>
+use <disk1.scad>
+use <engine1.scad>
 use <../lib/util.scad>
 include <common.scad>
 

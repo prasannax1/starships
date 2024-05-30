@@ -1,4 +1,4 @@
-use <disks.scad>
+use <disk3.scad>
 use <reverse_yacht_small.scad>;
 
 module labs() {
