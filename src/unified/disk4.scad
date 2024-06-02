@@ -48,7 +48,7 @@ module disk_4_part_2() {
     
     util_repeat_rot(3, [0,0,360/4])
     translate([disk_4_upper/2, 0, -2+.05])
-    scale([1,.5,1])
+    scale([.9,.5,1])
     cylinder(d=disk_1_width*1.5, h=4, center=true, $fn=faces_rough);
 }
 
