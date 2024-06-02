@@ -90,6 +90,8 @@ module class_4_secondary_decks() {
     }
 }
 
+
+
 module class_4_secondary_tail() {
     difference() {
         util_mirrored([0,1,0])
@@ -106,6 +108,11 @@ module class_4_secondary_tail() {
         scale([3.75,1,1])
         rotate([90,0,0])
         cylinder(h=300, r=class_4_body_h-10, center=true, $fn=faces_concave);
+        
+        translate([-class_4_tail_l,0,-class_4_body_h-class_4_nacelle_bar_w])
+        scale([4.5,1,1])
+        rotate([90,0,0])
+        cylinder(r=class_4_body_h, h=300, center=true, $fn=faces_concave);
     }
 
     difference() {
