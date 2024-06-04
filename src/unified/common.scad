@@ -63,6 +63,10 @@ class_4_body_hangar=class_4_body_h-2*class_4_body_wall;
 class_4_body_hangar_w=250;
 class_4_tail_l=disk_4_width;
 class_4_tail_w=180;
-class_4_nacelle_disp=class_4_body_w*.3;
+class_4_nacelle_disp=class_4_body_w*.25;
 class_4_nacelle_bar_w=20;
 class_4_nacelle_bar_l=100;
+
+class_5_nacelle_l=800;
+class_5_nacelle_hangar_l=500;
+class_5_nacelle_hangar_h=50;
