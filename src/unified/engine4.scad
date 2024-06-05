@@ -110,9 +110,9 @@ module class_4_secondary_tail() {
         cylinder(h=300, r=class_4_body_h-10, center=true, $fn=faces_concave);
         
         translate([-class_4_tail_l,0,-class_4_body_h-class_4_nacelle_bar_w])
-        scale([4.5,1,1])
+        scale([4,1,1.1])
         rotate([90,0,0])
-        cylinder(r=class_4_body_h, h=300, center=true, $fn=faces_concave);
+        cylinder(r=class_4_body_h, h=300, center=true, $fn=6);
     }
 
     difference() {
@@ -149,6 +149,12 @@ module class_4_secondary() {
     class_4_secondary_decks();
     class_4_secondary_tail();
     class_4_secondary_bar();
+    
+    translate([-class_4_tail_l*.64,0,-.01])
+    disk_0();
+    
+    translate([-class_4_tail_l*.64,0,-class_4_body_wall+.01])
+    disk_0_under_2();
 }
 
 class_4_secondary();
