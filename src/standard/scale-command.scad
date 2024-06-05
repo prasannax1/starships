@@ -16,5 +16,5 @@ translate([0,0,100]) excelsior();
 
 translate([0,0,0]) command_full();
 
-translate([100,0,-100]) sovereign();
+//translate([100,0,-100]) sovereign();
 

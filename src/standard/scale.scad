@@ -13,16 +13,16 @@ use <sovereign.scad>;
 use <nx.scad>;
 use <odyssey.scad>;
 
-translate([-400,0,-200]) main();
+translate([-50,0,-200]) main();
 
 translate([0,0,700]) nx();
 
 translate([0,0,620]) constitution();
 
-translate([0,0,500]) excelsior();
+translate([-150,0,500]) excelsior();
 
 translate([0,0,360]) galaxy();
 
 translate([0,0,180]) sovereign();
 
-translate([0,0,50]) odyssey();
+translate([50,0,50]) odyssey();

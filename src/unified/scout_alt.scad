@@ -2,6 +2,7 @@ include <common.scad>
 use <../lib/util.scad>
 use <disk1.scad>
 use <engine1.scad>
+use <engine0.scad>
 
 module scout_alt() {
     disk_1();
