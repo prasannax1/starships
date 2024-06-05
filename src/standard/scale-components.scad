@@ -46,7 +46,7 @@ module saucer() {
     import("../../stls/generated/saucer.stl", 10);
 }
 
-translate([-300,0,-420]) main();
+translate([-0,0,-380]) main();
 
 translate([0,0,550]) escort(carrier_attached=false);
 
@@ -62,6 +62,6 @@ translate([0,0,275]) labs();
 
 translate([0,0,140]) saucer();
 
-translate([0,0,0]) carrier();
+translate([0,0,75]) carrier();
 
 translate([0,0,-200]) warp();
