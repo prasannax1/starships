@@ -72,7 +72,7 @@ module class_4_secondary_disk() {
     translate([0,0,-class_4_body_h+class_4_body_wall-.01])
     disk_0();
 
-    translate([0,0,-class_4_body_h])
+    translate([0,0,-class_4_body_h+.5])
     disk_0_under_2();
 }
 
