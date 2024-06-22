@@ -24,7 +24,7 @@ module main() {
     translate([-disk_4_width-10,class_4_nacelle_disp+.2*disk_1_width-.01,-disk_1_width/2])
     warp();
     
-    translate([-class_4_tail_l+disk_1_width, 0, -3])
+    translate([-class_4_tail_l+disk_1_width, 0, -3-10])
     escort();
 }
 

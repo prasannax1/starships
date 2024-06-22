@@ -21,5 +21,5 @@ translate([-0,0,180])
     }
 
 
-translate([185,0,142]) color("gray") sovereign();
+translate([0,0,130]) color("gray") sovereign();
 
