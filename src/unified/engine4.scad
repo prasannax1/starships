@@ -36,7 +36,7 @@ module class_4_body_base() {
     class_4_secondary_bar();
     
     translate([-disk_4_upper/2-disk_2_width/2, 0, -10])
-    cylinder(h=20.5, d1=disk_1_width+50, d2=disk_1_width, $fn=faces_convex, center=true);
+    cylinder(h=20.5, d1=disk_1_width*.75+50, d2=disk_1_width*.75, $fn=faces_convex, center=true);
 }
 
 module class_4_secondary_bar() {
