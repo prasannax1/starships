@@ -11,15 +11,15 @@ use <sovereign.scad>;
 use <excelsior.scad>;
 
 
-carrier();
+carrier(true);
 
 translate([-0,0,180]) 
     difference() {
-        carrier();
+        carrier(true);
         translate([0,-1000,0])
         cube(2000, center=true);
     }
 
 
-translate([0,0,130]) color("gray") sovereign();
+translate([-5,0,130]) color("gray") sovereign();
 
