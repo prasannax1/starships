@@ -20,10 +20,10 @@ translate([-250,0,500]) scout_full();
 translate([-450,0,500]) scout_alt();
 
 translate([0,0,400]) command_simple();
-translate([-320,0,400]) command_medium();
-translate([-750,0,400]) command();
+translate([-320,0,400]) command_alt();
+translate([-750,0,400]) command_full();
 
-translate([0,0,275]) labs();
+translate([0,0,275]) labs_full();
 
 translate([0,0,140]) saucer();
 
