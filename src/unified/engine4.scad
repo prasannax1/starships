@@ -39,19 +39,33 @@ module class_4_body_base() {
     cylinder(h=20.5, d1=disk_1_width*.75+50, d2=disk_1_width*.75, $fn=faces_convex, center=true);
 }
 
-module class_4_secondary_bar() {
-    translate([-class_4_tail_l+class_4_nacelle_bar_l/2+10, 0, -class_4_nacelle_bar_w/2-9])
-    difference() {
-        union() {
-            cube([class_4_nacelle_bar_l, class_4_nacelle_disp*2, class_4_nacelle_bar_w], center=true);
+module class_4_secondary_bar_basic(width) {
+    union() {
+        cube([class_4_nacelle_bar_l, width, class_4_nacelle_bar_w], center=true);
 
-            util_mirrored([1,0,0])
-            translate([class_4_nacelle_bar_l/2,0,0])
-            rotate([90,0,0])
-            cylinder(d=class_4_nacelle_bar_w, h=class_4_nacelle_disp*2, center=true, $fn=faces_rough);
-        }
+        util_mirrored([1,0,0])
+        translate([class_4_nacelle_bar_l/2,0,0])
+        rotate([90,0,0])
+        cylinder(d=class_4_nacelle_bar_w, h=width, center=true, $fn=faces_rough);
     }
 }
+
+module class_4_secondary_bar() {
+    translate([-class_4_tail_l+class_4_nacelle_bar_l/2+10, 0, -class_4_nacelle_bar_w/2-9])
+    class_4_secondary_bar_basic(disk_1_width*1.8);
+    
+    intersection() {
+        util_mirrored([0,1,0])
+        translate([-class_4_tail_l+class_4_nacelle_bar_l/2+10, 0.5*disk_1_width*1.8,-class_4_nacelle_bar_w/2-9])
+        rotate([30,0,0])
+        translate([0,disk_2_width/2-class_4_nacelle_bar_w/2,0])
+        class_4_secondary_bar_basic(disk_2_width);
+
+        translate([-class_4_tail_l+class_4_nacelle_bar_l/2+10, 0, -class_4_nacelle_bar_w/2-9])
+        cube(class_4_nacelle_disp*2, center=true);
+    }
+}
+
 
 
         
@@ -87,7 +101,7 @@ module class_4_secondary(nacelles=false) {
     
     if (nacelles) {
         util_mirrored([0,1,0])
-        translate([-class_4_tail_l+class_3_nacelle_l*.4, class_4_nacelle_disp, -10-10]) class_3_nacelle();
+        translate([-class_4_tail_l+class_3_nacelle_l*.4, class_4_nacelle_disp, disk_1_width*.3]) class_3_nacelle();
     }
 }
 
