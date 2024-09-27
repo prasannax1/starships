@@ -7,11 +7,13 @@ use <disk0.scad>
 
 r_base=100;
 d_disk=disk_4_upper*.85;
+adjust_ratio=1.1;
 
 module class_4_body_base() {
     translate([0,0,-10+.01])
     intersection() {
-        scale([class_4_tail_l*1.1/r_base, (0.5*class_4_body_width/r_base), (1/.866)*class_4_body_h/r_base])
+        translate([-class_4_tail_l,0,0])
+        scale([class_4_tail_l*1.1/r_base, (0.5*class_4_body_width/r_base), adjust_ratio*(1/.866)*class_4_body_h/r_base])
         rotate([0,90,0])
         rotate(90)
         rotate_extrude(angle=360, convexity=3, $fn=6)
@@ -71,7 +73,7 @@ module class_4_secondary_bar() {
         
 module class_4_body_minus() {
     translate([-class_4_tail_l, 0, -class_4_body_h-10])
-    scale([3.6,1,1])
+    scale([2.5,1,1])
     rotate([90,0,0])
     cylinder(r=class_4_body_h, h=class_4_body_width, center=true, $fn=6);
     
