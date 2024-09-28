@@ -33,7 +33,7 @@ module class_5_secondary() {
     
     util_mirrored([0,0,1])
     util_mirrored([0,1,0])
-    translate([-disk_1_width+36,disk_1_width/4,-disk_1_width/4+10])
+    translate([-disk_1_width+36,disk_1_width/4+.05,-disk_1_width/4+10])
     rotate([90,0,0])
     class_5_nacelle();
     
