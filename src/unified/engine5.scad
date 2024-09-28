@@ -33,15 +33,15 @@ module class_5_secondary() {
     
     util_mirrored([0,0,1])
     util_mirrored([0,1,0])
-    translate([-disk_1_width+36,disk_1_width/4+5,-disk_1_width/4-5])
+    translate([-disk_1_width+36,disk_1_width/4,-disk_1_width/4+10])
     rotate([90,0,0])
     class_5_nacelle();
     
-    translate([-class_5_nacelle_hangar_l/2,0,disk_1_width/2-.01+10])
+    translate([-class_5_nacelle_hangar_l/2,0,disk_1_width/2-.01-4])
     class_5_hangar();
     
-    translate([disk_1_width/4,0,disk_1_width/2+5])
-    cube([disk_1_width/2, disk_1_width*.4, 10.5], center=true);
+//    translate([disk_1_width/4,0,disk_1_width/2+5])
+//    cube([disk_1_width/2, disk_1_width*.4, 10.5], center=true);
 }
 
 module class_5_nacelle_flat() {
