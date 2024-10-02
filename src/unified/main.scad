@@ -16,7 +16,7 @@ module main() {
     
     translate([0,0,0]) labs();
     
-    translate([-disk_2_width/2-disk_4_upper/2,0,disk_4_height-6-.5]) command_saucer();
+    translate([-500,0,-6]) command_saucer();
     
     carrier();
     
@@ -24,7 +24,7 @@ module main() {
     translate([-disk_4_width-10,class_4_nacelle_disp+.2*disk_1_width-.01,disk_1_width/3-20])
     warp();
     
-    translate([-class_4_tail_l+disk_1_width, 0, -3-10])
+    translate([-class_4_tail_l+disk_1_width, 0, -3-15])
     escort();
 }
 

@@ -37,8 +37,13 @@ module class_4_body_base() {
     
     class_4_secondary_bar();
     
-    translate([-disk_4_upper/2-disk_2_width/2, 0, -10])
-    cylinder(h=20.5, d1=disk_1_width*.75+50, d2=disk_1_width*.75, $fn=faces_convex, center=true);
+    hull() {
+        translate([-disk_4_upper/2-disk_2_width/2, 0, -10])
+        cylinder(h=20.5, d1=disk_1_width*.75+50, d2=disk_1_width*.75, $fn=faces_convex, center=true);
+        
+        translate([-500,0,-10-.01])
+        cylinder(h=20.5, d1=disk_2_width+60, d2=disk_2_width+10, $fn=faces_convex, center=true);
+    }
 }
 
 module class_4_secondary_bar_basic(width) {
@@ -83,6 +88,9 @@ module class_4_body_minus() {
         translate([-disk_1_width,0,0])
         cube([2*disk_1_width, disk_1_width-1, 100], center=true);
     }
+    
+    translate([-500, 0, 0]) 
+    cylinder(d=disk_2_width, h=12-.05, center=true, $fn=faces_concave);
 }
 
 module class_4_body() {
@@ -94,8 +102,7 @@ module class_4_body() {
     translate([0,0,-10-.01])
     disk_0();
     
-    translate([-500,0,-10-.01])
-    disk_0();
+
 }
 
 module class_4_secondary(nacelles=false) {

@@ -1,6 +1,7 @@
 use <../lib/util.scad>
 include <common.scad>
 use <disks.scad>
+use <disk0.scad>
 
 
 width_ = disk_4_width - disk_4_upper;
@@ -53,14 +54,14 @@ module disk_4_part_2() {
 }
 
 module disk_4_part_3() {
-    translate([-disk_4_upper/2-disk_2_width/2, 0, disk_4_height/2])
-    difference() {
-        cylinder(h=disk_4_height, d1=disk_1_width+20, d2=disk_2_width+20, center=true, $fn=faces_convex);
+    translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height/2])
+    cube([100, 50, disk_4_height],center=true);
 
-        translate([0,0,disk_4_height/2])
-        cylinder(h=12-.1, d2=disk_2_width+10, d1=disk_2_width, center=true, $fn=faces_concave);
-    }
+    translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height-.01])
+    disk_0();
 }
+
+
 
 module disk_4() {
     disk_4_part_1();
