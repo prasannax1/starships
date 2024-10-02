@@ -55,7 +55,12 @@ module disk_4_part_2() {
 
 module disk_4_part_3() {
     translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height/2])
-    cube([100, 50, disk_4_height],center=true);
+    difference() {
+        cube([100, 50, disk_4_height],center=true);
+        
+        translate([-50,0,10])
+        cube([5, 40, 20], center=true);
+    }
 
     translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height-.01])
     disk_0();
