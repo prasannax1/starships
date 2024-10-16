@@ -10,7 +10,7 @@ use <../unified/scout_alt.scad>;
 use <constitution.scad>;
 use <equinox.scad>;
 
-translate([0,0,70]) scout_alt();
+//translate([0,0,70]) scout_alt();
 
 scout_full();
 
