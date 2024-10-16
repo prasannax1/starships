@@ -12,8 +12,8 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
  - Length: 1999m
  - Width: 750m
- - Height: 178.5m
- - Decks: 54 
+ - Height: 238m
+ - Decks: 72 
  - Crew Capacity: 15000
    - Maximum evacuation limit: 1000000
  - Warp Speed
@@ -26,24 +26,15 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 The Atlas class is a massive ship 2KM long. 
 
-It is mainly used as a mobile starbase and colony transporter. A typical mission of
-the Atlas class is to transwarp to unexplored space with entire colonies settled in its
-massive living areas, and allow the bulk of the exploration to be done by smaller ships.
-Once the exploration is done colonies are settled down and the ship returns back to 
-federation territory.
+It is mainly used as a mobile starbase and colony transporter. A typical mission of the Atlas class is to transwarp to unexplored space with entire colonies settled in its massive living areas, and allow the bulk of the exploration to be done by smaller ships. Once the exploration is done colonies are settled down and the ship returns back to federation territory.
 
 ![Ship scale](images/scale/scale-standard.png)
 
-The Atlas is nominally intended to be on 20 year deep space missions between refits. But realistically the expectation for such ships is that once launched they become a world onto themselves, continuing exploration without intervention or support from Starfleet. Having industrial
-replicators on board, the Atlas doesn't even have to be physically present at a starbase for
-refits - it can download the specs and do a refit wherever it is.
+The Atlas is nominally intended to be on 20 year deep space missions between refits. But realistically the expectation for such ships is that once launched they become a world onto themselves, continuing exploration without intervention or support from Starfleet. Having industrial replicators on board, the Atlas doesn't even have to be physically present at a starbase for refits - it can download the specs and do a refit wherever it is.
 
 ### History
 
-The Atlas program was started right as the Galaxy Class was being constructed as a future
-replacement for the Galaxy Class. In it's original form the Atlas was a single ship with
-massive hangars combined with the main saucer that would hold *Nova* sized vessels for 
-mission specific exploration.
+The Atlas program was started right as the Galaxy Class was being constructed as a future replacement for the Galaxy Class. In it's original form the Atlas was a single ship with massive hangars combined with the main saucer that would hold *Nova* sized vessels for mission specific exploration.
 
 But after the Dominion war the whole program was put on hold as Starfleet was not in favor
 of sending civilians in a starship, not to mention presenting such a large target. It was 
@@ -178,7 +169,7 @@ or with the class 2 secondary hull with its massive 150m hangar to form a space 
 
 #### Atlas-C Class
 
-![Labs](images/mother/labs.png)
+![Labs](images/mother/labs_full.png)
 
 Atlas-C Class large scientific vessel
 
@@ -203,6 +194,8 @@ The C class is ny itself comparable to the *Galaxy* class in size, form and func
 
 ##### Structure
 
+![labs full](images/mother/labs.png)
+
 The main hull of the C class is a conventional saucer containing sensors, labs, living areas etc., and a large hangar just like in the Galaxy class. The secondary hull also has a hangar big enough to hold intermediate class vehicles.
 
 A class 1 habitats forms the command section of this vessel, which can also detach to form an independent explorer ship.
@@ -212,8 +205,6 @@ The C class primary hull can be combined with class 2 warp engines to form an in
 ![labs simple](images/mother/labs_alt.png)
 
 or it can be combined with 2 class 3 engine to form a super heavy cruiser
-
-![labs full](images/mother/labs_full.png)
 
 ##### Auxillary vessels
 
@@ -234,10 +225,10 @@ or it can be combined with 2 class 3 engine to form a super heavy cruiser
 Atlas D class starbase
 
 ##### Stats
-  - Length: 865m
+  - Length: 750m
   - Width: 750m
-  - Height: 60m
-  - Decks: 18
+  - Height: 65m
+  - Decks: 20
   - Crew Capacity: 10000
   - Warp Speed: NA
 
@@ -272,11 +263,11 @@ Atlas-E Class Super carrier
 
 ##### Stats
 
-  - Length: 1125
-  - Width: 750
-  - Height: 109.5
-  - Decks: 33
-  - Crew Capacity: 250
+  - Length: 1122m
+  - Width: 411m
+  - Height: 190m
+  - Decks: 57
+  - Crew Capacity: 500
   - Warp Speed: NA
 
 
@@ -363,9 +354,9 @@ Atlas-G Class Super-heavy warp and transwarp tug
 ##### Stats
 
   - Length: 1064m
-  - Width: 160m
-  - Height: 170m
-  - Decks: 35
+  - Width: 150m
+  - Height: 150m
+  - Decks: 45
   - Crew Capacity: 100
   - Warp Speed
     - Cruising: Warp 9
