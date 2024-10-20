@@ -114,8 +114,7 @@ module class_2_body_plus() {
     translate([0,0,10-.01])
     class_2_neck();
     
-    util_mirrored([0,1,0])
-    translate([class_0_hangar_l/2-5,9,-6-class_2_secondary_w/8-1.8])
+    translate([class_0_hangar_l/2-5+30,0,-6-class_2_secondary_w/8-1.8])
     mirror([0,0,1])
     class_0_hangars();
 }
