@@ -1,7 +1,7 @@
 use <../lib/util.scad>
 include <common.scad>
-use <disks.scad>
-use <engines.scad>
+use <disk0.scad>
+use <engine0.scad>
 
 module science() {
     disk_0();
