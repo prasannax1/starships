@@ -4,30 +4,28 @@ use <warp.scad>
 use <escort.scad>
 use <../lib/util.scad>
 include <common.scad>
+use <saucer.scad>;
+use <labs.scad>;
+use <command.scad>;
+use <scout_simple.scad>;
+use <warp.scad>;
+use <carrier.scad>;
 
 module main() {
-    class_4_body();
+    saucer();
     
-    translate([disk_4_width/2-.01,0,0]) {
-        disk_4();
-        
-        translate([0,0,disk_4_height-.01]) {
-            disk_3();
-            
-            translate([0,0, disk_3_height/2 -6 - .01]) {
-                disk_2();
-            }
-        }
-    }
+    translate([0,0,0]) labs();
+    
+    translate([-500,0,-6]) command_saucer();
+    
+    carrier();
     
     util_mirrored([0,1,0])
-    translate([-class_4_body_l, class_4_nacelle_sep/2, disk_4_height-.05])
-    translate([class_4_nacelle_l*.45-5.9,0,24.5])
+    translate([-disk_4_width-10,class_4_nacelle_disp+.2*disk_1_width-.01,disk_1_width/3-20])
     warp();
     
-    translate([-class_4_body_l/2,0,disk_4_height-3.1])
+    translate([-class_4_tail_l+disk_1_width, 0, -3-15])
     escort();
-    
 }
 
 main();

@@ -1,5 +1,5 @@
-use <disks.scad>
-use <engines.scad>;
+use <disk2.scad>
+use <engine2.scad>;
 include <common.scad>;
 
 module command_simple() {
