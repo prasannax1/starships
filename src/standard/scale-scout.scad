@@ -8,10 +8,11 @@ Other files not included in source code.
 use <../unified/scout_full.scad>;
 use <../unified/scout_alt.scad>;
 use <constitution.scad>;
+use <constitution-refit.scad>;
 use <equinox.scad>;
 
-translate([0,0,70]) scout_alt();
+//translate([0,0,70]) scout_alt();
 
 scout_full();
 
-translate([20,0,-40]) constitution();
+translate([50,0,-40]) constitution_refit();

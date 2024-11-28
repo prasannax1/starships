@@ -12,8 +12,8 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
  - Length: 1999m
  - Width: 750m
- - Height: 219m
- - Decks: 66 
+ - Height: 238m
+ - Decks: 72 
  - Crew Capacity: 15000
    - Maximum evacuation limit: 1000000
  - Warp Speed
@@ -26,24 +26,15 @@ Atlas Class Multi Role Deep Space Explorer and Mobile Starbase
 
 The Atlas class is a massive ship 2KM long. 
 
-It is mainly used as a mobile starbase and colony transporter. A typical mission of
-the Atlas class is to transwarp to unexplored space with entire colonies settled in its
-massive living areas, and allow the bulk of the exploration to be done by smaller ships.
-Once the exploration is done colonies are settled down and the ship returns back to 
-federation territory.
+It is mainly used as a mobile starbase and colony transporter. A typical mission of the Atlas class is to transwarp to unexplored space with entire colonies settled in its massive living areas, and allow the bulk of the exploration to be done by smaller ships. Once the exploration is done colonies are settled down and the ship returns back to federation territory.
 
 ![Ship scale](images/scale/scale-standard.png)
 
-The Atlas is nominally intended to be on 20 year deep space missions between refits. But realistically the expectation for such ships is that once launched they become a world onto themselves, continuing exploration without intervention or support from Starfleet. Having industrial
-replicators on board, the Atlas doesn't even have to be physically present at a starbase for
-refits - it can download the specs and do a refit wherever it is.
+The Atlas is nominally intended to be on 20 year deep space missions between refits. But realistically the expectation for such ships is that once launched they become a world onto themselves, continuing exploration without intervention or support from Starfleet. Having industrial replicators on board, the Atlas doesn't even have to be physically present at a starbase for refits - it can download the specs and do a refit wherever it is.
 
 ### History
 
-The Atlas program was started right as the Galaxy Class was being constructed as a future
-replacement for the Galaxy Class. In it's original form the Atlas was a single ship with
-massive hangars combined with the main saucer that would hold *Nova* sized vessels for 
-mission specific exploration.
+The Atlas program was started right as the Galaxy Class was being constructed as a future replacement for the Galaxy Class. In it's original form the Atlas was a single ship with massive hangars combined with the main saucer that would hold *Nova* sized vessels for mission specific exploration.
 
 But after the Dominion war the whole program was put on hold as Starfleet was not in favor
 of sending civilians in a starship, not to mention presenting such a large target. It was 
@@ -73,7 +64,7 @@ found enough of a niche to justify the entire ship.
 The Atlas is a fairly conventional looking starship, looking deceptively delicate due
 to the scale of the ship.
 
-The Atlas is an amalgamation of 7 types of ship, each of which can operate independently in
+The Atlas is an amalgamation of 7 types of ship, most of which can operate independently in
 a specialized or generic role.
 
 ![Ship Separation](images/scale/scale-components.png)
@@ -135,10 +126,10 @@ Atlas-B Class heavy explorer
 
 ##### Stats
 
-  - Length: 549m
+  - Length: 534m
   - Width: 240m
-  - Height: 76m
-  - Decks: 20
+  - Height: 90m
+  - Decks: 25
   - Crew Capacity: 1200
   - Warp Speed
     - Cruising: Warp 7
@@ -148,7 +139,7 @@ Atlas-B Class heavy explorer
 
 The B-class is an enhancement of the A class which forms the main command section of the Atlas ship normally but separates into a heavy cruiser if needed.
 
-The B-class is between an Excelsior and a Sovereign and is used in pretty much the same capability - as a command cruiser or as a space control vessel.
+The B-class is roughly the size of an Excelsior and is used in pretty much the same capability - as a command cruiser or as a space control vessel.
 
 ![Ship scale](images/scale/scale-command.png)
 
@@ -166,7 +157,7 @@ or with a class 2 engine to form a destroyer/scout
 
 ![destroyer](images/mother/command_simple.png)
 
-or with the class 2 secondary hull with its massive 150m hangar to form a space control vehice as show above.
+or with the class 2 secondary hull with its massive 150m hangar to form a space control vehice as shown above.
 
 ##### Auxillary vessels
 
@@ -178,16 +169,16 @@ or with the class 2 secondary hull with its massive 150m hangar to form a space 
 
 #### Atlas-C Class
 
-![Labs](images/mother/labs.png)
+![Labs](images/mother/labs_full.png)
 
 Atlas-C Class large scientific vessel
 
 ##### Stats (for super heavy cruiser configuration)
 
-  - Length: 855m
+  - Length: 808m
   - Width: 400m
-  - Height: 75m
-  - Decks: 16
+  - Height: 116m
+  - Decks: 24
   - Crew Capacity: 3000
   - Warp Speed
     - Cruising: Warp 6
@@ -195,13 +186,17 @@ Atlas-C Class large scientific vessel
 
 ##### Description
 
-The C Class is closest to the original pre-dominion design of the Atlas. The notable feature of having an extremely large primary hull and large hangars for intermediate class vessels are still visible on this class.
+The C Class is closest to the original pre-dominion design of the Atlas. The notable feature of having an extremely large primary hull and large hangars are still visible on this class.
+
+The C class is ny itself comparable to the *Galaxy* class in size, form and function.
 
 ![Ship scale](images/scale/scale-labs.png)
 
 ##### Structure
 
-The main hull of the C class is a flat disk with the rear extended into a rectangular edge. The fore part of the saucer contains sensors, labs, living areas etc., while the aft section is dominated by four large hangars which can hold intermediate vessels.
+![labs full](images/mother/labs.png)
+
+The main hull of the C class is a conventional saucer containing sensors, labs, living areas etc., and a large hangar just like in the Galaxy class. The secondary hull also has a hangar big enough to hold intermediate class vehicles.
 
 A class 1 habitats forms the command section of this vessel, which can also detach to form an independent explorer ship.
 
@@ -210,8 +205,6 @@ The C class primary hull can be combined with class 2 warp engines to form an in
 ![labs simple](images/mother/labs_alt.png)
 
 or it can be combined with 2 class 3 engine to form a super heavy cruiser
-
-![labs full](images/mother/labs_full.png)
 
 ##### Auxillary vessels
 
@@ -234,8 +227,8 @@ Atlas D class starbase
 ##### Stats
   - Length: 750m
   - Width: 750m
-  - Height: 100m
-  - Decks: 30
+  - Height: 65m
+  - Decks: 20
   - Crew Capacity: 10000
   - Warp Speed: NA
 
@@ -253,19 +246,13 @@ accomodation for crew of all components of the Atlas class.[^city]
 
 ##### Structure
 
-The D-Class from the outside can be differentiated into two parts; the main saucer itself, which is 750m wide and 50m tall. This is in effect
-a whole city with living areas, schools, colleges, hospitals, parks, etc.
-
-The secondary hull is a smaller cylindrical area affixed to the bottom of the main saucer. The last 3 decks of the secondary hull comprise the main
-shuttlebay. 
+The ring-like D-Class is reminicent of various starbases of comparable size, with a central tower located in the aft part. The central tower has the capability to accept a class-2 habitat for enhanced command capabilities.
 
 ##### Auxillary vehicles
 
 - Type 3 large shuttles
 - Amazon Class runabouts
 - Mako class tactical runabouts
-- Ganges class heavy runabouts
-- Orca-A class heavy tactical runabouts
 
 
 #### Atlas-E Class
@@ -276,18 +263,17 @@ Atlas-E Class Super carrier
 
 ##### Stats
 
-  - Length: 754m
-  - Width: 480m
-  - Height: 151m
-  - Decks: 45
-  - Crew Capacity: 250
-  - Warp Speed
-    - Cruising: Warp 5
-    - Peak: Warp 9
+  - Length: 1122m
+  - Width: 411m
+  - Height: 190m
+  - Decks: 57
+  - Crew Capacity: 500
+  - Warp Speed: NA
+
 
 ##### Description
 
-Calling the E-class a carrier would be doing it a disservice; the E-class is nothing less than a mobile shipyard capable of repairing full size starships (even something as large as an Excelsior class), and outright manufacturing small to intermediate sized ships while the E-class itself is at warp.
+The E-class is a shipyard capable of repairing full size starships (even something as large as an *Sovereign* class), and outright manufacturing small to intermediate sized ships.
  
 
 ![Ship scale](images/scale/scale-carrier.png)
@@ -297,9 +283,7 @@ The ship contains its owm industrial replicator and is used as the main ship fac
 
 ##### Structure
 
-The ship looks almost entirely secondary hull. The main hangar is big enough to hold full size ships, and the industrial replicator situated at the bottom of the ship can replicate any spare part on the fly.
-
-The aft portion of the ship contains a 200m wide, 100m long three deck tall shuttlebay.
+The ship looks almost entirely secondary hull. The main hangar is big enough to hold full size ships, and the industrial replicator situated at the port and starboard sides of the ship can replicate any spare part on the fly.
 
 ##### Auxillary vehicles
 
@@ -313,6 +297,7 @@ The aft portion of the ship contains a 200m wide, 100m long three deck tall shut
   - Steamrunner class escort
   - Norway class
   - Saber class
+  - Sovereign class
 
 - Intermediate ships
   - Orca class light corvettes
@@ -327,13 +312,13 @@ The aft portion of the ship contains a 200m wide, 100m long three deck tall shut
 
 ![Escort Ship](images/mother/escort.png)
 
-Atlas-F Class Escort Carrier
+Atlas-F Class Escort
 
 ##### Stats
 
-  - Length: 262m
+  - Length: 158m
   - Width: 100m
-  - Height: 25m
+  - Height: 20m
   - Decks: 6
   - Crew Capacity: 50
   - Warp Speed
@@ -345,20 +330,19 @@ Atlas-F Class Escort Carrier
 The F class is a dedicated escort vessel for the Atlas group.
 
 It is comparable to a *Saber* in size and function and is built with two aims in mind:
-1. Fit in the space above the main hangar of the E-class
+1. Fit in the aft section of the E-class
 2. Not win any beauty contests
 
 ![Ship scale](images/scale/scale-escort.png)
 
 ##### Structure
 
-The F class combines a class 1 primary hull with integrated warp engines, class 2 warp nacelles and lots of armor. The class 1 hangar has been extended to hold a wing of fighter craft.
+The F class combines a class 1 primary hull with integrated warp engines, class 1 warp nacelles and lots of armor. 
 
 The ship is chock loaded with sensors, phaser banks and torpedoes, so the crew capacity is less than what you would expect from a class 1 habitat.
 
 ##### Auxillary vehicles
 
-- Pirahna class fighters
 - Type 20 small shuttles
 
 #### Atlas-G class
@@ -369,10 +353,10 @@ Atlas-G Class Super-heavy warp and transwarp tug
 
 ##### Stats
 
-  - Length: 1149m
-  - Width: 124m
-  - Height: 110m
-  - Decks: 30
+  - Length: 1064m
+  - Width: 150m
+  - Height: 150m
+  - Decks: 45
   - Crew Capacity: 100
   - Warp Speed
     - Cruising: Warp 9

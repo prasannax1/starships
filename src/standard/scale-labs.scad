@@ -11,4 +11,4 @@ use <galaxy.scad>;
 
 labs_full();
 
-translate([-50,0,180]) galaxy();
+translate([100,0,220]) galaxy();

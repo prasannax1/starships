@@ -12,4 +12,4 @@ use <intrepid.scad>;
 warp();
 
 translate([0,0,200]) sovereign();
-translate([-800,0,150]) intrepid();
+translate([-700,0,150]) intrepid();

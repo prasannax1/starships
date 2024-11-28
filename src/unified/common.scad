@@ -32,37 +32,42 @@ disk_2_deck=3;
 
 class_2_nacelle_w=25;
 class_2_nacelle_h=25;
-class_2_nacelle_l=300;
+class_2_nacelle_l=320;
 
 class_2_secondary_w=60;
-class_2_secondary_l=200;
+class_2_secondary_l=240;
 
 disk_3_width=400;
 disk_3_height=40;
 disk_3_body_width=180;
 
-disk_4_width=750;
-disk_4_upper=525;
-disk_4_height=50;
+class_3_secondary_w=80;
+class_3_secondary_h=80;
+class_3_secondary_l=400;
 
-class_3_nacelle_w=80;
-class_3_nacelle_h=30;
+disk_4_width=750;
+disk_4_upper=480;
+disk_4_height=50;
+disk_4_hangar_h=50;
+disk_4_hangar_w=100;
+disk_4_hangar_l=100;
+
+class_3_nacelle_w=36;
+class_3_nacelle_h=36;
 class_3_nacelle_l=400;
 
-class_4_body_w=200;
-class_4_body_curve=50;
-class_4_body_upper_curve=10;
-class_4_body_inner_curve=5;
-class_4_body_wall=10;
-class_4_body_height=135;
-class_4_body_l=720;
-class_4_body_hangar=100;
+class_4_body_w=disk_4_width;
+class_4_body_width=300;
+class_4_body_h=110;
+class_4_body_wall=5;
+class_4_body_hangar=class_4_body_h-2*class_4_body_wall;
+class_4_body_hangar_w=250;
+class_4_tail_l=disk_4_width;
+class_4_tail_w=180;
+class_4_nacelle_disp=class_4_body_w*.25;
+class_4_nacelle_bar_w=15;
+class_4_nacelle_bar_l=75;
 
-class_4_nacelle_sep=400;
-
-class_4_hangar_h=90;
-class_4_hangar_w=180;
-
-class_4_nacelle_l=1100;
-class_4_nacelle_w=100;
-class_4_nacelle_h=100;
+class_5_nacelle_l=800;
+class_5_nacelle_hangar_l=500;
+class_5_nacelle_hangar_h=50;
