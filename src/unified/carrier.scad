@@ -1,7 +1,7 @@
-use <engines.scad>
+use <engine4.scad>
 
-module carrier() {
-    class_4_body();
+module carrier(nacelles=false) {
+    class_4_secondary(nacelles);
 }
 
-carrier();
+carrier(true);
