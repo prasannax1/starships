@@ -10,7 +10,7 @@ module labs_full() {
     translate([.45*disk_3_width,0,0])
     labs();
 
-    labs_secondary(75);
+    labs_secondary(72);
 }
 
 labs_full();
