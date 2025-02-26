@@ -54,16 +54,20 @@ module disk_4_part_2() {
 }
 
 module disk_4_part_3() {
-    translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height/2])
+    translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height/2-5])
     difference() {
-        cube([100, 50, disk_4_height],center=true);
+        cube([100, 50, disk_4_height-10],center=true);
         
-        translate([-50,0,10])
-        cube([5, 40, 20], center=true);
+//        translate([-50,0,10])
+        cube([200, (disk_0_upper_d+4*disk_0_deck_h), 100], center=true);
+        
+        translate([-50, 0, -disk_4_height/2 - 5])
+        rotate([90,0,0])
+        cylinder(h=100, r=disk_4_height-5, $fn=faces_convex, center=true);
     }
 
-    translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height-.01])
-    disk_0();
+//    translate([-(disk_4_width + disk_4_upper)/4,0,disk_4_height-.01])
+//    disk_0();
 }
 
 
