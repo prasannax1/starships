@@ -46,22 +46,22 @@ module saucer() {
     import("../../stls/generated/saucer.stl", 10);
 }
 
-translate([-0,0,-400]) main();
+translate([-0,0,-360]) main();
 
-translate([0,0,550]) escort(carrier_attached=false);
+translate([0,0,480]) escort(carrier_attached=false);
 
-translate([0,0,500]) scout_simple();
-translate([-250,0,500]) scout_full();
-translate([-450,0,500]) scout_alt();
+translate([0,0,450]) scout_simple();
+translate([-250,0,450]) scout_full();
+translate([-450,0,450]) scout_alt();
 
-translate([0,0,400]) command_simple();
-translate([-320,0,400]) command_medium();
-translate([-750,0,400]) command();
+translate([0,0,350]) command_simple();
+translate([-400,0,350]) command_medium();
+translate([-750,0,240]) command();
 
-translate([0,0,275]) labs();
+translate([0,0,240]) labs();
 
-translate([0,0,140]) saucer();
+translate([0,0,120]) saucer();
 
 translate([0,0,75]) carrier();
 
-translate([0,0,-200]) warp();
+translate([0,0,-180]) warp();
