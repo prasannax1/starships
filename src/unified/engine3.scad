@@ -94,7 +94,7 @@ module class_3_secondary_minus() {
     rotate([0,-90,0])
     translate([0,0,class_3_secondary_l/4])
     intersection() {
-        cylinder(d=disk_0_width*1.1, h=class_3_secondary_l/2, center=true, $fn=faces_concave);
+        cylinder(d=disk_0_width*1.5, h=class_3_secondary_l/2, center=true, $fn=faces_concave);
 
         translate([-class_3_secondary_l/2,0,0])
         cube(class_3_secondary_l, center=true);
