@@ -32,14 +32,8 @@ module class_4_body_base() {
         }
     }
 
-    translate([0,0,-10])
-    intersection() {
-        scale([1,1,(class_4_body_h*.4/(d_disk*.5))])
-        sphere(d=d_disk, $fn=faces_concave);
-        
-        translate([0,0,-class_4_body_h*.25+.05])
-        cube([d_disk*1.1, d_disk*1.1, class_4_body_h*.5], center=true);
-    }
+    translate([0,0,-class_4_body_h*.2-10])
+    cylinder(d2=d_disk, h=class_4_body_h*.4, d1=d_disk-class_4_body_h*2.5, center=true, $fn=faces_concave);
     
     class_4_secondary_bar();
     
