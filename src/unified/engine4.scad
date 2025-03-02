@@ -32,8 +32,23 @@ module class_4_body_base() {
         }
     }
 
-    translate([0,0,-class_4_body_h*.2-10])
-    cylinder(d2=d_disk, h=class_4_body_h*.4, d1=d_disk-class_4_body_h*2.5, center=true, $fn=faces_concave);
+    hull() {
+        translate([0,0,-class_4_body_h*.2-10]) {
+            translate([0,0,+class_4_body_h*.15 - class_4_body_h*.2])
+            cylinder(d2=d_disk, h=class_4_body_h*.3+.05, d1=d_disk-class_4_body_h*2.4, center=true, $fn=faces_concave);
+            
+            translate([0,0,-class_4_body_h*.05 + class_4_body_h*.2])
+            cylinder(d1=d_disk, d2=d_disk-15, h=class_4_body_h*.1+.05, center=true, $fn=faces_concave);
+        }
+        
+        translate([-d_disk*.75,0,-class_4_body_h*.2-10]) {
+            translate([0,0,+class_4_body_h*.15 - class_4_body_h*.2])
+            cylinder(d2=d_disk/2, h=class_4_body_h*.3+.05, d1=d_disk/2-class_4_body_h*1.2, center=true, $fn=faces_concave);
+            
+            translate([0,0,-class_4_body_h*.05 + class_4_body_h*.2])
+            cylinder(d1=d_disk/2, d2=d_disk/2-15, h=class_4_body_h*.1+.05, center=true, $fn=faces_concave);
+        }
+    }
     
     class_4_secondary_bar();
     
