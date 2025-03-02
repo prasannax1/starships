@@ -33,7 +33,7 @@ module class_4_body_base() {
     }
 
     translate([0,0,-class_4_body_h*.2-10])
-    cylinder(d2=d_disk, h=class_4_body_h*.4, d1=d_disk-class_4_body_h*2.5, center=true, $fn=faces_concave);
+    cylinder(d2=d_disk, h=class_4_body_h*.4, d1=d_disk-class_4_body_h, center=true, $fn=faces_concave);
     
     class_4_secondary_bar();
     
