@@ -130,7 +130,7 @@ module class_1_sec_plus() {
 
         intersection() {
             translate([class_1_secondary_l*.63,0,0])
-            circle(d=.7*class_1_secondary_w, $fn=faces_convex);
+            circle(d=.74*class_1_secondary_w, $fn=faces_convex);
 
             translate([class_1_secondary_l*.63, class_1_secondary_w/2,0])
             square(class_1_secondary_w, center=true);

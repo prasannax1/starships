@@ -4,7 +4,10 @@ use <engine0.scad>
 include <common.scad>
 
 module attack() {
-    disk_0();
+    intersection() {
+        disk_0();
+        cube([disk_0_width*1.1, disk_0_width*.8, disk_0_width], center=true);
+    }
 
     util_mirrored([0,1,0])
     translate([-2.45, disk_0_width*.31, 1.25])

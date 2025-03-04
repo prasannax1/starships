@@ -18,12 +18,12 @@ class_0_secondary_l=36;
 class_0_hangar_l=50;
 
 class_1_nacelle_w=9;
-class_1_nacelle_l=115;
+class_1_nacelle_l=120;
 
 class_1_neck_w=10;
 class_1_neck_w_2=1;
 
-class_1_secondary_w=25;
+class_1_secondary_w=30;
 class_1_secondary_l=100;
 
 disk_2_width=240;
