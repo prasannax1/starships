@@ -84,7 +84,7 @@ module class_1_assembly() {
 module class_1_neck() {
     difference() {
         hull() {
-            translate([class_1_neck_w_2*20,0,0])
+            translate([class_1_neck_w_2*18,0,0])
             class_1_neck_element_2();
 
             translate([-0,0,0])
