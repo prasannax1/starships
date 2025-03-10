@@ -113,24 +113,31 @@ module class_1_neck() {
 
 module class_1_sec_plus() {
     rotate([0,90,0])
-    rotate_extrude(angle=360, convexity=10, $fn=faces_convex)
+    rotate_extrude(angle=360, convexity=10, $fn=faces_concave)
         rotate(-90) {
         intersection() {
-            scale([2,1,1]) {
+            scale([6,1,1]) {
                 circle(d=class_1_secondary_w, $fn=faces_convex);
 
-                rotate(-7.1)
-                translate([class_1_secondary_l/2,0,0])
-                square([class_1_secondary_l, class_1_secondary_w], center=true);
+//                rotate(-7.5)
+//                translate([class_1_secondary_l/2,0,0])
+//                square([class_1_secondary_l, class_1_secondary_w], center=true);
             }
 
-            translate([class_1_secondary_l*.25,class_1_secondary_l*.4,0])
+            translate([class_1_secondary_l*.5*.66,class_1_secondary_l*.33,0])
+            square(class_1_secondary_l*.66, center=true);
+        }
+        
+        intersection() {
+            scale([1.8,1,1])
+            circle(d=class_1_secondary_w*1, $fn=faces_concave);
+            translate([class_1_secondary_l*.22,class_1_secondary_l*.4,0])
             square(class_1_secondary_l*.8, center=true);
         }
 
         intersection() {
             translate([class_1_secondary_l*.63,0,0])
-            circle(d=.74*class_1_secondary_w, $fn=faces_convex);
+            circle(d=.7*class_1_secondary_w, $fn=faces_convex);
 
             translate([class_1_secondary_l*.63, class_1_secondary_w/2,0])
             square(class_1_secondary_w, center=true);
@@ -169,7 +176,7 @@ module class_1_sec_minus() {
     }
     
     translate([-class_1_secondary_l*.63-class_1_secondary_w*.7/2,0,-class_1_secondary_w/2-.5])
-    scale([3.2,1,1])
+    scale([2.5,1,1])
     rotate([90,0,0])
     cylinder(d=class_1_secondary_w, h=class_1_secondary_w, $fn=faces_concave, center=true);
     
