@@ -3,8 +3,8 @@ include <common.scad>
 use <disks.scad>
 use <disk0.scad>
 
+h_adj=disk_1_height-2*disk_0_deck_h;
 module disk_1_plus(){
-    h_adj=disk_1_height-2*disk_0_deck_h;
     
     translate([0,0,h_adj/6])
     cylinder(d1=disk_1_width-2*h_adj/3, d2=disk_1_width, h=h_adj/3, center=true, $fn=faces_convex);
@@ -36,10 +36,18 @@ module disk_1_minus() {
 }
 
 
-module disk_1() {
+module disk_1(ball=true) {
     difference() {
         disk_1_plus();
         disk_1_minus();
+    }
+    
+    if(ball) {
+        translate([0,0,disk_1_height-disk_0_deck_h*.75])
+        sphere(d=disk_0_upper_d*.8, $fn=faces_convex);
+        
+        translate([0,0,-disk_0_deck_h*1.5])
+        sphere(d=disk_0_upper_d*.8, $fn=faces_convex);
     }
 }
 
