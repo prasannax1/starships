@@ -116,7 +116,7 @@ module class_1_sec_plus() {
     rotate_extrude(angle=360, convexity=10, $fn=faces_concave)
         rotate(-90) {
         intersection() {
-            scale([6,1,1]) {
+            scale([7.2,1,1]) {
                 circle(d=class_1_secondary_w, $fn=faces_convex);
 
 //                rotate(-7.5)

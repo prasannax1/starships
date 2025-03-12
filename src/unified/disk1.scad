@@ -46,7 +46,7 @@ module disk_1(ball=true) {
         translate([0,0,disk_1_height-disk_0_deck_h*.75])
         sphere(d=disk_0_upper_d*.8, $fn=faces_convex);
         
-        translate([0,0,-disk_0_deck_h*1.5])
+        translate([0,0,-disk_0_deck_h*1.2])
         sphere(d=disk_0_upper_d*.8, $fn=faces_convex);
     }
 }
