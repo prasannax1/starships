@@ -78,7 +78,7 @@ Atlas-A Class Light Cruiser and Diplomatic Vessel
 
 ##### Stats
 
-  - Length: 239m
+  - Length: 243m
   - Width: 100m
   - Height: 54m
   - Decks: 16
@@ -227,8 +227,8 @@ Atlas D class starbase
 ##### Stats
   - Length: 750m
   - Width: 750m
-  - Height: 65m
-  - Decks: 20
+  - Height: 68m
+  - Decks: 21
   - Crew Capacity: 10000
   - Warp Speed: NA
 
@@ -316,7 +316,7 @@ Atlas-F Class Escort
 
 ##### Stats
 
-  - Length: 158m
+  - Length: 162m
   - Width: 100m
   - Height: 20m
   - Decks: 6
@@ -444,7 +444,7 @@ Orca class light corvette
 ##### Stats
 
   - Length: 70m
-  - Width: 36m
+  - Width: 35m
   - Height: 10m
   - Decks: 2
   - Crew Capacity: 16
