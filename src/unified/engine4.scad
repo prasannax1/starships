@@ -118,8 +118,8 @@ module class_4_body_minus() {
     translate([0,0,-class_4_body_h*.2-10])
     cylinder(d2=d_disk-4*class_4_hangar_thickness, h=class_4_body_h*.4-2*class_4_hangar_thickness, d1=d_disk-class_4_body_h-2*class_4_hangar_thickness, center=true, $fn=faces_rough);
     
-    translate([-d_disk*.4,0,-class_4_body_h*.4])
-    cube([d_disk/2, d_disk/4, class_4_body_h*.4-2*class_4_hangar_thickness], center=true);
+    translate([-d_disk*.4,0,-class_4_body_h*.4 + class_4_hangar_thickness/2])
+    cube([d_disk/2, d_disk/4, class_4_body_h*.4-class_4_hangar_thickness], center=true);
 }
 
 module class_4_body() {
