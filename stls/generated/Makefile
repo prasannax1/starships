@@ -23,6 +23,7 @@ unifiedSTL += yacht.stl
 unifiedSTL += science.stl
 unifiedSTL += medevac.stl
 unifiedSTL += heavy_runabout.stl
+unifiedSTL += dreadnaught.stl
 
 SMALLSTL += fighter.stl
 SMALLSTL += runabout.stl

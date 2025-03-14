@@ -5,6 +5,7 @@ use <engines.scad>
 use <engine3.scad>
 use <disk0.scad>
 
+
 r_base=100;
 d_disk=disk_4_upper*.85;
 adjust_ratio=1.1;
@@ -15,12 +16,27 @@ module class_4_body_base() {
         translate([-class_4_tail_l,0,0])
         scale([class_4_tail_l*1.1/r_base, (0.5*class_4_body_width/r_base), adjust_ratio*(1/.866)*class_4_body_h/r_base])
         rotate([0,90,0])
-        rotate(90)
-        rotate_extrude(angle=360, convexity=3, $fn=6)
-        difference() {
-            circle(r=r_base, $fn=faces_concave);
-            translate([-r_base*1.1,0,0])
-            square(r_base*2.2, center=true);
+        rotate(90) {
+            rotate_extrude(angle=360, convexity=3, $fn=6)
+            difference() {
+                circle(r=r_base, $fn=faces_concave);
+                circle(r=r_base-class_4_hangar_thickness, $fn=faces_concave);
+                translate([-r_base*1.1,0,0])
+                square(r_base*2.2, center=true);
+            }
+            
+            intersection() {
+                rotate_extrude(angle=360, convexity=3, $fn=6)
+                difference() {
+                    circle(r=r_base, $fn=faces_concave);
+                    translate([-r_base*1.1,0,0])
+                    square(r_base*2.2, center=true);
+                }
+                
+                translate([0,-class_4_hangar_thickness+.05,0])
+                translate([0,class_4_tail_l,0])
+                cube(class_4_tail_l*2, center=true);
+            }
         }
 
         union() {
@@ -33,7 +49,14 @@ module class_4_body_base() {
     }
 
     translate([0,0,-class_4_body_h*.2-10])
-    cylinder(d2=d_disk, h=class_4_body_h*.4, d1=d_disk-class_4_body_h, center=true, $fn=faces_concave);
+    difference() {
+        cylinder(d2=d_disk, h=class_4_body_h*.4, d1=d_disk-class_4_body_h, center=true, $fn=faces_concave);
+        
+        cylinder(d2=d_disk-4*class_4_hangar_thickness, h=class_4_body_h*.4-2*class_4_hangar_thickness, d1=d_disk-class_4_body_h-2*class_4_hangar_thickness, center=true, $fn=faces_rough);
+        
+        translate([0,0,class_4_hangar_thickness*2])
+        cylinder(d=d_disk*1.5, h=class_4_hangar_thickness, center=true);
+    }
     
     class_4_secondary_bar();
     
@@ -91,6 +114,12 @@ module class_4_body_minus() {
     
     translate([-500, 0, 0]) 
     cylinder(d=disk_2_width, h=12-.05, center=true, $fn=faces_concave);
+    
+    translate([0,0,-class_4_body_h*.2-10])
+    cylinder(d2=d_disk-4*class_4_hangar_thickness, h=class_4_body_h*.4-2*class_4_hangar_thickness, d1=d_disk-class_4_body_h-2*class_4_hangar_thickness, center=true, $fn=faces_rough);
+    
+    translate([-d_disk*.4,0,-class_4_body_h*.4])
+    cube([d_disk/2, d_disk/4, class_4_body_h*.4-2*class_4_hangar_thickness], center=true);
 }
 
 module class_4_body() {
