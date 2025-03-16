@@ -55,7 +55,7 @@ module class_4_body_base() {
         cylinder(d2=d_disk-4*class_4_hangar_thickness, h=class_4_body_h*.4-2*class_4_hangar_thickness, d1=d_disk-class_4_body_h-2*class_4_hangar_thickness, center=true, $fn=faces_rough);
         
         translate([0,0,class_4_hangar_thickness*2])
-        cylinder(d=d_disk*1.5, h=class_4_hangar_thickness, center=true);
+        cylinder(d=d_disk*1.5, h=class_4_hangar_thickness*1.5, center=true);
     }
     
     class_4_secondary_bar();
@@ -131,7 +131,8 @@ module class_4_body() {
     translate([0,0,-10-.01])
     disk_0();
     
-
+    translate([0,0,-10-class_4_body_h*.2])
+    cylinder(d=disk_0_upper_d, h=class_4_body_h*.42, center=true, $fn=faces_convex);
 }
 
 module class_4_secondary(nacelles=false) {
