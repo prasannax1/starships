@@ -18,7 +18,7 @@ class_0_secondary_l=36;
 class_0_hangar_l=50;
 
 class_1_nacelle_w=9;
-class_1_nacelle_l=115;
+class_1_nacelle_l=120;
 
 class_1_neck_w=10;
 class_1_neck_w_2=1;
@@ -67,6 +67,7 @@ class_4_tail_w=180;
 class_4_nacelle_disp=class_4_body_w*.25;
 class_4_nacelle_bar_w=15;
 class_4_nacelle_bar_l=75;
+class_4_hangar_thickness=5;
 
 class_5_nacelle_l=800;
 class_5_nacelle_hangar_l=500;

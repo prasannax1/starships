@@ -8,7 +8,7 @@ include <common.scad>
 module escort() {
     difference() {
         intersection() {
-            disk_1();
+            disk_1(ball=false);
             
             translate([0,0,.6*disk_1_width])
             cube(1.2*disk_1_width, center=true);

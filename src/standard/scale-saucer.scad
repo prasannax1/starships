@@ -14,7 +14,7 @@ use <constitution-refit.scad>;
 
 saucer();
 
-translate([250,0,-120]) odyssey();
+translate([250,0,-100]) odyssey();
 
 translate([50,0,120]) constitution_refit();
 
